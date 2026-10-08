@@ -3,6 +3,37 @@ const { withNativeWind } = require("nativewind/metro");
 
 const config = getDefaultConfig(__dirname);
 
+// Large warm bundles can exceed Windows' open-file limit during cache reads.
+function limitCacheRequests(store, limit = 64) {
+  let active = 0;
+  const pending = [];
+  function run(operation) {
+    return new Promise((resolve, reject) => {
+      const start = () => {
+        active += 1;
+        Promise.resolve()
+          .then(operation)
+          .then(resolve, reject)
+          .finally(() => {
+            active -= 1;
+            pending.shift()?.();
+          });
+      };
+      if (active < limit) start();
+      else pending.push(start);
+    });
+  }
+  return {
+    get: (key) => run(() => store.get(key)),
+    set: (key, value) => run(() => store.set(key, value)),
+    clear: () => store.clear(),
+  };
+}
+
+if (process.platform === "win32") {
+  config.cacheStores = config.cacheStores.map((store) => limitCacheRequests(store));
+}
+
 config.resolver.assetExts.push("md");
 
 module.exports = withNativeWind(config, {
