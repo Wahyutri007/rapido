@@ -1,0 +1,18 @@
+export const ILLUSTRATIONS = {
+  promo: require("./promo.jpg"),
+  discount: require("./discount.png"),
+  voucher: require("./voucher.jpg"),
+  pin: require("./pin.jpg"),
+  table: require("./tables.jpg"),
+  payment: require("./payment.jpg"),
+  tax: require("./tax.jpg"),
+  extra: require("./extra.jpg"),
+  printer: require("./printer.jpg"),
+  receipt: require("./receipt.jpg"),
+  export: require("./export.jpg"),
+  password: require("./password.jpg"),
+  maintenance: require("./maintenance.png"),
+  homeHeader: require("./home-header.png"),
+  deleteConfirmation: require("./delete-confirmation.png"),
+  actionSuccess: require("./action-success.png"),
+};

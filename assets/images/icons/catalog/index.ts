@@ -1,0 +1,15 @@
+export const catalog = {
+	brand: require("./brand.png"),
+	bundle: require("./bundle.png"),
+	category: require("./category.png"),
+	discount: require("./discount.png"),
+	extraCost: require("./extra-cost.png"),
+	extras: require("./extras.png"),
+	orderType: require("./order-type.png"),
+	paymentMethod: require("./payment-method.png"),
+	product: require("./product.png"),
+	promo: require("./promo.png"),
+	tax: require("./tax.png"),
+	unit: require("./unit.png"),
+	voucher: require("./voucher.png"),
+};

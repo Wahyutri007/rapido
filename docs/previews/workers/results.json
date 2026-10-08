@@ -1,0 +1,307 @@
+{
+  "passed": 35,
+  "checks": [
+    "List loads worker role/store records",
+    "Search matches assigned store",
+    "Search empty state",
+    "Sheet opens worker detail",
+    "Edit is hydrated and does not expose password fields",
+    "Blank form is blocked",
+    "Typing keeps focus and all characters",
+    "Invalid date and password confirmation are blocked",
+    "Create sends trimmed data and multipart images",
+    "Create refreshes list cache",
+    "Refetch preserves edit draft",
+    "Edit overrides PUT and omits password/saved images",
+    "Edit preserves saved image data",
+    "Edit refreshes list cache",
+    "422 maps to field while keeping inputs",
+    "Cancel delete sends no request",
+    "Failed delete keeps the worker",
+    "Confirmed delete refreshes list",
+    "Role detail shows only matching workers",
+    "Role account card opens worker detail",
+    "No horizontal overflow at 320 px",
+    "Invalid email",
+    "Whitespace name",
+    "Valid leap date",
+    "Invalid leap date",
+    "Edit requires no password",
+    "Reject oversize image",
+    "Reject unknown image size",
+    "Reject non-image MIME",
+    "Role rename refreshes worker labels in active cache",
+    "Role delete refreshes worker assignments in active cache",
+    "List query retry works",
+    "Missing role blocks submit",
+    "Missing store blocks submit",
+    "No unhandled runtime exceptions"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "POST",
+      "body": {
+        "name": "Dewi Test",
+        "email": "dewi@example.test",
+        "phone": "081211122233",
+        "role_id": "r1",
+        "store_id": "s1",
+        "address": "",
+        "date_of_birth": "1998-05-17",
+        "password": "[test credential redacted]",
+        "password_confirmation": "[test credential redacted]",
+        "face_scan": {
+          "filename": "foto.png"
+        },
+        "id_scan": {
+          "filename": "ktp.png"
+        }
+      }
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "POST",
+      "body": {
+        "name": "Dewi Baru",
+        "email": "dewi@example.test",
+        "phone": "081211122233",
+        "role_id": "r2",
+        "store_id": "s2",
+        "address": "",
+        "date_of_birth": "1998-05-17",
+        "_method": "PUT"
+      }
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w-new",
+      "method": "POST",
+      "body": {
+        "name": "Dewi Baru",
+        "email": "duplikat@example.test",
+        "phone": "081211122233",
+        "role_id": "r2",
+        "store_id": "s2",
+        "address": "",
+        "date_of_birth": "1998-05-17",
+        "_method": "PUT"
+      }
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "DELETE",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "DELETE",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles/r1",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/reference-data/permissions",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers/w3",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles/r1",
+      "method": "PUT",
+      "body": {
+        "name": "Kasir Baru",
+        "permissions": [
+          "cashier"
+        ]
+      }
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles/r1",
+      "method": "DELETE",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/workers",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/contents/roles",
+      "method": "GET",
+      "body": {}
+    },
+    {
+      "path": "/stores",
+      "method": "GET",
+      "body": {}
+    }
+  ]
+}

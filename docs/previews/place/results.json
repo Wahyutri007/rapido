@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "derived outlet and place metrics",
+    "trimmed search and empty state",
+    "area form requires outlet",
+    "duplicate area rejected and new area isolated",
+    "repeated area save updates instead of duplicating",
+    "outlet action stays in viewport",
+    "statistics tab",
+    "area editing validates existing names",
+    "area deletion needs confirmation",
+    "invalid capacity rejected",
+    "existing place name rejected",
+    "multiple places and active toggle saved",
+    "repeat place save does not duplicate",
+    "place edit preserves other records",
+    "cancel place deletion",
+    "layout arrows change draft without saving",
+    "drag and drop moves place",
+    "layout positions saved",
+    "saved layout restored",
+    "confirmed place deletion is scoped",
+    "320px layout fits",
+    "320px outlet list fits",
+    "320px form and place kind selection",
+    "foreign area route rejected"
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

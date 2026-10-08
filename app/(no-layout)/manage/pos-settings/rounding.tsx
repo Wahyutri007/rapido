@@ -1,0 +1,277 @@
+import Feather from "@expo/vector-icons/Feather";
+import { router } from "expo-router";
+import React from "react";
+import { Pressable, Switch, View } from "react-native";
+import {
+	useRoundingSettingMutation,
+	useRoundingSettingQuery,
+} from "@/api/hooks/settings";
+import AlertModal from "@/components/common/AlertModal";
+import BottomActionButton from "@/components/common/BottomActionButton";
+import BouncyPressable from "@/components/common/BouncyPressable";
+import Card from "@/components/common/Card";
+import SingleSelect from "@/components/common/SingleSelect";
+import SuccessModal, { useAlertModal } from "@/components/common/SuccessModal";
+import Text from "@/components/common/Text";
+import Wrapper from "@/components/common/Wrapper";
+import { Colors } from "@/constants/Colors";
+import { cn } from "@/lib/utils";
+
+type RoundingMethod = "up" | "down" | "nearest";
+type ApplyToOption = "all" | "cash_only";
+
+const METHOD_OPTIONS: {
+	id: RoundingMethod;
+	title: string;
+	description: string;
+}[] = [
+	{
+		id: "up",
+		title: "Pembulatan ke Atas",
+		description: "Selalu membulatkan ke angka terdekat di atasnya.",
+	},
+	{
+		id: "down",
+		title: "Pembulatan ke Bawah",
+		description: "Selalu membulatkan ke angka terdekat di bawahnya.",
+	},
+	{
+		id: "nearest",
+		title: "Pembulatan Terdekat",
+		description: "Membulatkan ke angka terdekat.",
+	},
+];
+
+const MULTIPLE_OPTIONS = [
+	{ label: "Ratusan (Rp100)", value: "100" },
+	{ label: "Ribuan (Rp1.000)", value: "1000" },
+	{ label: "Puluhan (Rp10)", value: "10" },
+];
+
+export default function RoundingSettingScreen() {
+	const { data: roundingData } = useRoundingSettingQuery();
+	const roundingMutation = useRoundingSettingMutation();
+	const successModal = useAlertModal();
+	const errorModal = useAlertModal();
+
+	const [enabled, setEnabled] = React.useState(true);
+	const [applyTo, setApplyTo] = React.useState<ApplyToOption>("all");
+	const [method, setMethod] = React.useState<RoundingMethod>("nearest");
+	const [multiple, setMultiple] = React.useState("100");
+
+	// Sync initial data from backend if present
+	React.useEffect(() => {
+		if (roundingData) {
+			setEnabled(roundingData.enabled);
+			if (roundingData.method) {
+				setMethod(roundingData.method);
+			}
+			if (roundingData.decimal_places !== undefined) {
+				setMultiple(String(roundingData.decimal_places));
+			}
+		}
+	}, [roundingData]);
+
+	const handleSave = async () => {
+		const [, error] = await roundingMutation.call({
+			enabled,
+			method,
+			decimal_places: Number(multiple) || 0,
+		});
+		if (error) {
+			errorModal.open();
+			return;
+		}
+		successModal.open();
+	};
+
+	return (
+		<>
+			<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>
+				{/* Switch Card */}
+				<Card>
+					<View className="flex-row items-center justify-between">
+						<View className="flex-1 mr-3">
+							<Text w="semibold" size="normal" className="text-foreground">
+								Aktifkan Pembulatan
+							</Text>
+							<Text size="small" className="mt-0.5 text-muted leading-relaxed">
+								Total pembayaran akan dibulatkan sesuai aturan bisnis.
+							</Text>
+						</View>
+						<Switch
+							value={enabled}
+							onValueChange={setEnabled}
+							trackColor={{ false: "#e4e4e7", true: Colors.primary }}
+							thumbColor="#ffffff"
+						/>
+					</View>
+
+					<Pressable
+						onPress={() => router.push("/manage/pos-settings/rounding-detail")}
+						className="mt-2.5 self-start"
+					>
+						<Text size="small" w="semibold" className="text-primary underline">
+							Baca Selengkapnya
+						</Text>
+					</Pressable>
+				</Card>
+
+				{/* Conditional Settings when Enabled */}
+				{enabled && (
+					<>
+						{/* Terapkan Ke */}
+						<View className="gap-2">
+							<View className="flex-row items-center gap-1.5">
+								<Text size="normal" w="medium" className="text-muted">
+									Terapkan Ke
+								</Text>
+								<Feather name="info" size={14} color={Colors.zinc[400]} />
+							</View>
+
+							<View className="flex-row rounded-xl bg-zinc-100 p-1">
+								<Pressable
+									onPress={() => setApplyTo("all")}
+									className={cn(
+										"flex-1 items-center justify-center rounded-lg py-2.5",
+										applyTo === "all"
+											? "bg-primary shadow-sm"
+											: "bg-transparent",
+									)}
+								>
+									<Text
+										size="normal"
+										w={applyTo === "all" ? "semibold" : "medium"}
+										className={applyTo === "all" ? "text-white" : "text-muted"}
+									>
+										Semua Transaksi
+									</Text>
+								</Pressable>
+
+								<Pressable
+									onPress={() => setApplyTo("cash_only")}
+									className={cn(
+										"flex-1 items-center justify-center rounded-lg py-2.5",
+										applyTo === "cash_only"
+											? "bg-primary shadow-sm"
+											: "bg-transparent",
+									)}
+								>
+									<Text
+										size="normal"
+										w={applyTo === "cash_only" ? "semibold" : "medium"}
+										className={
+											applyTo === "cash_only" ? "text-white" : "text-muted"
+										}
+									>
+										Tunai Saja
+									</Text>
+								</Pressable>
+							</View>
+						</View>
+
+						{/* Metode Pembulatan */}
+						<View className="gap-2">
+							<Text size="normal" w="medium" className="text-muted">
+								Metode Pembulatan
+							</Text>
+
+							<Card className="gap-2 p-2.5">
+								{METHOD_OPTIONS.map((opt) => {
+									const isSelected = method === opt.id;
+									return (
+										<BouncyPressable
+											key={opt.id}
+											onPress={() => setMethod(opt.id)}
+											activeScale={0.98}
+											className={cn(
+												"flex-row items-start gap-3 rounded-xl border p-3.5",
+												isSelected
+													? "border-primary bg-primary/5"
+													: "border-zinc-200 bg-white",
+											)}
+										>
+											<View
+												className={cn(
+													"mt-0.5 size-5 items-center justify-center rounded-full border",
+													isSelected
+														? "border-primary bg-primary"
+														: "border-zinc-300 bg-white",
+												)}
+											>
+												{isSelected && (
+													<View className="size-2 rounded-full bg-white" />
+												)}
+											</View>
+
+											<View className="flex-1">
+												<Text
+													size="normal"
+													w={isSelected ? "bold" : "semibold"}
+													className={
+														isSelected ? "text-primary" : "text-foreground"
+													}
+												>
+													{opt.title}
+												</Text>
+												<Text
+													size="small"
+													className="mt-0.5 text-muted leading-relaxed"
+												>
+													{opt.description}
+												</Text>
+											</View>
+										</BouncyPressable>
+									);
+								})}
+							</Card>
+						</View>
+
+						{/* Kelipatan Pembulatan */}
+						<View className="gap-2">
+							<Text size="normal" w="medium" className="text-muted">
+								Kelipatan Pembulatan
+							</Text>
+
+							<Card className="p-3">
+								<SingleSelect
+									items={MULTIPLE_OPTIONS}
+									value={multiple}
+									onValueChange={setMultiple}
+									placeholder="Pilih Kelipatan Pembulatan"
+									label="Kelipatan Pembulatan"
+									variant="rounded"
+								/>
+							</Card>
+						</View>
+					</>
+				)}
+			</Wrapper>
+
+			{/* Bottom Action Button */}
+			<BottomActionButton
+				onPress={handleSave}
+				isLoading={roundingMutation.isLoading}
+			>
+				Simpan
+			</BottomActionButton>
+
+			<AlertModal
+				openState={errorModal.openState}
+				title="Gagal Menyimpan Pembulatan"
+				message="Pengaturan belum tersimpan. Periksa koneksi dan coba lagi."
+				hideCancelButton
+				confirmText="Mengerti"
+				onConfirm={errorModal.close}
+			/>
+			{/* Success Modal */}
+			<SuccessModal
+				openState={successModal.openState}
+				onClose={successModal.close}
+				title="Pengaturan Pembulatan Disimpan"
+				description="Aturan pembulatan transaksi berhasil diperbarui."
+				buttonText="Mengerti"
+			/>
+		</>
+	);
+}

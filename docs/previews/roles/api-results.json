@@ -1,0 +1,25 @@
+{
+    "passed": 18,
+    "checks": [
+        "Anonymous role access is rejected",
+        "Owner role list loads",
+        "Public grouped permission reference loads",
+        "Create role with canonical permission",
+        "Detail role loads",
+        "Edit permissions while keeping the same name",
+        "Edited permissions are persisted",
+        "Duplicate role name is rejected",
+        "Unknown permission is rejected",
+        "Create another role for uniqueness check",
+        "Editing to another role name is rejected",
+        "Rename role works",
+        "Unowned or missing role is rejected",
+        "Role of another owner cannot be read",
+        "Role of another owner cannot be updated",
+        "Role of another owner cannot be deleted",
+        "Delete own fixture role works",
+        "Deleted role is no longer accessible"
+    ],
+    "failures": [],
+    "fixturesRolledBack": true
+}

@@ -1,0 +1,77 @@
+{
+	"expo": {
+		"name": "rapido",
+		"slug": "rapido",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"scheme": "rapido",
+		"userInterfaceStyle": "automatic",
+		"newArchEnabled": true,
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"edgeToEdgeEnabled": true,
+			"package": "com.arief21si.rapido",
+			"usesCleartextTraffic": true
+		},
+		"web": {
+			"bundler": "metro",
+			"output": "static",
+			"favicon": "./assets/images/favicon.png"
+		},
+		"plugins": [
+			"expo-router",
+			[
+				"expo-splash-screen",
+				{
+					"image": "./assets/images/splash-icon.png",
+					"imageWidth": 200,
+					"resizeMode": "contain",
+					"backgroundColor": "#2e78f9"
+				}
+			],
+			"expo-secure-store",
+			"expo-document-picker",
+			[
+				"expo-camera",
+				{
+					"cameraPermission": "Izinkan Rapido untuk mengakses kamera untuk absensi kehadiran."
+				}
+			],
+			[
+				"expo-location",
+				{
+					"locationAlwaysAndWhenInUsePermission": "Izinkan Rapido untuk mengakses lokasi GPS Anda untuk absensi kehadiran."
+				}
+			],
+			"expo-asset",
+			"@react-native-community/datetimepicker",
+			"expo-font",
+			"expo-web-browser",
+			[
+				"expo-build-properties",
+				{
+					"android": {
+						"usesCleartextTraffic": true
+					}
+				}
+			]
+		],
+		"experiments": {
+			"typedRoutes": true,
+			"reactCompiler": true
+		},
+		"extra": {
+			"router": {},
+			"eas": {
+				"projectId": "0d9221be-2781-44ff-b748-c237cb6f6fd2"
+			}
+		}
+	}
+}

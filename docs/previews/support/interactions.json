@@ -1,0 +1,19 @@
+{
+  "passed": 13,
+  "checks": [
+    "FAQ initially contains six questions",
+    "FAQ opens its answer",
+    "FAQ collapses its answer",
+    "Cashier category filters two entries",
+    "FAQ search displays an empty result",
+    "Feature request blocks blank required fields",
+    "Invalid form does not show send dialog",
+    "Valid form honestly reports unavailable sending",
+    "Form preserves unsent title",
+    "Feedback type can be changed",
+    "Feedback blocks empty fields",
+    "Feedback does not claim a sent message",
+    "No unhandled runtime exceptions"
+  ],
+  "exceptions": []
+}

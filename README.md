@@ -1,0 +1,66 @@
+# Rapido
+
+Mobile app for Rapido - a point-of-sale / operations suite built with **React Native (Expo)** and **expo-router**. It serves four role-based modes: **Back Office**, **Cashier**, **Operator**, and **Absence**, each mapped to its own route group.
+
+## Tech Stack
+
+- React Native 0.79 · React 19 · Expo SDK 53
+- **expo-router v5** - file-based routing
+- **TypeScript** (strict) with `@/*` path alias
+- **NativeWind v4** (TailwindCSS) + **gluestack-ui**
+- **TanStack Query** + **axios** for data
+- **react-hook-form** + **zod** for forms
+- **zustand** (persisted to SecureStore) for client state
+
+## Getting Started
+
+> Deps are installed with [bun](https://bun.sh). If you don't have it, `npm install` works too.
+
+```bash
+bun install
+bun start        # start Expo dev server
+bun android      # open on Android emulator / device
+bun ios          # open on iOS simulator
+bun lint         # ESLint
+```
+
+Then open the app in a development build, emulator, or [Expo Go](https://expo.dev/go).
+
+## Project Structure
+
+```
+app/           Screens (expo-router). One folder per mode/route group.
+components/    Gluestack primitives (ui/), shared (common/, custom/), feature-specific (feature/)
+api/           HTTP + data layer with factory-based hooks
+hooks/         Shared app hooks (route guarding, secure store, ...)
+store/         Zustand client state
+schema/        Zod form schemas
+types/         API DTOs (mirror the backend response shape)
+constants/     Keys, URLs, Colors, enums
+docs/          Developer docs
+```
+
+## Docs
+
+For anything more than a quick start, see:
+
+- **[AGENTS.md](./AGENTS.md)** - commands, folder map, and all conventions (API factory, forms, auth, styling, component placement). Read this before contributing.
+- **[docs/api-scaffolding.md](./docs/api-scaffolding.md)** - how to add a new API endpoint using the factory pattern.
+- **[docs/WORKERS_UI_PROGRESS.md](./docs/WORKERS_UI_PROGRESS.md)** - hasil Karyawan, integrasi akun Role, screenshot, lokasi code, dan verifikasi API/browser.
+
+## Backend configuration
+
+Copy `.env.example` to `.env.local` and set the backend base/API URLs for your environment. Login and API-backed features require a running Rapido backend; some design previews still use local fixtures.
+
+## Android over USB without an Expo account
+
+Install Expo Go for SDK 53, enable USB debugging, connect the phone, and authorize the computer. With Android Platform Tools installed:
+
+```powershell
+adb reverse tcp:8088 tcp:8088
+adb reverse tcp:8001 tcp:8001
+$env:EXPO_OFFLINE="1"
+npx expo start --go --localhost --port 8088
+```
+
+Run the backend on port 8001 and set `.env.local` URLs to `http://127.0.0.1:8001` and `http://127.0.0.1:8001/api`. Open `exp://127.0.0.1:8088` in Expo Go. Keep USB connected; reapply `adb reverse` after reconnecting.

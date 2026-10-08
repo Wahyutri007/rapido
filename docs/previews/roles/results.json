@@ -1,0 +1,298 @@
+{
+  "passed": 25,
+  "checks": [
+    "Role list loads API records",
+    "List action sheet navigates to the selected role",
+    "Search matches access labels",
+    "Search empty state",
+    "Detail loads selected role and permissions",
+    "Detail action buttons retain 48 px height",
+    "Add button opens a blank form",
+    "Blank form is blocked",
+    "Back Office enables Dashboard without granting all features",
+    "Individual permission removes broad grant",
+    "Create submits backend permission keys",
+    "Create invalidates list cache",
+    "Edit preserves unknown and hidden permissions",
+    "Edit invalidates list cache",
+    "Stored all-feature grant is reflected in controls",
+    "Narrowing all-feature grant preserves other effective permissions",
+    "Stored section grant is reflected in child controls",
+    "Turning off Back Office clears expanded permissions and keeps Kasir",
+    "422 error maps to field and preserves input",
+    "Cancel deletion sends no DELETE",
+    "Failed deletion keeps data",
+    "Confirmed deletion refreshes list",
+    "No horizontal overflow at 320 px",
+    "Query failure offers a working retry",
+    "No unhandled runtime errors"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r2",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/workers",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/workers",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/contents/roles",
+      "body": {
+        "name": "Shift Malam",
+        "permissions": [
+          "cashier",
+          "dashboard",
+          "manage reports",
+          "sales report",
+          "product report",
+          "promotion report",
+          "member report",
+          "tax and extra reports",
+          "manage menus",
+          "manage categories",
+          "manage inventory",
+          "manage stock transfers",
+          "manage store"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r5",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "PUT",
+      "path": "/contents/roles/r5",
+      "body": {
+        "name": "Operasional Baru",
+        "permissions": [
+          "dashboard",
+          "manage taxes",
+          "legacy special permission"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r5",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r5",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r7",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "PUT",
+      "path": "/contents/roles/r7",
+      "body": {
+        "name": "Administrator",
+        "permissions": [
+          "dashboard",
+          "manage reports",
+          "sales report",
+          "product report",
+          "promotion report",
+          "member report",
+          "tax and extra reports",
+          "manage menus",
+          "manage categories",
+          "manage inventory",
+          "manage stock transfers",
+          "manage store"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r7",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r7",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r8",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "PUT",
+      "path": "/contents/roles/r8",
+      "body": {
+        "name": "Pengelola Katalog",
+        "permissions": [
+          "cashier"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r8",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r8",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "POST",
+      "path": "/contents/roles",
+      "body": {
+        "name": "Duplikat",
+        "permissions": [
+          "cashier"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contents/workers",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/reference-data/permissions",
+      "body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles/r1",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/workers",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    },
+    {
+      "method": "GET",
+      "path": "/contents/roles",
+      "body": null
+    }
+  ]
+}

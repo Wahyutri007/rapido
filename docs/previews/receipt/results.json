@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "four store cards",
+    "trimmed search",
+    "empty search",
+    "default settings and twelve toggles",
+    "toggle updates preview and changed count",
+    "full preview uses draft without saving",
+    "back preserves draft",
+    "save isolated to chosen store",
+    "invalid footer does not save",
+    "reset stages defaults before save",
+    "320px layout fits",
+    "saved settings restored when reopening",
+    "second store remains at defaults",
+    "list action sheet previews saved settings",
+    "invalid store handled"
+  ],
+  "errors": []
+}

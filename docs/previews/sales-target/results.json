@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "fixture list and sticky action",
+    "trimmed search and empty search state",
+    "detail shows saved totals and both actions",
+    "edit prefills dates and rows",
+    "reversed date range cannot save",
+    "quantity and amount boundaries enforced",
+    "duplicate product rows rejected",
+    "bulk selection retains values and initializes new rows",
+    "edit and repeat save preserve other target",
+    "create requires target name and store",
+    "create multiple products and repeat save without duplicate",
+    "target name unique in selected store",
+    "type change resets incompatible rows and saves categories",
+    "store change removes foreign choices and preserves other target",
+    "list deletion requires confirmation",
+    "detail deletion returns to list and empty collection renders",
+    "320px list fits",
+    "320px form fits",
+    "unknown edit id blocked",
+    "unknown detail id blocked"
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

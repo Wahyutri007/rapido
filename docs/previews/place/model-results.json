@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "area names are trimmed",
+    "blank area rejected",
+    "missing outlet rejected",
+    "case-insensitive area duplicates rejected",
+    "invalid capacity 0",
+    "invalid capacity -1",
+    "invalid capacity 1.5",
+    "invalid capacity 10001",
+    "unknown place kind rejected",
+    "duplicate places rejected",
+    "fixture metrics are consistent",
+    "area save leaves other outlets intact",
+    "place insert preserves existing records",
+    "editing preserves count and position",
+    "foreign area does not mutate outlet",
+    "grid move swaps cells",
+    "grid prevents wrapping at right edge",
+    "grid prevents negative rows",
+    "grid prevents drop into empty cell",
+    "layout rejects incomplete order",
+    "layout rejects duplicate order",
+    "layout commits positions atomically",
+    "place deletion only affects chosen area",
+    "deletion then insertion keeps layout positions unique",
+    "area deletion updates derived totals"
+  ]
+}

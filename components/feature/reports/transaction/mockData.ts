@@ -1,0 +1,131 @@
+import type { TransactionGroup } from "./types";
+
+export const DEFAULT_TRANSACTION_GROUPS: TransactionGroup[] = [
+	{
+		date: "Selasa, 30 Juni 2026",
+		dateKey: "2026-06-30",
+		totalTransactions: 12,
+		totalAmount: 1285000,
+		items: [
+			{
+				id: "TRX-0629-1842",
+				customer: "Pelanggan Umum",
+				channel: "Toko Fisik",
+				time: "21:15",
+				cashier: "Siti Aisyah",
+				amount: 325000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "Toko Fisik",
+			},
+			{
+				id: "TRX-0629-1841",
+				customer: "Pelanggan Umum",
+				channel: "QRIS",
+				time: "21:08",
+				cashier: "Siti Aisyah",
+				amount: 85000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "QRIS",
+			},
+			{
+				id: "TRX-0629-1840",
+				customer: "Rini Kusuma",
+				channel: "Delivery",
+				time: "21:03",
+				cashier: "Rina Setiawati",
+				amount: 210000,
+				status: "refund",
+				statusLabel: "Pengembalian",
+				paymentMethod: "Delivery",
+			},
+			{
+				id: "TRX-0629-1839",
+				customer: "Pelanggan Umum",
+				channel: "Toko Fisik",
+				time: "20:58",
+				cashier: "Budi Saputra",
+				amount: 175000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "Toko Fisik",
+			},
+		],
+	},
+	{
+		date: "Senin, 30 Juni 2026",
+		dateKey: "2026-06-29",
+		totalTransactions: 12,
+		totalAmount: 1285000,
+		items: [
+			{
+				id: "TRX-0629-1838",
+				customer: "Pelanggan Umum",
+				channel: "Toko Fisik",
+				time: "21:15",
+				cashier: "Siti Aisyah",
+				amount: 325000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "Toko Fisik",
+			},
+			{
+				id: "TRX-0629-1837",
+				customer: "Pelanggan Umum",
+				channel: "QRIS",
+				time: "21:08",
+				cashier: "Siti Aisyah",
+				amount: 85000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "QRIS",
+			},
+			{
+				id: "TRX-0629-1836",
+				customer: "Rini Kusuma",
+				channel: "Delivery",
+				time: "21:03",
+				cashier: "Rina Setiawati",
+				amount: 210000,
+				status: "refund",
+				statusLabel: "Pengembalian",
+				paymentMethod: "Delivery",
+			},
+			{
+				id: "TRX-0629-1835",
+				customer: "Pelanggan Umum",
+				channel: "Toko Fisik",
+				time: "20:58",
+				cashier: "Budi Saputra",
+				amount: 175000,
+				status: "success",
+				statusLabel: "Berhasil",
+				paymentMethod: "Toko Fisik",
+			},
+		],
+	},
+];
+
+export const STATUS_OPTIONS = [
+	"Semua Status",
+	"Berhasil",
+	"Pengembalian",
+	"Dibatalkan",
+];
+
+export const CASHIER_OPTIONS = [
+	"Semua Kasir",
+	"Siti Aisyah",
+	"Rina Setiawati",
+	"Budi Saputra",
+];
+
+export const PAYMENT_OPTIONS = [
+	"Semua Pembayaran",
+	"Toko Fisik",
+	"QRIS",
+	"Delivery",
+	"Tunai",
+	"Kartu Debit",
+];

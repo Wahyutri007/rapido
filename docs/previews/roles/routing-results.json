@@ -1,0 +1,14 @@
+{
+  "passed": 7,
+  "checks": [
+    "owner route responds HTTP 200",
+    "Owner route renders completed Role screen instead of old placeholder",
+    "Real Expo Router opens Role detail",
+    "Real Expo Router opens edit with matching role data",
+    "cashier route responds HTTP 200",
+    "Non-owner guard prevents Role queries",
+    "Full-app routing has no runtime exceptions"
+  ],
+  "errors": [],
+  "api": "Browser contract fixtures; real Expo Router"
+}

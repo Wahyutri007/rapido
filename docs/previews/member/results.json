@@ -1,0 +1,241 @@
+{
+  "passed": 43,
+  "checks": [
+    "List loads real-contract member fields",
+    "Search matches phone",
+    "Search matches email",
+    "Search empty state",
+    "Card opens matching detail",
+    "Edit hydrates nullable and identity fields",
+    "Refetch keeps edit draft",
+    "Cleared optional fields are sent as null",
+    "Edit refreshes detail cache",
+    "Edit refreshes list cache",
+    "Blank required fields block save",
+    "Mouse typing preserves focus and characters",
+    "Submit locks button while pending",
+    "Minimal create trims and sends nullable fields",
+    "Only one create request is sent",
+    "Create refreshes list cache",
+    "Invalid email and calendar date are blocked",
+    "Server failure preserves input and does not show success",
+    "422 maps to field without losing draft",
+    "Complete create sends supported gender/date/notes",
+    "Sheet opens selected member detail",
+    "Cancel delete sends no request",
+    "Failed delete retains member",
+    "Confirmed delete refreshes list",
+    "Missing detail ID has a recoverable state",
+    "Unknown detail hides edit/delete",
+    "Unknown edit cannot create a replacement",
+    "Edit query retry hydrates member",
+    "Blank optional fields valid",
+    "Whitespace-only name rejected",
+    "Blank phone rejected",
+    "Invalid email rejected",
+    "Valid leap day accepted",
+    "Invalid leap day rejected",
+    "Invalid month rejected",
+    "Unknown gender rejected",
+    "Address exceeding storage capacity rejected",
+    "Identity limit rejected",
+    "List fits 320 px",
+    "Form fits 320 px",
+    "List failure retry works",
+    "Empty API list remains ready for create",
+    "No unhandled runtime exceptions"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "PUT",
+      "body": {
+        "name": "Budi Baru",
+        "phone": "081234567890",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m1",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "POST",
+      "body": {
+        "name": "Member Minimal",
+        "phone": "081211122233",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "POST",
+      "body": {
+        "name": "Member Lengkap",
+        "phone": "089988877766",
+        "email": "member@example.test",
+        "id_number": "identity-test",
+        "address": "Jl. Mawar",
+        "date_of_birth": "2000-02-29",
+        "gender": "female",
+        "notes": "Catatan baris satu\nCatatan baris dua"
+      }
+    },
+    {
+      "path": "/customers/data",
+      "method": "POST",
+      "body": {
+        "name": "Member Lengkap",
+        "phone": "089988877766",
+        "email": "member@example.test",
+        "id_number": "identity-test",
+        "address": "Jl. Mawar",
+        "date_of_birth": "2000-02-29",
+        "gender": "female",
+        "notes": "Catatan baris satu\nCatatan baris dua"
+      }
+    },
+    {
+      "path": "/customers/data",
+      "method": "POST",
+      "body": {
+        "name": "Member Lengkap",
+        "phone": "089988877766",
+        "email": "member@example.test",
+        "id_number": "identity-test",
+        "address": "Jl. Mawar",
+        "date_of_birth": "2000-02-29",
+        "gender": "female",
+        "notes": "Catatan baris satu\nCatatan baris dua"
+      }
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m2",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m2",
+      "method": "DELETE",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m2",
+      "method": "DELETE",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m2",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m2",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/missing",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/missing",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m3",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data/m3",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    },
+    {
+      "path": "/customers/data",
+      "method": "GET",
+      "body": null
+    }
+  ]
+}

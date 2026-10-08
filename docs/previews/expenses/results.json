@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "expense-only fixture list, total and sticky action",
+    "trimmed case insensitive search and reset",
+    "search empty state",
+    "funding and store filters update counts and totals",
+    "action sheet opens selected detail without fabricated labels",
+    "edit prefills ISO date and read-only account code",
+    "account changes derive code and accounting updates preserve draft",
+    "invalid calendar and zero nominal block save",
+    "edit trims data, preserves metadata and repeat save avoids duplicate",
+    "shared store updates detail and list totals",
+    "empty create form validates required fields",
+    "duplicate reference blocked within selected store",
+    "same reference in another store saves once with explicit local metadata",
+    "combined filters show saved item and correct total",
+    "list delete requires confirmation and preserves other records",
+    "detail delete confirms then returns to list",
+    "empty expense list leaves income adjustment untouched",
+    "320px list fits",
+    "320px form fits",
+    "320px detail and actions fit",
+    "unknown and income IDs blocked in expense routes"
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

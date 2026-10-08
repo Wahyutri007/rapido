@@ -1,0 +1,17 @@
+{
+  "passed": 10,
+  "checks": [
+    "owner route responds HTTP 200",
+    "Owner sees worker list",
+    "Real Expo Router opens worker detail",
+    "Real Expo Router opens hydrated worker edit",
+    "Role detail loads matching worker count",
+    "Role account navigates to real worker route with ID",
+    "Reload keeps the linked worker detail",
+    "cashier route responds HTTP 200",
+    "Non-owner guard prevents worker queries",
+    "Full-app routing has no runtime exceptions"
+  ],
+  "errors": [],
+  "api": "Browser contract fixtures; real Expo Router"
+}
