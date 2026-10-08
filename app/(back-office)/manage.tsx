@@ -46,10 +46,7 @@ const GROUPS: NavListGroup[] = [
 		title: "Member dan Karyawan",
 		items: [
 			menuItem("Karyawan", "/manage/workers", "workers"),
-			{
-				...menuItem("Member", "/(no-layout)/manage/member", "member"),
-				withAnchor: false,
-			},
+			menuItem("Member", "/manage/member", "member"),
 			menuItem("Role", "/manage/roles", "roles"),
 			menuItem("Absensi", "/manage/absence", "absence"),
 		],

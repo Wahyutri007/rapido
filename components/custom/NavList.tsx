@@ -20,7 +20,6 @@ export type NavListProps = {
 	id?: string;
 	title: string;
 	href?: Href;
-	withAnchor?: boolean;
 	image?: ImageRequireSource;
 	imageScale?: number;
 	permission?: string;
@@ -56,9 +55,7 @@ export function NavListItem(
 	const isCard = variant === "card";
 
 	function handlePress() {
-		if (!href) return;
-		if (props.withAnchor === undefined) router.push(href);
-		else router.push(href, { withAnchor: props.withAnchor });
+		if (href) router.push(href);
 	}
 
 	if (variant === "manage") {

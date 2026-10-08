@@ -1,0 +1,21 @@
+{
+  "passed": 12,
+  "expoSdk": "57",
+  "renderMode": "production",
+  "checks": [
+    "Kelola Member menu opens real route",
+    "Member Header back returns to Kelola",
+    "Member list reload preserves URL and data",
+    "Owner opens member detail with ID",
+    "Real Router opens hydrated member edit",
+    "Reload preserves edit route and ID",
+    "Create route opens empty form without detail ID",
+    "permissioned-worker boots real app Router through HTML adapter",
+    "Worker with manage customers permission sees member list",
+    "restricted-worker boots real app Router through HTML adapter",
+    "Permission guard prevents member API calls",
+    "Real app routes have no runtime exceptions"
+  ],
+  "errors": [],
+  "api": "Browser contract fixtures + HTML boot adapter; production app root and real Expo Router. SSR response not tested."
+}

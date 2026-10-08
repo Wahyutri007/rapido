@@ -181,16 +181,11 @@ app/
     │   │   ├── index.tsx           # Search, store filter and stock-kind tabs
     │   │   ├── modify.tsx          # Shrinkage form; derives remaining stock
     │   │   └── detail.tsx          # Stock totals and good / damaged quantities
-    │   ├── purchase-order/         # Pembelian Barang
-    │   │   ├── _layout.tsx
-    │   │   ├── index.tsx           # Purchase status tabs, search and actions
-    │   │   ├── modify.tsx          # Purchase form with quantity / price subtotals
-    │   │   └── detail.tsx          # Purchase information and item totals
-    │   └── suppliers/             # Pemasok
-    │       ├── _layout.tsx         # Layout-level list, create/edit and detail headers
-    │       ├── index.tsx           # Search, supplier filters and purchase totals
-    │       ├── modify.tsx          # Contact/address form; session-only CRUD
-    │       └── detail.tsx          # Supplier information, edit and guarded delete
+    │   └── purchase-order/         # Pembelian Barang
+    │       ├── _layout.tsx
+    │       ├── index.tsx           # Purchase status tabs, search and actions
+    │       ├── modify.tsx          # Purchase form with quantity / price subtotals
+    │       └── detail.tsx          # Purchase information and item totals
     │
     ├── (back-office)/              # Back Office specific sub-flows
     │   ├── _layout.tsx             # JSStack
@@ -438,6 +433,12 @@ Data Role menggunakan CRUD backend `/contents/roles`; kategori permission memaka
 Kelola → `/manage/workers` → `/manage/workers/detail?id=<id>`; tambah/edit memakai `/manage/workers/modify` dengan ID opsional. Header dan guard owner berada di layout Karyawan; parent mendaftarkan folder tanpa header tambahan. Daftar mendukung pencarian, refresh, sheet tindakan, dan hapus terkonfirmasi. Form mencakup data pribadi, satu Role/toko, password beserta konfirmasi khusus tambah, foto, dan scan KTP.
 
 Data menggunakan CRUD owner `/contents/workers`, pilihan `/contents/roles` dan `/stores`; simpan/hapus memperbarui cache. Multipart edit memakai POST `_method=PUT`; password dan gambar tersimpan dipertahankan. Status aktif, banyak outlet, rekening, dan riwayat login belum tersedia pada kontrak ini. Lokasi code, perbaikan backend, screenshot, serta hasil pengujian dicatat di [WORKERS_UI_PROGRESS.md](WORKERS_UI_PROGRESS.md).
+
+### Member (Kelola)
+
+Kelola → `/manage/member` → `/manage/member/detail?id=<id>`; tambah/edit memakai `/manage/member/modify` dengan ID opsional. Header dan guard owner/izin `manage customers` berada pada nested layout. Parent mendaftarkan folder tanpa header kedua. Data berasal dari CRUD `/customers/data`, memakai DTO pelanggan dan factory hooks dengan cache `customers`.
+
+Daftar mendukung pencarian nama/telepon/email, refresh, retry, serta sheet detail/edit/hapus. Form menyediakan nama/telepon wajib dan email, nomor KTP, alamat, tanggal lahir, jenis kelamin, serta catatan opsional. Field opsional dapat dikosongkan; error 422 menjaga draft. Data kunjungan, poin, riwayat transaksi, kota, profesi, dan foto belum tersedia pada respons pelanggan. Code, screenshot, dan hasil pengujian ada di [MEMBER_UI_PROGRESS.md](MEMBER_UI_PROGRESS.md).
 
 ### Manajemen Tempat (Kelola)
 

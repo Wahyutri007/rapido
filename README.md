@@ -48,6 +48,7 @@ For anything more than a quick start, see:
 - **[docs/api-scaffolding.md](./docs/api-scaffolding.md)** - how to add a new API endpoint using the factory pattern.
 - **[docs/SDK57_UPGRADE.md](./docs/SDK57_UPGRADE.md)** - SDK 57 compatibility changes, validation, and Android USB setup.
 - **[docs/WORKERS_UI_PROGRESS.md](./docs/WORKERS_UI_PROGRESS.md)** - hasil Karyawan, integrasi akun Role, screenshot, lokasi code, dan verifikasi API/browser.
+- **[docs/MEMBER_UI_PROGRESS.md](./docs/MEMBER_UI_PROGRESS.md)** - hasil Member/pelanggan, integrasi CRUD API, screenshot, lokasi code, dan verifikasi izin.
 
 ## Backend configuration
 

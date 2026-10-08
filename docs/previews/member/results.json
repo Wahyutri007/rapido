@@ -1,7 +1,10 @@
 {
-  "passed": 43,
+  "passed": 45,
+  "expoSdk": "57",
+  "renderMode": "production",
   "checks": [
     "List loads real-contract member fields",
+    "Shared styles load and primary action stays at bottom",
     "Search matches phone",
     "Search matches email",
     "Search empty state",
@@ -18,6 +21,7 @@
     "Only one create request is sent",
     "Create refreshes list cache",
     "Invalid email and calendar date are blocked",
+    "Notes remain readable above sticky save",
     "Server failure preserves input and does not show success",
     "422 maps to field without losing draft",
     "Complete create sends supported gender/date/notes",

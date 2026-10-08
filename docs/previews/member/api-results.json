@@ -1,0 +1,33 @@
+{
+    "passed": 26,
+    "checks": [
+        "Anonymous access rejected",
+        "Owner list loads",
+        "Required fields validated",
+        "Create with only required fields",
+        "Create complete member",
+        "Create belongs to owner",
+        "Member detail loads",
+        "Edit complete member",
+        "Edited data persists",
+        "Optional fields can be cleared",
+        "Cleared fields persist as null",
+        "Invalid email rejected",
+        "Invalid gender rejected",
+        "Invalid phone rejected",
+        "Invalid name rejected",
+        "Other owner list isolated",
+        "Other owner GET rejected",
+        "Other owner PUT rejected",
+        "Other owner DELETE rejected",
+        "Permissioned worker lists same owner members",
+        "Permissioned worker reads member",
+        "Permissioned worker edits member",
+        "Worker without permission rejected",
+        "Delete member",
+        "Deleted member is inaccessible",
+        "Unknown member is inaccessible"
+    ],
+    "failures": [],
+    "fixturesRolledBack": true
+}
