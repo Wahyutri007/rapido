@@ -23,6 +23,7 @@ Gunakan Node 22.13 atau lebih baru dan `npm ci`. `package-lock.json` merupakan l
 - Nama ikon AntDesign dan tipe warna/simbol mengikuti paket terbaru. Metadata `lastModified` unggahan opsional pada kontrak aplikasi agar aset lama tetap dapat ditampilkan.
 - State animasi loading tidak dibaca melalui ref saat render. Timer penyelesaian registrasi dibatalkan ketika sheet ditutup.
 - Kondisi password kosong pada registrasi tidak merender teks langsung di dalam `View`; log respons request yang dapat memuat token login dihapus.
+- Nilai awal dropdown Beranda berada pada root Select; ikon membuang flag navigation `focused`, dan label grafik web tanpa rotasi tidak mengirim origin SVG native. Perbaikan sumber warning ini mencegah panel error development menutupi CTA.
 - `npm run android`, `ios`, dan `web` dapat dijalankan dari PowerShell. `npm run start:usb` mengutamakan IPv4 agar server localhost dapat dijangkau melalui ADB reverse.
 - Metro memakai `forceWriteFileSystem` untuk CSS NativeWind. Safelist Tailwind dicocokkan penuh dengan token warna solid; kelas transparansi yang tertulis di source tetap ditemukan melalui content scanning. CSS snapshot turun dari 1.857.183 menjadi 179.800 byte dan aturan native dari 22.716 menjadi 1.677, sehingga bundling dapat diselesaikan.
 
@@ -45,6 +46,7 @@ Hasil pemeriksaan final dicatat di [catatan koordinasi](SESSION_COORDINATION.md)
 - Snapshot gabungan lolos TypeScript, pengecekan versi dependency, dan Expo Doctor **21/21**.
 - Bundle development Android/Hermes berhasil HTTP 200: **5.170 module, 22.526.524 byte**. Ini merupakan bundling JavaScript, bukan build APK atau uji runtime perangkat.
 - Lint 29 file Inventory/Penggajian bersih; konfigurasi Metro/Tailwind dan perbaikan kondisi registrasi tidak memiliki error lint.
+- Login menggunakan backend lokal nyata serta form registrasi lolos klik/fokus, mengetik, scroll, dan validasi pada viewport 390 dan 1280 piksel; tidak ada runtime exception.
 - Expo Go 57.0.9 sudah dipasang. HP tidak terdeteksi saat verifikasi terakhir, sehingga pengujian runtime Android SDK57 belum selesai.
 
 Expo ESLint terbaru menambahkan pemeriksaan React Compiler. Pemeriksaan lint seluruh source awal migrasi melaporkan 68 error dan 451 warning pada pola kode lama; setelah perbaikan, lint pada 25 file perubahan migrasi/navigation melaporkan 0 error dan 13 warning. Pemeriksaan seluruh proyek belum bersih dan tidak diklaim lolos.

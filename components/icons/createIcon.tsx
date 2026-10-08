@@ -99,6 +99,8 @@ export function createIcon(
 			function WrappedIcon(props, ref) {
 				const { size, width, height, color, stroke, className, ...rest } =
 					props as any;
+				// Navigation state is not an SVG/DOM attribute.
+				delete rest.focused;
 
 				const resolvedSize = resolveSize(
 					size,
@@ -135,6 +137,7 @@ export function createIcon(
 			function SvgIcon(props, ref) {
 				const { size, width, height, color, stroke, fill, className, ...rest } =
 					props as any;
+				delete rest.focused;
 
 				const resolvedSize = resolveSize(
 					size,

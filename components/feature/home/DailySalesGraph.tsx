@@ -15,7 +15,7 @@ import { Colors } from "@/constants/Colors";
 import { scrollArrayIndex } from "@/lib/utils";
 import Entypo from "@expo/vector-icons/Entypo";
 import React from "react";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 import { BarChart } from "react-native-chart-kit";
 
 type DailySalesGraphProps = {
@@ -35,11 +35,10 @@ export default function DailySalesGraph(props: DailySalesGraphProps) {
         <Text className="text-gray-900" w="semibold">
           {title}
         </Text>
-        <Select>
+        <Select defaultValue="daily" initialLabel="Harian">
           <SelectTrigger className="h-fit border-0 bg-transparent py-0">
             <SelectInput
               placeholder="Pilih"
-              defaultValue="daily"
               className="h-fit py-0 pr-1 text-xs text-muted"
             />
             <SelectIcon
@@ -91,6 +90,8 @@ export default function DailySalesGraph(props: DailySalesGraphProps) {
             backgroundGradientTo: "#ffffff",
             color: (opacity = 1, index = 0) => Colors.zinc[400],
             barRadius: 4,
+            // Unrotated web labels do not need the native SVG origin attribute.
+            ...(Platform.OS === "web" && { propsForLabels: { origin: undefined } }),
           }}
         />
       </View>
