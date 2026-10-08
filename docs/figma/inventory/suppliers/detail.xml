@@ -1,0 +1,110 @@
+<frame id="1:15570" name="Detail Pemasok" x="31689" y="17263" width="390" height="860">
+      <instance id="1:15571" name="Heading Page" x="0" y="0" width="390" height="72" />
+      <frame id="1:15572" name="Frame 1171276675" x="16" y="88" width="358" height="619">
+        <frame id="1:15573" name="Frame 1171276550" x="0" y="0" width="358" height="81">
+          <frame id="1:15574" name="checkbox-item" x="12" y="12" width="334" height="57">
+            <frame id="1:15575" name="Frame 1171276598" x="0" y="4.5" width="48" height="48">
+              <frame id="1:15576" name="material-symbols:store-rounded" x="12" y="12" width="24" height="24" />
+            </frame>
+            <frame id="1:15578" name="Frame 1171276656" x="62" y="0" width="272" height="57">
+              <frame id="1:15579" name="Frame 1171276677" x="0" y="0" width="272" height="21">
+                <text id="1:15580" name="Pemasok Baju" x="0" y="0" width="108" height="21" />
+              </frame>
+              <text id="1:15581" name="Grup pemasok untuk mengelola item berdasarkan kategori." x="0" y="25" width="272" height="32" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="1:15582" name="Laporan Wrapper" x="0" y="97" width="358" height="522">
+          <text id="1:15583" name="Informasi Pemasok" x="0" y="0" width="128" height="18" />
+          <frame id="1:15584" name="Frame 1171276550" x="0" y="26" width="358" height="496">
+            <frame id="1:15585" name="checkbox-item" x="12" y="12" width="334" height="36">
+              <frame id="1:15586" name="proicons:pencil" x="0" y="0" width="36" height="36">
+                <frame id="1:15587" name="la:user-tag" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15589" name="Frame 1171276656" x="50" y="9" width="284" height="18">
+                <text id="1:15590" name="Nama Pemasok" x="0" y="0" width="104" height="18" />
+                <text id="1:15591" name="Pemasok Baju" x="204" y="1" width="80" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15592" name="Divider" x="12" y="60" width="334" height="0" />
+            <frame id="1:15593" name="checkbox-item" x="12" y="72" width="334" height="38">
+              <frame id="1:15594" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15595" name="lucide:tag" x="10" y="10" width="16" height="16">
+                  <frame id="1:15596" name="ph:map-pin-light" x="0.0009765625" y="-0.00194549560546875" width="16" height="16" />
+                </frame>
+              </frame>
+              <frame id="1:15598" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15599" name="Alamat" x="0" y="10" width="47" height="18" />
+                <text id="1:15600" name="Dumai kota, jalan ali akbar" x="136" y="11" width="148" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15601" name="Divider" x="12" y="122" width="334" height="0" />
+            <frame id="1:15602" name="checkbox-item" x="12" y="134" width="334" height="38">
+              <frame id="1:15603" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15604" name="bi:telephone" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15606" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15607" name="No. Telepon" x="0" y="10" width="80" height="18" />
+                <text id="1:15608" name="0852 9834 7642" x="188" y="11" width="96" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15609" name="Divider" x="12" y="184" width="334" height="0" />
+            <frame id="1:15610" name="checkbox-item" x="12" y="196" width="334" height="38">
+              <frame id="1:15611" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15612" name="carbon:email" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15614" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15615" name="Email" x="0" y="10" width="36" height="18" />
+                <text id="1:15616" name="smith@gmail.com" x="183" y="11" width="101" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15617" name="Divider" x="12" y="246" width="334" height="0" />
+            <frame id="1:15618" name="checkbox-item" x="12" y="258" width="334" height="38">
+              <frame id="1:15619" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15620" name="ph:map-pin-light" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15622" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15623" name="Provinsi" x="0" y="10" width="54" height="18" />
+                <text id="1:15624" name="Riau" x="259" y="11" width="25" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15625" name="Divider" x="12" y="308" width="334" height="0" />
+            <frame id="1:15626" name="checkbox-item" x="12" y="320" width="334" height="38">
+              <frame id="1:15627" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15628" name="ph:map-pin-light" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15630" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15631" name="Kota" x="0" y="10" width="31" height="18" />
+                <text id="1:15632" name="Pekanbaru" x="223" y="11" width="61" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15633" name="Divider" x="12" y="370" width="334" height="0" />
+            <frame id="1:15634" name="checkbox-item" x="12" y="382" width="334" height="38">
+              <frame id="1:15635" name="proicons:pencil" x="0" y="1" width="36" height="36">
+                <frame id="1:15636" name="ph:map-pin-light" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15638" name="Frame 1171276656" x="50" y="0" width="284" height="38">
+                <text id="1:15639" name="Kecamatan" x="0" y="10" width="75" height="18" />
+                <text id="1:15640" name="Rumbai Selatan" x="196" y="11" width="88" height="16" />
+              </frame>
+            </frame>
+            <line id="1:15641" name="Divider" x="12" y="432" width="334" height="1" />
+            <frame id="1:15642" name="checkbox-item" x="12" y="445" width="334" height="39">
+              <frame id="1:15643" name="proicons:pencil" x="0" y="1.5" width="36" height="36">
+                <frame id="1:15644" name="carbon:email" x="10" y="10" width="16" height="16" />
+              </frame>
+              <frame id="1:15646" name="Frame 1171276656" x="50" y="0.5" width="284" height="38">
+                <text id="1:15647" name="Kode Pos" x="0" y="10" width="63" height="18" />
+                <text id="1:15648" name="25252" x="247" y="11" width="37" height="16" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="1:15649" name="Button Container" x="0" y="764" width="390" height="96">
+        <frame id="1:15650" name="Button Wrapper" x="16" y="16" width="358" height="48">
+          <instance id="1:15651" name="Button Panjang " x="0" y="0" width="171" height="48" />
+          <instance id="1:15652" name="Button Panjang " x="187" y="0" width="171" height="48" />
+        </frame>
+      </frame>
+    </frame>

@@ -24,13 +24,13 @@ import { Colors } from "@/constants/Colors";
 import {
 	INVENTORY_ITEMS,
 	INVENTORY_STORES,
-	INVENTORY_SUPPLIERS,
 	STOCK_KIND_OPTIONS,
 } from "@/constants/data/inventory";
 import { getInventoryItem } from "@/lib/inventory";
 import { formatRp, route } from "@/lib/utils";
 import { type PurchaseSchema, purchaseSchema } from "@/schema/inventory";
 import { useInventoryStore } from "@/store/inventoryStore";
+import { useInventorySupplierStore } from "@/store/inventorySupplierStore";
 import InventoryQuantityInput from "./InventoryQuantityInput";
 import { InventoryIcon, InventorySectionHeading } from "./InventoryUi";
 
@@ -40,6 +40,7 @@ export default function PurchaseFormScreen() {
 		(item) => item.name === params.itemName,
 	);
 	const addPurchase = useInventoryStore((state) => state.addPurchase);
+	const suppliers = useInventorySupplierStore((state) => state.suppliers);
 	const [savedId, setSavedId] = React.useState<string>();
 	const form = useForm<PurchaseSchema>({
 		resolver: zodResolver(purchaseSchema),
@@ -70,9 +71,17 @@ export default function PurchaseFormScreen() {
 			item.kind === kind && !lines.some((line) => line.itemId === item.id),
 	);
 	function save(data: PurchaseSchema) {
+		const supplier = useInventorySupplierStore
+			.getState()
+			.suppliers.find((item) => item.name === data.supplier && item.active);
+		if (!supplier) {
+			form.setError("supplier", { message: "Pilih pemasok yang tersedia" });
+			return;
+		}
 		const id = addPurchase({
 			store: data.store,
 			supplier: data.supplier,
+			supplierId: supplier.id,
 			purchaseMethod: data.purchaseMethod,
 			paymentMethod: data.paymentMethod,
 			createdAt: data.date.toISOString(),
@@ -141,7 +150,9 @@ export default function PurchaseFormScreen() {
 								name: "supplier" as const,
 								label: "Pemasok",
 								placeholder: "Pilih pemasok",
-								options: INVENTORY_SUPPLIERS,
+								options: suppliers
+									.filter((supplier) => supplier.active)
+									.map((supplier) => supplier.name),
 							},
 							{
 								name: "purchaseMethod" as const,

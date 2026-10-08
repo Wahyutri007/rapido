@@ -1,0 +1,54 @@
+<frame id="1:15530" name="Tambah Pemasok" x="31259" y="17263" width="390" height="1064">
+      <instance id="1:15531" name="Heading Page" x="0" y="0" width="390" height="72" />
+      <frame id="1:15532" name="Frame 1171276715" x="16" y="88" width="358" height="848">
+        <frame id="1:15533" name="Frame 1171276714" x="12" y="12" width="334" height="42">
+          <frame id="1:15534" name="ic:outline-perm-device-information" x="0" y="1" width="40" height="40">
+            <frame id="1:15535" name="carbon:information-square" x="8" y="8" width="24" height="24" />
+          </frame>
+          <frame id="1:15538" name="Frame 1171276713" x="54" y="0" width="280" height="42">
+            <text id="1:15539" name="Informasi Pemasok" x="0" y="0" width="280" height="18" />
+            <text id="1:15540" name="Lengkapi detail dari pemasok ini" x="0" y="26" width="280" height="16" />
+          </frame>
+        </frame>
+        <line id="1:15541" name="Divider" x="12" y="66" width="334" height="0" />
+        <frame id="1:15542" name="Frame 1171277362" x="12" y="78" width="334" height="758">
+          <frame id="1:15543" name="Frame 427319469" x="0" y="0" width="334" height="74">
+            <text id="1:15544" name="Nama Pemasok *" x="0" y="0" width="334" height="18" />
+            <instance id="1:15545" name="Text Field" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15546" name="Frame 427319470" x="0" y="90" width="334" height="128">
+            <frame id="1:15547" name="Frame 427319864" x="0" y="0" width="334" height="18">
+              <text id="1:15548" name="Alamat *" x="0" y="0" width="58" height="18" />
+            </frame>
+            <instance id="1:15549" name="Text Field" x="0" y="26" width="334" height="102" />
+          </frame>
+          <frame id="1:15550" name="Frame 1171276841" x="0" y="234" width="334" height="74">
+            <frame id="1:15551" name="Frame 427319864" x="0" y="0" width="334" height="18">
+              <text id="1:15552" name="No. Telepon *" x="0" y="0" width="91" height="18" />
+            </frame>
+            <instance id="1:15553" name="Text Field" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15554" name="Frame 427319469" x="0" y="324" width="334" height="74">
+            <text id="1:15555" name="Alamat Email *" x="0" y="0" width="98" height="18" />
+            <instance id="1:15556" name="Text Field" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15557" name="Frame 427319469" x="0" y="414" width="334" height="74">
+            <text id="1:15558" name="Provinsi *" x="0" y="0" width="65" height="18" />
+            <instance id="1:15559" name="Dropdown Block" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15560" name="Frame 1171276842" x="0" y="504" width="334" height="74">
+            <text id="1:15561" name="Kota *" x="0" y="0" width="42" height="18" />
+            <instance id="1:15562" name="Dropdown Block" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15563" name="Frame 1171276843" x="0" y="594" width="334" height="74">
+            <text id="1:15564" name="Kecamatan *" x="0" y="0" width="86" height="18" />
+            <instance id="1:15565" name="Dropdown Block" x="0" y="26" width="334" height="48" />
+          </frame>
+          <frame id="1:15566" name="Frame 1171276845" x="0" y="684" width="334" height="74">
+            <text id="1:15567" name="Kode Pos" x="0" y="0" width="63" height="18" />
+            <instance id="1:15568" name="Text Field" x="0" y="26" width="334" height="48" />
+          </frame>
+        </frame>
+      </frame>
+      <instance id="1:15569" name="buttom-navigation" x="0" y="968" width="390" height="96" />
+    </frame>

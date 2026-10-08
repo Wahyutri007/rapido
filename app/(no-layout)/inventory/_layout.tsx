@@ -9,6 +9,7 @@ export default function InventoryFlowLayout() {
 				options={{ headerShown: false }}
 			/>
 			<JSStack.Screen name="purchase-order" options={{ headerShown: false }} />
+			<JSStack.Screen name="suppliers" options={{ headerShown: false }} />
 		</JSStack>
 	);
 }

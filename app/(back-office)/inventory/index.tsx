@@ -53,7 +53,12 @@ const GROUPS: NavListGroup[] = [
 				image: INVENTORY_IMAGES.purchase,
 				imageScale: 1.14,
 			},
-			{ title: "Pemasok", image: INVENTORY_IMAGES.supplier, imageScale: 1.17 },
+			{
+				title: "Pemasok",
+				href: route("/inventory/suppliers"),
+				image: INVENTORY_IMAGES.supplier,
+				imageScale: 1.17,
+			},
 			{
 				title: "Pembayaran Tagihan",
 				image: INVENTORY_IMAGES.payment,

@@ -13,6 +13,7 @@ type InventoryState = {
 	addStockRecord: (record: Omit<StockRecord, "id" | "reference">) => string;
 	addPurchase: (record: Omit<PurchaseRecord, "id" | "reference">) => string;
 	deletePurchase: (id: string) => void;
+	linkSupplier: (id: string, name: string) => void;
 };
 
 // UI preview data only. Server inventory belongs in api/hooks when endpoints exist.
@@ -45,5 +46,14 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 	deletePurchase: (id) =>
 		set((state) => ({
 			purchases: state.purchases.filter((record) => record.id !== id),
+		})),
+	linkSupplier: (id, name) =>
+		set((state) => ({
+			purchases: state.purchases.map((record) =>
+				!record.supplierId &&
+				record.supplier.trim().toLowerCase() === name.trim().toLowerCase()
+					? { ...record, supplierId: id }
+					: record,
+			),
 		})),
 }));

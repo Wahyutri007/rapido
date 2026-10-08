@@ -17,14 +17,16 @@ const InventoryVectorIcon = cssInterop(EFeather, {
 export function InventoryIcon({
 	name,
 	tone = "primary",
+	size = 16,
 }: {
 	name: IconName;
 	tone?: "primary" | "success" | "warning" | "destructive";
+	size?: number;
 }) {
 	return (
 		<InventoryVectorIcon
 			name={name}
-			size={16}
+			size={size}
 			className={cn({
 				"text-primary": tone === "primary",
 				"text-success": tone === "success",
@@ -157,7 +159,9 @@ export function StockKindBadge({ kind }: { kind: StockKind }) {
 
 export function InventoryMetrics({
 	items,
+	variant = "default",
 }: {
+	variant?: "default" | "supplier";
 	items: {
 		label: string;
 		value: string | number;
@@ -174,26 +178,42 @@ export function InventoryMetrics({
 					style={{ width: items.length === 3 ? "31.5%" : "48.5%", flexGrow: 1 }}
 				>
 					<Card
+						density={variant === "supplier" ? "compact" : "default"}
 						className={cn(
 							"gap-3",
 							items.length === 3 ? "items-center" : "flex-row items-start",
 						)}
 					>
 						<View
-							className={cn("size-9 items-center justify-center rounded-lg", {
-								"bg-primary-50": !item.tone || item.tone === "primary",
-								"bg-success-bg": item.tone === "success",
-								"bg-warning-bg": item.tone === "warning",
-								"bg-error-bg": item.tone === "destructive",
-							})}
+							className={cn(
+								"items-center justify-center rounded-lg",
+								variant === "supplier" ? "size-10" : "size-9",
+								{
+									"bg-primary-50": !item.tone || item.tone === "primary",
+									"bg-success-bg": item.tone === "success",
+									"bg-warning-bg": item.tone === "warning",
+									"bg-error-bg": item.tone === "destructive",
+								},
+							)}
 						>
-							<InventoryIcon name={item.icon} tone={item.tone} />
+							<InventoryIcon
+								name={item.icon}
+								tone={item.tone}
+								size={variant === "supplier" ? 24 : 16}
+							/>
 						</View>
 						<View className={cn("gap-1", items.length === 3 && "items-center")}>
+							{variant === "supplier" && (
+								<Text size="body" w="semibold">
+									{item.value}
+								</Text>
+							)}
 							<Text size="small">{item.label}</Text>
-							<Text size="body" w="semibold">
-								{item.value}
-							</Text>
+							{variant !== "supplier" && (
+								<Text size="body" w="semibold">
+									{item.value}
+								</Text>
+							)}
 							{item.description && (
 								<Text size="small" className="text-muted">
 									{item.description}

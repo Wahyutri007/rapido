@@ -35,6 +35,7 @@ export type PurchaseRecord = {
 	reference: string;
 	store: string;
 	supplier: string;
+	supplierId?: string;
 	createdAt: string;
 	receivedBy: string;
 	status: PurchaseStatus;

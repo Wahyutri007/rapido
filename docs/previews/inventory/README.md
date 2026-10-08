@@ -12,6 +12,7 @@ See [`../../FIGMA_PROGRESS.md`](../../FIGMA_PROGRESS.md) for pending modules.
 | Transfer Stok | [List](transfer-list.png), [Empty form](transfer-empty-form.png), [Filled form](transfer-filled-form.png), [Created detail](transfer-created-detail.png) |
 | Penyesuaian Stok | [List](adjustment-list.png), [Empty form](adjustment-empty-form.png), [Filled form](adjustment-filled-form.png), [Detail](adjustment-detail.png), [Mixed units](adjustment-mixed-units-detail.png) |
 | Pembelian Barang | [List](purchase-list.png), [Empty form](purchase-empty-form.png), [Filled form](purchase-filled-form.png), [Created detail](purchase-created-detail.png), [Recommendation prefill](purchase-recommendation-prefill.png) |
+| Pemasok | [List](suppliers/list.png), [Empty form](suppliers/empty-form.png), [Filled form](suppliers/filled-form.png), [Detail](suppliers/detail.png), [Created detail](suppliers/created-detail.png), [Blocked deletion](suppliers/protected-delete.png) |
 
 ## Checks
 
@@ -29,6 +30,9 @@ See [`../../FIGMA_PROGRESS.md`](../../FIGMA_PROGRESS.md) for pending modules.
 - Feature ESLint and Biome passed. Checking touched shared files reported twelve
   existing warnings in `components/common/Form.tsx`, with no lint errors.
 - Final project-wide `tsc --noEmit` passed with exit code 0 after preview cleanup.
+- Supplier schema, state lifecycle and browser interaction checks are recorded in
+  [suppliers/README.md](suppliers/README.md), including purchase integration and
+  the current regional-data limitations.
 
 The temporary preview entry and routes were removed after these checks. No test
 dependencies were added to the app package manifest. The preview bypassed backend

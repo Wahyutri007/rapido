@@ -1,0 +1,127 @@
+<frame id="1:15653" name="Pemasok" x="30829" y="17263" width="390" height="844">
+      <frame id="1:15654" name="Frame 427319554" x="0" y="0" width="390" height="19" />
+      <instance id="1:15655" name="Heading Page" x="0" y="0" width="390" height="72" />
+      <frame id="1:15656" name="Frame 1171277356" x="16" y="88" width="358" height="497.00006103515625">
+        <instance id="1:15657" name="search-container" x="0" y="0" width="358" height="48" />
+        <frame id="1:15658" name="Frame 1171276828" x="0" y="64" width="358" height="119">
+          <frame id="1:15659" name="Frame 1171276830" x="0" y="0" width="114" height="119">
+            <frame id="1:15660" name="Frame 1171276830" x="37" y="12" width="40" height="40">
+              <frame id="1:15661" name="mdi:truck-outline" x="8" y="8" width="24" height="24" />
+            </frame>
+            <frame id="1:15663" name="Frame 1171276880" x="12" y="66" width="90" height="41">
+              <text id="1:15664" name="12" x="0" y="0" width="90" height="21" />
+              <text id="1:15665" name="Total Supplier" x="0" y="25" width="90" height="16" />
+            </frame>
+          </frame>
+          <frame id="1:15666" name="Frame 1171276833" x="122" y="0" width="114" height="119">
+            <frame id="1:15667" name="Frame 1171276830" x="37" y="12" width="40" height="40">
+              <frame id="1:15668" name="ep:circle-check-filled" x="8" y="8" width="24" height="24" />
+            </frame>
+            <frame id="1:15670" name="Frame 1171276880" x="12" y="66" width="90" height="41">
+              <text id="1:15671" name="8" x="0" y="0" width="90" height="21" />
+              <text id="1:15672" name="Supplier Aktif" x="0" y="25" width="90" height="16" />
+            </frame>
+          </frame>
+          <frame id="1:15673" name="Frame 1171276835" x="244" y="0" width="114" height="119">
+            <frame id="1:15674" name="Frame 1171276830" x="37" y="12" width="40" height="40">
+              <frame id="1:15675" name="mdi:favorite-circle-outline" x="8" y="8" width="24" height="24" />
+            </frame>
+            <frame id="1:15677" name="Frame 1171276880" x="12" y="66" width="90" height="41">
+              <text id="1:15678" name="8" x="0" y="0" width="90" height="21" />
+              <text id="1:15679" name="Supplier Utama" x="0" y="25" width="90" height="16" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="1:15680" name="Frame 1171277086" x="0" y="199" width="358" height="298.00006103515625">
+          <frame id="1:15681" name="Frame 1171276837" x="0" y="0" width="358" height="18">
+            <text id="1:15682" name="Daftar Supplier (24)" x="0" y="0" width="135" height="18" />
+          </frame>
+          <instance id="1:15683" name="Icon/calendar" x="310" y="7.000000953674316" width="23.999998092651367" height="23.999998092651367" hidden="true" />
+          <frame id="1:15684" name="Frame 1171277135" x="0" y="26" width="358" height="272.00006103515625">
+            <frame id="1:15685" name="Frame 1171276837" x="0" y="0" width="358" height="130.00003051757812">
+              <frame id="1:15686" name="Frame 1171277142" x="12" y="12" width="334" height="66">
+                <frame id="1:15687" name="Frame 1171276598" x="0" y="0" width="40" height="40">
+                  <vector id="1:15688" name="Vector" x="10" y="10" width="20" height="20" />
+                </frame>
+                <frame id="1:15689" name="Frame 1171276846" x="52" y="0" width="173" height="66">
+                  <text id="1:15690" name="Pemasok Kue" x="0" y="0" width="92" height="18" />
+                  <frame id="1:15691" name="Frame 1171276847" x="0" y="26" width="173" height="40">
+                    <frame id="1:15692" name="Frame 427319868" x="0" y="0" width="173" height="16">
+                      <frame id="1:15693" name="boxicons:location" x="0" y="1" width="14" height="14" />
+                      <text id="1:15696" name="Bandung, Jawa Barat" x="22" y="0" width="156" height="16" />
+                    </frame>
+                    <frame id="1:15697" name="Frame 427319870" x="0" y="24" width="173" height="16">
+                      <frame id="1:15698" name="lsicon:management-stockout-filled" x="0" y="1" width="14" height="14" />
+                      <text id="1:15700" name="Tepung,telur,gula," x="22" y="0" width="102" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="1:15701" name="Frame 1171277113" x="237" y="0" width="97" height="24">
+                  <frame id="1:15702" name="Frame 427319868" x="0" y="0" width="61" height="24">
+                    <frame id="1:15703" name="ep:circle-check-filled" x="4" y="4" width="16" height="16" />
+                    <text id="1:15705" name="Aktif" x="26" y="4" width="27" height="16" />
+                  </frame>
+                  <frame id="1:15706" name="Frame 1171276617" x="73" y="0" width="24" height="24">
+                    <instance id="1:15707" name="Action Dot Button Hover " x="0" y="0" width="24" height="24" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:15708" name="Frame 1171277148" x="12" y="90" width="334" height="0.000029199210985098034">
+                <line id="1:15709" name="Line 72" x="52" y="-2.984279490192421e-13" width="282" height="0.000024653222681081388" />
+              </frame>
+              <frame id="1:15710" name="Frame 1171277116" x="12" y="102.00003051757812" width="334" height="16">
+                <frame id="1:15711" name="Frame 1171277143" x="52" y="0" width="115" height="16">
+                  <frame id="1:15712" name="si:insights-fill" x="0" y="0" width="16" height="16" />
+                  <frame id="1:15714" name="Frame 1171277116" x="24" y="0" width="91" height="16">
+                    <text id="1:15715" name="Total Pembelian" x="0" y="0" width="91" height="16" />
+                  </frame>
+                </frame>
+                <text id="1:15716" name="Rp154.000.000" x="245" y="0" width="89" height="16" />
+              </frame>
+            </frame>
+            <frame id="1:15717" name="Frame 1171276836" x="0" y="142.00003051757812" width="358" height="130.00003051757812">
+              <frame id="1:15718" name="Frame 1171277142" x="12" y="12" width="334" height="66">
+                <frame id="1:15719" name="Frame 1171276598" x="0" y="0" width="40" height="40">
+                  <vector id="1:15720" name="Vector" x="10" y="10" width="20" height="20" />
+                </frame>
+                <frame id="1:15721" name="Frame 1171276846" x="52" y="0" width="173" height="66">
+                  <text id="1:15722" name="Pemasok Baju" x="0" y="0" width="95" height="18" />
+                  <frame id="1:15723" name="Frame 1171276848" x="0" y="26" width="173" height="40">
+                    <frame id="1:15724" name="Frame 427319868" x="0" y="0" width="173" height="16">
+                      <frame id="1:15725" name="boxicons:location" x="0" y="1" width="14" height="14" />
+                      <text id="1:15728" name="Burj Khalifa/Downtown Dubai, Dubai" x="22" y="0" width="213" height="16" />
+                    </frame>
+                    <frame id="1:15729" name="Frame 427319870" x="0" y="24" width="173" height="16">
+                      <frame id="1:15730" name="lsicon:management-stockout-filled" x="0" y="1" width="14" height="14" />
+                      <text id="1:15732" name="Kain,penggulung,mesin jahit" x="22" y="0" width="160" height="16" />
+                    </frame>
+                  </frame>
+                </frame>
+                <frame id="1:15733" name="Frame 1171277113" x="237" y="0" width="97" height="24">
+                  <frame id="1:15734" name="Frame 427319868" x="0" y="0" width="61" height="24">
+                    <frame id="1:15735" name="ep:circle-check-filled" x="4" y="4" width="16" height="16" />
+                    <text id="1:15737" name="Aktif" x="26" y="4" width="27" height="16" />
+                  </frame>
+                  <frame id="1:15738" name="Frame 1171276617" x="73" y="0" width="24" height="24">
+                    <instance id="1:15739" name="Action Dot Button Hover " x="0" y="0" width="24" height="24" />
+                  </frame>
+                </frame>
+              </frame>
+              <frame id="1:15740" name="Frame 1171277148" x="12" y="90" width="334" height="0.000029199210985098034">
+                <line id="1:15741" name="Line 72" x="52" y="-2.984279490192421e-13" width="282" height="0.000024653222681081388" />
+              </frame>
+              <frame id="1:15742" name="Frame 1171277116" x="12" y="102.00003051757812" width="334" height="16">
+                <frame id="1:15743" name="Frame 1171277143" x="52" y="0" width="115" height="16">
+                  <frame id="1:15744" name="si:insights-fill" x="0" y="0" width="16" height="16" />
+                  <frame id="1:15746" name="Frame 1171277116" x="24" y="0" width="91" height="16">
+                    <text id="1:15747" name="Total Pembelian" x="0" y="0" width="91" height="16" />
+                  </frame>
+                </frame>
+                <text id="1:15748" name="Rp154.000.000" x="245" y="0" width="89" height="16" />
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <instance id="1:15749" name="buttom-navigation" x="0" y="748" width="390" height="96" />
+    </frame>

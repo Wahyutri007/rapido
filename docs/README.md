@@ -181,11 +181,16 @@ app/
     │   │   ├── index.tsx           # Search, store filter and stock-kind tabs
     │   │   ├── modify.tsx          # Shrinkage form; derives remaining stock
     │   │   └── detail.tsx          # Stock totals and good / damaged quantities
-    │   └── purchase-order/         # Pembelian Barang
-    │       ├── _layout.tsx
-    │       ├── index.tsx           # Purchase status tabs, search and actions
-    │       ├── modify.tsx          # Purchase form with quantity / price subtotals
-    │       └── detail.tsx          # Purchase information and item totals
+    │   ├── purchase-order/         # Pembelian Barang
+    │   │   ├── _layout.tsx
+    │   │   ├── index.tsx           # Purchase status tabs, search and actions
+    │   │   ├── modify.tsx          # Purchase form with quantity / price subtotals
+    │   │   └── detail.tsx          # Purchase information and item totals
+    │   └── suppliers/             # Pemasok
+    │       ├── _layout.tsx         # Layout-level list, create/edit and detail headers
+    │       ├── index.tsx           # Search, supplier filters and purchase totals
+    │       ├── modify.tsx          # Contact/address form; session-only CRUD
+    │       └── detail.tsx          # Supplier information, edit and guarded delete
     │
     ├── (back-office)/              # Back Office specific sub-flows
     │   ├── _layout.tsx             # JSStack

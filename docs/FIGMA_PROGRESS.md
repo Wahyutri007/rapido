@@ -11,12 +11,12 @@ made; native device comparison is still required.
 
 | Module | Figma nodes | Implementation / verification status |
 | --- | --- | --- |
-| Persediaan hub | `1:4792` | Ten design menu entries, four connected flows; exact exported bitmap icons. Other entries disabled until their flows are built. |
+| Persediaan hub | `1:4792` | Ten design menu entries, five connected flows; exact exported bitmap icons. Other entries disabled until their flows are built. |
 | Ringkasan Inventory | `1:12487`, `1:12956` | Both tabs, metrics, ranking cards, chart, recommendations and insights implemented from design context and screenshot. |
 | Transfer Stok | `1:12059`, `1:11949`, `1:12312` | List, create, detail, search and store / stock-kind filters implemented from context and screenshots. |
 | Penyesuaian Stok | `1:13404`, `1:13851`, `1:13605` | List, create and detail implemented from context and screenshots. |
 | Pembelian Barang | `1:14945`, `1:14543` | List and create context / screenshots captured; implemented. Detail uses existing detail components and cached metadata; full Figma context still pending (`1:14866`). |
-| Pemasok | `1:15653`, `1:15530`, `1:15570` | Pending design context and screenshots; not implemented in this published snapshot. |
+| Pemasok | `1:15653`, `1:15530`, `1:15570` | List, create/edit, detail, search, filters and guarded deletion implemented from cached metadata and existing UI tokens. Full design context and screenshots still pending; visual fidelity is provisional. |
 | Bahan Baku | `1:29776`, `1:31002` | Pending design context and screenshots; not implemented. |
 | Komposisi Produk | `1:31287`, `1:31448`, `1:31480` | Pending design context and screenshots; not implemented. |
 | Pembayaran Tagihan | `1:15208`, `1:14178`, `1:26045` | Pending design context and screenshots; not implemented. |
@@ -24,7 +24,14 @@ made; native device comparison is still required.
 | Stok Akhir | `1:12401` | Pending design context and screenshot; not implemented. |
 
 Figma MCP returned the Starter-plan tool-call limit after the purchase list and
-form were read. Recheck pending contexts and screenshots when access is available.
+form were read. One access recheck for Suppliers returned the same limit. The
+user requested continued module implementation, so Suppliers uses the cached
+frame hierarchy/text/geometry and existing Rapido components. Do not repeatedly
+request these pending nodes. Inspect their full context and screenshots when
+access becomes available; metadata cannot establish exact colors or typography.
+
+Supplier reference notes and cached frame metadata are in
+[figma/inventory/suppliers/README.md](figma/inventory/suppliers/README.md).
 
 ## Data and architecture
 
@@ -32,8 +39,10 @@ form were read. Recheck pending contexts and screenshots when access is availabl
 - Feature UI: `components/feature/inventory`; shared stock-operation components
   cover the transfer and adjustment flows without duplicating their layouts.
 - UI models: `types/ui/inventory.ts`; validation: `schema/inventory.ts`.
+- Supplier UI models and validation: `types/ui/inventory/supplier.ts` and
+  `schema/inventory/supplier.ts`; screens: `components/feature/inventory/supplier`.
 - Mock fixtures: `constants/data/inventory*.ts`; session-only preview records:
-  `store/inventoryStore.ts`. They are not
+  `store/inventoryStore.ts` and `store/inventorySupplierStore.ts`. They are not
   backend DTOs and are not persisted.
 - Existing Query hooks and authentication are unchanged. No inventory backend
   endpoints were invented. Replace preview data through the API factory when the
@@ -50,6 +59,14 @@ form were read. Recheck pending contexts and screenshots when access is availabl
 - Existing `NavList` has an optional `inventory` variant and `imageScale` prop;
   existing default / card consumers retain their geometry.
 - Missing hub flows have no `href`, avoiding navigation to nonexistent routes.
+- Supplier names are unique after trimming and case normalization. Contact fields
+  validate phone/email, and optional postal codes accept five digits.
+- Purchases link to supplier IDs and retain their name snapshots. Editing a
+  supplier also associates matching legacy purchase records before renaming.
+  Deletion is blocked while any purchase references that supplier.
+- Supplier regional selection currently uses only the captured Riau example and
+  preserves prefilled region values. It is not a complete regional directory.
+
 ## Other modules
 
 Other sessions have changed modules and upgraded dependencies in this workspace

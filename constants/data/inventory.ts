@@ -200,6 +200,7 @@ export const DEFAULT_PURCHASES: PurchaseRecord[] = INVENTORY_SUPPLIERS.map(
 		reference: `PO/A00${index + 1}/2603/002`,
 		store: "Toko Sushiro",
 		supplier,
+		supplierId: `supplier-${index + 1}`,
 		createdAt: "2025-10-08T09:05:50",
 		receivedBy: "Fauzan",
 		status: index < 2 ? "completed" : index === 2 ? "cancelled" : "waiting",
