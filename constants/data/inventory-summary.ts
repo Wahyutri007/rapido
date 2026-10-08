@@ -19,6 +19,8 @@ export type InventoryInsight = {
 };
 export type InventorySummary = {
 	totals: [number, number, number, number];
+	estimatedDays: { name: string; value: number }[];
+	dayTicks: number[];
 	popularTitle: string;
 	popular: InventoryRanking[];
 	runningLowTitle: string;
@@ -64,6 +66,13 @@ const losses = [
 export const INVENTORY_SUMMARIES: Record<StockKind, InventorySummary> = {
 	material: {
 		totals: [128, 86, 28, 14],
+		estimatedDays: [
+			{ name: "Tepung", value: 8 },
+			{ name: "Gula", value: 5 },
+			{ name: "Minyak", value: 3 },
+			{ name: "Ayam", value: 2 },
+		],
+		dayTicks: [8, 6, 4, 2, 0],
 		popularTitle: "Bahan paling sering dipakai",
 		popular: materials.map((name, index) => ({
 			name,
@@ -172,6 +181,11 @@ export const INVENTORY_SUMMARIES: Record<StockKind, InventorySummary> = {
 	},
 	product: {
 		totals: [156, 98, 32, 26],
+		estimatedDays: products.map((name, index) => ({
+			name,
+			value: [9, 5, 4, 6, 9][index],
+		})),
+		dayTicks: [9, 6, 3, 0],
 		popularTitle: "Produk paling laris",
 		popular: products.map((name, index) => ({
 			name,

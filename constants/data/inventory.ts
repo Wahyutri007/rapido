@@ -208,6 +208,12 @@ export const DEFAULT_PURCHASES: PurchaseRecord[] = INVENTORY_SUPPLIERS.map(
 		purchaseMethod: "Pembelian langsung",
 		paymentMethod: "Tunai",
 		note: "Gak pake lama",
-		lines: [{ item: INVENTORY_ITEMS[0], quantity: 100, price: 10000 }],
+		lines: [
+			{
+				item: INVENTORY_ITEMS[0],
+				quantity: 100,
+				price: [152500, 102500, 202320, 194320][index],
+			},
+		],
 	}),
 );

@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router } from "expo-router";
 import React from "react";
-import { useFieldArray, useForm } from "react-hook-form";
+import { useFieldArray, useForm, useWatch } from "react-hook-form";
 import { Pressable, View } from "react-native";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import Card from "@/components/common/Card";
@@ -32,6 +32,7 @@ import {
 } from "@/schema/inventory";
 import { useInventoryStore } from "@/store/inventoryStore";
 import type { StockOperation } from "@/types/ui/inventory";
+import InventoryQuantityInput from "./InventoryQuantityInput";
 import { InventoryIcon, InventorySectionHeading } from "./InventoryUi";
 
 export default function StockOperationForm({
@@ -56,8 +57,9 @@ export default function StockOperationForm({
 		control: form.control,
 		name: "lines",
 	});
-	const kind = form.watch("kind");
-	const lines = form.watch("lines");
+	const kind = useWatch({ control: form.control, name: "kind" });
+	const lines = useWatch({ control: form.control, name: "lines" });
+	const fromStore = useWatch({ control: form.control, name: "fromStore" });
 	const isTransfer = operation === "transfer";
 	const title = isTransfer ? "Transfer Stok" : "Penyesuaian";
 	const availableItems = INVENTORY_ITEMS.filter(
@@ -133,7 +135,7 @@ export default function StockOperationForm({
 										<FormControl>
 											<FormSelect
 												data={INVENTORY_STORES.filter(
-													(name) => name !== form.watch("fromStore"),
+													(name) => name !== fromStore,
 												).map((name) => ({ label: name, value: name }))}
 												placeholder="Pilih toko tujuan"
 											/>
@@ -216,7 +218,13 @@ export default function StockOperationForm({
 													)}
 												/>
 											</View>
-												<View className={isTransfer ? "flex-1 flex-row gap-2" : "flex-row gap-2"}>
+											<View
+												className={
+													isTransfer
+														? "flex-1 flex-row gap-2"
+														: "flex-row gap-2"
+												}
+											>
 												<View className="flex-1">
 													<FormField
 														control={form.control}
@@ -229,18 +237,9 @@ export default function StockOperationForm({
 																		: "Penyusutan"}
 																</FormLabel>
 																<FormControl>
-																	<FormInput
-																		type="number"
-																		fieldProps={{
-																			value: quantityField.value
-																				? String(quantityField.value)
-																				: "",
-																			keyboardType: "decimal-pad",
-																			onChangeText: (value) =>
-																				quantityField.onChange(
-																					Number(value.replace(",", ".")),
-																				),
-																		}}
+																	<InventoryQuantityInput
+																		value={quantityField.value}
+																		onChange={quantityField.onChange}
 																	/>
 																</FormControl>
 																<FormMessage />

@@ -110,6 +110,7 @@ export function InventoryTabs<T extends string>({
 	return (
 		<ScrollView
 			horizontal
+			style={{ flexGrow: 0, flexShrink: 0 }}
 			showsHorizontalScrollIndicator={false}
 			contentContainerStyle={{ gap: 8 }}
 		>

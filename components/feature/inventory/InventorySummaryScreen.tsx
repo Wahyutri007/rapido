@@ -136,40 +136,44 @@ export default function InventorySummaryScreen() {
 					</View>
 					<View className="flex-row gap-3">
 						<View className="h-44 justify-between pb-8">
-							{[8, 6, 4, 2, 0].map((tick) => (
+							{summary.dayTicks.map((tick) => (
 								<Text key={tick} size="small" className="text-muted">
 									{tick}
 								</Text>
 							))}
 						</View>
 						<View className="flex-1">
-							<View className="h-36 flex-row items-end justify-around border-b border-border-muted bg-primary-50">
-								{summary.runningLow
-									.slice(0, kind === "material" ? 4 : 5)
-									.map((row, index) => (
-										<View
-											key={row.name}
-											className="w-8 bg-primary"
-											style={{
-												height: `${(row.value / 9) * 100}%`,
-												opacity: 1 - index * 0.15,
-											}}
-										/>
+							<View className="h-36 flex-row items-end justify-around border-b border-border-muted">
+								<View
+									pointerEvents="none"
+									className="absolute inset-0 justify-between"
+								>
+									{summary.dayTicks.map((tick) => (
+										<View key={tick} className="border-t border-border-muted" />
 									))}
+								</View>
+								{summary.estimatedDays.map((row, index) => (
+									<View
+										key={row.name}
+										className="w-8 bg-primary"
+										style={{
+											height: `${(row.value / summary.dayTicks[0]) * 100}%`,
+											opacity: 1 - index * 0.15,
+										}}
+									/>
+								))}
 							</View>
 							<View className="mt-2 flex-row gap-2">
-								{summary.runningLow
-									.slice(0, kind === "material" ? 4 : 5)
-									.map((row) => (
-										<Text
-											key={row.name}
-											size="small"
-											numberOfLines={2}
-											className="flex-1 text-center text-muted"
-										>
-											{row.name}
-										</Text>
-									))}
+								{summary.estimatedDays.map((row) => (
+									<Text
+										key={row.name}
+										size="small"
+										numberOfLines={2}
+										className="flex-1 text-center text-muted"
+									>
+										{row.name}
+									</Text>
+								))}
 							</View>
 						</View>
 					</View>
@@ -222,6 +226,7 @@ export default function InventorySummaryScreen() {
 											<Image
 												source={row.image}
 												className="size-8 rounded-full"
+												style={{ width: 32, height: 32 }}
 											/>
 										)}
 										<Text size="small" className="flex-1">
@@ -271,6 +276,7 @@ export default function InventorySummaryScreen() {
 									<Image
 										source={insight.image}
 										className="h-28 w-full rounded-lg"
+										style={{ width: "100%", height: 112 }}
 										resizeMode="cover"
 									/>
 									<Text size="normal" w="medium">

@@ -37,6 +37,7 @@ export function InventoryRankingRows({
 							<Image
 								source={row.image}
 								className="h-10 w-12 rounded-lg"
+								style={{ width: 48, height: 40 }}
 								resizeMode="cover"
 							/>
 						)}

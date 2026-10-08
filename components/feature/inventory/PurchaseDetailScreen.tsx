@@ -39,7 +39,7 @@ export default function PurchaseDetailScreen() {
 				<Text size="normal" w="medium" className="text-muted">
 					Informasi Pesanan Pembelian
 				</Text>
-				<Card className="py-1">
+				<Card>
 					<DetailRow icon="grid" label="Toko" value={record.store} />
 					<DetailRow icon="truck" label="Supplier" value={record.supplier} />
 					<DetailRow

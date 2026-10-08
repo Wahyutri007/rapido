@@ -9,6 +9,7 @@ import type { PurchaseRecord, StockRecord } from "@/types/ui/inventory";
 type InventoryState = {
 	stockRecords: StockRecord[];
 	purchases: PurchaseRecord[];
+	purchaseSequence: number;
 	addStockRecord: (record: Omit<StockRecord, "id" | "reference">) => string;
 	addPurchase: (record: Omit<PurchaseRecord, "id" | "reference">) => string;
 	deletePurchase: (id: string) => void;
@@ -18,6 +19,7 @@ type InventoryState = {
 export const useInventoryStore = create<InventoryState>((set, get) => ({
 	stockRecords: [...DEFAULT_TRANSFERS, ...DEFAULT_ADJUSTMENTS],
 	purchases: DEFAULT_PURCHASES,
+	purchaseSequence: DEFAULT_PURCHASES.length,
 	addStockRecord: (record) => {
 		const sequence =
 			get().stockRecords.filter((item) => item.operation === record.operation)
@@ -31,11 +33,12 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 		return id;
 	},
 	addPurchase: (record) => {
-		const sequence = get().purchases.length + 1;
+		const sequence = get().purchaseSequence + 1;
 		const id = `purchase-${Date.now()}-${sequence}`;
 		const reference = `PO/A001/2603/${String(sequence).padStart(3, "0")}`;
 		set((state) => ({
 			purchases: [{ ...record, id, reference }, ...state.purchases],
+			purchaseSequence: sequence,
 		}));
 		return id;
 	},

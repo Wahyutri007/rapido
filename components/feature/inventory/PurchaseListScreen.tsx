@@ -87,69 +87,72 @@ export default function PurchaseListScreen() {
 							<SearchNotFound text="Tidak ada pembelian ditemukan" />
 						}
 						renderItem={({ item }) => (
-							<Pressable
-								accessibilityRole="button"
-								accessibilityLabel={`Detail ${item.reference}`}
-								onPress={() =>
-									router.push(
-										route("/inventory/purchase-order/detail", { id: item.id }),
-									)
-								}
-							>
-								<Card className="gap-3">
-									<View className="flex-row items-start gap-3">
-										<View className="size-9 items-center justify-center rounded-lg bg-primary-50">
-											<InventoryIcon name="grid" />
+							<View>
+								<Pressable
+									accessibilityRole="button"
+									accessibilityLabel={`Detail ${item.reference}`}
+									onPress={() =>
+										router.push(
+											route("/inventory/purchase-order/detail", {
+												id: item.id,
+											}),
+										)
+									}
+								>
+									<Card className="gap-3">
+										<View className="flex-row items-start gap-3">
+											<View className="size-9 items-center justify-center rounded-lg bg-primary-50">
+												<InventoryIcon name="grid" />
+											</View>
+											<View className="flex-1 gap-1">
+												<Text size="normal" w="medium">
+													{item.store}
+												</Text>
+												<Text size="small" className="text-primary">
+													{item.reference}
+												</Text>
+											</View>
+											<PurchaseStatusBadge status={item.status} />
+											<View className="size-4" />
 										</View>
-										<View className="flex-1 gap-1">
-											<Text size="normal" w="medium">
-												{item.store}
-											</Text>
-											<Text size="small" className="text-primary">
-												{item.reference}
-											</Text>
+										<View className="flex-row gap-3">
+											<View className="flex-1 gap-3 border-r border-border-muted pr-3">
+												<InventoryMetadata
+													icon="grid"
+													label="Nama Supplier"
+													value={item.supplier}
+												/>
+												<InventoryMetadata
+													icon="calendar"
+													label="Tanggal Transaksi"
+													value={dayjs(item.createdAt).format("DD MMM YYYY")}
+												/>
+											</View>
+											<View className="flex-1 gap-3">
+												<InventoryMetadata
+													icon="user"
+													label="Diterima Oleh"
+													value={item.receivedBy}
+												/>
+												<InventoryMetadata
+													icon="dollar-sign"
+													label="Total Transaksi"
+													value={formatRp(item.amount)}
+												/>
+											</View>
 										</View>
-										<PurchaseStatusBadge status={item.status} />
-										<Pressable
-											accessibilityRole="button"
-											accessibilityLabel={`Aksi ${item.reference}`}
-											hitSlop={8}
-											onPress={(event) => {
-												event.stopPropagation();
-												setSelected(item);
-											}}
-										>
-											<InventoryIcon name="more-horizontal" />
-										</Pressable>
-									</View>
-									<View className="flex-row gap-3">
-										<View className="flex-1 gap-3 border-r border-border-muted pr-3">
-											<InventoryMetadata
-												icon="grid"
-												label="Nama Supplier"
-												value={item.supplier}
-											/>
-											<InventoryMetadata
-												icon="calendar"
-												label="Tanggal Transaksi"
-												value={dayjs(item.createdAt).format("DD MMM YYYY")}
-											/>
-										</View>
-										<View className="flex-1 gap-3">
-											<InventoryMetadata
-												icon="user"
-												label="Diterima Oleh"
-												value={item.receivedBy}
-											/>
-											<InventoryMetadata
-												icon="dollar-sign"
-												label="Total Transaksi"
-												value={formatRp(item.amount)}
-											/>
-										</View>
-									</View>
-								</Card>
-							</Pressable>
+									</Card>
+								</Pressable>
+								<Pressable
+									accessibilityRole="button"
+									accessibilityLabel={`Aksi ${item.reference}`}
+									hitSlop={8}
+									onPress={() => setSelected(item)}
+									className="absolute right-4 top-4"
+								>
+									<InventoryIcon name="more-horizontal" />
+								</Pressable>
+							</View>
 						)}
 					/>
 				</View>

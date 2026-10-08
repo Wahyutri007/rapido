@@ -33,6 +33,10 @@ export default function StockOperationDetail({
 		0,
 	);
 	const totalLoss = record.lines.reduce((sum, line) => sum + line.quantity, 0);
+	const firstUnit = record.lines[0]?.item.unit;
+	const summaryUnit = record.lines.every((line) => line.item.unit === firstUnit)
+		? firstUnit
+		: undefined;
 	return (
 		<Wrapper contentContainerStyle={{ padding: 16, gap: 16 }}>
 			{!isTransfer && (
@@ -40,22 +44,22 @@ export default function StockOperationDetail({
 					items={[
 						{
 							label: "Total Stok Awal",
-							value: totalStock,
-							description: "Pcs",
+							value: summaryUnit ? totalStock : "—",
+							description: summaryUnit ?? "Satuan berbeda",
 							icon: "box",
 							tone: "warning",
 						},
 						{
 							label: "Total Penyusutan",
-							value: totalLoss,
-							description: "Pcs",
+							value: summaryUnit ? totalLoss : "—",
+							description: summaryUnit ?? "Satuan berbeda",
 							icon: "alert-triangle",
 							tone: "destructive",
 						},
 						{
 							label: "Total Stok Akhir",
-							value: totalStock - totalLoss,
-							description: "Pcs",
+							value: summaryUnit ? totalStock - totalLoss : "—",
+							description: summaryUnit ?? "Satuan berbeda",
 							icon: "check-circle",
 							tone: "success",
 						},
@@ -66,7 +70,7 @@ export default function StockOperationDetail({
 				<Text size="normal" w="medium" className="text-muted">
 					Informasi {isTransfer ? "Transfer" : "Penyesuaian"} Stok
 				</Text>
-				<Card className="py-1">
+				<Card>
 					{!isTransfer && (
 						<DetailRow label="Toko" value={record.fromStore} icon="grid" />
 					)}
@@ -109,7 +113,7 @@ export default function StockOperationDetail({
 						: "Daftar Penyesuaian Stok"}
 				</Text>
 				{isTransfer ? (
-					<Card className="py-1">
+					<Card>
 						{record.lines.map((line, index) => (
 							<View
 								key={line.item.id}

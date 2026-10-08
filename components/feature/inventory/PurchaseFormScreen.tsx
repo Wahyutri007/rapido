@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router, useLocalSearchParams } from "expo-router";
 import React from "react";
-import { useFieldArray, useForm } from "react-hook-form";
+import { useFieldArray, useForm, useWatch } from "react-hook-form";
 import { Pressable, Switch, View } from "react-native";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import Card from "@/components/common/Card";
@@ -31,6 +31,7 @@ import { getInventoryItem } from "@/lib/inventory";
 import { formatRp, route } from "@/lib/utils";
 import { type PurchaseSchema, purchaseSchema } from "@/schema/inventory";
 import { useInventoryStore } from "@/store/inventoryStore";
+import InventoryQuantityInput from "./InventoryQuantityInput";
 import { InventoryIcon, InventorySectionHeading } from "./InventoryUi";
 
 export default function PurchaseFormScreen() {
@@ -62,8 +63,8 @@ export default function PurchaseFormScreen() {
 		control: form.control,
 		name: "lines",
 	});
-	const kind = form.watch("kind");
-	const lines = form.watch("lines");
+	const kind = useWatch({ control: form.control, name: "kind" });
+	const lines = useWatch({ control: form.control, name: "lines" });
 	const availableItems = INVENTORY_ITEMS.filter(
 		(item) =>
 			item.kind === kind && !lines.some((line) => line.itemId === item.id),
@@ -249,18 +250,9 @@ export default function PurchaseFormScreen() {
 																Jumlah ({item.unit})
 															</FormLabel>
 															<FormControl>
-																<FormInput
-																	type="number"
-																	fieldProps={{
-																		keyboardType: "decimal-pad",
-																		value: quantityField.value
-																			? String(quantityField.value)
-																			: "",
-																		onChangeText: (value) =>
-																			quantityField.onChange(
-																				Number(value.replace(",", ".")),
-																			),
-																	}}
+																<InventoryQuantityInput
+																	value={quantityField.value}
+																	onChange={quantityField.onChange}
 																/>
 															</FormControl>
 															<FormMessage />
