@@ -6,7 +6,7 @@ module.exports = {
 	safelist: [
 		{
 			pattern:
-				/(bg|border|text|ring|stroke|fill)-(primary|secondary|tertiary|error|success|warning|info|typography|outline|background|indicator|surface|border|focus|foreground|muted|subtle|inverse|destructive)(-(0|50|100|200|300|400|500|600|700|800|900|950|white|gray|black|error|warning|muted|success|info|light|dark|primary|subtle|strong|inverse|bg|foreground))?(?:\/[0-9]+)?/,
+				/^(bg|border|text|ring|stroke|fill)-(primary|secondary|tertiary|error|success|warning|info|typography|outline|background|indicator|surface|border|focus|foreground|muted|subtle|inverse|destructive)(-(0|50|100|200|300|400|500|600|700|800|900|950|white|gray|black|error|warning|muted|success|info|light|dark|primary|subtle|strong|inverse|bg|foreground))?$/,
 		},
 	],
 	theme: {

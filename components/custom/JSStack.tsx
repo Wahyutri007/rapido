@@ -1,13 +1,13 @@
 import type {
 	ParamListBase,
 	StackNavigationState,
-} from "@react-navigation/native";
+} from "expo-router/react-navigation";
 import {
 	createStackNavigator,
 	type StackCardInterpolationProps,
 	type StackNavigationEventMap,
 	type StackNavigationOptions,
-} from "@react-navigation/stack";
+} from "expo-router/js-stack";
 import { router, withLayoutContext } from "expo-router";
 import { Easing, Platform } from "react-native";
 

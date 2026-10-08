@@ -18,7 +18,7 @@ export default function FinishAction({ state }: { state: State<boolean> }) {
 
   const [loading, setLoading] = React.useState(true);
 
-  const rotationValue = React.useRef(new Animated.Value(0)).current;
+  const [rotationValue] = React.useState(() => new Animated.Value(0));
 
   React.useEffect(() => {
     const animateRotation = Animated.loop(
@@ -38,22 +38,28 @@ export default function FinishAction({ state }: { state: State<boolean> }) {
   }, [rotationValue]);
 
   React.useEffect(() => {
+    let cancelled = false;
     async function handleLoading() {
       // * Simulate a network request or some processing time
 
       await wait(2000);
+      if (cancelled) return;
 
       setLoading(false);
 
       await wait(1000);
+      if (cancelled) return;
 
       setOpen(false);
+      setLoading(true);
       router.replace("/(back-office)/home");
     }
 
-    if (!open) setLoading(true);
-    else handleLoading();
-  }, [open]);
+    if (open) handleLoading();
+    return () => {
+      cancelled = true;
+    };
+  }, [open, setOpen]);
 
   const rotateInterpolate = rotationValue.interpolate({
     inputRange: [0, 1],
@@ -61,7 +67,10 @@ export default function FinishAction({ state }: { state: State<boolean> }) {
   });
 
   return (
-    <Actionsheet isOpen={open} onClose={() => setOpen(false)}>
+    <Actionsheet isOpen={open} onClose={() => {
+      setOpen(false);
+      setLoading(true);
+    }}>
       <ActionsheetBackdrop />
       <ActionsheetContent className="p-8">
         <View
@@ -80,7 +89,7 @@ export default function FinishAction({ state }: { state: State<boolean> }) {
               <Animated.View
                 style={{ transform: [{ rotate: rotateInterpolate }] }}
               >
-                <AntDesign name="loading2" size={64} color={Colors.primary} />
+                <AntDesign name="loading" size={64} color={Colors.primary} />
               </Animated.View>
               <Text className="text-zinc-700" w="medium">
                 Sedang memproses data pendaftaran anda.

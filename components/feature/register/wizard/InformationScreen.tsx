@@ -164,7 +164,7 @@ export default function WizardInformationScreen(props: {
                       />
                     </FormControl>
                     <FormMessage />
-                    {password && password.length > 0 && (
+                    {!!password && password.length > 0 && (
                       <View className="mt-2 gap-2">
                         <View className="flex-row gap-2">
                           {[1, 2, 3].map((level) => (

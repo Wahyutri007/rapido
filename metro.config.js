@@ -8,4 +8,6 @@ config.resolver.assetExts.push("md");
 module.exports = withNativeWind(config, {
   input: "./global.css",
   inlineRem: 16,
+  // Keep generated styles on disk for SDK 57's Metro pipeline.
+  forceWriteFileSystem: true,
 });

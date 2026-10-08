@@ -20,7 +20,7 @@ Ditinjau pada 8 Oktober 2026 (Asia/Jakarta). Dokumen ini menyimpan hasil pembela
 
 ## Stack dan batas tiap lapisan
 
-Versi di `package.json`: Expo `~53.0.27`, React Native `0.79.6`, React `19.0.0`, expo-router `~5.1.11`, NativeWind `^4.1.23`, TanStack Query `^5.85.6`, Zod `^3.24.4`, dan Zustand `^5.0.4`. TypeScript memakai `strict` dan alias `@/*` ke root aplikasi. React Compiler diaktifkan melalui `app.json`.
+Versi di `package.json`: Expo `~57.0.27`, React Native `0.86.3`, React `19.2.3`, expo-router `~57.0.25`, NativeWind `^4.2.3`, TanStack Query `^5.85.6`, Zod `^3.24.4`, dan Zustand `^5.0.4`. TypeScript memakai `strict` dan alias `@/*` ke root aplikasi. React Compiler diaktifkan melalui `app.json`.
 
 | Folder | Tanggung jawab |
 | --- | --- |
@@ -136,7 +136,9 @@ Tautan pengguna: [Untitled — Page 1](https://www.figma.com/design/gbdKqL2EcYNe
 - Konfigurasi MCP VS Code profil aktif: `D:/VSCode-2/Data/User/mcp.json`; ekstensi `figma.figma-vscode-extension` versi `0.4.7` telah terpasang pada `D:/VSCode-2/Extensions/`.
 - Konfigurasi dan login Codex telah diverifikasi. Login viewer ekstensi Figma dan otorisasi native MCP VS Code merupakan alur terpisah jika fitur tersebut akan dipakai.
 - Koneksi bukan jaminan akses permanen; periksa kembali pada sesi baru. `codex mcp list` memeriksa konfigurasi; `codex mcp login figma` dapat digunakan jika OAuth perlu diulang.
-- Untuk implementasi, pilih frame spesifik: baca design context dan screenshot, lalu petakan ke komponen/token React Native Rapido. Verifikasi saat ini hanya metadata, bukan pemeriksaan visual seluruh desain.
+- Untuk implementasi, pilih frame spesifik: baca design context dan screenshot, lalu petakan ke komponen/token React Native Rapido. Sebelas referensi Inventory telah dibaca dan disimpan di `docs/figma/inventory/`; belum dilakukan pemeriksaan visual seluruh desain.
+- Progres Inventory, batas data contoh, dan node yang masih menunggu akses dicatat di [FIGMA_PROGRESS.md](FIGMA_PROGRESS.md). MCP Figma mencapai kuota paket Starter setelah pembacaan daftar dan form Pembelian Barang; koneksi OAuth tetap terkonfigurasi.
+- Modul Pemasok dilanjutkan dari metadata frame yang sudah tersimpan sesuai permintaan pengguna. Daftar, tambah/edit, detail dan hapus memakai komponen bersama, RHF/Zod dan state sesi. Pesanan memakai ID pemasok yang stabil; backend pemasok, direktori wilayah lengkap dan verifikasi visual Figma/native masih menunggu.
 
 Skill `figma-slice-screen` masih mencantumkan default file key `t5TOjRmAB5Z4mmGfoAXXx2`. Gunakan file key dari tautan pengguna di atas untuk pekerjaan yang merujuk desain sesi ini; jangan berpindah ke default lama secara otomatis.
 
@@ -145,8 +147,8 @@ Skill `figma-slice-screen` masih mencantumkan default file key `t5TOjRmAB5Z4mmGf
 | Temuan | Acuan saat bekerja |
 | --- | --- |
 | `docs/api-scaffolding.md` memakai argumen positional | Gunakan signature object aktual di `api/factory.ts` dan contoh hooks yang tersedia |
-| `AGENTS.md` menyebut `bun lint` sebagai Biome | Script `lint` di `package.json` menjalankan `expo lint`; Biome dikonfigurasi terpisah |
-| `.github/copilot-instructions.md` memakai `(home)`, `api/queries/auth.ts`, dan `bun dev` | Gunakan route empat mode dan hook factory aktual; script `dev` tidak tersedia |
+| Biome dikonfigurasi terpisah | Script `lint` di `package.json` menjalankan `expo lint`; pemeriksaan Biome memakai `npx biome check <files>` |
+| `.github/copilot-instructions.md` memakai `(home)` dan `api/queries/auth.ts` | Gunakan route empat mode dan hook factory aktual |
 | Beberapa tabel menyebut AnimatedWrapper pada path Wrapper | Import dari berkas `components/common/AnimatedWrapper.tsx` yang terpisah |
 | `AGENTS_UI.md` melarang fractional spacing tetapi contoh memakainya | Ikuti aturan eksplisit untuk UI baru; jangan menganggap contoh yang bertentangan sebagai izin umum |
 | Sejumlah shared component dan layar lama masih override style/raw color | Reuse API komponennya; cocokkan kode yang disentuh dengan aturan terbaru dan dampak pada pemanggil |
@@ -165,7 +167,7 @@ Perbedaan ini dicatat sebagai hasil pembelajaran; belum dilakukan refactor atau 
 | [ponytail](../.agents/skills/ponytail/SKILL.md) | Menjaga perubahan kode tetap sederhana dan memakai solusi yang sudah ada |
 | [git-commit-chunking](../.agents/skills/git-commit-chunking/SKILL.md) | Meninjau/mengelompokkan perubahan untuk commit yang diminta pengguna |
 
-Perintah aktual: `bun start`/`npm run start`, `bun lint`/`npm run lint` (Expo ESLint), `bunx tsc --noEmit`/`npx tsc --noEmit`, serta `bunx biome check <files>`/`npx biome check <files>`. Biome mengatur indent tab dan double quotes. Gunakan format/write hanya untuk file yang termasuk scope perubahan.
+Perintah aktual: `npm ci`, `npm start`, `npm run lint` (Expo ESLint), `npx tsc --noEmit`, serta `npx biome check <files>`. SDK 57 memakai `package-lock.json` sebagai lockfile tunggal. Biome mengatur indent tab dan double quotes. Gunakan format/write hanya untuk file yang termasuk scope perubahan.
 
 Pada saat peninjauan, Bun tidak ditemukan pada PATH dan `node_modules` belum tersedia di root aplikasi. Belum dijalankan lint, typecheck, atau aplikasi karena pekerjaan sesi ini adalah pembelajaran dan penyimpanan dokumentasi. Pasang dependency ketika pekerjaan implementasi/verifikasi memerlukannya. Script android/ios/web memakai prefix `DARK_MODE=media`; periksa shell Windows sebelum menjalankannya.
 

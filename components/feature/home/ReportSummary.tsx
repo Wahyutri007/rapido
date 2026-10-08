@@ -32,7 +32,7 @@ function TrendText(props: { value: number }) {
 	return (
 		<View className="flex-row items-center gap-1">
 			<AntDesign
-				name={value >= 0 ? "arrowup" : "arrowdown"}
+				name={value >= 0 ? "arrow-up" : "arrow-down"}
 				size={12}
 				color={value >= 0 ? Colors.green[500] : Colors.red[500]}
 			/>

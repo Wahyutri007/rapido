@@ -12,9 +12,13 @@ export type IconProps = Omit<React.ComponentProps<typeof Svg>, "size" | "color">
   className?: string;
 };
 
-export type SingleDocumentPickerResult = NonNullable<
-  DocumentPicker.DocumentPickerResult["assets"]
->[number];
+// Existing uploaded assets may predate SDK 57's lastModified metadata.
+export type SingleDocumentPickerResult = Omit<
+  DocumentPicker.DocumentPickerAsset,
+  "lastModified"
+> & {
+  lastModified?: number;
+};
 
 export type Nullable<T> = T | null | undefined;
 

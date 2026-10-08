@@ -7,7 +7,6 @@
 		"icon": "./assets/images/icon.png",
 		"scheme": "rapido",
 		"userInterfaceStyle": "automatic",
-		"newArchEnabled": true,
 		"ios": {
 			"supportsTablet": true
 		},
@@ -16,9 +15,7 @@
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
 			},
-			"edgeToEdgeEnabled": true,
-			"package": "com.arief21si.rapido",
-			"usesCleartextTraffic": true
+			"package": "com.arief21si.rapido"
 		},
 		"web": {
 			"bundler": "metro",
@@ -61,7 +58,9 @@
 						"usesCleartextTraffic": true
 					}
 				}
-			]
+			],
+			"expo-image",
+			"expo-status-bar"
 		],
 		"experiments": {
 			"typedRoutes": true,

@@ -1,4 +1,5 @@
-import type { MaterialTopTabBarProps } from "@react-navigation/material-top-tabs";
+import type { MaterialTopTabBarProps } from "expo-router/js-top-tabs";
+import type { ParamListBase, TabNavigationState } from "expo-router/react-navigation";
 import React from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import Text from "@/components/common/Text";
@@ -6,7 +7,8 @@ import { Constants } from "@/constants";
 import { cn } from "@/lib/utils";
 
 export default function TopTabBar(props: MaterialTopTabBarProps) {
-	const { state, navigation, descriptors } = props;
+	const { navigation, descriptors } = props;
+	const state = props.state as TabNavigationState<ParamListBase>;
 
 	return (
 		<View

@@ -87,7 +87,7 @@ export default function LoadingAction(props: LoadingActionProps) {
     );
   }
 
-  const rotationValue = React.useRef(new Animated.Value(0)).current;
+  const [rotationValue] = React.useState(() => new Animated.Value(0));
   const rotationAnimation = React.useRef<Animated.CompositeAnimation | null>(
     null,
   );
@@ -147,7 +147,7 @@ export default function LoadingAction(props: LoadingActionProps) {
               <Animated.View
                 style={{ transform: [{ rotate: rotateInterpolate }] }}
               >
-                <AntDesign name="loading2" size={64} color={Colors.primary} />
+                <AntDesign name="loading" size={64} color={Colors.primary} />
               </Animated.View>
               <Text className="text-zinc-700" w="medium">
                 {actionData?.loadingMessage ?? loadingMessage}

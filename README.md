@@ -4,8 +4,8 @@ Mobile app for Rapido - a point-of-sale / operations suite built with **React Na
 
 ## Tech Stack
 
-- React Native 0.79 · React 19 · Expo SDK 53
-- **expo-router v5** - file-based routing
+- React Native 0.86 · React 19.2 · Expo SDK 57
+- **expo-router 57** - file-based routing
 - **TypeScript** (strict) with `@/*` path alias
 - **NativeWind v4** (TailwindCSS) + **gluestack-ui**
 - **TanStack Query** + **axios** for data
@@ -14,14 +14,14 @@ Mobile app for Rapido - a point-of-sale / operations suite built with **React Na
 
 ## Getting Started
 
-> Deps are installed with [bun](https://bun.sh). If you don't have it, `npm install` works too.
+> Use npm with the committed `package-lock.json` for reproducible installs.
 
 ```bash
-bun install
-bun start        # start Expo dev server
-bun android      # open on Android emulator / device
-bun ios          # open on iOS simulator
-bun lint         # ESLint
+npm ci
+npm start       # start Expo dev server
+npx expo start --android
+npx expo start --ios
+npm run lint    # ESLint
 ```
 
 Then open the app in a development build, emulator, or [Expo Go](https://expo.dev/go).
@@ -46,6 +46,7 @@ For anything more than a quick start, see:
 
 - **[AGENTS.md](./AGENTS.md)** - commands, folder map, and all conventions (API factory, forms, auth, styling, component placement). Read this before contributing.
 - **[docs/api-scaffolding.md](./docs/api-scaffolding.md)** - how to add a new API endpoint using the factory pattern.
+- **[docs/SDK57_UPGRADE.md](./docs/SDK57_UPGRADE.md)** - SDK 57 compatibility changes, validation, and Android USB setup.
 - **[docs/WORKERS_UI_PROGRESS.md](./docs/WORKERS_UI_PROGRESS.md)** - hasil Karyawan, integrasi akun Role, screenshot, lokasi code, dan verifikasi API/browser.
 
 ## Backend configuration
@@ -54,13 +55,13 @@ Copy `.env.example` to `.env.local` and set the backend base/API URLs for your e
 
 ## Android over USB without an Expo account
 
-Install Expo Go for SDK 53, enable USB debugging, connect the phone, and authorize the computer. With Android Platform Tools installed:
+Install Expo Go for SDK 57, enable USB debugging, connect the phone, and authorize the computer. With Android Platform Tools installed:
 
 ```powershell
 adb reverse tcp:8088 tcp:8088
 adb reverse tcp:8001 tcp:8001
 $env:EXPO_OFFLINE="1"
-npx expo start --go --localhost --port 8088
+npm run start:usb
 ```
 
 Run the backend on port 8001 and set `.env.local` URLs to `http://127.0.0.1:8001` and `http://127.0.0.1:8001/api`. Open `exp://127.0.0.1:8088` in Expo Go. Keep USB connected; reapply `adb reverse` after reconnecting.

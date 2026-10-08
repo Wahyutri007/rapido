@@ -129,13 +129,13 @@ export default function AbsenceCameraScreen() {
 						<CameraView
 							ref={expoCameraRef}
 							facing="front"
-							style={StyleSheet.absoluteFillObject}
+							style={StyleSheet.absoluteFill}
 							onCameraReady={() => setIsCameraReady(true)}
 						/>
 					) : (
 						<Image
 							source={{ uri: capturedPhoto }}
-							style={StyleSheet.absoluteFillObject}
+							style={StyleSheet.absoluteFill}
 							resizeMode="cover"
 						/>
 					)}
@@ -143,7 +143,7 @@ export default function AbsenceCameraScreen() {
 					{/* Biometric Oval Guide Overlay (Visible during live feed) */}
 					{!capturedPhoto && (
 						<View
-							style={StyleSheet.absoluteFillObject}
+							style={StyleSheet.absoluteFill}
 							className="items-center justify-center pointer-events-none"
 						>
 							{/* Biometric Oval Guide Reticle */}

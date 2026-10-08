@@ -125,7 +125,7 @@ export default function CashierSummary() {
         </View>
       ) : storeShiftQuery.isError ? (
         <View className="flex-row items-center gap-3 rounded-lg border border-zinc-200 bg-zinc-50 p-4">
-          <AntDesign name="infocirlce" size={tw(4)} color={Colors.zinc[400]} />
+          <AntDesign name="info-circle" size={tw(4)} color={Colors.zinc[400]} />
           <Text className="text-xs text-zinc-700">
             <Text w="medium">Toko belum dibuka</Text>, silahkan buka toko
             terlebih dahulu untuk memulai transaksi

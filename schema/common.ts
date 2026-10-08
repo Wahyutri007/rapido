@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const documentPickerResultSchema = z.object({
+  lastModified: z.number().optional(),
   mimeType: z.string({
     required_error: "Tipe file tidak valid",
     invalid_type_error: "Tipe file tidak valid",

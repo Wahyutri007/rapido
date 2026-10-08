@@ -1,3 +1,4 @@
+import { cssInterop } from "nativewind";
 import type React from "react";
 import {
 	type GestureResponderEvent,
@@ -13,6 +14,7 @@ import Animated, {
 import { haptic } from "@/lib/haptics";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+cssInterop(AnimatedPressable, { className: "style" });
 
 export type BouncyPressableProps = React.ComponentPropsWithoutRef<
 	typeof Pressable
@@ -63,7 +65,7 @@ export default function BouncyPressable({
 		!hasRipple && activeScale !== undefined && activeScale !== 1;
 
 	const animatedStyle = useAnimatedStyle(() => ({
-		transform: [{ scale: scale.value }],
+		transform: [{ scale: scale.get() }],
 	}));
 
 	const triggerHaptic = () => {
@@ -90,7 +92,7 @@ export default function BouncyPressable({
 	const handlePressIn = (e: GestureResponderEvent) => {
 		if (!disabled) {
 			if (shouldScale) {
-				scale.value = withSpring(activeScale, SPRING_CONFIG);
+				scale.set(withSpring(activeScale, SPRING_CONFIG));
 			}
 			triggerHaptic();
 		}
@@ -99,7 +101,7 @@ export default function BouncyPressable({
 
 	const handlePressOut = (e: GestureResponderEvent) => {
 		if (!disabled && shouldScale) {
-			scale.value = withSpring(1, SPRING_CONFIG);
+			scale.set(withSpring(1, SPRING_CONFIG));
 		}
 		onPressOut?.(e);
 	};

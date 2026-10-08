@@ -1,7 +1,7 @@
 import type {
 	BottomTabBarProps,
 	BottomTabNavigationOptions,
-} from "@react-navigation/bottom-tabs";
+} from "expo-router/js-tabs";
 import { type Href, useRouter } from "expo-router";
 import React from "react";
 import { Pressable, View } from "react-native";
@@ -44,26 +44,26 @@ function TabItemButton({
 	const scale = useSharedValue(1);
 
 	const animatedIconStyle = useAnimatedStyle(() => ({
-		transform: [{ scale: scale.value }],
+		transform: [{ scale: scale.get() }],
 	}));
 
 	React.useEffect(() => {
 		if (isFocused) {
-			scale.value = withSequence(
+			scale.set(withSequence(
 				withSpring(1.08, { damping: 14, stiffness: 450 }),
 				withSpring(1, { damping: 16, stiffness: 400 }),
-			);
+			));
 		} else {
-			scale.value = withSpring(1, { damping: 16, stiffness: 400 });
+			scale.set(withSpring(1, { damping: 16, stiffness: 400 }));
 		}
 	}, [isFocused, scale]);
 
 	const handlePressIn = () => {
-		scale.value = withSpring(0.94, { damping: 18, stiffness: 450 });
+		scale.set(withSpring(0.94, { damping: 18, stiffness: 450 }));
 	};
 
 	const handlePressOut = () => {
-		scale.value = withSpring(1, { damping: 18, stiffness: 450 });
+		scale.set(withSpring(1, { damping: 18, stiffness: 450 }));
 	};
 
 	return (

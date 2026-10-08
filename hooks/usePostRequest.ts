@@ -1,8 +1,6 @@
 import { APIErrorResponse, APIResponse, QueryResponse } from "@/types/api";
 import React from "react";
 
-const DEV = true;
-
 export type PostRequestHandler<R> = {
   onSuccess?: (data: R) => void;
   onError?: (error: APIResponse) => void;
@@ -37,16 +35,9 @@ export default function usePostRequest<T, R extends unknown>(
 
         onSuccess?.(response.data);
 
-        if (DEV) {
-          console.log("SUCCESS", response.data);
-        }
-
         return [response.data, null] as const;
       } catch (error) {
         onError?.(error as APIResponse);
-        if (DEV) {
-          console.log("ERROR", error);
-        }
         return [null, error as APIResponse] as const;
       } finally {
         setLoading(false);

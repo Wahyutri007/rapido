@@ -8,18 +8,20 @@ Read [`docs/PROJECT_CONTEXT.md`](docs/PROJECT_CONTEXT.md) when starting or resum
 
 ## Tech Stack & Commands
 
-- Expo SDK 53 + React Native 0.79 + React 19 (React Compiler enabled)
-- **expo-router v5** — file-based routing under `app/`
+- Expo SDK 57 + React Native 0.86 + React 19.2 (React Compiler enabled)
+- **expo-router 57** — file-based routing under `app/`
 - **TypeScript** (strict) with `@/*` root alias
 - **NativeWind v4 (TailwindCSS)** + **gluestack-ui** (`components/ui/`)
 - **react-hook-form + zod** for forms (schemas in `schema/`)
 - **zustand** (persisted via `expo-secure-store`) for client state
 - **@tanstack/react-query v5** + **axios** (factory in `api/factory.ts`)
-- **Biome** formatting & linting (tabs, double quotes — `bun lint`)
+- **Expo ESLint** via `npm run lint`; **Biome** formatting (tabs, double quotes)
 
 ```bash
-bun install && bun start
-bun lint
+npm ci
+npm start
+npm run lint
+npx tsc --noEmit
 ```
 
 ## Routing & Layouts

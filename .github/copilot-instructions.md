@@ -3,12 +3,12 @@
 Expo/React Native mobile app for Rapido (Ocean). Consumes the Laravel backend API.
 
 ## Stack
-- **Expo SDK 53** with Expo Router (file-based routing)
-- **React Native 0.79** + React 19
+- **Expo SDK 57** with Expo Router (file-based routing)
+- **React Native 0.86** + React 19.2
 - **Styling**: NativeWind (Tailwind) + GlueStack UI
 - **State**: TanStack React Query for server state, React Context for auth
 - **Forms**: React Hook Form + Zod validation
-- **Runtime**: Bun (preferred) or npm
+- **Package manager**: npm with the committed `package-lock.json`
 
 ## Project Structure
 
@@ -99,10 +99,10 @@ Backend returns consistent envelope:
 ## Commands
 | Task | Command |
 |------|---------|
-| Start dev | `bun dev` or `npx expo start` |
-| Android | `bun android` |
-| iOS | `bun ios` |
-| Lint | `bun run lint` |
+| Start dev | `npm start` |
+| Android | `npm run android` |
+| iOS | `npm run ios` |
+| Lint | `npm run lint` |
 
 ## Conventions
 - All user-facing text is in **Indonesian**

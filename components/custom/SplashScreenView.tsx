@@ -75,73 +75,73 @@ export function SplashScreenView({
 	useEffect(() => {
 		// If mode === "transition", fade in root container rapidly
 		if (mode === "transition") {
-			containerOpacity.value = withTiming(1, {
+			containerOpacity.set(withTiming(1, {
 				duration: 250,
 				easing: Easing.out(Easing.ease),
-			});
+			}));
 		}
 
 		// 1. Ambient pulsing background rings
-		ringScale.value = withRepeat(
+		ringScale.set(withRepeat(
 			withTiming(1.08, {
 				duration: 2800,
 				easing: Easing.inOut(Easing.ease),
 			}),
 			-1,
 			true,
-		);
-		ringOpacity.value = withRepeat(
+		));
+		ringOpacity.set(withRepeat(
 			withTiming(1, {
 				duration: 2800,
 				easing: Easing.inOut(Easing.ease),
 			}),
 			-1,
 			true,
-		);
+		));
 
 		// 2. Logo Wordmark spring entrance
-		logoScale.value = withSpring(1, {
+		logoScale.set(withSpring(1, {
 			damping: 14,
 			stiffness: 130,
 			mass: 0.9,
-		});
-		logoTranslateY.value = withSpring(0, {
+		}));
+		logoTranslateY.set(withSpring(0, {
 			damping: 14,
 			stiffness: 130,
 			mass: 0.9,
-		});
-		logoOpacity.value = withTiming(1, {
+		}));
+		logoOpacity.set(withTiming(1, {
 			duration: 400,
 			easing: Easing.out(Easing.cubic),
-		});
+		}));
 
 		// 3. Mode badge fade in (for mode transitions)
 		if (mode === "transition") {
-			detailsOpacity.value = withDelay(
+			detailsOpacity.set(withDelay(
 				250,
 				withTiming(1, {
 					duration: 400,
 					easing: Easing.out(Easing.ease),
 				}),
-			);
-			detailsTranslateY.value = withDelay(
+			));
+			detailsTranslateY.set(withDelay(
 				250,
 				withSpring(0, {
 					damping: 15,
 					stiffness: 120,
 				}),
-			);
+			));
 		}
 
 		// 4. Slow network helper for boot mode (after 1.2s if still loading)
 		if (mode === "boot") {
-			statusOpacity.value = withDelay(
+			statusOpacity.set(withDelay(
 				1200,
 				withTiming(1, {
 					duration: 400,
 					easing: Easing.out(Easing.ease),
 				}),
-			);
+			));
 		}
 	}, [
 		mode,
@@ -162,13 +162,13 @@ export function SplashScreenView({
 			haptic.light();
 
 			// Zoom logo and container smoothly
-			containerScale.value = withTiming(1.08, {
+			containerScale.set(withTiming(1.08, {
 				duration: 320,
 				easing: Easing.out(Easing.cubic),
-			});
+			}));
 
 			// Fade out container
-			containerOpacity.value = withTiming(
+			containerOpacity.set(withTiming(
 				0,
 				{
 					duration: 320,
@@ -179,48 +179,48 @@ export function SplashScreenView({
 						runOnJS(onAnimationComplete)();
 					}
 				},
-			);
+			));
 		}
 	}, [isReady, onAnimationComplete, containerScale, containerOpacity]);
 
 	// Animated Styles
 	const containerAnimatedStyle = useAnimatedStyle(() => ({
-		opacity: containerOpacity.value,
-		transform: [{ scale: containerScale.value }],
-		pointerEvents: containerOpacity.value > 0.05 ? "auto" : "none",
+		opacity: containerOpacity.get(),
+		transform: [{ scale: containerScale.get() }],
+		pointerEvents: containerOpacity.get() > 0.05 ? "auto" : "none",
 	}));
 
 	const ambientRing1Style = useAnimatedStyle(() => ({
-		transform: [{ scale: ringScale.value }],
-		opacity: ringOpacity.value * 0.45,
+		transform: [{ scale: ringScale.get() }],
+		opacity: ringOpacity.get() * 0.45,
 	}));
 
 	const ambientRing2Style = useAnimatedStyle(() => ({
-		transform: [{ scale: ringScale.value * 1.18 }],
-		opacity: ringOpacity.value * 0.25,
+		transform: [{ scale: ringScale.get() * 1.18 }],
+		opacity: ringOpacity.get() * 0.25,
 	}));
 
 	const logoAnimatedStyle = useAnimatedStyle(() => ({
-		opacity: logoOpacity.value,
+		opacity: logoOpacity.get(),
 		transform: [
-			{ scale: logoScale.value },
-			{ translateY: logoTranslateY.value },
+			{ scale: logoScale.get() },
+			{ translateY: logoTranslateY.get() },
 		],
 	}));
 
 	const detailsAnimatedStyle = useAnimatedStyle(() => ({
-		opacity: detailsOpacity.value,
-		transform: [{ translateY: detailsTranslateY.value }],
+		opacity: detailsOpacity.get(),
+		transform: [{ translateY: detailsTranslateY.get() }],
 	}));
 
 	const statusAnimatedStyle = useAnimatedStyle(() => ({
-		opacity: statusOpacity.value,
+		opacity: statusOpacity.get(),
 	}));
 
 	return (
 		<Animated.View
 			style={[
-				StyleSheet.absoluteFillObject,
+				StyleSheet.absoluteFill,
 				styles.container,
 				containerAnimatedStyle,
 			]}
@@ -229,13 +229,13 @@ export function SplashScreenView({
 				colors={["#1d4ed8", "#2563eb", "#3b82f6"]}
 				start={{ x: 0.1, y: 0 }}
 				end={{ x: 0.9, y: 1 }}
-				style={StyleSheet.absoluteFillObject}
+				style={StyleSheet.absoluteFill}
 			/>
 
 			{onPress && (
 				<Pressable
 					onPress={onPress}
-					style={StyleSheet.absoluteFillObject}
+					style={StyleSheet.absoluteFill}
 					accessibilityRole="button"
 					accessibilityLabel="Tutup splash screen"
 				/>

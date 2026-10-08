@@ -1,11 +1,11 @@
 import { cssInterop } from "nativewind";
 import React from "react";
-import { StyleSheet } from "react-native";
+import { type ColorValue, StyleSheet } from "react-native";
 import Svg, { type SvgProps } from "react-native-svg";
 
 export type CustomIconProps = Omit<SvgProps, "color"> & {
 	size?: number | string;
-	color?: string;
+	color?: ColorValue;
 	className?: string;
 };
 
@@ -61,7 +61,7 @@ function resolveSize(
 	return 24;
 }
 
-function resolveColor(props: Record<string, any>): string | undefined {
+function resolveColor(props: Record<string, any>): ColorValue | undefined {
 	const flatStyle = props.style ? StyleSheet.flatten(props.style) : undefined;
 	return (
 		props.color ||

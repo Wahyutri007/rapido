@@ -2,7 +2,7 @@ import { JSStack, ScaleBackTransition } from "@/components/custom/JSStack";
 import React from "react";
 import Header from "@/components/common/Header";
 
-import { StackHeaderProps } from "@react-navigation/stack";
+import { StackHeaderProps } from "expo-router/js-stack";
 
 export default function RegistrationLayout() {
   return (
