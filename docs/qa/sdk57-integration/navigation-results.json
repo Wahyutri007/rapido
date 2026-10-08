@@ -1,0 +1,34 @@
+{
+  "sourceSnapshot": "79feac2273d27821a64ad6c03b47cb92d241df21",
+  "recordOrigin": "Completed assertion prefix from the main navigator smoke-test console output; the full script did not reach its result-file write",
+  "completedChecks": [
+    "Real backend owner login reaches Home",
+    "Bottom navigation opens Kelola",
+    "Income header button geometry",
+    "Add Income header button geometry",
+    "Income reference accepts typing and required account validation appears",
+    "Expense header button geometry",
+    "Add Expense header button geometry",
+    "Expense reference accepts typing",
+    "Member header button geometry",
+    "Member menu opens and reload preserves the Member route",
+    "Payroll header button geometry",
+    "Payroll detail header button geometry",
+    "Payroll settings header button geometry",
+    "Payroll list-detail-settings navigation and note typing",
+    "Purchase header button geometry",
+    "Inventory hub opens purchase orders",
+    "Supplier header button geometry",
+    "Add Supplier header button geometry"
+  ],
+  "runtimeErrorsDuringCompletedChecks": [],
+  "consoleErrorsDuringCompletedChecks": [],
+  "incompleteCheck": "Supplier field typing and required validation in the combined navigator",
+  "initialHarnessFailure": "Exact label locator did not account for the required-field marker",
+  "focusedRetry": {
+    "status": "incomplete",
+    "completedChecks": [],
+    "failure": "Login page navigation exceeded 180000 ms before DOMContentLoaded; page remained about:blank",
+    "environment": "Approximately 244 MB free physical memory at the diagnostic check"
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "width": 390,
+    "screen": "login",
+    "mouseFocus": true,
+    "typing": true,
+    "scroll": [
+      172
+    ],
+    "login": true
+  },
+  {
+    "width": 390,
+    "screen": "register",
+    "mouseFocus": true,
+    "typing": true,
+    "scroll": [
+      224
+    ]
+  },
+  {
+    "width": 1280,
+    "screen": "login",
+    "mouseFocus": true,
+    "typing": true,
+    "scroll": [
+      172
+    ],
+    "login": true
+  },
+  {
+    "width": 1280,
+    "screen": "register",
+    "mouseFocus": true,
+    "typing": true,
+    "scroll": [
+      152
+    ]
+  }
+]

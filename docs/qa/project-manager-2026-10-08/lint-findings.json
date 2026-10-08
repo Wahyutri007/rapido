@@ -1,0 +1,435 @@
+{
+    "date":  "2026-10-08",
+    "timezone":  "Asia/Jakarta",
+    "initialErrorCount":  50,
+    "recheckErrorCount":  46,
+    "status":  "main-integration-held",
+    "files":  [
+                  {
+                      "file":  "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  111,
+                                         "column":  5,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  98,
+                                         "column":  5,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  28,
+                                         "column":  26,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  28,
+                                         "column":  26,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/catalog/bundling/detail.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  94,
+                                         "column":  34,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  110,
+                                         "column":  34,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/catalog/extra-menu/detail.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  79,
+                                         "column":  36,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/catalog/menu/detail.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  83,
+                                         "column":  37,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  89,
+                                         "column":  34,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  95,
+                                         "column":  33,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  101,
+                                         "column":  43,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  101,
+                                         "column":  43,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     },
+                                     {
+                                         "line":  112,
+                                         "column":  39,
+                                         "rule":  "react-hooks/preserve-manual-memoization",
+                                         "summary":  "Compilation Skipped: Existing memoization could not be preserved"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/catalog/promo/detail.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  417,
+                                         "column":  20,
+                                         "rule":  "react-hooks/purity",
+                                         "summary":  "Error: Cannot call impure function during render"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/catalog/voucher/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  81,
+                                         "column":  19,
+                                         "rule":  "react-hooks/purity",
+                                         "summary":  "Error: Cannot call impure function during render"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/extra/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  66,
+                                         "column":  9,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/order-type/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  64,
+                                         "column":  9,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/payment-method/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  61,
+                                         "column":  9,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/pos-settings/rounding.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  65,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  94,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/printer/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  59,
+                                         "column":  9,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/manage/tax/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  61,
+                                         "column":  9,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(no-layout)/offer/promo/modify.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  104,
+                                         "column":  5,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     },
+                                     {
+                                         "line":  147,
+                                         "column":  16,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(onboarding)/choose-store/index.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  33,
+                                         "column":  5,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     },
+                                     {
+                                         "line":  111,
+                                         "column":  7,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/(onboarding)/onboarding.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     },
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     },
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     },
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     },
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     },
+                                     {
+                                         "line":  30,
+                                         "column":  18,
+                                         "rule":  "react-hooks/refs",
+                                         "summary":  "Error: Cannot access refs during render"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "app/index.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  43,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     },
+                                     {
+                                         "line":  97,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/common/SingleSelect.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  86,
+                                         "column":  3,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/common/SortActionSheet.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  58,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/custom/CardList.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  652,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/custom/Incrementer.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  37,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/custom/LayoutTransitionSplash.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  12,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/custom/TabPager.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  54,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/custom/TabPager.web.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  31,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  33,
+                                         "column":  3,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     },
+                                     {
+                                         "line":  37,
+                                         "column":  3,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/feature/barcode/PrintBarcodeModal.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  35,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "components/feature/barcode/ProductPickerSheet.tsx",
+                      "errors":  [
+                                     {
+                                         "line":  124,
+                                         "column":  4,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  },
+                  {
+                      "file":  "hooks/useSearchParamState.ts",
+                      "errors":  [
+                                     {
+                                         "line":  11,
+                                         "column":  7,
+                                         "rule":  "react-hooks/set-state-in-effect",
+                                         "summary":  "Error: Calling setState synchronously within an effect can trigger cascading renders"
+                                     }
+                                 ]
+                  }
+              ]
+}
