@@ -322,7 +322,7 @@ app/
     │   ├── tax/                    # Manage taxes (_layout, index, modify)
     │   ├── sales-target/           # Target Penjualan: daftar, detail, tambah/edit produk/kategori (_layout, index, detail, modify)
     │   ├── expenses/               # Biaya & Pengeluaran: daftar/filter, detail, tambah/edit (_layout, index, detail, modify)
-    │   ├── income/                 # Pendapatan & Penerimaan (_layout, index)
+    │   ├── income/                 # Pendapatan & Penerimaan: daftar/filter, detail, tambah/edit manual (_layout, index, detail, modify)
     │   ├── payroll/                # Penggajian (_layout, index)
     │   ├── absence/                # Absensi (_layout, index)
     │   ├── faq/                    # Bantuan: pencarian, kategori, dan jawaban FAQ (_layout, index)
@@ -461,3 +461,12 @@ Kelola → `/manage/expenses` membuka daftar pengeluaran yang dikelompokkan per 
 - Form RHF/Zod memvalidasi akun/kode, referensi unik per toko, sumber dana, toko, tanggal kalender ISO `YYYY-MM-DD`, nominal Rupiah bulat positif, dan deskripsi. Kode mengikuti akun dan tidak dapat diketik. Tanggal berformat Indonesia dari form laporan lama dinormalisasi saat edit. Metadata pembuat/jam dipertahankan saat edit; penambahan melalui desain ini diberi pembuat `Pratinjau lokal`.
 - State memakai `useAccountingStore` serta tipe/fixture akuntansi yang sudah ada, sehingga simpan/hapus terbaca oleh layar laporan tanpa membuat koleksi data kedua. Simpan berulang memakai ID pertama; ID hilang atau milik saldo masuk diblokir. Hapus memerlukan konfirmasi. Alokasi ID `addExpense` memakai suffix jika timestamp sudah digunakan; action akuntansi lain tidak diubah.
 - Schema berada di `schema/manage/expense.ts`; helper tanggal/simpan/filter di `lib/manage/expense-date.ts` dan `lib/manage/expenses.ts`; komposisi form/detail di `components/feature/manage/expenses/`. Data masih fixture/state lokal selama aplikasi berjalan, belum API atau persistensi perangkat. Referensi, screenshot, hasil, dan batas verifikasi ada pada [previews/expenses/README.md](previews/expenses/README.md).
+
+### Pendapatan & Penerimaan (Kelola)
+
+Kelola → `/manage/income` membuka daftar yang dikelompokkan per tanggal, dengan pencarian, filter sumber dana/toko/jenis, reset, dan total hasil filter. Detail berada pada `/manage/income/detail?id=<id>`; tambah manual pada `/manage/income/modify`; edit memakai ID penerimaan manual. Parent sudah mendaftarkan income tanpa header tambahan; header ketiga layar berada di `income/_layout.tsx`.
+
+- Penerimaan manual mendukung tambah/edit/hapus terkonfirmasi. Penerimaan invoice berasal dari penjualan dan ditampilkan sebagai informasi, dengan nominal/jumlah item dari record penerimaan. Daftar/detail tidak menyediakan edit/hapus invoice; route edit dan helper mutation juga menjaganya. Receipt fixture lama tidak cocok dengan nomor/tanggal/nominal penerimaan dan tidak ditampilkan sebagai struk transaksi ini.
+- Form RHF/Zod memakai pilihan akun/kode yang cocok, referensi unik per toko (termasuk referensi invoice), sumber dana/toko, tanggal kalender ISO, Rupiah bulat positif, serta deskripsi. Metadata pembuat/jam dipertahankan saat edit. ID hasil simpan pertama dipakai untuk simpan berikutnya; penambahan berdekatan mendapat ID berbeda. Input tanggal Indonesia dari form laporan lama dinormalisasi saat edit. Data opsional yang hilang tetap kosong/dash.
+- Form bersama ada pada `components/feature/accounting/CashEntryForm.tsx`; wrapper Expense/Income hanya memasok kind, nilai awal, dan ID. Schema bersama `schema/accounting/cash-entry.ts` memakai konfigurasi pilihan tiap modul. `lib/accounting/date.ts` menampung validasi/format tanggal; `lib/manage/expense-date.ts` mempertahankan export lama. Form/schema laporan lama tidak diubah.
+- Data memakai koleksi `incomes` dari `accountingStore` serta tipe/fixture yang sudah tersedia; tidak membuat mode dummy global atau fixture baru. State masih lokal selama aplikasi berjalan, belum API/persistensi/jurnal/saldo otomatis. Schema/helper income berada di `schema/manage/income.ts` dan `lib/manage/incomes.ts`; komposisi detail/form di `components/feature/manage/income/`. Referensi dan batas verifikasi ada di [previews/income/README.md](previews/income/README.md).

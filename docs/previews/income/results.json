@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "manual and invoice list with correct total and sticky action",
+    "trimmed search and reset",
+    "search empty state",
+    "funding and store filters",
+    "manual and sales type filters update totals",
+    "invoice actions are read-only and show its own amount and item count",
+    "manual action sheet opens matching detail",
+    "edit prefills ISO date and locked account code",
+    "account choice updates code and other state changes preserve draft",
+    "invalid calendar and zero amount blocked",
+    "edit trims values, preserves metadata and repeat save reuses ID",
+    "shared state updates list and detail totals",
+    "empty create form validates required fields",
+    "invoice reference reserved against manual duplicate",
+    "store change clears duplicate error and create saves once",
+    "combined source, store and type filters show saved manual entry",
+    "list deletion requires confirmation",
+    "detail deletion returns to list after confirmation",
+    "deleting all manual entries preserves invoice",
+    "320px list fits",
+    "320px form fits",
+    "320px manual detail fits",
+    "invoice edit deep link blocked",
+    "unknown edit and detail IDs blocked",
+    "empty collection renders zero total"
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

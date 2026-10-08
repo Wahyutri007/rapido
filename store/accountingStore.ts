@@ -174,7 +174,12 @@ export const useAccountingStore = create<AccountingState>((set, get) => ({
 	},
 
 	addIncome: (incomeData) => {
-		const newId = `inc-${Date.now()}`;
+		const baseId = `inc-${Date.now()}`;
+		let newId = baseId;
+		let suffix = 1;
+		while (get().incomes.some((income) => income.id === newId)) {
+			newId = `${baseId}-${suffix++}`;
+		}
 		const newIncome: Income = {
 			...incomeData,
 			id: newId,
