@@ -33,10 +33,13 @@ function LayoutTile({
 	outletActive: boolean;
 }) {
 	const offset = useSharedValue({ x: 0, y: 0 });
-	const animated = useAnimatedStyle(() => ({
-		transform: [{ translateX: offset.value.x }, { translateY: offset.value.y }],
-		zIndex: offset.value.x || offset.value.y ? 10 : 0,
-	}));
+	const animated = useAnimatedStyle(() => {
+		const { x, y } = offset.get();
+		return {
+			transform: [{ translateX: x }, { translateY: y }],
+			zIndex: x || y ? 10 : 0,
+		};
+	});
 	const responder = React.useMemo(
 		() =>
 			PanResponder.create({
@@ -46,7 +49,7 @@ function LayoutTile({
 					onDragging(true);
 				},
 				onPanResponderMove: (_event, gesture) => {
-					offset.value = { x: gesture.dx, y: gesture.dy };
+					offset.set({ x: gesture.dx, y: gesture.dy });
 				},
 				onPanResponderRelease: (_event, gesture) => {
 					onMove(
@@ -54,11 +57,11 @@ function LayoutTile({
 						Math.round(gesture.dx / cellWidth),
 						Math.round(gesture.dy / 136),
 					);
-					offset.value = { x: 0, y: 0 };
+					offset.set({ x: 0, y: 0 });
 					onDragging(false);
 				},
 				onPanResponderTerminate: () => {
-					offset.value = { x: 0, y: 0 };
+					offset.set({ x: 0, y: 0 });
 					onDragging(false);
 				},
 				onPanResponderTerminationRequest: () => false,

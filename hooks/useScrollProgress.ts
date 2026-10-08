@@ -29,32 +29,34 @@ export function useScrollProgress() {
 
 	const scrollHandler = useAnimatedScrollHandler({
 		onScroll: (event) => {
-			scrollY.value = event.contentOffset.y;
-			maxScroll.value = Math.max(
-				0,
-				event.contentSize.height - event.layoutMeasurement.height,
+			scrollY.set(event.contentOffset.y);
+			maxScroll.set(
+				Math.max(0, event.contentSize.height - event.layoutMeasurement.height),
 			);
 		},
 	});
 
 	const ratio = useDerivedValue(() => {
-		if (maxScroll.value <= 0) return 0;
-		return Math.min(1, Math.max(0, scrollY.value / maxScroll.value));
+		const maxOffset = maxScroll.get();
+		if (maxOffset <= 0) return 0;
+		return Math.min(1, Math.max(0, scrollY.get() / maxOffset));
 	});
 
 	useAnimatedReaction(
-		() => animatedOffset.value,
+		() => animatedOffset.get(),
 		(offset) => {
 			scrollTo(scrollRef, 0, offset, false);
 		},
 	);
 
 	const scrollToTop = React.useCallback(() => {
-		animatedOffset.value = scrollY.value;
-		animatedOffset.value = withTiming(0, {
-			duration: SCROLL_TO_TOP_DURATION,
-			easing: Easing.inOut(Easing.cubic),
-		});
+		animatedOffset.set(scrollY.get());
+		animatedOffset.set(
+			withTiming(0, {
+				duration: SCROLL_TO_TOP_DURATION,
+				easing: Easing.inOut(Easing.cubic),
+			}),
+		);
 	}, [animatedOffset, scrollY]);
 
 	return { scrollRef, scrollHandler, scrollY, maxScroll, ratio, scrollToTop };
