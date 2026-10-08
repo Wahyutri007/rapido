@@ -1,0 +1,75 @@
+{
+  "viewport": {
+    "width": 320,
+    "height": 844
+  },
+  "results": [
+    {
+      "screen": "index",
+      "name": "Dewi Anggraini",
+      "labelBox": {
+        "x": 28,
+        "y": 488,
+        "width": 264,
+        "height": 20
+      },
+      "action": null
+    },
+    {
+      "screen": "detail",
+      "name": "Budi Santoso",
+      "labelBox": {
+        "x": 80,
+        "y": 92,
+        "width": 104.140625,
+        "height": 24
+      },
+      "action": "Catat Pembayaran"
+    },
+    {
+      "screen": "modify",
+      "name": "Budi Santoso",
+      "labelBox": {
+        "x": 80,
+        "y": 92,
+        "width": 104.140625,
+        "height": 24
+      },
+      "action": "Simpan Pengaturan Gaji"
+    },
+    {
+      "screen": "payment",
+      "name": "Budi Santoso",
+      "labelBox": {
+        "x": 80,
+        "y": 188,
+        "width": 104.140625,
+        "height": 24
+      },
+      "action": "Catat Pembayaran"
+    },
+    {
+      "screen": "history",
+      "name": "Budi Santoso",
+      "labelBox": {
+        "x": 80,
+        "y": 92,
+        "width": 104.140625,
+        "height": 24
+      },
+      "action": null
+    },
+    {
+      "screen": "slip",
+      "name": "Budi Santoso",
+      "labelBox": {
+        "x": 80,
+        "y": 236,
+        "width": 104.140625,
+        "height": 24
+      },
+      "action": "Unduh Slip Gaji"
+    }
+  ],
+  "errors": []
+}

@@ -181,11 +181,16 @@ app/
     │   │   ├── index.tsx           # Search, store filter and stock-kind tabs
     │   │   ├── modify.tsx          # Shrinkage form; derives remaining stock
     │   │   └── detail.tsx          # Stock totals and good / damaged quantities
-    │   └── purchase-order/         # Pembelian Barang
-    │       ├── _layout.tsx
-    │       ├── index.tsx           # Purchase status tabs, search and actions
-    │       ├── modify.tsx          # Purchase form with quantity / price subtotals
-    │       └── detail.tsx          # Purchase information and item totals
+    │   ├── purchase-order/         # Pembelian Barang
+    │   │   ├── _layout.tsx
+    │   │   ├── index.tsx           # Purchase status tabs, search and actions
+    │   │   ├── modify.tsx          # Purchase form with quantity / price subtotals
+    │   │   └── detail.tsx          # Purchase information and item totals
+    │   └── suppliers/             # Pemasok
+    │       ├── _layout.tsx         # Layout-level list, create/edit and detail headers
+    │       ├── index.tsx           # Search, supplier filters and purchase totals
+    │       ├── modify.tsx          # Contact/address form; session-only CRUD
+    │       └── detail.tsx          # Supplier information, edit and guarded delete
     │
     ├── (back-office)/              # Back Office specific sub-flows
     │   ├── _layout.tsx             # JSStack
@@ -313,6 +318,7 @@ app/
     │   ├── store/                  # Store profile & outlet settings (_layout, index, modify, detail)
     │   ├── receipt/                # Tampilan Struk: daftar toko, pengaturan elemen/footer, preview (_layout, index, modify, preview)
     │   ├── workers/                # Karyawan: CRUD owner, role/toko, foto dan scan KTP (_layout, index, detail, modify)
+    │   ├── member/                 # Member/pelanggan: CRUD API, pencarian, izin manage customers (_layout, index, detail, modify)
     │   ├── place/                  # Manajemen Tempat: outlet, area, tempat, denah, form (_layout, index, store, area, areas, modify)
     │   ├── backup/                 # Data backup utilities (_layout, index, modify)
     │   ├── export/                 # Data export to Excel/CSV (_layout, index, modify)
@@ -323,7 +329,7 @@ app/
     │   ├── sales-target/           # Target Penjualan: daftar, detail, tambah/edit produk/kategori (_layout, index, detail, modify)
     │   ├── expenses/               # Biaya & Pengeluaran: daftar/filter, detail, tambah/edit (_layout, index, detail, modify)
     │   ├── income/                 # Pendapatan & Penerimaan: daftar/filter, detail, tambah/edit manual (_layout, index, detail, modify)
-    │   ├── payroll/                # Penggajian (_layout, index)
+    │   ├── payroll/                # Penggajian: daftar, pengaturan, detail, pembayaran, riwayat, slip (_layout, index, modify, detail, payment, history, slip)
     │   ├── absence/                # Absensi (_layout, index)
     │   ├── faq/                    # Bantuan: pencarian, kategori, dan jawaban FAQ (_layout, index)
     │   ├── feature-request/        # Bantuan: form permintaan fitur (_layout, index)
@@ -470,3 +476,12 @@ Kelola → `/manage/income` membuka daftar yang dikelompokkan per tanggal, denga
 - Form RHF/Zod memakai pilihan akun/kode yang cocok, referensi unik per toko (termasuk referensi invoice), sumber dana/toko, tanggal kalender ISO, Rupiah bulat positif, serta deskripsi. Metadata pembuat/jam dipertahankan saat edit. ID hasil simpan pertama dipakai untuk simpan berikutnya; penambahan berdekatan mendapat ID berbeda. Input tanggal Indonesia dari form laporan lama dinormalisasi saat edit. Data opsional yang hilang tetap kosong/dash.
 - Form bersama ada pada `components/feature/accounting/CashEntryForm.tsx`; wrapper Expense/Income hanya memasok kind, nilai awal, dan ID. Schema bersama `schema/accounting/cash-entry.ts` memakai konfigurasi pilihan tiap modul. `lib/accounting/date.ts` menampung validasi/format tanggal; `lib/manage/expense-date.ts` mempertahankan export lama. Form/schema laporan lama tidak diubah.
 - Data memakai koleksi `incomes` dari `accountingStore` serta tipe/fixture yang sudah tersedia; tidak membuat mode dummy global atau fixture baru. State masih lokal selama aplikasi berjalan, belum API/persistensi/jurnal/saldo otomatis. Schema/helper income berada di `schema/manage/income.ts` dan `lib/manage/incomes.ts`; komposisi detail/form di `components/feature/manage/income/`. Referensi dan batas verifikasi ada di [previews/income/README.md](previews/income/README.md).
+
+### Penggajian (Kelola)
+
+Kelola → `/manage/payroll` membuka pratinjau daftar karyawan dengan pencarian nama/peran/metode, filter periode/status pembayaran, reset, dan total hasil filter. Record periode yang sama dipakai oleh `/manage/payroll/detail?id=<id>`, `/modify?id=<id>`, `/payment?id=<id>`, `/history?id=<id>`, dan `/slip?id=<id>`. Header keenam layar berada pada `payroll/_layout.tsx`; parent sudah mendaftarkan payroll tanpa header tambahan.
+
+- Pengaturan RHF/Zod mendukung Bulanan, Harian, Per Jam, dan Per Layanan. Penghasilan dihitung dari komponen tetap atau aktivitas × tarif/komisi, lalu bonus dikurangi potongan dan kasbon. Nominal Rupiah harus bulat dan terbatas; tanggal memakai kalender ISO. Contoh layanan 12/20/30/15 menghasilkan 77 layanan dan Rp1.500.000, mengikuti perhitungan record.
+- Catat pembayaran penuh/sebagian memperbarui total dibayar, sisa, dan status pada detail/daftar/slip. Pembayaran penuh harus melunasi sisa; pembayaran berlebih, referensi ganda, tanggal sebelum periode, ID hilang, serta pembayaran pada periode lunas ditolak. Transfer memerlukan tujuan. Simpan pertama mengunci form dan beralih ke slip, sehingga tidak menambah pembayaran kedua. Pengaturan dan bonus/potongan/kasbon dikunci setelah pembayaran pertama.
+- Riwayat penghasilan hanya menampilkan periode karyawan yang dipilih; riwayat pembayaran memakai record periode tersebut. Unduhan web berupa HTML UTF-8 yang dapat dicetak melalui browser; native membagikan teks slip. Slip memakai rincian/penyesuaian/pembayaran yang sama dan diberi penanda pratinjau.
+- Tipe, fixture, schema, helper, dan store terpisah pada `types/ui/manage/payroll.ts`, `constants/data/manage/payroll.ts`, `schema/manage/payroll.ts`, `lib/manage/payroll.ts`, `lib/manage/payroll-slip.ts`, dan `store/payrollStore.ts`; komposisi pada `components/feature/manage/payroll/`. Data contoh hanya milik fitur ini, tanpa mengganti mode aplikasi/API/auth global. State sementara selama aplikasi berjalan; belum API/persistensi, data karyawan/absensi/pekerjaan nyata, pajak/prorata, transfer uang, atau jurnal/saldo otomatis. Referensi, hasil verifikasi, dan batas pratinjau ada di [previews/payroll/README.md](previews/payroll/README.md).
