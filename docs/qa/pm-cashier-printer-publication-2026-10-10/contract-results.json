@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Candidate/dependency hash app/(no-layout)/manage/printer/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash app/(no-layout)/manage/printer/modify.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash app/(no-layout)/manage/printer/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash constants/data/other/printer.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash store/appModeStore.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash components/custom/ItemActionSheet.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash components/common/AlertModal.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash components/common/BottomActionButton.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate/dependency hash app/(no-layout)/manage/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Printer layout inverse AST preserves published route/title/back/params",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared mode store is selected, no mode mutation added",
+      "status": "PASS"
+    },
+    {
+      "name": "Preview removes fake success/timers/alerts while stable IDs remain",
+      "status": "PASS"
+    }
+  ]
+}

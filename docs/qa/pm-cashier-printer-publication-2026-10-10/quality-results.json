@@ -1,0 +1,77 @@
+{
+  "ticket": "PM-PRINTER-PUBLICATION",
+  "recordedAtUtc": "2026-10-09T19:05:29.120Z",
+  "scope": "Three candidate source roots and imported closure; declaration inputs included, no global app check",
+  "roots": [
+    "app/(no-layout)/manage/printer/index.tsx",
+    "app/(no-layout)/manage/printer/modify.tsx",
+    "app/(no-layout)/manage/printer/_layout.tsx"
+  ],
+  "sourceHashesBefore": {
+    "app/(no-layout)/manage/printer/index.tsx": "d8e4f8482093708f33549b813985f464ec55141d06e01b25f07a22872e2f9887",
+    "app/(no-layout)/manage/printer/modify.tsx": "dc73441fe7aa9a8992bbd936a8ecd45c1e2d851afce7a73d5598a5455d9b37f0",
+    "app/(no-layout)/manage/printer/_layout.tsx": "f17ce5346e40cd8ab74d9fa5a154e60229434524924cb6d9bd47e406d5cb14b5"
+  },
+  "sourceHashesAfter": {
+    "app/(no-layout)/manage/printer/index.tsx": "d8e4f8482093708f33549b813985f464ec55141d06e01b25f07a22872e2f9887",
+    "app/(no-layout)/manage/printer/modify.tsx": "dc73441fe7aa9a8992bbd936a8ecd45c1e2d851afce7a73d5598a5455d9b37f0",
+    "app/(no-layout)/manage/printer/_layout.tsx": "f17ce5346e40cd8ab74d9fa5a154e60229434524924cb6d9bd47e406d5cb14b5"
+  },
+  "sourceDrift": [],
+  "closureSourceHashes": {
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/utils/dates.ts": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+    "lib/utils/colors.ts": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+    "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "types/index.ts": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "assets/images/illustrations/index.ts": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+    "components/common/DeleteConfirmModal.tsx": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1",
+    "components/common/BottomActionButton.tsx": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "lib/ui/bottom-navigation.ts": "8f1c275244b798ad06f378927b279e7e46a0f4a797ff7dd3dcec08b72f36d885",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "constants/data/other/printer.ts": "c081a8a3d3651cfed39ec23f21ecf8e6c0dbebef0ce9aab2e2a41477c61a4f7c",
+    "app/(no-layout)/manage/printer/index.tsx": "d8e4f8482093708f33549b813985f464ec55141d06e01b25f07a22872e2f9887",
+    "app/(no-layout)/manage/printer/modify.tsx": "dc73441fe7aa9a8992bbd936a8ecd45c1e2d851afce7a73d5598a5455d9b37f0",
+    "constants/index.ts": "3416d38047fd6fb376c114c1652c9a1fb26f93149232654d4760fc499344635c",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "app/(no-layout)/manage/printer/_layout.tsx": "f17ce5346e40cd8ab74d9fa5a154e60229434524924cb6d9bd47e406d5cb14b5"
+  },
+  "filesInClosure": 1149,
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0,
+    "messages": [],
+    "stderr": ""
+  },
+  "biome": {
+    "exit": 0,
+    "stdout": "Checked 3 files in 27ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "diff": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

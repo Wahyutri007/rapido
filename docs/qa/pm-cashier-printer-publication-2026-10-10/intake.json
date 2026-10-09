@@ -1,0 +1,19 @@
+{
+  "base": "414a9de17b3f073486f1704801a78a2cb5f10320",
+  "inputs": {
+    "app/(no-layout)/manage/printer/index.tsx": "d8e4f8482093708f33549b813985f464ec55141d06e01b25f07a22872e2f9887",
+    "app/(no-layout)/manage/printer/modify.tsx": "dc73441fe7aa9a8992bbd936a8ecd45c1e2d851afce7a73d5598a5455d9b37f0",
+    "app/(no-layout)/manage/printer/_layout.tsx": "f17ce5346e40cd8ab74d9fa5a154e60229434524924cb6d9bd47e406d5cb14b5"
+  },
+  "guards": {
+    "constants/data/other/printer.ts": "c081a8a3d3651cfed39ec23f21ecf8e6c0dbebef0ce9aab2e2a41477c61a4f7c",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/BottomActionButton.tsx": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "app/(no-layout)/manage/_layout.tsx": "356813832574d3329b74a39dc6e6b630c802fa2cc2f2036ad66095e2b4d2f47f"
+  },
+  "scope": "Two independently accepted Printer preview bodies plus conditional Cashier/BackOffice header layout. Existing data/store/shared primitives/parent untouched. Already published Header/Wrapper/Footer dependencies used. No physical printer/API/persistence claim."
+}

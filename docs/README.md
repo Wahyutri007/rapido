@@ -678,3 +678,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Laci Kasir — publikasi rute pemulihan10 Oktober2026
 
 `/(no-layout)/(cashier)/cash-drawer` menampilkan batas koneksi laci yang belum tersedia. Header Laci Kasir berada pada parent, tombol kembali memakai riwayat atau Beranda, CTA membuka `/(no-layout)/manage/printer`. Pembukaan hardware belum diimplementasikan. [Receipt QA/PM](qa/pm-cashier-drawer-publication-2026-10-10/REPORT.md).
+
+
+### Printer — publikasi pratinjau10 Oktober2026
+
+`/(no-layout)/manage/printer` dan `/manage/printer/modify?id=...` menampilkan contoh, dengan aksi Simpan/Hapus yang menjelaskan bahwa koneksi/persistensi belum tersedia. ID tidak valid menyediakan tombol ke daftar; perubahan ID menutup dialog sebelumnya. Header compact hanya dalam modeKasir, defaultBackOffice dipertahankan. [Receipt QA/PM](qa/pm-cashier-printer-publication-2026-10-10/REPORT.md).

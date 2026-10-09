@@ -1,0 +1,478 @@
+{
+  "status": "FAIL",
+  "passed": 24,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "Published old body is an explicit negative control for false save success",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual list/layout is labelled preview, with one stable example and compact header",
+      "status": "PASS"
+    },
+    {
+      "name": "Delete explains unavailable operation and preserves example after closing",
+      "status": "PASS"
+    },
+    {
+      "name": "Edit action retains exact original ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Add retains create destination",
+      "status": "PASS"
+    },
+    {
+      "name": "Create/edit preview and save remain honest {}",
+      "status": "PASS"
+    },
+    {
+      "name": "Create/edit preview and save remain honest {\"id\":\"1\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Route ID change clears previous record dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ID recovers without selecting first device \"missing\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ID recovers without selecting first device \"\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ID recovers without selecting first device []",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ID recovers without selecting first device [\"1\"]",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ID recovers without selecting first device [\"1\",\"2\"]",
+      "status": "PASS"
+    },
+    {
+      "name": "390px list action/header/add footer are safe",
+      "status": "PASS",
+      "details": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 48
+        },
+        "action": {
+          "box": {
+            "x": 318,
+            "y": 200,
+            "width": 40,
+            "height": 40
+          },
+          "clip": {
+            "l": 0,
+            "t": 48,
+            "r": 390,
+            "b": 844
+          },
+          "visibleHeight": 40,
+          "reveal": null
+        },
+        "cta": {
+          "box": {
+            "x": 16,
+            "y": 780,
+            "width": 358,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 390,
+            "b": 844
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "390px preview's last item is reachable above safe Save action",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 32,
+          "y": 260,
+          "width": 256.671875,
+          "height": 24
+        },
+        "cta": {
+          "box": {
+            "x": 16,
+            "y": 780,
+            "width": 358,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 390,
+            "b": 844
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "390px unavailable Save dialog close remains reachable outside system areas",
+      "status": "PASS"
+    },
+    {
+      "name": "320px list action/header/add footer are safe",
+      "status": "PASS",
+      "details": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 72
+        },
+        "action": {
+          "box": {
+            "x": 240,
+            "y": 224,
+            "width": 40,
+            "height": 40
+          },
+          "clip": {
+            "l": 8,
+            "t": 72,
+            "r": 312,
+            "b": 520
+          },
+          "visibleHeight": 40,
+          "reveal": null
+        },
+        "cta": {
+          "box": {
+            "x": 24,
+            "y": 456,
+            "width": 272,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "320px preview's last item is reachable above safe Save action",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 40,
+          "y": 300,
+          "width": 170.671875,
+          "height": 24
+        },
+        "cta": {
+          "box": {
+            "x": 24,
+            "y": 456,
+            "width": 272,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "320px unavailable Save dialog close remains reachable outside system areas",
+      "status": "PASS"
+    },
+    {
+      "name": "844px list action/header/add footer are safe",
+      "status": "PASS",
+      "details": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 72
+        },
+        "action": {
+          "box": {
+            "x": 748,
+            "y": 192,
+            "width": 40,
+            "height": 40
+          },
+          "clip": {
+            "l": 48,
+            "t": 72,
+            "r": 820,
+            "b": 342
+          },
+          "visibleHeight": 40,
+          "reveal": null
+        },
+        "cta": {
+          "box": {
+            "x": 64,
+            "y": 278,
+            "width": 740,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "844px preview's last item is reachable above safe Save action",
+      "status": "FAIL",
+      "error": "{\"box\":{\"x\":80,\"y\":268,\"width\":638.671875,\"height\":24},\"cta\":{\"box\":{\"x\":64,\"y\":278,\"width\":740,\"height\":48},\"clip\":{\"l\":0,\"t\":0,\"r\":844,\"b\":390},\"visibleHeight\":48,\"reveal\":null}}"
+    },
+    {
+      "name": "844px unavailable Save dialog close remains reachable outside system areas",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing ID keeps correct edit title through live Cashier/BackOffice/Cashier mode transition",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing history Back still forwards navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "Compiled candidate/assets/config stable; no runtime/console/external errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "v": {
+        "w": 390,
+        "h": 844,
+        "s": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 48
+      },
+      "action": {
+        "box": {
+          "x": 318,
+          "y": 200,
+          "width": 40,
+          "height": 40
+        },
+        "clip": {
+          "l": 0,
+          "t": 48,
+          "r": 390,
+          "b": 844
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      },
+      "cta": {
+        "box": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 390,
+          "b": 844
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    },
+    {
+      "v": {
+        "w": 320,
+        "h": 568,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 72
+      },
+      "action": {
+        "box": {
+          "x": 240,
+          "y": 224,
+          "width": 40,
+          "height": 40
+        },
+        "clip": {
+          "l": 8,
+          "t": 72,
+          "r": 312,
+          "b": 520
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      },
+      "cta": {
+        "box": {
+          "x": 24,
+          "y": 456,
+          "width": 272,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 320,
+          "b": 568
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    },
+    {
+      "v": {
+        "w": 844,
+        "h": 390,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 48,
+          "right": 24
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 72
+      },
+      "action": {
+        "box": {
+          "x": 748,
+          "y": 192,
+          "width": 40,
+          "height": 40
+        },
+        "clip": {
+          "l": 48,
+          "t": 72,
+          "r": 820,
+          "b": 342
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      },
+      "cta": {
+        "box": {
+          "x": 64,
+          "y": 278,
+          "width": 740,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 844,
+          "b": 390
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    }
+  ],
+  "assetHashes": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\promo.jpg": "6c569f7f32b0378d7abaeee56b1fd7b2013bc703a57a9c5a7e9e9cb93498489e",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\discount.png": "4bcb262da2024a29dd68b3cb835e80feffbbcc961db5e939a15066491ee04d67",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\voucher.jpg": "02a334d61deec458728b5cdc2055a4b542264eae28b277f93a7ebe1d01f8098f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\pin.jpg": "a7930c7db4b5170a1f3779f9c0b26fa0f45d83b387d39358ec2fd0ab75ec99e0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\tables.jpg": "0a26e5939c30227b7b9397a7033a4ca5642c82dd40325311ed4ceb77543d981b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\payment.jpg": "667a8cd1748b2b7964e3ac5c788db8dc2f6122fd355c2d4147e4837b5c2627db",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\tax.jpg": "ace4bce559a8d474cbba357126cbe54a9ed75c3596bfc90f336bef45fce002e7",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\extra.jpg": "9f641c4b48aeaefef183a9d7cb70ca18cf8aec4f49ee6ac55931286339ccd2ed",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\printer.jpg": "ecd0cec5a29c3e5e76b0908bfe7207f3e0adb69b0c235527bde776d2a35c8b55",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\receipt.jpg": "dc5f4f4407c1cb7c95010b469981b2298801a7063b90015e32ae45b13d1244e5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\export.jpg": "79041556da0ae13b6043c4b7c8ed5167745247af4bec45524ae021676476de98",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\password.jpg": "96deddd07289d436b7f4bdd6e810f529622f14bbbc656de2d10f427007514164",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\maintenance.png": "6e14a81ca0e0d184c1e769127f392f554890f8d8b2a2c15f4fe5d29b875a9948",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\home-header.png": "3089f1a958f76936007b2518d90d278dffb11e73c577d66804c3f609f693374b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\delete-confirmation.png": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\illustrations\\action-success.png": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\AntDesign.ttf": "08a9d5b513cf947e22ede81e9a843bd8d7763a63444cd21484bfde7662cc6543",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf": "16f92298587bab2b469bc13c0dfc6d5d171bca10bad0c9053ad16bc023bf717d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\EvilIcons.ttf": "a5caeb4d395c5e32f1d5a30acb382aebc664f1badfd149319907f2215e4e3e26",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Fontisto.ttf": "94dab9f1d5b13ea0769d124a2da0d02433f3b99d6dea5a07c0446a77158100c0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Regular.ttf": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Solid.ttf": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Brands.ttf": "06f4d00923ea24697df5df0b92984175991d8bd25776a02d531bb401e393ec42",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf": "64f9fb623681f112261e9a2f97826782439f3925dea8f44a57d1e4db95ba6cfd",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf": "31f099c13f6e4ba05f1b471bf170cb5493249474222917372de3ca5cf29e6a1a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf": "bc844b5b02d3f3adabb514de4e0c0208252d3123413bd03f6287fa446acee859",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Foundation.ttf": "7e1dd03dd4ce90b658052554cd7459df16716717389a552fa4c6d56a5f8933e6",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Ionicons.ttf": "fa2ab7d2557819b2bfe5009e46844efa7170cf177be7735d43aa2ac1295f1d54",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf": "61e8aba5a4e981fe22cf7c8e8bcdbea00476e75c62c37f01bf7ee33361d68428",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialIcons.ttf": "ef149f08bdd2ff09a4e2c8573476b7b0f3fbb15b623954ade59899e7175bedda",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Octicons.ttf": "9bc4d9f5e994e774bdc3ef9a9a87da749af5f50b861473ef7d1cc3d6f8229267",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\SimpleLineIcons.ttf": "3f501ddb05c70829bbb51cfe9ca9fff57f39e060457c257b3ccf25df767f0870",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Zocial.ttf": "dd8ee403bbcbf5e58b77dca4ac03ebafa13a284a3d87d8ea9ca490435a86fa48",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+  },
+  "bundleHash": "efd2fd84f8fd5e13da70a6120329e533ea123d1862b27e9bade64a648065b41c",
+  "styleHash": "b43a877e7f0b0a09bdfb832d5939a467b58d4ec12571c84b608e86dad0f7fe08",
+  "limits": "Actual main-candidate Printer list/modify/conditionalLayout/shared primitives and fonts on RNWeb. Published modify body is an explicit before control under the current primitives. Router/stack-selection/selector mode/insets are adapters, no native/fullRouter/cold-link history guarantee, physical device/discovery/printing/persistence/API/fullFigma certificate."
+}

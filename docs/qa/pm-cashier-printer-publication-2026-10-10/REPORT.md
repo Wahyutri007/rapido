@@ -1,0 +1,9 @@
+# Printer — kandidat main,10 Oktober2026
+
+QC_ACCEPTED_SCOPED_PREVIEW_UI_AND_MAIN_COHORT. Exact independent QC bodiesd8e4f848/dc73441f and conditionalLayoutf17ce534, three productionpaths only. Existing data/store/shared primitives/parent unchanged; published Scanner/Header/Wrapper/Footer dependencies used. Printerlayout inverseAST preserves routes/title/back/params apart from Cashier opt-in; mode selector never mutates store.
+
+25 actual RNWeb checksPASS,14contractsPASS,3roots/1149TypeScript closure0diagnostics;ESLint0/0/Biome/diffPASS clean. Actual old modify source reproduces false save success as negativecontrol; current Save/Delete clearly unavailable with no success/persistence/mutation, edit/add exact routes, invalid empty/array/missing ID recovery and ID-change dialog reset.320/390/844 actualheader/list40pxactions/fixed48pxCTA/lastcontent/modalclose safe with top24/bottom48/side48. Live fixture selector Cashier→BackOffice→Cashier preserves edit title and restores72pxcompactheader including top24. History Back preserved. Compiled input/assets/config stable; runtime/console/unserved requests0.
+
+Initial browser24PASS/1FAIL checked Canon row after browser automatic scrolling, which does not account for an overlaid footer. Final probe explicitly scrolls the actual available range above Save and settles two frames;25PASS on unchanged source. Initial evidence retained; no production repair or old QA reseal performed for this test correction.
+
+Router/stack-selected header/store mode/insets are explicit adapters. Cold-link history/native/fullExpoRouter/printerdiscovery/deviceprinting/backend/persistence/fullFigma remain unverified. This is honest preview UI only. Full original Printer context unavailable due current Starter quota; no100claim. Independent shared QC27PASS was intake evidence; this receipt is the new published-main candidate, not a sum of distinct scenarios.
