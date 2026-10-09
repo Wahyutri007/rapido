@@ -1,0 +1,113 @@
+{
+  "ticket": "SD5-015",
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "status": "READY_FOR_QA",
+  "signal": "SD5-015-CASHIER-CASH-INPUT-FIGMA-READY-FOR-QA",
+  "date": "2026-10-09T10:10:31.327Z",
+  "ownedSources": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa",
+    "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+    "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db"
+  },
+  "unchangedContracts": {
+    "app/(onboarding)/choose-store/pin.tsx": "1f9da1aa275426c0e4b1db06e49f9c03fccec8b288fe205c829eb30599f2532a",
+    "app/(no-layout)/manage/pin.tsx": "125f120968796b6fe3529e3a93de4e9515648c6b9cc3792e502847b0fe18b2cd",
+    "app/(no-layout)/order-detail/refund.tsx": "393fb9e69484f3fa702480dd53cd8f99f57eb9ba4b9c2494c5f2e3284357a8fe",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "app/(no-layout)/(cashier)/cart/input-money-confirm.tsx": "aa0acb3fe8d759b066dab56186e8d9d45ffc6f6fbfcc26e8d2770bb413c5875a",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+    "components/ui/gluestack-ui-provider/index.tsx": "b32bee6c6810e5ff75dc429bcfc608c0ae5c564dd735e0f445c5c8ba77c54b73",
+    "assets/fonts/Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "assets/fonts/Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "assets/fonts/Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "assets/images/figma/back-office/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "referenceHashes": {
+    "docs/figma/cashier/sd5-20261009/cash-input/README.md": "233d863c4d47441fcc5b95e0dad211b1ff8c1afc1b70c0bdd21248acffbf8135",
+    "docs/figma/cashier/sd5-20261009/cash-input/context.txt": "1f29a902bf7e1e9551db48acbf9a759f761af8f50ce0e173b293e8047401d2eb",
+    "docs/figma/cashier/sd5-20261009/cash-input/reference.png": "29465e102b4dadebdfc123ea863a06e3e235725f8e2004bc3cfc46e793db727c",
+    "docs/figma/cashier/sd5-20261009/cash-input/reference.json": "46c4d881b1a211d9297ee97bc624882f921e819ca22f02300435762c64ec2542",
+    "docs/figma/cashier/sd5-20261009/cash-input/assets.json": "242751e77e04f7979dbf0fb84a1f9bb01735aabc1459e73923d9539eca72d11f",
+    "docs/figma/cashier/sd5-20261009/cash-input/assets/chevron-left.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "docs/figma/cashier/sd5-20261009/cash-input/assets/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db"
+  },
+  "behavior": {
+    "pass": 169,
+    "fail": 0,
+    "runtimeErrors": 0,
+    "actionRejections": 0,
+    "scope": "Actual input screen, Keypad/Form and monetary utils with RHF/Zod/resolver; native hosts, icons/Image/safe-area/theme, router/focus are adapters; candidate mode uses exact next-source bytes. No backend/payment/native/Figma claim."
+  },
+  "browser": {
+    "pass": 28,
+    "fail": 0,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "blockedRequests": 0,
+    "viewports": [
+      "390x844",
+      "320x568",
+      "844x390"
+    ],
+    "scope": "Actual production RN Web components/fonts/CSS; router/focus/stack selection/safe-area seed/asset HTTP are preview adapters. No full Expo Router/native/payment claim."
+  },
+  "scopeContracts": {
+    "pass": 9,
+    "fail": 0
+  },
+  "quality": {
+    "roots": [
+      "app/(no-layout)/(cashier)/cart/input-money.tsx",
+      "components/common/Keypad.tsx",
+      "app/(no-layout)/(cashier)/cart/_layout.tsx",
+      "lib/cashier/cash-input.ts",
+      "lib/cashier/cash-input-theme.ts"
+    ],
+    "filesInImportedClosure": 1284,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "typescriptDiagnostics": 0,
+    "diffExit": 0
+  },
+  "previousPackets": {
+    "cashier-cash-input": {
+      "artifacts": 26,
+      "failures": []
+    },
+    "cashier-home-navigation": {
+      "artifacts": 14,
+      "failures": []
+    }
+  },
+  "priorQA": {
+    "ticket": "SD5-014",
+    "pass": 27,
+    "source": "docs/qa/pm-cashier-intake-2026-10-09/CASH_INPUT_QA_INTAKE.json",
+    "meaning": "Historical independent behavior approval before overlay; does not approve six new hashes or visual/native/payment."
+  },
+  "pixelIdentityCertified": false,
+  "fullFigmaCertified": false,
+  "nativeOrFullRouterTested": false,
+  "paymentImplemented": false,
+  "gitPublication": false,
+  "observations": "visual-observations.json",
+  "artifacts": "artifacts.json"
+}

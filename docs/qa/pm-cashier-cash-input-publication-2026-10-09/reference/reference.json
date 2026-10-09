@@ -1,0 +1,52 @@
+{
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "nodeId": "29:25047",
+  "date": "2026-10-09T09:19:03.406Z",
+  "source": "Figma MCP get_design_context successful, screenshot included and inspected",
+  "sparse": false,
+  "contextHash": "1f29a902bf7e1e9551db48acbf9a759f761af8f50ce0e173b293e8047401d2eb",
+  "imageHash": "29465e102b4dadebdfc123ea863a06e3e235725f8e2004bc3cfc46e793db727c",
+  "referenceSize": {
+    "width": 390,
+    "height": 844
+  },
+  "otherVariants": "29:25089/29:25131 tool limit; their designs are not certified",
+  "screenshotToolRetry": {
+    "content": [
+      {
+        "type": "text",
+        "text": "You've reached the Figma MCP tool call limit on the Starter plan. Upgrade your plan for more tool calls: https://www.figma.com/files/team/1494977320469696171/all-projects?upgrade=mcp_rate_limit_paywall"
+      },
+      {
+        "type": "resource_link",
+        "uri": "file://figma/docs/rate-limits-access.md",
+        "name": "rate-limits-access.md",
+        "mimeType": "text/plain",
+        "size": 3932,
+        "_meta": {
+          "size": 3932
+        }
+      }
+    ],
+    "structuredContent": {
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "providedAssets": [
+    {
+      "name": "chevron-left",
+      "url": "https://www.figma.com/api/mcp/asset/f43a164a-9691-49bb-80a4-590b9a0bec68.svg",
+      "slot": "I29:25052;1:3043",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "name": "backspace",
+      "url": "https://www.figma.com/api/mcp/asset/8a65a7e3-fe53-4a3c-97cd-b1b5e34172b6.svg",
+      "slot": "29:25086",
+      "width": 32,
+      "height": 32
+    }
+  ]
+}

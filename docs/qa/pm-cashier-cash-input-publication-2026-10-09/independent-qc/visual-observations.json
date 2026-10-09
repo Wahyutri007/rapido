@@ -1,0 +1,18 @@
+{
+  "reference": "official Figma cached full context and 390x844 screenshot, node 29:25047",
+  "imagesViewed": ["reference/reference.png", "implementation/browser/cash-input390.png", "implementation/browser/cash-input-long320.png", "implementation/browser/cash-input-landscape.png"],
+  "sourceBinding": "Production fingerprints compared with CANDIDATE_SETUP.json; developer browser capture hashes recorded as developer evidence, not independent browser replay",
+  "observations": [
+    "390 portrait preserves header, nominal, two quick amounts, four keypad rows, original backspace and Bayar hierarchy",
+    "Developer geometry records nominal y177 / 32px font / 48px line height; quick buttons y420 / 39px; backspace 32px; Bayar x20 y766 width350 height48",
+    "Geometry text colors match scoped tokens: prefix135/135/135, amount57/57/57, quick40/40/40, keypad0/0/0 and primary46/120/249",
+    "Long320 screenshot keeps the 16-digit nominal inside its width and Bayar visible; keypad is vertically scrollable",
+    "Landscape screenshot shows final keypad rows and Bayar; scrolled nominal/top rows are outside viewport by design"
+  ],
+  "documentedDifferences": [
+    "Existing Header uses 21px title line height instead of Figma20.8, center offset approximately0.1px",
+    "App retains Inter_24pt font assets; Figma font binary, raster and exact glyph metrics are not certified",
+    "Frame specifies non-four-unit geometry: amount padding105, quick39/25, keypad59/69/10 and footer30/20/10; preserved literally under the specific Figma task and documented instead of silently claiming strict4-grid geometry"
+  ],
+  "limits": ["Independent image inspection only; no browser/device/native pixel replay", "Insets verified as source arithmetic, not device geometry", "Full Router, payment, native accessibility, font scale and other Figma states pending"]
+}

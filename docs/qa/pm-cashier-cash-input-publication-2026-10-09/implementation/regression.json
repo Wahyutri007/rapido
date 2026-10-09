@@ -1,0 +1,697 @@
+{
+  "ticket": "SD5-015",
+  "mode": "final",
+  "scope": "Actual production input screen, Keypad/Form and monetary utils with RHF/Zod/resolver; native hosts, icons/Image/safe-area/theme, router/focus are adapters. No backend/payment/native/Figma claim.",
+  "checks": [
+    {
+      "name": "prefilled cash backspace uses the displayed amount",
+      "passed": true
+    },
+    {
+      "name": "prefilled edited amount routes exactly",
+      "passed": true
+    },
+    {
+      "name": "prefilled cash appends to existing digits",
+      "passed": true
+    },
+    {
+      "name": "clear empties the shared cash/form value",
+      "passed": true
+    },
+    {
+      "name": "cleared amount disables Continue",
+      "passed": true
+    },
+    {
+      "name": "clear cannot submit old prefill",
+      "passed": true
+    },
+    {
+      "name": "initial empty amount disables Continue",
+      "passed": true
+    },
+    {
+      "name": "empty amount does not route",
+      "passed": true
+    },
+    {
+      "name": "zero disables Continue",
+      "passed": true
+    },
+    {
+      "name": "zero does not route",
+      "passed": true
+    },
+    {
+      "name": "underpayment disables Continue",
+      "passed": true
+    },
+    {
+      "name": "underpayment direct callback cannot route",
+      "passed": true
+    },
+    {
+      "name": "underpayment displays validation message",
+      "passed": true
+    },
+    {
+      "name": "editing clears prior validation message",
+      "passed": true
+    },
+    {
+      "name": "exact amount enables Continue",
+      "passed": true
+    },
+    {
+      "name": "double tap routes only once with exact amount",
+      "passed": true
+    },
+    {
+      "name": "overpayment retains received and total amounts",
+      "passed": true
+    },
+    {
+      "name": "missing total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "missing total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "missing total has useful error",
+      "passed": true
+    },
+    {
+      "name": "negative total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "negative total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "negative total has useful error",
+      "passed": true
+    },
+    {
+      "name": "decimal total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "decimal total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "decimal total has useful error",
+      "passed": true
+    },
+    {
+      "name": "exponent total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "exponent total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "exponent total has useful error",
+      "passed": true
+    },
+    {
+      "name": "junk total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "junk total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "junk total has useful error",
+      "passed": true
+    },
+    {
+      "name": "multiple total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "multiple total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "multiple total has useful error",
+      "passed": true
+    },
+    {
+      "name": "unsafe total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "unsafe total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "unsafe total has useful error",
+      "passed": true
+    },
+    {
+      "name": "trailing newline total disables Continue",
+      "passed": true
+    },
+    {
+      "name": "trailing newline total does not default/coerce into navigation",
+      "passed": true
+    },
+    {
+      "name": "trailing newline total has useful error",
+      "passed": true
+    },
+    {
+      "name": "singleton params normalize exact integer amounts",
+      "passed": true
+    },
+    {
+      "name": "explicit zero total still requires positive received cash",
+      "passed": true
+    },
+    {
+      "name": "unsafe keypad amount disables Continue",
+      "passed": true
+    },
+    {
+      "name": "unsafe cash cannot route",
+      "passed": true
+    },
+    {
+      "name": "cash keypad accepts at most 16 digits",
+      "passed": true
+    },
+    {
+      "name": "other route global params do not overwrite cash draft",
+      "passed": true
+    },
+    {
+      "name": "other route global params do not change local total",
+      "passed": true
+    },
+    {
+      "name": "unrelated local param preserves cash draft",
+      "passed": true
+    },
+    {
+      "name": "relevant route update resets to current prefill",
+      "passed": true
+    },
+    {
+      "name": "saved prior route callback cannot navigate",
+      "passed": true
+    },
+    {
+      "name": "new route uses current total and amount",
+      "passed": true
+    },
+    {
+      "name": "unfocused screen disables Continue",
+      "passed": true
+    },
+    {
+      "name": "unfocused callback cannot route",
+      "passed": true
+    },
+    {
+      "name": "unfocused keypad cannot write",
+      "passed": true
+    },
+    {
+      "name": "refocus retains draft and permits current submission",
+      "passed": true
+    },
+    {
+      "name": "unmounted saved callback cannot route",
+      "passed": true
+    },
+    {
+      "name": "async validation cannot submit cash cleared during validation",
+      "passed": true
+    },
+    {
+      "name": "two reference quick-entry amounts",
+      "passed": true
+    },
+    {
+      "name": "Rp200000 shortcut writes the same form value",
+      "passed": true
+    },
+    {
+      "name": "quoted exact amount shortcut writes current total",
+      "passed": true
+    },
+    {
+      "name": "Bayar retains confirmation navigation contract",
+      "passed": true
+    },
+    {
+      "name": "under-total fixed shortcut is omitted",
+      "passed": true
+    },
+    {
+      "name": "larger real quote retains exact shortcut",
+      "passed": true
+    },
+    {
+      "name": "no quick amount from missing quote",
+      "passed": true
+    },
+    {
+      "name": "blurred shortcut callback cannot change draft",
+      "passed": true
+    },
+    {
+      "name": "navigation failure gives retry feedback",
+      "passed": true
+    },
+    {
+      "name": "navigation failure releases submit lock for retry",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN mount: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN mount: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 0: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 0: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 1: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 1: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 2: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 2: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 3: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 3: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 4: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN 4: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN BACK: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN BACK: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN C: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN C: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN BACK: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN BACK: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN keypad visual host props unchanged",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null mount: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null mount: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 0: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 0: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 1: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 1: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 2: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 2: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 3: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 3: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 4: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null 4: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null BACK: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null BACK: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null C: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null C: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null BACK: default matches saved baseline",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null BACK: expected digits",
+      "passed": true
+    },
+    {
+      "name": "legacy non-null keypad visual host props unchanged",
+      "passed": true
+    },
+    {
+      "name": "controlled mode preserves initial state without mount write",
+      "passed": true
+    },
+    {
+      "name": "controlled external state is respected by backspace",
+      "passed": true
+    },
+    {
+      "name": "controlled nullable clear dispatches null",
+      "passed": true
+    },
+    {
+      "name": "controlled rapid digits cannot bypass cap",
+      "passed": true
+    },
+    {
+      "name": "PIN caller source untouched: app/(onboarding)/choose-store/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "PIN caller source untouched: app/(no-layout)/manage/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "PIN caller source untouched: app/(no-layout)/order-detail/refund.tsx",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects undefined",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects null",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects 0",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects {}",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects []",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects [\"5000\",\"9000\"]",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \" \"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"-1\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"+1\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"1.0\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"1,000\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"Rp 1000\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"1e3\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"Infinity\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"NaN\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"9007199254740992\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"5000\\n\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"5000\\r\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"5000\\r\\n\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"5000 \"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \" 5000\"",
+      "passed": true
+    },
+    {
+      "name": "strict amount rejects \"5000 \"",
+      "passed": true
+    },
+    {
+      "name": "safe exact amount 0",
+      "passed": true
+    },
+    {
+      "name": "safe exact amount 0010",
+      "passed": true
+    },
+    {
+      "name": "safe exact amount 9007199254740991",
+      "passed": true
+    },
+    {
+      "name": "route scalar/singleton only",
+      "passed": true
+    },
+    {
+      "name": "Zod total=5000 received=5000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=5000 received=10000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=5000 received=4999",
+      "passed": true
+    },
+    {
+      "name": "Zod total=5000 received=",
+      "passed": true
+    },
+    {
+      "name": "Zod total=0 received=0",
+      "passed": true
+    },
+    {
+      "name": "Zod total=0 received=1",
+      "passed": true
+    },
+    {
+      "name": "Zod total=null received=10000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=Infinity received=10000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=-1 received=10000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=1.5 received=10000",
+      "passed": true
+    },
+    {
+      "name": "Zod total=5000 received=9007199254740992",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 186000",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 5000",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 200000",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 250000",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 0",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total null",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total -1",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total Infinity",
+      "passed": true
+    },
+    {
+      "name": "quick entries respect actual total 1.5",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"186000\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"200000\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"0000\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"0005000\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"9007199254740991\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"9007199254740993\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"\"",
+      "passed": true
+    },
+    {
+      "name": "lossless displayed cash \"5000\\n\"",
+      "passed": true
+    },
+    {
+      "name": "all action promises handled without rejection",
+      "passed": true
+    }
+  ],
+  "pass": 169,
+  "fail": 0,
+  "runtimeErrors": [],
+  "actionRejections": [],
+  "sourceHashes": {
+    "current:app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa",
+    "current:components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "current:lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "current:components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "current:lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+    "current:lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "current:schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0",
+    "baseline:components/common/Keypad.tsx": "7caeae9015b269cd48ee3d9db360a4543913db7e55689d5b82433d57db0bd415"
+  }
+}

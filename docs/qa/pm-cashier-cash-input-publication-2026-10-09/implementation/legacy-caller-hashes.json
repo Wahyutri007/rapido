@@ -1,0 +1,13 @@
+{
+  "ticket": "SD5-014",
+  "ownedBefore": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "a0df622778cd2070a74af5430d883cf323d4a7cc5536c423f590c56319b257af",
+    "components/common/Keypad.tsx": "870d0b498c111a2804610480423632c0aad6612b2c10bc1a705c413e207060f1"
+  },
+  "unchangedCallers": {
+    "app/(onboarding)/choose-store/pin.tsx": "1f9da1aa275426c0e4b1db06e49f9c03fccec8b288fe205c829eb30599f2532a",
+    "app/(no-layout)/manage/pin.tsx": "125f120968796b6fe3529e3a93de4e9515648c6b9cc3792e502847b0fe18b2cd",
+    "app/(no-layout)/order-detail/refund.tsx": "393fb9e69484f3fa702480dd53cd8f99f57eb9ba4b9c2494c5f2e3284357a8fe"
+  },
+  "newSchemaBefore": null
+}

@@ -1,0 +1,212 @@
+{
+  "ticket": "PM-CASHIER-CASH-INPUT-PUBLICATION-001",
+  "result": "PASS_SCOPED",
+  "counts": {
+    "behavior": 31,
+    "callerFingerprintIntegrity": 3,
+    "total": 35,
+    "passed": 35,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "route prefill remains 50000 and groups displayed digits",
+      "passed": true
+    },
+    {
+      "name": "quick total and Rp200000 preset are both visible for lower total",
+      "passed": true
+    },
+    {
+      "name": "quick total equal to preset is deduplicated",
+      "passed": true
+    },
+    {
+      "name": "unavailable total shows no quick shortcuts",
+      "passed": true
+    },
+    {
+      "name": "unavailable total explicitly explains return to order",
+      "passed": true
+    },
+    {
+      "name": "quick total button synchronizes controlled form value and permits exact total",
+      "passed": true
+    },
+    {
+      "name": "exact total routes once with unchanged total and received amount",
+      "passed": true
+    },
+    {
+      "name": "preset above total writes displayed amount to form",
+      "passed": true
+    },
+    {
+      "name": "controlled prefill backspace append clear and empty-backspace lifecycle",
+      "passed": true
+    },
+    {
+      "name": "clear resets RHF-controlled amount and disables Bayar",
+      "passed": true
+    },
+    {
+      "name": "amount below required total cannot continue",
+      "passed": true
+    },
+    {
+      "name": "below-total submit never routes and shows validation message",
+      "passed": true
+    },
+    {
+      "name": "missing total fails closed instead of using subtotal or zero",
+      "passed": true
+    },
+    {
+      "name": "negative, fractional, duplicate and unsafe totals all fail closed",
+      "passed": true
+    },
+    {
+      "name": "explicit zero total remains distinct and positive received amount may continue",
+      "passed": true
+    },
+    {
+      "name": "received amount zero remains invalid even when total is explicitly zero",
+      "passed": true
+    },
+    {
+      "name": "unsafe received amount stays visible for correction but cannot continue",
+      "passed": true
+    },
+    {
+      "name": "rapid keypad input obeys 16 digit cap",
+      "passed": true
+    },
+    {
+      "name": "irrelevant local/global params do not replace draft or total",
+      "passed": true
+    },
+    {
+      "name": "relevant local params remount the form; stale callback blocked",
+      "passed": true
+    },
+    {
+      "name": "blur blocks stale submission and key writes; refocus retains current draft",
+      "passed": true
+    },
+    {
+      "name": "unmounted callback cannot navigate",
+      "passed": true
+    },
+    {
+      "name": "double submit creates one confirmation route",
+      "passed": true
+    },
+    {
+      "name": "navigation rejection releases submit lock for retry",
+      "passed": true
+    },
+    {
+      "name": "actual screen footer safe-area style at bottom insets 0/24/48",
+      "passed": true
+    },
+    {
+      "name": "cash keypad uses 32px decorative Figma backspace asset",
+      "passed": true
+    },
+    {
+      "name": "cash keypad presents four 68/69px key rows",
+      "passed": true
+    },
+    {
+      "name": "default legacy Keypad remains uncontrolled nullable with expected sequence",
+      "passed": true
+    },
+    {
+      "name": "default legacy Keypad keeps its legacy 62px height utility",
+      "passed": true
+    },
+    {
+      "name": "schema and parser boundaries for whole Rupiah safe integers",
+      "passed": true
+    },
+    {
+      "name": "shortcut derivation handles missing, exact and preset collision",
+      "passed": true
+    },
+    {
+      "name": "caller fingerprint integrity only: app/(onboarding)/choose-store/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "caller fingerprint integrity only: app/(no-layout)/manage/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "caller fingerprint integrity only: app/(no-layout)/order-detail/refund.tsx",
+      "passed": true
+    },
+    {
+      "name": "all seven candidate owned source and asset hashes are unchanged",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "actionRejections": [],
+  "candidateOwnedSourceHashesBefore": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa",
+    "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+    "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0"
+  },
+  "candidateOwnedSourceHashesAfter": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa",
+    "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+    "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0"
+  },
+  "candidateSetupFingerprintMatches": true,
+  "legacyCallerHashes": {
+    "app/(onboarding)/choose-store/pin.tsx": {
+      "expected": "1f9da1aa275426c0e4b1db06e49f9c03fccec8b288fe205c829eb30599f2532a",
+      "actual": "1f9da1aa275426c0e4b1db06e49f9c03fccec8b288fe205c829eb30599f2532a",
+      "unchanged": true
+    },
+    "app/(no-layout)/manage/pin.tsx": {
+      "expected": "125f120968796b6fe3529e3a93de4e9515648c6b9cc3792e502847b0fe18b2cd",
+      "actual": "125f120968796b6fe3529e3a93de4e9515648c6b9cc3792e502847b0fe18b2cd",
+      "unchanged": true
+    },
+    "app/(no-layout)/order-detail/refund.tsx": {
+      "expected": "393fb9e69484f3fa702480dd53cd8f99f57eb9ba4b9c2494c5f2e3284357a8fe",
+      "actual": "393fb9e69484f3fa702480dd53cd8f99f57eb9ba4b9c2494c5f2e3284357a8fe",
+      "unchanged": true
+    }
+  },
+  "actual": [
+    "input-money screen",
+    "RHF/Zod schema and resolver",
+    "cash Keypad",
+    "cash-input helper/theme",
+    "default legacy Keypad"
+  ],
+  "adapters": [
+    "React Native host and layout presentation",
+    "Expo Router replace/local route params",
+    "focus state",
+    "safe-area values",
+    "icons/image",
+    "BouncyPressable/haptics",
+    "Button/Form child components"
+  ],
+  "limits": [
+    "No real navigation stack, native keyboard/haptics/screen reader, device/browser/Figma visual parity, backend quote or payment completion",
+    "Caller hashes establish unchanged source bytes only; they are not rendered PIN/refund regression tests",
+    "Frontend route validation is not server authorization of order total"
+  ]
+}

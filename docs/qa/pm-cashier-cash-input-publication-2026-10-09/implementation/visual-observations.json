@@ -1,0 +1,40 @@
+{
+  "ticket": "SD5-015",
+  "referenceNode": "29:25047",
+  "measuredViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "primaryGeometry": {
+    "values": 12,
+    "tolerancePx": 0.6,
+    "result": "PASS",
+    "report": "browser/geometry390.json"
+  },
+  "implementationAdjustments": [
+    {
+      "name": "Long amounts / small viewports",
+      "detail": "Normal amounts retain32px; 16-digit amounts fit measured container with conservative font sizing. Native fitting remains enabled. On320/landscape, amount+keypad content scrolls while footer remains visible."
+    },
+    {
+      "name": "Shared Figma Header",
+      "detail": "Existing appearance is reused without changing global Header. Its title line height21px versus20.8px in context; center offset0.1px is within measured tolerance. Static Inter_24pt app fonts are retained; Figma does not supply the identical font binaries and screenshot glyph widths/rasterization are not certified identical."
+    }
+  ],
+  "remaining": [
+    {
+      "status": "REVIEW_PENDING",
+      "detail": "Independent QA/QC review of six final hashes, Android actual safe area/font scale/haptics/navigator/focus and full-router integration."
+    },
+    {
+      "status": "REFERENCE_LIMITED",
+      "detail": "Same-named variants29:25089/29:25131 remain Starterlimited. Only full context29:25047 and its included screenshot underpin this overlay."
+    },
+    {
+      "status": "EXISTING_INTEGRATION_GAP",
+      "detail": "Confirm still contains API Here/wait(1000)/orderAlert; checkout quote/BayarNow is not wired end-to-end. SD5-015 changes entry UI and validated navigation, not payment execution."
+    }
+  ],
+  "globalFigma100Certified": false,
+  "pixelIdentityCertified": false
+}

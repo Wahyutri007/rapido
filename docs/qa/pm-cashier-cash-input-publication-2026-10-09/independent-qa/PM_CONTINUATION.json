@@ -1,0 +1,28 @@
+{
+  "status": "QA_EXECUTION_COMPLETE_SCOPED_BY_PM",
+  "suiteAuthor": "/root/cashier_pricing_qa",
+  "finalExecutor": "Projek Manager",
+  "agentCompletion": "WORKSPACE_OUT_OF_CREDITS_NO_FINAL_AGENT_SIGNATURE",
+  "counts": {
+    "behavior": 31,
+    "callerFingerprintIntegrity": 3,
+    "total": 35,
+    "passed": 35,
+    "failed": 0
+  },
+  "resultHash": "bbf6861b612ba3ecb3a2ea9fd37cb2d34ed5fa521df1681520d425ee33321604",
+  "sourceHashes": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa",
+    "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+    "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0"
+  },
+  "limitation": [
+    "No real navigation stack, native keyboard/haptics/screen reader, device/browser/Figma visual parity, backend quote or payment completion",
+    "Caller hashes establish unchanged source bytes only; they are not rendered PIN/refund regression tests",
+    "Frontend route validation is not server authorization of order total"
+  ]
+}

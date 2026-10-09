@@ -1,0 +1,12 @@
+{
+  "result": "PASS_SCOPED",
+  "counts": {
+    "behavior": 31,
+    "callerFingerprintIntegrity": 3,
+    "total": 35,
+    "passed": 35,
+    "failed": 0
+  },
+  "runtimeErrors": 0,
+  "actionRejections": 0
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "file": "docs\\figma\\cashier\\sd5-20261009\\cash-input\\assets\\chevron-left.svg",
+    "width": 24,
+    "height": 24,
+    "slot": "I29:25052;1:3043",
+    "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "existingExactMatch": "assets/images/figma/back-office/back.svg"
+  },
+  {
+    "file": "docs\\figma\\cashier\\sd5-20261009\\cash-input\\assets\\backspace.svg",
+    "width": 32,
+    "height": 32,
+    "slot": "29:25086",
+    "sha256": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db"
+  }
+]

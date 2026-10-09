@@ -1,0 +1,50 @@
+{
+  "ticket": "SD5-015",
+  "scope": "Source/AST and exact-asset preservation contracts; counts are separate from behavioral and browser cases.",
+  "checks": [
+    {
+      "name": "Cart route names and order preserved",
+      "passed": true
+    },
+    {
+      "name": "Other cart header options unchanged: index",
+      "passed": true
+    },
+    {
+      "name": "Other cart header options unchanged: offer",
+      "passed": true
+    },
+    {
+      "name": "Other cart header options unchanged: confirm",
+      "passed": true
+    },
+    {
+      "name": "Other cart header options unchanged: input-money-confirm",
+      "passed": true
+    },
+    {
+      "name": "Validated navigation guards and target preserved",
+      "passed": true
+    },
+    {
+      "name": "Strict schema source unchanged",
+      "passed": true
+    },
+    {
+      "name": "Header reuses original Figma chevron bytes",
+      "passed": true
+    },
+    {
+      "name": "Cash keypad uses original Figma backspace bytes",
+      "passed": true
+    }
+  ],
+  "pass": 9,
+  "fail": 0,
+  "sourceHashes": {
+    "docs/qa/senior-5-2026-10-09/cashier-cash-input-figma/before/_layout.tsx": "2d6419d3171c320d3015951679596cd94f920a4e9ef35be9f9abd4c257e3db98",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "docs/qa/senior-5-2026-10-09/cashier-cash-input-figma/before/input-money.tsx": "dde9381b7e6be9cc4ec0198ae8997b0f0bdb9a0a5c35db63fa9456a3e85ec492",
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "427b6f76c935d493e74f5b2dca35e043cdcbcbc8644a851c67ee69f65a656dfa"
+  }
+}
