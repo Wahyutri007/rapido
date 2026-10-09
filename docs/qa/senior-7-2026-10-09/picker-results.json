@@ -1,0 +1,28 @@
+{
+  "suite": "picker",
+  "checks": [
+    "picker opens with committed product",
+    "draft selection does not commit early",
+    "case-insensitive search filters visible products",
+    "products refetch preserves draft selection",
+    "products refetch preserves search",
+    "done commits newest product record",
+    "done requests close once",
+    "reopen discards uncommitted selection",
+    "reopen clears search",
+    "cancel closes without committing draft",
+    "reopen follows updated committed selection",
+    "no search match produces empty list",
+    "external selection while open resets draft and search",
+    "cleared external selection is reflected",
+    "done without selection does not emit product",
+    "removed draft product is never submitted",
+    "selection changed while closed is used on open",
+    "empty products render without errors",
+    "default mock products remain available",
+    "no React runtime errors or act warnings"
+  ],
+  "count": 20,
+  "errors": [],
+  "scope": "Actual component lifecycle using React 19 test renderer; native/UI primitives are host stubs. No printer, API, browser or native device integration."
+}

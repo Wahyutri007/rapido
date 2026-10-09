@@ -1,0 +1,39 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-009",
+  "sourceHash": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+  "baselineHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "lint": {
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\AlertModal.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 1,
+    "stdout": "Checked 1 file in 19ms. No fixes applied.\nFound 1 error.",
+    "stderr": "components\\common\\AlertModal.tsx format ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n  × Formatter would have printed the following content:\n  \n     40  40 │   export { useAlertModal } from \"@/hooks/useAlertModal\";\n     41  41 │   \n     42     │ - export·default·function·AlertModal(props:·React.PropsWithChildren<AlertModalProps>)·{\n         42 │ + export·default·function·AlertModal(\n         43 │ + → props:·React.PropsWithChildren<AlertModalProps>,\n         44 │ + )·{\n     43  45 │     const { width } = useWindowDimensions();\n     44  46 │     const {\n  \n\ncheck ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n  × Some errors were emitted while running checks."
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "contractUnchanged": true,
+  "contractComparison": "Full AST unchanged except four geometry changes and private type alias name AlertModal -> AlertModalProps; props/callbacks/copy/remaining JSX intact",
+  "privateTypeRenameRuntimeIdentical": true,
+  "diagnostics": [],
+  "typeScope": "One shared modal root + imported dependency closure and actual project options/declarations; caller AST inventory, not all screens/full-project type gate",
+  "status": "FAILED"
+}

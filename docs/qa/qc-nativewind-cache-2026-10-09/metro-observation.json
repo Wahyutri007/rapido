@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-10-08T18:41:26.172Z",
+  "file": ".expo/senior7-startup/metro.out.log",
+  "metroPidReported": "9200",
+  "warningMessages": [
+    "InteractionManager has been deprecated and will be removed in a future release. Please refactor long tasks into smaller ones, and  use 'requestIdleCallback' instead.",
+    "[Layout children]: No route named \"menu/search\" exists in nested children: [\"maintenance\", \"terms-and-condition\", \"(back-office)\", \"(cashier)\", \"catalog\", \"home\", \"inventory\", \"manage\", \"offer\", \"order-detail\", \"order\"]",
+    "[Layout children]: No route named \"menu\" exists in nested children: [\"maintenance\", \"terms-and-condition\", \"(back-office)\", \"(cashier)\", \"catalog\", \"home\", \"inventory\", \"manage\", \"offer\", \"order-detail\", \"order\"]",
+    "[Layout children]: No route named \"catalog/menu\" exists in nested children: [\"maintenance\", \"terms-and-condition\", \"(back-office)\", \"(cashier)\", \"catalog\", \"home\", \"inventory\", \"manage\", \"offer\", \"order-detail\", \"order\"]"
+  ],
+  "themeErrorPresent": false,
+  "errorEntries": 0
+}

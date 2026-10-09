@@ -1,0 +1,410 @@
+{
+  "developer": "Senior5 / Codex-5",
+  "ticket": "SD5-006",
+  "baseline": false,
+  "sources": {
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6"
+  },
+  "checks": [
+    {
+      "name": "two send callbacks: one registration POST",
+      "passed": true
+    },
+    {
+      "name": "registration transport endpoint/payload",
+      "passed": true
+    },
+    {
+      "name": "pending submission disables send",
+      "passed": true
+    },
+    {
+      "name": "blocked second submission does not dismiss pending sheet",
+      "passed": true
+    },
+    {
+      "name": "success navigates to OTP once",
+      "passed": true
+    },
+    {
+      "name": "success closes sheet once",
+      "passed": true
+    },
+    {
+      "name": "success stores submitted personal info",
+      "passed": true
+    },
+    {
+      "name": "success stores OTP response",
+      "passed": true
+    },
+    {
+      "name": "success stores registration type",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: expected message",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: retry button available",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "429 cooldown: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: expected message",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: retry button available",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "429 missing seconds: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: expected message",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: retry button available",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "429 invalid seconds: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: expected message",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: retry button available",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "429 negative seconds: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "500 generic: expected message",
+      "passed": true
+    },
+    {
+      "name": "500 generic: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "500 generic: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "500 generic: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "500 generic: retry button available",
+      "passed": true
+    },
+    {
+      "name": "500 generic: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "500 generic: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: expected message",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: retry button available",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "422 malformed errors: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: expected message",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: retry button available",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "422 malformed entry: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: expected message",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: FormMessage renders error",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: no navigation or OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: credentials retained",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: retry button available",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: retry sends one new POST",
+      "passed": true
+    },
+    {
+      "name": "422 empty errors: retry navigates once",
+      "passed": true
+    },
+    {
+      "name": "422: email array combined",
+      "passed": true
+    },
+    {
+      "name": "422: phone field preserved",
+      "passed": true
+    },
+    {
+      "name": "422: actual FormMessages display both",
+      "passed": true
+    },
+    {
+      "name": "422: no OTP navigation",
+      "passed": true
+    },
+    {
+      "name": "dismiss: late success causes no navigation",
+      "passed": true
+    },
+    {
+      "name": "dismiss: late success causes no OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "dismiss: late success causes no extra close",
+      "passed": true
+    },
+    {
+      "name": "dismiss: close works while request pending",
+      "passed": true
+    },
+    {
+      "name": "backdrop: late success causes no navigation",
+      "passed": true
+    },
+    {
+      "name": "backdrop: late success causes no OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "backdrop: late success causes no extra close",
+      "passed": true
+    },
+    {
+      "name": "backdrop: close works while request pending",
+      "passed": true
+    },
+    {
+      "name": "closeExternal: late success causes no navigation",
+      "passed": true
+    },
+    {
+      "name": "closeExternal: late success causes no OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "closeExternal: late success causes no extra close",
+      "passed": true
+    },
+    {
+      "name": "hide: late success causes no navigation",
+      "passed": true
+    },
+    {
+      "name": "hide: late success causes no OTP mutation",
+      "passed": true
+    },
+    {
+      "name": "hide: late success causes no extra close",
+      "passed": true
+    },
+    {
+      "name": "reopen creates new submission for current draft",
+      "passed": true
+    },
+    {
+      "name": "reopen: stale failure writes no error",
+      "passed": true
+    },
+    {
+      "name": "reopen: old result leaves new sheet open/busy",
+      "passed": true
+    },
+    {
+      "name": "reopen: current result alone navigates",
+      "passed": true
+    },
+    {
+      "name": "reopen: OTP state uses new submitted draft",
+      "passed": true
+    },
+    {
+      "name": "success uses sent payload even if form changed meanwhile",
+      "passed": true
+    },
+    {
+      "name": "form changes remain intact after response",
+      "passed": true
+    },
+    {
+      "name": "StrictMode: one POST and OTP navigation",
+      "passed": true
+    },
+    {
+      "name": "closed sheet has no visible send button",
+      "passed": true
+    },
+    {
+      "name": "closed -> open presents current email",
+      "passed": true
+    },
+    {
+      "name": "no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "no unhandled rejections",
+      "passed": true
+    },
+    {
+      "name": "no rejected UI action promises",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandledRejections": [],
+  "actionRejections": [],
+  "passed": 96,
+  "failed": 0
+}

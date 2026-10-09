@@ -1,0 +1,188 @@
+[
+  {
+    "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\general-ledger\\detail.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\catalog\\bundling\\detail.tsx",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Card' is defined but never used.",
+        "line": 14,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 14,
+        "endColumn": 12,
+        "suggestions": [
+          {
+            "messageId": "removeUnusedImportDeclaration",
+            "data": {
+              "varName": "Card"
+            },
+            "fix": {
+              "range": [
+                566,
+                611
+              ],
+              "text": ""
+            },
+            "desc": "Remove unused import declaration."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'orderTypesQuery' is assigned a value but never used.",
+        "line": 46,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 46,
+        "endColumn": 23
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'_' is assigned a value but never used.",
+        "line": 75,
+        "column": 10,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 75,
+        "endColumn": 11
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 3,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import Feather from \"@expo/vector-icons/Feather\";\nimport { useQueryClient } from \"@tanstack/react-query\";\nimport { router, useLocalSearchParams } from \"expo-router\";\nimport React from \"react\";\nimport { Image, View } from \"react-native\";\nimport {\n\tuseBundlingDeleteRequest,\n\tuseBundlingQuery,\n} from \"@/api/hooks/bundlings\";\nimport { useMenusQuery } from \"@/api/hooks/menus\";\nimport { useOrderTypesQuery } from \"@/api/hooks/order-types\";\nimport { useStoresQuery } from \"@/api/hooks/stores\";\nimport AlertModal, { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport DeleteConfirmModal from \"@/components/common/DeleteConfirmModal\";\nimport SuccessModal from \"@/components/common/SuccessModal\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport {\n\tCatalogDetailHeroCard,\n\tCatalogDetailSection,\n} from \"@/components/feature/catalog\";\nimport { Colors } from \"@/constants/Colors\";\nimport { MOCK_BUNDLING_DATA } from \"@/constants/data/bundling\";\nimport { cn, formatRp, route } from \"@/lib/utils\";\nimport type { BundlingData } from \"@/types/api/bundling\";\n\nfunction formatDatePeriodDisplay(start?: string, end?: string) {\n\tif (!start || !end) return \"1/1/2024 - 1/6/2024\";\n\tconst s = new Date(start);\n\tconst e = new Date(end);\n\tif (Number.isNaN(s.getTime()) || Number.isNaN(e.getTime())) return \"1/1/2024 - 1/6/2024\";\n\treturn `${s.getDate()}/${s.getMonth() + 1}/${s.getFullYear()} - ${e.getDate()}/${e.getMonth() + 1}/${e.getFullYear()}`;\n}\n\nexport default function BundlingDetailScreen() {\n\tconst params = useLocalSearchParams();\n\tconst bundlingId = params?.id as string | undefined;\n\n\tconst bundlingQuery = useBundlingQuery(bundlingId);\n\tconst menusQuery = useMenusQuery();\n\tconst storesQuery = useStoresQuery();\n\tconst orderTypesQuery = useOrderTypesQuery();\n\tconst queryClient = useQueryClient();\n\n\tconst deleteModal = useAlertModal();\n\tconst successModal = useAlertModal();\n\tconst errorModal = useAlertModal();\n\n\tconst deleteRequest = useBundlingDeleteRequest(undefined, bundlingId);\n\n\t// Fallback to MOCK_BUNDLING_DATA if backend query returns no data\n\tconst data: BundlingData = React.useMemo(() => {\n\t\tif (bundlingQuery.data) return bundlingQuery.data;\n\t\treturn (\n\t\t\tMOCK_BUNDLING_DATA.find((m) => m.id === bundlingId) ??\n\t\t\tMOCK_BUNDLING_DATA[0]\n\t\t);\n\t}, [bundlingQuery.data, bundlingId]);\n\n\tfunction handleEdit() {\n\t\tif (!bundlingId) return;\n\t\trouter.push(route(\"/catalog/bundling/modify\", { id: bundlingId }));\n\t}\n\n\tfunction handleDelete() {\n\t\tdeleteModal.open();\n\t}\n\n\tasync function handleConfirmDelete() {\n\t\tif (!bundlingId) return;\n\t\tconst [_, error] = await deleteRequest.call();\n\n\t\tif (error) {\n\t\t\terrorModal.open();\n\t\t\tdeleteModal.close();\n\t\t\treturn;\n\t\t}\n\n\t\tdeleteModal.close();\n\t\tawait queryClient.invalidateQueries({ queryKey: [\"bundlings\"] });\n\t\tsuccessModal.open();\n\t}\n\n\tfunction handleSuccessClose() {\n\t\tsuccessModal.close();\n\t\trouter.back();\n\t}\n\n\t// Resolve stores list\n\tconst storeList = React.useMemo(() => {\n\t\tif (data?.stores && data.stores.length > 0) {\n\t\t\treturn data.stores;\n\t\t}\n\t\tif (storesQuery.data && storesQuery.data.length > 0) {\n\t\t\treturn storesQuery.data.slice(0, 4).map((s) => ({\n\t\t\t\tid: s.id,\n\t\t\t\tname: s.name,\n\t\t\t\taddress: s.address || \"Pekanbaru\",\n\t\t\t\tis_active: true,\n\t\t\t}));\n\t\t}\n\t\treturn MOCK_BUNDLING_DATA[0].stores ?? [];\n\t}, [data, storesQuery.data]);\n\n\t// Resolve prices list\n\tconst priceList = React.useMemo(() => {\n\t\tif (data?.prices && data.prices.length > 0) {\n\t\t\treturn data.prices.map((p) => {\n\t\t\t\tconst lower = (p.order_type_name || \"\").toLowerCase();\n\t\t\t\tlet icon: keyof typeof Feather.glyphMap = \"shopping-bag\";\n\t\t\t\tif (lower.includes(\"dine\") || lower.includes(\"makan\")) icon = \"coffee\";\n\t\t\t\telse if (lower.includes(\"online\") || lower.includes(\"delivery\") || lower.includes(\"food\")) icon = \"truck\";\n\t\t\t\treturn {\n\t\t\t\t\t...p,\n\t\t\t\t\ticon,\n\t\t\t\t};\n\t\t\t});\n\t\t}\n\t\treturn [\n\t\t\t{ order_type_id: \"1\", order_type_name: \"Take Away\", sell_price: data?.sell_price || 40000, icon: \"shopping-bag\" as const },\n\t\t\t{ order_type_id: \"2\", order_type_name: \"Dine In\", sell_price: 44000, icon: \"coffee\" as const },\n\t\t\t{ order_type_id: \"3\", order_type_name: \"Online Food\", sell_price: 54000, icon: \"truck\" as const },\n\t\t];\n\t}, [data]);\n\n\t// Resolve menu names for item details\n\tconst resolvedItems = React.useMemo(() => {\n\t\treturn data.details.map((detail, idx) => {\n\t\t\tconst foundMenu = menusQuery.data?.find((m) => m.id === detail.menu_id);\n\t\t\treturn {\n\t\t\t\tid: detail.id || `item-${idx}`,\n\t\t\t\tname: detail.menu_name || foundMenu?.name || \"Nasi Goreng\",\n\t\t\t\tvariant: detail.variant_name || (idx === 0 ? \"Pedas\" : \"Kampung\"),\n\t\t\t\tquantity: detail.quantity || (idx === 0 ? 3 : 2),\n\t\t\t};\n\t\t});\n\t}, [data.details, menusQuery.data]);\n\n\treturn (\n\t\t<>\n\t\t\t<DeleteConfirmModal\n\t\t\t\tisLoading={deleteRequest.isLoading}\n\t\t\t\tonConfirm={handleConfirmDelete}\n\t\t\t\topenState={deleteModal.openState}\n\t\t\t\ttitle={`Apakah yakin ingin menghapus paket ${data?.name}?`}\n\t\t\t\tdescription=\"Paket akan hilang permanen jika kamu sudah mengkonfirmasi\"\n\t\t\t/>\n\n\t\t\t<SuccessModal\n\t\t\t\ttitle=\"Paket Berhasil Dihapus!\"\n\t\t\t\tdescription=\"Paket berhasil dihapus dari daftar paket.\"\n\t\t\t\tonClose={handleSuccessClose}\n\t\t\t\topenState={successModal.openState}\n\t\t\t\tbuttonText=\"Tutup\"\n\t\t\t/>\n\n\t\t\t<AlertModal\n\t\t\t\ttitle=\"Gagal Menghapus Paket\"\n\t\t\t\tmessage=\"Terjadi kesalahan saat menghapus paket. Silakan coba lagi.\"\n\t\t\t\thideCancelButton\n\t\t\t\tconfirmText=\"Tutup\"\n\t\t\t\tonClose={errorModal.close}\n\t\t\t\topenState={errorModal.openState}\n\t\t\t/>\n\n\t\t\t<Wrapper className=\"p-4\" hasActionButton>\n\t\t\t\t{bundlingQuery.isLoading && bundlingId ? (\n\t\t\t\t\t<LoadingPlaceholder />\n\t\t\t\t) : (\n\t\t\t\t\t<View className=\"gap-4 pb-24\">\n\t\t\t\t\t\t{/* TOP HERO CARD */}\n\t\t\t\t\t\t<CatalogDetailHeroCard\n\t\t\t\t\t\t\ticon={<Feather name=\"box\" size={24} color={Colors.primary} />}\n\t\t\t\t\t\t\ttitle={data.name}\n\t\t\t\t\t\t\tdescription={`Buat tanggal ${data.created_at || \"11 Mei 2026\"}`}\n\t\t\t\t\t\t/>\n\n\t\t\t\t\t\t{/* SECTION 1: INFORMASI BUNDLING */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Informasi Bundling\">\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Toko\"\n\t\t\t\t\t\t\t\tvalue={`${storeList.length} toko dipilih`}\n\t\t\t\t\t\t\t\ticon=\"shopping-bag\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Periode Paket\"\n\t\t\t\t\t\t\t\tvalue={formatDatePeriodDisplay(data.start_period, data.end_period)}\n\t\t\t\t\t\t\t\ticon=\"credit-card\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow label=\"Gambar Paket\" icon=\"file-text\" isLast>\n\t\t\t\t\t\t\t\t{data.image ? (\n\t\t\t\t\t\t\t\t\t<View className=\"size-11 overflow-hidden rounded-lg border border-zinc-200 bg-white\">\n\t\t\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\t\t\tsource={{ uri: data.image }}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"size-full\"\n\t\t\t\t\t\t\t\t\t\t\tresizeMode=\"cover\"\n\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t) : (\n\t\t\t\t\t\t\t\t\t<View className=\"h-9 w-14 items-center justify-center rounded-lg bg-emerald-800\">\n\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" w=\"bold\" className=\"text-white\">\n\t\t\t\t\t\t\t\t\t\t\tPaket\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\t</DetailRow>\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* SECTION 2: ITEM BUNDLING */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Item Bundling\">\n\t\t\t\t\t\t\t<View className=\"gap-3\">\n\t\t\t\t\t\t\t\t{resolvedItems.map((item, idx) => (\n\t\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\t\tkey={item.id}\n\t\t\t\t\t\t\t\t\t\tclassName=\"overflow-hidden rounded-xl border border-border bg-white\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t{/* Banner Header */}\n\t\t\t\t\t\t\t\t\t\t<View className=\"bg-primary-100 px-3.5 py-2\">\n\t\t\t\t\t\t\t\t\t\t\t<Text w=\"semibold\" size=\"small\" className=\"text-primary\">\n\t\t\t\t\t\t\t\t\t\t\t\tItem {idx + 1}\n\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t</View>\n\n\t\t\t\t\t\t\t\t\t\t{/* 3-Column Content */}\n\t\t\t\t\t\t\t\t\t\t<View className=\"flex-row items-center divide-x divide-gray-100 p-3\">\n\t\t\t\t\t\t\t\t\t\t\t<View className=\"flex-1 pr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPilih Item\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"semibold\" className=\"text-foreground\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t{item.name}\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\n\t\t\t\t\t\t\t\t\t\t\t<View className=\"flex-1 px-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tVarian\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"semibold\" className=\"text-foreground\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t{item.variant}\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\n\t\t\t\t\t\t\t\t\t\t\t<View className=\"w-20 pl-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tJumlah\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"semibold\" className=\"text-foreground\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t{item.quantity}\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t))}\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* SECTION 3: PENGATURAN HARGA */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Pengaturan Harga\">\n\t\t\t\t\t\t\t{priceList.map((price, idx) => {\n\t\t\t\t\t\t\t\tconst isLast = idx === priceList.length - 1;\n\t\t\t\t\t\t\t\treturn (\n\t\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\t\tkey={price.order_type_id}\n\t\t\t\t\t\t\t\t\t\tclassName={cn(\n\t\t\t\t\t\t\t\t\t\t\t\"flex-row items-center justify-between py-2.5\",\n\t\t\t\t\t\t\t\t\t\t\t!isLast && \"border-b border-gray-100\",\n\t\t\t\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<View className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t\t\t\t\t<View className=\"size-9 items-center justify-center rounded-xl bg-primary-50\">\n\t\t\t\t\t\t\t\t\t\t\t\t<Feather\n\t\t\t\t\t\t\t\t\t\t\t\t\tname={price.icon}\n\t\t\t\t\t\t\t\t\t\t\t\t\tsize={16}\n\t\t\t\t\t\t\t\t\t\t\t\t\tcolor={Colors.primary}\n\t\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t\t<Text w=\"semibold\" size=\"normal\" className=\"text-foreground\">\n\t\t\t\t\t\t\t\t\t\t\t\t{price.order_type_name}\n\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\t{formatRp(price.sell_price)}\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t})}\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* SECTION 4: TOKO YANG MENGGUNAKAN */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Toko Yang Menggunakan\">\n\t\t\t\t\t\t\t{storeList.map((store, idx) => {\n\t\t\t\t\t\t\t\tconst isLast = idx === storeList.length - 1;\n\t\t\t\t\t\t\t\treturn (\n\t\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\t\tkey={store.id}\n\t\t\t\t\t\t\t\t\t\tclassName={cn(\n\t\t\t\t\t\t\t\t\t\t\t\"flex-row items-center justify-between py-3\",\n\t\t\t\t\t\t\t\t\t\t\t!isLast && \"border-b border-gray-100\",\n\t\t\t\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<View className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t\t\t\t\t<View className=\"size-9 items-center justify-center rounded-xl bg-primary-50\">\n\t\t\t\t\t\t\t\t\t\t\t\t<Feather\n\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"shopping-bag\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tsize={16}\n\t\t\t\t\t\t\t\t\t\t\t\t\tcolor={Colors.primary}\n\t\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t\t<View>\n\t\t\t\t\t\t\t\t\t\t\t\t<Text\n\t\t\t\t\t\t\t\t\t\t\t\t\tsize=\"normal\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tw=\"semibold\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclassName=\"text-foreground\"\n\t\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t\t\t{store.name}\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t{store.address || \"Pekanbaru\"}\n\t\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t\t<View className=\"rounded-md bg-green-50 px-2 py-0.5\">\n\t\t\t\t\t\t\t\t\t\t\t<Text\n\t\t\t\t\t\t\t\t\t\t\t\tsize=\"small\"\n\t\t\t\t\t\t\t\t\t\t\t\tw=\"semibold\"\n\t\t\t\t\t\t\t\t\t\t\t\tclassName=\"text-green-600\"\n\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t\tAktif\n\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t})}\n\t\t\t\t\t\t</CatalogDetailSection>\n\t\t\t\t\t</View>\n\t\t\t\t)}\n\t\t\t</Wrapper>\n\n\t\t\t<DetailBottomActions\n\t\t\t\tonEdit={handleEdit}\n\t\t\t\tonDelete={handleDelete}\n\t\t\t\tisDeleting={deleteRequest.isLoading}\n\t\t\t/>\n\t\t</>\n\t);\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\catalog\\extra-menu\\detail.tsx",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'_' is assigned a value but never used.",
+        "line": 52,
+        "column": 10,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 52,
+        "endColumn": 11
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import { useQueryClient } from \"@tanstack/react-query\";\nimport { router, useLocalSearchParams } from \"expo-router\";\nimport React from \"react\";\nimport { Image, View } from \"react-native\";\nimport {\n\tuseExtraMenuDeleteRequest,\n\tuseExtraMenuQuery,\n} from \"@/api/hooks/extra-menus\";\nimport { useMenusQuery } from \"@/api/hooks/menus\";\nimport { ICONS } from \"@/assets/images/icons\";\nimport AlertModal, { useAlertModal } from \"@/components/common/AlertModal\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport DeleteConfirmModal from \"@/components/common/DeleteConfirmModal\";\nimport SuccessModal from \"@/components/common/SuccessModal\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport {\n\tCatalogDetailHeroCard,\n\tCatalogDetailSection,\n\tCatalogRelatedItemRow,\n\tCatalogRelatedListCard,\n} from \"@/components/feature/catalog\";\nimport { MOCK_EXTRA_MENU_DATA } from \"@/constants/data/extra-menu\";\nimport { formatRp, route } from \"@/lib/utils\";\n\nexport default function ExtraMenuDetailScreen() {\n\tconst params = useLocalSearchParams();\n\tconst extraMenuId = params?.id as string | undefined;\n\n\tconst extraMenuQuery = useExtraMenuQuery(extraMenuId);\n\tconst menusQuery = useMenusQuery();\n\tconst queryClient = useQueryClient();\n\n\tconst deleteModal = useAlertModal();\n\tconst successModal = useAlertModal();\n\tconst errorModal = useAlertModal();\n\n\tconst deleteRequest = useExtraMenuDeleteRequest(undefined, extraMenuId);\n\n\tfunction handleEdit() {\n\t\tif (!extraMenuId) return;\n\t\trouter.push(route(\"/catalog/extra-menu/modify\", { id: extraMenuId }));\n\t}\n\n\tfunction handleDelete() {\n\t\tdeleteModal.open();\n\t}\n\n\tasync function handleConfirmDelete() {\n\t\tif (!extraMenuId) return;\n\t\tconst [_, error] = await deleteRequest.call();\n\n\t\tif (error) {\n\t\t\terrorModal.open();\n\t\t\tdeleteModal.close();\n\t\t\treturn;\n\t\t}\n\n\t\tdeleteModal.close();\n\t\tawait queryClient.invalidateQueries({ queryKey: [\"extra-menus\"] });\n\t\tsuccessModal.open();\n\t}\n\n\tfunction handleSuccessClose() {\n\t\tsuccessModal.close();\n\t\trouter.back();\n\t}\n\n\t// Fallback to MOCK_EXTRA_MENU_DATA if backend query returns no data\n\tconst data = React.useMemo(() => {\n\t\tif (extraMenuQuery.data) return extraMenuQuery.data;\n\t\treturn (\n\t\t\tMOCK_EXTRA_MENU_DATA.find((m) => m.id === extraMenuId) ??\n\t\t\tMOCK_EXTRA_MENU_DATA[0]\n\t\t);\n\t}, [extraMenuQuery.data, extraMenuId]);\n\n\tconst linkedMenus = React.useMemo(() => {\n\t\tif (data?.menus && data.menus.length > 0) {\n\t\t\treturn data.menus;\n\t\t}\n\t\tif (!menusQuery.data || !extraMenuId) return [];\n\t\treturn menusQuery.data.filter(\n\t\t\t(m) =>\n\t\t\t\tm.extra_menu_ids?.includes(extraMenuId) ||\n\t\t\t\tdata?.menu_ids?.includes(m.id),\n\t\t);\n\t}, [data, menusQuery.data, extraMenuId]);\n\n\treturn (\n\t\t<>\n\t\t\t<DeleteConfirmModal\n\t\t\t\tisLoading={deleteRequest.isLoading}\n\t\t\t\tonConfirm={handleConfirmDelete}\n\t\t\t\topenState={deleteModal.openState}\n\t\t\t\ttitle={`Apakah yakin ingin menghapus ekstra ${data?.name}?`}\n\t\t\t\tdescription=\"Ekstra akan hilang permanen jika kamu sudah mengkonfirmasi\"\n\t\t\t/>\n\n\t\t\t<SuccessModal\n\t\t\t\ttitle=\"Ekstra Berhasil Dihapus!\"\n\t\t\t\tdescription=\"Ekstra berhasil dihapus dari daftar.\"\n\t\t\t\tonClose={handleSuccessClose}\n\t\t\t\topenState={successModal.openState}\n\t\t\t\tbuttonText=\"Tutup\"\n\t\t\t/>\n\n\t\t\t<AlertModal\n\t\t\t\ttitle=\"Gagal Menghapus Ekstra\"\n\t\t\t\tmessage=\"Terjadi kesalahan saat menghapus ekstra. Silakan coba lagi.\"\n\t\t\t\thideCancelButton\n\t\t\t\tconfirmText=\"Tutup\"\n\t\t\t\tonClose={errorModal.close}\n\t\t\t\topenState={errorModal.openState}\n\t\t\t/>\n\n\t\t\t<Wrapper className=\"p-4\" hasActionButton>\n\t\t\t\t{extraMenuQuery.isLoading && extraMenuId ? (\n\t\t\t\t\t<LoadingPlaceholder />\n\t\t\t\t) : (\n\t\t\t\t\t<View className=\"gap-4\">\n\t\t\t\t\t\t{/* Hero Card */}\n\t\t\t\t\t\t<CatalogDetailHeroCard\n\t\t\t\t\t\t\ticon={\n\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\tsource={ICONS.catalog.extras}\n\t\t\t\t\t\t\t\t\tclassName=\"size-8\"\n\t\t\t\t\t\t\t\t\tresizeMode=\"contain\"\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\ttitle={data?.name ?? \"-\"}\n\t\t\t\t\t\t\tdescription=\"Kelompok menu tambahan untuk menentukan pilihan ekstra pada item atau produk.\"\n\t\t\t\t\t\t/>\n\n\t\t\t\t\t\t{/* Section 1: Informasi Tambahan */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Informasi Tambahan\">\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Nama Grup Tambahan\"\n\t\t\t\t\t\t\t\tvalue={data?.name ?? \"-\"}\n\t\t\t\t\t\t\t\ticon={\n\t\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\t\tsource={ICONS.catalog.extras}\n\t\t\t\t\t\t\t\t\t\tclassName=\"size-5\"\n\t\t\t\t\t\t\t\t\t\tresizeMode=\"contain\"\n\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Item\"\n\t\t\t\t\t\t\t\tvalue={`${linkedMenus.length} item dipilih`}\n\t\t\t\t\t\t\t\ticon={\n\t\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\t\tsource={ICONS.catalog.extras}\n\t\t\t\t\t\t\t\t\t\tclassName=\"size-5\"\n\t\t\t\t\t\t\t\t\t\tresizeMode=\"contain\"\n\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tisLast\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* Section 2: Pilihan & Harga */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Pilihan & Harga\">\n\t\t\t\t\t\t\t{data?.details && data.details.length > 0 ? (\n\t\t\t\t\t\t\t\tdata.details.map((detail, idx) => (\n\t\t\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\t\t\tkey={detail.id || detail.name}\n\t\t\t\t\t\t\t\t\t\tlabel={detail.name}\n\t\t\t\t\t\t\t\t\t\tvalue={formatRp(detail.price)}\n\t\t\t\t\t\t\t\t\t\ticon={\n\t\t\t\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\t\t\t\tsource={ICONS.catalog.extras}\n\t\t\t\t\t\t\t\t\t\t\t\tclassName=\"size-5\"\n\t\t\t\t\t\t\t\t\t\t\t\tresizeMode=\"contain\"\n\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\tisLast={idx === data.details.length - 1}\n\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t))\n\t\t\t\t\t\t\t) : (\n\t\t\t\t\t\t\t\t<DetailRow label=\"Pilihan Ekstra\" value=\"-\" isLast />\n\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* Section 3: Item yang dipilih */}\n\t\t\t\t\t\t<CatalogRelatedListCard\n\t\t\t\t\t\t\ttitle=\"Item yang dipilih\"\n\t\t\t\t\t\t\titems={linkedMenus}\n\t\t\t\t\t\t\trenderItem={(menu: any, _, isLast: boolean) => (\n\t\t\t\t\t\t\t\t<CatalogRelatedItemRow\n\t\t\t\t\t\t\t\t\tkey={menu.id}\n\t\t\t\t\t\t\t\t\ticon={\n\t\t\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\t\t\tsource={ICONS.catalog.extras}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"size-5\"\n\t\t\t\t\t\t\t\t\t\t\tresizeMode=\"contain\"\n\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\ttitle={menu.name}\n\t\t\t\t\t\t\t\t\tbadgeText=\"\"\n\t\t\t\t\t\t\t\t\tisLast={isLast}\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t)}\n\t\t\t\t\t\t\temptyText=\"Belum ada item yang menggunakan ekstra ini\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</View>\n\t\t\t\t)}\n\t\t\t</Wrapper>\n\n\t\t\t<DetailBottomActions\n\t\t\t\tonEdit={handleEdit}\n\t\t\t\tonDelete={handleDelete}\n\t\t\t\tisDeleting={deleteRequest.isLoading}\n\t\t\t/>\n\t\t</>\n\t);\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\catalog\\menu\\detail.tsx",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Feather' is defined but never used.",
+        "line": 1,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 1,
+        "endColumn": 15,
+        "suggestions": [
+          {
+            "messageId": "removeUnusedImportDeclaration",
+            "data": {
+              "varName": "Feather"
+            },
+            "fix": {
+              "range": [
+                0,
+                50
+              ],
+              "text": ""
+            },
+            "desc": "Remove unused import declaration."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Colors' is defined but never used.",
+        "line": 23,
+        "column": 10,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 23,
+        "endColumn": 16,
+        "suggestions": [
+          {
+            "messageId": "removeUnusedImportDeclaration",
+            "data": {
+              "varName": "Colors"
+            },
+            "fix": {
+              "range": [
+                1172,
+                1217
+              ],
+              "text": ""
+            },
+            "desc": "Remove unused import declaration."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'_' is assigned a value but never used.",
+        "line": 64,
+        "column": 10,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 64,
+        "endColumn": 11
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 3,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import Feather from \"@expo/vector-icons/Feather\";\nimport { useQueryClient } from \"@tanstack/react-query\";\nimport { router, useLocalSearchParams } from \"expo-router\";\nimport React from \"react\";\nimport { View } from \"react-native\";\nimport { useMenuDeleteRequest, useMenuQuery } from \"@/api/hooks/menus\";\nimport { useBrandsQuery } from \"@/api/hooks/brands\";\nimport { useCategoriesQuery } from \"@/api/hooks/categories\";\nimport { useExtraMenusQuery } from \"@/api/hooks/extra-menus\";\nimport { useOrderTypesQuery } from \"@/api/hooks/order-types\";\nimport { useUnitsQuery } from \"@/api/hooks/units\";\nimport AlertModal, { useAlertModal } from \"@/components/common/AlertModal\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport DeleteConfirmModal from \"@/components/common/DeleteConfirmModal\";\nimport SuccessModal from \"@/components/common/SuccessModal\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport {\n\tCatalogDetailSection,\n} from \"@/components/feature/catalog\";\nimport { Colors } from \"@/constants/Colors\";\nimport { MOCK_MENU_DATA } from \"@/constants/data/menu\";\nimport { formatRp, route } from \"@/lib/utils\";\n\nexport default function MenuDetailScreen() {\n\tconst params = useLocalSearchParams();\n\tconst menuId = params?.id as string | undefined;\n\n\tconst menuQuery = useMenuQuery(menuId);\n\tconst categoriesQuery = useCategoriesQuery();\n\tconst brandsQuery = useBrandsQuery();\n\tconst unitsQuery = useUnitsQuery();\n\tconst orderTypesQuery = useOrderTypesQuery();\n\tconst extraMenusQuery = useExtraMenusQuery();\n\n\tconst queryClient = useQueryClient();\n\n\tconst deleteModal = useAlertModal();\n\tconst successModal = useAlertModal();\n\tconst errorModal = useAlertModal();\n\n\tconst deleteRequest = useMenuDeleteRequest(undefined, menuId);\n\n\t// Fallback to MOCK_MENU_DATA if backend query returns no data\n\t// TODO: Remove MOCK_MENU_DATA fallback once backend menu detail endpoint is fully synchronized\n\tconst data = React.useMemo(() => {\n\t\tif (menuQuery.data) return menuQuery.data;\n\t\treturn MOCK_MENU_DATA.find((m) => m.id === menuId) ?? MOCK_MENU_DATA[0];\n\t}, [menuQuery.data, menuId]);\n\n\tfunction handleEdit() {\n\t\tif (!menuId) return;\n\t\trouter.push(route(\"/catalog/menu/modify\", { id: menuId }));\n\t}\n\n\tfunction handleDelete() {\n\t\tdeleteModal.open();\n\t}\n\n\tasync function handleConfirmDelete() {\n\t\tif (!menuId) return;\n\t\tconst [_, error] = await deleteRequest.call();\n\n\t\tif (error) {\n\t\t\terrorModal.open();\n\t\t\tdeleteModal.close();\n\t\t\treturn;\n\t\t}\n\n\t\tdeleteModal.close();\n\t\tawait queryClient.invalidateQueries({ queryKey: [\"menus\"] });\n\t\tsuccessModal.open();\n\t}\n\n\tfunction handleSuccessClose() {\n\t\tsuccessModal.close();\n\t\trouter.back();\n\t}\n\n\t// Resolve relation labels\n\tconst categoryName = React.useMemo(() => {\n\t\tif (!data?.category_id) return \"-\";\n\t\tconst cat = categoriesQuery.data?.find((c) => c.id === data.category_id);\n\t\treturn cat?.name ?? \"Makanan\";\n\t}, [categoriesQuery.data, data]);\n\n\tconst brandName = React.useMemo(() => {\n\t\tif (!data?.brand_id) return \"-\";\n\t\tconst brand = brandsQuery.data?.find((b) => b.id === data.brand_id);\n\t\treturn brand?.name ?? \"Pizza Hut\";\n\t}, [brandsQuery.data, data]);\n\n\tconst unitName = React.useMemo(() => {\n\t\tif (!data?.unit_id) return \"-\";\n\t\tconst unit = unitsQuery.data?.find((u) => u.id === data.unit_id);\n\t\treturn unit?.name ?? \"pcs\";\n\t}, [unitsQuery.data, data]);\n\n\tconst selectedOrderTypes = React.useMemo(() => {\n\t\tif (!data?.order_type_ids || data.order_type_ids.length === 0) {\n\t\t\treturn [\"Dine In\", \"Take Away\", \"Grab Food\", \"Shopee\"];\n\t\t}\n\t\tif (!orderTypesQuery.data) return [\"Dine In\", \"Take Away\"];\n\t\tconst matching = orderTypesQuery.data\n\t\t\t.filter((ot) => data.order_type_ids.includes(ot.id))\n\t\t\t.map((ot) => ot.name);\n\t\treturn matching.length > 0 ? matching : [\"Dine In\", \"Take Away\"];\n\t}, [orderTypesQuery.data, data]);\n\n\tconst selectedExtras = React.useMemo(() => {\n\t\tif (!data?.extra_menu_ids || data.extra_menu_ids.length === 0) {\n\t\t\treturn [\"Dine In\", \"Take Away\", \"Grab Food\", \"Shopee\"];\n\t\t}\n\t\tif (!extraMenusQuery.data) return [\"Topping\"];\n\t\tconst matching = extraMenusQuery.data\n\t\t\t.filter((em) => data.extra_menu_ids.includes(em.id))\n\t\t\t.map((em) => em.name);\n\t\treturn matching.length > 0 ? matching : [\"Topping\"];\n\t}, [extraMenusQuery.data, data]);\n\n\t// Format price display\n\tconst priceDisplay = React.useMemo(() => {\n\t\tif (!data) return \"-\";\n\t\tif (data.entries && data.entries.length > 0) {\n\t\t\tconst entry = data.entries[0];\n\t\t\tif (entry.sell_price) return formatRp(entry.sell_price);\n\t\t}\n\t\treturn \"Rp 50.000\";\n\t}, [data]);\n\n\tconst costPriceDisplay = React.useMemo(() => {\n\t\tif (!data) return \"-\";\n\t\tif (data.entries && data.entries.length > 0) {\n\t\t\tconst entry = data.entries[0];\n\t\t\tif (entry.cost_price) return formatRp(entry.cost_price);\n\t\t}\n\t\treturn \"-\";\n\t}, [data]);\n\n\treturn (\n\t\t<>\n\t\t\t<DeleteConfirmModal\n\t\t\t\tisLoading={deleteRequest.isLoading}\n\t\t\t\tonConfirm={handleConfirmDelete}\n\t\t\t\topenState={deleteModal.openState}\n\t\t\t\ttitle={`Apakah yakin ingin menghapus menu ${data?.name}?`}\n\t\t\t\tdescription=\"Menu akan hilang permanen jika kamu sudah mengkonfirmasi\"\n\t\t\t/>\n\n\t\t\t<SuccessModal\n\t\t\t\ttitle=\"Menu Berhasil Dihapus!\"\n\t\t\t\tdescription=\"Menu berhasil dihapus dari daftar.\"\n\t\t\t\tonClose={handleSuccessClose}\n\t\t\t\topenState={successModal.openState}\n\t\t\t\tbuttonText=\"Tutup\"\n\t\t\t/>\n\n\t\t\t<AlertModal\n\t\t\t\ttitle=\"Gagal Menghapus Menu\"\n\t\t\t\tmessage=\"Terjadi kesalahan saat menghapus menu. Silakan coba lagi.\"\n\t\t\t\thideCancelButton\n\t\t\t\tconfirmText=\"Tutup\"\n\t\t\t\tonClose={errorModal.close}\n\t\t\t\topenState={errorModal.openState}\n\t\t\t/>\n\n\t\t\t<Wrapper className=\"p-4\" hasActionButton>\n\t\t\t\t{menuQuery.isLoading && menuId ? (\n\t\t\t\t\t<LoadingPlaceholder />\n\t\t\t\t) : (\n\t\t\t\t\t<View className=\"gap-4\">\n\t\t\t\t\t\t{/* Section 1: Informasi Produk */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Informasi Produk\">\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Nama Produk\"\n\t\t\t\t\t\t\t\tvalue={data?.name ?? \"-\"}\n\t\t\t\t\t\t\t\ticon=\"tag\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Kategori Produk\"\n\t\t\t\t\t\t\t\tvalue={categoryName}\n\t\t\t\t\t\t\t\ticon=\"grid\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Merk\"\n\t\t\t\t\t\t\t\tvalue={brandName}\n\t\t\t\t\t\t\t\ticon=\"briefcase\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Deskripsi\"\n\t\t\t\t\t\t\t\tvalue={data?.description || \"-\"}\n\t\t\t\t\t\t\t\ticon=\"file-text\"\n\t\t\t\t\t\t\t\tisLast\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* Section 2: Detail Penjualan */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Detail Penjualan\">\n\t\t\t\t\t\t\t<DetailRow label=\"Tipe Pesanan\" icon=\"file-text\">\n\t\t\t\t\t\t\t\t<View className=\"flex-1 flex-row flex-wrap justify-end gap-1.5 pl-4\">\n\t\t\t\t\t\t\t\t\t{selectedOrderTypes.map((ot, idx) => (\n\t\t\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\t\t\tkey={idx}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"rounded-lg bg-blue-50 px-2.5 py-1\"\n\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" w=\"medium\" className=\"text-primary\">\n\t\t\t\t\t\t\t\t\t\t\t\t{ot}\n\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t))}\n\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t</DetailRow>\n\n\t\t\t\t\t\t\t<DetailRow label=\"Tambahan\" icon=\"file-text\">\n\t\t\t\t\t\t\t\t<View className=\"flex-1 flex-row flex-wrap justify-end gap-1.5 pl-4\">\n\t\t\t\t\t\t\t\t\t{selectedExtras.map((extra, idx) => (\n\t\t\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\t\t\tkey={idx}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"rounded-lg bg-blue-50 px-2.5 py-1\"\n\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" w=\"medium\" className=\"text-primary\">\n\t\t\t\t\t\t\t\t\t\t\t\t{extra}\n\t\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t))}\n\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t</DetailRow>\n\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Harga Jual\"\n\t\t\t\t\t\t\t\tvalue={priceDisplay}\n\t\t\t\t\t\t\t\ticon=\"tag\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Harga Modal\"\n\t\t\t\t\t\t\t\tvalue={costPriceDisplay}\n\t\t\t\t\t\t\t\ticon=\"tag\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Satuan\"\n\t\t\t\t\t\t\t\tvalue={unitName}\n\t\t\t\t\t\t\t\ticon=\"tag\"\n\t\t\t\t\t\t\t\tisLast\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</CatalogDetailSection>\n\n\t\t\t\t\t\t{/* Section 3: Pengelolaan */}\n\t\t\t\t\t\t<CatalogDetailSection title=\"Pengelolaan\">\n\t\t\t\t\t\t\t<DetailRow label=\"Variasi\" icon=\"tag\">\n\t\t\t\t\t\t\t\t<View\n\t\t\t\t\t\t\t\t\tclassName={\n\t\t\t\t\t\t\t\t\t\tdata?.variants\n\t\t\t\t\t\t\t\t\t\t\t? \"rounded-full bg-emerald-50 px-3 py-1\"\n\t\t\t\t\t\t\t\t\t\t\t: \"rounded-full bg-red-50 px-3 py-1\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t<Text\n\t\t\t\t\t\t\t\t\t\tsize=\"small\"\n\t\t\t\t\t\t\t\t\t\tw=\"semibold\"\n\t\t\t\t\t\t\t\t\t\tclassName={data?.variants ? \"text-emerald-600\" : \"text-red-500\"}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t{data?.variants ? \"Aktif\" : \"Tidak Aktif\"}\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t</DetailRow>\n\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Barcode\"\n\t\t\t\t\t\t\t\tvalue=\"123445\"\n\t\t\t\t\t\t\t\ticon=\"grid\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Nama Katalog\"\n\t\t\t\t\t\t\t\tvalue={data?.name ?? \"Teh Es\"}\n\t\t\t\t\t\t\t\ticon=\"box\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t<DetailRow\n\t\t\t\t\t\t\t\tlabel=\"Jumlah\"\n\t\t\t\t\t\t\t\tvalue=\"1\"\n\t\t\t\t\t\t\t\ticon=\"hash\"\n\t\t\t\t\t\t\t\tisLast\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</CatalogDetailSection>\n\t\t\t\t\t</View>\n\t\t\t\t)}\n\t\t\t</Wrapper>\n\n\t\t\t<DetailBottomActions\n\t\t\t\tonEdit={handleEdit}\n\t\t\t\tonDelete={handleDelete}\n\t\t\t\tisDeleting={deleteRequest.isLoading}\n\t\t\t/>\n\t\t</>\n\t);\n}\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\accounting\\accounts\\AccountBalanceCard.tsx",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  }
+]

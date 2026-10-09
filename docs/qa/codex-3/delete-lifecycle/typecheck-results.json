@@ -1,0 +1,12 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-006",
+  "scope": "Three delete-dialog roots plus imported dependency closure with actual project options/declarations; not full-project gate",
+  "diagnostics": [],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "exitCode": 0
+}

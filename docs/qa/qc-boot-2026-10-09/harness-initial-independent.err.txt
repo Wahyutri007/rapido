@@ -1,0 +1,13 @@
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `SplashScreenView`.
+    at createFiberFromTypeAndProps (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:14784:28)
+    at createFiberFromElement (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:14798:14)
+    at reconcileChildFibersImpl (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:4024:31)
+    at C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:4202:33
+    at reconcileChildren (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:6684:13)
+    at updateFunctionComponent (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:7032:7)
+    at beginWork (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:8499:18)
+    at runWithFiberInDEV (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:2312:30)
+    at performUnitOfWork (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:13224:22)
+    at workLoopSync (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\.expo\senior7-test-tools\node_modules\react-test-renderer\cjs\react-test-renderer.development.js:13068:41)

@@ -1,0 +1,393 @@
+{
+  "kind": "INTERNAL_QA_REVIEW",
+  "sourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+  "passed": 45,
+  "failed": 0,
+  "runtimeErrors": [],
+  "checks": [
+    {
+      "name": "title remains trimmed",
+      "passed": true,
+      "actual": [
+        "Berhasil"
+      ],
+      "expected": [
+        "Berhasil"
+      ]
+    },
+    {
+      "name": "default button label remains Tutup",
+      "passed": true,
+      "actual": "Tutup",
+      "expected": "Tutup"
+    },
+    {
+      "name": "default illustration remains configured asset",
+      "passed": true,
+      "actual": {
+        "uri": "fixture-default.png"
+      },
+      "expected": {
+        "uri": "fixture-default.png"
+      }
+    },
+    {
+      "name": "illustration uses contain sizing",
+      "passed": true,
+      "actual": "contain",
+      "expected": "contain"
+    },
+    {
+      "name": "initial geometry respects application window 320",
+      "passed": true,
+      "actual": {
+        "width": 288,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 288,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (768, fontScale 1)",
+      "passed": true,
+      "actual": {
+        "width": 736,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 736,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (768, fontScale 1)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (390, fontScale 1)",
+      "passed": true,
+      "actual": {
+        "width": 358,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 358,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (390, fontScale 1)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (360, fontScale 1)",
+      "passed": true,
+      "actual": {
+        "width": 328,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 328,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (360, fontScale 1)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (320, fontScale 1)",
+      "passed": true,
+      "actual": {
+        "width": 288,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 288,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (320, fontScale 1)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (320, fontScale 2)",
+      "passed": true,
+      "actual": {
+        "width": 288,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 288,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (320, fontScale 2)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "dimension subscription updates geometry without new props (768, fontScale 2)",
+      "passed": true,
+      "actual": {
+        "width": 736,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 736,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "dimension notification preserves controlled visibility (768, fontScale 2)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "openState true takes precedence over isOpen false",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "controlled action requests close once",
+      "passed": true,
+      "actual": [
+        false
+      ],
+      "expected": [
+        false
+      ]
+    },
+    {
+      "name": "controlled action notifies close once",
+      "passed": true,
+      "actual": [
+        "close"
+      ],
+      "expected": [
+        "close"
+      ]
+    },
+    {
+      "name": "openState false takes precedence over isOpen true",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "closed shell renders no modal action",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "missing open props remain closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "legacy isOpen action notifies close once",
+      "passed": true,
+      "actual": [
+        "close"
+      ],
+      "expected": [
+        "close"
+      ]
+    },
+    {
+      "name": "legacy visibility remains caller controlled",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "icon requests controlled close once",
+      "passed": true,
+      "actual": [
+        false
+      ],
+      "expected": [
+        false
+      ]
+    },
+    {
+      "name": "icon notifies close once",
+      "passed": true,
+      "actual": [
+        "close"
+      ],
+      "expected": [
+        "close"
+      ]
+    },
+    {
+      "name": "modal-close requests controlled close once",
+      "passed": true,
+      "actual": [
+        false
+      ],
+      "expected": [
+        false
+      ]
+    },
+    {
+      "name": "modal-close notifies close once",
+      "passed": true,
+      "actual": [
+        "close"
+      ],
+      "expected": [
+        "close"
+      ]
+    },
+    {
+      "name": "custom action is invoked once",
+      "passed": true,
+      "actual": [
+        "action"
+      ],
+      "expected": [
+        "action"
+      ]
+    },
+    {
+      "name": "custom action does not additionally invoke close",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "custom action retains caller controlled dismissal",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "description takes precedence over message",
+      "passed": true,
+      "actual": [
+        "Berhasil",
+        "Deskripsi"
+      ],
+      "expected": [
+        "Berhasil",
+        "Deskripsi"
+      ]
+    },
+    {
+      "name": "buttonText takes precedence over confirmText",
+      "passed": true,
+      "actual": "Lanjut",
+      "expected": "Lanjut"
+    },
+    {
+      "name": "message fallback renders",
+      "passed": true,
+      "actual": [
+        "Berhasil",
+        "Fallback"
+      ],
+      "expected": [
+        "Berhasil",
+        "Fallback"
+      ]
+    },
+    {
+      "name": "confirmText fallback renders",
+      "passed": true,
+      "actual": "Selesai",
+      "expected": "Selesai"
+    },
+    {
+      "name": "explicit empty description does not fall through",
+      "passed": true,
+      "actual": [
+        "Berhasil"
+      ],
+      "expected": [
+        "Berhasil"
+      ]
+    },
+    {
+      "name": "explicit empty buttonText does not fall through",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "React-node description remains caller node",
+      "passed": true,
+      "actual": "Node pengguna",
+      "expected": "Node pengguna"
+    },
+    {
+      "name": "custom image is retained",
+      "passed": true,
+      "actual": {
+        "uri": "fixture-category.png"
+      },
+      "expected": {
+        "uri": "fixture-category.png"
+      }
+    },
+    {
+      "name": "custom image retains contained bounds",
+      "passed": true,
+      "actual": {
+        "height": 176,
+        "width": "100%"
+      },
+      "expected": {
+        "height": 176,
+        "width": "100%"
+      }
+    },
+    {
+      "name": "hideCloseButton suppresses X only",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hideCloseButton retains primary action",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "useAlertModal public re-export points to production hook",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unmount cleans dimension subscription",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    }
+  ],
+  "limits": [
+    "Production SuccessModal and useAlertModal transpiled with actual existing React/test renderer",
+    "Presentation primitives, image asset and dimension notification adapted; not browser layout, native dimension subscription or font accessibility certification",
+    "No other production dependency loaded; no API/backend/Metro/HP/server actions",
+    "Single-event contract assertions do not claim duplicate-event exactly-once protection inside SuccessModal"
+  ]
+}

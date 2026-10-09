@@ -1,0 +1,22 @@
+{
+  "status": "FINAL_CLOSE_COPY_FOLLOW_UP_PREPARED",
+  "previousPacket": "docs/qa/codex-3-internal-review/payment-method-session-2026-10-09",
+  "previousManifestSha256": "8c17b74441cbabeb64a9d989fceea9c584aebc840aadc654e88031371d00fa9a",
+  "previousSourceHashes": {
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+    "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "ae4011c260e7fcde0087fa7f5adf9bc1812356096535664ee39c3d1dd2185ff4",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+  },
+  "previousArtifactChecks": 22,
+  "replayAssertions": 45,
+  "extraBehaviorChecks": 2,
+  "adaptation": "Old45 test scenarios unchanged; add actual removed-edit Alert title/label + close-without-navigation checks before List scenarios",
+  "externalQcApproval": false
+}

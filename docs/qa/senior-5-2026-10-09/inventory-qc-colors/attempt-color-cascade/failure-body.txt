@@ -1,0 +1,61 @@
+
+Detail Penyesuaian Stok
+
+Total Stok Awal
+300
+Pcs
+
+Total Penyusutan
+34
+Pcs
+
+Total Stok Akhir
+266
+Pcs
+Informasi Penyesuaian Stok
+
+Toko
+Toko Sushiro
+
+Tanggal
+08 October 2025 16:27:47
+
+Dibuat Oleh
+Fauzan
+
+Catatan
+Gak pake lama
+Daftar Penyesuaian Stok
+Nasgor - Pedas
+SKU: NSG/PDS/01
+100 Pcs
+Diterima
+100 Pcs
+Bagus
+96 Pcs
+Rusak
+4 Pcs
+Bagus 96%
+Rusak 4%
+Nasgor - Biasa
+SKU: NSG/BSA/01
+100 Pcs
+Diterima
+100 Pcs
+Bagus
+90 Pcs
+Rusak
+10 Pcs
+Bagus 90%
+Rusak 10%
+Teh Es
+SKU: TEH/01
+100 Pcs
+Diterima
+100 Pcs
+Bagus
+80 Pcs
+Rusak
+20 Pcs
+Bagus 80%
+Rusak 20%

@@ -1,0 +1,162 @@
+{
+  "signal": "QC-MANAGE-FORMS-20261009-PASS-DELTA",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "status": "PASS_DELTA",
+  "finding": {
+    "id": "QC-MANAGE-FORMS-001",
+    "severity": "P3",
+    "status": "CLOSED"
+  },
+  "reviewedSourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+    "app/(no-layout)/manage/tax/modify.tsx": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885"
+  },
+  "sourceStable": true,
+  "evidenceStable": true,
+  "quality": {
+    "eslint": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0,
+      "files": [
+        {
+          "file": "app/(no-layout)/manage/extra/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/order-type/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/tax/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ManageFormNotFound.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ManagePreviewForm.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        }
+      ]
+    },
+    "biome": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    },
+    "diff": {
+      "command": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    }
+  },
+  "priorBrowserChecks": {
+    "passed": 92,
+    "rerunThisBatch": false,
+    "reason": "Exact QC proposal; non-import AST and import bindings unchanged. Original results remain historical."
+  },
+  "publication": "QC_DELTA_APPROVED_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+  "limitations": [
+    "Preview forms without API/persistence",
+    "No native/root-auth/SSR/Figma/full-app certification",
+    "Metro/cache changes separate review"
+  ],
+  "report": "REPORT.md"
+}

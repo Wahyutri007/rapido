@@ -1,0 +1,197 @@
+{
+  "createdAt": "2026-10-08T20:24:38.078Z",
+  "owner": "QC",
+  "signal": "QC-INCOME-20261009-CHANGES-REQUESTED",
+  "files": [
+    {
+      "file": "CashEntryForm.before.tsx.txt",
+      "bytes": 8181,
+      "sha256": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7"
+    },
+    {
+      "file": "DECISION.json",
+      "bytes": 6768,
+      "sha256": "39482d40062cc55a4be48ecd8e647116662e20e3735cbe723ec3aba3357ab2f9"
+    },
+    {
+      "file": "REPORT.md",
+      "bytes": 6061,
+      "sha256": "afe907122b9f2d1806bd5e6b217672577afab11dce5698f66a6b0f06b2a3927d"
+    },
+    {
+      "file": "detail.before.tsx.txt",
+      "bytes": 1742,
+      "sha256": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1"
+    },
+    {
+      "file": "developer-model.cjs",
+      "bytes": 7867,
+      "sha256": "40349e47a20d0d8ea9bc2387f783d40b7dfe65b27ab8aa4351b98bbf1cca05b5"
+    },
+    {
+      "file": "expense-proposal-results.json",
+      "bytes": 20439,
+      "sha256": "41e5c2f15539df9291981049b7c21f0a10e27d6244e051ae8bbe55589c90112e"
+    },
+    {
+      "file": "expense-proposal-runner.cjs",
+      "bytes": 10829,
+      "sha256": "4e79d8c8e0c1c3b12be9447577a9858f85071c22221306c7ce1428a46b0494f4"
+    },
+    {
+      "file": "expense-proposal.cjs",
+      "bytes": 3896,
+      "sha256": "bf6949beb0d63562793ae5a627d253eb5adff563ae542aa388b882f2df850c24"
+    },
+    {
+      "file": "expense-proposal.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "expense-proposal.out.txt",
+      "bytes": 49,
+      "sha256": "06bce0b09f3fc71e8bd1e09ef4fd13fbae448f3957012dc2adb6f4617eecdb92"
+    },
+    {
+      "file": "final-verification.json",
+      "bytes": 9513,
+      "sha256": "69af7471ca97e1140570e55a64766c8bdf413d2417c880c0ef493eb8f047e96f"
+    },
+    {
+      "file": "finalize.cjs",
+      "bytes": 19533,
+      "sha256": "015e5bfa58b2ba04eed41d57eb6717e5e07ae72e4098b69f0782ea8cb9b5785b"
+    },
+    {
+      "file": "harness-notes.json",
+      "bytes": 806,
+      "sha256": "d6dab1273fdb5153a16c2434037ae11d19be576b615ee6c95111698514ae53a8"
+    },
+    {
+      "file": "income-lifecycle.patch",
+      "bytes": 4575,
+      "sha256": "7ca7345581c1df22e73695011c5345625f9d47cd97fa1af5e603678f0cce0013"
+    },
+    {
+      "file": "lifecycle-results.json",
+      "bytes": 70146,
+      "sha256": "5eca9e4c999f55d474c1b7da6d135983c01efb3054727a0b3cb86a94dc551268"
+    },
+    {
+      "file": "lifecycle.cjs",
+      "bytes": 16183,
+      "sha256": "8d1a08ede5d8ebf87a5e3681952fe6159e6263ce02522850f60c8aba5a25028d"
+    },
+    {
+      "file": "model-results.json",
+      "bytes": 1815,
+      "sha256": "f93f5893838a168700987b9979ec3d831d015406a4b484a04e2bbf3f3891c939"
+    },
+    {
+      "file": "model.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "model.out.txt",
+      "bytes": 1593,
+      "sha256": "5cb173f401b4ecc8ca9e046d2be3fee7bf4ac903156951de658f15ac8ab15fcd"
+    },
+    {
+      "file": "prepare-proposal.cjs",
+      "bytes": 5142,
+      "sha256": "5936a5228967303a0d39b6cc17706f2854b1bc223e06252b9bf85032d0c86c9d"
+    },
+    {
+      "file": "proposal-apply-check.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "proposal-apply-check.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "proposal-biome.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "proposal-biome.out.txt",
+      "bytes": 43,
+      "sha256": "99b6025da753fddb3b371ee1e3816bfdc42cb3f8d2beedf8f343140669811e13"
+    },
+    {
+      "file": "proposal-results.json",
+      "bytes": 70382,
+      "sha256": "2b9233499b572d825dab032b4c6c898de24639768aca9615878c01c1daab80cc"
+    },
+    {
+      "file": "proposal-unprepared-results.json",
+      "bytes": 70146,
+      "sha256": "794964306ea6fc747fcec6ac522c07d0c8cde96f1047f6aa0ab310ae5f59fc91"
+    },
+    {
+      "file": "proposal/CashEntryForm.tsx",
+      "bytes": 8588,
+      "sha256": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50"
+    },
+    {
+      "file": "proposal/detail.tsx",
+      "bytes": 2462,
+      "sha256": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201"
+    },
+    {
+      "file": "quality-results.json",
+      "bytes": 33877,
+      "sha256": "0e0b4c4194f934d699cb0b7504c8bef60c70f789e6d9d08ce5938f4c3868a640"
+    },
+    {
+      "file": "quality.cjs",
+      "bytes": 7906,
+      "sha256": "47268d4472249c78ad49a4f25af0eb1d512932302981f787a8bca8cf53a1a5ab"
+    },
+    {
+      "file": "replay-model.cjs",
+      "bytes": 1084,
+      "sha256": "534702a06442ecd0cd1f18715f4bdabf0d987a7afa3d301b212991309007df9b"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 10064,
+      "sha256": "c2b666de679b6a06dbd8ee843b0e0ce55449f19964ec7b9665e1de5e4870c272"
+    },
+    {
+      "file": "source-biome.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "source-biome.out.txt",
+      "bytes": 43,
+      "sha256": "7204a74622bc776e83cfffdb78c3d4836f12b852f4db046e08ab77af5805a67f"
+    },
+    {
+      "file": "source-diff.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "source-diff.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "source-eslint.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "source-eslint.out.txt",
+      "bytes": 1111,
+      "sha256": "d6935de89f0949d8ac1cf25d6a611a953a1e5e802bc80b6dfcd7659fc554c639"
+    }
+  ]
+}

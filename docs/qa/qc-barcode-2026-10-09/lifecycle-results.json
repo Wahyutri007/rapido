@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "count": 37,
+  "checks": [
+    "controlled first commit displays actual form value without a stale minimum",
+    "controlled mount does not emit onChange",
+    "external reset commits only the new value",
+    "external reset does not emit onChange",
+    "controlled increment proposes value to parent",
+    "controlled value waits for parent acceptance",
+    "controlled parent echo updates count",
+    "controlled decrement uses latest external value",
+    "minimum boundary callback stays at minimum",
+    "maximum boundary callback stays at maximum",
+    "controlled zero is not treated as missing",
+    "controlled to local mode preserves last accepted value",
+    "local mode increments its own count",
+    "local mode decrements its own count",
+    "local to controlled mode follows external value",
+    "second mode handoff keeps latest controlled count",
+    "default: local initial count respects minimum",
+    "default: local count cannot fall below minimum",
+    "default: local count cannot exceed maximum",
+    "default: rerender and initialValue updates preserve local draft",
+    "default: click uses updated maximum",
+    "default: disabled is forwarded as isDisabled to both buttons",
+    "default: disabled handlers preserve value",
+    "default: disabled handlers do not emit changes",
+    "default: re-enabling restores stepping",
+    "outline: local initial count respects minimum",
+    "outline: local count cannot fall below minimum",
+    "outline: local count cannot exceed maximum",
+    "outline: rerender and initialValue updates preserve local draft",
+    "outline: click uses updated maximum",
+    "outline: disabled is forwarded as isDisabled to both buttons",
+    "outline: disabled handlers preserve value",
+    "outline: disabled handlers do not emit changes",
+    "outline: re-enabling restores stepping",
+    "omitted callback and maximum support local stepping",
+    "authoritative external values are not silently clamped",
+    "no React runtime errors or act warnings"
+  ],
+  "errors": [],
+  "source": [
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+    }
+  ],
+  "scope": "Actual Incrementer with React 19 test renderer; native/button/text/icon primitives are host adapters."
+}

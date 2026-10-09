@@ -1,0 +1,9 @@
+{
+  "command": "node scripts/verify-metro-cache.cjs",
+  "exitCode": 0,
+  "reads": 3000,
+  "writes": 200,
+  "maximumOpenRequests": 64,
+  "errorQueueRecovered": true,
+  "clearDelegated": true
+}

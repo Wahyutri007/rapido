@@ -1,0 +1,709 @@
+{
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "390 adjustment Total Stok Awal value receives semantic warning",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(250, 128, 42)",
+        "expected": "rgb(250, 128, 42)"
+      }
+    },
+    {
+      "name": "390 adjustment Total Stok Awal label fits",
+      "pass": true
+    },
+    {
+      "name": "390 adjustment Total Penyusutan value receives semantic destructive",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(230, 53, 53)",
+        "expected": "rgb(230, 53, 53)"
+      }
+    },
+    {
+      "name": "390 adjustment Total Penyusutan label fits",
+      "pass": true
+    },
+    {
+      "name": "390 adjustment Total Stok Akhir value receives semantic success",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(49, 188, 76)",
+        "expected": "rgb(49, 188, 76)"
+      }
+    },
+    {
+      "name": "390 adjustment Total Stok Akhir label fits",
+      "pass": true
+    },
+    {
+      "name": "390 adjustment has no page horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "320 adjustment Total Stok Awal value receives semantic warning",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(250, 128, 42)",
+        "expected": "rgb(250, 128, 42)"
+      }
+    },
+    {
+      "name": "320 adjustment Total Stok Awal label fits",
+      "pass": true
+    },
+    {
+      "name": "320 adjustment Total Penyusutan value receives semantic destructive",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(230, 53, 53)",
+        "expected": "rgb(230, 53, 53)"
+      }
+    },
+    {
+      "name": "320 adjustment Total Penyusutan label fits",
+      "pass": true
+    },
+    {
+      "name": "320 adjustment Total Stok Akhir value receives semantic success",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(49, 188, 76)",
+        "expected": "rgb(49, 188, 76)"
+      }
+    },
+    {
+      "name": "320 adjustment Total Stok Akhir label fits",
+      "pass": true
+    },
+    {
+      "name": "320 adjustment has no page horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "mixed units remain unknown rather than summed",
+      "pass": true
+    },
+    {
+      "name": "default metric values retain default foreground: QC warning default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "default metric values retain default foreground: QC success default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "default metric values retain default foreground: QC destructive default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "supplier metric values retain default foreground: QC warning default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "supplier metric values retain default foreground: QC success default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "supplier metric values retain default foreground: QC destructive default",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(44, 44, 44)"
+      }
+    },
+    {
+      "name": "unchanged metadata consumers retain primary icons",
+      "pass": true,
+      "detail": {
+        "color": "rgb(46, 120, 249)",
+        "value": "QC metadata defaultCurrent default",
+        "rect": {
+          "x": 16,
+          "y": 344,
+          "width": 16,
+          "height": 17,
+          "top": 344,
+          "right": 32,
+          "bottom": 361,
+          "left": 16
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "name": "transfer metadata Dari Toko is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "transfer metadata Ke Toko is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "transfer metadata Dibuat Oleh is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "transfer metadata Jumlah Transfer is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "transfer reference link retains primary",
+      "pass": true
+    },
+    {
+      "name": "transfer tab still filters products",
+      "pass": true
+    },
+    {
+      "name": "transfer row still navigates to its actual record",
+      "pass": true
+    },
+    {
+      "name": "purchase metadata Nama Supplier is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "purchase metadata Tanggal Transaksi is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "purchase metadata Diterima Oleh is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "purchase metadata Total Transaksi is muted",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(143, 143, 143)",
+        "expected": "rgb(143, 143, 143)"
+      }
+    },
+    {
+      "name": "purchase reference link retains primary",
+      "pass": true
+    },
+    {
+      "name": "adjustment list metadata keeps primary",
+      "pass": true
+    },
+    {
+      "name": "missing stock record fallback preserved",
+      "pass": true
+    },
+    {
+      "name": "no Inventory data mutation remained",
+      "pass": true
+    },
+    {
+      "name": "runtime errors absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "console errors absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "no blocked/external data requests",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "observed": [
+    {
+      "width": 390,
+      "label": "Total Stok Awal",
+      "row": [
+        {
+          "text": "Total Stok Awal",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 32,
+            "y": 144,
+            "width": 82,
+            "height": 32,
+            "top": 144,
+            "right": 114,
+            "bottom": 176,
+            "left": 32
+          }
+        },
+        {
+          "text": "300",
+          "color": "rgb(250, 128, 42)",
+          "r": {
+            "x": 57.65625,
+            "y": 180,
+            "width": 30.6875,
+            "height": 24,
+            "top": 180,
+            "right": 88.34375,
+            "bottom": 204,
+            "left": 57.65625
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 63.109375,
+            "y": 208,
+            "width": 19.78125,
+            "height": 16,
+            "top": 208,
+            "right": 82.890625,
+            "bottom": 224,
+            "left": 63.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "label": "Total Penyusutan",
+      "row": [
+        {
+          "text": "Total Penyusutan",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 154,
+            "y": 144,
+            "width": 82,
+            "height": 32,
+            "top": 144,
+            "right": 236,
+            "bottom": 176,
+            "left": 154
+          }
+        },
+        {
+          "text": "34",
+          "color": "rgb(230, 53, 53)",
+          "r": {
+            "x": 184.78125,
+            "y": 180,
+            "width": 20.4375,
+            "height": 24,
+            "top": 180,
+            "right": 205.21875,
+            "bottom": 204,
+            "left": 184.78125
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 185.109375,
+            "y": 208,
+            "width": 19.78125,
+            "height": 16,
+            "top": 208,
+            "right": 204.890625,
+            "bottom": 224,
+            "left": 185.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "label": "Total Stok Akhir",
+      "row": [
+        {
+          "text": "Total Stok Akhir",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 276,
+            "y": 144,
+            "width": 82,
+            "height": 32,
+            "top": 144,
+            "right": 358,
+            "bottom": 176,
+            "left": 276
+          }
+        },
+        {
+          "text": "266",
+          "color": "rgb(49, 188, 76)",
+          "r": {
+            "x": 302.234375,
+            "y": 180,
+            "width": 29.515625,
+            "height": 24,
+            "top": 180,
+            "right": 331.75,
+            "bottom": 204,
+            "left": 302.234375
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 307.109375,
+            "y": 208,
+            "width": 19.78125,
+            "height": 16,
+            "top": 208,
+            "right": 326.890625,
+            "bottom": 224,
+            "left": 307.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "label": "Total Stok Awal",
+      "row": [
+        {
+          "text": "Total Stok Awal",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 44.6875,
+            "y": 144,
+            "width": 82.625,
+            "height": 16,
+            "top": 144,
+            "right": 127.3125,
+            "bottom": 160,
+            "left": 44.6875
+          }
+        },
+        {
+          "text": "300",
+          "color": "rgb(250, 128, 42)",
+          "r": {
+            "x": 70.65625,
+            "y": 164,
+            "width": 30.6875,
+            "height": 24,
+            "top": 164,
+            "right": 101.34375,
+            "bottom": 188,
+            "left": 70.65625
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 76.109375,
+            "y": 192,
+            "width": 19.78125,
+            "height": 16,
+            "top": 192,
+            "right": 95.890625,
+            "bottom": 208,
+            "left": 76.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "label": "Total Penyusutan",
+      "row": [
+        {
+          "text": "Total Penyusutan",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 187.46875,
+            "y": 144,
+            "width": 93.0625,
+            "height": 16,
+            "top": 144,
+            "right": 280.53125,
+            "bottom": 160,
+            "left": 187.46875
+          }
+        },
+        {
+          "text": "34",
+          "color": "rgb(230, 53, 53)",
+          "r": {
+            "x": 223.78125,
+            "y": 164,
+            "width": 20.4375,
+            "height": 24,
+            "top": 164,
+            "right": 244.21875,
+            "bottom": 188,
+            "left": 223.78125
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 224.109375,
+            "y": 192,
+            "width": 19.78125,
+            "height": 16,
+            "top": 192,
+            "right": 243.890625,
+            "bottom": 208,
+            "left": 224.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "label": "Total Stok Akhir",
+      "row": [
+        {
+          "text": "Total Stok Akhir",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 117.546875,
+            "y": 296,
+            "width": 84.90625,
+            "height": 16,
+            "top": 296,
+            "right": 202.453125,
+            "bottom": 312,
+            "left": 117.546875
+          }
+        },
+        {
+          "text": "266",
+          "color": "rgb(49, 188, 76)",
+          "r": {
+            "x": 145.234375,
+            "y": 316,
+            "width": 29.515625,
+            "height": 24,
+            "top": 316,
+            "right": 174.75,
+            "bottom": 340,
+            "left": 145.234375
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 150.109375,
+            "y": 344,
+            "width": 19.78125,
+            "height": 16,
+            "top": 344,
+            "right": 169.890625,
+            "bottom": 360,
+            "left": 150.109375
+          }
+        }
+      ]
+    },
+    {
+      "mode": "transfer",
+      "label": "Dari Toko",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Dari TokoToko Sushiro",
+        "rect": {
+          "x": 32,
+          "y": 494,
+          "width": 16,
+          "height": 17,
+          "top": 494,
+          "right": 48,
+          "bottom": 511,
+          "left": 32
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "transfer",
+      "label": "Ke Toko",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Ke TokoToko Degri",
+        "rect": {
+          "x": 32,
+          "y": 542,
+          "width": 16,
+          "height": 17,
+          "top": 542,
+          "right": 48,
+          "bottom": 559,
+          "left": 32
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "transfer",
+      "label": "Dibuat Oleh",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Dibuat OlehFauzan",
+        "rect": {
+          "x": 172.5,
+          "y": 494,
+          "width": 16,
+          "height": 17,
+          "top": 494,
+          "right": 188.5,
+          "bottom": 511,
+          "left": 172.5
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "transfer",
+      "label": "Jumlah Transfer",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Jumlah Transfer2",
+        "rect": {
+          "x": 172.5,
+          "y": 542,
+          "width": 16,
+          "height": 17,
+          "top": 542,
+          "right": 188.5,
+          "bottom": 559,
+          "left": 172.5
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "purchase",
+      "label": "Nama Supplier",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Nama SupplierGeneral Vendor",
+        "rect": {
+          "x": 32,
+          "y": 282,
+          "width": 16,
+          "height": 17,
+          "top": 282,
+          "right": 48,
+          "bottom": 299,
+          "left": 32
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "purchase",
+      "label": "Tanggal Transaksi",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Tanggal Transaksi08 Oct 2025",
+        "rect": {
+          "x": 32,
+          "y": 330,
+          "width": 16,
+          "height": 17,
+          "top": 330,
+          "right": 48,
+          "bottom": 347,
+          "left": 32
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "purchase",
+      "label": "Diterima Oleh",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Diterima OlehFauzan",
+        "rect": {
+          "x": 172.5,
+          "y": 282,
+          "width": 16,
+          "height": 17,
+          "top": 282,
+          "right": 188.5,
+          "bottom": 299,
+          "left": 172.5
+        },
+        "font": "feather"
+      }
+    },
+    {
+      "mode": "purchase",
+      "label": "Total Transaksi",
+      "result": {
+        "color": "rgb(143, 143, 143)",
+        "value": "Total TransaksiRp 15.250.000",
+        "rect": {
+          "x": 172.5,
+          "y": 330,
+          "width": 16,
+          "height": 17,
+          "top": 330,
+          "right": 188.5,
+          "bottom": 347,
+          "left": 172.5
+        },
+        "font": "feather"
+      }
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "scope": "Actual production Inventory screens/store/shared components and fonts; router transport adapter. Fixture-only temporary mixed-unit update restored; no application seed/API/real device certification."
+}

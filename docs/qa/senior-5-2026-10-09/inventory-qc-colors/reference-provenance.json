@@ -1,0 +1,27 @@
+{
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "references": [
+    {
+      "frame": "1:13605",
+      "original": "docs/figma/inventory/inventory-adjustment-detail.png",
+      "copy": "docs/qa/senior-5-2026-10-09/inventory-qc-colors/figma-1-13605.png",
+      "sha256": "226451fbce512b0c55fe7784ef6d35c262d34b0ce8f07fb5ae45841adbf8854b",
+      "scope": "Stored service-downscaled screenshot, not fresh full design context"
+    },
+    {
+      "frame": "1:12059",
+      "original": "docs/figma/inventory/inventory-transfer-list.png",
+      "copy": "docs/qa/senior-5-2026-10-09/inventory-qc-colors/figma-1-12059.png",
+      "sha256": "432f944403ac0662d9fadfc0278052b4604e5080c0be19e5f81e71a9dcfc5b38",
+      "scope": "Stored service-downscaled screenshot, not fresh full design context"
+    },
+    {
+      "frame": "1:14945",
+      "original": "docs/figma/inventory/inventory-purchase-list.png",
+      "copy": "docs/qa/senior-5-2026-10-09/inventory-qc-colors/figma-1-14945.png",
+      "sha256": "fcd56dd517cfdd927ca859892edfcfd526f87d9a6ff57c086998e9d335a7d2e6",
+      "scope": "Stored service-downscaled screenshot, not fresh full design context"
+    }
+  ],
+  "freshContext": "Starter limit on1:13605; whoami Starter; no retry loop or newly fetched full reference"
+}

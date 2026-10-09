@@ -1,0 +1,19 @@
+{
+  "bundle": "D:\\Codex-5\\tmp\\closing-stock-figma\\entry.bundle.js",
+  "bundleHash": "877c893503ba3e0cef0dcd7d4a88fbeb7bdb6557518f7059a8801ee7d2287fbf",
+  "bytes": 9391494,
+  "assets": "D:\\Codex-5\\tmp\\closing-stock-figma\\assets.json",
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "scope": "Own one-shot build/cache on D; actual UI/store, router transport adapter, Figma examples only in comparison fixture. No listener/server/root Metro config/native full router."
+}

@@ -1,0 +1,52 @@
+{
+  "providerSourceHash": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+  "eslint": {
+    "baseline": {
+      "errors": 1,
+      "warnings": 2
+    },
+    "final": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "noSuppression": true,
+    "command": "node node_modules/eslint/bin/eslint.js context/AuthContext.tsx --format json --output-file .expo/sd5-provider-final-eslint.json",
+    "exitCode": 0
+  },
+  "biome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "context/AuthContext.tsx"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 1 file in 79ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "diff",
+      "--check",
+      "--",
+      "context/AuthContext.tsx",
+      "docs/README.md",
+      "docs/qa/senior-5-2026-10-09/HANDOFF.md"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'context/AuthContext.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "typecheck": {
+    "diagnosticCount": 0,
+    "roots": [
+      "context/AuthContext.tsx",
+      "api/hooks/auth.ts",
+      "app/(onboarding)/login.tsx",
+      "app/index.tsx",
+      "hooks/useProtectedRoute.ts"
+    ],
+    "scope": "AuthProvider/login hook+screen/boot/guard roots with imported dependency/declaration closure; not full-project TypeScript"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "QC-CARDLIST-20261009-PASS-DELTA",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "date": "2026-10-09",
+  "sources": {
+    "components/custom/CardList.tsx": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2"
+  },
+  "verification": {
+    "developerAssertionRerun": 39,
+    "qcReportCallerAssertions": 86,
+    "totalPassed": 125,
+    "failed": 0,
+    "runtimeActErrors": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biome": "PASS",
+    "diffCheck": "PASS",
+    "fullIntegrationTypecheck": "PM_PENDING"
+  },
+  "report": "REPORT.md",
+  "scope": "Filter sheet/hook lifecycle delta; seven production report caller screens/builders with native/UI/control/formatter adapters",
+  "limitations": [
+    "No browser/native/accessibility/full router/auth/backend/report amount/Figma certification",
+    "Reset immediately commits; Cancel discards subsequent draft as existing contract",
+    "Full integration/publication gate belongs to PM"
+  ],
+  "handoffChannel": "Shared workspace documents; direct delivery not claimed"
+}

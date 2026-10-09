@@ -1,0 +1,17 @@
+{
+  "code": "QC-BARCODE-20261009-PASS-DELTA",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "headContext": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "scope": "Only lifecycle/disabled delta of ProductPickerSheet, PrintBarcodeModal and Incrementer. No blanket native/printer/full-feature/main approval.",
+  "files": [
+    {"file": "components/feature/barcode/ProductPickerSheet.tsx", "sha256": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37"},
+    {"file": "components/feature/barcode/PrintBarcodeModal.tsx", "sha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1"},
+    {"file": "components/custom/Incrementer.tsx", "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"}
+  ],
+  "qa": {"rerunDeveloperAssertions": 96, "independentRHFAssertions": 9, "total": 105, "failed": 0, "runtimeErrors": 0},
+  "static": {"eslintErrors": 0, "eslintWarnings": 0, "biome": "pass", "diffCheck": "pass"},
+  "pendingPM": ["match source hashes to publication commit", "coordinated final integration typecheck/lint", "review documented legacy/native/printer limits"],
+  "mainApproval": false
+}

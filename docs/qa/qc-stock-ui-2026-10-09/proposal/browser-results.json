@@ -1,0 +1,615 @@
+{
+  "executionMode": "UI_PROPOSAL_ONLY_NOT_APPLIED",
+  "scope": "UI only: production screen/RN-web/primitives/modal/SearchBar/font/providers and isolated Expo Router, browser-local transport fixtures",
+  "checks": [
+    {
+      "name": "main 320: no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "main 320: CTA stays within viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "main 320: primary target height at least44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "picker 320: long filtered label within width",
+      "passed": true,
+      "detail": {
+        "x": 120,
+        "y": 453,
+        "width": 168,
+        "height": 120
+      }
+    },
+    {
+      "name": "picker 320: confirm text within viewport",
+      "passed": true,
+      "detail": {
+        "x": 249.296875,
+        "y": 329,
+        "width": 53.703125,
+        "height": 24
+      }
+    },
+    {
+      "name": "main 360: no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "main 360: CTA stays within viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "main 360: primary target height at least44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "picker 360: long filtered label within width",
+      "passed": true,
+      "detail": {
+        "x": 120,
+        "y": 633,
+        "width": 208,
+        "height": 80
+      }
+    },
+    {
+      "name": "picker 360: confirm text within viewport",
+      "passed": true,
+      "detail": {
+        "x": 289.296875,
+        "y": 509,
+        "width": 53.703125,
+        "height": 24
+      }
+    },
+    {
+      "name": "main 390: no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "main 390: CTA stays within viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "main 390: primary target height at least44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "picker 390: long filtered label within width",
+      "passed": true,
+      "detail": {
+        "x": 120,
+        "y": 717,
+        "width": 238,
+        "height": 60
+      }
+    },
+    {
+      "name": "picker 390: confirm text within viewport",
+      "passed": true,
+      "detail": {
+        "x": 319.296875,
+        "y": 593,
+        "width": 53.703125,
+        "height": 24
+      }
+    },
+    {
+      "name": "main 768: no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "main 768: CTA stays within viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "main 768: primary target height at least44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "picker 768: long filtered label within width",
+      "passed": true,
+      "detail": {
+        "x": 120,
+        "y": 917,
+        "width": 616,
+        "height": 40
+      }
+    },
+    {
+      "name": "picker 768: confirm text within viewport",
+      "passed": true,
+      "detail": {
+        "x": 697.296875,
+        "y": 793,
+        "width": 53.703125,
+        "height": 24
+      }
+    },
+    {
+      "name": "settings-loading: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "settings-loading: save disabled",
+      "passed": true
+    },
+    {
+      "name": "settings-error: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "settings-error: save disabled",
+      "passed": true
+    },
+    {
+      "name": "empty: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "list-loading: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "list-error: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "category: correct visible UI copy",
+      "passed": true
+    },
+    {
+      "name": "category320: long label fits",
+      "passed": true,
+      "detail": {
+        "x": 120,
+        "y": 473,
+        "width": 168,
+        "height": 100
+      }
+    },
+    {
+      "name": "success modal after viewport resize: within width320",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 116.25,
+        "width": 288,
+        "height": 407.5
+      }
+    },
+    {
+      "name": "success modal320: confirm button visible inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 450.75,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "error modal320: confirm button visible inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 37.021949768066406,
+        "y": 347.9949951171875,
+        "width": 245.95610809326172,
+        "height": 47.991455078125
+      }
+    },
+    {
+      "name": "fixture-only save error uses production dialog",
+      "passed": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "light UI follows fixed provider despite dark OS",
+      "passed": true
+    },
+    {
+      "name": "no HTTP API attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 36,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blockedRequests": [],
+  "metrics": [
+    {
+      "name": "picker-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "main-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "picker-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "layout": {
+        "viewportWidth": 360,
+        "screenWidth": 360,
+        "bodyScrollWidth": 360,
+        "bodyScrollHeight": 780,
+        "light": true
+      }
+    },
+    {
+      "name": "main-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "layout": {
+        "viewportWidth": 360,
+        "screenWidth": 360,
+        "bodyScrollWidth": 360,
+        "bodyScrollHeight": 780,
+        "light": true
+      }
+    },
+    {
+      "name": "picker-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "viewportWidth": 390,
+        "screenWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyScrollHeight": 844,
+        "light": true
+      }
+    },
+    {
+      "name": "main-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "layout": {
+        "viewportWidth": 390,
+        "screenWidth": 390,
+        "bodyScrollWidth": 390,
+        "bodyScrollHeight": 844,
+        "light": true
+      }
+    },
+    {
+      "name": "picker-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "layout": {
+        "viewportWidth": 768,
+        "screenWidth": 768,
+        "bodyScrollWidth": 768,
+        "bodyScrollHeight": 1024,
+        "light": true
+      }
+    },
+    {
+      "name": "settings-loading-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "settings-error-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "empty-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "list-loading-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "list-error-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "category-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "success-resize-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    },
+    {
+      "name": "save-error-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "layout": {
+        "viewportWidth": 320,
+        "screenWidth": 320,
+        "bodyScrollWidth": 320,
+        "bodyScrollHeight": 640,
+        "light": true
+      }
+    }
+  ],
+  "fixtureCalls": [
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "categories",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "post"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "post"
+    }
+  ],
+  "limitations": "No backend/native-current-screen/root-auth/Figma/API persistence certification; physical phone not foreground. Actual window/screen metrics recorded; spring animations settle before final geometry checks."
+}

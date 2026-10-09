@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-10-08T20:31:23.848Z",
+  "passed": true,
+  "pageErrors": [],
+  "viewports": [
+    "390x1004",
+    "320x812"
+  ],
+  "scope": "Actual feature components, route layouts and shared controls; authentication/backend bypassed"
+}

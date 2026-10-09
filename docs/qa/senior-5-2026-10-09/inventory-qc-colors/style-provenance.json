@@ -1,0 +1,7 @@
+{
+  "parentPacket": "docs/qa/senior-5-2026-10-09/closing-stock-figma-narrow",
+  "cssHash": "0184ef11f3e6c583eff054711b5446932ec696bffa16c9536b2105a4abed6c04",
+  "globalCss": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+  "tailwindConfig": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+  "note": "Generated CSS reused by identical config/global hashes; existing safelist covers semantic important color classes. Root configs and shared generated cache not changed."
+}

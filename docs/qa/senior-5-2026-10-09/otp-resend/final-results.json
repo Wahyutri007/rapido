@@ -1,0 +1,446 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "ticket": "SD5-007",
+  "baseline": false,
+  "sources": {
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "checks": [
+    {
+      "name": "valid session has no initial alert or redirect",
+      "passed": true
+    },
+    {
+      "name": "no OTP response is logged",
+      "passed": true
+    },
+    {
+      "name": "shared scroll/keyboard Wrapper used",
+      "passed": true
+    },
+    {
+      "name": "double press sends one POST",
+      "passed": true
+    },
+    {
+      "name": "pending resend disabled",
+      "passed": true
+    },
+    {
+      "name": "existing endpoint/method/payload",
+      "passed": true
+    },
+    {
+      "name": "success feedback once",
+      "passed": true
+    },
+    {
+      "name": "success writes OTP once",
+      "passed": true
+    },
+    {
+      "name": "success leaves personal info intact",
+      "passed": true
+    },
+    {
+      "name": "resend never logs in or navigates",
+      "passed": true
+    },
+    {
+      "name": "success unlocks resend",
+      "passed": true
+    },
+    {
+      "name": "500: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "500: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "500: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "500: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "500: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "422: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "422: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "422: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "422: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "422: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 missing: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 missing: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 missing: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 missing: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 missing: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 string: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 string: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 string: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 string: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 string: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 negative: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 negative: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 negative: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 negative: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 negative: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 zero: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 zero: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 zero: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 zero: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 zero: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: one meaningful feedback",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: retry feedback once",
+      "passed": true
+    },
+    {
+      "name": "network error feedback once",
+      "passed": true
+    },
+    {
+      "name": "network failure preserves OTP",
+      "passed": true
+    },
+    {
+      "name": "empty success response shows one failure",
+      "passed": true
+    },
+    {
+      "name": "empty success keeps previous session",
+      "passed": true
+    },
+    {
+      "name": "429 3: feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 3: button shows countdown and disabled",
+      "passed": true
+    },
+    {
+      "name": "429 3: direct callbacks cannot bypass cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 3: countdown remains disabled",
+      "passed": true
+    },
+    {
+      "name": "429 3: deadline unlocks",
+      "passed": true
+    },
+    {
+      "name": "429 3: retry sends new POST",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: feedback once",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: button shows countdown and disabled",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: direct callbacks cannot bypass cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: countdown remains disabled",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: deadline unlocks",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: retry sends new POST",
+      "passed": true
+    },
+    {
+      "name": "cooldown timer canceled on unmount",
+      "passed": true
+    },
+    {
+      "name": "no extra cooldown alert after unmount",
+      "passed": true
+    },
+    {
+      "name": "unmount 200: no late feedback/store write/routes",
+      "passed": true
+    },
+    {
+      "name": "unmount 200: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "unmount 429: no late feedback/store write/routes",
+      "passed": true
+    },
+    {
+      "name": "unmount 429: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "unmount 500: no late feedback/store write/routes",
+      "passed": true
+    },
+    {
+      "name": "unmount 500: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: clears entered code",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: new resend available",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: new payload",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: ignores old result",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: old response cannot unlock new request",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: saved old callback ignored",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: current response alone commits",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: clears entered code",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: new resend available",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: new payload",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: ignores old result",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: old response cannot unlock new request",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: saved old callback ignored",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: current response alone commits",
+      "passed": true
+    },
+    {
+      "name": "same session rerender keeps entered code",
+      "passed": true
+    },
+    {
+      "name": "complete OTP has explicit unavailable feedback",
+      "passed": true
+    },
+    {
+      "name": "complete OTP does not fake login/navigation",
+      "passed": true
+    },
+    {
+      "name": "entered code/response never logged",
+      "passed": true
+    },
+    {
+      "name": "incomplete OTP disables Masuk",
+      "passed": true
+    },
+    {
+      "name": "direct incomplete callback asks for code",
+      "passed": true
+    },
+    {
+      "name": "missingResponse: invalid session returns once",
+      "passed": true
+    },
+    {
+      "name": "missingResponse: no actionable resend",
+      "passed": true
+    },
+    {
+      "name": "missingResponse: rerender does not repeat redirect",
+      "passed": true
+    },
+    {
+      "name": "missingInfo: invalid session returns once",
+      "passed": true
+    },
+    {
+      "name": "missingInfo: no actionable resend",
+      "passed": true
+    },
+    {
+      "name": "missingInfo: rerender does not repeat redirect",
+      "passed": true
+    },
+    {
+      "name": "StrictMode one POST/feedback/write",
+      "passed": true
+    },
+    {
+      "name": "no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "no unhandled rejections",
+      "passed": true
+    },
+    {
+      "name": "no rejected UI action promises",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandledRejections": [],
+  "actionRejections": [],
+  "passed": 105,
+  "failed": 0
+}

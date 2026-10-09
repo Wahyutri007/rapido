@@ -1,0 +1,567 @@
+{
+  "owner": "QC",
+  "capturedAt": "2026-10-09T00:47:14.509Z",
+  "status": "PASS",
+  "files": [
+    "metro.config.js",
+    "scripts/preserve-nativewind-cache.cjs",
+    "scripts/verify-nativewind-cache.cjs",
+    "scripts/verify-metro-cache.cjs"
+  ],
+  "eslint": {
+    "name": "eslint",
+    "command": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/eslint/bin/eslint.js",
+      "metro.config.js",
+      "scripts/preserve-nativewind-cache.cjs",
+      "scripts/verify-nativewind-cache.cjs",
+      "scripts/verify-metro-cache.cjs",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "name": "biome",
+    "command": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "--error-on-warnings",
+      "metro.config.js",
+      "scripts/preserve-nativewind-cache.cjs",
+      "scripts/verify-nativewind-cache.cjs",
+      "scripts/verify-metro-cache.cjs"
+    ],
+    "exitCode": 0,
+    "diagnosticsEmpty": true
+  },
+  "syntax": [
+    {
+      "name": "syntax-0",
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "--check",
+        "metro.config.js"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "syntax-1",
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "--check",
+        "scripts/preserve-nativewind-cache.cjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "syntax-2",
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "--check",
+        "scripts/verify-nativewind-cache.cjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "syntax-3",
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "--check",
+        "scripts/verify-metro-cache.cjs"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "diff": {
+    "name": "diff",
+    "command": "git",
+    "args": [
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--check",
+      "--",
+      "metro.config.js",
+      "scripts/preserve-nativewind-cache.cjs",
+      "scripts/verify-nativewind-cache.cjs",
+      "scripts/verify-metro-cache.cjs"
+    ],
+    "exitCode": 0
+  },
+  "fingerprints": [
+    {
+      "file": "metro.config.js",
+      "expected": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "passed": true
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "actual": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "passed": true
+    },
+    {
+      "file": "scripts/verify-nativewind-cache.cjs",
+      "expected": "0d5146864121ff56a8a6ca261134af9268a876a27ca29dc566d16d56de366529",
+      "actual": "0d5146864121ff56a8a6ca261134af9268a876a27ca29dc566d16d56de366529",
+      "passed": true
+    },
+    {
+      "file": "scripts/verify-metro-cache.cjs",
+      "expected": "55bd6d366887d4815fec99b548d8582c68e504cea2812291c28adc33e69bf0be",
+      "actual": "55bd6d366887d4815fec99b548d8582c68e504cea2812291c28adc33e69bf0be",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/dist/metro/index.js",
+      "expected": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a",
+      "actual": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-after.json",
+      "expected": "86af751efbdd5a75da10f2a0cbc1291cbf1f95d2c2135c1c0d501614b9858d69",
+      "actual": "86af751efbdd5a75da10f2a0cbc1291cbf1f95d2c2135c1c0d501614b9858d69",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-before.json",
+      "expected": "4fd6fd7ddeb531b76a0a029ef85112a92b1f9d9b58f0a69136420f5e70b4ae74",
+      "actual": "4fd6fd7ddeb531b76a0a029ef85112a92b1f9d9b58f0a69136420f5e70b4ae74",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-queue-results.json",
+      "expected": "310124a3d3703c49d36b24ae3d8470107ec8a7ca7bd0715b8a73c6760271c72b",
+      "actual": "310124a3d3703c49d36b24ae3d8470107ec8a7ca7bd0715b8a73c6760271c72b",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\equivalence-results.json",
+      "expected": "9da4e0edcdbfa443e2f9c02a42e126cdab9d6d41c467f7c6e73e14edfec6fa64",
+      "actual": "9da4e0edcdbfa443e2f9c02a42e126cdab9d6d41c467f7c6e73e14edfec6fa64",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\equivalence.cjs",
+      "expected": "307649c138ef754c6118f0f9df1cb1b45b85075fda4cea72576e9818d4d292f9",
+      "actual": "307649c138ef754c6118f0f9df1cb1b45b85075fda4cea72576e9818d4d292f9",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\eslint-results.json",
+      "expected": "72e9336c5c9b38591d566cfdc9c61d5fa4909f82c418eadee7eccbd3f5454708",
+      "actual": "72e9336c5c9b38591d566cfdc9c61d5fa4909f82c418eadee7eccbd3f5454708",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\guard-boundaries-results.json",
+      "expected": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463",
+      "actual": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\guard-boundaries.cjs",
+      "expected": "4950ea9e754bad4b9307a11ecf2b61834c144037ef05e5716443afca2a6c27f0",
+      "actual": "4950ea9e754bad4b9307a11ecf2b61834c144037ef05e5716443afca2a6c27f0",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\HANDOFF.md",
+      "expected": "e77b388f7cecb67ed940ccf1bd7aed2493d72b730adf86ae397055094d13b174",
+      "actual": "e77b388f7cecb67ed940ccf1bd7aed2493d72b730adf86ae397055094d13b174",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\initializer-results.json",
+      "expected": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "actual": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\queue-boundaries-results.json",
+      "expected": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464",
+      "actual": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464",
+      "passed": true
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\queue-boundaries.cjs",
+      "expected": "2d7283970f9fd97093758e949e3bea6314bc77240aa087db4d14d035c6e99cac",
+      "actual": "2d7283970f9fd97093758e949e3bea6314bc77240aa087db4d14d035c6e99cac",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/style-recheck/before/metro.config.js.txt",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/style-recheck/before/preserve-nativewind-cache.cjs.txt",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "actual": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/style-recheck/before/verify-nativewind-cache.cjs.txt",
+      "expected": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274",
+      "actual": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/style-recheck/before/verify-metro-cache.cjs.txt",
+      "expected": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f",
+      "actual": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "biome.json",
+      "expected": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+      "actual": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+      "passed": true
+    },
+    {
+      "file": "eslint.config.js",
+      "expected": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+      "actual": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "global.css",
+      "expected": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "actual": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/package.json",
+      "expected": "2845ba82228e45381486afa64effde81604b73334c50350e9b81d62a6fe7be63",
+      "actual": "2845ba82228e45381486afa64effde81604b73334c50350e9b81d62a6fe7be63",
+      "passed": true
+    },
+    {
+      "file": "node_modules/nativewind/package.json",
+      "expected": "74cb6f7a737d1da7e41541d66a525ca612a54bb8762cbaa866c753b6fcf50edb",
+      "actual": "74cb6f7a737d1da7e41541d66a525ca612a54bb8762cbaa866c753b6fcf50edb",
+      "passed": true
+    },
+    {
+      "file": "node_modules/nativewind/dist/metro/index.js",
+      "expected": "7bf29d6bbf0bd6a4a51c5ccf55da5cd5d48753e741f48012f03f73e9243f5ae1",
+      "actual": "7bf29d6bbf0bd6a4a51c5ccf55da5cd5d48753e741f48012f03f73e9243f5ae1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/style-recheck/verification.json",
+      "expected": "cef03e5a905ac546bc8f18518ae3007275b5b984f2c992d080369f0ab2641bb4",
+      "actual": "cef03e5a905ac546bc8f18518ae3007275b5b984f2c992d080369f0ab2641bb4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/verification.json",
+      "expected": "010b858d9a971081573ea6b6af50d3ebf209ea4423cffd1be2ca27d1a4bec151",
+      "actual": "010b858d9a971081573ea6b6af50d3ebf209ea4423cffd1be2ca27d1a4bec151",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/artifact-manifest.json",
+      "expected": "d3b2e4ecffed66b1884a8d49e6e9ae4ae3724055adb552a0e5bc5681f4c1683c",
+      "actual": "d3b2e4ecffed66b1884a8d49e6e9ae4ae3724055adb552a0e5bc5681f4c1683c",
+      "passed": true
+    }
+  ],
+  "historicalMatches": [
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/biome-check.stderr.txt",
+      "expected": "be2060bf3de21faebf0302ab0a9108606da09c0d76a761b81188050f68a490d6",
+      "actual": "be2060bf3de21faebf0302ab0a9108606da09c0d76a761b81188050f68a490d6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/cache-queue-results.json",
+      "expected": "67cae24d0d1bbd02e3774c3f28197a54b10491072c73e48de4b5985f4e841119",
+      "actual": "67cae24d0d1bbd02e3774c3f28197a54b10491072c73e48de4b5985f4e841119",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/candidate-child.tsx.txt",
+      "expected": "5f79620cf54787673e5a71cd3e40fd04a6c1b3be3baf37bf17ee54f5e6bf3d43",
+      "actual": "5f79620cf54787673e5a71cd3e40fd04a6c1b3be3baf37bf17ee54f5e6bf3d43",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/candidate-parent.tsx.txt",
+      "expected": "f6cd2765498966b8759b3b05b1bec4b978d959598504ecab0025a53aae3f9267",
+      "actual": "f6cd2765498966b8759b3b05b1bec4b978d959598504ecab0025a53aae3f9267",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/DECISION.json",
+      "expected": "dcf545c8a8e73b4c13c6a2429a69f5c8b363594217616fe9d18f63526d7e9c74",
+      "actual": "dcf545c8a8e73b4c13c6a2429a69f5c8b363594217616fe9d18f63526d7e9c74",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/device-observation.cjs",
+      "expected": "44e6b18edaff19014ac9d6a0b6c42abf7a1e1115c84842421a89878a89ba3e48",
+      "actual": "44e6b18edaff19014ac9d6a0b6c42abf7a1e1115c84842421a89878a89ba3e48",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/device-observation.json",
+      "expected": "ea8d11a1f626588a83e006c3ba4eff39270f74dba25863048b4de9b67d5e2f64",
+      "actual": "ea8d11a1f626588a83e006c3ba4eff39270f74dba25863048b4de9b67d5e2f64",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/eslint-results.json",
+      "expected": "72e9336c5c9b38591d566cfdc9c61d5fa4909f82c418eadee7eccbd3f5454708",
+      "actual": "72e9336c5c9b38591d566cfdc9c61d5fa4909f82c418eadee7eccbd3f5454708",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/finalize.cjs",
+      "expected": "8b4fbb2adaba1d835041d7ecaa99bf40d48395583a31b4361706c0398105b953",
+      "actual": "8b4fbb2adaba1d835041d7ecaa99bf40d48395583a31b4361706c0398105b953",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/guard-boundaries-results.json",
+      "expected": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463",
+      "actual": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/guard-boundaries.cjs",
+      "expected": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "actual": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/initializer-results.json",
+      "expected": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "actual": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/metro-head-baseline.js.txt",
+      "expected": "f6ecc0c41505a2c259fa5bd4e89af38c6265c1c1df59eba4ec1ec93ff94418e9",
+      "actual": "f6ecc0c41505a2c259fa5bd4e89af38c6265c1c1df59eba4ec1ec93ff94418e9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/metro-observation.json",
+      "expected": "5eaab5ef91126a8d15bec51c687af339fb9bb40a6b2c4300f7fd335f5dc42344",
+      "actual": "5eaab5ef91126a8d15bec51c687af339fb9bb40a6b2c4300f7fd335f5dc42344",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/patch-results.json",
+      "expected": "3a82cd5c43acc311bbacd26aff097dfe71ef4c6ed649aecbac6b71e8e74669a7",
+      "actual": "3a82cd5c43acc311bbacd26aff097dfe71ef4c6ed649aecbac6b71e8e74669a7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/prepare-patches.cjs",
+      "expected": "26df0b7759e07d0bdfd97fbaa1e7be0cd7d31f7dd19dcd7e6b70e73fc4691786",
+      "actual": "26df0b7759e07d0bdfd97fbaa1e7be0cd7d31f7dd19dcd7e6b70e73fc4691786",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/queue-boundaries-results.json",
+      "expected": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464",
+      "actual": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/queue-boundaries.cjs",
+      "expected": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "actual": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/REPORT.md",
+      "expected": "ca225f5f3a89df47af30dde5033253d5abbed7be8bd0d700ced58fd62a2ecf69",
+      "actual": "ca225f5f3a89df47af30dde5033253d5abbed7be8bd0d700ced58fd62a2ecf69",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/review-after.json",
+      "expected": "92dd9fb39dab40087f73402ef3c2b30498cdbebb409e9454fda81762c0fcb957",
+      "actual": "92dd9fb39dab40087f73402ef3c2b30498cdbebb409e9454fda81762c0fcb957",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/review-before.json",
+      "expected": "152939feb44893def2dcb45284cd6fba072fb75c07a16a45429267ee13a111fe",
+      "actual": "152939feb44893def2dcb45284cd6fba072fb75c07a16a45429267ee13a111fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/review.cjs",
+      "expected": "a096aa8639f998cca3d41ac03757622bd39e3d51402bf0434b3ed17265cd6f0e",
+      "actual": "a096aa8639f998cca3d41ac03757622bd39e3d51402bf0434b3ed17265cd6f0e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/route-proposal-eslint.json",
+      "expected": "b824e7ef6e53235863d0f6eef7510bae7887e269e9619a646b5a8c36a1dd30ae",
+      "actual": "b824e7ef6e53235863d0f6eef7510bae7887e269e9619a646b5a8c36a1dd30ae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/route-warning-results.json",
+      "expected": "40265205a530cde90a504cb4606c25f1e01a1d1b5bb8390206e6389e536065c9",
+      "actual": "40265205a530cde90a504cb4606c25f1e01a1d1b5bb8390206e6389e536065c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/route-warning.cjs",
+      "expected": "ad3fb7d92d1d1fbadeced0a2a70bcf100b00aa6ff1e6b07fca02a0e49dbef079",
+      "actual": "ad3fb7d92d1d1fbadeced0a2a70bcf100b00aa6ff1e6b07fca02a0e49dbef079",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/routing-warning.patch",
+      "expected": "38f46975985fab870a803a48184e6b37ddb6eba76b721af9104d051ee1c9d9d2",
+      "actual": "38f46975985fab870a803a48184e6b37ddb6eba76b721af9104d051ee1c9d9d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/startup-style.patch",
+      "expected": "f77015410bb2bb00d1d43e360706403c19a9e8d386edcafd5413ebeb4e8b6a5a",
+      "actual": "f77015410bb2bb00d1d43e360706403c19a9e8d386edcafd5413ebeb4e8b6a5a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/style-findings.json",
+      "expected": "b6a8fba5e9e003d4b2f9bfc28ecda3aa055bc14bce3c3dd6043ef8399f735fc4",
+      "actual": "b6a8fba5e9e003d4b2f9bfc28ecda3aa055bc14bce3c3dd6043ef8399f735fc4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/style-findings.raw.txt",
+      "expected": "357818478461e9cb13c3e46091e0b7277893270f01fea917aa8239a10d03851c",
+      "actual": "357818478461e9cb13c3e46091e0b7277893270f01fea917aa8239a10d03851c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/style-proposal-initializer-results.json",
+      "expected": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "actual": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-nativewind-cache-2026-10-09/style-proposal-results.json",
+      "expected": "00255b08cb6be2b0e9bc8527eb46ee81712224f61175aac93b197ff16a840846",
+      "actual": "00255b08cb6be2b0e9bc8527eb46ee81712224f61175aac93b197ff16a840846",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/baseline.json",
+      "expected": "8a79e1d91624a408e63910e81f313a573f97e34fb5023c6c860974fa2b6c8ed3",
+      "actual": "8a79e1d91624a408e63910e81f313a573f97e34fb5023c6c860974fa2b6c8ed3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/cache-results.json",
+      "expected": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "actual": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/cache-queue-results.json",
+      "expected": "19955d01c5e1e9069fdba3b566bda4378de4ff476b35c1b9b6cb6419b374dec5",
+      "actual": "19955d01c5e1e9069fdba3b566bda4378de4ff476b35c1b9b6cb6419b374dec5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/multi-process-results.json",
+      "expected": "2b1e273257f146aa2408d212c2014559558d01fa822df3a4528440fe9113721c",
+      "actual": "2b1e273257f146aa2408d212c2014559558d01fa822df3a4528440fe9113721c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/second-config-results.json",
+      "expected": "216994cf814f86cf7509947ebabb5ba4d50ac2a49ca98681d66148c9fd467138",
+      "actual": "216994cf814f86cf7509947ebabb5ba4d50ac2a49ca98681d66148c9fd467138",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/native-results.json",
+      "expected": "3cc655d11c15efcf12b5b312b9db76e75e7c2401d058109d909e31957443715a",
+      "actual": "3cc655d11c15efcf12b5b312b9db76e75e7c2401d058109d909e31957443715a",
+      "passed": true
+    }
+  ],
+  "runnerCopies": [
+    {
+      "original": "docs/qa/qc-nativewind-cache-2026-10-09/guard-boundaries.cjs",
+      "originalHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "copy": "guard-boundaries.cjs",
+      "copyHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "byteIdentical": true,
+      "currentOriginalHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "currentCopyHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "passed": true
+    },
+    {
+      "original": "docs/qa/qc-nativewind-cache-2026-10-09/queue-boundaries.cjs",
+      "originalHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "copy": "queue-boundaries.cjs",
+      "copyHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "byteIdentical": true,
+      "currentOriginalHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "currentCopyHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "passed": true
+    }
+  ],
+  "androidCache": {
+    "file": "node_modules/react-native-css-interop/.cache/android.js",
+    "before": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "after": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "bytes": 193003,
+    "hasClassDarkFlag": true,
+    "unchanged": true
+  },
+  "assertions": {
+    "behavior": 41,
+    "harnessFailure": 3,
+    "astContract": 5,
+    "total": 49,
+    "failed": 0,
+    "queueOperationsCountedAsAssertions": false
+  },
+  "typecheck": {
+    "ran": false,
+    "reason": "Only four CJS files; syntax and actual runtime/AST checks used. No TypeScript source delta."
+  },
+  "rootMetroRequired": false,
+  "applicationSourcesEditedByQC": false
+}

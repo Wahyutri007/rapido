@@ -1,0 +1,61 @@
+{
+  "recordedAt": "2026-10-08T18:57:01.136Z",
+  "files": [
+    {
+      "file": "caller-contract.json",
+      "sha256": "1ffc93d55ae1f8097650ca4525ff8cec93d9b7e2f58bc6ef9d8c7ed556e41662"
+    },
+    {
+      "file": "DECISION.json",
+      "sha256": "00874b9b3fa4eb55168b70bc035d8bd18e2cd0c9a4feee47c6f5a3a9d1f9d6fc"
+    },
+    {
+      "file": "eslint-results.json",
+      "sha256": "15c6b51dab6636386ab377cf59ee14f01a9396bb9ec5f8892e42eeee231cc365"
+    },
+    {
+      "file": "finalize.cjs",
+      "sha256": "665959f754c28ddbf4c22b7c17abfd3288ae6f3b0e43d8bd4e3350a7c7e05910"
+    },
+    {
+      "file": "independent-integration.cjs",
+      "sha256": "53600f4cb20b8b6e57fb3c9e6d2c30e9e203a8aa3a61d5a1098355528ac4c4da"
+    },
+    {
+      "file": "independent-results.json",
+      "sha256": "39a06c7186cb32b37bcb4b68a5ead4d31ef6385cb6346b3e261ce89a6fc4f984"
+    },
+    {
+      "file": "integration-results.json",
+      "sha256": "3fd013c53fda40d6f477018c7a6b78240f8c77cb5105bf98d87932e8c1729c7a"
+    },
+    {
+      "file": "lifecycle-results.json",
+      "sha256": "678014dfd638d1e262e575e9adeb669b449587a6e1e1fa4e9a31987b5e7dac24"
+    },
+    {
+      "file": "quality-results.json",
+      "sha256": "6d60335ec1c89f4e3068b9828e39ee642e003d3b9b2befdf03f3121d80d7bc14"
+    },
+    {
+      "file": "REPORT.md",
+      "sha256": "e46bd812339fbb7246583f1de74940cf62dafba450ecc63ffe5eae3dd0acfe11"
+    },
+    {
+      "file": "rerun.cjs",
+      "sha256": "42ccd4f1020f7fb9e2e9c2e826dbd8354624dba3a5dd87109db7a659062f8508"
+    },
+    {
+      "file": "snapshot-after.json",
+      "sha256": "96013920791b587da8217be78c76a3567054c6a70be8ec946d0e58b1fd2da7bd"
+    },
+    {
+      "file": "snapshot-before.json",
+      "sha256": "ea249474ad71c38481b6a01c199e0f03d897a8fc91fe159d807f3ee2fb368da5"
+    },
+    {
+      "file": "snapshot.cjs",
+      "sha256": "db3c1b0d0c8f4fa460d3ed48d4252888a54495642ec08a2f668f15c666dfd18a"
+    }
+  ]
+}

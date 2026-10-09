@@ -1,0 +1,66 @@
+{
+  "owner": "Codex-3",
+  "status": "PASS",
+  "lint": {
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "components/feature/manage/workers/WorkerModifyScreen.tsx"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 2 files in 14ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "renderChecks": [
+    {
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "comparison": "Editor JSX unchanged except intentional submit event binding and saved disabled condition",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "comparison": "Editor JSX unchanged except intentional submit event binding and saved disabled condition",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+  }
+}

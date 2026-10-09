@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "kind": "QC rerun of reviewed developer regression harnesses; outputs isolated from developer evidence. No full application/native/API validation.",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "before": [
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+      "handoffMatches": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+      "handoffMatches": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+      "handoffMatches": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "15fb7a72a386f860e6d0926fe1a356fd6b4acaa2b994c279b171942ef0675e8d",
+      "handoffMatches": true
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+      "handoffMatches": true
+    }
+  ],
+  "after": [
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+      "unchangedDuringQC": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+      "unchangedDuringQC": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+      "unchangedDuringQC": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "15fb7a72a386f860e6d0926fe1a356fd6b4acaa2b994c279b171942ef0675e8d",
+      "unchangedDuringQC": true
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+      "unchangedDuringQC": true
+    }
+  ],
+  "harnessHashes": [
+    {
+      "file": "docs\\qa\\senior-8-2026-10-09\\browser.cjs",
+      "sha256": "a87887c11ad0d5494e26e87f85a3f1958500724a388c3f873b75a2681fb5cc4e",
+      "handoffMatches": true
+    },
+    {
+      "file": "docs\\qa\\senior-8-2026-10-09\\catalog-regression.cjs",
+      "sha256": "1168fa0d8b4e1efa5beb9d5d69c48831e60177cd51451c6983cbb35ee56b0a56",
+      "handoffMatches": true
+    },
+    {
+      "file": "docs\\qa\\senior-8-2026-10-09\\ledger-regression.cjs",
+      "sha256": "1950d1619dbddc27e1a76ff1fd666751ddc5cab2a45103aa40e8f87aaf3d268e",
+      "handoffMatches": true
+    },
+    {
+      "file": "docs\\qa\\senior-8-2026-10-09\\balance-regression.cjs",
+      "sha256": "7b19210dc1ba993a50605ceb354938b27ab29d490a57d1d5f06a88412c54b27b",
+      "handoffMatches": true
+    }
+  ],
+  "jsxChecks": [
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "unchangedFinalJSX": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "unchangedFinalJSX": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "unchangedFinalJSX": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "unchangedFinalJSX": true
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "unchangedFinalJSX": true
+    }
+  ],
+  "commands": [
+    {
+      "command": "node .expo\\qc-senior8-2026-10-09\\catalog-regression.cjs",
+      "exitCode": 0,
+      "stdout": "13 catalog regression scenarios passed; runtime errors: 0",
+      "stderr": ""
+    },
+    {
+      "command": "node .expo\\qc-senior8-2026-10-09\\ledger-regression.cjs",
+      "exitCode": 0,
+      "stdout": "13 ledger regression scenarios passed; runtime errors: 0",
+      "stderr": ""
+    },
+    {
+      "command": "node .expo\\qc-senior8-2026-10-09\\balance-regression.cjs",
+      "exitCode": 0,
+      "stdout": "22 balance regression scenarios passed; runtime errors: 0",
+      "stderr": ""
+    },
+    {
+      "command": "node node_modules/eslint/bin/eslint.js app/(no-layout)/catalog/bundling/detail.tsx app/(no-layout)/catalog/extra-menu/detail.tsx app/(no-layout)/catalog/menu/detail.tsx app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx components/feature/accounting/accounts/AccountBalanceCard.tsx --format json",
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 7
+    },
+    {
+      "command": "git diff --check -- <five source files>",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/catalog/bundling/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/catalog/extra-menu/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/catalog/menu/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'components/feature/accounting/accounts/AccountBalanceCard.tsx', LF will be replaced by CRLF the next time Git touches it"
+    }
+  ]
+}

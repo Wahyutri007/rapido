@@ -1,0 +1,16 @@
+{
+  "output": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\.expo\\senior6-absence-history-offline\\entry.bundle.js",
+  "bytes": 10989876,
+  "assets": 35,
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5"
+  },
+  "limitations": "One-shot isolated Metro API build; no root Metro config/NativeWind plugin, own transform cache, stylesheet supplied by own Tailwind output."
+}

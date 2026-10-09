@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "roots": [
+    "app/(no-layout)/manage/absence/_layout.tsx",
+    "app/(no-layout)/manage/absence/index.tsx",
+    "app/(no-layout)/manage/absence/detail.tsx"
+  ],
+  "sourceFiles": 1177,
+  "diagnostics": [],
+  "checkedAt": "2026-10-09T01:42:41.809Z",
+  "scope": "Three Absensi Kelola route roots and imported dependencies, not full application TypeScript."
+}

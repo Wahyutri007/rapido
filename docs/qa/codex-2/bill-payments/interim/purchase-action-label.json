@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-10-09T01:44:20.107Z",
+  "passed": false,
+  "assertions": 54,
+  "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Hapus', exact: true }).filter({ visible: true })\u001b[22m\n\n    at main (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-2\\bill-payments\\check-browser.cjs:340:25)",
+  "pageErrors": []
+}

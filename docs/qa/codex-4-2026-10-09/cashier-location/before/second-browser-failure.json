@@ -1,0 +1,40 @@
+{
+  "status": "FAIL",
+  "checks": [
+    "Cashier tab shows an explicit preview selector without choosing a fixture as active store",
+    "Selecting preview outlet renders eighteen places and derived activity counts",
+    "Search trims case and reset restores the selected outlet",
+    "Area and effective activity filters combine without cross-area records",
+    "Place detail preserves outlet, area and place IDs and recorded capacity",
+    "Back retains filters and tab navigation returns to the place list",
+    "Changing outlet clears draft filters and does not retain a foreign area",
+    "Inactive outlet yields only inactive places and active filter empty state",
+    "Direct invalid outlet stays unselected and can recover using the selector",
+    "Forged cross-outlet detail does not show a first-record fallback"
+  ],
+  "error": "locator.waitFor: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Daftar Tempat · 18', { exact: true }).filter({ visible: true }) to be visible\u001b[22m\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-4-2026-10-09\\cashier-location\\browser-check.cjs:158:45\n    at async record (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-4-2026-10-09\\cashier-location\\browser-check.cjs:23:3)\n    at async main (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-4-2026-10-09\\cashier-location\\browser-check.cjs:150:5)",
+  "errors": [],
+  "consoleErrors": [],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    }
+  ]
+}

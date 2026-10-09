@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-09",
+  "decision": "AUDIT_PARTIAL_CHANGES_REQUESTED",
+  "limits": "Four source-level differences corroborate historical screenshots. No fresh full-application visual run or current pixel approval. Remaining observations require current capture at matching state/viewport. Dynamic fixture values and intentional placeholder corrections are not design defects.",
+  "findings": [
+    {
+      "id": "QC-FIGMA-001",
+      "status": "OPEN_SOURCE_DIFFERENCE",
+      "frameIds": ["1:19624"],
+      "title": "Ikon dan warna kategori FAQ berbeda",
+      "evidence": "Screenshot Figma memakai ikon outline berbeda; kategori katalog berwarna magenta dan waiter ungu. FaqCard terkini memakai tag dan bell-concierge primary/biru serta registry ikon pengganti.",
+      "sourceFiles": ["components/feature/support/FaqCard.tsx"],
+      "owner": "Codex-3 / pemilik Bantuan; perubahan registry/token bersama harus dikoordinasikan",
+      "correction": "Ambil SVG/tint resmi dari frame FAQ, simpan aset lokal, gunakan primitive/semantic token yang disetujui; pertahankan perilaku expand/search.",
+      "acceptance": "Screenshot komponen aktual pada state kategori sama; enam ikon/tint cocok, tidak ada perubahan perilaku, 320/390/native tetap terbaca."
+    },
+    {
+      "id": "QC-FIGMA-002",
+      "status": "OPEN_SOURCE_DIFFERENCE",
+      "frameIds": ["1:19624"],
+      "title": "Bentuk tombol Hubungi Support berbeda",
+      "evidence": "Figma menampilkan tombol persegi bersudut kecil. Caller FAQ memakai Button size xs tanpa varian bentuk; primitive Button default rounded-full. Screenshot historis memperlihatkan bentuk pill.",
+      "sourceFiles": ["app/(no-layout)/manage/faq/index.tsx", "components/ui/button/index.tsx"],
+      "owner": "Codex-3 untuk caller; pemilik Button/PM untuk varian opt-in",
+      "correction": "Gunakan varian bentuk semantic yang sesuai frame pada caller ini; jangan mengubah default global atau menambah override radius sembarang.",
+      "acceptance": "Tombol cocok bentuk/ukuran acuan, area tekan tetap layak, default caller lain tidak berubah dan dialog kontak belum tersedia tetap jujur."
+    },
+    {
+      "id": "QC-FIGMA-003",
+      "status": "OPEN_SOURCE_DIFFERENCE",
+      "frameIds": ["1:13605"],
+      "title": "Angka ringkasan detail penyesuaian stok kehilangan warna",
+      "evidence": "Figma memberi warna warning/destructive/success pada tiga total. StockOperationDetail mengirim tone yang tepat, tetapi InventoryMetrics menerapkannya pada ikon/latar saja; Text untuk item.value memakai foreground tanpa tone. Screenshot historis memperlihatkan tiga angka gelap.",
+      "sourceFiles": ["components/feature/inventory/StockOperationDetail.tsx", "components/feature/inventory/InventoryUi.tsx"],
+      "owner": "Senior5 / pemilik Inventory; pisahkan dari scope Stok Akhir yang aktif",
+      "correction": "Tambahkan opsi semantic warna nilai pada komposisi metrik penyesuaian; pertahankan default ringkasan/transfer dan perhitungan stok dinamis.",
+      "acceptance": "Tiga nilai berwarna sesuai acuan, label tetap terbaca pada 320/390, satuan campur tetap tidak dijumlah dan caller lain tetap sesuai desain masing-masing."
+    },
+    {
+      "id": "QC-FIGMA-004",
+      "status": "OPEN_SOURCE_DIFFERENCE",
+      "frameIds": ["1:12059", "1:14945"],
+      "title": "Ikon metadata daftar transfer dan pembelian terlalu biru",
+      "evidence": "Figma memakai ikon metadata muted/abu-abu. InventoryMetadata terkini selalu memanggil InventoryIcon tanpa tone; default tone primary. Screenshot historis memperlihatkan ikon metadata biru.",
+      "sourceFiles": ["components/feature/inventory/InventoryUi.tsx"],
+      "owner": "Senior5 / pemilik Inventory dan ikon semantic",
+      "correction": "Sediakan tone muted secara semantic dan pilih untuk metadata pada kedua frame; jangan mengubah semua ikon biru global.",
+      "acceptance": "Ikon metadata muted dan bentuk sesuai asset acuan; link ID/action tetap primary, semua caller InventoryMetadata ditinjau ulang."
+    }
+  ],
+  "comparisons": [
+    {"frameId":"1:4792","screen":"Persediaan hub","observation":"Urutan kelompok/menu dan ilustrasi bitmap sama. Screenshot historis berbeda pada posisi header/pencarian, bayangan kartu dan tinggi ruang navigasi bawah.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:12487","screen":"Ringkasan bahan","observation":"Kelompok metrik/ranking sesuai garis besar. Gambar Figma hanya 124x1024, sedangkan preview aplikasi hanya viewport atas; perlu acuan resolusi penuh dan capture semua bagian bawah. Tidak menilai bagian di luar viewport sebagai hilang.","status":"LOW_RESOLUTION_AND_STATE_COVERAGE_PENDING"},
+    {"frameId":"1:12956","screen":"Ringkasan produk","observation":"Tab/metrik/ranking sesuai garis besar. Gambar Figma hanya 133x1024; grafik/rekomendasi/insight perlu perbandingan resolusi penuh dan scroll lengkap.","status":"LOW_RESOLUTION_AND_STATE_COVERAGE_PENDING"},
+    {"frameId":"1:12059","screen":"Daftar transfer","observation":"Struktur metrik/tab/card/CTA tersedia. Ikon metadata berbeda (004), bayangan/padding dan warna ikon jenis bahan perlu capture terkini. Jumlah tab berbeda karena data dinamis, bukan temuan.","status":"SOURCE_DIFFERENCE_AND_HISTORICAL_GEOMETRY_PENDING"},
+    {"frameId":"1:11949","screen":"Form transfer","observation":"Urutan kartu/field sama. Preview historis membuat Jumlah Transfer dua baris dan control tambah produk memiliki teks muted/chevron, sedangkan acuan satu baris dan action centered biru. State populated sama perlu dirender ulang.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:12312","screen":"Detail transfer","observation":"Susunan informasi dan produk tersedia. Bentuk ikon toko/catatan/item dan kepadatan row berbeda pada screenshot historis. Jumlah item, kuantitas dan timestamp berasal dari record berbeda, bukan temuan.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:13404","screen":"Daftar penyesuaian","observation":"Acun ID record tampil dalam chip biru muda, preview historis hanya teks biru. Tinggi card, chevron dan padding berbeda. Total/ID/jumlah chip berasal dari fixture dinamis, jangan disalin sebagai data aplikasi.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:13851","screen":"Form penyesuaian","observation":"Struktur stok/penyusutan/stok akhir tersedia. Action pilih produk berbeda alignment, chevron dan warna; ukuran card/input serta enabled/disabled/focus state perlu dibandingkan secara setara.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:13605","screen":"Detail penyesuaian","observation":"Perbedaan angka ringkasan dikonfirmasi source (003). Screenshot historis juga membungkus label total, meningkatkan tinggi card; caption Rusak historis gelap, tetapi source kini memiliki text-destructive sehingga membutuhkan capture baru, bukan temuan terkini terkonfirmasi.","status":"SOURCE_DIFFERENCE_AND_HISTORICAL_GEOMETRY_PENDING"},
+    {"frameId":"1:14945","screen":"Daftar pembelian","observation":"Urutan metadata/status/CTA sesuai garis besar. Ikon metadata berbeda (004); badge Dibatalkan historis gelap, bentuk ikon toko dan spacing perlu recheck. Nominal/count record tidak disamakan dengan fixture.","status":"SOURCE_DIFFERENCE_AND_HISTORICAL_GEOMETRY_PENDING"},
+    {"frameId":"1:14543","screen":"Form pembelian","observation":"Urutan toko/pemasok/metode/tanggal/jenis/catatan/CTA tersedia. Preview kosong dibandingkan terpisah dari preview filled yang sudah scroll. Toggle Lunas, tanggal dan action tambah perlu capture terkini; label Tambah Bahan Baku pada acuan Produk merupakan inkonsistensi desain yang perlu klarifikasi konteks, jangan membuat label salah.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:19624","screen":"FAQ","observation":"Daftar, filter kategori, bantuan tersedia. Ikon/tint dan bentuk tombol dikonfirmasi source (001/002); spacing header/list/filter butuh capture aktual.","status":"SOURCE_DIFFERENCES_CONFIRMED"},
+    {"frameId":"1:19565","screen":"Permintaan fitur","observation":"Ilustrasi menggunakan aset acuan yang sama. Background/ukuran hero, jarak card dan footer berbeda pada screenshot historis. Placeholder judul/email dan typo Figma sudah dinormalisasi menjadi teks relevan; dicatat sebagai perbedaan copy, bukan bug otomatis.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"},
+    {"frameId":"1:19672","screen":"Feedback","observation":"Ilustrasi/urutan field/chip/CTA tersedia. Ukuran/posisi ilustrasi, padding hero, panjang kartu dan tinggi footer berbeda pada screenshot historis yang dimensinya berbeda; normalisasi viewport/state wajib sebelum menilai geometri.","status":"HISTORICAL_VISUAL_DIFFERENCE_RECAPTURE_REQUIRED"}
+  ],
+  "additionalReferences": [
+    {"frameId":"1:4897","screen":"Kelola hub","status":"REFERENCE_AVAILABLE_CURRENT_CAPTURE_PENDING","note":"Gambar cached 227x1024 dan full context tersimpan. Tidak ada pasangan current screenshot dalam paket audit ini."},
+    {"frameId":"1:12401","screen":"Stok Akhir","status":"OWNER_IN_PROGRESS_FINAL_HANDOFF_PENDING","note":"Full context tersedia. Screenshot interim Senior5 phone-390 dan reference-390x1347 dilihat; bagian atas secara visual dekat acuan, tetapi state fixture/handoff/source dan tampilan bawah/native belum QC. Tidak ada PASS atau temuan koreksi tambahan dari audit ini."}
+  ]
+}

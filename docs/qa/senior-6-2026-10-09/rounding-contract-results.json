@@ -1,0 +1,235 @@
+{
+    "backendSourceSha256": {
+        "app/Domain/User/Requests/RoundingSettingRequest.php": "a1eceb3f8ba5942a056989b477f348bdac0034cdd85477c777d3278b9a92bee5",
+        "app/Domain/Order/Services/CartPricingService.php": "7fed3ba9e304a30f81a33d4dab5a49cb7cdbcbd39e0a87e4481d29c9949eb04f"
+    },
+    "payloadSha256": "62bad0179b57f11bb04ca3f30136fefd5cffcb7633220853159567be159c0b74",
+    "cases": [
+        {
+            "scenario": "default before API data",
+            "payload": {
+                "enabled": true,
+                "method": "nearest",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 100,
+            "roundedTotal": 15000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "disabled and exponent zero",
+            "payload": {
+                "enabled": false,
+                "method": "down",
+                "decimal_places": 0
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1,
+            "roundedTotal": 15001,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 0 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 0
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1,
+            "roundedTotal": 15001,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 1 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 10,
+            "roundedTotal": 15010,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 2 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 100,
+            "roundedTotal": 15100,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 3 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 4 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 4
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 10000,
+            "roundedTotal": 20000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 5 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 5
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 100000,
+            "roundedTotal": 100000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 6 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 6
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1000000,
+            "roundedTotal": 1000000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 7 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 7
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 10000000,
+            "roundedTotal": 10000000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 8 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 8
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 100000000,
+            "roundedTotal": 100000000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 9 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 9
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1000000000,
+            "roundedTotal": 1000000000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 10 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 10
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 10000000000,
+            "roundedTotal": 10000000000,
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Puluhan (Rp10)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 10,
+            "roundedTotal": 15010,
+            "expected": 15010,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Ratusan (Rp100)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 100,
+            "roundedTotal": 15100,
+            "expected": 15100,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Ribuan (Rp1.000)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "expected": 16000,
+            "expectedMatches": true
+        }
+    ],
+    "passed": true,
+    "limitations": "Actual Request validator, same arithmetic as CartPricingService; full cart/service and real API not executed. No database mutation."
+}

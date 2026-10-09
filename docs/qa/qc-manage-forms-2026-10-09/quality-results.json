@@ -1,0 +1,65 @@
+{
+  "scopedEslint": {
+    "exitCode": 0,
+    "files": 10,
+    "errors": 0,
+    "warnings": 0,
+    "command": "node node_modules/eslint/bin/eslint.js [four modify paths] components/feature/manage/settings --max-warnings 0 --no-cache"
+  },
+  "biome-format": {
+    "command": [
+      "D:\\laragon\\bin\\node.exe",
+      "node_modules/@biomejs/biome/bin/biome",
+      "format",
+      "app/(no-layout)/manage/extra/modify.tsx",
+      "app/(no-layout)/manage/order-type/modify.tsx",
+      "app/(no-layout)/manage/payment-method/modify.tsx",
+      "app/(no-layout)/manage/tax/modify.tsx",
+      "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "components/feature/manage/settings/ManageFormNotFound.tsx",
+      "components/feature/manage/settings/ManagePreviewForm.tsx",
+      "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "components/feature/manage/settings/TaxModifyScreen.tsx"
+    ],
+    "exitCode": 0
+  },
+  "biome-check": {
+    "command": [
+      "D:\\laragon\\bin\\node.exe",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "--reporter=json",
+      "app/(no-layout)/manage/extra/modify.tsx",
+      "app/(no-layout)/manage/order-type/modify.tsx",
+      "app/(no-layout)/manage/payment-method/modify.tsx",
+      "app/(no-layout)/manage/tax/modify.tsx",
+      "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "components/feature/manage/settings/ManageFormNotFound.tsx",
+      "components/feature/manage/settings/ManagePreviewForm.tsx",
+      "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "components/feature/manage/settings/TaxModifyScreen.tsx"
+    ],
+    "exitCode": 1
+  },
+  "diff-check": {
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "app/(no-layout)/manage/extra/modify.tsx",
+      "app/(no-layout)/manage/order-type/modify.tsx",
+      "app/(no-layout)/manage/payment-method/modify.tsx",
+      "app/(no-layout)/manage/tax/modify.tsx",
+      "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "components/feature/manage/settings/ManageFormNotFound.tsx",
+      "components/feature/manage/settings/ManagePreviewForm.tsx",
+      "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "components/feature/manage/settings/TaxModifyScreen.tsx"
+    ],
+    "exitCode": 0
+  }
+}

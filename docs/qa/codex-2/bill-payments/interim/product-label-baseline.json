@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-10-09T01:13:40.782Z",
+  "passed": false,
+  "assertions": 10,
+  "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Nasi Goreng Pedas', { exact: true }).filter({ visible: true }).last()\u001b[22m\n\n    at choose (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-2\\bill-payments\\check-browser.cjs:61:28)\n    at async main (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-2\\bill-payments\\check-browser.cjs:131:3)",
+  "pageErrors": []
+}

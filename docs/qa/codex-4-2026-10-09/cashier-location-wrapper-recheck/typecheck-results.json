@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "roots": [
+    "app/(cashier)/location/index.tsx",
+    "app/(no-layout)/(cashier)/location/_layout.tsx",
+    "app/(no-layout)/(cashier)/location/detail.tsx"
+  ],
+  "sourceFiles": 1196,
+  "diagnostics": [],
+  "checkedAt": "2026-10-09T02:21:36.652Z",
+  "scope": "Three Tempat Kasir route roots and imported dependencies, not full application TypeScript."
+}

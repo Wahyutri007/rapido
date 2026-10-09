@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "passed": 13,
+  "checks": [
+    "Cashier tab shows an explicit preview selector without choosing a fixture as active store",
+    "Selecting preview outlet renders eighteen places and derived activity counts",
+    "Search trims case and reset restores the selected outlet",
+    "Area and effective activity filters combine without cross-area records",
+    "Place detail preserves outlet, area and place IDs and recorded capacity",
+    "Back retains filters and tab navigation returns to the place list",
+    "Changing outlet clears draft filters and does not retain a foreign area",
+    "Inactive outlet yields only inactive places and active filter empty state",
+    "Direct invalid outlet stays unselected and can recover using the selector",
+    "Forged cross-outlet detail does not show a first-record fallback",
+    "Fresh direct detail reload and header fallback return to the matching preview outlet",
+    "List, bottom tab and missing action remain reachable at 320x640",
+    "List, bottom tab and missing action remain reachable at 844x390"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    }
+  ],
+  "checkedAt": "2026-10-09T02:16:41.664Z",
+  "scope": "Production app entry/providers/Expo Router; isolated owner/token/API and HTML/CSS boot fixtures. Existing design store read-only; no backend mutations or native/Figma certification."
+}

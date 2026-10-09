@@ -1,0 +1,196 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-005",
+  "status": "READY_FOR_QC_RECHECK",
+  "independentApproval": false,
+  "createdUTC": "2026-10-08T21:02:50.423Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "branch": "main",
+  "qcRequest": {
+    "signal": "QC-LOGIN-20261009-CHANGES-REQUESTED",
+    "decision": "docs/qa/qc-login-2026-10-09/DECISION.json",
+    "findings": [
+      {
+        "id": "QC-LOGIN-001",
+        "severity": "P2",
+        "qcStatus": "OPEN",
+        "developerStatus": "CORRECTED_PENDING_INDEPENDENT_RECHECK"
+      },
+      {
+        "id": "QC-LOGIN-002",
+        "severity": "P3",
+        "qcStatus": "OPEN",
+        "developerStatus": "CORRECTED_PENDING_INDEPENDENT_RECHECK"
+      }
+    ]
+  },
+  "editedSources": [
+    "context/AuthContext.tsx"
+  ],
+  "sourceOrigin": "Working tree; no commit/push",
+  "sourceBeforeHash": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+  "finalProviderHash": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+  "executedSourceHashes": {
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b"
+  },
+  "runtimeLibraryHashes": {
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "node_modules/@tanstack/react-query/build/modern/index.cjs": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+    "node_modules/@tanstack/query-core/build/modern/index.cjs": "3704990a63f6e23ebc1939b0a7bb45b6e45b95bbc61d7adc1df984fcfe5d3e74",
+    "node_modules/axios/dist/node/axios.cjs": "6de6f72b4ee4912fbfa9e4257b391fbcaeb7620db2cf26ecbea994b146712d82",
+    "node_modules/zod/index.cjs": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+    ".expo/senior7-test-tools/node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/index.js": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+    "node_modules/@tanstack/query-core/build/modern/queryObserver.cjs": "741ec3f6c5c73dfad06b4a25351b8a5635ddb8512e547056c762bd2a84832643",
+    "node_modules/@tanstack/query-core/src/queryObserver.ts": "1572bd597914dff6d26c429462edec6e04d40ba949334f5f2f544181865727b1",
+    "node_modules/expo-secure-store/src/SecureStore.ts": "f587cd76cc1ed16e31373e45f2450b4e4d3c43f321f172b48ae803c4f0eeb545"
+  },
+  "scopeProof": {
+    "publicTypesUseAuthAndInitialStateUnchanged": true,
+    "rolePermissionHelpersSignOutAndCacheClearingUnchanged": true,
+    "updateTokenOnlyAddsRefetchThrowOnError": true,
+    "returnedProviderJsxUnchanged": true,
+    "comparison": "Exact source comparison after EOL normalization; loader/reload/bootstrap effect are the other declared deltas",
+    "contractChecks": [
+      {
+        "file": "api/hooks/auth.ts",
+        "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "passed": true
+      },
+      {
+        "file": "app/(onboarding)/login.tsx",
+        "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "passed": true
+      },
+      {
+        "file": "app/index.tsx",
+        "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+        "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+        "passed": true
+      },
+      {
+        "file": "hooks/useProtectedRoute.ts",
+        "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "passed": true
+      },
+      {
+        "file": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "passed": true
+      },
+      {
+        "file": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "passed": true
+      },
+      {
+        "file": "lib/storage.ts",
+        "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+        "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+        "passed": true
+      },
+      {
+        "file": "lib/storage.web.ts",
+        "expected": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+        "actual": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+        "passed": true
+      },
+      {
+        "file": "package.json",
+        "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+        "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+        "passed": true
+      },
+      {
+        "file": "package-lock.json",
+        "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+        "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+        "passed": true
+      }
+    ]
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/auth-refetch/AuthContext.before.tsx.txt": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/HANDOFF.md": "02de6b14e573101ddc6eede464364dd1bb51f4854b6cd857948731be8fe2f66b",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/baseline-results.json": "1e089e34fdec61764a4053a592dc2a8f994bf6f020b90719774a86405ced8b52",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/boot-regression/check.cjs": "f362fa4e1c378183d60fb61b1fe2601554c2e150404b657ff325688b352503fe",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/boot-regression/final-results.json": "41a8b09f7612234a11a5d844f5c712f577a9b0436cedb6a3d8a90c27fb6700b4",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/check.cjs": "dfd58dfdd94eb3ab9182e4f9186f1680ecdc5646e0bf89e01877b7fd72794677",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/final-results.json": "6e5af081743584a3db1120711b4059bfcebe89cbab740219fc10443a7dc154eb",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/guard-regression/check.cjs": "5f759fc5c7e8ea9cf0bbdf47506f83c6de6d9ca2777b3844d9eb3783cc8f2164",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/guard-regression/final-results.json": "1ba85067127ee241236b108d9bc445a23d8acb6390db076a741aa17be7fd108b",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/harness-provenance.json": "9fd7b5e17ed6e15fa290ef050104945b54c802157cdc4842dc1fe1ab1d6c61b9",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/historical-packets-check.json": "0e062827a67c417b8a31d321d23f304015acf43ca72ca54f374435309f8389ef",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/AuthContext.tsx.txt": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/boot-results.json": "393e40eaadb9241dab1be54e38ca47ba2150599ebb6579eb5ebd66719e5bca21",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/eslint.json": "9dde7b7c284e8f7c059f8fe96d4179a51665aa7fbce9eb05f12161eb32bd131d",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/guard-results.json": "83a111979dc7613bd2d69b794dce88ef7a115b4fe27fc40c244c393a39362ce6",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/integration-results.json": "adf62a5d59cf64d235425291e3ae289ba7da1358c9744e86add8b5ca5048d504",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/provider-baseline-eslint.json": "13acb1c6ec63d3cf6d06fc352f229d8a4c86ed2a5457e6fde96b18b491f9d141",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/provider-final-eslint.json": "52870de17ea7fce1e81fbb6968ce6d1192f3580d5c667ad9ef21396e49977a0c",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/quality-results.json": "c69ae7e447573ff85e94a0399a276b604700681ed192af5a5e4191ab39599e7a",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/scope-proof.json": "67e1e6d5b9461ff4046458d6f79c37e5c239505f0be8a0fad8b3dea130c12c68",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/source-before.json": "5ecedd9512e69fc8c243752e8b8b2b3b4c9f28982ec38383e7b1081cb9a83081",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/typecheck-results.json": "a6dd4f706b96303c781fed9f1c25ea11a0f80917915efd6bf61fd67ab55c2494",
+    "docs/qa/senior-5-2026-10-09/auth-refetch/typecheck.cjs": "0b002714f04d22a7c73819e44194b980bc9846eab22ef3c57d2d5a6bff4d642c"
+  },
+  "assertions": {
+    "baseline": {
+      "passed": 80,
+      "failed": 5
+    },
+    "loginProviderFinal": {
+      "passed": 85,
+      "failed": 0
+    },
+    "bootRegression": {
+      "passed": 64,
+      "failed": 0
+    },
+    "guardRegression": {
+      "passed": 105,
+      "failed": 0
+    },
+    "overlappingCoverage": true,
+    "runtimeErrors": 0,
+    "unhandledRejections": 0
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "focusedTypecheckDiagnostics": 0
+  },
+  "historicalArtifactsMatched": 60,
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "boundaries": [
+    "Developer adaptation/replay of QC runner, not new independent QC approval",
+    "Current guard used in baseline/final; provider baseline override only",
+    "Actual Query/Common/Axios/RHF/Zod with memory IO/native/presentation/router/RAF adapters",
+    "StrictMode provider exercises effect cleanup; storage read itself is not canceled",
+    "Bootstrap callbacks ignore discarded effect; already begun auth/query operations not rolled back",
+    "Token may remain after user validation fails; no atomic token/query or cross-instance login/logout certification",
+    "Old boot/login/guard/QC packets retained, not retrofitted to new dependency hash",
+    "No actual browser/native/SSR/backend/storage/Figma/full app certification or runtime/server/HP/Git publication operations"
+  ]
+}

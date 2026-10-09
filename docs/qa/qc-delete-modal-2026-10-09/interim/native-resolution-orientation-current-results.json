@@ -1,0 +1,53 @@
+{
+  "owner": "QC",
+  "scope": "DeleteConfirmModal horizontal orientation, live rotation and two-button/loading contract",
+  "tested": "CURRENT_PRODUCTION_SOURCE",
+  "sourceHash": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+  "fixtureHash": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+  "checks": [],
+  "passed": 0,
+  "failed": 0,
+  "errors": [
+    "__fbBatchedBridgeConfig is not set, cannot invoke native modules"
+  ],
+  "consoleErrors": [],
+  "blocked": [],
+  "exception": "locator.waitFor: Timeout 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('preview-ready') to be visible\u001b[22m\n",
+  "measurements": [],
+  "bundleReceipts": [
+    {
+      "path": "/.expo/qc-delete-modal-entry.bundle",
+      "bytes": 6613737,
+      "sha256": "6d8b5dc9dbedfbcbe440b67d26850b5897f2c7200482be9739fb2c10b7eac395"
+    }
+  ],
+  "receiptErrors": [],
+  "offlineBuild": {
+    "mode": "current",
+    "createdAt": "2026-10-09T01:31:18.109Z",
+    "entry": "docs\\qa\\qc-delete-modal-2026-10-09\\offline-current-entry.jsx",
+    "entryHash": "902e7cd720852de75d48e07ab91f906026a2f74eb7c76f88cdb99a6ceb3ca078",
+    "output": ".expo\\qc-delete-offline\\current\\entry.bundle.js",
+    "bundleHash": "6d8b5dc9dbedfbcbe440b67d26850b5897f2c7200482be9739fb2c10b7eac395",
+    "bytes": 6613737,
+    "assets": 23,
+    "before": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "node_modules/react-native-css-interop/.cache/android.js": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf"
+    },
+    "after": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "node_modules/react-native-css-interop/.cache/android.js": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf"
+    },
+    "limitations": "Isolated Metro API/RNWeb with real Babel presets and fixed current stylesheet supplied by fixture. No root Metro/NativeWind-plugin pipeline, native, HP, or full application startup approval."
+  },
+  "offlineReceipts": [
+    {
+      "path": "/.expo/qc-delete-modal-entry.bundle",
+      "bytes": 6613737,
+      "sha256": "6d8b5dc9dbedfbcbe440b67d26850b5897f2c7200482be9739fb2c10b7eac395"
+    }
+  ]
+}

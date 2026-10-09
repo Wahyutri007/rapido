@@ -1,0 +1,82 @@
+[
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentSummary.tsx",
+    "sha256": "a1fb7e5cb6d6d3efb4b0f69ca3fa2edd8b60774ec1a3d049a1d2313685d93d02"
+  },
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentListScreen.tsx",
+    "sha256": "c6838bb6e58606e6f272a261c10cfb8d24c8d46de1f4a7aa8cdb69d5e773a164"
+  },
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentDateInput.tsx",
+    "sha256": "9f94d64ecf31b53220cc7463e0a9581ede6aa4116bdaef37d9ed86165cbf8238"
+  },
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentFormScreen.tsx",
+    "sha256": "58c2741d3ddc044d5300fcf210891f73dbb9dab2ebea8a635153ff4c508fd57a"
+  },
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentDeleteDialog.tsx",
+    "sha256": "693a26ce42308a24ac1b07edb61d677084c05f7bfb547c8f4a88c0da8f1d3b0d"
+  },
+  {
+    "path": "components/feature/inventory/bill-payment/BillPaymentDetailScreen.tsx",
+    "sha256": "d970a4c105c9f7bb06cd41a42b15bfb2fff20d3e6961e9da15db3e4e035cfbaa"
+  },
+  {
+    "path": "constants/data/inventory-bill-payments.ts",
+    "sha256": "0f47df39b9d3c8dd2869aa595994c10f89fc9abba25bd90abc32dcb7a6ddd151"
+  },
+  {
+    "path": "types/ui/inventory/bill-payment.ts",
+    "sha256": "176d0e9483b0ea4d81e38851eba8b62940cbb307928077a105a188c0b33563b1"
+  },
+  {
+    "path": "schema/inventory/bill-payment.ts",
+    "sha256": "06dbefeda54f3c76edd1aa21e4cf7dddc188923ee754c46bcad9acfdc843271f"
+  },
+  {
+    "path": "lib/inventory/bill-payment.ts",
+    "sha256": "cd17c52735bac1725155cecc0fc196aa0499535255b06cb80a91d886f8844eb5"
+  },
+  {
+    "path": "store/inventoryBillPaymentStore.ts",
+    "sha256": "7d58b6bfdf72bada2fd0e461a63af7de65b036ed970812ba12b2b400cbbc03d6"
+  },
+  {
+    "path": "store/inventoryStore.ts",
+    "sha256": "050db175f2a522644ca627a9203f76d1e5bbaa1418a915240889378a68724713"
+  },
+  {
+    "path": "components/feature/inventory/PurchaseListScreen.tsx",
+    "sha256": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76"
+  },
+  {
+    "path": "components/feature/inventory/PurchaseDetailScreen.tsx",
+    "sha256": "c7ea4dd0ef1b652ba08c4a5c0c8173b60dc78c7dfe4ac8745553a698f6297653"
+  },
+  {
+    "path": "app/(no-layout)/inventory/bill-payments/_layout.tsx",
+    "sha256": "72e093c24d63f105b2050a82b534f9fa272ef87c2b2064846891488beb7a6fcb"
+  },
+  {
+    "path": "app/(no-layout)/inventory/bill-payments/index.tsx",
+    "sha256": "9fc8a0f53cd9b652b6fb6ac37466dd937e7eaa7e37bb8ce8d122666769d3a66d"
+  },
+  {
+    "path": "app/(no-layout)/inventory/bill-payments/modify.tsx",
+    "sha256": "ac52e7b548175d318e417e019d994181078ca677f43620700c9ba474fed02087"
+  },
+  {
+    "path": "app/(no-layout)/inventory/bill-payments/detail.tsx",
+    "sha256": "9e26c5570a2ae2afd90203e0c75ac6c43b2f89cf4e3976f5549db45b68ae9ada"
+  },
+  {
+    "path": "app/(no-layout)/inventory/_layout.tsx",
+    "sha256": "130299e720d6267d535ec9c633e00a6c80d115303e63a46853fd11ff09ecf274"
+  },
+  {
+    "path": "app/(back-office)/inventory/index.tsx",
+    "sha256": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75"
+  }
+]

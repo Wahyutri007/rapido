@@ -1,0 +1,91 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-011",
+  "status": "READY_FOR_QA_QC",
+  "capturedAt": "2026-10-09T01:08:26.083Z",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+  },
+  "contractHashes": {
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleQueryError.tsx": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerQueryError.tsx": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+    "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f"
+  },
+  "baseline": {
+    "sourceHashes": {
+      "components/feature/manage/roles/RoleListScreen.tsx": "426b20d5e66c816d1ec2a64f69f8780a6e0257432aa13135be6b29b6345cfe68",
+      "components/feature/manage/workers/WorkerListScreen.tsx": "7219730a1e3ecead9431bad0d1a4ebeba6295c6e793b6ecb74f87839823bda3b",
+      "components/feature/manage/member/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3"
+    },
+    "passed": 81,
+    "failed": 84,
+    "runtimeErrors": 0,
+    "productionModules": 25
+  },
+  "checks": {
+    "developerAssertions": 165,
+    "productionModules": 26,
+    "failures": 0,
+    "runtimeErrors": 0,
+    "focusedTypeDiagnostics": 0,
+    "quality": "PASS"
+  },
+  "internalReview": {
+    "kind": "Independent production list/sheet/delete mutation fixture review, root sealed completed executions; not external QC",
+    "status": "INTERNAL_QA_REVIEW_PASS",
+    "independentAssertions": 277,
+    "stateAndIntegration": 258,
+    "staticFingerprints": 19,
+    "manifest": "docs/qa/codex-3-internal-review/list-actions-2026-10-09/verification.json",
+    "manifestSha256": "27958b4c0522783163a9a82764269f1192ae3a52ddfb3cc8044b580b400c28f0",
+    "externalQcApproval": false
+  },
+  "artifactFingerprints": {
+    "baseline-results.json": "9951b6dc3c7230580188aed78de21991578d9271ee6af90ef97c12695ee332f9",
+    "check.cjs": "1a5484fb54fc160f1e5ec6115fca098cb974766c46e71b023264cd25284b8bef",
+    "HANDOFF.md": "ce8df30247bf731d4a4ef5c234843c9e39f61aaa02bd505aa611bcd4da531667",
+    "inputs-before.json": "8a232b4aa78921978569331dccf76ef716a903457586725cb773710c412fb13d",
+    "member.before.tsx.txt": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+    "quality-results.json": "a72859a0a3247119ce6ffb1035f0638656a2ba6b86ef2aa001fa6ce89c39213a",
+    "quality.cjs": "81c3bc1e45d01bfc25c4bac106910d1ef98e779795bbad440ba3b733712b7d3a",
+    "results.json": "da6e867251f20cf77bff34f58a66d96f58d4275c505664d7814e7cb5c8b012d6",
+    "role.before.tsx.txt": "426b20d5e66c816d1ec2a64f69f8780a6e0257432aa13135be6b29b6345cfe68",
+    "verify.cjs": "324de95c7eb40ab5752c38bb5b7b73dd3c79cfb3144b9a833839d904c9ede815",
+    "worker.before.tsx.txt": "7219730a1e3ecead9431bad0d1a4ebeba6295c6e793b6ecb74f87839823bda3b"
+  },
+  "limits": [
+    "Three list sources plus one owned manage helper; list/card/search/loading/error/refresh/empty/add CTA AST preserved except selection event",
+    "Production DELETE through local Axios/QueryClient; GET/presentation/FlatList/router/native adapters, list has no onDeleted callback",
+    "Confirmation/sheet retires on missing canonical/loading/error; retained child owns already-dispatched request/notice, no transport abort claim",
+    "SD3-006 through SD3-010 and accepted editor QC packets remain frozen history; new list caller hashes belong to this overlay",
+    "External QC-SUCCESS-001 landscape finding remains OPEN for shared SuccessModalF90; list review is not shared geometry approval",
+    "No browser/native/full-router/root-auth/Figma/backend/full-project/publication approval"
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "passed": 54,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "all finance rows including unknown dates retained",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "name": "specific store includes only matching records",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "single day inclusive and Indonesian date parsed",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "invalid dates excluded and reported",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "open ended lower bound",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "open ended upper bound",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "empty range has header but no records",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "store options derived without fictional store",
+      "actual": [
+        "__all__",
+        "A",
+        "B"
+      ],
+      "expected": [
+        "__all__",
+        "A",
+        "B"
+      ],
+      "passed": true
+    },
+    {
+      "name": "invalid options rejected {\"start\":\"2026-02-30\"}",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "invalid options rejected {\"end\":\"no-date\"}",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "invalid options rejected {\"start\":\"2026-10-10\",\"end\":\"2026-10-09\"}",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "invalid options rejected {\"type\":\"unknown\"}",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "valid leap date accepted",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "inventory ignores period bounds",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "transaction count uses real rows not fixture summary",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "transaction period uses dateKey",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "transaction disallows invented per-store data",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "inventory disallows invented per-store data",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "unknown store rejected",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "CSV quotes embedded comma quote and newline",
+      "actual": "\"a,\"\"b\nc\"",
+      "expected": "\"a,\"\"b\nc\"",
+      "passed": true
+    },
+    {
+      "name": "formula text neutralized =1+1",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "formula text neutralized  +SUM(1)",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "formula text neutralized \t@x",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "formula text neutralized -cmd",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "negative numbers remain numeric",
+      "actual": "\"-3\"",
+      "expected": "\"-3\"",
+      "passed": true
+    },
+    {
+      "name": "non-finite numbers left blank",
+      "actual": "\"\"",
+      "expected": "\"\"",
+      "passed": true
+    },
+    {
+      "name": "missing values blank",
+      "actual": "\"\"",
+      "expected": "\"\"",
+      "passed": true
+    },
+    {
+      "name": "UTF8 BOM included",
+      "actual": 65279,
+      "expected": 65279,
+      "passed": true
+    },
+    {
+      "name": "source included in CSV",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "web dispatch reports request only",
+      "actual": "download",
+      "expected": "download",
+      "passed": true
+    },
+    {
+      "name": "browser filename correct",
+      "actual": "rapido-pratinjau-financial.csv",
+      "expected": "rapido-pratinjau-financial.csv",
+      "passed": true
+    },
+    {
+      "name": "browser Blob contains complete CSV",
+      "actual": "\"Sumber\",\"ID\",\"Jenis\",\"Tanggal sumber\",\"Tanggal ISO\",\"Jam\",\"Toko\",\"Referensi\",\"Akun\",\"Kode akun\",\"Sumber dana\",\"Pembuat\",\"Nominal\",\"Deskripsi\"\r\n\"Pratinjau penerimaan sesi\",\"a\",\"manual\",\"9 Oktober 2026\",\"2026-10-09\",\"12:00\",\"A\",\"a\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau penerimaan sesi\",\"b\",\"manual\",\"2026-10-10\",\"2026-10-10\",\"12:00\",\"B\",\"b\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau penerimaan sesi\",\"c\",\"manual\",\"bad\",\"\",\"12:00\",\"\",\"c\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau pengeluaran sesi\",\"e\",\"expense\",\"2026-10-09\",\"2026-10-09\",\"12:00\",\"A\",\"e\",\"Kas\",\"101\",\"Tunai\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n",
+      "expected": "\"Sumber\",\"ID\",\"Jenis\",\"Tanggal sumber\",\"Tanggal ISO\",\"Jam\",\"Toko\",\"Referensi\",\"Akun\",\"Kode akun\",\"Sumber dana\",\"Pembuat\",\"Nominal\",\"Deskripsi\"\r\n\"Pratinjau penerimaan sesi\",\"a\",\"manual\",\"9 Oktober 2026\",\"2026-10-09\",\"12:00\",\"A\",\"a\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau penerimaan sesi\",\"b\",\"manual\",\"2026-10-10\",\"2026-10-10\",\"12:00\",\"B\",\"b\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau penerimaan sesi\",\"c\",\"manual\",\"bad\",\"\",\"12:00\",\"\",\"c\",\"\",\"\",\"\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n\"Pratinjau pengeluaran sesi\",\"e\",\"expense\",\"2026-10-09\",\"2026-10-09\",\"12:00\",\"A\",\"e\",\"Kas\",\"101\",\"Tunai\",\"Tester\",\"100\",\"comma, quote\"\" and\nnewline\"\r\n",
+      "passed": true
+    },
+    {
+      "name": "blob URL released",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "download failure propagates",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "failed download releases URL",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "native cancellation distinguished",
+      "actual": "cancelled",
+      "expected": "cancelled",
+      "passed": true
+    },
+    {
+      "name": "native share distinguished",
+      "actual": "shared",
+      "expected": "shared",
+      "passed": true
+    },
+    {
+      "name": "native share receives CSV text",
+      "actual": "CSV",
+      "expected": "CSV",
+      "passed": true
+    },
+    {
+      "name": "share failure propagates",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "screen shows actual preview row count",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "invalid dates prevent delivery",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "pending double submit delivers once",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "name": "pending action disables button",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "cancel shown honestly",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "cancel allows retry",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "failure displayed",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "live update changes preview",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "submit captures latest store",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "removed store blocks export",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "inventory preview ignores hidden date and store",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "hidden empty store does not block inventory",
+      "actual": 7,
+      "expected": 7,
+      "passed": true
+    },
+    {
+      "name": "inventory export uses aggregate headers",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "empty source disables export",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "no unexpected React errors",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "lib/manage/export-data.ts",
+      "sha256": "fee968ee95ecba5cfd16963de2c8535648e6ea34d56c431175fdfca46698aa49"
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+    },
+    {
+      "file": "schema/manage/export.ts",
+      "sha256": "1a62146e411bd11f08e9394d33727fdc5a9f8b8531e545d01c0287168d6949dc"
+    },
+    {
+      "file": "lib/manage/export-delivery.ts",
+      "sha256": "c61bffbf44d701475aa076c23f9cab5cfa367c5e97ad1dffb3e26e318ffcedaf"
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "store/inventoryMaterialStore.ts",
+      "sha256": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30"
+    },
+    {
+      "file": "constants/data/inventory-materials.ts",
+      "sha256": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08"
+    },
+    {
+      "file": "constants/data/inventory.ts",
+      "sha256": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d"
+    },
+    {
+      "file": "lib/inventory-material.ts",
+      "sha256": "06bf405b5e51a127888b4453bf709be85e63ff376f39df946b80308d719599ee"
+    },
+    {
+      "file": "schema/inventory/material.ts",
+      "sha256": "64da566f0aef9c04a9b1aca1d3bbfe4185ea7c34e432edc032f003126a83f687"
+    },
+    {
+      "file": "store/inventoryStore.ts",
+      "sha256": "050db175f2a522644ca627a9203f76d1e5bbaa1418a915240889378a68724713"
+    },
+    {
+      "file": "store/inventoryBillPaymentStore.ts",
+      "sha256": "7d58b6bfdf72bada2fd0e461a63af7de65b036ed970812ba12b2b400cbbc03d6"
+    },
+    {
+      "file": "constants/data/inventory-bill-payments.ts",
+      "sha256": "0f47df39b9d3c8dd2869aa595994c10f89fc9abba25bd90abc32dcb7a6ddd151"
+    },
+    {
+      "file": "lib/inventory/bill-payment.ts",
+      "sha256": "cd17c52735bac1725155cecc0fc196aa0499535255b06cb80a91d886f8844eb5"
+    },
+    {
+      "file": "lib/inventory/material-date.ts",
+      "sha256": "bbd2e2cae04944ccda7f42d7a1edfaaa388b768afd2e679143860c45f51e9e4d"
+    },
+    {
+      "file": "schema/inventory/bill-payment.ts",
+      "sha256": "06dbefeda54f3c76edd1aa21e4cf7dddc188923ee754c46bcad9acfdc843271f"
+    },
+    {
+      "file": "store/inventoryCompositionStore.ts",
+      "sha256": "b5a37d0e741c8ca8825df46462e6650bdcc46f4a4467451d655b227fee4dc1a5"
+    },
+    {
+      "file": "constants/data/inventory-compositions.ts",
+      "sha256": "fa0640fdd7378bef3279900ba00aaab895952560b882d1a212766cbf0236bd61"
+    },
+    {
+      "file": "schema/inventory/composition.ts",
+      "sha256": "7ac719bc0043b3c98dca3d0f830b8c2eae08ade9e9d08d5901acddafa5ca82b9"
+    },
+    {
+      "file": "components/feature/manage/export/ExportDataScreen.tsx",
+      "sha256": "0fb55da9af10cc3cd66536ee5375abccf5d4cd3e3d5284ea4ff718332df82338"
+    },
+    {
+      "file": "components/feature/reports/transaction/mockData.ts",
+      "sha256": "860fa6a89abb942386a6f94d9f92be1cdffb7b094c4af257a92c8f2abdd20a74"
+    }
+  ],
+  "limits": "Production helpers, screen/RHF/Zod/Zustand; host UI, browser DOM and Share adapters; no real API/device download."
+}

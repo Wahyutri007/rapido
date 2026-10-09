@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-09",
+  "memberSource": [
+    {
+      "file": "api/hooks/customers.ts",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/member/_layout.tsx",
+      "expected": "d60b9c96e8d8eb3a762c496dfd66a7f016153ecd25c477a8fe7239a8f45c031d",
+      "actual": "d60b9c96e8d8eb3a762c496dfd66a7f016153ecd25c477a8fe7239a8f45c031d",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/member/detail.tsx",
+      "expected": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+      "actual": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/member/index.tsx",
+      "expected": "f79aedbbed0258a09b8073ed652b8563c31c19c1a4cbd169fa901256df0b1cfa",
+      "actual": "f79aedbbed0258a09b8073ed652b8563c31c19c1a4cbd169fa901256df0b1cfa",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/member/modify.tsx",
+      "expected": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+      "actual": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+      "actual": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDetailScreen.tsx",
+      "expected": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+      "actual": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberIcon.tsx",
+      "expected": "f10289dac596e3e2e4da170f05a2f9d39769e203995da521c542a996471b96d2",
+      "actual": "f10289dac596e3e2e4da170f05a2f9d39769e203995da521c542a996471b96d2",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberListScreen.tsx",
+      "expected": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+      "actual": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberModifyScreen.tsx",
+      "expected": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "actual": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberQueryError.tsx",
+      "expected": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+      "actual": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+      "matched": true
+    },
+    {
+      "file": "lib/manage/members.ts",
+      "expected": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+      "actual": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+      "matched": true
+    },
+    {
+      "file": "schema/add/customer.ts",
+      "expected": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+      "actual": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+      "matched": true
+    },
+    {
+      "file": "types/api/customer.ts",
+      "expected": "26552f68293d3421f87864ea84fc91a4a3f33952ca7e0dd5c6f4753776d3d1d4",
+      "actual": "26552f68293d3421f87864ea84fc91a4a3f33952ca7e0dd5c6f4753776d3d1d4",
+      "matched": true
+    }
+  ],
+  "developerRouter": {
+    "passed": 16,
+    "failed": 0,
+    "errors": [],
+    "expected422Logs": [
+      "Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)"
+    ],
+    "source": [
+      {
+        "file": "components/feature/manage/member/MemberModifyScreen.tsx",
+        "expected": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+        "actual": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+        "matched": true
+      },
+      {
+        "file": "app/(no-layout)/manage/member/modify.tsx",
+        "expected": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+        "actual": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+        "matched": true
+      },
+      {
+        "file": "api/hooks/customers.ts",
+        "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+        "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+        "matched": true
+      },
+      {
+        "file": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "matched": true
+      },
+      {
+        "file": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "matched": true
+      },
+      {
+        "file": "schema/add/customer.ts",
+        "expected": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+        "actual": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+        "matched": true
+      },
+      {
+        "file": "lib/manage/members.ts",
+        "expected": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+        "actual": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+        "matched": true
+      }
+    ],
+    "rerunByQC": false,
+    "scope": "Production modify route/form and Expo Router setParams; API browser fixtures and isolated layout. Full auth/root, SSR, backend mutations, native and Figma parity untested."
+  },
+  "figmaAccess": "No callable Figma tools exposed in this QC session; no new parity verification."
+}

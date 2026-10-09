@@ -1,0 +1,485 @@
+{
+  "status": "INTERNAL_QA_REVIEW_PASS",
+  "externalQcApproval": false,
+  "pass": 47,
+  "fail": 0,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Production store starts empty without dummy seed",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Zero fee accepted explicitly",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Blank name",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Unsupported payment type",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Unsupported fee type",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Negative fee",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "NaN fee",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Positive infinity fee",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Negative infinity fee",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Percentage above100",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Missing bank",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Unsupported bank",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Blank account number",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Blank account owner",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Percentage100 accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Nominal above100 accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Store contract trims text/lowercases bank while retaining leading zeros",
+      "passed": true,
+      "actual": [
+        "QA",
+        "bca",
+        "001234",
+        "QA Owner"
+      ],
+      "expected": [
+        "QA",
+        "bca",
+        "001234",
+        "QA Owner"
+      ]
+    },
+    {
+      "name": "Two creations have distinct stable IDs",
+      "passed": true,
+      "actual": [
+        "string",
+        "string",
+        true
+      ],
+      "expected": [
+        "string",
+        "string",
+        true
+      ]
+    },
+    {
+      "name": "Invalid add/update do not mutate session data",
+      "passed": true,
+      "actual": [
+        null,
+        false,
+        true
+      ],
+      "expected": [
+        null,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Update missing ID rejects without creating",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Update preserves identity and leaves B unchanged",
+      "passed": true,
+      "actual": [
+        [
+          "payment-method-1",
+          "Changed A"
+        ],
+        [
+          "payment-method-2",
+          "Transfer B"
+        ]
+      ],
+      "expected": [
+        [
+          "payment-method-1",
+          "Changed A"
+        ],
+        [
+          "payment-method-2",
+          "Transfer B"
+        ]
+      ]
+    },
+    {
+      "name": "Delete exact A succeeds once only",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        [
+          "payment-method-2"
+        ]
+      ],
+      "expected": [
+        true,
+        false,
+        [
+          "payment-method-2"
+        ]
+      ]
+    },
+    {
+      "name": "Deleted ID is not reused",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Create visibly defaults zero fee consistently with form data",
+      "passed": true,
+      "actual": "0",
+      "expected": "0"
+    },
+    {
+      "name": "Rapid RHF submit saves exactly one zero-fee user-entered item",
+      "passed": true,
+      "actual": [
+        [
+          "Transfer QA",
+          0,
+          "001234"
+        ]
+      ],
+      "expected": [
+        [
+          "Transfer QA",
+          0,
+          "001234"
+        ]
+      ]
+    },
+    {
+      "name": "Save feedback appears and explicit temporary copy remains",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Success acknowledgement navigates once",
+      "passed": true,
+      "actual": [
+        [
+          "replace",
+          "/manage/payment-method"
+        ]
+      ],
+      "expected": [
+        [
+          "replace",
+          "/manage/payment-method"
+        ]
+      ]
+    },
+    {
+      "name": "Explicitly cleared fee is rejected rather than silently zero",
+      "passed": true,
+      "actual": [
+        0,
+        false
+      ],
+      "expected": [
+        0,
+        false
+      ]
+    },
+    {
+      "name": "Decimal comma preserves1.25 session fee",
+      "passed": true,
+      "actual": 1.25,
+      "expected": 1.25
+    },
+    {
+      "name": "Missing edit ID hides active form with not-found state",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Retained submit after route unmount cannot create an item",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Route array uses first ID and editor uses exact user item",
+      "passed": true,
+      "actual": "Transfer QA",
+      "expected": "Transfer QA"
+    },
+    {
+      "name": "Unrelated store update preserves editor draft",
+      "passed": true,
+      "actual": "Unsaved draft A",
+      "expected": "Unsaved draft A"
+    },
+    {
+      "name": "Changing editor ID resets draft to exactB",
+      "passed": true,
+      "actual": "Other B updated",
+      "expected": "Other B updated"
+    },
+    {
+      "name": "Edit-to-create resets user draft and visible zero fee",
+      "passed": true,
+      "actual": [
+        "",
+        "0"
+      ],
+      "expected": [
+        "",
+        "0"
+      ]
+    },
+    {
+      "name": "Detail exact item displays user account number and fee",
+      "passed": true,
+      "actual": [
+        "Rp 0,00",
+        "001234"
+      ],
+      "expected": [
+        "Rp 0,00",
+        "001234"
+      ]
+    },
+    {
+      "name": "Detail delete removes exactA while keeping success available",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        true
+      ],
+      "expected": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Delete acknowledgement navigates once after record gone",
+      "passed": true,
+      "actual": [
+        [
+          "replace",
+          "/manage/payment-method"
+        ]
+      ],
+      "expected": [
+        [
+          "replace",
+          "/manage/payment-method"
+        ]
+      ]
+    },
+    {
+      "name": "Missing detail never falls back to first item",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Failed edit actual Alert labels dismissal Tutup",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Error Tutup closes actual Alert without navigation or record mutation",
+      "passed": true,
+      "actual": [
+        false,
+        [],
+        1
+      ],
+      "expected": [
+        false,
+        [],
+        1
+      ]
+    },
+    {
+      "name": "List begins empty and CTA names payment methods",
+      "passed": true,
+      "actual": [
+        0,
+        "Tambah Metode Pembayaran"
+      ],
+      "expected": [
+        0,
+        "Tambah Metode Pembayaran"
+      ]
+    },
+    {
+      "name": "List bank search trims and matches current user data",
+      "passed": true,
+      "actual": [
+        "Searchable"
+      ],
+      "expected": [
+        "Searchable"
+      ]
+    },
+    {
+      "name": "Search missing data gives empty results",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Runtime/React/act errors absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Runtime warnings absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Actual source loaded during independent tests stays stable",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "sourceHashes": {
+    "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74",
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/data/other/bank-types.ts": "e278fa746c65d292cd811b3148a31c987a2a8f493fb71838e92f65eac1ed154a",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+  },
+  "loadedProductionModules": [
+    "schema/manage/payment-method.ts",
+    "store/managePaymentMethodStore.ts",
+    "components/feature/manage/settings/ManageFormNotFound.tsx",
+    "hooks/useAlertModal.ts",
+    "components/common/DeleteConfirmModal.tsx",
+    "components/common/SuccessModal.tsx",
+    "components/common/AlertModal.tsx",
+    "components/common/Form.tsx",
+    "constants/data/other/bank-types.ts",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+    "app/(no-layout)/manage/payment-method/modify.tsx",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx",
+    "components/feature/manage/ManageListActions.tsx",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx",
+    "app/(no-layout)/manage/payment-method/index.tsx"
+  ],
+  "fixture": "Production schema/store/routes/screens/Form/RHF/Zod/hook/sharedmodals with RN/UI/primitive/router/dimensions/picker adapters; isolated process memory user-entered fixtures, no API/storage/backend",
+  "limits": [
+    "No browser/native/HP/Figma/fullrouter/full-app certification",
+    "No real API/transaction/persistence linkage",
+    "Nonvisual list/cards/sheet/CTA primitives adapted; actual shared Form and modal sources loaded",
+    "Internal QA only; external QC and PM gates remain"
+  ]
+}

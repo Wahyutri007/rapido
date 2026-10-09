@@ -1,0 +1,324 @@
+{
+  "manifestStatus": "READY_FOR_PM_REVIEW_QC_PASS_DELTA",
+  "manifestSha256": "0450fdbeb1467c650d935e22fc21d3b30161e578d8e4fae6395cff5761df463b",
+  "sources": [
+    {
+      "file": "app/(no-layout)/manage/printer/modify.tsx",
+      "expected": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "actual": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "matches": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/rounding.tsx",
+      "expected": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "actual": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "matches": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+      "expected": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+      "actual": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+      "matches": true
+    }
+  ],
+  "developerEvidence": [
+    {
+      "file": "HANDOFF.md",
+      "expected": "6093ab7550a61e02cd0d05dbfe2508cb7839f96696d3e3441842b86e5d987e8a",
+      "actual": "6093ab7550a61e02cd0d05dbfe2508cb7839f96696d3e3441842b86e5d987e8a",
+      "matches": true
+    },
+    {
+      "file": "lifecycle.cjs",
+      "expected": "c73e2818ecef6e733d3700770c0b5fb7700fe12cd1cdc52e2ad327af670108f9",
+      "actual": "c73e2818ecef6e733d3700770c0b5fb7700fe12cd1cdc52e2ad327af670108f9",
+      "matches": true
+    },
+    {
+      "file": "results.json",
+      "expected": "8b12d615351edf3b2dd0590267eba979567517b04074242e9f9a195dddb13912",
+      "actual": "8b12d615351edf3b2dd0590267eba979567517b04074242e9f9a195dddb13912",
+      "matches": true
+    },
+    {
+      "file": "printer-results.json",
+      "expected": "ddb0e4de6a8762d473f3dd150d16a7cb8c1daebddaf8fc1b60b165d6868bc9a0",
+      "actual": "ddb0e4de6a8762d473f3dd150d16a7cb8c1daebddaf8fc1b60b165d6868bc9a0",
+      "matches": true
+    },
+    {
+      "file": "rounding-contract.php",
+      "expected": "1dffa783fd6e3fac8fcf93b0e4111246fe7a3b36f690438d3b2dfc2c34e827ad",
+      "actual": "1dffa783fd6e3fac8fcf93b0e4111246fe7a3b36f690438d3b2dfc2c34e827ad",
+      "matches": true
+    },
+    {
+      "file": "rounding-contract-payloads.json",
+      "expected": "62bad0179b57f11bb04ca3f30136fefd5cffcb7633220853159567be159c0b74",
+      "actual": "62bad0179b57f11bb04ca3f30136fefd5cffcb7633220853159567be159c0b74",
+      "matches": true
+    },
+    {
+      "file": "rounding-contract-results.json",
+      "expected": "d29edc9dcbb81e5d8e1d83cad7e1889e3747cd20265fa5013a9fc94b6d4fc4a5",
+      "actual": "d29edc9dcbb81e5d8e1d83cad7e1889e3747cd20265fa5013a9fc94b6d4fc4a5",
+      "matches": true
+    },
+    {
+      "file": "eslint.json",
+      "expected": "a52281f3d8a25355cea6d78a98e5e62cd35fa0124c815db1d59fe22a4b26aae4",
+      "actual": "a52281f3d8a25355cea6d78a98e5e62cd35fa0124c815db1d59fe22a4b26aae4",
+      "matches": true
+    },
+    {
+      "file": "ui-api.cjs",
+      "expected": "27cd3965a396b89ce70504ac013b8dcb3f2748f3aeba52ef361b6384455d4e58",
+      "actual": "27cd3965a396b89ce70504ac013b8dcb3f2748f3aeba52ef361b6384455d4e58",
+      "matches": true
+    },
+    {
+      "file": "ui-api-results.json",
+      "expected": "c0588942d03d4751c12afa99296ccde94ed55b0c0850da10ee20242f3247e678",
+      "actual": "c0588942d03d4751c12afa99296ccde94ed55b0c0850da10ee20242f3247e678",
+      "matches": true
+    },
+    {
+      "file": "ui-entry.jsx",
+      "expected": "3de9b2c9377a33f91bf192ea06c7dd73dff4e1e6f44aea30e1ac1d243d991c43",
+      "actual": "3de9b2c9377a33f91bf192ea06c7dd73dff4e1e6f44aea30e1ac1d243d991c43",
+      "matches": true
+    },
+    {
+      "file": "scoped-tsconfig.json",
+      "expected": "2f08c9947cb67755f73e3ba7dbe6b632ae2f8194ff00b77b385bd5d7df3173e9",
+      "actual": "2f08c9947cb67755f73e3ba7dbe6b632ae2f8194ff00b77b385bd5d7df3173e9",
+      "matches": true
+    },
+    {
+      "file": "summarize-evidence.cjs",
+      "expected": "e139145cc183ff90c7a8711ec1841f6ed54639c091358d7d8e4107791fe7720f",
+      "actual": "e139145cc183ff90c7a8711ec1841f6ed54639c091358d7d8e4107791fe7720f",
+      "matches": true
+    },
+    {
+      "file": "rounding-390.png",
+      "expected": "fc88c0f151cbba13da4e0f824a176c9844222d78a3d707e3e315ec4f8ce6869f",
+      "actual": "fc88c0f151cbba13da4e0f824a176c9844222d78a3d707e3e315ec4f8ce6869f",
+      "matches": true
+    },
+    {
+      "file": "stock-390.png",
+      "expected": "45ce56bbaddb92c8bf0e52311912113e69996d0fe125ff6ec9693a9e814da7f6",
+      "actual": "45ce56bbaddb92c8bf0e52311912113e69996d0fe125ff6ec9693a9e814da7f6",
+      "matches": true
+    },
+    {
+      "file": "rounding-320.png",
+      "expected": "79e65144f20ab26df3af9b148e5192031327f3e01a5d8f8af62c5a20b5c7165d",
+      "actual": "79e65144f20ab26df3af9b148e5192031327f3e01a5d8f8af62c5a20b5c7165d",
+      "matches": true
+    },
+    {
+      "file": "stock-320.png",
+      "expected": "ea3a7649aee7bc07999f569d21ab1c179242557940898e78a1036a3951d37be9",
+      "actual": "ea3a7649aee7bc07999f569d21ab1c179242557940898e78a1036a3951d37be9",
+      "matches": true
+    },
+    {
+      "file": "stock-picker-320.png",
+      "expected": "4df67995c0340b88b43d0819596a97541cb55713d3d50b0a871e896a01737c29",
+      "actual": "4df67995c0340b88b43d0819596a97541cb55713d3d50b0a871e896a01737c29",
+      "matches": true
+    },
+    {
+      "file": "printer-320.png",
+      "expected": "17cc1811191f0b76760e7f407bdf90334068b5ce42a3387bddfeaf83808435fb",
+      "actual": "17cc1811191f0b76760e7f407bdf90334068b5ce42a3387bddfeaf83808435fb",
+      "matches": true
+    },
+    {
+      "file": "rounding-exponent-10-320.png",
+      "expected": "9c642794e747d6fca74c9c5a24af8fb9f480f44a17042c28c9e8aacbb26c0e21",
+      "actual": "9c642794e747d6fca74c9c5a24af8fb9f480f44a17042c28c9e8aacbb26c0e21",
+      "matches": true
+    }
+  ],
+  "uiResultDependencies": [
+    {
+      "file": "app/(no-layout)/manage/printer/modify.tsx",
+      "expected": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "actual": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "matches": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/rounding.tsx",
+      "expected": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "actual": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "matches": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+      "expected": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+      "actual": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+      "matches": true
+    },
+    {
+      "file": "api/hooks/settings.ts",
+      "expected": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+      "actual": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+      "matches": true
+    },
+    {
+      "file": "api/hooks/menus.ts",
+      "expected": "2373ecbaedcb4c3f0b07c937bbac93a68c3dc4fc4ac3ab47ea770fcc211ffcb8",
+      "actual": "2373ecbaedcb4c3f0b07c937bbac93a68c3dc4fc4ac3ab47ea770fcc211ffcb8",
+      "matches": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "matches": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "matches": true
+    },
+    {
+      "file": "api/axios.ts",
+      "expected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "actual": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "matches": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "matches": true
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "expected": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+      "actual": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+      "matches": true
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "expected": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+      "actual": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+      "matches": true
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "expected": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "actual": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "matches": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "expected": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "actual": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "matches": true
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "expected": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "actual": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "matches": true
+    },
+    {
+      "file": "components/common/BouncyPressable.tsx",
+      "expected": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+      "actual": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+      "matches": true
+    },
+    {
+      "file": "components/common/BottomActionButton.tsx",
+      "expected": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+      "actual": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+      "matches": true
+    },
+    {
+      "file": "components/ui/actionsheet/index.tsx",
+      "expected": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+      "actual": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+      "matches": true
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "matches": true
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "matches": true
+    },
+    {
+      "file": ".expo/senior6-ui-entry.jsx",
+      "expected": "3de9b2c9377a33f91bf192ea06c7dd73dff4e1e6f44aea30e1ac1d243d991c43",
+      "actual": "3de9b2c9377a33f91bf192ea06c7dd73dff4e1e6f44aea30e1ac1d243d991c43",
+      "matches": true
+    },
+    {
+      "file": "global.css",
+      "expected": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "actual": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "matches": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "matches": true
+    },
+    {
+      "file": "lib/utils/index.ts",
+      "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "matches": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.tsx",
+      "expected": "b32bee6c6810e5ff75dc429bcfc608c0ae5c564dd735e0f445c5c8ba77c54b73",
+      "actual": "b32bee6c6810e5ff75dc429bcfc608c0ae5c564dd735e0f445c5c8ba77c54b73",
+      "matches": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/config.ts",
+      "expected": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+      "actual": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+      "matches": true
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "expected": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+      "actual": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+      "matches": true
+    },
+    {
+      "file": "components/common/Card.tsx",
+      "expected": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+      "actual": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+      "matches": true
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "matches": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "matches": true
+    }
+  ],
+  "developerUIChecksPassed": 17,
+  "scope": "Read and fingerprint review of final developer UI evidence, not QC browser rerun"
+}

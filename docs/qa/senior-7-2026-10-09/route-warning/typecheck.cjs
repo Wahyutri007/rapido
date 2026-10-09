@@ -1,0 +1,10 @@
+const fs = require("node:fs"), path = require("node:path"), ts = require("typescript");
+const configFile = ts.readConfigFile("tsconfig.json", ts.sys.readFile);
+if (configFile.error) throw Error(ts.flattenDiagnosticMessageText(configFile.error.messageText, " "));
+const config = ts.parseJsonConfigFileContent(configFile.config, ts.sys, process.cwd());
+const roots = ["app/(no-layout)/_layout.tsx", "app/(no-layout)/(cashier)/catalog/_layout.tsx", ...config.fileNames.filter(f => f.endsWith(".d.ts"))];
+const program = ts.createProgram(roots, { ...config.options, noEmit: true, incremental: false });
+const diagnostics = [...config.errors, ...ts.getPreEmitDiagnostics(program)];
+const result = { scope: "Two production layouts and dependency closure; not global typecheck", roots, diagnosticCount: diagnostics.length, diagnostics: diagnostics.map(d => ({ file: d.file?.fileName, message: ts.flattenDiagnosticMessageText(d.messageText, " ") })) };
+fs.writeFileSync(path.join(__dirname, "typecheck-results.json"), `${JSON.stringify(result, null, 2)}\n`);
+console.log(JSON.stringify(result)); process.exitCode = diagnostics.length ? 1 : 0;

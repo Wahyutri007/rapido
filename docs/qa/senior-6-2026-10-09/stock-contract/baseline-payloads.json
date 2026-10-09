@@ -1,0 +1,153 @@
+[
+  {
+    "scenario": "category unchanged",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "category shared ID",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "shared-id"
+      ]
+    }
+  },
+  {
+    "scenario": "item unchanged",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "menu-1"
+      ]
+    }
+  },
+  {
+    "scenario": "category disabled",
+    "payload": {
+      "enabled": false,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "category late response",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "category switch draft",
+    "payload": {
+      "enabled": false,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "item frozen picker",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "menu-1",
+        "menu-2"
+      ]
+    }
+  },
+  {
+    "scenario": "item cancel",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "menu-1"
+      ]
+    }
+  },
+  {
+    "scenario": "item empty draft",
+    "payload": {
+      "enabled": true,
+      "type": "all",
+      "content_type": "item",
+      "stockable_ids": []
+    }
+  },
+  {
+    "scenario": "no existing setting",
+    "payload": {
+      "enabled": true,
+      "type": "all",
+      "content_type": "item",
+      "stockable_ids": []
+    }
+  },
+  {
+    "scenario": "all with stale details",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "legacy category",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  },
+  {
+    "scenario": "legacy item",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "menu-1"
+      ]
+    }
+  },
+  {
+    "scenario": "empty catalog preserve existing",
+    "payload": {
+      "enabled": true,
+      "type": "hybrid",
+      "content_type": "item",
+      "stockable_ids": [
+        "category-1"
+      ]
+    }
+  }
+]

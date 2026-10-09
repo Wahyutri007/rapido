@@ -1,0 +1,120 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-002",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-08T20:09:11.743Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceOrigin": "Working tree, not committed; SHA-256 binds the source and developer results",
+  "editedSources": [
+    "app/index.tsx"
+  ],
+  "documentationScope": [
+    "docs/README.md boot lifecycle only",
+    "docs/qa/senior-5-2026-10-09/",
+    "docs/SESSION_COORDINATION.md own entries"
+  ],
+  "executedSourceHashes": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "hooks/useNavigateAuthenticated.ts": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+    "hooks/useProtectedRoute.ts": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c"
+  },
+  "reviewOnlyContractHashes": {
+    "components/custom/SplashScreenView.tsx": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "lib/storage.web.ts": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2"
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/boot/HANDOFF.md": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+    "docs/qa/senior-5-2026-10-09/boot/check.cjs": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+    "docs/qa/senior-5-2026-10-09/boot/typecheck.cjs": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+    "docs/qa/senior-5-2026-10-09/boot/baseline-results.json": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+    "docs/qa/senior-5-2026-10-09/boot/final-results.json": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+    "docs/qa/senior-5-2026-10-09/boot/typecheck-results.json": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6"
+  },
+  "lifecycle": {
+    "baselineRef": "acba0d92460c1af3149abc3775f09888a2943cab",
+    "baselinePassed": 47,
+    "baselineFailed": 17,
+    "passed": 64,
+    "failed": 0,
+    "runtimeActErrors": 0
+  },
+  "baselineLint": [
+    {
+      "file": "app/index.tsx",
+      "errors": 2,
+      "warnings": 1,
+      "messages": [
+        {
+          "rule": "react-hooks/set-state-in-effect",
+          "line": 43,
+          "severity": 2
+        },
+        {
+          "rule": "react-hooks/exhaustive-deps",
+          "line": 85,
+          "severity": 1
+        },
+        {
+          "rule": "react-hooks/set-state-in-effect",
+          "line": 97,
+          "severity": 2
+        }
+      ]
+    }
+  ],
+  "finalLint": [
+    {
+      "file": "app/index.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ],
+  "biome": {
+    "exitCode": 0,
+    "output": "Checked 1 file in 14ms. No fixes applied.",
+    "files": [
+      "app/index.tsx"
+    ]
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "scope": [
+      "app/index.tsx",
+      "docs/README.md"
+    ]
+  },
+  "typecheck": {
+    "diagnosticCount": 0,
+    "scope": "Boot root app/index.tsx plus imported dependency closure; not a full-project check"
+  },
+  "adapters": [
+    "React Query transport and query-client bindings",
+    "SecureStore",
+    "router and root index segments",
+    "app-mode and active-store hook bindings",
+    "SplashScreenView animation/presentation",
+    "controlled timer and RAF"
+  ],
+  "boundaries": [
+    "Production Boot, AuthProvider, useNavigateAuthenticated, useProtectedRoute and Keys are loaded; the protected guard is exercised only at index, not across private routes",
+    "Unexpected second baseline refetch is deliberately held unresolved; this is a bounded lifecycle reproduction, not proof of actual network retry count",
+    "Onboarding storage is rechecked on boot renders; the no-op subscription does not observe native storage changes in real time",
+    "Splash remount identity and callback cancellation are tested; native opacity/frame/worklet behavior is not rendered",
+    "Browser, native device, SSR, actual auth API/storage and full-project typecheck were not rerun for this boot delta",
+    "No dependency, backend, shared server/device, branch/index, commit or push changes in this developer batch"
+  ],
+  "separateSD5001Review": {
+    "decision": "docs/qa/qc-sd5-2026-10-09/DECISION.json",
+    "id": "QC-SD5-20261009-PASS-DELTA",
+    "status": "PASS_DELTA_FOR_PM_REVIEW",
+    "passed": 81,
+    "sourcesStillMatch": true,
+    "appliesToBoot": false
+  }
+}

@@ -1,0 +1,677 @@
+{
+  "status": "FAIL",
+  "passed": 7,
+  "checks": [
+    "Kelola opens Payroll list with correct URL and one visible layout header",
+    "Payroll list header returns to Kelola",
+    "List opens employee detail with matching route ID",
+    "Settings hydrate the selected employee and preserve its route ID",
+    "Saving settings updates the same record then header returns to its detail",
+    "Payment opens the same employee and rejects missing required inputs",
+    "Full preview payment reaches slip and exports the same reference without API mutation"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "error": "TimeoutError: locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Catat Pembayaran', { exact: true }).filter({ visible: true }).first().locator('..').locator('[tabindex=\"0\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <div tabindex=\"0\" class=\"css-g5y9jx r-1loqt21 r-1otgn73 absolute left-4 size-10 items-center justify-center rounded-full\">…</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    86 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "url": "http://localhost:8096/manage/payroll/payment?id=payroll-budi-oct",
+  "body": "\nCatat Pembayaran\nPratinjau Penggajian\nData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak mengirim uang.\n\nBudi Santoso\nAdmin Servis · Bulanan\nOktober 2026\nLunas\nJenis Pembayaran\n*\nBayar Penuh\n\nBonus\nPotongan\nKasbon\nPenyesuaian dikunci setelah pembayaran pertama.\nSisa Pembayaran: Rp 0\nNominal Dibayar\nMetode Pembayaran\n*\nTunai\n\nKas Asal\nTanggal Pembayaran\nFormat YYYY-MM-DD.\nNo. Referensi\nCatatan\nTotal Pembayaran\nRp 7.500.000\nMencatat pembayaran pada pratinjau, tanpa transfer bank atau perubahan saldo nyata.\nLihat Slip Gaji",
+  "hitStack": [
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "Catat PembayaranPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv",
+        "inline": "background-color: rgb(242, 242, 242); flex: 1 1 0%; min-height: 0px; overflow: hidden;",
+        "text": "Catat PembayaranPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": "transform: translateX(0px);",
+        "text": "Catat PembayaranPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": null,
+        "text": "Catat PembayaranPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af",
+        "inline": "display: flex; visibility: visible; pointer-events: none;",
+        "text": "Catat PembayaranPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "absolute",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv",
+        "inline": "background-color: rgb(242, 242, 242); flex: 1 1 0%; min-height: 0px; overflow: hidden;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv",
+        "inline": "background-color: rgb(242, 242, 242); flex: 1 1 0%; min-height: 0px; overflow: hidden;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": "transform: translateX(0px);",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv",
+        "inline": "background-color: rgb(242, 242, 242); flex: 1 1 0%; min-height: 0px; overflow: hidden;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": "transform: translateX(0px);",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv",
+        "inline": "background-color: rgb(242, 242, 242); flex: 1 1 0%; min-height: 0px; overflow: hidden;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": "transform: translateX(0px);",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0 r-12vffkv",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af",
+        "inline": "display: flex; visibility: visible;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "absolute",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ],
+    [
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af",
+        "inline": "display: flex; visibility: visible;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "absolute",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-12vffkv r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af",
+        "inline": "display: flex;",
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "none",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "absolute",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      },
+      {
+        "tag": "DIV",
+        "class": "css-g5y9jx r-13awgt0",
+        "inline": null,
+        "text": "PenggajianPratinjau PenggajianData contoh. Catatan hanya tersedia selama aplikasi terbuka dan tidak",
+        "pointerEvents": "auto",
+        "opacity": "1",
+        "zIndex": "0",
+        "position": "relative",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844
+        }
+      }
+    ]
+  ],
+  "checkedAt": "2026-10-08T20:14:44.387Z"
+}

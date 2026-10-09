@@ -1,0 +1,77 @@
+{
+  "owner": "Codex-3",
+  "lint": {
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "lib/accounting/journal-date.ts",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "lib/accounting/journal-date.ts",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      }
+    ]
+  },
+  "format": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "format",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "lib/accounting/journal-date.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 4 files in 25ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "renderComparisons": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "comparison": "Existing editor JSX against HEAD, ignoring the added save isDisabled prop; new missing-ID fallback excluded",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "comparison": "Existing editor JSX against HEAD, ignoring the added save isDisabled prop; new missing-ID fallback excluded",
+      "passed": true
+    }
+  ]
+}

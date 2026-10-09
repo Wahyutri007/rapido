@@ -1,0 +1,378 @@
+{
+  "owner": "Codex-3",
+  "scope": "Production journal date parser, local calendar values; not native picker UI",
+  "passed": 33,
+  "failed": 0,
+  "checks": [
+    {
+      "input": "2026-06-30",
+      "expected": [
+        2026,
+        6,
+        30
+      ],
+      "actual": [
+        2026,
+        6,
+        30
+      ],
+      "passed": true
+    },
+    {
+      "input": "17 Maret 2026",
+      "expected": [
+        2026,
+        3,
+        17
+      ],
+      "actual": [
+        2026,
+        3,
+        17
+      ],
+      "passed": true
+    },
+    {
+      "input": "08 Oct 2025",
+      "expected": [
+        2025,
+        10,
+        8
+      ],
+      "actual": [
+        2025,
+        10,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "input": "08 Okt 2025",
+      "expected": [
+        2025,
+        10,
+        8
+      ],
+      "actual": [
+        2025,
+        10,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "input": " 8 oKt 2025 ",
+      "expected": [
+        2025,
+        10,
+        8
+      ],
+      "actual": [
+        2025,
+        10,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "input": "29 Feb 2024",
+      "expected": [
+        2024,
+        2,
+        29
+      ],
+      "actual": [
+        2024,
+        2,
+        29
+      ],
+      "passed": true
+    },
+    {
+      "input": "29 Feb 2025",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "31 Apr 2026",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "31 April 2026",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "2026-02-29",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "2026-13-01",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "2026-00-01",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "2026-06-00",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "01 Jan 1899",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "01 Jan 2101",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "01 Jun 2026 trailing",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "01 Xxx 2026",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "input": "01 Jan 2026",
+      "expected": [
+        2026,
+        1,
+        1
+      ],
+      "actual": [
+        2026,
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Feb 2026",
+      "expected": [
+        2026,
+        2,
+        1
+      ],
+      "actual": [
+        2026,
+        2,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Mar 2026",
+      "expected": [
+        2026,
+        3,
+        1
+      ],
+      "actual": [
+        2026,
+        3,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Apr 2026",
+      "expected": [
+        2026,
+        4,
+        1
+      ],
+      "actual": [
+        2026,
+        4,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Mei 2026",
+      "expected": [
+        2026,
+        5,
+        1
+      ],
+      "actual": [
+        2026,
+        5,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Jun 2026",
+      "expected": [
+        2026,
+        6,
+        1
+      ],
+      "actual": [
+        2026,
+        6,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Jul 2026",
+      "expected": [
+        2026,
+        7,
+        1
+      ],
+      "actual": [
+        2026,
+        7,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Agu 2026",
+      "expected": [
+        2026,
+        8,
+        1
+      ],
+      "actual": [
+        2026,
+        8,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Sep 2026",
+      "expected": [
+        2026,
+        9,
+        1
+      ],
+      "actual": [
+        2026,
+        9,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Okt 2026",
+      "expected": [
+        2026,
+        10,
+        1
+      ],
+      "actual": [
+        2026,
+        10,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Nov 2026",
+      "expected": [
+        2026,
+        11,
+        1
+      ],
+      "actual": [
+        2026,
+        11,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Des 2026",
+      "expected": [
+        2026,
+        12,
+        1
+      ],
+      "actual": [
+        2026,
+        12,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 May 2026",
+      "expected": [
+        2026,
+        5,
+        1
+      ],
+      "actual": [
+        2026,
+        5,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Aug 2026",
+      "expected": [
+        2026,
+        8,
+        1
+      ],
+      "actual": [
+        2026,
+        8,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "input": "01 Dec 2026",
+      "expected": [
+        2026,
+        12,
+        1
+      ],
+      "actual": [
+        2026,
+        12,
+        1
+      ],
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71"
+  }
+}

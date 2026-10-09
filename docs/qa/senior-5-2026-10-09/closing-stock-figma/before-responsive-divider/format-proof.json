@@ -1,0 +1,7 @@
+{
+  "file": "components/feature/inventory/closing-stock/ClosingStockScreen.tsx",
+  "before": "a9c59dee1daa1cf6bc83a240b846f121fc592cf96a17ba261754718d4ad3c970",
+  "after": "2354d3fb460cad648d0c2efed6a57ca24b0b4bf94126bced7af18a6fb34dcad6",
+  "compiledTypeScriptIdentical": true,
+  "note": "Final compact Wrapper formatting only; passing browser bundle predates this whitespace-only step."
+}

@@ -1,0 +1,13 @@
+diff --git a/context/AuthContext.tsx b/context/AuthContext.tsx
+index 43c8eb5..63ab35f 100644
+--- a/context/AuthContext.tsx
++++ b/context/AuthContext.tsx
+@@ -76,7 +76,7 @@ export default function AuthProvider(props: React.PropsWithChildren) {
+ 		if (token) {
+ 			await SecureStore.setItemAsync(Keys.AUTH_TOKEN, token);
+ 			setToken(token);
+-			await userQuery.refetch();
++			await userQuery.refetch({ throwOnError: true });
+ 		} else {
+ 			setToken(null);
+ 			await SecureStore.deleteItemAsync(Keys.AUTH_TOKEN);

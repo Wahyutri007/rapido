@@ -1,0 +1,28 @@
+{
+  "sourceHashes": {
+    "hooks/useRegistrationForm.ts": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c"
+  },
+  "baselineEslint": {
+    "errors": 0,
+    "warnings": 8,
+    "suppressed": 0
+  },
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0,
+    "suppressed": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "biome": {
+    "exit": 0,
+    "stdout": "Checked 1 file in 14ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "diff": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'hooks/useRegistrationForm.ts', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-10-09T02:53:03.017Z",
+  "files": {
+    "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "36b0e45c59fa77f7ed7c41a60d2b08c3ef1fc36a5cba42062d07460345a9fe4f",
+    "app/(back-office)/inventory/_layout.tsx": "1be5b0450504ebda95edbd5d21a7d5b2c3cbc3e6b19f64eed78343ea83150094",
+    "app/(back-office)/_layout.tsx": "af73d6103de0470de5a781c76ebf4f9e97b6acaa198a616705256b35e0cdbd98",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/custom/BottomTab.tsx": "bf8c30fb96847d8bd9e45209965cd70bf334442fd0c651bfa23348e15eef73af"
+  }
+}

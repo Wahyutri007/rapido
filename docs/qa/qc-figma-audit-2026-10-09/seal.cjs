@@ -1,0 +1,11 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../../..'),target=path.join(__dirname,'manifest.json');
+assert(!fs.existsSync(target),'Existing manifest is frozen. Use a new reviewer/supplement folder.');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(i=>i.isDirectory()?walk(path.join(dir,i.name)):[path.join(dir,i.name)]);
+const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'source-fingerprints.json'),'utf8'));
+const drift=sources.filter(s=>!fs.existsSync(path.join(root,s.file))||hash(path.join(root,s.file))!==s.sha256);
+assert.equal(drift.length,0,'Source changed during audit: '+drift.map(s=>s.file).join(', '));
+const artifacts=walk(__dirname).filter(f=>f!==target).sort().map(f=>({file:path.relative(__dirname,f).replace(/\\/g,'/'),sha256:hash(f),bytes:fs.statSync(f).size}));
+const manifest={createdAt:new Date().toISOString(),signal:'QC-FIGMA-20261009-AUDIT-PARTIAL-CHANGES-REQUESTED',limits:'Artifact integrity and source snapshot only. Not visual PASS, complete Figma match or application test certification.',artifacts,sources};
+fs.writeFileSync(target,JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify({artifacts:artifacts.length,sourceInputs:sources.length,sourceDriftAtSeal:drift.length}));

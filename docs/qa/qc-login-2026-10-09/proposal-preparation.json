@@ -1,0 +1,19 @@
+{
+  "originalHash": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+  "candidateHash": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+  "originalProviderMatchesBaselineNormalizedEol": true,
+  "sourceApplied": false,
+  "runtimeModulesMatched": 13,
+  "currentCounts": {
+    "passed": 44,
+    "failed": 3
+  },
+  "externalGuardChange": {
+    "owner": "Senior5 SD5-004 IN_PROGRESS",
+    "originalHash": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "currentHash": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "testedFixtureHash": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "currentGuardApproval": false,
+    "reason": "Guard changed after current integration run. Candidate test pins the exact reviewed production guard in a QC fixture; new guard is excluded from this login decision."
+  }
+}

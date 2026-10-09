@@ -1,0 +1,20 @@
+// Selected production roots with actual project options; no full project check.
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const ts = require("typescript");
+const { execFileSync } = require("node:child_process");
+const configFile = ts.readConfigFile("tsconfig.json", ts.sys.readFile);
+if (configFile.error) throw Error(ts.flattenDiagnosticMessageText(configFile.error.messageText, " "));
+const config = ts.parseJsonConfigFileContent(configFile.config, ts.sys, process.cwd());
+const callers = execFileSync("rg", ["-l", "<MultiSelect", "app", "components", "--glob", "*.tsx"], { encoding: "utf8" }).trim().split(/\r?\n/).map(f => f.replaceAll("\\", "/"));
+const productionRoots = ["components/common/MultiSelect.tsx", ...callers];
+const fingerprint = file => ({ file, sha256: crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex") });
+const before = productionRoots.map(fingerprint);
+const roots = [...productionRoots, ...config.fileNames.filter(f => f.endsWith(".d.ts"))];
+const program = ts.createProgram(roots, { ...config.options, noEmit: true, incremental: false });
+const diagnostics = [...config.errors, ...ts.getPreEmitDiagnostics(program)];
+const stable = JSON.stringify(before) === JSON.stringify(productionRoots.map(fingerprint));
+const result = { kind: "Selected MultiSelect and all current caller roots plus dependency closure; not global TypeScript", roots: productionRoots, diagnostics: diagnostics.map(d => ({ file: d.file?.fileName, message: ts.flattenDiagnosticMessageText(d.messageText, " ") })), diagnosticCount: diagnostics.length, stable, sources: before };
+fs.writeFileSync(path.join(__dirname, "typecheck-results.json"), JSON.stringify(result, null, 2) + "\n");
+console.log(JSON.stringify(result)); process.exitCode = diagnostics.length || !stable ? 1 : 0;

@@ -1,0 +1,18 @@
+﻿const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const read=file=>JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));
+const digest=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const qc='docs/qa/qc-income-2026-10-09', decision=read(path.join(qc,'DECISION.json'));
+const final=read(path.join(__dirname,'lifecycle-results.json')),expense=read(path.join(__dirname,'expense-results.json')),before=read(path.join(__dirname,'before/lifecycle-results.json'));
+const checks=[];const check=(name,run)=>{run();checks.push(name);};
+check('Baseline reproduces all twelve reported failures with zero runtime errors',()=>{assert.equal(before.passed,24);assert.equal(before.failed,12);assert.deepEqual(before.errors,[]);});
+check('Actual application source now passes all36income and6expense cases, no proposal flag',()=>{assert.equal(final.tested,'CURRENT_PRODUCTION_SOURCE');assert.equal(final.passed,36);assert.equal(final.failed,0);assert.deepEqual(final.errors,[]);assert.equal(expense.tested,'CURRENT_PRODUCTION_SOURCE');assert.equal(expense.passed,6);assert.equal(expense.failed,0);assert.deepEqual(expense.errors,[]);});
+const findingResults=decision.findings.map(finding=>{for(const name of finding.checks){const initial=before.checks.find(item=>item.name===name),current=final.checks.find(item=>item.name===name);assert.ok(initial && current,name);assert.equal(initial.passed,false,name);assert.equal(current.passed,true,name);}return{id:finding.id,developerDisposition:'FIX_IMPLEMENTED_PENDING_QC_RECHECK',reportedChecks: finding.checks.length};});
+check('All QC finding assertions changed from failing to passing',()=>assert.equal(findingResults.reduce((sum,item)=>sum+item.reportedChecks,0),12));
+check('Two application source hashes exactly match the QC-tested proposal',()=>{for(const [file,sha] of Object.entries(decision.proposal.sourceHashes))assert.equal(digest(file),sha,file);});
+check('Snapshots match reviewed baseline hashes',()=>{assert.equal(digest(path.join(__dirname,'before/detail.tsx')),decision.reviewedSourceHashes['app/(no-layout)/manage/income/detail.tsx']);assert.equal(digest(path.join(__dirname,'before/CashEntryForm.tsx')),decision.reviewedSourceHashes['components/feature/accounting/CashEntryForm.tsx']);});
+const runtimeInputs=new Map([...Object.entries(final.sourceHashes),...Object.entries(expense.sourceHashes)]);
+check('All recorded runtime production inputs still match current disk',()=>{for(const [file,sha] of runtimeInputs)assert.equal(digest(file),sha,file);});
+const manifest=read(path.join(qc,'artifact-manifest.json'));
+check('QC historical artifacts remain byte-identical',()=>{for(const item of manifest.files)assert.equal(digest(path.join(qc,item.file)),item.sha256,item.file);});
+const output={owner:'Codex-4 developer',status:'PASS',passed:checks.length,checks,findingResults,runtimeInputs:[...runtimeInputs].map(([file,sha256])=>({file,sha256})),qcArtifactsVerified:manifest.files.length,checkedAt:new Date().toISOString(),limits:'Evidence for developer handoff, not independent QC closure. No visual/native/HTTP claim.'};
+fs.writeFileSync(path.join(__dirname,'proof-results.json'),JSON.stringify(output,null,2));console.log(JSON.stringify({status:output.status,checks:output.passed,runtimeInputs:output.runtimeInputs.length,qcArtifactsVerified:output.qcArtifactsVerified}));

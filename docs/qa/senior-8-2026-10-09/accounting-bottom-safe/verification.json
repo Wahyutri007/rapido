@@ -1,0 +1,192 @@
+{
+  "ticket": "ACCOUNTING-BOTTOM-SAFE-001",
+  "owner": "Software Developer Senior 8",
+  "status": "READY_FOR_QA",
+  "developerChecks": 65,
+  "files": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "sha256": "d439975ccc898e9b6894f53189be5d61079ffacff0c1cc791327de8e6d7c54e4"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "sha256": "89f8947beb49ff63526c6c684ee3d8a90c184ba4882a33f55c581d83581eac9e"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+      "sha256": "3793e50928bbda2e4cbcceb9e5e4051a914b36683eb0648568350f1b9738acd6"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+      "sha256": "ffa92dabb0da42b18b1b842f5af40e17c901e5a0e052a0dfe4948437e6578da0"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "sha256": "846f1a8353b2ced2884d2d5dfbbe6f04535ca2cbb57ccd6b946c5dd29068acf4"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+      "sha256": "3922889b284bacddf2d3d5ded857e1d8b7910023a4600399e32aaea14c1ab471"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+      "sha256": "1615d3f577c27beab2a6935790a077f1b331188c9a9321f36c85012548080fb3"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+      "sha256": "6d27c7ff407fe16e268b58ebe09a3f6fe2f9a29052cf3614e601a4e4c49b4c3e"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+      "sha256": "cbf034894331b654dbce325df34dd8d9f5d1f18cabb589db148c4f212b1ddc8a"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+      "sha256": "3486908d48c53328d625a2ff559356370f8d7bf30a3dc20fef656c39c8148186"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+      "sha256": "f768645fe0881834386ab8a41ba5a172735e82f8bc2294542b25ac12b1c4051f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "sha256": "c96496c04ff5f8a1b053c7eb9d6bc2e65d63497c6aac50e2810ef0909a3fa7a2"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+      "sha256": "9fd103b6c6af39c9f31f87af9d28ba791f936ce2c611fc07037c729a997e6316"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+      "sha256": "8555826fd5281a47296e2a5bd5af9ee89ceb7c5c4941f27710a523808d5cd11e"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+      "sha256": "e5048c17160c041d4a09ba5d0c4ffb11b2f039bae48b464d8eb5ab17ac02497f"
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "sha256": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8"
+    },
+    {
+      "file": "components/common/AnimatedWrapper.tsx",
+      "sha256": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f"
+    },
+    {
+      "file": "components/feature/reports/ReportActionButton.tsx",
+      "sha256": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f"
+    },
+    {
+      "file": "components/common/BottomActionBar.tsx",
+      "sha256": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx.txt",
+      "sha256": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx.txt",
+      "sha256": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx.txt",
+      "sha256": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx.txt",
+      "sha256": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx.txt",
+      "sha256": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx.txt",
+      "sha256": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx.txt",
+      "sha256": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx.txt",
+      "sha256": "641e445d92588d6f6be91451636c05fb0f18c10f6492988bb6c8c70ea288a768"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx.txt",
+      "sha256": "98297f84ae4661aa01d1bce5e1ad9f92ab2853ced3376906e6865f1b09b346bb"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx.txt",
+      "sha256": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx.txt",
+      "sha256": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx.txt",
+      "sha256": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx.txt",
+      "sha256": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx.txt",
+      "sha256": "d8eb69bc0b7750a68b8106e74a191c1f621d11393df7b4f67ab89e77098a066d"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx.txt",
+      "sha256": "5ae67e1e95c8fa82243a158b5f309145f48e73c9a4f65b36cc23b70477d7d0ce"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/common/Wrapper.tsx.txt",
+      "sha256": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/common/AnimatedWrapper.tsx.txt",
+      "sha256": "b579878f55e6806fc782b2fde16dfb71ce673a6211737349d609836ade3cce14"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/feature/reports/ReportActionButton.tsx.txt",
+      "sha256": "e63203fe1111173a35b3763f4b608e78bd167b252dde18b630b7265d56b532bc"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/HANDOFF.md",
+      "sha256": "2c955a5584c379d12ab4d7b379049c1f9e6bbdf83289c3d057213ae305bb60f3"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/check.cjs",
+      "sha256": "c84420059091e2ef67ff6f701f6ca276221fbe532b068643ba6549b54ac0fb0f"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/results.json",
+      "sha256": "89ee81d960f390182adc829e4c362311b5fdd4467b9031ccf6135250cee4c201"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/quality.cjs",
+      "sha256": "b56b97db25883fbc1d856466cd60a9ee32118fe20516e7e0bbaff5b31da25078"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/quality.json",
+      "sha256": "79720eb3c58c28d1dfabb18a14af49cf39ebf0b75b273ae177c69d3f32596356"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/initial-quality.json",
+      "sha256": "0e0487e4e432853f997f629fd5c2f4f78e82a69b65eb0d1039b541f99639c80a"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/manifest.cjs",
+      "sha256": "a82dcacaa660748519ce9ab27d9bb8c2b3080db6abb461d7c41bc097ac627577"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/migrate.cjs",
+      "sha256": "1c4c1d00f9dfd3b90b5ba213f7573530e06997196366cbdd9a10c57eb20b56b8"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/migration.json",
+      "sha256": "61a1f82eb5b7eb291ca3559bbd3e23232cbdcaafd2cb9932fc342ec486425ff0"
+    }
+  ]
+}

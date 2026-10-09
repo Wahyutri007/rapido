@@ -1,0 +1,100 @@
+{
+	"date": "2026-10-09",
+	"timezone": "Asia/Jakarta",
+	"status": "READY_FOR_QA",
+	"tickets": [
+		"QC-S8-LEGACY-001",
+		"QC-S8-LEGACY-002"
+	],
+	"head": "acba0d92460c1af3149abc3775f09888a2943cab",
+	"source": [
+		{
+			"file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+			"sha256": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f"
+		},
+		{
+			"file": "lib/accounting/ledger-filter.ts",
+			"sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+		}
+	],
+	"previousApprovedSourceUnchanged": [
+		{
+			"file": "app/(no-layout)/catalog/bundling/detail.tsx",
+			"sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+			"unchanged": true
+		},
+		{
+			"file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+			"sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+			"unchanged": true
+		},
+		{
+			"file": "app/(no-layout)/catalog/menu/detail.tsx",
+			"sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+			"unchanged": true
+		},
+		{
+			"file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+			"sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+			"unchanged": true
+		}
+	],
+	"checks": {
+		"component": 31,
+		"dates": 63,
+		"total": 94,
+		"runtimeErrors": 0,
+		"lintErrors": 0,
+		"lintWarnings": 0,
+		"typeDiagnostics": 0,
+		"biome": "passed",
+		"diffCheck": "passed"
+	},
+	"artifacts": [
+		{
+			"file": "baseline-all.json",
+			"sha256": "58aea9fbfda2213348db6cff1957a81c8d18b08ba7755f2bc1a52b33b5694742"
+		},
+		{
+			"file": "check.cjs",
+			"sha256": "03b9f38fa49cb935dee5be35d0e848e457f780659d66292e6572704b8bdf1d00"
+		},
+		{
+			"file": "date-results.json",
+			"sha256": "f30732ce491d1d31d56726aa4fbcc26a1c8780856f09bde09884348c5692ac0a"
+		},
+		{
+			"file": "dates.cjs",
+			"sha256": "b3500bfb44258e78fb3b7ceef93be1f76bcfa2096378c59e98ef4156afd22b3d"
+		},
+		{
+			"file": "final-all.json",
+			"sha256": "5d781ad9e0d4c033856c3474c040a7f5ad309943f8b0b952bff5491c1ef2258d"
+		},
+		{
+			"file": "final-totals.json",
+			"sha256": "23ab9714b0fd5ed4b31ef26528c9d3a7b30b681cbd78364006289288925bfb94"
+		},
+		{
+			"file": "lint-final.json",
+			"sha256": "e6d27d7494047096fc763f911e0965298e208b6f2ea56adc982e2b6af4729b13"
+		},
+		{
+			"file": "lint-totals.json",
+			"sha256": "1f365b71e10a68bf006b242a2ce7c36c465757de9902e98636529e8eb7c3d5a4"
+		},
+		{
+			"file": "manifest.cjs",
+			"sha256": "7e3aa374b1b59fe57ea13a2045940cc0df894ef0665585e92bb1a380b8e79da0"
+		},
+		{
+			"file": "typecheck.cjs",
+			"sha256": "b7f852482d401ae5608431b1d79f789805fb2dca8a49c657f5470db51bc981e1"
+		},
+		{
+			"file": "typecheck.json",
+			"sha256": "3f58ffad12277874caabcad5547af9cd8ea90f6f54b5a782d45ba3b019250bf8"
+		}
+	],
+	"limits": "Production screen/store with RN/presentation adapters and isolated fixtures. No API/native/visual check. Prior QC approval is historical; final ledger delta awaits recheck."
+}

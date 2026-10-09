@@ -1,0 +1,32 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{spawnSync}=require('node:child_process');
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const file='components/common/SuccessModal.tsx',screen='app/(no-layout)/manage/pos-settings/stock-limit.tsx';
+const before=JSON.parse(fs.readFileSync(path.join(__dirname,'fingerprints-before.json')));
+assert.equal(hash(file),before.files[file]);assert.equal(hash(screen),before.files[screen]);
+const original=fs.readFileSync(file,'utf8'),text=original.replace(/\r\n/g,'\n');
+const old='\t\t\t\t\t\t\t\tsource={image}\n';assert.equal(text.split(old).length,2);
+const candidate=text.replace(old,old+'\t\t\t\t\t\t\t\tstyle={{ height: 176, width: "100%" }}\n');
+const dir=path.join(__dirname,'proposal');fs.mkdirSync(dir,{recursive:true});
+fs.writeFileSync(path.join(dir,'SuccessModal.before.txt'),original);
+fs.writeFileSync(path.join(dir,'SuccessModal.candidate.txt'),candidate);
+fs.writeFileSync('.expo/qc-stock-ui-success-modal.tsx',candidate);
+const sourceScreen=fs.readFileSync(screen,'utf8').replace('from "@/components/common/SuccessModal"','from "./qc-stock-ui-success-modal"');
+assert.notEqual(sourceScreen,fs.readFileSync(screen,'utf8'));
+fs.writeFileSync('.expo/qc-stock-ui-screen.tsx',sourceScreen);
+fs.copyFileSync(path.join(__dirname,'preview-entry.fixture.jsx'),'.expo/qc-stock-ui-entry.jsx');
+fs.copyFileSync(path.join(__dirname,'web-before.css'),path.join(dir,'web-before.css'));
+const diff=spawnSync('git',['diff','--no-index','--',path.join(dir,'SuccessModal.before.txt'),path.join(dir,'SuccessModal.candidate.txt')],{encoding:'utf8'});assert.equal(diff.status,1,diff.stderr);
+const lines=diff.stdout.replace(/\r\n/g,'\n').split('\n'),body=lines.slice(lines.findIndex(line=>line.startsWith('@@'))).join('\n');
+const patch=`diff --git a/${file} b/${file}\n--- a/${file}\n+++ b/${file}\n${body}`;
+fs.writeFileSync(path.join(dir,'success-image-size.patch'),patch);
+const apply=spawnSync('git',['apply','--check',path.join(dir,'success-image-size.patch')],{encoding:'utf8'});assert.equal(apply.status,0,apply.stderr);
+const lint=spawnSync(process.execPath,['node_modules/eslint/bin/eslint.js','--stdin','--stdin-filename',file,'--no-cache','--format','json'],{encoding:'utf8',input:candidate});
+fs.writeFileSync(path.join(dir,'eslint.json'),lint.stdout);const lintReport=JSON.parse(lint.stdout);assert.equal(lintReport[0].errorCount,0);assert.equal(lintReport[0].warningCount,0);
+// Biome stdin check requires --write even when the text is already formatted.
+// This writes stdout only; the application file is never passed for mutation.
+const biome=spawnSync(process.execPath,['node_modules/@biomejs/biome/bin/biome','check','--write','--stdin-file-path',file],{encoding:'utf8',input:candidate});
+fs.writeFileSync(path.join(dir,'biome-output.txt'),biome.stdout+'\n'+biome.stderr);
+assert.equal(biome.status,0,biome.stderr);assert.equal(biome.stdout,candidate);
+const metadata={source:file,sourceHash:hash(file),candidateHash:hash(path.join(dir,'SuccessModal.candidate.txt')),screenHash:hash(screen),scope:'One explicit 176px/100% image style (matching existing h-44/w-full intent); only a copied screen import changes to render this proposal.',applied:false,applyCheckExit:apply.status,eslint:{exit:lint.status,errors:lintReport[0].errorCount,warnings:lintReport[0].warningCount},biome:{exit:biome.status,stdinWriteOnly:true,outputByteIdentical:true},fixtureHashes:Object.fromEntries(['.expo/qc-stock-ui-entry.jsx','.expo/qc-stock-ui-screen.tsx','.expo/qc-stock-ui-success-modal.tsx'].map(file=>[file,hash(file)]))};
+fs.writeFileSync(path.join(dir,'verification.json'),JSON.stringify(metadata,null,2)+'\n');
+console.log(JSON.stringify({applyCheck:apply.status,eslint:lint.status,biome:biome.status,candidatePrepared:true}));

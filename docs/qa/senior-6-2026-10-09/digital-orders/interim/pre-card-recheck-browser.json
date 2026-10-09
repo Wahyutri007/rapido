@@ -1,0 +1,341 @@
+{
+  "status": "PASS",
+  "passed": 29,
+  "checks": [
+    {
+      "name": "Actual Back Office POS menu opens new empty Digital module",
+      "detail": {}
+    },
+    {
+      "name": "Real RHF form rejects missing required fields without success",
+      "detail": {}
+    },
+    {
+      "name": "Non-HTTPS URL validation is visible and non-mutating",
+      "detail": {}
+    },
+    {
+      "name": "Create stores trimmed input with draft status and no marketplace activation",
+      "detail": {}
+    },
+    {
+      "name": "Production FormSelect creates a Marketplace draft",
+      "detail": {}
+    },
+    {
+      "name": "Duplicate name rejected on actual form without extra record",
+      "detail": {}
+    },
+    {
+      "name": "Corrected duplicate name saves on retry",
+      "detail": {}
+    },
+    {
+      "name": "Search trims and matches recorded notes case-insensitively",
+      "detail": {}
+    },
+    {
+      "name": "Kind and search intersection produces honest empty state",
+      "detail": {}
+    },
+    {
+      "name": "Reset restores controlled search and kind defaults",
+      "detail": {}
+    },
+    {
+      "name": "List row opens exact ID detail with recorded URL",
+      "detail": {}
+    },
+    {
+      "name": "Actual edit preserves ID and updates submitted fields",
+      "detail": {}
+    },
+    {
+      "name": "Live update preserves draft; stale save cannot overwrite it",
+      "detail": {}
+    },
+    {
+      "name": "Actual action sheet and cancellation preserve collection",
+      "detail": {}
+    },
+    {
+      "name": "Actual deletion keeps success acknowledgement and returns to list",
+      "detail": {}
+    },
+    {
+      "name": "Record changed while delete prompt is open cannot be removed",
+      "detail": {}
+    },
+    {
+      "name": "Absent/empty/array/missing detail ID cannot select another record",
+      "detail": {}
+    },
+    {
+      "name": "Missing editor safely returns to Digital list",
+      "detail": {}
+    },
+    {
+      "name": "List 320x640: long row, action>=44 and CTA fit",
+      "detail": {
+        "actionBox": {
+          "x": 248,
+          "y": 288,
+          "width": 44,
+          "height": 44
+        },
+        "addBox": {
+          "x": 16,
+          "y": 576,
+          "width": 288,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Detail 320x640: long URL/note scroll with footer reachable",
+      "detail": {
+        "editBox": {
+          "x": 16,
+          "y": 576,
+          "width": 138,
+          "height": 48
+        },
+        "deleteBox": {
+          "x": 166,
+          "y": 576,
+          "width": 138,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Form 320x640: entire last field clears Save",
+      "detail": {
+        "notesBox": {
+          "x": 45,
+          "y": 333,
+          "width": 230,
+          "height": 102
+        },
+        "saveBox": {
+          "x": 16,
+          "y": 576,
+          "width": 288,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "List 390x844: long row, action>=44 and CTA fit",
+      "detail": {
+        "actionBox": {
+          "x": 318,
+          "y": 406,
+          "width": 44,
+          "height": 44
+        },
+        "addBox": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Detail 390x844: long URL/note scroll with footer reachable",
+      "detail": {
+        "editBox": {
+          "x": 16,
+          "y": 780,
+          "width": 173,
+          "height": 48
+        },
+        "deleteBox": {
+          "x": 201,
+          "y": 780,
+          "width": 173,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Form 390x844: entire last field clears Save",
+      "detail": {
+        "notesBox": {
+          "x": 45,
+          "y": 505,
+          "width": 300,
+          "height": 102
+        },
+        "saveBox": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "List 844x390: long row, action>=44 and CTA fit",
+      "detail": {
+        "actionBox": {
+          "x": 772,
+          "y": 141,
+          "width": 44,
+          "height": 44
+        },
+        "addBox": {
+          "x": 16,
+          "y": 326,
+          "width": 812,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Detail 844x390: long URL/note scroll with footer reachable",
+      "detail": {
+        "editBox": {
+          "x": 16,
+          "y": 326,
+          "width": 400,
+          "height": 48
+        },
+        "deleteBox": {
+          "x": 428,
+          "y": 326,
+          "width": 400,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Form 844x390: entire last field clears Save",
+      "detail": {
+        "notesBox": {
+          "x": 45,
+          "y": 176,
+          "width": 754,
+          "height": 102
+        },
+        "saveBox": {
+          "x": 16,
+          "y": 326,
+          "width": 812,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Zero runtime/console errors and zero external/business requests",
+      "detail": {}
+    },
+    {
+      "name": "Production and harness fingerprints stable throughout browser run",
+      "detail": {}
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 640
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    }
+  ],
+  "runtime": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "before": {
+    "schema/manage/digital-order-channel.ts": "fe5f3a9036b2f7a1686ee26f51a059816c43616efc83cd49a726c4dbf21c5ef2",
+    "store/digitalOrderChannelStore.ts": "7ad5993856dd2f79ad44d0cac1a3ccd60725d879a1c1edb78e5654522a437b91",
+    "types/ui/manage/digital-order-channel.ts": "4bca6568ce0f75a25ba36021933c74ddde7237d5772782bd74cd3dc97467a28c",
+    "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx": "9dfe66eee0edb6156715302fa5aeb32634da3dbdbccc2eac2331c3001a7b2a4d",
+    "components/feature/manage/digital-orders/ChannelDetailScreen.tsx": "afc326883efe96154c70523181aabecbe63881b8cec177d5134dbcc1890223d9",
+    "components/feature/manage/digital-orders/ChannelListScreen.tsx": "40a7f9162cfec7fe38c29dd9305de1f2e0f9202a781f0464010daa076391efc4",
+    "components/feature/manage/digital-orders/ChannelModifyScreen.tsx": "714bd3c7f51ef08e806ac462b38382d0bba633cca9c375f083111d90c9e4d206",
+    "components/feature/manage/digital-orders/ChannelNotice.tsx": "335a03cc1ccb217ce2347a1934ec96c7b02809bf2392dde6d0bc15e1599e90f8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx": "b0defc79556765cd2769c16064cffc8da2b26a3aadf4507f3e95b92c924e2ef8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx": "598004ee1b5ac2c2fdf4f1e2a0ca270629c6b50792ca0dde73c64e31d4d98f53",
+    "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx": "1f77d5850dce1f6911d754822129b7b6ef2cd123ab86f9a547b7b58bd7c83ad9",
+    "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx": "c5b3f1deefeccb6d2d6135ac8ae39789db1942804ad12cd13d332531ba6be0df",
+    "app/(no-layout)/manage/pos-settings/index.tsx": "460fff3d582c7d7e6a10cef24419704ded62c1cf69652f8d769617528cc358f5",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/Card.tsx": "238f33a68720bbab7283ac874097e3fa83928d0a96cff590e49c06f26406c905",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+    "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1",
+    "components/common/Header.tsx": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c",
+    "components/common/SingleSelect.tsx": "282ad7f089df58e374cb174749f16abb9e6a41a9c6ec74e5bef575b1c4fe6c9a",
+    "components/common/SearchBar.tsx": "139066d76bf17c97a240bf856943c049d8f321a641963594169819634c191640",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/custom/CatalogItemCard.tsx": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+    "components/custom/DetailBottomActions.tsx": "cfccb3f7080faf0a599182d268a232e2585a35aa95661443806984c15b6ec60b",
+    "components/custom/DetailRow.tsx": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "docs\\qa\\senior-6-2026-10-09\\digital-orders\\ui-entry.jsx": "d8e1743214d2e3d78b90b3f4c17835e62eac6716851cde8cfae2259fc76f387b",
+    "docs\\qa\\senior-6-2026-10-09\\digital-orders\\web.css": "04709605388ca05fd3868b910538bbde6ff891c4f10284397c1117916c7a7813",
+    "D:\\Codex-6\\tmp\\rapido-sd6-digital-orders\\entry.bundle.js": "a9badc53b68c376f4d77c3a132b4bd92e4bd13d25a19521ed9ef07ff2f7219ee"
+  },
+  "after": {
+    "schema/manage/digital-order-channel.ts": "fe5f3a9036b2f7a1686ee26f51a059816c43616efc83cd49a726c4dbf21c5ef2",
+    "store/digitalOrderChannelStore.ts": "7ad5993856dd2f79ad44d0cac1a3ccd60725d879a1c1edb78e5654522a437b91",
+    "types/ui/manage/digital-order-channel.ts": "4bca6568ce0f75a25ba36021933c74ddde7237d5772782bd74cd3dc97467a28c",
+    "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx": "9dfe66eee0edb6156715302fa5aeb32634da3dbdbccc2eac2331c3001a7b2a4d",
+    "components/feature/manage/digital-orders/ChannelDetailScreen.tsx": "afc326883efe96154c70523181aabecbe63881b8cec177d5134dbcc1890223d9",
+    "components/feature/manage/digital-orders/ChannelListScreen.tsx": "40a7f9162cfec7fe38c29dd9305de1f2e0f9202a781f0464010daa076391efc4",
+    "components/feature/manage/digital-orders/ChannelModifyScreen.tsx": "714bd3c7f51ef08e806ac462b38382d0bba633cca9c375f083111d90c9e4d206",
+    "components/feature/manage/digital-orders/ChannelNotice.tsx": "335a03cc1ccb217ce2347a1934ec96c7b02809bf2392dde6d0bc15e1599e90f8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx": "b0defc79556765cd2769c16064cffc8da2b26a3aadf4507f3e95b92c924e2ef8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx": "598004ee1b5ac2c2fdf4f1e2a0ca270629c6b50792ca0dde73c64e31d4d98f53",
+    "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx": "1f77d5850dce1f6911d754822129b7b6ef2cd123ab86f9a547b7b58bd7c83ad9",
+    "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx": "c5b3f1deefeccb6d2d6135ac8ae39789db1942804ad12cd13d332531ba6be0df",
+    "app/(no-layout)/manage/pos-settings/index.tsx": "460fff3d582c7d7e6a10cef24419704ded62c1cf69652f8d769617528cc358f5",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/Card.tsx": "238f33a68720bbab7283ac874097e3fa83928d0a96cff590e49c06f26406c905",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+    "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1",
+    "components/common/Header.tsx": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c",
+    "components/common/SingleSelect.tsx": "282ad7f089df58e374cb174749f16abb9e6a41a9c6ec74e5bef575b1c4fe6c9a",
+    "components/common/SearchBar.tsx": "139066d76bf17c97a240bf856943c049d8f321a641963594169819634c191640",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/custom/CatalogItemCard.tsx": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+    "components/custom/DetailBottomActions.tsx": "cfccb3f7080faf0a599182d268a232e2585a35aa95661443806984c15b6ec60b",
+    "components/custom/DetailRow.tsx": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "docs\\qa\\senior-6-2026-10-09\\digital-orders\\ui-entry.jsx": "d8e1743214d2e3d78b90b3f4c17835e62eac6716851cde8cfae2259fc76f387b",
+    "docs\\qa\\senior-6-2026-10-09\\digital-orders\\web.css": "04709605388ca05fd3868b910538bbde6ff891c4f10284397c1117916c7a7813",
+    "D:\\Codex-6\\tmp\\rapido-sd6-digital-orders\\entry.bundle.js": "a9badc53b68c376f4d77c3a132b4bd92e4bd13d25a19521ed9ef07ff2f7219ee"
+  },
+  "limitations": "Production RN Web schema/store/screens/RHF/Form/primitives/modals/fonts/providers; isolated navigator/params and local fixture updates, not full router/auth/native/Figma/backend/persistence."
+}

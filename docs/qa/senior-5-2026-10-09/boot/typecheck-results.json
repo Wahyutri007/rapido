@@ -1,0 +1,5 @@
+{
+  "scope": "Boot root app/index.tsx plus imported dependency closure; not a full-project check",
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

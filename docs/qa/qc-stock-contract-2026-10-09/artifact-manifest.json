@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-10-08T19:30:20.933Z",
+  "files": {
+    "DECISION.json": "2378299ca6d885070ad96123e92059638511441c7892da8947fb12429549cc87",
+    "REPORT.md": "cff798b411241176d66ddc3827bd8f188697b1785039d5b31a55e0226e5694e1",
+    "backend-contract.php": "2e7313ddf3455f6bbd08799b28e33e53b9040b3e07f61e418f339cdc586df16d",
+    "backend-results.json": "9db217b996ab64aa1f5d9d48ff6b34e34ceaf39213ea396a3d281c8e208a8862",
+    "domain-identity-results.json": "695e41681584e0a7f123cf7c484632f8eaa66a9836f31611fa29301e3d023a7d",
+    "domain-identity.php": "65f09b7838500dac32388ca02e2cbfe31552d3e523318db5d11bd3a9fc12495b",
+    "eslint.json": "f2052930553c94abebbf66ff37b2fe0bcd2ae115961504aaa33245301f7bd728",
+    "finalize.cjs": "f5377abd44c6dd4fb3e3db5560bb771982d51372fef73cc7b211ad9d47e12d41",
+    "fingerprints-after.json": "bed7a2f0a669263c6305f9422fd333afa9cbf6ccf4ec515ebc3a4b371f5ce4f2",
+    "fingerprints-before.json": "996376715c5536375521772bb86a864004d3fa7e9ee315964a001e46290a2ed5",
+    "harness-notes.json": "38bf1df5a9e54f9058f4edbac861ec376bd971af5d58036adbb7cc6cb87bd3a1",
+    "independent-screen-results.json": "10b8bd593d2cd1a8aa12abb1a8b8660d521c01db54049f072d7d95e984ee57d9",
+    "independent-screen.cjs": "bc780d57262a88a783aaab53016dba0aeb2ea40f6f3c9b78b6a1c2a3baf02a4f",
+    "payloads.json": "7a60ee2991efe154a6c331570e6f0f9a1b3f1ecad3222dd9804fea7c84861878",
+    "quality-results.json": "e07af892c847b47eb01d2cb2b7381c38b20785b7b8d4660f92635e1746ef64a0",
+    "rerun.cjs": "ac869b375c25641c773dd13cf463cc8936ac03a5dee2b8438c252f9327ec8c43",
+    "results.json": "8dfa3405ce8865d9cb778da390092e0ddd4390a65b38ef83b76517cca01c384a",
+    "snapshot.cjs": "3acd608f4e00129ccfd9d2bf0091056c1bff71932bf97f7b2b88b2121d1bf791",
+    "stock-policy-results.json": "062ed0cfd72925ec811a31c34855996fda54417e2ce8c4a7ea7562abdd84c8a6",
+    "stock-policy.php": "3915031eb1beb83c833a5f5d0fb28c1c944e776d7a74690d6ac3d7f27b1aa965"
+  }
+}

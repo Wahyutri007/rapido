@@ -1,0 +1,1626 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-006",
+  "mode": "current-source",
+  "passed": 156,
+  "failed": 0,
+  "runtimeErrors": [],
+  "checks": [
+    {
+      "name": "Role: hidden success callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: two callbacks before render issue one DELETE",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role: confirmation stays busy while request is pending",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role: production request uses DELETE and encoded selected ID",
+      "passed": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A%20%2F%3F"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A%20%2F%3F"
+        }
+      ]
+    },
+    {
+      "name": "Role: success invalidates list, exact detail and cross-module keys",
+      "passed": true,
+      "actual": [
+        [
+          "roles"
+        ],
+        [
+          "roles",
+          "A /?"
+        ],
+        [
+          "workers"
+        ]
+      ],
+      "expected": [
+        [
+          "roles"
+        ],
+        [
+          "roles",
+          "A /?"
+        ],
+        [
+          "workers"
+        ]
+      ]
+    },
+    {
+      "name": "Role: production QueryClient caches are invalidated",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Role: successful deletion closes confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role: successful deletion opens success notice",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role: success does not open error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role: repeated success close navigates once",
+      "passed": true,
+      "actual": [
+        "A /?"
+      ],
+      "expected": [
+        "A /?"
+      ]
+    },
+    {
+      "name": "Role: cached confirmation after success cannot delete again",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role: missing target or empty ID null cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: missing target or empty ID empty cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: hidden confirmation cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: cached visible callback after dismissal cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: network opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role: network releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role: network production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role: network retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Role: forbidden opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role: forbidden releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role: forbidden production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role: forbidden retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Role: failed-body opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role: failed-body releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role: failed-body production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role: failed-body retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Role: success new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Role: success queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role: success old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: success old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Role: success B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/contents/roles/A",
+        "/contents/roles/B"
+      ],
+      "expected": [
+        "/contents/roles/A",
+        "/contents/roles/B"
+      ]
+    },
+    {
+      "name": "Role: success B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Role: network new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Role: network queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role: network old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: network old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Role: network B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/contents/roles/A",
+        "/contents/roles/B"
+      ],
+      "expected": [
+        "/contents/roles/A",
+        "/contents/roles/B"
+      ]
+    },
+    {
+      "name": "Role: network B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Role: success completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: success completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: network completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: network completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Role: success removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: success unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Role: network removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: network unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Role: same ID rerender preserves pending request",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role: same ID result still succeeds",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role: A to B to A ignores reverse-order old completions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role: A to B to A cached first A callback stays inactive",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "Role: A to B to A fresh A can complete normally",
+      "passed": true,
+      "actual": [
+        "/contents/roles/A",
+        true
+      ],
+      "expected": [
+        "/contents/roles/A",
+        true
+      ]
+    },
+    {
+      "name": "Worker: hidden success callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: two callbacks before render issue one DELETE",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker: confirmation stays busy while request is pending",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker: production request uses DELETE and encoded selected ID",
+      "passed": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A%20%2F%3F"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A%20%2F%3F"
+        }
+      ]
+    },
+    {
+      "name": "Worker: success invalidates list, exact detail and cross-module keys",
+      "passed": true,
+      "actual": [
+        [
+          "workers"
+        ],
+        [
+          "workers",
+          "A /?"
+        ]
+      ],
+      "expected": [
+        [
+          "workers"
+        ],
+        [
+          "workers",
+          "A /?"
+        ]
+      ]
+    },
+    {
+      "name": "Worker: production QueryClient caches are invalidated",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Worker: successful deletion closes confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker: successful deletion opens success notice",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker: success does not open error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker: repeated success close navigates once",
+      "passed": true,
+      "actual": [
+        "A /?"
+      ],
+      "expected": [
+        "A /?"
+      ]
+    },
+    {
+      "name": "Worker: cached confirmation after success cannot delete again",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker: missing target or empty ID null cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: missing target or empty ID empty cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: hidden confirmation cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: cached visible callback after dismissal cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: network opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker: network releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker: network production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker: network retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Worker: forbidden opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker: forbidden releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker: forbidden production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker: forbidden retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Worker: failed-body opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker: failed-body releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker: failed-body production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker: failed-body retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Worker: success new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Worker: success queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker: success old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: success old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Worker: success B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/contents/workers/A",
+        "/contents/workers/B"
+      ],
+      "expected": [
+        "/contents/workers/A",
+        "/contents/workers/B"
+      ]
+    },
+    {
+      "name": "Worker: success B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Worker: network new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Worker: network queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker: network old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: network old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Worker: network B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/contents/workers/A",
+        "/contents/workers/B"
+      ],
+      "expected": [
+        "/contents/workers/A",
+        "/contents/workers/B"
+      ]
+    },
+    {
+      "name": "Worker: network B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Worker: success completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: success completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: network completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: network completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Worker: success removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: success unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Worker: network removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: network unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Worker: same ID rerender preserves pending request",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker: same ID result still succeeds",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker: A to B to A ignores reverse-order old completions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker: A to B to A cached first A callback stays inactive",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "Worker: A to B to A fresh A can complete normally",
+      "passed": true,
+      "actual": [
+        "/contents/workers/A",
+        true
+      ],
+      "expected": [
+        "/contents/workers/A",
+        true
+      ]
+    },
+    {
+      "name": "Member: hidden success callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: two callbacks before render issue one DELETE",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member: confirmation stays busy while request is pending",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member: production request uses DELETE and encoded selected ID",
+      "passed": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A%20%2F%3F"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A%20%2F%3F"
+        }
+      ]
+    },
+    {
+      "name": "Member: success invalidates list, exact detail and cross-module keys",
+      "passed": true,
+      "actual": [
+        [
+          "customers"
+        ],
+        [
+          "customers",
+          "A /?"
+        ]
+      ],
+      "expected": [
+        [
+          "customers"
+        ],
+        [
+          "customers",
+          "A /?"
+        ]
+      ]
+    },
+    {
+      "name": "Member: production QueryClient caches are invalidated",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Member: successful deletion closes confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member: successful deletion opens success notice",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member: success does not open error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member: repeated success close navigates once",
+      "passed": true,
+      "actual": [
+        "A /?"
+      ],
+      "expected": [
+        "A /?"
+      ]
+    },
+    {
+      "name": "Member: cached confirmation after success cannot delete again",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member: missing target or empty ID null cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: missing target or empty ID empty cannot delete",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: hidden confirmation cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: cached visible callback after dismissal cannot send DELETE",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: network opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member: network releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member: network production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member: network retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Member: forbidden opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member: forbidden releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member: forbidden production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member: forbidden retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Member: failed-body opens error and keeps confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member: failed-body releases busy and does not invalidate caches",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member: failed-body production error button closes notice",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member: failed-body retry succeeds with two total calls",
+      "passed": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Member: success new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Member: success queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member: success old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: success old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Member: success B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/customers/data/A",
+        "/customers/data/B"
+      ],
+      "expected": [
+        "/customers/data/A",
+        "/customers/data/B"
+      ]
+    },
+    {
+      "name": "Member: success B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Member: network new target starts idle with fresh notices",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "Member: network queued old-target confirmation sends nothing",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member: network old result leaves B confirmation and notices unchanged",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: network old success-close cannot navigate B",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Member: network B deletion uses only correct ID",
+      "passed": true,
+      "actual": [
+        "/customers/data/A",
+        "/customers/data/B"
+      ],
+      "expected": [
+        "/customers/data/A",
+        "/customers/data/B"
+      ]
+    },
+    {
+      "name": "Member: network B success navigates for B only",
+      "passed": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Member: success completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: success completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: network completed A notice resets when target changes",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: network completed A close callback cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Member: success removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: success unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Member: network removed target receives no old notice",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: network unmounted callbacks issue no new request/navigation",
+      "passed": true,
+      "actual": [
+        1,
+        []
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Member: same ID rerender preserves pending request",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member: same ID result still succeeds",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member: A to B to A ignores reverse-order old completions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member: A to B to A cached first A callback stays inactive",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "Member: A to B to A fresh A can complete normally",
+      "passed": true,
+      "actual": [
+        "/customers/data/A",
+        true
+      ],
+      "expected": [
+        "/customers/data/A",
+        true
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "productionModules": [
+    "hooks/useAlertModal.ts",
+    "components/common/DeleteConfirmModal.tsx",
+    "constants/Colors.ts",
+    "components/common/SuccessModal.tsx",
+    "components/common/AlertModal.tsx",
+    "lib/api-utils.ts",
+    "api/common.ts",
+    "hooks/usePostRequest.ts",
+    "api/factory.ts",
+    "api/hooks/roles.ts",
+    "lib/manage/roles.ts",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx",
+    "api/hooks/workers.ts",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+    "api/hooks/customers.ts",
+    "components/feature/manage/member/MemberDeleteDialog.tsx"
+  ],
+  "productionModuleHashes": {
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+  },
+  "adapters": [
+    "React test renderer/RN/button/modal/Text/vector-icon/image host presentation",
+    "Axios adapter promise outcomes; API client/auth interceptor excluded; no HTTP",
+    "Standalone parent state/QueryClient provider; no actual navigator/list/detail screen"
+  ],
+  "controlFallbacks": [],
+  "strictMode": true
+}

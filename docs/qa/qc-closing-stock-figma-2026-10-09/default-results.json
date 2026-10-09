@@ -1,0 +1,218 @@
+{
+  "scope": "Executed current/baseline shared component JSX with hook/native/router host adapters. Presentation/props comparison only; callback bodies independently checked by scope suite. Not browser/default caller/native certification.",
+  "passed": 51,
+  "failed": 0,
+  "results": [
+    {
+      "name": "components/common/Header.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "TabItemButton default label/icon/weight matches baseline focused=false",
+      "pass": true
+    },
+    {
+      "name": "TabItemButton default label/icon/weight matches baseline focused=true",
+      "pass": true
+    },
+    {
+      "name": "new explicit flush density is opt-in",
+      "pass": true
+    }
+  ],
+  "sourceHashes": {
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/custom/BottomTab.tsx": "4bf76a34267565c30484c7d58996aea83e878454a9d47bee6fd13e3b9ff9d3cb"
+  }
+}

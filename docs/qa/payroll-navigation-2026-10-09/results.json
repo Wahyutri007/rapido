@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "passed": 21,
+  "checks": [
+    "Kelola opens Payroll list with correct URL and one visible layout header",
+    "Payroll list header returns to Kelola",
+    "List opens employee detail with matching route ID",
+    "Settings hydrate the selected employee and preserve its route ID",
+    "Saving settings updates the same record then header returns to its detail",
+    "Payment opens the same employee and rejects missing required inputs",
+    "Full preview payment reaches slip and exports the same reference without API mutation",
+    "Back from paid slip keeps payment saved once and locks paid employee settings",
+    "Back to list updates paid status and opening another employee changes ID",
+    "History opens prior period detail and back restores original employee context",
+    "Reload retains edit pathname and ID using documented initial local fixture",
+    "Unknown ID is handled on real detail route",
+    "Unknown ID is handled on real modify route",
+    "Unknown ID is handled on real payment route",
+    "Unknown ID is handled on real history route",
+    "Unknown ID is handled on real slip route",
+    "Paid fixture deep links block settings and repeat payment",
+    "Fresh direct detail link has a usable header back to Payroll list",
+    "Browser back/forward retains settings ID and restores a usable Payroll list anchor",
+    "A direct-link list anchor can return to Kelola when its own history is empty",
+    "Unauthenticated direct Payroll link redirects through the app login guard"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    }
+  ],
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "checkedAt": "2026-10-08T20:30:24.738Z",
+  "timezone": "Asia/Jakarta",
+  "scope": "SDK57 production app entry/auth providers/Expo Router with fixture responses and HTML/CSS boot adapter. SSR, real API/native, backend Payroll permissions and persistence are not verified."
+}

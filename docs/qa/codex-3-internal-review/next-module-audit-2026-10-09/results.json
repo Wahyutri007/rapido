@@ -1,0 +1,387 @@
+{
+  "status": "READ_ONLY_AUDIT_REPRODUCTION",
+  "externalQcApproval": false,
+  "finishedAt": "2026-10-09T00:24:58.457Z",
+  "summary": {
+    "assertions": 60,
+    "passed": 18,
+    "failed": 42,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "loadedSourceHashes": {
+    "components/feature/manage/roles/RoleListScreen.tsx": "426b20d5e66c816d1ec2a64f69f8780a6e0257432aa13135be6b29b6345cfe68",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "7219730a1e3ecead9431bad0d1a4ebeba6295c6e793b6ecb74f87839823bda3b",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/member/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3"
+  },
+  "checks": [
+    {
+      "name": "Role/normal: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/normal: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "role A",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/normal: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "role A",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/normal: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: explicit B has current title",
+      "pass": true,
+      "actual": "role B",
+      "expected": "role B"
+    },
+    {
+      "name": "Role/normal: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/StrictMode: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "role A",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/StrictMode: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "role A",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/StrictMode: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: explicit B has current title",
+      "pass": true,
+      "actual": "role B",
+      "expected": "role B"
+    },
+    {
+      "name": "Role/StrictMode: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/normal: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "worker A",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/normal: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "worker A",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/normal: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: explicit B has current title",
+      "pass": true,
+      "actual": "worker B",
+      "expected": "worker B"
+    },
+    {
+      "name": "Worker/normal: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/StrictMode: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "worker A",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/StrictMode: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "worker A",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/StrictMode: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: explicit B has current title",
+      "pass": true,
+      "actual": "worker B",
+      "expected": "worker B"
+    },
+    {
+      "name": "Worker/StrictMode: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/normal: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "member A",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/normal: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "member A",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/normal: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: explicit B has current title",
+      "pass": true,
+      "actual": "member B",
+      "expected": "member B"
+    },
+    {
+      "name": "Member/normal: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: explicit A selection opens sheet",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: selected A matches",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/StrictMode: renamed A sheet uses current query name",
+      "pass": false,
+      "actual": "member A",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/StrictMode: renamed A deletion target uses current query name",
+      "pass": false,
+      "actual": "member A",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/StrictMode: removed A closes actions",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: removed A cannot open new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: explicit B has current title",
+      "pass": true,
+      "actual": "member B",
+      "expected": "member B"
+    },
+    {
+      "name": "Member/StrictMode: stale A delete cannot open B confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: stale A close cannot close B actions",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: stale A edit cannot navigate after B opens",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    }
+  ],
+  "runtimeErrors": [],
+  "warnings": [],
+  "adapters": "Production List/ItemActionSheet/useAlertModal/useRefreshControl and display helpers with query data, child delete dialog, native/presentation/router/Colors adapters. No actual request, browser/native or app source edits."
+}

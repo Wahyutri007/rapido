@@ -1,0 +1,24 @@
+{
+  "source": "components/common/SuccessModal.tsx",
+  "sourceHash": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+  "candidateHash": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f",
+  "screenHash": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+  "scope": "One explicit 176px/100% image style (matching existing h-44/w-full intent); only a copied screen import changes to render this proposal.",
+  "applied": false,
+  "applyCheckExit": 0,
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "exit": 0,
+    "stdinWriteOnly": true,
+    "outputByteIdentical": true
+  },
+  "fixtureHashes": {
+    ".expo/qc-stock-ui-entry.jsx": "c08e3f92dd2e99352a62b25dd4858e9524c90d28cc1cbc1ea936f9c2e7a5c6b8",
+    ".expo/qc-stock-ui-screen.tsx": "f9cf553b5166f22cda65f1cd834a107e7f8a6dd2a6f79359fd16225ba0ee1faa",
+    ".expo/qc-stock-ui-success-modal.tsx": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f"
+  }
+}

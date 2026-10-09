@@ -1,0 +1,46 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const { spawnSync } = require('node:child_process');
+const source = fs.readFileSync(path.join(__dirname, 'lifecycle.cjs'), 'utf8');
+const marker = '\n(async () => {';
+if (source.split(marker).length !== 2) throw new Error('Expected one lifecycle runner boundary');
+const prefix = source.slice(0, source.indexOf(marker));
+const body = `
+(async () => {
+  const expenseValues = load('lib/manage/expenses.ts').expenseFormValues;
+  const expenseSeed = expenseValues(initial.expenses[0]);
+  const mountExpense = async (reference) => {
+    await reset();
+    await act(async () => { renderer = create(React.createElement(React.StrictMode, null, React.createElement(CashForm, { kind: 'expense', initialValues: { ...expenseSeed, referenceNumber: reference } }))); });
+  };
+  await mountExpense('QC-EXPENSE-DOUBLE');
+  const beforeIncome = incomes(), press = submit();
+  await act(async () => { await Promise.all([press(), press()]); });
+  const created = read().expenses.find((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE');
+  check('expense candidate: double press creates exactly one expense', read().expenses.filter((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE').length, 1);
+  check('expense candidate: no false duplicate validation error', Boolean(form().getFieldState('referenceNumber').error), false);
+  check('expense candidate: income collection remains unchanged', incomes(), beforeIncome);
+  await act(async () => success().onClose());
+  await act(async () => input('Deskripsi').onChangeText('QC expense second save'));
+  await act(async () => submit()());
+  check('expense candidate: repeat save retains first ID', [read().expenses.filter((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE').length, read().expenses.find((item) => item.id === created.id)?.description], [1, 'QC expense second save']);
+  await mountExpense('QC-EXPENSE-STALE'); const stale = submit(); await unmount();
+  const beforeStale = JSON.parse(JSON.stringify(read().expenses));
+  await act(async () => stale());
+  check('expense candidate: disposed cached callback cannot write', read().expenses, beforeStale);
+  await mountExpense('QC-EXPENSE-PENDING'); const wait = deferred(); validationQueue.push(wait); let pending;
+  await act(async () => { pending = submit()(); });
+  await unmount(); const beforePending = JSON.parse(JSON.stringify(read().expenses));
+  await act(async () => { wait.resolve(); await pending; });
+  check('expense candidate: pending validation after unmount cannot write', read().expenses, beforePending);
+  const output = { owner: 'QC', tested: 'CURRENT_INTEGRATION_SOURCE', scope: 'Six shared CashEntryForm expense-kind candidate regression checks, real RHF/schema/helper/Zustand with adapters; not approval of complete Expenses feature', passed: checks.filter((item) => item.passed).length, failed: checks.filter((item) => !item.passed).length, errors, checks, sourceHashes };
+  fs.writeFileSync(path.join(__dirname, 'expense-proposal-results.json'), JSON.stringify(output, null, 2) + '\\n');
+  console.log(JSON.stringify({ passed: output.passed, failed: output.failed, errors: errors.length, failures: checks.filter((item) => !item.passed).map((item) => item.name) }));
+  process.exitCode = output.failed || errors.length ? 1 : 0;
+})().catch((error) => { console.error(error); process.exitCode = 1; });
+`;
+const runner = path.join(__dirname, 'expense-proposal-runner.cjs'); fs.writeFileSync(runner, prefix + body);
+const result = spawnSync(process.execPath, [runner], { encoding: 'utf8' });
+fs.writeFileSync(path.join(__dirname, 'expense-proposal.out.txt'), result.stdout || '');
+fs.writeFileSync(path.join(__dirname, 'expense-proposal.err.txt'), result.stderr || '');
+process.stdout.write(result.stdout || ''); process.stderr.write(result.stderr || ''); process.exitCode = result.status ?? 1;

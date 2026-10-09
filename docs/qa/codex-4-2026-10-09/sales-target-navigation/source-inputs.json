@@ -1,0 +1,181 @@
+{
+  "capturedAt": "2026-10-09T03:06:51.715Z",
+  "owned": [
+    "app/(no-layout)/manage/sales-target/_layout.tsx"
+  ],
+  "inputs": [
+    {
+      "file": "app/(no-layout)/manage/sales-target/_layout.tsx",
+      "sha256": "8e2b5dd7052d22587f83f640a0b96ecc1e8009fffe4e9cf17bec330b9261f574"
+    },
+    {
+      "file": "app/(no-layout)/manage/sales-target/index.tsx",
+      "sha256": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1"
+    },
+    {
+      "file": "app/(no-layout)/manage/sales-target/detail.tsx",
+      "sha256": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145"
+    },
+    {
+      "file": "app/(no-layout)/manage/sales-target/modify.tsx",
+      "sha256": "e342c11401195a54b237b299292720ccedb61e94e429c6a7d169059f0b81d67e"
+    },
+    {
+      "file": "components/feature/manage/sales-target/SalesTargetForm.tsx",
+      "sha256": "c9a682472daf973f2d161a1f90c0cbf42361ba155a6f097e4052e412d687ce0a"
+    },
+    {
+      "file": "components/feature/manage/sales-target/SalesTargetDetail.tsx",
+      "sha256": "d526e304d94ed18fd125dc2b8adf21c77e81c6d6c8376527a92e8b03578ec147"
+    },
+    {
+      "file": "store/salesTargetStore.ts",
+      "sha256": "c935e23bf336e3ab4cbfe682a8bbb3a75dada6397ad59cd9248d0da98ad463f5"
+    },
+    {
+      "file": "schema/manage/sales-target.ts",
+      "sha256": "45b7758505c259507ae86e1a0f21b21466107d6301fb4b08e6da2946a847860b"
+    },
+    {
+      "file": "lib/manage/sales-target.ts",
+      "sha256": "b543e718f3e38ed35410a3dcfd594c00b35529fc07e9327c5183dc4621186ea9"
+    },
+    {
+      "file": "types/ui/manage/sales-target.ts",
+      "sha256": "563699b7477c3ddb3b2dd8e6a086a330af20f8e99114e50d8d150101228fe879"
+    },
+    {
+      "file": "constants/data/manage/sales-target.ts",
+      "sha256": "f9d14c51a8699d9559343731dc3809e492d0795db6be2ad6111a81e7c6aff7e1"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db"
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "sha256": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8"
+    },
+    {
+      "file": "components/common/BottomActionBar.tsx",
+      "sha256": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1"
+    },
+    {
+      "file": "components/common/BottomActionButton.tsx",
+      "sha256": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd"
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "sha256": "07e3960ec2bb3668c2493975e66bfe7b1439a377d21a1d4e578e65522f735330"
+    },
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1"
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "2a141e7ac94e93cce54157879635d947531b8e5fad328ba811ab9c1fad8a2fdb"
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "sha256": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    {
+      "file": "components/custom/DetailBottomActions.tsx",
+      "sha256": "cfccb3f7080faf0a599182d268a232e2585a35aa95661443806984c15b6ec60b"
+    },
+    {
+      "file": "components/custom/CatalogItemCard.tsx",
+      "sha256": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425"
+    },
+    {
+      "file": "components/custom/DetailRow.tsx",
+      "sha256": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351"
+    },
+    {
+      "file": "components/custom/ItemActionSheet.tsx",
+      "sha256": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2"
+    },
+    {
+      "file": "components/custom/JSStack.tsx",
+      "sha256": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808"
+    },
+    {
+      "file": "lib/ui/figma-stock.ts",
+      "sha256": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d"
+    },
+    {
+      "file": "app/_layout.tsx",
+      "sha256": "5f1b79e7793e77ad983f94eae5bd37775c3b719563fc97b5eeff2322e43937f5"
+    },
+    {
+      "file": "app/(no-layout)/_layout.tsx",
+      "sha256": "66399da5e6d829598386b1b9fc7fb4508146c771f640fcf081e79e5f1896f9f0"
+    },
+    {
+      "file": "app/(no-layout)/manage/_layout.tsx",
+      "sha256": "356813832574d3329b74a39dc6e6b630c802fa2cc2f2036ad66095e2b4d2f47f"
+    },
+    {
+      "file": "app/(back-office)/_layout.tsx",
+      "sha256": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad"
+    },
+    {
+      "file": "app/(back-office)/manage.tsx",
+      "sha256": "69cd0e9f28d7e316b908b03dbc00627235ddbadab6fcca08327a13aa798e14ed"
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "sha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+    },
+    {
+      "file": "context/AuthContext.tsx",
+      "sha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646"
+    },
+    {
+      "file": "lib/storage.ts",
+      "sha256": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6"
+    },
+    {
+      "file": "babel.config.js",
+      "sha256": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9"
+    },
+    {
+      "file": "metro.config.js",
+      "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+    },
+    {
+      "file": "package.json",
+      "sha256": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44"
+    },
+    {
+      "file": "global.css",
+      "sha256": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f"
+    },
+    {
+      "file": "tailwind.config.js",
+      "sha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/web.css",
+      "sha256": "e48b786fdc113fab0ac974469bae7ef594dc2dbd84fe73674c028fe732f00ad1"
+    }
+  ],
+  "scope": "Selected navigation/feature/UI/auth/build inputs, not the entire app import graph."
+}

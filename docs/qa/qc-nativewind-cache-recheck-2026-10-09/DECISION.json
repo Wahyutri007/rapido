@@ -1,0 +1,153 @@
+{
+  "owner": "QC",
+  "ticket": "QC-STARTUP-CACHE-001",
+  "signal": "QC-NATIVEWIND-CACHE-20261009-PASS-RECHECK",
+  "status": "PASS_RECHECK",
+  "completedAt": "2026-10-09T00:50:37.378Z",
+  "scope": "Exact four-file CJS cache/config/harness correction only; separate native/routing/dependency gates remain.",
+  "approvedSourceHashes": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "scripts/preserve-nativewind-cache.cjs": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+    "scripts/verify-nativewind-cache.cjs": "0d5146864121ff56a8a6ca261134af9268a876a27ca29dc566d16d56de366529",
+    "scripts/verify-metro-cache.cjs": "55bd6d366887d4815fec99b548d8582c68e504cea2812291c28adc33e69bf0be"
+  },
+  "findings": [
+    {
+      "id": "QC-STARTUP-CACHE-001",
+      "severity": "P3",
+      "status": "CLOSED_BY_RECHECK",
+      "previousDiagnosticCounts": {
+        "errors": 4,
+        "warnings": 1,
+        "infos": 1
+      },
+      "finalDiagnosticCounts": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      },
+      "evidence": [
+        "quality-results.json",
+        "independent-results.json",
+        "replay-results.json"
+      ],
+      "reason": "Scoped quality clean; declared semantic boundaries and actual initializer/queue regression verified"
+    }
+  ],
+  "supersedesFindingsFrom": {
+    "decision": "../qc-nativewind-cache-2026-10-09/DECISION.json",
+    "signal": "QC-NATIVEWIND-CACHE-20261009-CHANGES-REQUESTED",
+    "hash": "dcf545c8a8e73b4c13c6a2429a69f5c8b363594217616fe9d18f63526d7e9c74",
+    "findings": [
+      "QC-STARTUP-CACHE-001"
+    ],
+    "originalHistoricalDecisionEdited": false
+  },
+  "unchangedRelatedGates": [
+    {
+      "id": "QC-HP-WARNING-001",
+      "severity": "P3",
+      "status": "OPEN_PENDING_INDEPENDENT_ROUTING_NATIVE_RECHECK",
+      "owner": "Senior 7",
+      "note": "Routing source and native supplement handed off separately; no closure here"
+    },
+    {
+      "id": "QC-HP-WARNING-002",
+      "severity": "P3",
+      "status": "OPEN",
+      "owner": "SDK/dependency integration",
+      "note": "InteractionManager warning outside cache scope"
+    },
+    {
+      "id": "QC-SUCCESS-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "owner": "SD3-007 / Codex-3",
+      "note": "Landscape modal defect remains outside this correction"
+    }
+  ],
+  "assertions": {
+    "installedInitializer": 10,
+    "guardBoundaries": 16,
+    "queueBoundaries": 15,
+    "harnessFailureCases": 3,
+    "astContractChecks": 5,
+    "behaviorTotal": 44,
+    "contractTotal": 5,
+    "totalPassed": 49,
+    "totalFailed": 0,
+    "unexpectedRuntimeErrors": 0,
+    "stress": {
+      "reads": 3000,
+      "writes": 200,
+      "maximumOpenRequests": 64,
+      "errorQueueRecovered": true,
+      "clearDelegated": true
+    },
+    "additionalQueueReadOperations": 258,
+    "queueOperationsCountedAsAssertions": false,
+    "initialReplayCountedAgain": false
+  },
+  "gates": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "biomeDiagnosticsEmpty": true,
+    "syntaxExits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "scopedDiffExit": 0,
+    "typecheck": "Not run; CJS-only delta"
+  },
+  "semanticDelta": {
+    "metroConfig": "Whole AST identical",
+    "queueHarness": "Whole AST identical",
+    "guardHelper": "Whole AST identical after one declared arrow normalization; no lexical receiver captures",
+    "initializerHarness": "Only identical cleanup guard moved immediately after mkdtemp and JSON output concat changed to equivalent template literal"
+  },
+  "integrity": {
+    "handoffFingerprintMatches": 17,
+    "initialSourceSnapshotMatches": 4,
+    "trackedCurrentInputMatches": 33,
+    "historicalFingerprintEntriesUnchanged": 37,
+    "runnerCopiesByteIdentical": true,
+    "androidCacheBefore": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "androidCacheAfter": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "androidCacheUnchanged": true,
+    "cacheBytes": 193003
+  },
+  "exercisedDependency": {
+    "file": "node_modules/react-native-css-interop/dist/metro/index.js",
+    "sha256": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a",
+    "version": "0.2.7"
+  },
+  "publication": {
+    "qcDeltaApproved": true,
+    "approvedScope": [
+      "metro.config.js",
+      "scripts/preserve-nativewind-cache.cjs",
+      "scripts/verify-nativewind-cache.cjs",
+      "scripts/verify-metro-cache.cjs"
+    ],
+    "owner": "Projek Manager",
+    "required": "Verify exact source/dependency/evidence hashes and integration context; native/routing/SDK are separate gates",
+    "fullApplicationApproved": false,
+    "mainMergeApproved": false,
+    "pushPerformedByQC": false
+  },
+  "limitations": [
+    "No actual root-Metro require/new bundle/server operation",
+    "Config/queue source executed in VM with Expo/NativeWind adapters",
+    "Actual installed CSS initializer executed against isolated temporary cache",
+    "Three harness failure tests use in-memory filesystem and initializer adapter",
+    "No native cold-launch/second-process config-load rerun on final hashes",
+    "No HP/ADB/full-app/router/auth/backend/persistence/Figma certification",
+    "No dependency change or full-project TypeScript check",
+    "Guard protects synchronous empty-string writes during config initialization only; dependency version changes need recheck"
+  ],
+  "applicationSourcesEditedByQC": false,
+  "gitPublishedByQC": false
+}

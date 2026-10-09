@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "device": "vivo 1918",
+  "serial": "35b9a8aa",
+  "kind": "Developer visual inspection of two local screenshots after separate Expo Go force-stop/start cycles; not automated full-screen assertions",
+  "startupAttempts": 2,
+  "screen": "Beranda Back Office",
+  "redThemeErrorVisible": false,
+  "observedAppLabels": [
+    "Back Office",
+    "Selamat datang!",
+    "Ringkasan Laporan",
+    "Beranda",
+    "Laporan",
+    "Katalog",
+    "Inventory",
+    "Kelola"
+  ],
+  "localScreenshots": [
+    ".expo/senior7-startup/final-device.png",
+    ".expo/senior7-startup/second-device.png"
+  ],
+  "screenshotsPublished": false,
+  "reason": "Full-device captures contain unrelated application overlays; retain only local ignored files.",
+  "uiAutomatorFinal": "Could not get idle state; successful initial error dump retained as baseline, final state verified visually.",
+  "bundles": [
+    "Android Bundled 153570ms node_modules\\expo-router\\entry.js (5192 modules)",
+    "Android Bundled 213ms node_modules\\expo-router\\entry.js (1 module)"
+  ],
+  "newMetroThemeError": false,
+  "newMetroErrorEntries": 0,
+  "warnings": [
+    "InteractionManager deprecation",
+    "Legacy layout route registrations: menu/search, menu, catalog/menu"
+  ],
+  "runtime": {
+    "metroPort": 8088,
+    "metroPid": 9200,
+    "backendPort": 8001,
+    "backendPid": 24116,
+    "appDataCleared": false,
+    "serverLeftRunning": true
+  },
+  "limitations": [
+    "Startup verified, not all app operations.",
+    "Existing nonfatal warnings remain.",
+    "QA/QC independent review pending."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-014",
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "before hub: disabled Coming Soon external entry, no integration href",
+      "passed": true
+    },
+    {
+      "name": "hub delta: only external entry and its unused presentation imports",
+      "passed": true
+    },
+    {
+      "name": "hub destination registered exactly once",
+      "passed": true
+    },
+    {
+      "name": "parent before: no integration registration",
+      "passed": true
+    },
+    {
+      "name": "parent delta: one headerfalse child plus unused React import/format",
+      "passed": true
+    },
+    {
+      "name": "parent destination registered exactly once",
+      "passed": true
+    },
+    {
+      "name": "new route exists: index.tsx",
+      "passed": true
+    },
+    {
+      "name": "new route exists: modify.tsx",
+      "passed": true
+    },
+    {
+      "name": "new route exists: detail.tsx",
+      "passed": true
+    },
+    {
+      "name": "new route exists: _layout.tsx",
+      "passed": true
+    },
+    {
+      "name": "layout registers header for: index",
+      "passed": true
+    },
+    {
+      "name": "layout registers header for: modify",
+      "passed": true
+    },
+    {
+      "name": "layout registers header for: detail",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "app/(back-office)/manage.tsx": "69cd0e9f28d7e316b908b03dbc00627235ddbadab6fcca08327a13aa798e14ed",
+    "app/(no-layout)/manage/_layout.tsx": "356813832574d3329b74a39dc6e6b630c802fa2cc2f2036ad66095e2b4d2f47f"
+  },
+  "baselineHashes": {
+    "hub": "8f8f1b78470ee9272b1e2972351fc806377d4c610451679bb02f96d6a6023964",
+    "parent": "ecee7824673570bd5dba18ba307a77959d4f7578e14a45e6fb18d7c675f4f81b"
+  },
+  "limits": "AST/source routing and scope proof only; not a full navigator/root auth/browser/native execution or webhook/backend contract"
+}

@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "baseline": true,
+  "stage": "all",
+  "passed": 37,
+  "failed": 3,
+  "checks": [
+    {
+      "name": "unfiltered sums derive from actual rows",
+      "passed": true,
+      "actual": [
+        100,
+        20
+      ],
+      "expected": [
+        100,
+        20
+      ]
+    },
+    {
+      "name": "empty search renders no rows",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "QC-S8-LEGACY-001 empty search summary is zero",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "one-sided search has zero opposite total",
+      "passed": true,
+      "actual": [
+        100,
+        0
+      ],
+      "expected": [
+        100,
+        0
+      ]
+    },
+    {
+      "name": "credit-only type has zero debit",
+      "passed": true,
+      "actual": [
+        0,
+        20
+      ],
+      "expected": [
+        0,
+        20
+      ]
+    },
+    {
+      "name": "debit-only type has zero credit",
+      "passed": true,
+      "actual": [
+        100,
+        0
+      ],
+      "expected": [
+        100,
+        0
+      ]
+    },
+    {
+      "name": "production addLedgerEntry updates filtered totals",
+      "passed": true,
+      "actual": [
+        140,
+        0
+      ],
+      "expected": [
+        140,
+        0
+      ]
+    },
+    {
+      "name": "type selection survives store update",
+      "passed": true,
+      "actual": "debit",
+      "expected": "debit"
+    },
+    {
+      "name": "clear type restores both totals",
+      "passed": true,
+      "actual": [
+        140,
+        20
+      ],
+      "expected": [
+        140,
+        20
+      ]
+    },
+    {
+      "name": "empty account entries never use metadata totals",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "zero amount remains zero",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "empty accounts render not-found state",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "restored account remains zero without positive entries",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "account balance metadata is not fabricated from filtered turnover",
+      "passed": true,
+      "actual": 111,
+      "expected": 111
+    },
+    {
+      "name": "QC-S8-LEGACY-002 month excludes 2020 entry",
+      "passed": true,
+      "actual": [
+        "oct-start",
+        "oct-end"
+      ],
+      "expected": [
+        "oct-start",
+        "oct-end"
+      ]
+    },
+    {
+      "name": "monthly summary uses same filtered rows",
+      "passed": true,
+      "actual": [
+        3,
+        4
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "calendar quarter includes October through December",
+      "passed": true,
+      "actual": [
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end"
+      ],
+      "expected": [
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end"
+      ]
+    },
+    {
+      "name": "quarter summary",
+      "passed": true,
+      "actual": [
+        8,
+        10
+      ],
+      "expected": [
+        8,
+        10
+      ]
+    },
+    {
+      "name": "calendar year excludes other years and invalid dates",
+      "passed": true,
+      "actual": [
+        "september",
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end"
+      ],
+      "expected": [
+        "september",
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end"
+      ]
+    },
+    {
+      "name": "all periods retains legacy entries including invalid date",
+      "passed": true,
+      "actual": [
+        "old",
+        "september",
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end",
+        "next-year",
+        "bad"
+      ],
+      "expected": [
+        "old",
+        "september",
+        "oct-start",
+        "oct-end",
+        "november",
+        "dec-end",
+        "next-year",
+        "bad"
+      ]
+    },
+    {
+      "name": "period combines with type and search",
+      "passed": true,
+      "actual": [
+        "oct-end"
+      ],
+      "expected": [
+        "oct-end"
+      ]
+    },
+    {
+      "name": "combined summary",
+      "passed": true,
+      "actual": [
+        0,
+        4
+      ],
+      "expected": [
+        0,
+        4
+      ]
+    },
+    {
+      "name": "empty period search yields zero totals",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "out-of-period store update remains excluded",
+      "passed": true,
+      "actual": [
+        3,
+        4
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "in-period store update refreshes summary",
+      "passed": true,
+      "actual": [
+        13,
+        4
+      ],
+      "expected": [
+        13,
+        4
+      ]
+    },
+    {
+      "name": "reselect current month after rollover refreshes reference date",
+      "passed": true,
+      "actual": [
+        "november"
+      ],
+      "expected": [
+        "november"
+      ]
+    },
+    {
+      "name": "reselect current year after rollover",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "new year excludes previous December",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "account switch selects only its own entries",
+      "passed": true,
+      "actual": [
+        "b-entry"
+      ],
+      "expected": [
+        "b-entry"
+      ]
+    },
+    {
+      "name": "account switch recalculates summary with same period",
+      "passed": true,
+      "actual": [
+        0,
+        12
+      ],
+      "expected": [
+        0,
+        12
+      ]
+    },
+    {
+      "name": "ten same-clock actions return ten distinct IDs",
+      "passed": false,
+      "actual": 1,
+      "expected": 10
+    },
+    {
+      "name": "rendered row keys are distinct after burst",
+      "passed": false,
+      "actual": 1,
+      "expected": 10
+    },
+    {
+      "name": "rendered IDs equal returned IDs in newest-first order",
+      "passed": true,
+      "actual": [
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000"
+      ],
+      "expected": [
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000",
+        "le-1791522000000"
+      ]
+    },
+    {
+      "name": "burst preserves all ten rows",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "burst totals count every debit and credit exactly once",
+      "passed": true,
+      "actual": [
+        25,
+        30
+      ],
+      "expected": [
+        25,
+        30
+      ]
+    },
+    {
+      "name": "search after burst selects one exact record",
+      "passed": true,
+      "actual": [
+        "le-1791522000000"
+      ],
+      "expected": [
+        "le-1791522000000"
+      ]
+    },
+    {
+      "name": "search after burst summary is accurate",
+      "passed": true,
+      "actual": [
+        0,
+        4
+      ],
+      "expected": [
+        0,
+        4
+      ]
+    },
+    {
+      "name": "debit filter after burst retains five distinct rows",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "debit filter after burst has no credit total",
+      "passed": true,
+      "actual": [
+        25,
+        0
+      ],
+      "expected": [
+        25,
+        0
+      ]
+    },
+    {
+      "name": "no unexpected React runtime errors",
+      "passed": false,
+      "actual": [
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+        "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000"
+      ],
+      "expected": []
+    }
+  ],
+  "errors": [
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000",
+    "Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. le-1791522000000"
+  ],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "file": "lib/accounting/ledger-filter.ts",
+      "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+    }
+  ],
+  "scope": "Complete production screen + Zustand with fixed Date.now; RN/presentation adapters; no native/UI/API verification."
+}

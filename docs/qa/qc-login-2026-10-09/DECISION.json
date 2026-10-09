@@ -1,0 +1,187 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-003",
+  "signal": "QC-LOGIN-20261009-CHANGES-REQUESTED",
+  "status": "CHANGES_REQUESTED",
+  "completedAt": "2026-10-08T20:51:58.554Z",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "approvedSourceHashes": {},
+  "reviewedSourceHashes": {
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c"
+  },
+  "scope": "Login hook dengan caller/shared Form dan integrasi AuthProvider/query/HTTP helpers produksi dalam fixture; guard versi handoff dipertahankan sebagai kontrak lama",
+  "assertions": {
+    "replay": {
+      "passed": 74,
+      "failed": 0
+    },
+    "current": {
+      "passed": 44,
+      "failed": 3
+    },
+    "candidate": {
+      "passed": 47,
+      "failed": 0
+    },
+    "currentCombined": {
+      "passed": 118,
+      "failed": 3,
+      "includesOverlappingCoverage": true
+    },
+    "currentRuntimeErrors": 0,
+    "currentUnhandledRejections": 0
+  },
+  "findings": [
+    {
+      "id": "QC-LOGIN-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "owner": "Senior5 / pemilik AuthProvider / PM",
+      "source": "context/AuthContext.tsx:78",
+      "title": "Gagal memvalidasi user setelah POST login dan simpan token tidak diteruskan sebagai error",
+      "classification": "Existing provider integration defect, bukan regresi useLoginRequest; source provider sama dengan baseline Git setelah normalisasi EOL.",
+      "reproduction": [
+        "Isi email/password valid lewat FormInput produksi dan tekan Masuk.",
+        "Fixture POST /login berhasil; setItemAsync menyimpan token di memori.",
+        "Fixture GET /user gagal HTTP500; React Query menjadi status error/fetchStatus idle.",
+        "Provider tetap anonymous, loading login selesai, FormMessage tidak menampilkan kesalahan. call hook mengembalikan [loginData,null]."
+      ],
+      "expected": "Kegagalan validasi akun tampil sebagai error pada form dan call mengembalikan error, sehingga pengguna memahami login belum selesai dan dapat retry.",
+      "checks": [
+        "real Query refetch failure: form receives generic error",
+        "real Query refetch failure: call returns an error",
+        "real button user-query failure: generic error appears in FormMessage"
+      ],
+      "evidence": "integration-results.json: observations/user-refetch-failure dan tiga assertion gagal; reproduksi melalui tombol produksi juga gagal.",
+      "proposal": "Di updateToken saja: await userQuery.refetch({ throwOnError: true });. Hook login existing lalu menangkap error. Patch salinan belum diterapkan;47/47 kandidat lolos."
+    },
+    {
+      "id": "QC-LOGIN-002",
+      "severity": "P3",
+      "status": "OPEN",
+      "owner": "Senior5 / pemilik AuthProvider / PM",
+      "source": "context/AuthContext.tsx:61",
+      "title": "Diagnostic kualitas provider existing belum terselesaikan",
+      "classification": "Existing baseline diagnostics, tidak ditambahkan patch fungsional.",
+      "eslint": {
+        "errors": 1,
+        "warnings": 2,
+        "rules": [
+          "react-hooks/set-state-in-effect",
+          "react-hooks/exhaustive-deps",
+          "@typescript-eslint/no-unused-vars"
+        ]
+      },
+      "biome": {
+        "errors": 1,
+        "warnings": 1,
+        "rules": [
+          "lint/correctness/useExhaustiveDependencies",
+          "lint/correctness/noUnusedVariables"
+        ]
+      },
+      "expected": "Pemilik memperbaiki lifecycle/dependency effect dan variable yang tidak dipakai tanpa suppression, dengan regresi boot/token/reloadAuth yang sesuai.",
+      "proposalStatus": "Belum diperbaiki dalam salinan satu baris; jumlah diagnostic baseline dan kandidat sama. Jangan menambahkan loadToken ke dependency secara buta karena identitas fungsi berubah tiap render.",
+      "evidence": "quality-results.json, provider-baseline-biome.*, proposal-biome.*"
+    }
+  ],
+  "proposal": {
+    "applied": false,
+    "source": "context/AuthContext.tsx",
+    "hash": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+    "patch": {
+      "file": "auth-refetch.patch",
+      "sha256": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+      "applied": false,
+      "applyCheck": {
+        "executable": "git",
+        "args": [
+          "-c",
+          "core.autocrlf=false",
+          "apply",
+          "--check",
+          "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\auth-refetch.patch"
+        ],
+        "exitCode": 0
+      }
+    },
+    "functionalPassed": 47,
+    "functionalFailed": 0,
+    "focusedTypecheckDiagnosticCount": 0,
+    "providerQualityClean": false,
+    "approvedForPublication": false
+  },
+  "quality": {
+    "loginHookEslintErrors": 0,
+    "loginHookEslintWarnings": 0,
+    "loginHookBiomeExit": 0,
+    "loginHookDiffExit": 0,
+    "remainingModuleAstUnchanged": true,
+    "providerLintNoAddedDiagnostics": true,
+    "providerBiomeNoAddedDiagnostics": true,
+    "providerBaselineLint": {
+      "errors": 1,
+      "warnings": 2
+    },
+    "providerCandidateLint": {
+      "errors": 1,
+      "warnings": 2
+    },
+    "providerBaselineBiome": {
+      "errors": 1,
+      "warnings": 1,
+      "rules": [
+        "lint/correctness/noUnusedVariables",
+        "lint/correctness/useExhaustiveDependencies"
+      ],
+      "formatterError": false
+    },
+    "providerCandidateBiome": {
+      "errors": 1,
+      "warnings": 1,
+      "rules": [
+        "lint/correctness/noUnusedVariables",
+        "lint/correctness/useExhaustiveDependencies"
+      ],
+      "formatterError": false
+    }
+  },
+  "handoffFingerprintsMatchedAtStart": 17,
+  "trackedFilesStableAtFinal": 29,
+  "externalGuard": {
+    "testedHash": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "currentHash": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "currentApproval": false,
+    "separatelyOwned": "Senior5 SD5-004 READY_FOR_QA"
+  },
+  "independentProductionModules": 13,
+  "typecheck": {
+    "currentDeveloperEvidenceReviewedOnly": true,
+    "candidateFocusedCheckRunByQC": true,
+    "candidateDiagnosticCount": 0,
+    "importedClosureWithReviewedGuardPinned": true,
+    "globalRun": false
+  },
+  "limitations": [
+    "Memory Axios adapter/SecureStore/router/native/primitives; no HTTP/backend/storage/device writes.",
+    "Real Query client uses retry:false, staleTime:Infinity, gcTime:Infinity to control fixture; production retry/refetch background timing not certified.",
+    "AuthProvider kept outside StrictMode; StrictMode exercised on LoginScreen/shared Form/hook subtree.",
+    "Current new guard, root navigator, atomic provider token/query state and cross-instance login/logout are separate scopes.",
+    "Browser/native/SSR/keyboard/viewport/Figma parity/full application not certified.",
+    "Source/login style unchanged; existing UI tokens in dependency/caller are outside hook delta."
+  ],
+  "nextAction": "Senior5/pemilik provider menilai scope shared AuthProvider, menerapkan koreksi fungsional dan menyelesaikan quality provider, lalu menyerahkan hash/bukti baru. QC ulang source aktual serta regresi token/boot/guard yang relevan sebelum PM integrasi/push.",
+  "evidence": [
+    "REPORT.md",
+    "final-results.json",
+    "integration-results.json",
+    "proposal-results.json",
+    "proposal-typecheck-results.json",
+    "quality-results.json",
+    "harness-notes.json",
+    "final-verification.json",
+    "artifact-manifest.json"
+  ]
+}

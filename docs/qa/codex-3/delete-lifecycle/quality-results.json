@@ -1,0 +1,81 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-006",
+  "status": "PASS",
+  "lint": {
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "components/feature/manage/member/MemberDeleteDialog.tsx"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 3 files in 22ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "renderChecks": [
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "comparison": "Returned modal JSX identical except guarded success onClose body; outer wrapper keys lifetime by ID",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "comparison": "Returned modal JSX identical except guarded success onClose body; outer wrapper keys lifetime by ID",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "comparison": "Returned modal JSX identical except guarded success onClose body; outer wrapper keys lifetime by ID",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "before": {
+    "app/(no-layout)/manage/printer/modify.tsx": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\lifecycle.cjs": "c73e2818ecef6e733d3700770c0b5fb7700fe12cd1cdc52e2ad327af670108f9"
+  },
+  "after": {
+    "app/(no-layout)/manage/printer/modify.tsx": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\lifecycle.cjs": "c73e2818ecef6e733d3700770c0b5fb7700fe12cd1cdc52e2ad327af670108f9"
+  },
+  "stable": true
+}

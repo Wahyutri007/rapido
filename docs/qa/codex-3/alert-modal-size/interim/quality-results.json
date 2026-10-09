@@ -1,0 +1,51 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-009",
+  "sourceHash": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+  "baselineHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "lint": {
+    "exitCode": 1,
+    "stderr": "ESLint found too many warnings (maximum: 0).",
+    "files": [
+      {
+        "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\AlertModal.tsx",
+        "messages": [
+          {
+            "ruleId": "@typescript-eslint/no-redeclare",
+            "severity": 1,
+            "message": "'AlertModal' is already defined.",
+            "line": 42,
+            "column": 25,
+            "nodeType": "Identifier",
+            "messageId": "redeclared",
+            "endLine": 42,
+            "endColumn": 35
+          }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 1,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import type React from \"react\";\nimport {\n\tImage,\n\ttype ImageSourcePropType,\n\tuseWindowDimensions,\n\tView,\n} from \"react-native\";\nimport Text from \"@/components/common/Text\";\nimport {\n\tModal,\n\tModalBackdrop,\n\tModalBody,\n\tModalContent,\n\tModalFooter,\n\tModalHeader,\n} from \"@/components/ui/modal\";\nimport type { State } from \"@/types\";\nimport {\n\tButton,\n\tButtonGroup,\n\tButtonText,\n\ttype ButtonVariantProps,\n} from \"../ui/button\";\n\ntype AlertModal = {\n\topenState: State<boolean>;\n\tonClose?: () => void;\n\tonConfirm?: () => void;\n\timage?: ImageSourcePropType;\n\ttitle?: string;\n\tmessage?: string | React.ReactNode;\n\tcancelText?: string;\n\tconfirmText?: string;\n\thideCancelButton?: boolean;\n\thideConfirmButton?: boolean;\n\tconfirmAction?: ButtonVariantProps[\"action\"];\n\tisLoading?: boolean;\n};\n\nexport { useAlertModal } from \"@/hooks/useAlertModal\";\n\nexport default function AlertModal(props: React.PropsWithChildren<AlertModal>) {\n\tconst { width } = useWindowDimensions();\n\tconst {\n\t\topenState,\n\t\timage,\n\t\tmessage,\n\t\ttitle,\n\t\tonClose = () => setIsOpen(false),\n\t\tonConfirm,\n\t\tcancelText = \"Tidak, batal\",\n\t\tconfirmText = \"Iya, lanjut\",\n\t\thideCancelButton = false,\n\t\thideConfirmButton = false,\n\t\tconfirmAction = \"primary\",\n\t\tisLoading = false,\n\t\tchildren,\n\t} = props;\n\n\tconst [isOpen, setIsOpen] = openState;\n\n\treturn (\n\t\t<Modal isOpen={isOpen} onClose={onClose}>\n\t\t\t<ModalBackdrop />\n\t\t\t<ModalContent\n\t\t\t\tclassName=\"rounded-[20px] p-5 shadow-main\"\n\t\t\t\tstyle={{ width: width - 32 }}\n\t\t\t>\n\t\t\t\t<ModalHeader className=\"flex-col items-center gap-5\">\n\t\t\t\t\t{image && (\n\t\t\t\t\t\t<View className=\"w-full overflow-hidden rounded-2xl\">\n\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\tsource={image}\n\t\t\t\t\t\t\t\tclassName=\"h-32 w-full\"\n\t\t\t\t\t\t\t\tstyle={{ height: 128, width: \"100%\" }}\n\t\t\t\t\t\t\t\tresizeMode=\"cover\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</View>\n\t\t\t\t\t)}\n\t\t\t\t\t{title && (\n\t\t\t\t\t\t<Text\n\t\t\t\t\t\t\tclassName=\"w-full text-center text-[20px] text-gray-900\"\n\t\t\t\t\t\t\tw=\"semibold\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t{title.trim()}\n\t\t\t\t\t\t</Text>\n\t\t\t\t\t)}\n\t\t\t\t</ModalHeader>\n\n\t\t\t\t{children}\n\n\t\t\t\t{message && (\n\t\t\t\t\t<ModalBody className=\"mx-0 mb-0 mt-4\">\n\t\t\t\t\t\t{typeof message === \"string\" ? (\n\t\t\t\t\t\t\t<Text className=\"text-center text-muted\">{message}</Text>\n\t\t\t\t\t\t) : (\n\t\t\t\t\t\t\tmessage\n\t\t\t\t\t\t)}\n\t\t\t\t\t</ModalBody>\n\t\t\t\t)}\n\t\t\t\t{(!hideCancelButton || !hideConfirmButton) && (\n\t\t\t\t\t<ModalFooter className=\"mt-4 gap-4\">\n\t\t\t\t\t\t{!hideCancelButton && (\n\t\t\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button size=\"xl\" onPress={onClose} variant=\"outline\">\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{cancelText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>\n\t\t\t\t\t\t)}\n\t\t\t\t\t\t{!hideConfirmButton && (\n\t\t\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button\n\t\t\t\t\t\t\t\t\tsize=\"xl\"\n\t\t\t\t\t\t\t\t\tonPress={onConfirm ? onConfirm : onClose}\n\t\t\t\t\t\t\t\t\taction={confirmAction}\n\t\t\t\t\t\t\t\t\tdisabled={isLoading}\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{confirmText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>\n\t\t\t\t\t\t)}\n\t\t\t\t\t</ModalFooter>\n\t\t\t\t)}\n\t\t\t</ModalContent>\n\t\t</Modal>\n\t);\n}\n\nexport { default as DeleteConfirmModal } from \"./DeleteConfirmModal\";\nexport { default as SuccessModal } from \"./SuccessModal\";\n",
+        "usedDeprecatedRules": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "stdout": "Checked 1 file in 216ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "contractUnchanged": true,
+  "contractComparison": "Full AST unchanged except RN dimension import, width hook declaration, ModalContent width expression and one Image style; public props/callbacks/copy/remaining JSX intact",
+  "diagnostics": [],
+  "typeScope": "One shared modal root + imported dependency closure and actual project options/declarations; caller AST inventory, not all screens/full-project type gate",
+  "status": "FAILED"
+}

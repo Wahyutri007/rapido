@@ -1,0 +1,694 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T20:48:29.433Z",
+  "status": "PASS_EVIDENCE_WITH_PROVIDER_QUALITY_OPEN",
+  "currentApplicationDecision": "CHANGES_REQUESTED",
+  "reviewedSourceHashes": {
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c"
+  },
+  "sourceLint": {
+    "run": {
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "api/hooks/auth.ts",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "sourceBiome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "api/hooks/auth.ts"
+    ],
+    "exitCode": 0
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--check",
+      "--",
+      "api/hooks/auth.ts"
+    ],
+    "exitCode": 0
+  },
+  "providerBaselineLint": [
+    {
+      "errors": 1,
+      "warnings": 2,
+      "messages": [
+        {
+          "ruleId": "@typescript-eslint/no-unused-vars",
+          "severity": 1,
+          "message": "'error' is defined but never used.",
+          "line": 61,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 61,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 2,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\context\\AuthContext.tsx:137:3\n  135 | \t// Load token from store\n  136 | \tReact.useEffect(() => {\n> 137 | \t\tloadToken();\n      | \t\t^^^^^^^^^ Avoid calling setState() directly within an effect\n  138 | \t}, []);\n  139 |\n  140 | \treturn (",
+          "line": 137,
+          "column": 3,
+          "nodeType": null,
+          "endLine": 137,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "react-hooks/exhaustive-deps",
+          "severity": 1,
+          "message": "React Hook React.useEffect has a missing dependency: 'loadToken'. Either include it or remove the dependency array.",
+          "line": 138,
+          "column": 5,
+          "nodeType": "ArrayExpression",
+          "endLine": 138,
+          "endColumn": 7,
+          "suggestions": [
+            {
+              "desc": "Update the dependencies array to be: [loadToken]",
+              "fix": {
+                "range": [
+                  3809,
+                  3811
+                ],
+                "text": "[loadToken]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "providerCandidateLint": [
+    {
+      "errors": 1,
+      "warnings": 2,
+      "messages": [
+        {
+          "ruleId": "@typescript-eslint/no-unused-vars",
+          "severity": 1,
+          "message": "'error' is defined but never used.",
+          "line": 61,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 61,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 2,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\context\\AuthContext.tsx:137:3\n  135 | \t// Load token from store\n  136 | \tReact.useEffect(() => {\n> 137 | \t\tloadToken();\n      | \t\t^^^^^^^^^ Avoid calling setState() directly within an effect\n  138 | \t}, []);\n  139 |\n  140 | \treturn (",
+          "line": 137,
+          "column": 3,
+          "nodeType": null,
+          "endLine": 137,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "react-hooks/exhaustive-deps",
+          "severity": 1,
+          "message": "React Hook React.useEffect has a missing dependency: 'loadToken'. Either include it or remove the dependency array.",
+          "line": 138,
+          "column": 5,
+          "nodeType": "ArrayExpression",
+          "endLine": 138,
+          "endColumn": 7,
+          "suggestions": [
+            {
+              "desc": "Update the dependencies array to be: [loadToken]",
+              "fix": {
+                "range": [
+                  3831,
+                  3833
+                ],
+                "text": "[loadToken]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "providerLintNoAddedDiagnostics": true,
+  "providerBaselineBiome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "context/AuthContext.tsx"
+    ],
+    "exitCode": 1
+  },
+  "baselineBiomeDiagnostics": {
+    "errors": 1,
+    "warnings": 1,
+    "rules": [
+      "lint/correctness/noUnusedVariables",
+      "lint/correctness/useExhaustiveDependencies"
+    ],
+    "formatterError": false
+  },
+  "candidateBiomeDiagnostics": {
+    "errors": 1,
+    "warnings": 1,
+    "rules": [
+      "lint/correctness/noUnusedVariables",
+      "lint/correctness/useExhaustiveDependencies"
+    ],
+    "formatterError": false
+  },
+  "providerBiomeNoAddedDiagnostics": true,
+  "candidateBiome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\proposal\\AuthContext.tsx"
+    ],
+    "exitCode": 1
+  },
+  "intendedCallOnly": true,
+  "remainingModuleAstUnchanged": true,
+  "tracked": [
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "expected": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "actual": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "context/AuthContext.tsx",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": false,
+      "externalScope": true
+    },
+    {
+      "file": "lib/storage.ts",
+      "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "lib/storage.web.ts",
+      "expected": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "actual": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/HANDOFF.md",
+      "expected": "a047f18d9b9fb6ebd041bdb6e1d35d85f88a1145f029b96d0e0582baa3aa11a3",
+      "actual": "a047f18d9b9fb6ebd041bdb6e1d35d85f88a1145f029b96d0e0582baa3aa11a3",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/check.cjs",
+      "expected": "3a49961a77a6a4db80e81f4c582031196c3b4faaae953cb28340327882000a35",
+      "actual": "3a49961a77a6a4db80e81f4c582031196c3b4faaae953cb28340327882000a35",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/typecheck.cjs",
+      "expected": "4243c96f79de721148631f4126994641e3469198dd29961ceb95ef6ac4982b8e",
+      "actual": "4243c96f79de721148631f4126994641e3469198dd29961ceb95ef6ac4982b8e",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/baseline-results.json",
+      "expected": "30a5e7dc33c95b0db938cfaa90af429322c2d073f2530333802d52d3c194b0c8",
+      "actual": "30a5e7dc33c95b0db938cfaa90af429322c2d073f2530333802d52d3c194b0c8",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/final-results.json",
+      "expected": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "actual": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/typecheck-results.json",
+      "expected": "9f43fc2e64f7fe20cb196b7dc7ab83dd04c07e14f7d6d96739088bff9d206e8b",
+      "actual": "9f43fc2e64f7fe20cb196b7dc7ab83dd04c07e14f7d6d96739088bff9d206e8b",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "api/axios.ts",
+      "expected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "actual": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "types/api/auth.ts",
+      "expected": "9bc8dac68909d6d1d9d9b31cc4fb6826bfd6f99ffcba6fcf18ff2b36d50efaee",
+      "actual": "9bc8dac68909d6d1d9d9b31cc4fb6826bfd6f99ffcba6fcf18ff2b36d50efaee",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "actual": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "passed": true,
+      "externalScope": false
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/verification.json",
+      "expected": "9abaa75c35b15d0d250d2b634ae8e522e2af7b4428f1cba8c5a2d195b977f84a",
+      "actual": "9abaa75c35b15d0d250d2b634ae8e522e2af7b4428f1cba8c5a2d195b977f84a",
+      "passed": true,
+      "externalScope": false
+    }
+  ],
+  "runtime": [
+    {
+      "suite": "replay",
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "testedFile": "node_modules/react-hook-form/dist/index.cjs.js",
+      "expected": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "actual": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "passed": true
+    },
+    {
+      "suite": "replay",
+      "file": "schema/onboarding/login.ts",
+      "testedFile": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    },
+    {
+      "suite": "replay",
+      "file": "hooks/usePostRequest.ts",
+      "testedFile": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "replay",
+      "file": "api/factory.ts",
+      "testedFile": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "replay",
+      "file": "api/hooks/auth.ts",
+      "testedFile": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "replay",
+      "file": "app/(onboarding)/login.tsx",
+      "testedFile": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "context/AuthContext.tsx",
+      "testedFile": "context/AuthContext.tsx",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "api/factory.ts",
+      "testedFile": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "api/common.ts",
+      "testedFile": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "lib/api-utils.ts",
+      "testedFile": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "hooks/usePostRequest.ts",
+      "testedFile": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "constants/Keys.ts",
+      "testedFile": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "hooks/useProtectedRoute.ts",
+      "testedFile": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\fixtures\\useProtectedRoute.ts.txt",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "app/(onboarding)/login.tsx",
+      "testedFile": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "api/hooks/auth.ts",
+      "testedFile": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "components/common/Form.tsx",
+      "testedFile": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "constants/Colors.ts",
+      "testedFile": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "constants/Fonts.ts",
+      "testedFile": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "current-integration",
+      "file": "schema/onboarding/login.ts",
+      "testedFile": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "context/AuthContext.tsx",
+      "testedFile": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\proposal\\AuthContext.tsx",
+      "expected": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "actual": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "api/factory.ts",
+      "testedFile": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "api/common.ts",
+      "testedFile": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "lib/api-utils.ts",
+      "testedFile": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "hooks/usePostRequest.ts",
+      "testedFile": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "constants/Keys.ts",
+      "testedFile": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "hooks/useProtectedRoute.ts",
+      "testedFile": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\fixtures\\useProtectedRoute.ts.txt",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "app/(onboarding)/login.tsx",
+      "testedFile": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "api/hooks/auth.ts",
+      "testedFile": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "components/common/Form.tsx",
+      "testedFile": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "constants/Colors.ts",
+      "testedFile": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "constants/Fonts.ts",
+      "testedFile": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "candidate-integration",
+      "file": "schema/onboarding/login.ts",
+      "testedFile": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "replay": {
+      "passed": 74,
+      "failed": 0
+    },
+    "current": {
+      "passed": 44,
+      "failed": 3
+    },
+    "candidate": {
+      "passed": 47,
+      "failed": 0
+    }
+  },
+  "runtimeUnhandledZero": true,
+  "patch": {
+    "file": "auth-refetch.patch",
+    "sha256": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+    "applied": false,
+    "applyCheck": {
+      "executable": "git",
+      "args": [
+        "-c",
+        "core.autocrlf=false",
+        "apply",
+        "--check",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-login-2026-10-09\\auth-refetch.patch"
+      ],
+      "exitCode": 0
+    }
+  },
+  "candidateHash": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+  "independentProductionModules": 13,
+  "providerQualityClean": false
+}

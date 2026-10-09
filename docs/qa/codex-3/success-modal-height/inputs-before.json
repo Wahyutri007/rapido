@@ -1,0 +1,31 @@
+{
+  "ticket": "SD3-012",
+  "sourceBeforeHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+  "reviewedProposalHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "files": {
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    ".expo/codex-3-success-height-entry.jsx": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+    ".expo/codex-3-success-height-before-entry.jsx": "963039c375655fac6ea9bab2e599a503b34bfd3621125faf10383606b258c69b",
+    ".expo/codex-3-success-height-before.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "docs/qa/qc-success-modal-2026-10-09/DECISION.json": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+    "docs/qa/qc-success-modal-2026-10-09/proposal/success-modal-height.patch": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2"
+  },
+  "note": "Own copies only; current production source must match proposal after baseline. QC/prior frozen packets are not edited."
+}

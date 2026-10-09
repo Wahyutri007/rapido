@@ -1,0 +1,81 @@
+{
+  "status": "INTERNAL_QA_REVIEW_PASS",
+  "externalQcApproval": false,
+  "finishedAt": "2026-10-09T00:16:06.778Z",
+  "reviewedSourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+  },
+  "productionContractHashes": {
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/feature/manage/roles/RoleWorkers.tsx": "329fd2161234d75c2df32fef8e703b465a1d61a82d5499841e9668fe8faff64b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "app/(no-layout)/(back-office)/manage/roles/detail.tsx": "725ab58db1d1072dc005e8b899a4e17c99b2cc2b1b6ee26ab75258970c238a3b",
+    "app/(no-layout)/manage/workers/detail.tsx": "b75a8abad632ad86d2c5beb47d28f64ffc81ee594cbfd2eb57038af03cf0ebaa",
+    "app/(no-layout)/manage/member/detail.tsx": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "loadedProductionSourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "runtimeInputHashes": {
+    ".expo/senior7-test-tools/node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    ".expo/senior7-test-tools/node_modules/react/cjs/react.development.js": "1919eb95d51bdaed6c771bcd506d65a11639142032e44d0e9212e5c745be1b65",
+    ".expo/senior7-test-tools/node_modules/react/jsx-runtime.js": "b392951a77d0a2e6a6bd017e49d768481ae5b63c4109c6c31f622cf7b2433edc",
+    ".expo/senior7-test-tools/node_modules/react/cjs/react-jsx-runtime.development.js": "dd50fd0db2fba44e0eee66243a45c81cfa3774cf41e4e6c0c080a601815c694d",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/index.js": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/cjs/react-test-renderer.development.js": "747ea6897c0e4077df71c44b0debf487c6cbdd8e61e8528c83100176eb01a08b",
+    "node_modules/typescript/lib/typescript.js": "569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39"
+  },
+  "baseline": {
+    "assertions": 156,
+    "passed": 122,
+    "failed": 34,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "final": {
+    "assertions": 195,
+    "passed": 195,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "counts": {
+    "state": 156,
+    "ast": 21,
+    "contractFingerprints": 18
+  },
+  "artifactHashes": {
+    "AUDIT.md": "97ee8253c248be5305ebe4e724196f37e7b32d57be13e5d74b7704dbff45b998",
+    "baseline-capture.json": "05caedcea2c9bd713ad1613b5df79497923ac7b9a44fd03d57991bdcbcc4d9bc",
+    "baseline-results.json": "931199265ab226c6971fe21009eaf88e80aee758bc1fa1bd0b66a7e4c21b10e7",
+    "capture.cjs": "74d4c725d7a37771fa0f31487af2599e5c6fa435e41d877c0beeffced9a9ee41",
+    "finalize.cjs": "8fbcc5674d1788b6b90bf032915ba8a2e925cd1e6616aa0f9887429c17156c97",
+    "REPORT.md": "74fd4737f4b61a8ac1ef0a85c293c73e50e7242e7897fa8e1eb55ac293581f1b",
+    "results.json": "b324563695f89c06a5bbad5e55350258cba85a4d8bddd7fedd10c31de8003358",
+    "review.cjs": "ff45866da0d3dc6d195222787b54b9a30c20f451df24d18d5150386fc363cf5f",
+    "before/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+    "before/RoleDetailScreen.tsx": "1a3b993214194b9ddff74ad47f2e320be1132bea483c2160576ccdf3f827a851",
+    "before/WorkerDetailScreen.tsx": "7fb9fa3ca423674a070fdc4c75168b8ceadaec2de07a0c08cdfa26ebb3749b6b"
+  },
+  "limitations": "Independent source/React parent state checks with query/dialog/native/presentation/router adapters. No delete IO/browser/native/API certification or external QC approval. Parent tests and lint/type evidence are separate, not counted here."
+}

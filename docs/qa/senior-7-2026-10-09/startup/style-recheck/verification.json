@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-09",
+  "owner": "Software Developer Senior 7",
+  "status": "READY_FOR_QC_RECHECK",
+  "finding": "QC-STARTUP-CACHE-001",
+  "files": [
+    {
+      "file": "metro.config.js",
+      "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "sha256": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956"
+    },
+    {
+      "file": "scripts/verify-nativewind-cache.cjs",
+      "sha256": "0d5146864121ff56a8a6ca261134af9268a876a27ca29dc566d16d56de366529"
+    },
+    {
+      "file": "scripts/verify-metro-cache.cjs",
+      "sha256": "55bd6d366887d4815fec99b548d8582c68e504cea2812291c28adc33e69bf0be"
+    }
+  ],
+  "tests": {
+    "behaviorChecks": 41,
+    "queue": {
+      "reads": 3000,
+      "writes": 200,
+      "maximumOpenRequests": 64,
+      "errorQueueRecovered": true,
+      "clearDelegated": true
+    },
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biome": "PASS, no diagnostics",
+    "diffCheck": "PASS",
+    "equivalence": "PASS"
+  },
+  "cacheUnchanged": true,
+  "dependency": {
+    "file": "node_modules/react-native-css-interop/dist/metro/index.js",
+    "sha256": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a"
+  },
+  "evidence": [
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-after.json",
+      "sha256": "86af751efbdd5a75da10f2a0cbc1291cbf1f95d2c2135c1c0d501614b9858d69"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-before.json",
+      "sha256": "4fd6fd7ddeb531b76a0a029ef85112a92b1f9d9b58f0a69136420f5e70b4ae74"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\cache-queue-results.json",
+      "sha256": "310124a3d3703c49d36b24ae3d8470107ec8a7ca7bd0715b8a73c6760271c72b"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\equivalence-results.json",
+      "sha256": "9da4e0edcdbfa443e2f9c02a42e126cdab9d6d41c467f7c6e73e14edfec6fa64"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\equivalence.cjs",
+      "sha256": "307649c138ef754c6118f0f9df1cb1b45b85075fda4cea72576e9818d4d292f9"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\eslint-results.json",
+      "sha256": "72e9336c5c9b38591d566cfdc9c61d5fa4909f82c418eadee7eccbd3f5454708"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\guard-boundaries-results.json",
+      "sha256": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\guard-boundaries.cjs",
+      "sha256": "4950ea9e754bad4b9307a11ecf2b61834c144037ef05e5716443afca2a6c27f0"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\HANDOFF.md",
+      "sha256": "e77b388f7cecb67ed940ccf1bd7aed2493d72b730adf86ae397055094d13b174"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\initializer-results.json",
+      "sha256": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\queue-boundaries-results.json",
+      "sha256": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\queue-boundaries.cjs",
+      "sha256": "2d7283970f9fd97093758e949e3bea6314bc77240aa087db4d14d035c6e99cac"
+    }
+  ],
+  "qaApproved": false,
+  "qcApproved": false,
+  "nativeRerun": false,
+  "notes": "Prior native evidence retained in parent; QC original artifacts untouched; route/dependency warnings remain separate"
+}

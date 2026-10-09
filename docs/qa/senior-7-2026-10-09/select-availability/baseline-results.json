@@ -1,0 +1,190 @@
+{
+  "status": "FAIL",
+  "passed": 7,
+  "failed": 19,
+  "checks": [
+    {
+      "name": "disabled while open disables every option",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "disabled while open disables confirmation",
+      "pass": false,
+      "expected": true
+    },
+    {
+      "name": "disabled option handler preserves pending draft",
+      "pass": false,
+      "actual": [
+        "Alpha"
+      ],
+      "expected": [
+        "Beta"
+      ]
+    },
+    {
+      "name": "disabled confirmation cannot emit draft",
+      "pass": false,
+      "actual": [
+        "a"
+      ],
+      "expected": []
+    },
+    {
+      "name": "disabled confirmation preserves sheet for cancel or reenable",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "reenabling can confirm preserved draft",
+      "pass": false,
+      "actual": [
+        "a",
+        "a"
+      ],
+      "expected": [
+        "b"
+      ]
+    },
+    {
+      "name": "cancel remains usable while disabled",
+      "pass": true
+    },
+    {
+      "name": "immediate mode disabled blocks callback (dismiss=true)",
+      "pass": false,
+      "actual": [
+        "b"
+      ],
+      "expected": []
+    },
+    {
+      "name": "disabled action schedules no dismiss timer (dismiss=true)",
+      "pass": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "reenabling restores immediate selection (dismiss=true)",
+      "pass": false,
+      "actual": [
+        "b",
+        "b"
+      ],
+      "expected": [
+        "b"
+      ]
+    },
+    {
+      "name": "immediate mode disabled blocks callback (dismiss=false)",
+      "pass": false,
+      "actual": [
+        "b"
+      ],
+      "expected": []
+    },
+    {
+      "name": "disabled action schedules no dismiss timer (dismiss=false)",
+      "pass": true
+    },
+    {
+      "name": "reenabling restores immediate selection (dismiss=false)",
+      "pass": false,
+      "actual": [
+        "b",
+        "b"
+      ],
+      "expected": [
+        "b"
+      ]
+    },
+    {
+      "name": "removed draft disables confirmation",
+      "pass": false,
+      "expected": true
+    },
+    {
+      "name": "removed draft cannot emit stale value",
+      "pass": false,
+      "actual": [
+        "b"
+      ],
+      "expected": []
+    },
+    {
+      "name": "removed draft keeps sheet available for another choice",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "removed draft can be replaced with an available option",
+      "pass": false,
+      "actual": [
+        "b",
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "disabled draft disables confirmation",
+      "pass": false,
+      "expected": true
+    },
+    {
+      "name": "disabled draft cannot emit stale value",
+      "pass": false,
+      "actual": [
+        "b"
+      ],
+      "expected": []
+    },
+    {
+      "name": "disabled draft keeps sheet available for another choice",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "disabled draft can be replaced with an available option",
+      "pass": false,
+      "actual": [
+        "b",
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "same values on refetch preserve draft",
+      "pass": true
+    },
+    {
+      "name": "refreshed valid draft commits its value",
+      "pass": true
+    },
+    {
+      "name": "zero remains a valid confirm value",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "pass": true
+    },
+    {
+      "name": "source stable during checks",
+      "pass": true
+    }
+  ],
+  "source": {
+    "file": "components/common/SingleSelect.tsx",
+    "sha256": "e967d1ef262507b316619e1ebf9ef90138abdb78e202883c48496c3da50bfb27"
+  },
+  "scope": "Production SingleSelect with React test renderer and host UI adapters; not native UI."
+}

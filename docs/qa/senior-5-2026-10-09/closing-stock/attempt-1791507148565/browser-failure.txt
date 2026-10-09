@@ -1,0 +1,3 @@
+Error: UI wait timeout
+    at wait (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:8:105)
+    at async C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:16:1

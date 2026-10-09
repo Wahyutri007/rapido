@@ -1,0 +1,148 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { View } from "react-native";
+import {
+	FormControl,
+	FormField,
+	FormInput,
+	FormItem,
+	FormLabel,
+	FormMessage,
+	FormSelect,
+} from "@/components/common/Form";
+import { BANK_OPTIONS } from "@/constants/data/other/bank-types";
+import {
+	paymentMethodSchema,
+	type PaymentMethodSchema,
+} from "@/schema/manage/payment-method";
+import type { PaymentMethodItemProps } from "@/types/ui/manage/payment-method";
+import ManagePreviewForm from "./ManagePreviewForm";
+
+const PAYMENT_TYPES = [{ label: "Transfer Bank", value: "bank_transfer" }];
+const ADMIN_TYPES = [
+	{ label: "Persentase", value: "percentage" },
+	{ label: "Nominal", value: "nominal" },
+];
+
+export default function PaymentMethodModifyScreen({
+	item,
+}: {
+	item?: PaymentMethodItemProps;
+}) {
+	const form = useForm<PaymentMethodSchema>({
+		resolver: zodResolver(paymentMethodSchema),
+		defaultValues: {
+			name: item?.name ?? "",
+			type: item?.type ?? "",
+			adminType: item?.adminType ?? "",
+			value: item?.value ?? 0,
+			bank: item?.bank.toLowerCase() ?? "",
+			accountNumber: item?.accountNumber ?? "",
+			accountName: item?.accountName ?? "",
+		},
+	});
+
+	return (
+		<ManagePreviewForm form={form} title="Metode Pembayaran">
+			<View className="gap-4">
+				<FormField
+					control={form.control}
+					name="name"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nama Metode</FormLabel>
+							<FormControl>
+								<FormInput placeholder="Contoh: Transfer Bank" />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="type"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Jenis Pembayaran</FormLabel>
+							<FormControl>
+								<FormSelect
+									placeholder="Pilih jenis pembayaran"
+									data={PAYMENT_TYPES}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="adminType"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Biaya Admin</FormLabel>
+							<FormControl>
+								<FormSelect
+									placeholder="Pilih tipe biaya admin"
+									data={ADMIN_TYPES}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="value"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nilai Biaya Admin</FormLabel>
+							<FormControl>
+								<FormInput placeholder="Masukkan nilai" type="number" />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="bank"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nama Bank</FormLabel>
+							<FormControl>
+								<FormSelect placeholder="Pilih bank" data={BANK_OPTIONS} />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="accountNumber"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nomor Rekening</FormLabel>
+							<FormControl>
+								<FormInput placeholder="Masukkan nomor rekening" />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="accountName"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nama Pemilik Rekening</FormLabel>
+							<FormControl>
+								<FormInput placeholder="Masukkan nama pemilik rekening" />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+			</View>
+		</ManagePreviewForm>
+	);
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "components/common/Header.tsx",
+    "sha256": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c",
+    "current": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db"
+  },
+  {
+    "file": "components/common/SearchBar.tsx",
+    "sha256": "139066d76bf17c97a240bf856943c049d8f321a641963594169819634c191640",
+    "current": "07e3960ec2bb3668c2493975e66bfe7b1439a377d21a1d4e578e65522f735330"
+  },
+  {
+    "file": "components/common/SingleSelect.tsx",
+    "sha256": "282ad7f089df58e374cb174749f16abb9e6a41a9c6ec74e5bef575b1c4fe6c9a",
+    "current": "2a141e7ac94e93cce54157879635d947531b8e5fad328ba811ab9c1fad8a2fdb"
+  },
+  {
+    "file": "lib/ui/figma-stock.ts",
+    "sha256": "4365e07f06d8be11e1d2ba8d2b19ea7b05c7f1582575e74e44845d5c37697051",
+    "current": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d"
+  },
+  {
+    "file": "app/(back-office)/_layout.tsx",
+    "sha256": "931929d25bdeafc80df184059543f46205b38a01eb89926304e12197e1e3b50b",
+    "current": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad"
+  },
+  {
+    "file": "node_modules/react-native-css-interop/.cache/web.css",
+    "sha256": "667824a007687d599aaeb8783be3f591cfc75111c6576a0f9b573ae8803aadd0",
+    "current": "e48b786fdc113fab0ac974469bae7ef594dc2dbd84fe73674c028fe732f00ad1"
+  }
+]

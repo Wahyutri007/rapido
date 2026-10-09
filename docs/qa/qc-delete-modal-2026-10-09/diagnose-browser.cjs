@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path'),{chromium}=require(path.resolve('.expo/senior6-tools/node_modules/playwright'));
+const transport=require('./offline-transport.cjs')(__dirname),events=[],origin='http://127.0.0.1:8088';let browser,page;
+(async()=>{try{
+browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});page=await browser.newPage({viewport:{width:320,height:640}});
+page.on('pageerror',error=>{events.push({type:'pageerror',message:error.message});console.log(error.message);});page.on('console',message=>{events.push({type:'console:'+message.type(),message:message.text()});if(message.type()==='error')console.log(message.text());});
+await page.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin===origin&&url.pathname==='/qc-diagnose')return route.fulfill({contentType:'text/html',body:'<!doctype html><html><head><meta charset="utf-8"><style>html,body,#root{height:100%;margin:0}'+fs.readFileSync(path.join(__dirname,'web.css'),'utf8')+'</style></head><body><div id="root"></div><script src="'+origin+'/.expo/qc-delete-modal-entry.bundle"></script></body></html>'});if(await transport.serve(route,url))return;events.push({type:'blocked',url:url.href});console.log('Blocked '+url.href);return route.abort();});
+await page.goto(origin+'/qc-diagnose',{waitUntil:'commit'});await page.waitForTimeout(16000);
+events.push({type:'state',text:await page.locator('body').innerText(),ready:await page.getByTestId('preview-ready').count()});await page.screenshot({path:path.join(__dirname,'interim/offline-diagnostic.png')});
+}catch(error){events.push({type:'exception',message:error.message});}finally{fs.writeFileSync(path.join(__dirname,'interim/offline-diagnostic.json'),JSON.stringify({events,receipts:transport.receipts},null,2)+'\n');if(browser)await browser.close();console.log(JSON.stringify(events.filter(x=>x.type!=='console:warning')));}})();

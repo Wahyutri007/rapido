@@ -1,0 +1,18 @@
+{
+  "status": "FAIL",
+  "checks": [],
+  "source": [
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "sha256": "48878a40c1c13e4b22f2461ad4880fa78f8069e8b3b8bc50eac63006e822d5ae"
+    }
+  ],
+  "message": "controlled first commit displays actual form value without a stale minimum\n+ actual - expected\n\n  [\n+   1,\n    12\n  ]\n",
+  "actual": [
+    1,
+    12
+  ],
+  "expected": [
+    12
+  ]
+}

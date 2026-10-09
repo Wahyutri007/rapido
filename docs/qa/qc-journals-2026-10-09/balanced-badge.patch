@@ -1,0 +1,36 @@
+diff --git a/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx b/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx
+index 2808da2..fbb74d3 100644
+--- a/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx
++++ b/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx
+@@ -149,6 +149,13 @@ function GeneralJournalForm({
+ 
+ 	const difference = Math.abs(totalDebit - totalCredit);
+ 	const isBalanced =
++		lines.every(
++			(line) =>
++				Number.isFinite(line.debit) &&
++				Number.isFinite(line.credit) &&
++				line.debit >= 0 &&
++				line.credit >= 0,
++		) &&
+ 		Number.isFinite(totalDebit) &&
+ 		Number.isFinite(totalCredit) &&
+ 		totalDebit > 0 &&
+diff --git a/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx b/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx
+index fb6f378..2821401 100644
+--- a/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx
++++ b/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx
+@@ -164,6 +164,13 @@ function AdjustingJournalForm({
+ 
+ 	const difference = Math.abs(totalDebit - totalCredit);
+ 	const isBalanced =
++		lines.every(
++			(line) =>
++				Number.isFinite(line.debit) &&
++				Number.isFinite(line.credit) &&
++				line.debit >= 0 &&
++				line.credit >= 0,
++		) &&
+ 		Number.isFinite(totalDebit) &&
+ 		Number.isFinite(totalCredit) &&
+ 		totalDebit > 0 &&

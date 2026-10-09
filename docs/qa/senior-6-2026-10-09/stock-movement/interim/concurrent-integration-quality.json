@@ -1,0 +1,103 @@
+{
+  "before": {
+    "lib/inventory-stock-movement.ts": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+    "components/feature/inventory/stock-movement/StockMovementDetail.tsx": "9809627e56bd9c3d5a227d0c6c3ce20d51ff9f4596a0b7c1d9ca3dab19dd3dba",
+    "components/feature/inventory/stock-movement/StockMovementList.tsx": "e102d0212493f8ffc312b57f254ebf5bc482f9649cf1d9a8815526d5d3f73dca",
+    "components/feature/inventory/stock-movement/useStockMovements.ts": "339c24b3157c02a3184385dbc43140bd483c6cc4fac1f093901fc7bf3e3a8027",
+    "app/(no-layout)/inventory/stock-movement/detail.tsx": "14c11320e092f0093e371c6555ccea23cd4c803a161dcc58d1463bc4e29bff69",
+    "app/(no-layout)/inventory/stock-movement/index.tsx": "e0657c1f2a38cf500e870bfa1640bd63a90a765b0533b9c570ffa4d03afe1b8e",
+    "app/(no-layout)/inventory/stock-movement/_layout.tsx": "fd03398a5c750c5f6d3fb44d2483488666cc0f8db6f276266a96c9fdbf7e50db",
+    "app/(no-layout)/inventory/_layout.tsx": "116daa4106619726bfafba61cbf419ae02eaa901b40ebeaeea8d05e950f8a4d2",
+    "app/(back-office)/inventory/index.tsx": "827b5967d51cd131d0afb57ad32e914503bcf54d9448fa48d2d11a678b65eb6a"
+  },
+  "after": {
+    "lib/inventory-stock-movement.ts": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+    "components/feature/inventory/stock-movement/StockMovementDetail.tsx": "9809627e56bd9c3d5a227d0c6c3ce20d51ff9f4596a0b7c1d9ca3dab19dd3dba",
+    "components/feature/inventory/stock-movement/StockMovementList.tsx": "e102d0212493f8ffc312b57f254ebf5bc482f9649cf1d9a8815526d5d3f73dca",
+    "components/feature/inventory/stock-movement/useStockMovements.ts": "339c24b3157c02a3184385dbc43140bd483c6cc4fac1f093901fc7bf3e3a8027",
+    "app/(no-layout)/inventory/stock-movement/detail.tsx": "14c11320e092f0093e371c6555ccea23cd4c803a161dcc58d1463bc4e29bff69",
+    "app/(no-layout)/inventory/stock-movement/index.tsx": "e0657c1f2a38cf500e870bfa1640bd63a90a765b0533b9c570ffa4d03afe1b8e",
+    "app/(no-layout)/inventory/stock-movement/_layout.tsx": "fd03398a5c750c5f6d3fb44d2483488666cc0f8db6f276266a96c9fdbf7e50db",
+    "app/(no-layout)/inventory/_layout.tsx": "130299e720d6267d535ec9c633e00a6c80d115303e63a46853fd11ff09ecf274",
+    "app/(back-office)/inventory/index.tsx": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75"
+  },
+  "checks": [
+    {
+      "name": "ESLint",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "lib/inventory-stock-movement.ts",
+        "components/feature/inventory/stock-movement/StockMovementDetail.tsx",
+        "components/feature/inventory/stock-movement/StockMovementList.tsx",
+        "components/feature/inventory/stock-movement/useStockMovements.ts",
+        "app/(no-layout)/inventory/stock-movement/detail.tsx",
+        "app/(no-layout)/inventory/stock-movement/index.tsx",
+        "app/(no-layout)/inventory/stock-movement/_layout.tsx",
+        "app/(no-layout)/inventory/_layout.tsx",
+        "app/(back-office)/inventory/index.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json",
+        "--output-file",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\stock-movement\\eslint.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Biome",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "lib/inventory-stock-movement.ts",
+        "components/feature/inventory/stock-movement/StockMovementDetail.tsx",
+        "components/feature/inventory/stock-movement/StockMovementList.tsx",
+        "components/feature/inventory/stock-movement/useStockMovements.ts",
+        "app/(no-layout)/inventory/stock-movement/detail.tsx",
+        "app/(no-layout)/inventory/stock-movement/index.tsx",
+        "app/(no-layout)/inventory/stock-movement/_layout.tsx",
+        "app/(no-layout)/inventory/_layout.tsx",
+        "app/(back-office)/inventory/index.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 9 files in 41ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "name": "TypeScript new flow and two shared roots",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--project",
+        ".expo/senior6-stock-movement-tsconfig.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Scoped whitespace",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "lib/inventory-stock-movement.ts",
+        "components/feature/inventory/stock-movement/StockMovementDetail.tsx",
+        "components/feature/inventory/stock-movement/StockMovementList.tsx",
+        "components/feature/inventory/stock-movement/useStockMovements.ts",
+        "app/(no-layout)/inventory/stock-movement/detail.tsx",
+        "app/(no-layout)/inventory/stock-movement/index.tsx",
+        "app/(no-layout)/inventory/stock-movement/_layout.tsx",
+        "app/(no-layout)/inventory/_layout.tsx",
+        "app/(back-office)/inventory/index.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(back-office)/inventory/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/inventory/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "limitations": "Nine production source files and TypeScript dependency closure, not global app/native/backend verification."
+}

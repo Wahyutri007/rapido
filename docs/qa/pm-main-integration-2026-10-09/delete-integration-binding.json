@@ -1,0 +1,19 @@
+{
+  "scope": "Fresh C-drive reviewer fixture with exact candidate and matching app dependencies in D-drive integration checkout. Not full app/native/router certification.",
+  "candidateSha256": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+  "browser": [
+    {
+      "passed": 51,
+      "failed": 0,
+      "sourceHash": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23"
+    },
+    {
+      "passed": 115,
+      "failed": 0,
+      "sourceHash": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23"
+    }
+  ],
+  "runtimeInputs": 1268,
+  "matchedProductionAppInputs": 52,
+  "mismatch": []
+}

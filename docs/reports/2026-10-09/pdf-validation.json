@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-09",
+  "snapshotWib": "9 Oktober 2026 pukul 01.31 WIB",
+  "pages": 6,
+  "pdfBytes": 102950,
+  "pageBounds": [
+    {
+      "page": "1",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    },
+    {
+      "page": "2",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    },
+    {
+      "page": "3",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    },
+    {
+      "page": "4",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    },
+    {
+      "page": "5",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    },
+    {
+      "page": "6",
+      "width": 703,
+      "height": 971,
+      "scrollHeight": 971,
+      "overflow": false,
+      "footerOverlap": false
+    }
+  ],
+  "browserErrors": [],
+  "counts": {
+    "done": 9,
+    "ready": 16,
+    "active": 3,
+    "queued": 7
+  },
+  "total": 35,
+  "completedPercent": 25.7,
+  "remainingPercent": 74.3,
+  "generatedOffline": true,
+  "browsersClosedAfterExport": true
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "count": 18,
+  "checks": [
+    "dialog uses the actual Incrementer and initial print count",
+    "increment updates dialog print count",
+    "decrement updates dialog print count",
+    "pending print quantity cannot be incremented after enqueue",
+    "quantity controls lock during pending print",
+    "queued print quantity cannot drift",
+    "confirmation uses the displayed queued quantity",
+    "quantity controls remain locked for success state",
+    "successful print closes exactly once",
+    "reopen restores default quantity and enables stepper",
+    "dialog minimum is one label",
+    "dialog maximum is 999 labels",
+    "closed job cannot confirm or close new dialog",
+    "metadata rerender preserves count in actual stepper",
+    "new barcode resets count and clears old job",
+    "unmount clears integrated print timer",
+    "unmounted print emits no callback",
+    "no React runtime errors or act warnings"
+  ],
+  "errors": [],
+  "source": [
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+    },
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "sha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1"
+    }
+  ],
+  "scope": "Production PrintBarcodeModal and Incrementer together in React 19 test renderer. RN/Button/BarcodePreview primitives remain host adapters; no physical printer or native/browser runtime."
+}

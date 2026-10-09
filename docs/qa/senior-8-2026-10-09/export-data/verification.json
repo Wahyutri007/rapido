@@ -1,0 +1,179 @@
+{
+  "ticket": "EXPORT-DATA-001",
+  "owner": "Software Developer Senior 8",
+  "status": "READY_FOR_QA",
+  "developerChecks": {
+    "behavior": 54,
+    "browserDownload": 3
+  },
+  "files": [
+    {
+      "file": "app/(no-layout)/manage/export/index.tsx",
+      "sha256": "3c8a0a74a499ab801ae0680a66464b9a6b4b7dd0cb5629ad71827817d75b386a"
+    },
+    {
+      "file": "app/(no-layout)/manage/export/modify.tsx",
+      "sha256": "3c8a0a74a499ab801ae0680a66464b9a6b4b7dd0cb5629ad71827817d75b386a"
+    },
+    {
+      "file": "app/(no-layout)/manage/export/_layout.tsx",
+      "sha256": "ee9081139aebf29f389126e247440227050cbbb6e76702ee84f40b59c7542896"
+    },
+    {
+      "file": "components/feature/manage/export/ExportDataScreen.tsx",
+      "sha256": "0fb55da9af10cc3cd66536ee5375abccf5d4cd3e3d5284ea4ff718332df82338"
+    },
+    {
+      "file": "lib/manage/export-data.ts",
+      "sha256": "fee968ee95ecba5cfd16963de2c8535648e6ea34d56c431175fdfca46698aa49"
+    },
+    {
+      "file": "lib/manage/export-delivery.ts",
+      "sha256": "c61bffbf44d701475aa076c23f9cab5cfa367c5e97ad1dffb3e26e318ffcedaf"
+    },
+    {
+      "file": "schema/manage/export.ts",
+      "sha256": "1a62146e411bd11f08e9394d33727fdc5a9f8b8531e545d01c0287168d6949dc"
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "store/inventoryMaterialStore.ts",
+      "sha256": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30"
+    },
+    {
+      "file": "constants/data/inventory-materials.ts",
+      "sha256": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08"
+    },
+    {
+      "file": "constants/data/inventory.ts",
+      "sha256": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d"
+    },
+    {
+      "file": "lib/inventory-material.ts",
+      "sha256": "06bf405b5e51a127888b4453bf709be85e63ff376f39df946b80308d719599ee"
+    },
+    {
+      "file": "schema/inventory/material.ts",
+      "sha256": "64da566f0aef9c04a9b1aca1d3bbfe4185ea7c34e432edc032f003126a83f687"
+    },
+    {
+      "file": "store/inventoryStore.ts",
+      "sha256": "050db175f2a522644ca627a9203f76d1e5bbaa1418a915240889378a68724713"
+    },
+    {
+      "file": "store/inventoryBillPaymentStore.ts",
+      "sha256": "7d58b6bfdf72bada2fd0e461a63af7de65b036ed970812ba12b2b400cbbc03d6"
+    },
+    {
+      "file": "constants/data/inventory-bill-payments.ts",
+      "sha256": "0f47df39b9d3c8dd2869aa595994c10f89fc9abba25bd90abc32dcb7a6ddd151"
+    },
+    {
+      "file": "lib/inventory/bill-payment.ts",
+      "sha256": "cd17c52735bac1725155cecc0fc196aa0499535255b06cb80a91d886f8844eb5"
+    },
+    {
+      "file": "lib/inventory/material-date.ts",
+      "sha256": "bbd2e2cae04944ccda7f42d7a1edfaaa388b768afd2e679143860c45f51e9e4d"
+    },
+    {
+      "file": "schema/inventory/bill-payment.ts",
+      "sha256": "06dbefeda54f3c76edd1aa21e4cf7dddc188923ee754c46bcad9acfdc843271f"
+    },
+    {
+      "file": "store/inventoryCompositionStore.ts",
+      "sha256": "b5a37d0e741c8ca8825df46462e6650bdcc46f4a4467451d655b227fee4dc1a5"
+    },
+    {
+      "file": "constants/data/inventory-compositions.ts",
+      "sha256": "fa0640fdd7378bef3279900ba00aaab895952560b882d1a212766cbf0236bd61"
+    },
+    {
+      "file": "schema/inventory/composition.ts",
+      "sha256": "7ac719bc0043b3c98dca3d0f830b8c2eae08ade9e9d08d5901acddafa5ca82b9"
+    },
+    {
+      "file": "components/feature/reports/transaction/mockData.ts",
+      "sha256": "860fa6a89abb942386a6f94d9f92be1cdffb7b094c4af257a92c8f2abdd20a74"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/browser.cjs",
+      "sha256": "a87887c11ad0d5494e26e87f85a3f1958500724a388c3f873b75a2681fb5cc4e"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/browser-downloads-7LNGoC/rapido-pratinjau-financial.csv",
+      "sha256": "0e3097f09dd9177a2ca0eeae585f4d7d9c056c124a1cd4a83dc06d8a7f2f43eb"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/HANDOFF.md",
+      "sha256": "49625322e294d263ad7bb7b785f0ec477829276bd61bfd271e5d187d40b11144"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/check.cjs",
+      "sha256": "427c1b8d5c8616895f5cd9eec87d38dc69d97b7291935cb7325ce52d56905e95"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/results.json",
+      "sha256": "4f56dbad6a5c3481ab3f1491cbf6183ae6ec9b29168210bf825c05576ba8400b"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/sample.csv",
+      "sha256": "0e3097f09dd9177a2ca0eeae585f4d7d9c056c124a1cd4a83dc06d8a7f2f43eb"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/quality.cjs",
+      "sha256": "8dcb83626c671a84b8daa3407615e6a9f59999cf5709ee97ae87f6c2f86bca32"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/quality.json",
+      "sha256": "ecf83de0b1523c23ad90b0adab4c394acea68e3270fa3ed31b89010d1ee9ca15"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/browser-download.cjs",
+      "sha256": "94258a0c2a7f978f5acee59c51076636b5880607d26d30fa63cb7452159a4f54"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/browser-results.json",
+      "sha256": "97cb8dc6d43ffde1cbab375bcb605d01331f74ec11c64586aa94a368c0c26d30"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/export-data/manifest.cjs",
+      "sha256": "2fcb95d74ca217808431d85f9590e65eea708ecd78e40f1a3ab0776e6160fa70"
+    }
+  ]
+}

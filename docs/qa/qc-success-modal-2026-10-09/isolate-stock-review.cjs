@@ -1,0 +1,34 @@
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto'), assert = require('node:assert/strict');
+const root = __dirname;
+const sha = data => crypto.createHash('sha256').update(data).digest('hex');
+const before = JSON.parse(fs.readFileSync(path.join(root, 'source-before.json')));
+for (const name of ['quality-results.json', 'proposal-biome.out.txt', 'proposal-biome.err.txt']) {
+  fs.copyFileSync(path.join(root, name), path.join(root, 'initial-' + name), fs.constants.COPYFILE_EXCL);
+}
+fs.copyFileSync(path.join(root, 'stock-final/browser-results.json'), path.join(root, 'stock-initial-browser-results.json'), fs.constants.COPYFILE_EXCL);
+const stockPath = 'app/(no-layout)/manage/pos-settings/stock-limit.tsx';
+const copied = fs.readFileSync(path.join(root, 'proposal/stock-screen.fixture.tsx.txt'), 'utf8');
+const candidateImport = '"./qc-success-modal-candidate"', actualImport = '"@/components/common/SuccessModal"';
+assert.equal(copied.split(candidateImport).length, 2);
+const restored = copied.replace(candidateImport, actualImport);
+assert.equal(sha(restored), before.hashes[stockPath]);
+const reviewedStock = '.expo/qc-success-stock-review-screen.tsx';
+fs.writeFileSync(reviewedStock, restored);
+fs.writeFileSync(path.join(root, 'stock-reviewed-contract.tsx.txt'), restored);
+const entry = '.expo/qc-success-stock-entry.jsx';
+const original = fs.readFileSync(entry, 'utf8');
+assert.equal(sha(original), JSON.parse(fs.readFileSync(path.join(root, 'fixture-before.json')))[entry]);
+const originalImport = "'../app/(no-layout)/manage/pos-settings/stock-limit'";
+assert.equal(original.split(originalImport).length, 2);
+const isolated = original.replace(originalImport, "'./qc-success-stock-review-screen'");
+fs.writeFileSync(entry, isolated);
+fs.writeFileSync(path.join(root, 'stock-reviewed-entry.fixture.jsx'), isolated);
+const runner = path.join(root, 'stock-browser.cjs');
+const runnerBefore = fs.readFileSync(runner, 'utf8');
+fs.writeFileSync(path.join(root, 'stock-browser.initial.cjs.txt'), runnerBefore);
+assert.equal(runnerBefore.split("'APPLICATION_SOURCES'").length, 2);
+fs.writeFileSync(runner, runnerBefore.replace("'APPLICATION_SOURCES'", "'REVIEWED_STOCK_CONTRACT_WITH_CURRENT_SUCCESSMODAL'").replace('UI only: production screen/RN-web', 'UI only: byte-identical reviewed historical Stock contract with current SuccessModal/RN-web'));
+const mutableContext = ['metro.config.js', 'scripts/preserve-nativewind-cache.cjs'].map(file => ({file, expected: before.hashes[file], observed: sha(fs.readFileSync(file)), owner: 'Senior 7', disposition: 'External owner edit; excluded from modal source approval, not reverted or certified'}));
+const result = {createdAt: new Date().toISOString(), reason: 'Senior 6 edited live Stock during modal QC. Isolate the exact original caller contract; new live Stock is a separate handoff.', stock: {sourcePath: stockPath, expected: before.hashes[stockPath], liveObserved: sha(fs.readFileSync(stockPath)), reviewedFixture: reviewedStock, reviewedHash: sha(restored), matchesInitialContract: true, currentLiveStockApproved: false}, entry: {file: entry, originalHash: sha(original), isolatedHash: sha(isolated), onlyChange: 'screen import to byte-identical reviewed source copy; SuccessModal stays actual production import'}, mutableContext, preservesInitialSnapshot: true};
+fs.writeFileSync(path.join(root, 'stock-isolation.json'), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result));

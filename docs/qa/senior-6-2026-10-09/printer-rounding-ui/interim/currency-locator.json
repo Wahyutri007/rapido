@@ -1,0 +1,546 @@
+{
+  "sourceHashes": {
+    "app/(no-layout)/manage/printer/modify.tsx": "0174597063bea4d9604925c4d3e43c52160ec4c3a4ab1685c3338866578bf126",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8",
+    "api/hooks/settings.ts": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "constants/data/other/printer.ts": "c081a8a3d3651cfed39ec23f21ecf8e6c0dbebef0ce9aab2e2a41477c61a4f7c",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "assets/fonts/Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "assets/fonts/Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "assets/fonts/Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "assets/fonts/Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+    ".expo/senior6-printer-pos-ui-entry.jsx": "006bd8695445adf99454e1ff3e5386a0290570bea8720093a8d060b7d52102c9",
+    "docs\\qa\\senior-6-2026-10-09\\printer-rounding-ui\\browser.cjs": "ff5f3b95ec7fd2fe3e81561c368fa07266168b37b8026de452de21d60af73a8d",
+    "docs\\qa\\senior-6-2026-10-09\\printer-rounding-ui\\web.css": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0"
+  },
+  "afterHashes": {
+    "app/(no-layout)/manage/printer/modify.tsx": "0174597063bea4d9604925c4d3e43c52160ec4c3a4ab1685c3338866578bf126",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8",
+    "api/hooks/settings.ts": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "constants/data/other/printer.ts": "c081a8a3d3651cfed39ec23f21ecf8e6c0dbebef0ce9aab2e2a41477c61a4f7c",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "assets/fonts/Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "assets/fonts/Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "assets/fonts/Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "assets/fonts/Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+    ".expo/senior6-printer-pos-ui-entry.jsx": "006bd8695445adf99454e1ff3e5386a0290570bea8720093a8d060b7d52102c9",
+    "docs\\qa\\senior-6-2026-10-09\\printer-rounding-ui\\browser.cjs": "ff5f3b95ec7fd2fe3e81561c368fa07266168b37b8026de452de21d60af73a8d",
+    "docs\\qa\\senior-6-2026-10-09\\printer-rounding-ui\\web.css": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0"
+  },
+  "drift": [],
+  "checks": [
+    {
+      "name": "printer 320: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 320: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "printer 320: names and connection methods fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 320: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 320: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "rounding 320: method labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 320: bottom field reachable above CTA",
+      "passed": true,
+      "detail": {
+        "x": 44,
+        "y": 431.5,
+        "width": 105.21875,
+        "height": 20
+      }
+    },
+    {
+      "name": "rounding 320: dropdown cancel fits",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 387,
+        "width": 37.09375,
+        "height": 24
+      }
+    },
+    {
+      "name": "rounding 320: dropdown option labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 360: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 360: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "printer 360: names and connection methods fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 360: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 360: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "rounding 360: method labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 360: bottom field reachable above CTA",
+      "passed": true,
+      "detail": {
+        "x": 44,
+        "y": 571.5,
+        "width": 105.21875,
+        "height": 20
+      }
+    },
+    {
+      "name": "rounding 360: dropdown cancel fits",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 527,
+        "width": 37.09375,
+        "height": 24
+      }
+    },
+    {
+      "name": "rounding 360: dropdown option labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 390: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 390: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "printer 390: names and connection methods fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 390: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 390: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "rounding 390: method labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 390: bottom field reachable above CTA",
+      "passed": true,
+      "detail": {
+        "x": 44,
+        "y": 635.5,
+        "width": 105.21875,
+        "height": 20
+      }
+    },
+    {
+      "name": "rounding 390: dropdown cancel fits",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 591,
+        "width": 37.09375,
+        "height": 24
+      }
+    },
+    {
+      "name": "rounding 390: dropdown option labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 768: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "printer 768: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "printer 768: names and connection methods fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 768: no horizontal overflow",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 768: save visible and target >=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "rounding 768: method labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding 768: bottom field reachable above CTA",
+      "passed": true,
+      "detail": {
+        "x": 44,
+        "y": 670,
+        "width": 105.21875,
+        "height": 20
+      }
+    },
+    {
+      "name": "rounding 768: dropdown cancel fits",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 771,
+        "width": 37.09375,
+        "height": 24
+      }
+    },
+    {
+      "name": "rounding 768: dropdown option labels fit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding edited method/exponent survive refetch; applyTo remains UI-only",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding success modal action visible at320x640",
+      "passed": true,
+      "detail": {
+        "x": 40.98818588256836,
+        "y": 450.7629699707031,
+        "width": 238.02365493774414,
+        "height": 48.004791259765625
+      }
+    },
+    {
+      "name": "rounding failed save keeps draft and error action visible",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "rounding disabled controls hide while saved values stay intact",
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blockedRequests": [],
+  "alerts": [],
+  "metrics": [
+    {
+      "screen": "printer",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "save": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "screen": "rounding",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "save": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "screen": "printer",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "save": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "screen": "rounding",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "save": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "screen": "printer",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "save": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "screen": "rounding",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "save": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "screen": "printer",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "save": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "screen": "rounding",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "save": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    }
+  ],
+  "error": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Kelipatan (Rp10.000.000.000)', { exact: true }).visible() to be visible\u001b[22m\n",
+  "calls": [
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "post",
+      "body": {
+        "enabled": true,
+        "method": "down",
+        "decimal_places": 1
+      }
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "post",
+      "body": {
+        "enabled": true,
+        "method": "down",
+        "decimal_places": 1
+      }
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "post",
+      "body": {
+        "enabled": false,
+        "method": "up",
+        "decimal_places": 3
+      }
+    },
+    {
+      "method": "get"
+    },
+    {
+      "method": "get"
+    }
+  ],
+  "limitations": "Production screens/RHF/Query/Axios/NativeWind/UI/font/modal; local transport and navigation/params fixture, not full auth/router/native/Figma/backend persistence. Printer existing simulated save unchanged."
+}

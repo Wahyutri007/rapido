@@ -1,0 +1,1006 @@
+{
+  "status": "INTERNAL_QA_REVIEW_SUPPLEMENT",
+  "externalQcApproval": false,
+  "finishedAt": "2026-10-09T00:33:13.761Z",
+  "summary": {
+    "assertions": 78,
+    "passed": 74,
+    "failed": 4,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "loadedSourceHashes": {
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "checks": [
+    {
+      "name": "Role/normal: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "role A UPDATED"
+      ],
+      "expected": [
+        true,
+        "role A UPDATED"
+      ]
+    },
+    {
+      "name": "Role/normal: filter hides A row without retiring canonical A selection",
+      "pass": true,
+      "actual": [
+        [
+          "B"
+        ],
+        true,
+        "role A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "role A UPDATED"
+      ]
+    },
+    {
+      "name": "Role/normal: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Role/normal: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/normal: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Role/normal: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Role/StrictMode: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "role A UPDATED"
+      ],
+      "expected": [
+        true,
+        "role A UPDATED"
+      ]
+    },
+    {
+      "name": "Role/StrictMode: filter hides A row without retiring canonical A selection",
+      "pass": true,
+      "actual": [
+        [
+          "B"
+        ],
+        true,
+        "role A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "role A UPDATED"
+      ]
+    },
+    {
+      "name": "Role/StrictMode: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Role/StrictMode: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Role/StrictMode: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Worker/normal: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "worker A UPDATED"
+      ],
+      "expected": [
+        true,
+        "worker A UPDATED"
+      ]
+    },
+    {
+      "name": "Worker/normal: filter hides A row without retiring canonical A selection",
+      "pass": false,
+      "actual": [
+        [
+          "A",
+          "B"
+        ],
+        true,
+        "worker A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "worker A UPDATED"
+      ]
+    },
+    {
+      "name": "Worker/normal: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Worker/normal: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Worker/normal: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "worker A UPDATED"
+      ],
+      "expected": [
+        true,
+        "worker A UPDATED"
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: filter hides A row without retiring canonical A selection",
+      "pass": false,
+      "actual": [
+        [
+          "A",
+          "B"
+        ],
+        true,
+        "worker A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "worker A UPDATED"
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Member/normal: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "member A UPDATED"
+      ],
+      "expected": [
+        true,
+        "member A UPDATED"
+      ]
+    },
+    {
+      "name": "Member/normal: filter hides A row without retiring canonical A selection",
+      "pass": false,
+      "actual": [
+        [
+          "A",
+          "B"
+        ],
+        true,
+        "member A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "member A UPDATED"
+      ]
+    },
+    {
+      "name": "Member/normal: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Member/normal: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Member/normal: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    },
+    {
+      "name": "Member/StrictMode: loading with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: loading recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: loading recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: error with cached A retires old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: error recovery does not revive old selection",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: error recovery explicit reopen creates new active session",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: background fetch retains current action session",
+      "pass": true,
+      "actual": [
+        true,
+        "member A UPDATED"
+      ],
+      "expected": [
+        true,
+        "member A UPDATED"
+      ]
+    },
+    {
+      "name": "Member/StrictMode: filter hides A row without retiring canonical A selection",
+      "pass": false,
+      "actual": [
+        [
+          "A",
+          "B"
+        ],
+        true,
+        "member A UPDATED"
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true,
+        "member A UPDATED"
+      ]
+    },
+    {
+      "name": "Member/StrictMode: filtered A still permits valid normal delete action",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Member/StrictMode: same-A reopen rejects prior-generation success and confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: retired current request still reports its failure",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Member/StrictMode: error recovery leaves previous confirmation closed",
+      "pass": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: explicit new selection can retry after retirement",
+      "pass": true,
+      "actual": [
+        2,
+        true
+      ],
+      "expected": [
+        2,
+        true
+      ]
+    }
+  ],
+  "runtimeErrors": [],
+  "warnings": [],
+  "harness": "Reuses primary harness prefix without running primary cases; adds only isFetching GET adapter field. Source modules/adapters otherwise same.",
+  "limitations": "Query/native/presentation/router adapters, actual mutation factory/Common/QueryClient/Axios memory transport. No actual GET/backend/HTTP/browser/native/full navigator."
+}

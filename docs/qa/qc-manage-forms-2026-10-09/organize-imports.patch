@@ -1,0 +1,97 @@
+diff --git a/app/(no-layout)/manage/order-type/modify.tsx b/app/(no-layout)/manage/order-type/modify.tsx
+index 20122ae..fd85694 100644
+--- a/app/(no-layout)/manage/order-type/modify.tsx
++++ b/app/(no-layout)/manage/order-type/modify.tsx
+@@ -1,6 +1,6 @@
+ import { router, useLocalSearchParams } from "expo-router";
+-import OrderTypeModifyScreen from "@/components/feature/manage/settings/OrderTypeModifyScreen";
+ import ManageFormNotFound from "@/components/feature/manage/settings/ManageFormNotFound";
++import OrderTypeModifyScreen from "@/components/feature/manage/settings/OrderTypeModifyScreen";
+ import { ORDER_TYPE_ITEMS } from "@/constants/data/manage/order-type";
+ 
+ export default function OrderTypeModifyScreenRoute() {
+diff --git a/app/(no-layout)/manage/payment-method/modify.tsx b/app/(no-layout)/manage/payment-method/modify.tsx
+index 903b0f2..4c71b2d 100644
+--- a/app/(no-layout)/manage/payment-method/modify.tsx
++++ b/app/(no-layout)/manage/payment-method/modify.tsx
+@@ -1,6 +1,6 @@
+ import { router, useLocalSearchParams } from "expo-router";
+-import PaymentMethodModifyScreen from "@/components/feature/manage/settings/PaymentMethodModifyScreen";
+ import ManageFormNotFound from "@/components/feature/manage/settings/ManageFormNotFound";
++import PaymentMethodModifyScreen from "@/components/feature/manage/settings/PaymentMethodModifyScreen";
+ import { PAYMENT_METHOD_ITEMS } from "@/constants/data/manage/payment-method";
+ 
+ export default function PaymentMethodModifyScreenRoute() {
+diff --git a/app/(no-layout)/manage/tax/modify.tsx b/app/(no-layout)/manage/tax/modify.tsx
+index 7eed3a5..f14bb71 100644
+--- a/app/(no-layout)/manage/tax/modify.tsx
++++ b/app/(no-layout)/manage/tax/modify.tsx
+@@ -1,6 +1,6 @@
+ import { router, useLocalSearchParams } from "expo-router";
+-import TaxModifyScreen from "@/components/feature/manage/settings/TaxModifyScreen";
+ import ManageFormNotFound from "@/components/feature/manage/settings/ManageFormNotFound";
++import TaxModifyScreen from "@/components/feature/manage/settings/TaxModifyScreen";
+ import { TAXES_ITEMS } from "@/constants/data/manage/tax";
+ 
+ export default function TaxModifyScreenRoute() {
+diff --git a/components/feature/manage/settings/ExtraModifyScreen.tsx b/components/feature/manage/settings/ExtraModifyScreen.tsx
+index 2e29747..ec6c02e 100644
+--- a/components/feature/manage/settings/ExtraModifyScreen.tsx
++++ b/components/feature/manage/settings/ExtraModifyScreen.tsx
+@@ -10,9 +10,9 @@ import {
+ 	FormMessage,
+ 	FormSelect,
+ } from "@/components/common/Form";
+-import { EXTRA_OPTIONS } from "@/constants/data/other/extra";
+ import { CALCULATION_TYPE_OPTIONS } from "@/constants/data/other/calculation-type";
+-import { extraSchema, type ExtraSchema } from "@/schema/manage/extra";
++import { EXTRA_OPTIONS } from "@/constants/data/other/extra";
++import { type ExtraSchema, extraSchema } from "@/schema/manage/extra";
+ import type { ExtraItemProps } from "@/types/ui/manage/extra";
+ import ManagePreviewForm from "./ManagePreviewForm";
+ 
+diff --git a/components/feature/manage/settings/OrderTypeModifyScreen.tsx b/components/feature/manage/settings/OrderTypeModifyScreen.tsx
+index cced24b..d324202 100644
+--- a/components/feature/manage/settings/OrderTypeModifyScreen.tsx
++++ b/components/feature/manage/settings/OrderTypeModifyScreen.tsx
+@@ -10,11 +10,11 @@ import {
+ 	FormMessage,
+ 	FormSelect,
+ } from "@/components/common/Form";
+-import { ORDER_TYPE_OPTIONS } from "@/constants/data/other/order-types";
+ import { EXTRA_OPTIONS } from "@/constants/data/other/extra";
++import { ORDER_TYPE_OPTIONS } from "@/constants/data/other/order-types";
+ import {
+-	orderTypeSchema,
+ 	type OrderTypeSchema,
++	orderTypeSchema,
+ } from "@/schema/manage/order-type";
+ import type { OrderTypeItemProps } from "@/types/ui/manage/order.type";
+ import ManagePreviewForm from "./ManagePreviewForm";
+diff --git a/components/feature/manage/settings/PaymentMethodModifyScreen.tsx b/components/feature/manage/settings/PaymentMethodModifyScreen.tsx
+index 3054d75..6c75042 100644
+--- a/components/feature/manage/settings/PaymentMethodModifyScreen.tsx
++++ b/components/feature/manage/settings/PaymentMethodModifyScreen.tsx
+@@ -12,8 +12,8 @@ import {
+ } from "@/components/common/Form";
+ import { BANK_OPTIONS } from "@/constants/data/other/bank-types";
+ import {
+-	paymentMethodSchema,
+ 	type PaymentMethodSchema,
++	paymentMethodSchema,
+ } from "@/schema/manage/payment-method";
+ import type { PaymentMethodItemProps } from "@/types/ui/manage/payment-method";
+ import ManagePreviewForm from "./ManagePreviewForm";
+diff --git a/components/feature/manage/settings/TaxModifyScreen.tsx b/components/feature/manage/settings/TaxModifyScreen.tsx
+index 0f3ed26..58c0aad 100644
+--- a/components/feature/manage/settings/TaxModifyScreen.tsx
++++ b/components/feature/manage/settings/TaxModifyScreen.tsx
+@@ -11,7 +11,7 @@ import {
+ 	FormSelect,
+ } from "@/components/common/Form";
+ 
+-import { taxSchema, type TaxSchema } from "@/schema/manage/tax";
++import { type TaxSchema, taxSchema } from "@/schema/manage/tax";
+ import type { TaxItemProps } from "@/types/ui/manage/tax";
+ import ManagePreviewForm from "./ManagePreviewForm";
+ 

@@ -1,0 +1,87 @@
+{
+  "scope": "Errors detected under SDK57/React Compiler rules. These eight sources are byte-equivalent to existing remote main after Git line-ending normalization, not newly edited files. Does not claim global lint PASS.",
+  "errors": 9,
+  "warnings": 350,
+  "errorFiles": [
+    {
+      "file": "app/(no-layout)/catalog/promo/detail.tsx",
+      "errors": [
+        {
+          "line": 417,
+          "rule": "react-hooks/purity"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/voucher/modify.tsx",
+      "errors": [
+        {
+          "line": 81,
+          "rule": "react-hooks/purity"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "app/(no-layout)/offer/promo/modify.tsx",
+      "errors": [
+        {
+          "line": 104,
+          "rule": "react-hooks/set-state-in-effect"
+        },
+        {
+          "line": 147,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "app/(onboarding)/choose-store/index.tsx",
+      "errors": [
+        {
+          "line": 33,
+          "rule": "react-hooks/set-state-in-effect"
+        },
+        {
+          "line": 111,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "components/custom/TabPager.tsx",
+      "errors": [
+        {
+          "line": 54,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "components/custom/TabPager.web.tsx",
+      "errors": [
+        {
+          "line": 31,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    },
+    {
+      "file": "hooks/useSearchParamState.ts",
+      "errors": [
+        {
+          "line": 11,
+          "rule": "react-hooks/set-state-in-effect"
+        }
+      ],
+      "identicalSourceToRemoteMain": true
+    }
+  ],
+  "newlyEditedSourceErrors": 0,
+  "baselineMain": "a2e3777a494231cd492504c05400aea258dce0a9"
+}

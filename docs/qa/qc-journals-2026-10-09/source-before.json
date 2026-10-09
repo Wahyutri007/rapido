@@ -1,0 +1,224 @@
+{
+  "createdAt": "2026-10-08T18:59:34.921Z",
+  "hashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "schema/accounting/general-journal.ts": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+    "schema/accounting/adjusting-journal.ts": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "types/ui/accounting/journal.ts": "a16278a683b2f344ed07ba2e3293293998f52a81f8ea68dee8223e724242ae44",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "components/feature/accounting/general-journal/JournalFormNotFound.tsx": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "docs/qa/codex-3/journal-validation/HANDOFF.md": "7e424b60af1bb3ad8b2a41f9cdc3fabadf71d7f7b1826344048ca8e3fc5497ec",
+    "docs/qa/codex-3/journal-validation/check.cjs": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+    "docs/qa/codex-3/journal-validation/baseline.json": "7ebc7937fad41d6c7aa3e462796254a02aba69e5aa31afaef0627b01c468be94",
+    "docs/qa/codex-3/journal-validation/balance-baseline.json": "bfe21dd545845f9b9234bb8a20f581840f5a341f924746184aadda5d0d6d061e",
+    "docs/qa/codex-3/journal-validation/results.json": "392f2ace6f7168cb1246600e9e3826f3eea35c6707dc6765d8d7e90c3ef94e23",
+    "docs/qa/codex-3/journal-validation/regression.cjs": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+    "docs/qa/codex-3/journal-validation/regression-results.json": "1509ae97c683c3860b557d8fe4c4e53512f9050624c6f90c7150a85bb16d7e65",
+    "docs/qa/codex-3/journal-validation/typecheck.cjs": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+    "docs/qa/codex-3/journal-validation/typecheck-results.json": "a12dfa13361d94bd0d313a3d8cbea03150ebcbe6563b81792a579c867f86b0d9",
+    "docs/qa/codex-3/journal-validation/quality.cjs": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+    "docs/qa/codex-3/journal-validation/quality-results.json": "255e79d1fc1bf50ec0fe42697c520656b3ab6428792b729a9d8d826617cc6191",
+    "docs/qa/codex-3/journal-validation/verify.cjs": "2a27682fcd22bb81d8309b9011d7c8d8f3c7ef5b0a88a602be358046ff16d355",
+    "docs/qa/codex-3/journal-validation/general-modify.before.tsx.txt": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+    "docs/qa/codex-3/journal-validation/adjusting-modify.before.tsx.txt": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+    "docs/qa/codex-3/journals/lifecycle.cjs": "efd4b17b687a982ebabdff8d56281f327b1033d09a3aedfff0d2f08cb8d5f8e1",
+    "docs/qa/codex-3/journal-validation/verification.json": "e6d13bdf3188a130698d3917a6e60f3b0f0d40166338e73b4310c2398b08dc01",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "biome.json": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+    "eslint.config.js": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1"
+  },
+  "manifestChecks": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+      "actual": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+      "actual": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/journal-validation.ts",
+      "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "passed": true
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "file": "schema/accounting/general-journal.ts",
+      "expected": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "actual": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "passed": true
+    },
+    {
+      "file": "schema/accounting/adjusting-journal.ts",
+      "expected": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "actual": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "file": "lib/utils/index.ts",
+      "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "passed": true
+    },
+    {
+      "file": "types/ui/accounting/journal.ts",
+      "expected": "a16278a683b2f344ed07ba2e3293293998f52a81f8ea68dee8223e724242ae44",
+      "actual": "a16278a683b2f344ed07ba2e3293293998f52a81f8ea68dee8223e724242ae44",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "expected": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "actual": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "expected": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "actual": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "passed": true
+    },
+    {
+      "file": "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "expected": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "actual": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "passed": true
+    },
+    {
+      "file": "tsconfig.json",
+      "expected": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "actual": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+      "actual": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/HANDOFF.md",
+      "expected": "7e424b60af1bb3ad8b2a41f9cdc3fabadf71d7f7b1826344048ca8e3fc5497ec",
+      "actual": "7e424b60af1bb3ad8b2a41f9cdc3fabadf71d7f7b1826344048ca8e3fc5497ec",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/check.cjs",
+      "expected": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+      "actual": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/baseline.json",
+      "expected": "7ebc7937fad41d6c7aa3e462796254a02aba69e5aa31afaef0627b01c468be94",
+      "actual": "7ebc7937fad41d6c7aa3e462796254a02aba69e5aa31afaef0627b01c468be94",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/balance-baseline.json",
+      "expected": "bfe21dd545845f9b9234bb8a20f581840f5a341f924746184aadda5d0d6d061e",
+      "actual": "bfe21dd545845f9b9234bb8a20f581840f5a341f924746184aadda5d0d6d061e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/results.json",
+      "expected": "392f2ace6f7168cb1246600e9e3826f3eea35c6707dc6765d8d7e90c3ef94e23",
+      "actual": "392f2ace6f7168cb1246600e9e3826f3eea35c6707dc6765d8d7e90c3ef94e23",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/regression.cjs",
+      "expected": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+      "actual": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/regression-results.json",
+      "expected": "1509ae97c683c3860b557d8fe4c4e53512f9050624c6f90c7150a85bb16d7e65",
+      "actual": "1509ae97c683c3860b557d8fe4c4e53512f9050624c6f90c7150a85bb16d7e65",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/typecheck.cjs",
+      "expected": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+      "actual": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/typecheck-results.json",
+      "expected": "a12dfa13361d94bd0d313a3d8cbea03150ebcbe6563b81792a579c867f86b0d9",
+      "actual": "a12dfa13361d94bd0d313a3d8cbea03150ebcbe6563b81792a579c867f86b0d9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/quality.cjs",
+      "expected": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+      "actual": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/quality-results.json",
+      "expected": "255e79d1fc1bf50ec0fe42697c520656b3ab6428792b729a9d8d826617cc6191",
+      "actual": "255e79d1fc1bf50ec0fe42697c520656b3ab6428792b729a9d8d826617cc6191",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/verify.cjs",
+      "expected": "2a27682fcd22bb81d8309b9011d7c8d8f3c7ef5b0a88a602be358046ff16d355",
+      "actual": "2a27682fcd22bb81d8309b9011d7c8d8f3c7ef5b0a88a602be358046ff16d355",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/general-modify.before.tsx.txt",
+      "expected": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "actual": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/adjusting-modify.before.tsx.txt",
+      "expected": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "actual": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journals/lifecycle.cjs",
+      "expected": "efd4b17b687a982ebabdff8d56281f327b1033d09a3aedfff0d2f08cb8d5f8e1",
+      "actual": "efd4b17b687a982ebabdff8d56281f327b1033d09a3aedfff0d2f08cb8d5f8e1",
+      "passed": true
+    }
+  ]
+}

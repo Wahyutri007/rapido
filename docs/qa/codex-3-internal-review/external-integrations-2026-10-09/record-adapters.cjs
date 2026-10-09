@@ -1,0 +1,13 @@
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const root = path.resolve(__dirname, "../../../..");
+const sha = (bytes) => crypto.createHash("sha256").update(bytes).digest("hex");
+const target = path.join(__dirname, "adapter-final.json");
+if (fs.existsSync(target)) throw new Error("Final adapter record exists; no overwrite");
+const prefix = fs.readFileSync(path.join(__dirname, "adapters.cjs.txt"), "utf8");
+const initial = JSON.parse(fs.readFileSync(path.join(__dirname, "adapter-provenance.json"), "utf8"));
+const utilsSource = "lib/utils/index.ts";
+const result = { initialCopiedPrefixSha256: initial.copiedPrefixSha256, finalPrefixSha256: sha(prefix), additionalAdaptation: "Route adapter now matches actual utility string path plus encoded query semantics; old object-return adapter remains only in historical Payment packet", routeSourceRead: { path: utilsSource, sha256: sha(fs.readFileSync(path.join(root, utilsSource))) }, bodySourceSha256: sha(fs.readFileSync(path.join(__dirname, "cases.cjs.txt"))), assembledRunnerSha256: sha(fs.readFileSync(path.join(__dirname, "check.cjs"))), sourceEdits: false, setupAttemptsBeforeRun: 0 };
+fs.writeFileSync(target, `${JSON.stringify(result, null, 2)}\n`);
+console.log(JSON.stringify(result, null, 2));

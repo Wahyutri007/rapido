@@ -1,0 +1,31 @@
+{
+  "browser": [
+    {
+      "file": "components/common/Card.tsx",
+      "expected": "238f33a68720bbab7283ac874097e3fa83928d0a96cff590e49c06f26406c905",
+      "actual": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "expected": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c",
+      "actual": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db"
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "expected": "282ad7f089df58e374cb174749f16abb9e6a41a9c6ec74e5bef575b1c4fe6c9a",
+      "actual": "2a141e7ac94e93cce54157879635d947531b8e5fad328ba811ab9c1fad8a2fdb"
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "expected": "139066d76bf17c97a240bf856943c049d8f321a641963594169819634c191640",
+      "actual": "07e3960ec2bb3668c2493975e66bfe7b1439a377d21a1d4e578e65522f735330"
+    }
+  ],
+  "types": [
+    {
+      "file": ".expo\\types\\router.d.ts",
+      "expected": "f5d0202640968d5f9a6f0ab19f955ea1d66bd390b2ba95d514d2d144a3ac49f4",
+      "actual": "cc63d4e4ad501969cd21e461451affac63bccf3932eb589f04215dffe1eef3f6"
+    }
+  ]
+}

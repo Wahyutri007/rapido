@@ -1,0 +1,65 @@
+const fs = require("node:fs");
+const path = require("node:path");
+const vm = require("node:vm");
+const crypto = require("node:crypto");
+const root = path.resolve(__dirname, "../../../..");
+const ts = require(path.join(root, "node_modules/typescript"));
+const React = require(path.join(root, ".expo/senior7-test-tools/node_modules/react"));
+const { act, create } = require(path.join(root, ".expo/senior7-test-tools/node_modules/react-test-renderer"));
+const appReact = require.resolve(path.join(root, "node_modules/react")); require(appReact); require.cache[appReact].exports = React;
+global.IS_REACT_ACT_ENVIRONMENT = true;
+const sha = (bytes) => crypto.createHash("sha256").update(bytes).digest("hex");
+const output = process.argv[2] ?? "results.json";
+if (!/^[a-z0-9-]+\.json$/.test(output) || fs.existsSync(path.join(__dirname, output))) throw new Error("Use a fresh results filename in own packet");
+const checks = [], errors = [], warnings = [], loaded = new Map(), hashes = {}, snapshots = {};
+const originalError = console.error, originalWarn = console.warn;
+console.error = (...args) => { const text = args.map(String).join(" "); if (!text.includes("react-test-renderer is deprecated")) { errors.push(text); originalError(...args); } };
+console.warn = (...args) => { warnings.push(args.map(String).join(" ")); originalWarn(...args); };
+const check = (name, actual, expected) => checks.push({ name, passed: JSON.stringify(actual) === JSON.stringify(expected), actual, expected });
+let params = {}, navigation = [];
+const router = { push: (href) => navigation.push(["push", href]), replace: (href) => navigation.push(["replace", href]) };
+const hostNames = (names) => Object.fromEntries(names.map((name) => [name, name]));
+const modal = ({ children, isOpen, ...props }) => React.createElement("Modal", { ...props, isOpen }, isOpen ? children : null);
+const native = {
+	...hostNames(["Image", "ImageBackground", "View", "Pressable", "ScrollView"]), Platform: { OS: "web" },
+	useWindowDimensions: () => ({ width: 390, height: 844, scale: 1, fontScale: 1 }),
+	FlatList: (props) => React.createElement("FlatList", props, props.data.length ? props.data.map((item, index) => React.createElement(React.Fragment, { key: props.keyExtractor(item) }, props.renderItem({ item, index }))) : props.ListEmptyComponent),
+};
+const defaultHost = (name) => ({ __esModule: true, default: name });
+function production(relative) {
+	if (loaded.has(relative)) return loaded.get(relative);
+	const source = fs.readFileSync(path.join(root, relative), "utf8"); hashes[relative] = sha(source); snapshots[relative] = source;
+	const module = { exports: {} };
+	const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
+	const customRequire = (name) => {
+		if (name === "react") return React;
+		if (name === "react/jsx-runtime") return require(path.join(root, ".expo/senior7-test-tools/node_modules/react/jsx-runtime"));
+		if (name === "react-native") return native;
+		if (["zod", "zustand", "react-hook-form", "@hookform/resolvers/zod"].includes(name)) return require(require.resolve(name, { paths: [root] }));
+		if (name === "expo-router") return { router, useLocalSearchParams: () => params, useGlobalSearchParams: () => params, Link: "Link" };
+		if (name.startsWith("@expo/vector-icons/")) return defaultHost(name.split("/").at(-1));
+		if (name === "@react-native-community/datetimepicker") return {};
+		if (name === "expo-document-picker") return { getDocumentAsync: () => { throw new Error("Picker forbidden in reviewer"); } };
+		if (/\/ui\/modal$/.test(name)) return { Modal: modal, ...hostNames(["ModalBackdrop", "ModalBody", "ModalContent", "ModalFooter", "ModalHeader", "ModalCloseButton"]) };
+		if (/\/ui\/button$/.test(name)) return hostNames(["Button", "ButtonText", "ButtonGroup", "ButtonIcon"]);
+		if (/\/ui\/input$/.test(name)) return hostNames(["Input", "InputField", "InputIcon"]);
+		if (/\/ui\/checkbox$/.test(name)) return hostNames(["Checkbox", "CheckboxGroup", "CheckboxIcon", "CheckboxIndicator", "CheckboxLabel"]);
+		if (/\/ui\/radio$/.test(name)) return hostNames(["Radio", "RadioCircleIndicator", "RadioGroup", "RadioLabel"]);
+		if (name === "@/components/icons") return hostNames(["EFeather"]);
+		if (name === "../icons/camera") return defaultHost("CameraIcon");
+		if (name === "@/constants/Fonts") return { FONT_NAMES: { regular: "fixture-font" } };
+		if (name === "@/constants/Colors") return { Colors: { zinc: { 400: "gray" }, red: { 500: "red" }, primary: "primary" } };
+		if (name === "@/lib/utils") return { route: (pathname, params) => params ? `${pathname}?${Object.entries(params).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join("&")}` : pathname, cn: (...args) => args.filter(Boolean).join(" "), tw: (value) => value * 4 };
+		if (name === "@/assets/images/illustrations") return { ILLUSTRATIONS: { actionSuccess: "fixture-success", deleteConfirmation: "fixture-delete" } };
+		if (name === "@/components/common/DataPlaceholder") return hostNames(["SearchNotFound"]);
+		if (name === "@/components/custom/CatalogItemCard") return { __esModule: true, default: (props) => React.createElement("CatalogItemCard", props, props.title, props.subtitle, props.right) };
+		const presentation = { "@/components/common/BottomActionButton": "BottomActionButton", "@/components/common/Card": "Card", "@/components/common/Text": "Text", "./Text": "Text", "@/components/common/Wrapper": "Wrapper", "@/components/common/SearchBar": "SearchBar", "@/components/custom/DetailRow": "DetailRow", "@/components/custom/DetailBottomActions": "DetailBottomActions", "@/components/custom/ItemActionSheet": "ItemActionSheet", "./SingleSelect": "SingleSelect", "@/components/common/Header": "Header" };
+		if (presentation[name]) return defaultHost(presentation[name]);
+		if (name === "@/components/custom/JSStack") return { JSStack: Object.assign((props) => React.createElement("JSStack", props, props.children), { Screen: "JSStackScreen" }), ScaleBackTransition: {} };
+		const base = name.startsWith("@/") ? path.join(root, name.slice(2)) : name.startsWith(".") ? path.resolve(path.dirname(path.join(root, relative)), name) : null;
+		if (base) for (const candidate of [`${base}.tsx`, `${base}.ts`, path.join(base, "index.tsx"), path.join(base, "index.ts")]) if (fs.existsSync(candidate)) return production(path.relative(root, candidate).replaceAll("\\", "/"));
+		throw new Error(`Unexpected dependency ${name} from ${relative}`);
+	};
+	vm.runInNewContext(code, { module, exports: module.exports, require: customRequire, console, Intl, URL, setTimeout, clearTimeout }, { filename: relative });
+	loaded.set(relative, module.exports); return module.exports;
+}

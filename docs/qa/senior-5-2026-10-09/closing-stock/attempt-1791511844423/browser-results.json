@@ -1,0 +1,29 @@
+{
+  "passed": 0,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "Browser execution completed",
+      "pass": false,
+      "error": "UI wait timeout"
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "network": [
+    {
+      "url": "http://127.0.0.1:8088/inventory",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "error": "net::ERR_CONNECTION_REFUSED",
+      "type": "Script"
+    },
+    {
+      "error": "net::ERR_CONNECTION_REFUSED",
+      "type": "Other"
+    }
+  ],
+  "scope": "Production Inventory hub, stock screen, tab/layout, shared controls and material store; test-only ExpoRoot context bypasses authentication/API, mutations live only in this browser page."
+}

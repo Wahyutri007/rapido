@@ -1,0 +1,35 @@
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto'), assert = require('node:assert/strict');
+const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const source = 'components/common/SuccessModal.tsx';
+assert.equal(hash(source), 'f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495');
+fs.mkdirSync(path.join(__dirname, 'proposal'), { recursive: true });
+let candidate = fs.readFileSync(source, 'utf8').replaceAll('\r\n', '\n');
+function replace(from, to) { assert.equal(candidate.split(from).length, 2, from); candidate = candidate.replace(from, to); }
+replace('\tPressable,\n', '\tPressable,\n\tScrollView,\n');
+replace('const { width } = useWindowDimensions();', 'const { width, height } = useWindowDimensions();');
+replace('style={{ width: width - 32, maxWidth: 380 }}', 'style={{ width: width - 32, maxWidth: 380, maxHeight: height - 32 }}');
+replace('\t\t\t\t<ModalHeader className=', '\t\t\t\t<ScrollView style={{ flexShrink: 1, minHeight: 0 }}>\n\t\t\t\t<ModalHeader className=');
+replace('\n\t\t\t\t<ModalFooter className=', '\n\t\t\t\t</ScrollView>\n\n\t\t\t\t<ModalFooter className=');
+fs.writeFileSync(path.join(__dirname, 'proposal/SuccessModal.tsx'), candidate);
+fs.writeFileSync('.expo/qc-success-modal-candidate.tsx', candidate);
+let entry = fs.readFileSync(path.join(__dirname, 'modal-entry.fixture.jsx'), 'utf8');
+assert.equal(entry.split('import SuccessModal from "../components/common/SuccessModal";').length, 2);
+entry = entry.replace('import SuccessModal from "../components/common/SuccessModal";', 'import SuccessModal from "./qc-success-modal-candidate";');
+fs.writeFileSync('.expo/qc-success-proposal-entry.jsx', entry);
+fs.writeFileSync(path.join(__dirname, 'proposal/modal-entry.fixture.jsx'), entry);
+let stockEntry = fs.readFileSync(path.join(__dirname, 'stock-entry.fixture.jsx'), 'utf8');
+const screenImport = "import StockScreen from '../app/(no-layout)/manage/pos-settings/stock-limit';";
+assert.equal(stockEntry.split(screenImport).length, 2);
+// Stock proposal preview requires a screen copy solely to redirect this component import.
+const stockSource = 'app/(no-layout)/manage/pos-settings/stock-limit.tsx';
+let screen = fs.readFileSync(stockSource, 'utf8');
+const modalImport = '@/components/common/SuccessModal';
+assert.equal(screen.split(modalImport).length, 2);
+screen = screen.replace(modalImport, './qc-success-modal-candidate');
+fs.writeFileSync('.expo/qc-success-stock-screen.tsx', screen);
+fs.writeFileSync(path.join(__dirname, 'proposal/stock-screen.fixture.tsx.txt'), screen);
+stockEntry = stockEntry.replace(screenImport, "import StockScreen from './qc-success-stock-screen';");
+fs.writeFileSync('.expo/qc-success-stock-proposal-entry.jsx', stockEntry);
+fs.writeFileSync(path.join(__dirname, 'proposal/stock-entry.fixture.jsx'), stockEntry);
+fs.writeFileSync(path.join(__dirname, 'proposal-before.json'), JSON.stringify({ createdAt: new Date().toISOString(), originalSourceHash: hash(source), originalScreenHash: hash(stockSource), candidateRawHash: hash('.expo/qc-success-modal-candidate.tsx'), appliedToApplication: false, note: 'Only review copies and QC fixture entry; stock screen copy changes one import only.' }, null, 2) + '\n');
+console.log(JSON.stringify({ proposalCreated: true, applied: false, rawCandidateHash: hash('.expo/qc-success-modal-candidate.tsx') }));

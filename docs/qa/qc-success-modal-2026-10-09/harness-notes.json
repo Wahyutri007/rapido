@@ -1,0 +1,74 @@
+{
+  "capturedAt": "2026-10-09T00:40:22.327Z",
+  "initialQualityPreserved": true,
+  "initialFailureFile": "initial-quality-results.json",
+  "notes": [
+    {
+      "kind": "HARNESS_PROTOCOL",
+      "observed": "Biome stdin check exited 1 while returning exactly the tested candidate bytes",
+      "correction": "check --write --stdin-file-path returns contents on stdout only; require identical bytes",
+      "applicationEdit": false,
+      "candidateHashChanged": false,
+      "evidence": [
+        "initial-proposal-biome.out.txt",
+        "initial-proposal-biome.err.txt",
+        "quality-results.json"
+      ]
+    },
+    {
+      "kind": "EXTERNAL_SOURCE_DRIFT",
+      "owner": "Senior 6",
+      "observed": "Live Stock changed during modal review",
+      "correction": "Restore exact initial Stock contract from the copy, retain actual production SuccessModal import, and replay 36 checks",
+      "applicationEdit": false,
+      "liveStockApproved": false,
+      "evidence": [
+        "stock-isolation.json",
+        "stock-initial-browser-results.json",
+        "stock-final/browser-results.json"
+      ]
+    },
+    {
+      "kind": "EXTERNAL_CONTEXT_DRIFT",
+      "owner": "Senior 7",
+      "observed": [
+        {
+          "file": "metro.config.js",
+          "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+          "observed": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+          "owner": "Senior 7",
+          "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+          "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+          "certified": false,
+          "finalObserved": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+        },
+        {
+          "file": "scripts/preserve-nativewind-cache.cjs",
+          "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+          "observed": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+          "owner": "Senior 7",
+          "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+          "actual": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+          "certified": false,
+          "finalObserved": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956"
+        }
+      ],
+      "correction": "Record and exclude configuration from modal approval, preserve initial snapshot; no config require or restart",
+      "applicationEdit": false,
+      "configurationApproved": false
+    },
+    {
+      "kind": "COUNTING",
+      "observed": "Initial proposal orientation 21 PASS retained",
+      "correction": "Only final 27 orientation assertions counted; candidate total270, overlapping suites disclosed"
+    },
+    {
+      "kind": "PROPOSAL_PREPARATION",
+      "observed": "Raw copy formatted before execution; recipe anchors validated before producing regression fixtures",
+      "correction": "Executed candidate hash is7508; raw copy hash is provenance only",
+      "applicationFailure": false,
+      "rawCandidateHash": "0374699b5c526f7ca8b3b78b07b864b554168957c37209901dfa9057a1ca82fd",
+      "testedCandidateHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+warning: in the working copy of 'app/(no-layout)/manage/extra/modify.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/(no-layout)/manage/order-type/modify.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/(no-layout)/manage/payment-method/modify.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/(no-layout)/manage/tax/modify.tsx', LF will be replaced by CRLF the next time Git touches it

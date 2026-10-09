@@ -1,0 +1,2362 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-011",
+  "mode": "current-source",
+  "passed": 165,
+  "failed": 0,
+  "runtimeErrors": [],
+  "checks": [
+    {
+      "name": "role: initial sheet and confirmation closed",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: selection stops row propagation and opens actions",
+      "passed": true,
+      "actual": [
+        1,
+        true
+      ],
+      "expected": [
+        1,
+        true
+      ]
+    },
+    {
+      "name": "role: actual shared close->detail row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/roles/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/roles/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "role: actual shared close->edit row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/roles/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/roles/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "role: duplicate cached action navigates once",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/roles/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/roles/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "role: actual shared close->delete row opens current confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        false,
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "role: cancel->reopen A: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: cancel->reopen A: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: cancel->reopen A: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/roles/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "role: cancel->reopen A: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "role: cancel->reopen B: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: cancel->reopen B: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: cancel->reopen B: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/roles/modify",
+            "params": {
+              "id": "B"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "role: cancel->reopen B: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      }
+    },
+    {
+      "name": "role: canonical rename refreshes sheet title without closing",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "role: canonical rename refreshes delete target label",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "role: successful query removal closes sheet and confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: removed selection cached actions cannot navigate/delete",
+      "passed": true,
+      "actual": [
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/roles/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ],
+        false
+      ],
+      "expected": [
+        [],
+        false
+      ]
+    },
+    {
+      "name": "role: removed item reappearance never revives old session",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: reappeared item can start an explicit fresh session",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "role: isLoading with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: isLoading recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: isError with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: isError recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: background fetching retains canonical action session",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: same-ID refetch retains confirmation and latest label",
+      "passed": true,
+      "actual": [
+        true,
+        "Refetched A"
+      ],
+      "expected": [
+        true,
+        "Refetched A"
+      ]
+    },
+    {
+      "name": "role: search filters display only without invalidating selected full-query item",
+      "passed": true,
+      "actual": [
+        [
+          "B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "role: filtered-out canonical item still has correct explicit delete target",
+      "passed": true,
+      "actual": [
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "role: own pending DELETE query removal retires confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: own DELETE success remains visible after query removal",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        [
+          "/contents/roles/A"
+        ]
+      ],
+      "expected": [
+        true,
+        false,
+        [
+          "/contents/roles/A"
+        ]
+      ]
+    },
+    {
+      "name": "role: own removed-item success acknowledgement stays closed without extra request",
+      "passed": true,
+      "actual": [
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "role: acknowledged deleted item reappearance does not reopen sheet/delete/success",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: success: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: success: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "role: success: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "role: success: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: network: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: network: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "role: network: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "role: network: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: success: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: success: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "role: success: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "role: success: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: network: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: network: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "role: network: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "role: network: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: normal DELETE failure keeps retryable confirmation and error",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "role: normal failure can close error and retry successfully",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        2
+      ],
+      "expected": [
+        false,
+        true,
+        2
+      ]
+    },
+    {
+      "name": "role: completed A success does not transfer to B or disturb its sheet",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        []
+      ]
+    },
+    {
+      "name": "role: unmounted sheet callbacks cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "role: pending DELETE after screen unmount cannot navigate or request again",
+      "passed": true,
+      "actual": [
+        [],
+        1
+      ],
+      "expected": [
+        [],
+        1
+      ]
+    },
+    {
+      "name": "worker: initial sheet and confirmation closed",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: selection stops row propagation and opens actions",
+      "passed": true,
+      "actual": [
+        1,
+        true
+      ],
+      "expected": [
+        1,
+        true
+      ]
+    },
+    {
+      "name": "worker: actual shared close->detail row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/workers/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/workers/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "worker: actual shared close->edit row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/workers/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/workers/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "worker: duplicate cached action navigates once",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/workers/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/workers/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "worker: actual shared close->delete row opens current confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        false,
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "worker: cancel->reopen A: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: cancel->reopen A: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: cancel->reopen A: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/workers/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "worker: cancel->reopen A: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "worker: cancel->reopen B: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: cancel->reopen B: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: cancel->reopen B: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/workers/modify",
+            "params": {
+              "id": "B"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "worker: cancel->reopen B: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      }
+    },
+    {
+      "name": "worker: canonical rename refreshes sheet title without closing",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "worker: canonical rename refreshes delete target label",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "worker: successful query removal closes sheet and confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: removed selection cached actions cannot navigate/delete",
+      "passed": true,
+      "actual": [
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/workers/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ],
+        false
+      ],
+      "expected": [
+        [],
+        false
+      ]
+    },
+    {
+      "name": "worker: removed item reappearance never revives old session",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: reappeared item can start an explicit fresh session",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "worker: isLoading with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: isLoading recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: isError with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: isError recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: background fetching retains canonical action session",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: same-ID refetch retains confirmation and latest label",
+      "passed": true,
+      "actual": [
+        true,
+        "Refetched A"
+      ],
+      "expected": [
+        true,
+        "Refetched A"
+      ]
+    },
+    {
+      "name": "worker: search filters display only without invalidating selected full-query item",
+      "passed": true,
+      "actual": [
+        [
+          "B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "worker: filtered-out canonical item still has correct explicit delete target",
+      "passed": true,
+      "actual": [
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "worker: own pending DELETE query removal retires confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: own DELETE success remains visible after query removal",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        [
+          "/contents/workers/A"
+        ]
+      ],
+      "expected": [
+        true,
+        false,
+        [
+          "/contents/workers/A"
+        ]
+      ]
+    },
+    {
+      "name": "worker: own removed-item success acknowledgement stays closed without extra request",
+      "passed": true,
+      "actual": [
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "worker: acknowledged deleted item reappearance does not reopen sheet/delete/success",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: success: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: success: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "worker: success: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "worker: success: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: network: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: network: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "worker: network: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "worker: network: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: success: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: success: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "worker: success: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "worker: success: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: network: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: network: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "worker: network: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "worker: network: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: normal DELETE failure keeps retryable confirmation and error",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "worker: normal failure can close error and retry successfully",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        2
+      ],
+      "expected": [
+        false,
+        true,
+        2
+      ]
+    },
+    {
+      "name": "worker: completed A success does not transfer to B or disturb its sheet",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        []
+      ]
+    },
+    {
+      "name": "worker: unmounted sheet callbacks cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "worker: pending DELETE after screen unmount cannot navigate or request again",
+      "passed": true,
+      "actual": [
+        [],
+        1
+      ],
+      "expected": [
+        [],
+        1
+      ]
+    },
+    {
+      "name": "member: initial sheet and confirmation closed",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: selection stops row propagation and opens actions",
+      "passed": true,
+      "actual": [
+        1,
+        true
+      ],
+      "expected": [
+        1,
+        true
+      ]
+    },
+    {
+      "name": "member: actual shared close->detail row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/member/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/member/detail",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "member: actual shared close->edit row preserves navigation",
+      "passed": true,
+      "actual": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/member/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ],
+      "expected": [
+        false,
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/member/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "member: duplicate cached action navigates once",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/member/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/member/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "member: actual shared close->delete row opens current confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        false,
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "member: cancel->reopen A: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: cancel->reopen A: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: cancel->reopen A: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/member/modify",
+            "params": {
+              "id": "A"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "member: cancel->reopen A: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "member: cancel->reopen B: stale close leaves new sheet open",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: cancel->reopen B: stale delete leaves confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: cancel->reopen B: stale detail/edit cannot navigate",
+      "passed": true,
+      "actual": [
+        {
+          "action": "push",
+          "target": {
+            "target": "/manage/member/modify",
+            "params": {
+              "id": "B"
+            }
+          }
+        }
+      ],
+      "expected": []
+    },
+    {
+      "name": "member: cancel->reopen B: fresh action remains usable",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "B"
+          }
+        }
+      }
+    },
+    {
+      "name": "member: canonical rename refreshes sheet title without closing",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "member: canonical rename refreshes delete target label",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "member: successful query removal closes sheet and confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: removed selection cached actions cannot navigate/delete",
+      "passed": true,
+      "actual": [
+        [
+          {
+            "action": "push",
+            "target": {
+              "target": "/manage/member/modify",
+              "params": {
+                "id": "A"
+              }
+            }
+          }
+        ],
+        false
+      ],
+      "expected": [
+        [],
+        false
+      ]
+    },
+    {
+      "name": "member: removed item reappearance never revives old session",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: reappeared item can start an explicit fresh session",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "member: isLoading with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: isLoading recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: isError with cached canonical data retires confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: isError recovery permits explicit fresh deletion",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: background fetching retains canonical action session",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: same-ID refetch retains confirmation and latest label",
+      "passed": true,
+      "actual": [
+        true,
+        "Refetched A"
+      ],
+      "expected": [
+        true,
+        "Refetched A"
+      ]
+    },
+    {
+      "name": "member: search filters display only without invalidating selected full-query item",
+      "passed": true,
+      "actual": [
+        [
+          "B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "member: filtered-out canonical item still has correct explicit delete target",
+      "passed": true,
+      "actual": [
+        true,
+        "Fixture A"
+      ],
+      "expected": [
+        true,
+        "Fixture A"
+      ]
+    },
+    {
+      "name": "member: own pending DELETE query removal retires confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: own DELETE success remains visible after query removal",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        [
+          "/customers/data/A"
+        ]
+      ],
+      "expected": [
+        true,
+        false,
+        [
+          "/customers/data/A"
+        ]
+      ]
+    },
+    {
+      "name": "member: own removed-item success acknowledgement stays closed without extra request",
+      "passed": true,
+      "actual": [
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "member: acknowledged deleted item reappearance does not reopen sheet/delete/success",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: success: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: success: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "member: success: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "member: success: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: network: pending A->fresh A starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: network: late A cannot affect fresh A notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "member: network: fresh A DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/A"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/A"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "member: network: fresh A success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: success: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: success: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "member: success: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "member: success: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: network: pending A->fresh B starts idle action session",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: network: late A cannot affect fresh B notices/actions",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        []
+      ]
+    },
+    {
+      "name": "member: network: fresh B DELETE targets correct record and succeeds",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "member: network: fresh B success closes normally",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: normal DELETE failure keeps retryable confirmation and error",
+      "passed": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "member: normal failure can close error and retry successfully",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        2
+      ],
+      "expected": [
+        false,
+        true,
+        2
+      ]
+    },
+    {
+      "name": "member: completed A success does not transfer to B or disturb its sheet",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        false,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        []
+      ]
+    },
+    {
+      "name": "member: unmounted sheet callbacks cannot navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "member: pending DELETE after screen unmount cannot navigate or request again",
+      "passed": true,
+      "actual": [
+        [],
+        1
+      ],
+      "expected": [
+        [],
+        1
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+  },
+  "productionModuleHashes": {
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/roles/RoleQueryError.tsx": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/workers/WorkerQueryError.tsx": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f"
+  },
+  "productionModules": 26,
+  "limits": "StrictMode production three List screens, final ManageListActions, actual ItemActionSheet rows, domain DeleteDialogs, shared modals, useAlertModal, refresh/helper/query-error modules, actual DELETE mutation hooks/factory/Common/QueryClient/Axios local adapter. GET query state, FlatList/card/buttons/native/icon/presentation/router are adapters. No browser/native/full route/root auth/Figma/backend/network certification; success acknowledgement is observed as modal closure, list has no onDeleted callback."
+}

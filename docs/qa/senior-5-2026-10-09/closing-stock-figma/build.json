@@ -1,0 +1,30 @@
+{
+  "bundle": "D:\\Codex-5\\tmp\\closing-stock-figma\\entry.bundle.js",
+  "bundleHash": "c3b54861b0243192bdc55d39c834cd924375cf36913c57525ffc093baefac870",
+  "bytes": 9391533,
+  "assets": "D:\\Codex-5\\tmp\\closing-stock-figma\\assets.json",
+  "inputHashes": {
+    "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "8d66263f18b26eb12c2afd72139c2f83c5febf741592dee084ec043f29079f5e",
+    "app/(back-office)/inventory/_layout.tsx": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+    "app/(back-office)/_layout.tsx": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/custom/BottomTab.tsx": "1fc4c55b830aef78419d6b16417efc02b3024b33d817edffecaf04fceec7bcc7",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d"
+  },
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "scope": "Own one-shot build/cache on D; actual UI/store, router transport adapter, Figma examples only in comparison fixture. No listener/server/root Metro config/native full router."
+}

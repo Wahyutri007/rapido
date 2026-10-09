@@ -1,0 +1,7 @@
+# Scope QC UI Pemasok — 9 Oktober 2026
+
+IN_PROGRESS: bukti pembuat docs/previews/inventory/suppliers/README.md telah dibaca. Empat komponen SupplierListScreen, SupplierDetailScreen, SupplierFormScreen, SupplierDeleteDialog menjadi scope review tampilan; route/layout/store/schema/data/shared primitive dibaca sebagai dependency. Source aplikasi dan bukti pembuat read-only; output QC sendiri pada direktori ini. Codex-2 masih memiliki implementasi Bahan Baku, QC lain memiliki Pendapatan, Codex-3 memiliki dialog hapus Kelola. Tidak mengambil ketiga pekerjaan tersebut.
+
+Pengguna tetap meminta fokus tampilan, backend akan diganti. Review browser memakai transport/state contoh lokal dan Metro8088 existing tanpa restart; tidak menulis database/backend atau mengoperasikan HP. Periksa viewport320/360/390/768, daftar/detail/form berlabel panjang, state kosong/pencarian/validasi/picker/modal; ikat temuan pada source/hash. Figma callable tidak tersedia; tidak mengklaim parity/native penuh. QC-STOCK-UI-001/002 source belum berubah, temuan masih OPEN, backend QC-STOCK-001 ditangguhkan dan bukan gate UI.
+
+Execution Profile & Operator Tips: Medium untuk form panjang dan sheet/modal di layar kecil. Urutan source/hash -> preview produksi terisolasi -> batas visual/interaksi -> quality terfokus -> report/keputusan per hash untuk PM. PM tetap pemilik gate akhir dan push Git. Tidak dependency/global typecheck/branch/index/commit/push.

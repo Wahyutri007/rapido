@@ -1,0 +1,64 @@
+{
+  "source": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+  "beforeHash": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+  "afterHash": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+  "checks": [
+    {
+      "name": "ESLint",
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json",
+        "--output-file",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\stock-contract\\eslint.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Biome",
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/manage/pos-settings/stock-limit.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 1 file in 38ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "name": "TypeScript focused root",
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--project",
+        ".expo/senior6-stock-tsconfig.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "git diff whitespace",
+      "executable": "git.exe",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/pos-settings/stock-limit.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/manage/pos-settings/stock-limit.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "limitations": "One screen lint/format/whitespace; TypeScript root with dependency closure, not full-project gate. No production source edits."
+}

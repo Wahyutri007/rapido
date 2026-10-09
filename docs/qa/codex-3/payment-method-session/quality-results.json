@@ -1,0 +1,117 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-013",
+  "status": "PASS",
+  "sourceHashes": {
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+    "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+  },
+  "lint": {
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "app/(no-layout)/manage/payment-method/_layout.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/detail.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDetailScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "schema/manage/payment-method.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "store/managePaymentMethodStore.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "stdout": "Checked 10 files in 63ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "diagnostics": [],
+  "focusedTypecheck": {
+    "roots": [
+      "app/(no-layout)/manage/payment-method/index.tsx",
+      "app/(no-layout)/manage/payment-method/modify.tsx",
+      "app/(no-layout)/manage/payment-method/detail.tsx",
+      "app/(no-layout)/manage/payment-method/_layout.tsx",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodListScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodDetailScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+      "store/managePaymentMethodStore.ts",
+      "schema/manage/payment-method.ts"
+    ],
+    "config": "tsconfig.json",
+    "declarationRoots": [
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+    ],
+    "programSourceFiles": 1304,
+    "scope": "Actual tsconfig and ten source roots/import/declaration closure, not full-project TypeScript"
+  }
+}

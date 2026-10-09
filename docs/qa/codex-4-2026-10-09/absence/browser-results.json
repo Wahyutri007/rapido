@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "passed": 10,
+  "checks": [
+    "Kelola opens the real Absensi list with four existing preview records",
+    "Search no-result and clearing search preserve source records",
+    "Unknown-status filter and reset restore all records",
+    "Combined complete/store/date filters select the matching record only",
+    "Detail navigation retains the selected record ID and recorded values",
+    "Back restores filters, reset restores list, and list back returns to Kelola",
+    "Unknown direct ID has a reachable list fallback",
+    "Fresh direct detail survives reload and has usable header back",
+    "List and missing-record action stay reachable at 320x844",
+    "List and missing-record action stay reachable at 844x390"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    }
+  ],
+  "checkedAt": "2026-10-09T01:45:28.283Z",
+  "scope": "Production app entry/providers/Expo Router with isolated API fixtures and HTML/CSS boot adapter. Uses existing store preview records; not SSR/backend/native certification."
+}

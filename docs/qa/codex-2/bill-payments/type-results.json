@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-10-09T02:00:50.407Z",
+  "typescript": "6.0.3",
+  "diagnostics": 0,
+  "roots": [
+    "components/feature/inventory/bill-payment/BillPaymentSummary.tsx",
+    "components/feature/inventory/bill-payment/BillPaymentListScreen.tsx",
+    "components/feature/inventory/bill-payment/BillPaymentDateInput.tsx",
+    "components/feature/inventory/bill-payment/BillPaymentFormScreen.tsx",
+    "components/feature/inventory/bill-payment/BillPaymentDeleteDialog.tsx",
+    "components/feature/inventory/bill-payment/BillPaymentDetailScreen.tsx",
+    "constants/data/inventory-bill-payments.ts",
+    "types/ui/inventory/bill-payment.ts",
+    "schema/inventory/bill-payment.ts",
+    "lib/inventory/bill-payment.ts",
+    "store/inventoryBillPaymentStore.ts",
+    "store/inventoryStore.ts",
+    "components/feature/inventory/PurchaseListScreen.tsx",
+    "components/feature/inventory/PurchaseDetailScreen.tsx",
+    "app/(no-layout)/inventory/bill-payments/_layout.tsx",
+    "app/(no-layout)/inventory/bill-payments/index.tsx",
+    "app/(no-layout)/inventory/bill-payments/modify.tsx",
+    "app/(no-layout)/inventory/bill-payments/detail.tsx",
+    "app/(no-layout)/inventory/_layout.tsx",
+    "app/(back-office)/inventory/index.tsx",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+  ],
+  "scope": "20 changed production files, ambient declarations and imported dependency closure; not a project-wide gate"
+}

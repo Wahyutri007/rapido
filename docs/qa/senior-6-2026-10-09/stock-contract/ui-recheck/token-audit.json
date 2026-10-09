@@ -1,0 +1,108 @@
+{
+  "source": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+  "sourceHash": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+  "baselineHash": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+  "before": {
+    "count": 15,
+    "findings": [
+      {
+        "category": "fractional-spacing",
+        "line": 177,
+        "component": "Text",
+        "token": "mt-0.5"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 192,
+        "component": "View",
+        "token": "mt-3.5"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 192,
+        "component": "View",
+        "token": "p-3.5"
+      },
+      {
+        "category": "card-primitive-override",
+        "line": 229,
+        "component": "Card",
+        "token": "p-2"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 239,
+        "component": "View",
+        "token": "gap-1.5"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 267,
+        "component": "Text",
+        "token": "mt-0.5"
+      },
+      {
+        "category": "nonsemantic-color",
+        "line": 288,
+        "component": "ActionsheetDragIndicator",
+        "token": "bg-zinc-300"
+      },
+      {
+        "category": "nonsemantic-color",
+        "line": 307,
+        "component": "View",
+        "token": "bg-zinc-100"
+      },
+      {
+        "category": "search-primitive-override",
+        "line": 313,
+        "component": "SearchBar",
+        "token": "bg-white"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 357,
+        "component": "Pressable",
+        "token": "mb-2.5"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 357,
+        "component": "Pressable",
+        "token": "p-3.5"
+      },
+      {
+        "category": "nonsemantic-color",
+        "line": 357,
+        "component": "Pressable",
+        "token": "border-zinc-200"
+      },
+      {
+        "category": "nonsemantic-color",
+        "line": 365,
+        "component": "View",
+        "token": "border-zinc-300"
+      },
+      {
+        "category": "nonsemantic-color",
+        "line": 377,
+        "component": "View",
+        "token": "bg-zinc-100"
+      },
+      {
+        "category": "fractional-spacing",
+        "line": 400,
+        "component": "Text",
+        "token": "mt-0.5"
+      }
+    ]
+  },
+  "after": {
+    "count": 0,
+    "findings": []
+  },
+  "classNameOnlyDelta": true,
+  "normalizedBeforeHash": "959afdd27e0fcadcd4dce76d591d7f975d7871853093555dce4f644b6b17ee02",
+  "normalizedAfterHash": "959afdd27e0fcadcd4dce76d591d7f975d7871853093555dce4f644b6b17ee02",
+  "limitations": "Static categories match QC audit; literal icon/Switch color props and primitive internals are outside this audit. ClassName-only comparison proves logic/copy/structure preserved from pre-token SD6-002; visual geometry is measured separately."
+}

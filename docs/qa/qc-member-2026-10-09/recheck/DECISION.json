@@ -1,0 +1,91 @@
+{
+  "signal": "QC-MEMBER-20261009-PASS-DELTA",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "closedFindings": [
+    "QC-MEMBER-001",
+    "QC-MEMBER-002"
+  ],
+  "approvedDelta": {
+    "file": "components/feature/manage/member/MemberModifyScreen.tsx",
+    "sha256": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "kind": "Editor identity/reset and late-response handling"
+  },
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "reviewedMemberSource": {
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "app/(no-layout)/manage/member/_layout.tsx": "d60b9c96e8d8eb3a762c496dfd66a7f016153ecd25c477a8fe7239a8f45c031d",
+    "app/(no-layout)/manage/member/detail.tsx": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+    "app/(no-layout)/manage/member/index.tsx": "f79aedbbed0258a09b8073ed652b8563c31c19c1a4cbd169fa901256df0b1cfa",
+    "app/(no-layout)/manage/member/modify.tsx": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+    "components/feature/manage/member/MemberIcon.tsx": "f10289dac596e3e2e4da170f05a2f9d39769e203995da521c542a996471b96d2",
+    "components/feature/manage/member/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+    "components/feature/manage/member/MemberModifyScreen.tsx": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+    "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+    "types/api/customer.ts": "26552f68293d3421f87864ea84fc91a4a3f33952ca7e0dd5c6f4753776d3d1d4"
+  },
+  "sourceStableThroughoutRecheck": true,
+  "suites": [
+    {
+      "file": "original-results.json",
+      "passed": 27,
+      "failed": 0
+    },
+    {
+      "file": "developer-rerun-results.json",
+      "passed": 40,
+      "failed": 0
+    },
+    {
+      "file": "independent-results.json",
+      "passed": 23,
+      "failed": 0
+    },
+    {
+      "file": "lifecycle-results.json",
+      "passed": 8,
+      "failed": 0
+    }
+  ],
+  "assertionExecutions": 98,
+  "assertionCountNote": "Includes overlapping coverage across suites; not 98 distinct features.",
+  "quality": {
+    "scopedEslint": "exit 0; 14 files; 0 errors/warnings",
+    "scopedBiome": "exit 0; 14 files; no fixes",
+    "scopedDiffCheck": "exit 0"
+  },
+  "developerRouter": {
+    "passed": 16,
+    "sourceFingerprintsMatched": 7,
+    "rerunByQC": false,
+    "expected422Logs": 1
+  },
+  "artefacts": {
+    "browser-lifecycle.cjs": "64b93162b12bc76237390a7335c7453ce7ef70ed378795a3b5d46e253fd3362d",
+    "build-independent.cjs": "2f186a202e7875b82c9d59dadd4faedfdb6c99be6c63c302d01abd449d6a7c54",
+    "check-developer.cjs": "88eb08d17af840b74c8953ddf49617e6f188b2b82e1b5defefff4a877b215998",
+    "check-original.cjs": "c10bc0c4b4eea153516b0ea455de12f8afcfc353a9ddc88d1e2eb65ae4993596",
+    "developer-rerun-results.json": "12805b5cd6fd1f032cd5add161db766b235afbddc925a7f41d44213f3cd90f75",
+    "finalize.cjs": "928e0e55b95e1f820f8598db1c4c64b306a7a2a4ae7dfc56ee725d659bab3613",
+    "handoff-verification.json": "7b7c53552be1e9a217dc183c7f9f5faa64ef8f543e37d2557e1fdaf9a420291e",
+    "independent-results.json": "185dcdf029cde8d37ff93a42600fdd7199a376fb7254f0fea2c85b5011267a3b",
+    "independent.cjs": "4e3a09dc508337d1a3141c4c7f425d1e80bdc11d15a5c3ccb66045f701b1cff5",
+    "lifecycle-results.json": "d70cf23cd1b6d21c25021c0a53c0bc720d3408a513391e5f0feb8d8c8c247a80",
+    "original-results.json": "57a62547ee20cd3ccafbdd96aaaeaa4b9a452ed6250376d7a8e2038510b43ec1",
+    "REPORT.md": "10e6e94fb3db9d9bbb16c7b73b7d4a5511e994072c5eff8aae3792ba49bba80e"
+  },
+  "limitations": [
+    "API/query/native UI adapters in QC suites",
+    "Router browser evidence reviewed, not rerun by QC",
+    "No native, full auth/root/SSR or real Laravel CRUD rerun",
+    "No Figma parity verification",
+    "Full TypeScript and integration gate remain with PM",
+    "Other modules and shared primitive deltas require separate approval"
+  ],
+  "publication": "No QC commit/push; PM owns final integration and publication."
+}

@@ -1,0 +1,523 @@
+{
+  "status": "INTERNAL_QA_REVIEW_PASS",
+  "externalQcApproval": false,
+  "pass": 55,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "New store starts empty without seeded provider",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Valid HTTPS endpoint accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Query address@ without path is valid, not authority userinfo",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Endpoint path/query case is preserved",
+      "passed": true,
+      "actual": "https://example.test/CasePath?Token=AbC",
+      "expected": "https://example.test/CasePath?Token=AbC"
+    },
+    {
+      "name": "Empty name",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Name above80",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Empty URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Malformed URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "HTTP URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Protocol relative URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Wrong scheme",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Incomplete HTTPS URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Username credentials URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Empty userinfo URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Username/password URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Fragment URL",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "URL internal whitespace",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "URL backslash",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Notes above1000",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "URL above2048",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Name80 and notes1000 accepted at limit",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Notes omitted default to empty",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Trim preserves URL query and user notes",
+      "passed": true,
+      "actual": {
+        "name": "Draft QA",
+        "endpoint": "https://example.test/hook?x=1",
+        "notes": "note"
+      },
+      "expected": {
+        "name": "Draft QA",
+        "endpoint": "https://example.test/hook?x=1",
+        "notes": "note"
+      }
+    },
+    {
+      "name": "Creation IDs distinct and immutable draft status cannot be injected",
+      "passed": true,
+      "actual": [
+        true,
+        [
+          "draft",
+          "draft"
+        ],
+        false
+      ],
+      "expected": [
+        true,
+        [
+          "draft",
+          "draft"
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Invalid URL add/update leave collection unchanged",
+      "passed": true,
+      "actual": [
+        null,
+        false,
+        true
+      ],
+      "expected": [
+        null,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Missing update rejects without creating another item",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Update exact A retains ID/draft and leaves B unchanged",
+      "passed": true,
+      "actual": [
+        [
+          "integration-1",
+          "Changed A",
+          "draft"
+        ],
+        [
+          "integration-2",
+          "Different B",
+          "draft"
+        ]
+      ],
+      "expected": [
+        [
+          "integration-1",
+          "Changed A",
+          "draft"
+        ],
+        [
+          "integration-2",
+          "Different B",
+          "draft"
+        ]
+      ]
+    },
+    {
+      "name": "Remove A succeeds once and leaves B",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        [
+          "integration-2"
+        ]
+      ],
+      "expected": [
+        true,
+        false,
+        [
+          "integration-2"
+        ]
+      ]
+    },
+    {
+      "name": "Removed ID never reused",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "New form empty with CTA Simpan Draf",
+      "passed": true,
+      "actual": [
+        "",
+        "",
+        "Simpan Draf"
+      ],
+      "expected": [
+        "",
+        "",
+        "Simpan Draf"
+      ]
+    },
+    {
+      "name": "Actual RHF invalid endpoint cannot create draft",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Rapid two actual RHF submits create exactly one draft",
+      "passed": true,
+      "actual": [
+        [
+          "Integrasi QA",
+          "https://example.test/webhook?order=1",
+          "Catatan QA",
+          "draft"
+        ]
+      ],
+      "expected": [
+        [
+          "Integrasi QA",
+          "https://example.test/webhook?order=1",
+          "Catatan QA",
+          "draft"
+        ]
+      ]
+    },
+    {
+      "name": "Save feedback appears",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Save acknowledgement navigates to draft list once",
+      "passed": true,
+      "actual": [
+        [
+          "replace",
+          "/manage/integrations"
+        ]
+      ],
+      "expected": [
+        [
+          "replace",
+          "/manage/integrations"
+        ]
+      ]
+    },
+    {
+      "name": "Missing edit ID renders no active form",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Old submit after route unmount cannot create draft",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Array route first ID resolves exact A",
+      "passed": true,
+      "actual": "Integrasi QA",
+      "expected": "Integrasi QA"
+    },
+    {
+      "name": "Unrelated store update preserves RHF draft",
+      "passed": true,
+      "actual": "Unsaved A",
+      "expected": "Unsaved A"
+    },
+    {
+      "name": "Edit A to B resets to exactB",
+      "passed": true,
+      "actual": "Updated B",
+      "expected": "Updated B"
+    },
+    {
+      "name": "Edit to create resets all three draft fields",
+      "passed": true,
+      "actual": [
+        "",
+        "",
+        ""
+      ],
+      "expected": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Empty edit ID is invalid rather than create fallback",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Detail displays endpoint user provided",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Detail renders honest Draf label",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Detail reacts to current store endpoint",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Cached confirmation after cancel/reopen cannot delete current record",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Current delete removes exact A and preserves acknowledgement/B",
+      "passed": true,
+      "actual": [
+        false,
+        true,
+        true
+      ],
+      "expected": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Delete success acknowledgement navigates once after record gone",
+      "passed": true,
+      "actual": [
+        [
+          "replace",
+          "/manage/integrations"
+        ]
+      ],
+      "expected": [
+        [
+          "replace",
+          "/manage/integrations"
+        ]
+      ]
+    },
+    {
+      "name": "Missing detail never falls back to first draft",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "List starts empty",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Search matches endpoint with trim/casefold",
+      "passed": true,
+      "actual": [
+        "integration-1"
+      ],
+      "expected": [
+        "integration-1"
+      ]
+    },
+    {
+      "name": "Search not found results empty",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Cached list action after canonical record removed cannot navigate",
+      "passed": true,
+      "actual": [
+        0,
+        []
+      ],
+      "expected": [
+        0,
+        []
+      ]
+    },
+    {
+      "name": "Runtime/React/act errors absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Runtime warnings absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Loaded source remains stable throughout suite",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "sourceHashes": {
+    "schema/manage/integration.ts": "4161e3bd540d8cdfcf39cbd973db937a77e1391704ca4bffd2fcbdf8e518c44b",
+    "store/manageIntegrationStore.ts": "5468a6ea302afb2b79cf4d8a56b92d7ed9240c96854a148809bf6d195ced6ca2",
+    "app/(no-layout)/manage/integrations/modify.tsx": "dab42c63b5a0a9816a85cd5f506eff8c3f330a66b7f6d5a3f9725f4389768fdc",
+    "components/feature/manage/integrations/IntegrationModifyScreen.tsx": "07d3beb488d65e72fb2c263709338a73ea2dd7ecdd4f991ca8cc5623da3e7a3f",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/integrations/IntegrationDetailScreen.tsx": "6da39aae6f718c9017a3f1ddb6e8a031b217ac1c0b05c7f271e5a137bd39dce0",
+    "components/feature/manage/integrations/IntegrationDeleteDialog.tsx": "36dc779d7c67e01bb748fd041793928c9a25d68bf22227a79603894ffd94d15d",
+    "app/(no-layout)/manage/integrations/index.tsx": "b66ee1b807851e7d47ea454685571fbfd18941b8e684e60e772fae492dd6ee37",
+    "components/feature/manage/integrations/IntegrationListScreen.tsx": "6f9b07b9499a3c9cfdd1f99b3dac6cfb48ed7dcc758ed7c6abfd6eb7f8acb4d9",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+  },
+  "loadedProductionModules": [
+    "schema/manage/integration.ts",
+    "store/manageIntegrationStore.ts",
+    "hooks/useAlertModal.ts",
+    "components/common/DeleteConfirmModal.tsx",
+    "components/common/SuccessModal.tsx",
+    "components/common/AlertModal.tsx",
+    "components/common/Form.tsx",
+    "components/feature/manage/integrations/IntegrationModifyScreen.tsx",
+    "components/feature/manage/settings/ManageFormNotFound.tsx",
+    "app/(no-layout)/manage/integrations/modify.tsx",
+    "components/feature/manage/integrations/IntegrationDeleteDialog.tsx",
+    "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+    "components/feature/manage/ManageListActions.tsx",
+    "components/feature/manage/integrations/IntegrationListScreen.tsx",
+    "app/(no-layout)/manage/integrations/index.tsx"
+  ],
+  "fixture": "Production schema/store/routes/screens/Form/RHF/Zod/shared modals/hook/ManageListActions with RN/primitive/router/dimension adapters; isolated process memory draft fixtures only",
+  "limits": [
+    "No browser/native/HP/geometry/Figma/fullrouter/fullapp/realnetwork/provider/activation/persist/backend certification",
+    "Source Success7508/DeleteDABC geometry inherits external QC gates; renderer state checks do not close them"
+  ]
+}

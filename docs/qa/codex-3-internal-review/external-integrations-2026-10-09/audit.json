@@ -1,0 +1,716 @@
+{
+  "status": "READ_ONLY_AUDIT_NO_NETWORK_OR_SCREEN_HEADER",
+  "externalQcApproval": false,
+  "sourceCount": 11,
+  "sources": [
+    {
+      "path": "app/(no-layout)/manage/integrations/_layout.tsx",
+      "sha256": "62809b63780709483a5ec737badb9bd3847fe63173aef44b6adec5808dcbafa1",
+      "imports": [
+        "expo-router",
+        "@/components/common/Header",
+        "@/components/custom/JSStack"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "JSStack",
+          "props": {
+            "screenOptions": "{{ ...ScaleBackTransition }}"
+          }
+        },
+        {
+          "tag": "JSStack.Screen",
+          "props": {
+            "name": "\"index\"",
+            "options": "{{ header: () => <Header back title=\"Integrasi Eksternal\" /> }}"
+          }
+        },
+        {
+          "tag": "Header",
+          "props": {
+            "back": true,
+            "title": "\"Integrasi Eksternal\""
+          }
+        },
+        {
+          "tag": "JSStack.Screen",
+          "props": {
+            "name": "\"detail\"",
+            "options": "{{\n\t\t\t\t\theader: () => <Header back title=\"Detail Draf Integrasi\" />,\n\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "Header",
+          "props": {
+            "back": true,
+            "title": "\"Detail Draf Integrasi\""
+          }
+        },
+        {
+          "tag": "JSStack.Screen",
+          "props": {
+            "name": "\"modify\"",
+            "options": "{{\n\t\t\t\t\theader: () => (\n\t\t\t\t\t\t<Header\n\t\t\t\t\t\t\tback\n\t\t\t\t\t\t\ttitle={`${id === undefined ? \"Tambah\" : \"Edit\"} Draf Integrasi`}\n\t\t\t\t\t\t/>\n\t\t\t\t\t),\n\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "Header",
+          "props": {
+            "back": true,
+            "title": "{`${id === undefined ? \"Tambah\" : \"Edit\"} Draf Integrasi`}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "app/(no-layout)/manage/integrations/index.tsx",
+      "sha256": "b66ee1b807851e7d47ea454685571fbfd18941b8e684e60e772fae492dd6ee37",
+      "imports": [
+        "@/components/feature/manage/integrations/IntegrationListScreen"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "IntegrationListScreen",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "path": "app/(no-layout)/manage/integrations/modify.tsx",
+      "sha256": "dab42c63b5a0a9816a85cd5f506eff8c3f330a66b7f6d5a3f9725f4389768fdc",
+      "imports": [
+        "expo-router",
+        "@/components/feature/manage/integrations/IntegrationModifyScreen",
+        "@/components/feature/manage/settings/ManageFormNotFound",
+        "@/lib/utils",
+        "@/store/manageIntegrationStore"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "ManageFormNotFound",
+          "props": {
+            "entity": "\"Integrasi\"",
+            "onBack": "{() => router.replace(route(\"/manage/integrations\"))}"
+          }
+        },
+        {
+          "tag": "IntegrationModifyScreen",
+          "props": {
+            "key": "{id === undefined ? \"create\" : `edit:${id}`}",
+            "item": "{item}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "app/(no-layout)/manage/integrations/detail.tsx",
+      "sha256": "c7ed4330d905adfa3f8b2a9510a62b0463a5d5bc91b94f203c1886eac2cdec6b",
+      "imports": [
+        "expo-router",
+        "@/components/feature/manage/integrations/IntegrationDetailScreen"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "IntegrationDetailScreen",
+          "props": {
+            "id": "{id}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "components/feature/manage/integrations/IntegrationListScreen.tsx",
+      "sha256": "6f9b07b9499a3c9cfdd1f99b3dac6cfb48ed7dcc758ed7c6abfd6eb7f8acb4d9",
+      "imports": [
+        "expo-router",
+        "react",
+        "react-native",
+        "@/components/common/BottomActionButton",
+        "@/components/common/DataPlaceholder",
+        "@/components/common/SearchBar",
+        "@/components/common/Text",
+        "@/components/common/Wrapper",
+        "@/components/custom/CatalogItemCard",
+        "@/components/feature/manage/ManageListActions",
+        "@/components/icons",
+        "@/lib/utils",
+        "@/store/manageIntegrationStore",
+        "@/types/ui/manage/integration",
+        "./IntegrationDeleteDialog"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "Wrapper",
+          "props": {
+            "isNotScrollable": true,
+            "hasActionButton": true,
+            "py": "{16}"
+          }
+        },
+        {
+          "tag": "View",
+          "props": {
+            "className": "\"flex-1 gap-4 px-4\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "SearchBar",
+          "props": {
+            "search": "{search}",
+            "setSearch": "{setSearch}",
+            "variant": "\"light\"",
+            "placeholder": "\"Cari nama, URL, atau catatan...\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"normal\"",
+            "w": "\"medium\""
+          }
+        },
+        {
+          "tag": "FlatList",
+          "props": {
+            "data": "{results}",
+            "keyExtractor": "{(item) => item.id}",
+            "contentContainerStyle": "{{ gap: 12, paddingBottom: 16 }}",
+            "showsVerticalScrollIndicator": "{false}",
+            "renderItem": "{({ item }) => (\n\t\t\t\t\t\t\t<CatalogItemCard\n\t\t\t\t\t\t\t\tdensity=\"compact\"\n\t\t\t\t\t\t\t\tleading={\n\t\t\t\t\t\t\t\t\t<EFeather name=\"link\" size={20} className=\"text-primary\" />\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\ttitle={\n\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\" numberOfLines={1}>\n\t\t\t\t\t\t\t\t\t\t{item.name}\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tsubtitle={\n\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\" numberOfLines={1}>\n\t\t\t\t\t\t\t\t\t\t{item.endpoint}\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tbadge={\n\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\tDraf\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\tonPress={() => {\n\t\t\t\t\t\t\t\t\tif (\n\t\t\t\t\t\t\t\t\t\tuseManageIntegrationStore\n\t\t\t\t\t\t\t\t\t\t\t.getState()\n\t\t\t\t\t\t\t\t\t\t\t.items.some((entry) => entry.id === item.id)\n\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t\t\t\trouter.push(\n\t\t\t\t\t\t\t\t\t\t\troute(\"/manage/integrations/detail\", { id: item.id }),\n\t\t\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\tright={\n\t\t\t\t\t\t\t\t\t<Pressable\n\t\t\t\t\t\t\t\t\t\taccessibilityRole=\"button\"\n\t\t\t\t\t\t\t\t\t\taccessibilityLabel={`Tindakan ${item.name}`}\n\t\t\t\t\t\t\t\t\t\thitSlop={8}\n\t\t\t\t\t\t\t\t\t\tonPress={(event) => {\n\t\t\t\t\t\t\t\t\t\t\tevent.stopPropagation();\n\t\t\t\t\t\t\t\t\t\t\tsetSelection((previous) => ({\n\t\t\t\t\t\t\t\t\t\t\t\titem,\n\t\t\t\t\t\t\t\t\t\t\t\tversion: (previous?.version ?? 0) + 1,\n\t\t\t\t\t\t\t\t\t\t\t}));\n\t\t\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<EFeather\n\t\t\t\t\t\t\t\t\t\t\tname=\"more-vertical\"\n\t\t\t\t\t\t\t\t\t\t\tsize={20}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"text-muted\"\n\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t</Pressable>\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t)}",
+            "ListEmptyComponent": "{\n\t\t\t\t\t\t\t<SearchNotFound\n\t\t\t\t\t\t\t\ttext={\n\t\t\t\t\t\t\t\t\tneedle\n\t\t\t\t\t\t\t\t\t\t? \"Draf integrasi tidak ditemukan\"\n\t\t\t\t\t\t\t\t\t\t: \"Belum ada draf integrasi. Tambahkan draf pertama Anda.\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t}"
+          }
+        },
+        {
+          "tag": "CatalogItemCard",
+          "props": {
+            "density": "\"compact\"",
+            "leading": "{\n\t\t\t\t\t\t\t\t\t<EFeather name=\"link\" size={20} className=\"text-primary\" />\n\t\t\t\t\t\t\t\t}",
+            "title": "{\n\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\" numberOfLines={1}>\n\t\t\t\t\t\t\t\t\t\t{item.name}\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}",
+            "subtitle": "{\n\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\" numberOfLines={1}>\n\t\t\t\t\t\t\t\t\t\t{item.endpoint}\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}",
+            "badge": "{\n\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\tDraf\n\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t}",
+            "onPress": "{() => {\n\t\t\t\t\t\t\t\t\tif (\n\t\t\t\t\t\t\t\t\t\tuseManageIntegrationStore\n\t\t\t\t\t\t\t\t\t\t\t.getState()\n\t\t\t\t\t\t\t\t\t\t\t.items.some((entry) => entry.id === item.id)\n\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t\t\t\trouter.push(\n\t\t\t\t\t\t\t\t\t\t\troute(\"/manage/integrations/detail\", { id: item.id }),\n\t\t\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t\t}}",
+            "right": "{\n\t\t\t\t\t\t\t\t\t<Pressable\n\t\t\t\t\t\t\t\t\t\taccessibilityRole=\"button\"\n\t\t\t\t\t\t\t\t\t\taccessibilityLabel={`Tindakan ${item.name}`}\n\t\t\t\t\t\t\t\t\t\thitSlop={8}\n\t\t\t\t\t\t\t\t\t\tonPress={(event) => {\n\t\t\t\t\t\t\t\t\t\t\tevent.stopPropagation();\n\t\t\t\t\t\t\t\t\t\t\tsetSelection((previous) => ({\n\t\t\t\t\t\t\t\t\t\t\t\titem,\n\t\t\t\t\t\t\t\t\t\t\t\tversion: (previous?.version ?? 0) + 1,\n\t\t\t\t\t\t\t\t\t\t\t}));\n\t\t\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<EFeather\n\t\t\t\t\t\t\t\t\t\t\tname=\"more-vertical\"\n\t\t\t\t\t\t\t\t\t\t\tsize={20}\n\t\t\t\t\t\t\t\t\t\t\tclassName=\"text-muted\"\n\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t</Pressable>\n\t\t\t\t\t\t\t\t}"
+          }
+        },
+        {
+          "tag": "EFeather",
+          "props": {
+            "name": "\"link\"",
+            "size": "{20}",
+            "className": "\"text-primary\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"normal\"",
+            "w": "\"medium\"",
+            "numberOfLines": "{1}"
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\"",
+            "numberOfLines": "{1}"
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "Pressable",
+          "props": {
+            "accessibilityRole": "\"button\"",
+            "accessibilityLabel": "{`Tindakan ${item.name}`}",
+            "hitSlop": "{8}",
+            "onPress": "{(event) => {\n\t\t\t\t\t\t\t\t\t\t\tevent.stopPropagation();\n\t\t\t\t\t\t\t\t\t\t\tsetSelection((previous) => ({\n\t\t\t\t\t\t\t\t\t\t\t\titem,\n\t\t\t\t\t\t\t\t\t\t\t\tversion: (previous?.version ?? 0) + 1,\n\t\t\t\t\t\t\t\t\t\t\t}));\n\t\t\t\t\t\t\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "EFeather",
+          "props": {
+            "name": "\"more-vertical\"",
+            "size": "{20}",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "SearchNotFound",
+          "props": {
+            "text": "{\n\t\t\t\t\t\t\t\t\tneedle\n\t\t\t\t\t\t\t\t\t\t? \"Draf integrasi tidak ditemukan\"\n\t\t\t\t\t\t\t\t\t\t: \"Belum ada draf integrasi. Tambahkan draf pertama Anda.\"\n\t\t\t\t\t\t\t\t}"
+          }
+        },
+        {
+          "tag": "BottomActionButton",
+          "props": {
+            "onPress": "{() => router.push(route(\"/manage/integrations/modify\"))}"
+          }
+        },
+        {
+          "tag": "ManageListActions",
+          "props": {
+            "key": "{selection.version}",
+            "title": "{selected.name}",
+            "entityName": "\"Draf Integrasi\"",
+            "available": "{!!current}",
+            "onViewDetail": "{() =>\n\t\t\t\t\t\trouter.push(\n\t\t\t\t\t\t\troute(\"/manage/integrations/detail\", { id: selected.id }),\n\t\t\t\t\t\t)\n\t\t\t\t\t}",
+            "onEdit": "{() =>\n\t\t\t\t\t\trouter.push(\n\t\t\t\t\t\t\troute(\"/manage/integrations/modify\", { id: selected.id }),\n\t\t\t\t\t\t)\n\t\t\t\t\t}",
+            "renderDelete": "{(openState) => (\n\t\t\t\t\t\t<IntegrationDeleteDialog item={selected} openState={openState} />\n\t\t\t\t\t)}"
+          }
+        },
+        {
+          "tag": "IntegrationDeleteDialog",
+          "props": {
+            "item": "{selected}",
+            "openState": "{openState}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "components/feature/manage/integrations/IntegrationModifyScreen.tsx",
+      "sha256": "07d3beb488d65e72fb2c263709338a73ea2dd7ecdd4f991ca8cc5623da3e7a3f",
+      "imports": [
+        "@hookform/resolvers/zod",
+        "expo-router",
+        "react",
+        "react-hook-form",
+        "react-native",
+        "@/components/common/AlertModal",
+        "@/components/common/BottomActionButton",
+        "@/components/common/Card",
+        "@/components/common/Form",
+        "@/components/common/SuccessModal",
+        "@/components/common/Text",
+        "@/components/common/Wrapper",
+        "@/lib/utils",
+        "@/schema/manage/integration",
+        "@/store/manageIntegrationStore",
+        "@/types/ui/manage/integration"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "Wrapper",
+          "props": {
+            "hasActionButton": true,
+            "contentContainerStyle": "{{ padding: 16, gap: 16 }}"
+          }
+        },
+        {
+          "tag": "Card",
+          "props": {
+            "className": "\"gap-4\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "w": "\"semibold\"",
+            "size": "\"normal\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "Form",
+          "props": {}
+        },
+        {
+          "tag": "View",
+          "props": {
+            "className": "\"gap-4\""
+          }
+        },
+        {
+          "tag": "FormField",
+          "props": {
+            "control": "{form.control}",
+            "name": "\"name\"",
+            "render": "{() => (\n\t\t\t\t\t\t\t\t\t<FormItem>\n\t\t\t\t\t\t\t\t\t\t<FormLabel required>Nama Integrasi</FormLabel>\n\t\t\t\t\t\t\t\t\t\t<FormControl>\n\t\t\t\t\t\t\t\t\t\t\t<FormInput\n\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Contoh: Sistem pemesanan\"\n\t\t\t\t\t\t\t\t\t\t\t\tfieldProps={{ maxLength: 80 }}\n\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t</FormControl>\n\t\t\t\t\t\t\t\t\t\t<FormMessage />\n\t\t\t\t\t\t\t\t\t</FormItem>\n\t\t\t\t\t\t\t\t)}"
+          }
+        },
+        {
+          "tag": "FormItem",
+          "props": {}
+        },
+        {
+          "tag": "FormLabel",
+          "props": {
+            "required": true
+          }
+        },
+        {
+          "tag": "FormControl",
+          "props": {}
+        },
+        {
+          "tag": "FormInput",
+          "props": {
+            "placeholder": "\"Contoh: Sistem pemesanan\"",
+            "fieldProps": "{{ maxLength: 80 }}"
+          }
+        },
+        {
+          "tag": "FormMessage",
+          "props": {}
+        },
+        {
+          "tag": "FormField",
+          "props": {
+            "control": "{form.control}",
+            "name": "\"endpoint\"",
+            "render": "{() => (\n\t\t\t\t\t\t\t\t\t<FormItem>\n\t\t\t\t\t\t\t\t\t\t<FormLabel required>URL Tujuan Webhook</FormLabel>\n\t\t\t\t\t\t\t\t\t\t<FormControl>\n\t\t\t\t\t\t\t\t\t\t\t<FormInput\n\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"https://contoh.com/webhook\"\n\t\t\t\t\t\t\t\t\t\t\t\tfieldProps={{\n\t\t\t\t\t\t\t\t\t\t\t\t\tkeyboardType: \"url\",\n\t\t\t\t\t\t\t\t\t\t\t\t\tautoCapitalize: \"none\",\n\t\t\t\t\t\t\t\t\t\t\t\t\tautoCorrect: false,\n\t\t\t\t\t\t\t\t\t\t\t\t\tmaxLength: 2048,\n\t\t\t\t\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t</FormControl>\n\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\tGunakan HTTPS tanpa nama pengguna, sandi, atau fragmen.\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t<FormMessage />\n\t\t\t\t\t\t\t\t\t</FormItem>\n\t\t\t\t\t\t\t\t)}"
+          }
+        },
+        {
+          "tag": "FormItem",
+          "props": {}
+        },
+        {
+          "tag": "FormLabel",
+          "props": {
+            "required": true
+          }
+        },
+        {
+          "tag": "FormControl",
+          "props": {}
+        },
+        {
+          "tag": "FormInput",
+          "props": {
+            "placeholder": "\"https://contoh.com/webhook\"",
+            "fieldProps": "{{\n\t\t\t\t\t\t\t\t\t\t\t\t\tkeyboardType: \"url\",\n\t\t\t\t\t\t\t\t\t\t\t\t\tautoCapitalize: \"none\",\n\t\t\t\t\t\t\t\t\t\t\t\t\tautoCorrect: false,\n\t\t\t\t\t\t\t\t\t\t\t\t\tmaxLength: 2048,\n\t\t\t\t\t\t\t\t\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "FormMessage",
+          "props": {}
+        },
+        {
+          "tag": "FormField",
+          "props": {
+            "control": "{form.control}",
+            "name": "\"notes\"",
+            "render": "{() => (\n\t\t\t\t\t\t\t\t\t<FormItem>\n\t\t\t\t\t\t\t\t\t\t<FormLabel>Catatan</FormLabel>\n\t\t\t\t\t\t\t\t\t\t<FormControl>\n\t\t\t\t\t\t\t\t\t\t\t<FormInput\n\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Tambahkan catatan (opsional)\"\n\t\t\t\t\t\t\t\t\t\t\t\tmultiline\n\t\t\t\t\t\t\t\t\t\t\t\tfieldProps={{ maxLength: 1000 }}\n\t\t\t\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t\t\t\t</FormControl>\n\t\t\t\t\t\t\t\t\t\t<FormMessage />\n\t\t\t\t\t\t\t\t\t</FormItem>\n\t\t\t\t\t\t\t\t)}"
+          }
+        },
+        {
+          "tag": "FormItem",
+          "props": {}
+        },
+        {
+          "tag": "FormLabel",
+          "props": {}
+        },
+        {
+          "tag": "FormControl",
+          "props": {}
+        },
+        {
+          "tag": "FormInput",
+          "props": {
+            "placeholder": "\"Tambahkan catatan (opsional)\"",
+            "multiline": true,
+            "fieldProps": "{{ maxLength: 1000 }}"
+          }
+        },
+        {
+          "tag": "FormMessage",
+          "props": {}
+        },
+        {
+          "tag": "BottomActionButton",
+          "props": {
+            "onPress": "{() => form.handleSubmit(save)()}",
+            "isDisabled": "{form.formState.isSubmitting}"
+          }
+        },
+        {
+          "tag": "SuccessModal",
+          "props": {
+            "openState": "{success.openState}",
+            "title": "{\n\t\t\t\t\titem ? \"Draf integrasi diperbarui\" : \"Draf integrasi ditambahkan\"\n\t\t\t\t}",
+            "description": "\"Draf tersimpan selama aplikasi terbuka. Integrasi belum aktif dan tidak mengirim data.\"",
+            "onClose": "{() => {\n\t\t\t\t\tif (!mounted.current || !submitted.current || acknowledged.current)\n\t\t\t\t\t\treturn;\n\t\t\t\t\tacknowledged.current = true;\n\t\t\t\t\tsuccess.close();\n\t\t\t\t\trouter.replace(route(\"/manage/integrations\"));\n\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "AlertModal",
+          "props": {
+            "openState": "{error.openState}",
+            "title": "\"Draf belum tersimpan\"",
+            "message": "\"Draf integrasi sudah tidak tersedia. Kembali ke daftar dan periksa data Anda.\"",
+            "hideCancelButton": true,
+            "confirmText": "\"Tutup\""
+          }
+        }
+      ]
+    },
+    {
+      "path": "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+      "sha256": "6da39aae6f718c9017a3f1ddb6e8a031b217ac1c0b05c7f271e5a137bd39dce0",
+      "imports": [
+        "expo-router",
+        "react",
+        "@/components/common/Card",
+        "@/components/common/Text",
+        "@/components/common/Wrapper",
+        "@/components/custom/DetailBottomActions",
+        "@/components/custom/DetailRow",
+        "@/components/feature/manage/settings/ManageFormNotFound",
+        "@/lib/utils",
+        "@/store/manageIntegrationStore",
+        "./IntegrationDeleteDialog"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "IntegrationDetailContent",
+          "props": {
+            "key": "{id ?? \"\"}",
+            "id": "{id}"
+          }
+        },
+        {
+          "tag": "Wrapper",
+          "props": {
+            "hasActionButton": true,
+            "contentContainerStyle": "{{ padding: 16, gap: 16 }}"
+          }
+        },
+        {
+          "tag": "Card",
+          "props": {
+            "className": "\"gap-4\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"body\"",
+            "w": "\"semibold\""
+          }
+        },
+        {
+          "tag": "Text",
+          "props": {
+            "size": "\"small\"",
+            "className": "\"text-muted\""
+          }
+        },
+        {
+          "tag": "Card",
+          "props": {}
+        },
+        {
+          "tag": "DetailRow",
+          "props": {
+            "label": "\"Status\"",
+            "value": "\"Draf\""
+          }
+        },
+        {
+          "tag": "DetailRow",
+          "props": {
+            "label": "\"URL Tujuan Webhook\"",
+            "value": "{item.endpoint}"
+          }
+        },
+        {
+          "tag": "DetailRow",
+          "props": {
+            "label": "\"Catatan\"",
+            "value": "{item.notes || \"Tidak ada catatan\"}",
+            "isLast": true
+          }
+        },
+        {
+          "tag": "DetailBottomActions",
+          "props": {
+            "onEdit": "{() => {\n\t\t\t\t\t\t\tif (available())\n\t\t\t\t\t\t\t\trouter.push(\n\t\t\t\t\t\t\t\t\troute(\"/manage/integrations/modify\", { id: item.id }),\n\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t}}",
+            "onDelete": "{() => {\n\t\t\t\t\t\t\tif (available()) setOpen(true);\n\t\t\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "ManageFormNotFound",
+          "props": {
+            "entity": "\"Integrasi\"",
+            "onBack": "{() => router.replace(route(\"/manage/integrations\"))}"
+          }
+        },
+        {
+          "tag": "IntegrationDeleteDialog",
+          "props": {
+            "item": "{selected}",
+            "openState": "{[open, setOpen]}",
+            "onDeleted": "{() => router.replace(route(\"/manage/integrations\"))}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "components/feature/manage/integrations/IntegrationDeleteDialog.tsx",
+      "sha256": "36dc779d7c67e01bb748fd041793928c9a25d68bf22227a79603894ffd94d15d",
+      "imports": [
+        "react",
+        "@/components/common/AlertModal",
+        "@/components/common/DeleteConfirmModal",
+        "@/components/common/SuccessModal",
+        "@/store/manageIntegrationStore",
+        "@/types",
+        "@/types/ui/manage/integration"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": [
+        {
+          "tag": "Confirmation",
+          "props": {
+            "name": "{item.name}",
+            "onClose": "{() => openState[1](false)}",
+            "onConfirm": "{confirm}"
+          }
+        },
+        {
+          "tag": "SuccessModal",
+          "props": {
+            "openState": "{success.openState}",
+            "title": "\"Draf integrasi dihapus\"",
+            "description": "\"Draf sudah dihapus dari daftar sementara.\"",
+            "onClose": "{() => {\n\t\t\t\t\tif (!mounted.current || !deleted.current || acknowledged.current)\n\t\t\t\t\t\treturn;\n\t\t\t\t\tacknowledged.current = true;\n\t\t\t\t\tsuccess.close();\n\t\t\t\t\tonDeleted?.();\n\t\t\t\t}}"
+          }
+        },
+        {
+          "tag": "AlertModal",
+          "props": {
+            "openState": "{error.openState}",
+            "title": "\"Draf integrasi tidak tersedia\"",
+            "message": "\"Draf sudah tidak ada dalam daftar. Pilih draf yang tersedia.\"",
+            "hideCancelButton": true,
+            "confirmText": "\"Tutup\""
+          }
+        },
+        {
+          "tag": "DeleteConfirmModal",
+          "props": {
+            "openState": "{[true, () => act(onClose)]}",
+            "itemName": "{name}",
+            "description": "\"Draf akan dihapus dari daftar sementara.\"",
+            "onConfirm": "{() => act(onConfirm)}"
+          }
+        }
+      ]
+    },
+    {
+      "path": "schema/manage/integration.ts",
+      "sha256": "4161e3bd540d8cdfcf39cbd973db937a77e1391704ca4bffd2fcbdf8e518c44b",
+      "imports": [
+        "zod"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": []
+    },
+    {
+      "path": "store/manageIntegrationStore.ts",
+      "sha256": "5468a6ea302afb2b79cf4d8a56b92d7ed9240c96854a148809bf6d195ced6ca2",
+      "imports": [
+        "zustand",
+        "@/schema/manage/integration",
+        "@/types/ui/manage/integration"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": []
+    },
+    {
+      "path": "types/ui/manage/integration.ts",
+      "sha256": "80e40b25a237a5f565fa410db4449069a5e161d878bd6b5464c96a53924f6fd2",
+      "imports": [
+        "@/schema/manage/integration"
+      ],
+      "networkImports": [],
+      "networkCalls": [],
+      "screenHeaders": [],
+      "jsx": []
+    }
+  ],
+  "sharedSources": [
+    {
+      "path": "app/(back-office)/manage.tsx",
+      "sha256": "69cd0e9f28d7e316b908b03dbc00627235ddbadab6fcca08327a13aa798e14ed",
+      "relevantLines": [
+        {
+          "line": 71,
+          "text": "\t\t\tmenuItem(\"Integrasi Eksternal\", \"/manage/integrations\", \"external\"),"
+        }
+      ]
+    },
+    {
+      "path": "app/(no-layout)/manage/_layout.tsx",
+      "sha256": "356813832574d3329b74a39dc6e6b630c802fa2cc2f2036ad66095e2b4d2f47f",
+      "relevantLines": [
+        {
+          "line": 19,
+          "text": "\t\t\t<JSStack.Screen name=\"integrations\" options={{ headerShown: false }} />"
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Static import/call/JSX audit, not runtime global-call proof",
+    "Root owns shared hub/layout; hash captured as context, not whole-root behavior approval",
+    "No browser/native/router/Figma/persist/network/activation/provider-event certification",
+    "Shared DeleteDABC/Success7508 retain external QA/QC geometry gates"
+  ]
+}

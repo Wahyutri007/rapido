@@ -1,0 +1,195 @@
+{
+  "owner": "Software Developer Senior 4 / Codex-4",
+  "ticket": "SD4-002",
+  "status": "READY_FOR_QA",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceFiles": [
+    "app/(no-layout)/manage/absence/_layout.tsx",
+    "app/(no-layout)/manage/absence/index.tsx",
+    "app/(no-layout)/manage/absence/detail.tsx",
+    "components/feature/manage/absence/AbsenceCommon.tsx",
+    "components/feature/manage/absence/AbsenceListScreen.tsx",
+    "components/feature/manage/absence/AbsenceDetailScreen.tsx",
+    "lib/manage/absence.ts",
+    "types/ui/manage/absence.ts"
+  ],
+  "readOnlyContracts": [
+    "store/useAbsenceStore.ts",
+    "components/common/Header.tsx",
+    "components/common/Wrapper.tsx",
+    "components/common/SingleSelect.tsx",
+    "components/common/SearchBar.tsx",
+    "components/custom/JSStack.tsx"
+  ],
+  "sealedAt": "2026-10-09T01:50:35.267Z",
+  "timezone": "Asia/Jakarta",
+  "checks": {
+    "model": 34,
+    "browser": 10,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "apiMutations": 0,
+    "typecheckDiagnostics": 0,
+    "typecheckSourceFiles": 1177,
+    "lintSourceFiles": 8,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "biomeObservedExitCode": 0,
+    "sourceDiffObservedExitCode": 0,
+    "stableInitialScreenshot": "PASS"
+  },
+  "hp": {
+    "launcherExitCode": 0,
+    "expoGo": "57.0.9",
+    "foreground": "host.exp.exponent/.experience.ExperienceActivity",
+    "initialAndroidBundle": "completed",
+    "scope": "Launcher/app opening only; new Absensi native flow is not certified."
+  },
+  "boundaries": [
+    "Developer evidence on shared working tree, not independent QA/QC approval or isolated commit.",
+    "Read-only existing useAbsenceStore session records; no new seed/API/mutation/backend persistence/employee attribution/shift computation.",
+    "Browser uses actual app entry/providers/router with isolated API fixtures and HTML/CSS boot adapter; SSR/backend/native flow were not verified.",
+    "These selected shared contract hashes were recorded at seal time. Other shared dependencies were not sealed at browser build time; subsequent shared changes require reviewer replay.",
+    "No full Figma parity certification. Initial-source and pre-focus failure snapshots are preserved as history.",
+    "Backend8001 and Metro8088 remain running for the user; CI server requires explicit restart for future source changes.",
+    "Cold start:hp SDK57 --offline+--localhost option conflict remains reported to SDK/PM owner. Warm launcher succeeded after separately starting Metro."
+  ],
+  "fingerprints": [
+    {
+      "file": "app/(no-layout)/manage/absence/_layout.tsx",
+      "sha256": "4d0dbf3f10b88d61241af4b76582b54f9062a06d5608e774f1d29df1e2ef669d"
+    },
+    {
+      "file": "app/(no-layout)/manage/absence/index.tsx",
+      "sha256": "57958024a60ed48153dfcbb7cad019f5b21e5db93bacec3159417bc7ef39da7e"
+    },
+    {
+      "file": "app/(no-layout)/manage/absence/detail.tsx",
+      "sha256": "aab7522c1c31cae265bff65fe33f055c3b89ec6dd5e8f55534a98e6330be6870"
+    },
+    {
+      "file": "components/feature/manage/absence/AbsenceCommon.tsx",
+      "sha256": "783fe1a68b72e1e54b925e684f3c034ba1eaf769693684244909ff7367b6a41a"
+    },
+    {
+      "file": "components/feature/manage/absence/AbsenceListScreen.tsx",
+      "sha256": "51d3d6a8fa2a3e89029833f97d0f6aff65a618371c0b3ba742a575a353fc86c7"
+    },
+    {
+      "file": "components/feature/manage/absence/AbsenceDetailScreen.tsx",
+      "sha256": "1f320a034ee8e2be62592ca113c5a2d8f910233235a588ac8fdee63ce84fa44c"
+    },
+    {
+      "file": "lib/manage/absence.ts",
+      "sha256": "7457001261c802eed40e229379d2ca9853864217f44a5aff605c646f7b8bede8"
+    },
+    {
+      "file": "types/ui/manage/absence.ts",
+      "sha256": "8c2506f39e44ff35d231f161bc14e7b8cce4113f182f9aa4dc940fd5c44bdb9a"
+    },
+    {
+      "file": "store/useAbsenceStore.ts",
+      "sha256": "830772595c33ade8a35924fd08d1894887637e850251944e81253b530aeba568"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "sha256": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4"
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "sha256": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0"
+    },
+    {
+      "file": "components/custom/JSStack.tsx",
+      "sha256": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/before/browser-failure.json",
+      "sha256": "a5ce84ddc6151f1ef261415982041e77770fb7245c3ff7e734aeafd1c1325b7f"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/before/browser-failure.png",
+      "sha256": "0994cdec7eeb406c4e75d8b4ce12903db9685ed1f1058dccb1dfb640199d4f26"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/before/focus-layout.tsx",
+      "sha256": "732af6d5de62d46e1fcf8024b91dfff38fbf5d1edbe83cc780857b191dc49edf"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/before/index.tsx",
+      "sha256": "acfccbc9abd06decaf295e39ae6a257df14a01bea3a0339673f5e68d182011c6"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/before/_layout.tsx",
+      "sha256": "3cd5ae114963254a7a18d74e09ee798d097fe5cdd45ef41ca8b0280c0050330c"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/browser-check.cjs",
+      "sha256": "3531701ffd1bc607d7202cd34feb8b1637f42e4d53191644501d6082bf7f784b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/browser-results.json",
+      "sha256": "1a5b72c3c62d3619e7b6301b316ab3ed62b15eed915fd25f71836519315bbc42"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/capture-check.cjs",
+      "sha256": "91719245480f04bc97152d1f698f0849bcc365255c3c4b24e2f2131bf0d09c2b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/capture-results.json",
+      "sha256": "e8a76d95ace3df159723f4229c4d45982e34534c3d5655733414873ec5a44d0d"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/detail-390.png",
+      "sha256": "e47a8bc463c491a3b8ea1a29594fcfc46b6f6c7fc874142a2b7ef11426452560"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/eslint-results.json",
+      "sha256": "aa232dd3777e0da60c19c6e78787774a1c8d456a2d6a1d820921ea032eba63a0"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/HANDOFF.md",
+      "sha256": "fd3ea25817173a446c8543c21f10c4770c6685d9f9f976a1a36b5437cb440db1"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/list-320x844.png",
+      "sha256": "a718bee34fcbdb8077edd0b57f751cae745d449c0a238c7a3aa4260dc000acb7"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/list-390.png",
+      "sha256": "299bf194c4359fe2ed63981f4aa69c5640d4bc10f15201740494409239f8f9f1"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/list-844x390.png",
+      "sha256": "d6a247817f2598e8be86b570e22935a653d92ca41645ea493c9fb6e03b2651ce"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/model-check.cjs",
+      "sha256": "53e9b8c3244bf2fec63fcd7bb864b6941d2d8bfdb0e0e84d632f1112c498b3b2"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/model-results.json",
+      "sha256": "f2c017007e8882c17cffc056274109e006bd0f6869b6146ff8193b330a09ff25"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/seal.cjs",
+      "sha256": "afcdfb2263990ea11ce0527e07c6ff5820546167fa521682fbed483289550cfc"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/typecheck-results.json",
+      "sha256": "9d0ea2c2281657abbaec4cdcc5dfcb4191c3b658c4c593644038598c64e5b67b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/absence/typecheck.cjs",
+      "sha256": "904179b67cc7136d73fc36a9f707e07e930e70da09ae36c21f3ef2ecc6d1bef1"
+    }
+  ]
+}

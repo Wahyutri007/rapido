@@ -1,0 +1,2326 @@
+{
+  "executionMode": "APPLICATION_SOURCES",
+  "scope": "Supplier UI with actual feature/routes/layout/JSStack/store/RHF/Zod and browser-local sample state",
+  "checks": [
+    {
+      "name": "list320: CTA visible and height>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "list320: page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "list320: totals fit their card rows",
+      "passed": false,
+      "detail": [
+        {
+          "row": {
+            "x": 80,
+            "y": 547,
+            "width": 212,
+            "height": 30,
+            "top": 547,
+            "right": 292,
+            "bottom": 577,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 560,
+            "width": 109.90625,
+            "height": 17,
+            "top": 560,
+            "right": 189.90625,
+            "bottom": 577,
+            "left": 80
+          },
+          "amount": {
+            "x": 204.0625,
+            "y": 560,
+            "width": 87.9375,
+            "height": 17,
+            "top": 560,
+            "right": 292,
+            "bottom": 577,
+            "left": 204.0625
+          },
+          "text": "Rp 154.000.000"
+        },
+        {
+          "row": {
+            "x": 80,
+            "y": 704,
+            "width": 212,
+            "height": 30,
+            "top": 704,
+            "right": 292,
+            "bottom": 734,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 717,
+            "width": 109.90625,
+            "height": 17,
+            "top": 717,
+            "right": 189.90625,
+            "bottom": 734,
+            "left": 80
+          },
+          "amount": {
+            "x": 197.90625,
+            "y": 717,
+            "width": 106.5625,
+            "height": 17,
+            "top": 717,
+            "right": 304.46875,
+            "bottom": 734,
+            "left": 197.90625
+          },
+          "text": "Rp 99.999.999.999"
+        }
+      ]
+    },
+    {
+      "name": "list320: long name keeps readable width",
+      "passed": true,
+      "detail": [
+        {
+          "rect": {
+            "x": 80,
+            "y": 458.5,
+            "width": 111.15625,
+            "height": 20,
+            "top": 458.5,
+            "right": 191.15625,
+            "bottom": 478.5,
+            "left": 80
+          },
+          "scrollWidth": 515,
+          "clientWidth": 111,
+          "textOverflow": "ellipsis"
+        }
+      ]
+    },
+    {
+      "name": "actions320: last action fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 69,
+        "y": 552,
+        "width": 216,
+        "height": 20
+      }
+    },
+    {
+      "name": "detail320: both actions fit viewport",
+      "passed": true,
+      "detail": {
+        "edit": {
+          "x": 16,
+          "y": 576,
+          "width": 138,
+          "height": 48
+        },
+        "remove": {
+          "x": 166,
+          "y": 576,
+          "width": 138,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "detail320: values stay inside rows without overlap",
+      "passed": true,
+      "detail": [
+        {
+          "label": "Nama Pemasok",
+          "row": {
+            "x": 28,
+            "y": 292,
+            "width": 264,
+            "height": 145,
+            "top": 292,
+            "right": 292,
+            "bottom": 437,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 346,
+            "width": 148.296875,
+            "height": 36,
+            "top": 346,
+            "right": 176.296875,
+            "bottom": 382,
+            "left": 28
+          },
+          "value": {
+            "x": 176.296875,
+            "y": 304,
+            "width": 115.703125,
+            "height": 120,
+            "top": 304,
+            "right": 292,
+            "bottom": 424,
+            "left": 176.296875
+          },
+          "valueText": "Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang"
+        },
+        {
+          "label": "Alamat",
+          "row": {
+            "x": 28,
+            "y": 437,
+            "width": 264,
+            "height": 185,
+            "top": 437,
+            "right": 292,
+            "bottom": 622,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 511,
+            "width": 93.078125,
+            "height": 36,
+            "top": 511,
+            "right": 121.078125,
+            "bottom": 547,
+            "left": 28
+          },
+          "value": {
+            "x": 160,
+            "y": 449,
+            "width": 132,
+            "height": 160,
+            "top": 449,
+            "right": 292,
+            "bottom": 609,
+            "left": 160
+          },
+          "valueText": "Jalan Pemasok Distribusi Bahan Baku nomor 123, Kompleks Perdagangan dan Perlengkapan Usaha, Pekanbaru, Riau"
+        },
+        {
+          "label": "No. Telepon",
+          "row": {
+            "x": 28,
+            "y": 322,
+            "width": 264,
+            "height": 61,
+            "top": 322,
+            "right": 292,
+            "bottom": 383,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 334,
+            "width": 124.453125,
+            "height": 36,
+            "top": 334,
+            "right": 152.453125,
+            "bottom": 370,
+            "left": 28
+          },
+          "value": {
+            "x": 162.25,
+            "y": 342,
+            "width": 129.75,
+            "height": 20,
+            "top": 342,
+            "right": 292,
+            "bottom": 362,
+            "left": 162.25
+          },
+          "valueText": "+62 812-3456-7890"
+        },
+        {
+          "label": "Email",
+          "row": {
+            "x": 28,
+            "y": 383,
+            "width": 264,
+            "height": 105,
+            "top": 383,
+            "right": 292,
+            "bottom": 488,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 417,
+            "width": 82.703125,
+            "height": 36,
+            "top": 417,
+            "right": 110.703125,
+            "bottom": 453,
+            "left": 28
+          },
+          "value": {
+            "x": 160,
+            "y": 395,
+            "width": 132,
+            "height": 80,
+            "top": 395,
+            "right": 292,
+            "bottom": 475,
+            "left": 160
+          },
+          "valueText": "kontakpembeliandistribusibahanbakudankebutuhanusaha@contohpemasok.co.id"
+        },
+        {
+          "label": "Provinsi",
+          "row": {
+            "x": 28,
+            "y": 488,
+            "width": 264,
+            "height": 61,
+            "top": 488,
+            "right": 292,
+            "bottom": 549,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 500,
+            "width": 98.921875,
+            "height": 36,
+            "top": 500,
+            "right": 126.921875,
+            "bottom": 536,
+            "left": 28
+          },
+          "value": {
+            "x": 264.515625,
+            "y": 508,
+            "width": 27.484375,
+            "height": 20,
+            "top": 508,
+            "right": 292,
+            "bottom": 528,
+            "left": 264.515625
+          },
+          "valueText": "Riau"
+        },
+        {
+          "label": "Kota",
+          "row": {
+            "x": 28,
+            "y": 549,
+            "width": 264,
+            "height": 61,
+            "top": 549,
+            "right": 292,
+            "bottom": 610,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 561,
+            "width": 77.375,
+            "height": 36,
+            "top": 561,
+            "right": 105.375,
+            "bottom": 597,
+            "left": 28
+          },
+          "value": {
+            "x": 224.3125,
+            "y": 569,
+            "width": 67.6875,
+            "height": 20,
+            "top": 569,
+            "right": 292,
+            "bottom": 589,
+            "left": 224.3125
+          },
+          "valueText": "Pekanbaru"
+        },
+        {
+          "label": "Kecamatan",
+          "row": {
+            "x": 28,
+            "y": 600,
+            "width": 264,
+            "height": 61,
+            "top": 600,
+            "right": 292,
+            "bottom": 661,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 612,
+            "width": 120.5625,
+            "height": 36,
+            "top": 612,
+            "right": 148.5625,
+            "bottom": 648,
+            "left": 28
+          },
+          "value": {
+            "x": 193.28125,
+            "y": 620,
+            "width": 98.71875,
+            "height": 20,
+            "top": 620,
+            "right": 292,
+            "bottom": 640,
+            "left": 193.28125
+          },
+          "valueText": "Rumbai Selatan"
+        },
+        {
+          "label": "Kode Pos",
+          "row": {
+            "x": 28,
+            "y": 408,
+            "width": 264,
+            "height": 60,
+            "top": 408,
+            "right": 292,
+            "bottom": 468,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 420,
+            "width": 108.4375,
+            "height": 36,
+            "top": 420,
+            "right": 136.4375,
+            "bottom": 456,
+            "left": 28
+          },
+          "value": {
+            "x": 251.171875,
+            "y": 428,
+            "width": 40.828125,
+            "height": 20,
+            "top": 428,
+            "right": 292,
+            "bottom": 448,
+            "left": 251.171875
+          },
+          "valueText": "25252"
+        }
+      ]
+    },
+    {
+      "name": "form320: sticky save fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "form320: text inputs fit width",
+      "passed": true,
+      "detail": [
+        {
+          "x": 41,
+          "y": 190,
+          "width": 238,
+          "height": 42,
+          "top": 190,
+          "right": 279,
+          "bottom": 232,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 290,
+          "width": 238,
+          "height": 102,
+          "top": 290,
+          "right": 279,
+          "bottom": 392,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 450,
+          "width": 238,
+          "height": 42,
+          "top": 450,
+          "right": 279,
+          "bottom": 492,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 538,
+          "width": 238,
+          "height": 42,
+          "top": 538,
+          "right": 279,
+          "bottom": 580,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 890,
+          "width": 238,
+          "height": 42,
+          "top": 890,
+          "right": 279,
+          "bottom": 932,
+          "left": 41
+        }
+      ]
+    },
+    {
+      "name": "form320: last input scrolls above sticky save",
+      "passed": true,
+      "detail": {
+        "postal": {
+          "x": 41,
+          "y": 425,
+          "width": 238,
+          "height": 42
+        },
+        "save": {
+          "x": 16,
+          "y": 576,
+          "width": 288,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "list360: CTA visible and height>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "list360: page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "list360: totals fit their card rows",
+      "passed": true,
+      "detail": [
+        {
+          "row": {
+            "x": 80,
+            "y": 435,
+            "width": 252,
+            "height": 30,
+            "top": 435,
+            "right": 332,
+            "bottom": 465,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 448,
+            "width": 109.90625,
+            "height": 17,
+            "top": 448,
+            "right": 189.90625,
+            "bottom": 465,
+            "left": 80
+          },
+          "amount": {
+            "x": 244.0625,
+            "y": 448,
+            "width": 87.9375,
+            "height": 17,
+            "top": 448,
+            "right": 332,
+            "bottom": 465,
+            "left": 244.0625
+          },
+          "text": "Rp 154.000.000"
+        },
+        {
+          "row": {
+            "x": 80,
+            "y": 592,
+            "width": 252,
+            "height": 30,
+            "top": 592,
+            "right": 332,
+            "bottom": 622,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 605,
+            "width": 109.90625,
+            "height": 17,
+            "top": 605,
+            "right": 189.90625,
+            "bottom": 622,
+            "left": 80
+          },
+          "amount": {
+            "x": 225.4375,
+            "y": 605,
+            "width": 106.5625,
+            "height": 17,
+            "top": 605,
+            "right": 332,
+            "bottom": 622,
+            "left": 225.4375
+          },
+          "text": "Rp 99.999.999.999"
+        }
+      ]
+    },
+    {
+      "name": "list360: long name keeps readable width",
+      "passed": true,
+      "detail": [
+        {
+          "rect": {
+            "x": 80,
+            "y": 346.5,
+            "width": 151.15625,
+            "height": 20,
+            "top": 346.5,
+            "right": 231.15625,
+            "bottom": 366.5,
+            "left": 80
+          },
+          "scrollWidth": 515,
+          "clientWidth": 151,
+          "textOverflow": "ellipsis"
+        }
+      ]
+    },
+    {
+      "name": "actions360: last action fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 69,
+        "y": 692,
+        "width": 256,
+        "height": 20
+      }
+    },
+    {
+      "name": "detail360: both actions fit viewport",
+      "passed": true,
+      "detail": {
+        "edit": {
+          "x": 16,
+          "y": 716,
+          "width": 158,
+          "height": 48
+        },
+        "remove": {
+          "x": 186,
+          "y": 716,
+          "width": 158,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "detail360: values stay inside rows without overlap",
+      "passed": true,
+      "detail": [
+        {
+          "label": "Nama Pemasok",
+          "row": {
+            "x": 28,
+            "y": 268,
+            "width": 304,
+            "height": 105,
+            "top": 268,
+            "right": 332,
+            "bottom": 373,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 302,
+            "width": 148.296875,
+            "height": 36,
+            "top": 302,
+            "right": 176.296875,
+            "bottom": 338,
+            "left": 28
+          },
+          "value": {
+            "x": 180,
+            "y": 280,
+            "width": 152,
+            "height": 80,
+            "top": 280,
+            "right": 332,
+            "bottom": 360,
+            "left": 180
+          },
+          "valueText": "Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang"
+        },
+        {
+          "label": "Alamat",
+          "row": {
+            "x": 28,
+            "y": 373,
+            "width": 304,
+            "height": 145,
+            "top": 373,
+            "right": 332,
+            "bottom": 518,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 427,
+            "width": 93.078125,
+            "height": 36,
+            "top": 427,
+            "right": 121.078125,
+            "bottom": 463,
+            "left": 28
+          },
+          "value": {
+            "x": 180,
+            "y": 385,
+            "width": 152,
+            "height": 120,
+            "top": 385,
+            "right": 332,
+            "bottom": 505,
+            "left": 180
+          },
+          "valueText": "Jalan Pemasok Distribusi Bahan Baku nomor 123, Kompleks Perdagangan dan Perlengkapan Usaha, Pekanbaru, Riau"
+        },
+        {
+          "label": "No. Telepon",
+          "row": {
+            "x": 28,
+            "y": 518,
+            "width": 304,
+            "height": 61,
+            "top": 518,
+            "right": 332,
+            "bottom": 579,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 530,
+            "width": 124.453125,
+            "height": 36,
+            "top": 530,
+            "right": 152.453125,
+            "bottom": 566,
+            "left": 28
+          },
+          "value": {
+            "x": 202.25,
+            "y": 538,
+            "width": 129.75,
+            "height": 20,
+            "top": 538,
+            "right": 332,
+            "bottom": 558,
+            "left": 202.25
+          },
+          "valueText": "+62 812-3456-7890"
+        },
+        {
+          "label": "Email",
+          "row": {
+            "x": 28,
+            "y": 579,
+            "width": 304,
+            "height": 105,
+            "top": 579,
+            "right": 332,
+            "bottom": 684,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 613,
+            "width": 82.703125,
+            "height": 36,
+            "top": 613,
+            "right": 110.703125,
+            "bottom": 649,
+            "left": 28
+          },
+          "value": {
+            "x": 180,
+            "y": 591,
+            "width": 152,
+            "height": 80,
+            "top": 591,
+            "right": 332,
+            "bottom": 671,
+            "left": 180
+          },
+          "valueText": "kontakpembeliandistribusibahanbakudankebutuhanusaha@contohpemasok.co.id"
+        },
+        {
+          "label": "Provinsi",
+          "row": {
+            "x": 28,
+            "y": 684,
+            "width": 304,
+            "height": 61,
+            "top": 684,
+            "right": 332,
+            "bottom": 745,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 696,
+            "width": 98.921875,
+            "height": 36,
+            "top": 696,
+            "right": 126.921875,
+            "bottom": 732,
+            "left": 28
+          },
+          "value": {
+            "x": 304.515625,
+            "y": 704,
+            "width": 27.484375,
+            "height": 20,
+            "top": 704,
+            "right": 332,
+            "bottom": 724,
+            "left": 304.515625
+          },
+          "valueText": "Riau"
+        },
+        {
+          "label": "Kota",
+          "row": {
+            "x": 28,
+            "y": 740,
+            "width": 304,
+            "height": 61,
+            "top": 740,
+            "right": 332,
+            "bottom": 801,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 752,
+            "width": 77.375,
+            "height": 36,
+            "top": 752,
+            "right": 105.375,
+            "bottom": 788,
+            "left": 28
+          },
+          "value": {
+            "x": 264.3125,
+            "y": 760,
+            "width": 67.6875,
+            "height": 20,
+            "top": 760,
+            "right": 332,
+            "bottom": 780,
+            "left": 264.3125
+          },
+          "valueText": "Pekanbaru"
+        },
+        {
+          "label": "Kecamatan",
+          "row": {
+            "x": 28,
+            "y": 487,
+            "width": 304,
+            "height": 61,
+            "top": 487,
+            "right": 332,
+            "bottom": 548,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 499,
+            "width": 120.5625,
+            "height": 36,
+            "top": 499,
+            "right": 148.5625,
+            "bottom": 535,
+            "left": 28
+          },
+          "value": {
+            "x": 233.28125,
+            "y": 507,
+            "width": 98.71875,
+            "height": 20,
+            "top": 507,
+            "right": 332,
+            "bottom": 527,
+            "left": 233.28125
+          },
+          "valueText": "Rumbai Selatan"
+        },
+        {
+          "label": "Kode Pos",
+          "row": {
+            "x": 28,
+            "y": 548,
+            "width": 304,
+            "height": 60,
+            "top": 548,
+            "right": 332,
+            "bottom": 608,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 560,
+            "width": 108.4375,
+            "height": 36,
+            "top": 560,
+            "right": 136.4375,
+            "bottom": 596,
+            "left": 28
+          },
+          "value": {
+            "x": 291.171875,
+            "y": 568,
+            "width": 40.828125,
+            "height": 20,
+            "top": 568,
+            "right": 332,
+            "bottom": 588,
+            "left": 291.171875
+          },
+          "valueText": "25252"
+        }
+      ]
+    },
+    {
+      "name": "form360: sticky save fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 716,
+        "width": 328,
+        "height": 48
+      }
+    },
+    {
+      "name": "form360: text inputs fit width",
+      "passed": true,
+      "detail": [
+        {
+          "x": 41,
+          "y": 190,
+          "width": 278,
+          "height": 42,
+          "top": 190,
+          "right": 319,
+          "bottom": 232,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 290,
+          "width": 278,
+          "height": 102,
+          "top": 290,
+          "right": 319,
+          "bottom": 392,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 450,
+          "width": 278,
+          "height": 42,
+          "top": 450,
+          "right": 319,
+          "bottom": 492,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 538,
+          "width": 278,
+          "height": 42,
+          "top": 538,
+          "right": 319,
+          "bottom": 580,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 890,
+          "width": 278,
+          "height": 42,
+          "top": 890,
+          "right": 319,
+          "bottom": 932,
+          "left": 41
+        }
+      ]
+    },
+    {
+      "name": "form360: last input scrolls above sticky save",
+      "passed": true,
+      "detail": {
+        "postal": {
+          "x": 41,
+          "y": 565,
+          "width": 278,
+          "height": 42
+        },
+        "save": {
+          "x": 16,
+          "y": 716,
+          "width": 328,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "list390: CTA visible and height>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "list390: page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "list390: totals fit their card rows",
+      "passed": true,
+      "detail": [
+        {
+          "row": {
+            "x": 80,
+            "y": 419,
+            "width": 282,
+            "height": 30,
+            "top": 419,
+            "right": 362,
+            "bottom": 449,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 432,
+            "width": 109.90625,
+            "height": 17,
+            "top": 432,
+            "right": 189.90625,
+            "bottom": 449,
+            "left": 80
+          },
+          "amount": {
+            "x": 274.0625,
+            "y": 432,
+            "width": 87.9375,
+            "height": 17,
+            "top": 432,
+            "right": 362,
+            "bottom": 449,
+            "left": 274.0625
+          },
+          "text": "Rp 154.000.000"
+        },
+        {
+          "row": {
+            "x": 80,
+            "y": 576,
+            "width": 282,
+            "height": 30,
+            "top": 576,
+            "right": 362,
+            "bottom": 606,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 589,
+            "width": 109.90625,
+            "height": 17,
+            "top": 589,
+            "right": 189.90625,
+            "bottom": 606,
+            "left": 80
+          },
+          "amount": {
+            "x": 255.4375,
+            "y": 589,
+            "width": 106.5625,
+            "height": 17,
+            "top": 589,
+            "right": 362,
+            "bottom": 606,
+            "left": 255.4375
+          },
+          "text": "Rp 99.999.999.999"
+        }
+      ]
+    },
+    {
+      "name": "list390: long name keeps readable width",
+      "passed": true,
+      "detail": [
+        {
+          "rect": {
+            "x": 80,
+            "y": 330.5,
+            "width": 181.15625,
+            "height": 20,
+            "top": 330.5,
+            "right": 261.15625,
+            "bottom": 350.5,
+            "left": 80
+          },
+          "scrollWidth": 515,
+          "clientWidth": 181,
+          "textOverflow": "ellipsis"
+        }
+      ]
+    },
+    {
+      "name": "actions390: last action fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 69,
+        "y": 756,
+        "width": 286,
+        "height": 20
+      }
+    },
+    {
+      "name": "detail390: both actions fit viewport",
+      "passed": true,
+      "detail": {
+        "edit": {
+          "x": 16,
+          "y": 780,
+          "width": 173,
+          "height": 48
+        },
+        "remove": {
+          "x": 201,
+          "y": 780,
+          "width": 173,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "detail390: values stay inside rows without overlap",
+      "passed": true,
+      "detail": [
+        {
+          "label": "Nama Pemasok",
+          "row": {
+            "x": 28,
+            "y": 268,
+            "width": 334,
+            "height": 105,
+            "top": 268,
+            "right": 362,
+            "bottom": 373,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 302,
+            "width": 148.296875,
+            "height": 36,
+            "top": 302,
+            "right": 176.296875,
+            "bottom": 338,
+            "left": 28
+          },
+          "value": {
+            "x": 195,
+            "y": 280,
+            "width": 167,
+            "height": 80,
+            "top": 280,
+            "right": 362,
+            "bottom": 360,
+            "left": 195
+          },
+          "valueText": "Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang"
+        },
+        {
+          "label": "Alamat",
+          "row": {
+            "x": 28,
+            "y": 373,
+            "width": 334,
+            "height": 125,
+            "top": 373,
+            "right": 362,
+            "bottom": 498,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 417,
+            "width": 93.078125,
+            "height": 36,
+            "top": 417,
+            "right": 121.078125,
+            "bottom": 453,
+            "left": 28
+          },
+          "value": {
+            "x": 195,
+            "y": 385,
+            "width": 167,
+            "height": 100,
+            "top": 385,
+            "right": 362,
+            "bottom": 485,
+            "left": 195
+          },
+          "valueText": "Jalan Pemasok Distribusi Bahan Baku nomor 123, Kompleks Perdagangan dan Perlengkapan Usaha, Pekanbaru, Riau"
+        },
+        {
+          "label": "No. Telepon",
+          "row": {
+            "x": 28,
+            "y": 498,
+            "width": 334,
+            "height": 61,
+            "top": 498,
+            "right": 362,
+            "bottom": 559,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 510,
+            "width": 124.453125,
+            "height": 36,
+            "top": 510,
+            "right": 152.453125,
+            "bottom": 546,
+            "left": 28
+          },
+          "value": {
+            "x": 232.25,
+            "y": 518,
+            "width": 129.75,
+            "height": 20,
+            "top": 518,
+            "right": 362,
+            "bottom": 538,
+            "left": 232.25
+          },
+          "valueText": "+62 812-3456-7890"
+        },
+        {
+          "label": "Email",
+          "row": {
+            "x": 28,
+            "y": 559,
+            "width": 334,
+            "height": 105,
+            "top": 559,
+            "right": 362,
+            "bottom": 664,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 593,
+            "width": 82.703125,
+            "height": 36,
+            "top": 593,
+            "right": 110.703125,
+            "bottom": 629,
+            "left": 28
+          },
+          "value": {
+            "x": 195,
+            "y": 571,
+            "width": 167,
+            "height": 80,
+            "top": 571,
+            "right": 362,
+            "bottom": 651,
+            "left": 195
+          },
+          "valueText": "kontakpembeliandistribusibahanbakudankebutuhanusaha@contohpemasok.co.id"
+        },
+        {
+          "label": "Provinsi",
+          "row": {
+            "x": 28,
+            "y": 664,
+            "width": 334,
+            "height": 61,
+            "top": 664,
+            "right": 362,
+            "bottom": 725,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 676,
+            "width": 98.921875,
+            "height": 36,
+            "top": 676,
+            "right": 126.921875,
+            "bottom": 712,
+            "left": 28
+          },
+          "value": {
+            "x": 334.515625,
+            "y": 684,
+            "width": 27.484375,
+            "height": 20,
+            "top": 684,
+            "right": 362,
+            "bottom": 704,
+            "left": 334.515625
+          },
+          "valueText": "Riau"
+        },
+        {
+          "label": "Kota",
+          "row": {
+            "x": 28,
+            "y": 725,
+            "width": 334,
+            "height": 61,
+            "top": 725,
+            "right": 362,
+            "bottom": 786,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 737,
+            "width": 77.375,
+            "height": 36,
+            "top": 737,
+            "right": 105.375,
+            "bottom": 773,
+            "left": 28
+          },
+          "value": {
+            "x": 294.3125,
+            "y": 745,
+            "width": 67.6875,
+            "height": 20,
+            "top": 745,
+            "right": 362,
+            "bottom": 765,
+            "left": 294.3125
+          },
+          "valueText": "Pekanbaru"
+        },
+        {
+          "label": "Kecamatan",
+          "row": {
+            "x": 28,
+            "y": 786,
+            "width": 334,
+            "height": 61,
+            "top": 786,
+            "right": 362,
+            "bottom": 847,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 798,
+            "width": 120.5625,
+            "height": 36,
+            "top": 798,
+            "right": 148.5625,
+            "bottom": 834,
+            "left": 28
+          },
+          "value": {
+            "x": 263.28125,
+            "y": 806,
+            "width": 98.71875,
+            "height": 20,
+            "top": 806,
+            "right": 362,
+            "bottom": 826,
+            "left": 263.28125
+          },
+          "valueText": "Rumbai Selatan"
+        },
+        {
+          "label": "Kode Pos",
+          "row": {
+            "x": 28,
+            "y": 612,
+            "width": 334,
+            "height": 60,
+            "top": 612,
+            "right": 362,
+            "bottom": 672,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 624,
+            "width": 108.4375,
+            "height": 36,
+            "top": 624,
+            "right": 136.4375,
+            "bottom": 660,
+            "left": 28
+          },
+          "value": {
+            "x": 321.171875,
+            "y": 632,
+            "width": 40.828125,
+            "height": 20,
+            "top": 632,
+            "right": 362,
+            "bottom": 652,
+            "left": 321.171875
+          },
+          "valueText": "25252"
+        }
+      ]
+    },
+    {
+      "name": "form390: sticky save fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 780,
+        "width": 358,
+        "height": 48
+      }
+    },
+    {
+      "name": "form390: text inputs fit width",
+      "passed": true,
+      "detail": [
+        {
+          "x": 41,
+          "y": 190,
+          "width": 308,
+          "height": 42,
+          "top": 190,
+          "right": 349,
+          "bottom": 232,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 290,
+          "width": 308,
+          "height": 102,
+          "top": 290,
+          "right": 349,
+          "bottom": 392,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 450,
+          "width": 308,
+          "height": 42,
+          "top": 450,
+          "right": 349,
+          "bottom": 492,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 538,
+          "width": 308,
+          "height": 42,
+          "top": 538,
+          "right": 349,
+          "bottom": 580,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 890,
+          "width": 308,
+          "height": 42,
+          "top": 890,
+          "right": 349,
+          "bottom": 932,
+          "left": 41
+        }
+      ]
+    },
+    {
+      "name": "form390: last input scrolls above sticky save",
+      "passed": true,
+      "detail": {
+        "postal": {
+          "x": 41,
+          "y": 629,
+          "width": 308,
+          "height": 42
+        },
+        "save": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "list768: CTA visible and height>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "list768: page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "list768: totals fit their card rows",
+      "passed": true,
+      "detail": [
+        {
+          "row": {
+            "x": 80,
+            "y": 419,
+            "width": 660,
+            "height": 30,
+            "top": 419,
+            "right": 740,
+            "bottom": 449,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 432,
+            "width": 109.90625,
+            "height": 17,
+            "top": 432,
+            "right": 189.90625,
+            "bottom": 449,
+            "left": 80
+          },
+          "amount": {
+            "x": 652.0625,
+            "y": 432,
+            "width": 87.9375,
+            "height": 17,
+            "top": 432,
+            "right": 740,
+            "bottom": 449,
+            "left": 652.0625
+          },
+          "text": "Rp 154.000.000"
+        },
+        {
+          "row": {
+            "x": 80,
+            "y": 576,
+            "width": 660,
+            "height": 30,
+            "top": 576,
+            "right": 740,
+            "bottom": 606,
+            "left": 80
+          },
+          "label": {
+            "x": 80,
+            "y": 589,
+            "width": 109.90625,
+            "height": 17,
+            "top": 589,
+            "right": 189.90625,
+            "bottom": 606,
+            "left": 80
+          },
+          "amount": {
+            "x": 633.4375,
+            "y": 589,
+            "width": 106.5625,
+            "height": 17,
+            "top": 589,
+            "right": 740,
+            "bottom": 606,
+            "left": 633.4375
+          },
+          "text": "Rp 99.999.999.999"
+        }
+      ]
+    },
+    {
+      "name": "list768: long name keeps readable width",
+      "passed": true,
+      "detail": [
+        {
+          "rect": {
+            "x": 80,
+            "y": 330.5,
+            "width": 559.15625,
+            "height": 20,
+            "top": 330.5,
+            "right": 639.15625,
+            "bottom": 350.5,
+            "left": 80
+          },
+          "scrollWidth": 559,
+          "clientWidth": 559,
+          "textOverflow": "ellipsis"
+        }
+      ]
+    },
+    {
+      "name": "actions768: last action fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 69,
+        "y": 936,
+        "width": 664,
+        "height": 20
+      }
+    },
+    {
+      "name": "detail768: both actions fit viewport",
+      "passed": true,
+      "detail": {
+        "edit": {
+          "x": 16,
+          "y": 960,
+          "width": 362,
+          "height": 48
+        },
+        "remove": {
+          "x": 390,
+          "y": 960,
+          "width": 362,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "detail768: values stay inside rows without overlap",
+      "passed": true,
+      "detail": [
+        {
+          "label": "Nama Pemasok",
+          "row": {
+            "x": 28,
+            "y": 208,
+            "width": 712,
+            "height": 65,
+            "top": 208,
+            "right": 740,
+            "bottom": 273,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 222,
+            "width": 148.296875,
+            "height": 36,
+            "top": 222,
+            "right": 176.296875,
+            "bottom": 258,
+            "left": 28
+          },
+          "value": {
+            "x": 384,
+            "y": 220,
+            "width": 356,
+            "height": 40,
+            "top": 220,
+            "right": 740,
+            "bottom": 260,
+            "left": 384
+          },
+          "valueText": "Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang"
+        },
+        {
+          "label": "Alamat",
+          "row": {
+            "x": 28,
+            "y": 273,
+            "width": 712,
+            "height": 85,
+            "top": 273,
+            "right": 740,
+            "bottom": 358,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 297,
+            "width": 93.078125,
+            "height": 36,
+            "top": 297,
+            "right": 121.078125,
+            "bottom": 333,
+            "left": 28
+          },
+          "value": {
+            "x": 384,
+            "y": 285,
+            "width": 356,
+            "height": 60,
+            "top": 285,
+            "right": 740,
+            "bottom": 345,
+            "left": 384
+          },
+          "valueText": "Jalan Pemasok Distribusi Bahan Baku nomor 123, Kompleks Perdagangan dan Perlengkapan Usaha, Pekanbaru, Riau"
+        },
+        {
+          "label": "No. Telepon",
+          "row": {
+            "x": 28,
+            "y": 358,
+            "width": 712,
+            "height": 61,
+            "top": 358,
+            "right": 740,
+            "bottom": 419,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 370,
+            "width": 124.453125,
+            "height": 36,
+            "top": 370,
+            "right": 152.453125,
+            "bottom": 406,
+            "left": 28
+          },
+          "value": {
+            "x": 610.25,
+            "y": 378,
+            "width": 129.75,
+            "height": 20,
+            "top": 378,
+            "right": 740,
+            "bottom": 398,
+            "left": 610.25
+          },
+          "valueText": "+62 812-3456-7890"
+        },
+        {
+          "label": "Email",
+          "row": {
+            "x": 28,
+            "y": 419,
+            "width": 712,
+            "height": 65,
+            "top": 419,
+            "right": 740,
+            "bottom": 484,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 433,
+            "width": 82.703125,
+            "height": 36,
+            "top": 433,
+            "right": 110.703125,
+            "bottom": 469,
+            "left": 28
+          },
+          "value": {
+            "x": 384,
+            "y": 431,
+            "width": 356,
+            "height": 40,
+            "top": 431,
+            "right": 740,
+            "bottom": 471,
+            "left": 384
+          },
+          "valueText": "kontakpembeliandistribusibahanbakudankebutuhanusaha@contohpemasok.co.id"
+        },
+        {
+          "label": "Provinsi",
+          "row": {
+            "x": 28,
+            "y": 484,
+            "width": 712,
+            "height": 61,
+            "top": 484,
+            "right": 740,
+            "bottom": 545,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 496,
+            "width": 98.921875,
+            "height": 36,
+            "top": 496,
+            "right": 126.921875,
+            "bottom": 532,
+            "left": 28
+          },
+          "value": {
+            "x": 712.515625,
+            "y": 504,
+            "width": 27.484375,
+            "height": 20,
+            "top": 504,
+            "right": 740,
+            "bottom": 524,
+            "left": 712.515625
+          },
+          "valueText": "Riau"
+        },
+        {
+          "label": "Kota",
+          "row": {
+            "x": 28,
+            "y": 545,
+            "width": 712,
+            "height": 61,
+            "top": 545,
+            "right": 740,
+            "bottom": 606,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 557,
+            "width": 77.375,
+            "height": 36,
+            "top": 557,
+            "right": 105.375,
+            "bottom": 593,
+            "left": 28
+          },
+          "value": {
+            "x": 672.3125,
+            "y": 565,
+            "width": 67.6875,
+            "height": 20,
+            "top": 565,
+            "right": 740,
+            "bottom": 585,
+            "left": 672.3125
+          },
+          "valueText": "Pekanbaru"
+        },
+        {
+          "label": "Kecamatan",
+          "row": {
+            "x": 28,
+            "y": 606,
+            "width": 712,
+            "height": 61,
+            "top": 606,
+            "right": 740,
+            "bottom": 667,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 618,
+            "width": 120.5625,
+            "height": 36,
+            "top": 618,
+            "right": 148.5625,
+            "bottom": 654,
+            "left": 28
+          },
+          "value": {
+            "x": 641.28125,
+            "y": 626,
+            "width": 98.71875,
+            "height": 20,
+            "top": 626,
+            "right": 740,
+            "bottom": 646,
+            "left": 641.28125
+          },
+          "valueText": "Rumbai Selatan"
+        },
+        {
+          "label": "Kode Pos",
+          "row": {
+            "x": 28,
+            "y": 667,
+            "width": 712,
+            "height": 60,
+            "top": 667,
+            "right": 740,
+            "bottom": 727,
+            "left": 28
+          },
+          "left": {
+            "x": 28,
+            "y": 679,
+            "width": 108.4375,
+            "height": 36,
+            "top": 679,
+            "right": 136.4375,
+            "bottom": 715,
+            "left": 28
+          },
+          "value": {
+            "x": 699.171875,
+            "y": 687,
+            "width": 40.828125,
+            "height": 20,
+            "top": 687,
+            "right": 740,
+            "bottom": 707,
+            "left": 699.171875
+          },
+          "valueText": "25252"
+        }
+      ]
+    },
+    {
+      "name": "form768: sticky save fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 960,
+        "width": 736,
+        "height": 48
+      }
+    },
+    {
+      "name": "form768: text inputs fit width",
+      "passed": true,
+      "detail": [
+        {
+          "x": 41,
+          "y": 190,
+          "width": 686,
+          "height": 42,
+          "top": 190,
+          "right": 727,
+          "bottom": 232,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 290,
+          "width": 686,
+          "height": 102,
+          "top": 290,
+          "right": 727,
+          "bottom": 392,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 450,
+          "width": 686,
+          "height": 42,
+          "top": 450,
+          "right": 727,
+          "bottom": 492,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 538,
+          "width": 686,
+          "height": 42,
+          "top": 538,
+          "right": 727,
+          "bottom": 580,
+          "left": 41
+        },
+        {
+          "x": 41,
+          "y": 890,
+          "width": 686,
+          "height": 42,
+          "top": 890,
+          "right": 727,
+          "bottom": 932,
+          "left": 41
+        }
+      ]
+    },
+    {
+      "name": "form768: last input scrolls above sticky save",
+      "passed": true,
+      "detail": {
+        "postal": {
+          "x": 41,
+          "y": 890,
+          "width": 686,
+          "height": 42
+        },
+        "save": {
+          "x": 16,
+          "y": 960,
+          "width": 736,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "search320: no result message visible",
+      "passed": true
+    },
+    {
+      "name": "list320: truly empty state visible",
+      "passed": true
+    },
+    {
+      "name": "edit missing ID: explicit placeholder",
+      "passed": true
+    },
+    {
+      "name": "detail missing ID: explicit placeholder",
+      "passed": true
+    },
+    {
+      "name": "form320: required fields each have visible error copy",
+      "passed": true
+    },
+    {
+      "name": "form320: malformed email feedback rendered",
+      "passed": true
+    },
+    {
+      "name": "edit320: all contact values are prefilled",
+      "passed": true
+    }
+  ],
+  "passed": 46,
+  "failed": 1,
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md",
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md",
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md",
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md",
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blockedRequests": [],
+  "exception": "locator.boundingBox: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Selesai', { exact: true })\u001b[22m\n",
+  "metrics": [
+    {
+      "name": "list-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "actions-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "detail-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "form-bottom-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "form-top-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "list-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "page": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "light": true
+      }
+    },
+    {
+      "name": "actions-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "page": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "light": true
+      }
+    },
+    {
+      "name": "detail-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "page": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "light": true
+      }
+    },
+    {
+      "name": "form-bottom-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "page": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "light": true
+      }
+    },
+    {
+      "name": "form-top-360",
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "page": {
+        "scrollWidth": 360,
+        "viewportWidth": 360,
+        "light": true
+      }
+    },
+    {
+      "name": "list-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "light": true
+      }
+    },
+    {
+      "name": "actions-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "light": true
+      }
+    },
+    {
+      "name": "detail-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "light": true
+      }
+    },
+    {
+      "name": "form-bottom-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "light": true
+      }
+    },
+    {
+      "name": "form-top-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "light": true
+      }
+    },
+    {
+      "name": "list-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "page": {
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "light": true
+      }
+    },
+    {
+      "name": "actions-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "page": {
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "light": true
+      }
+    },
+    {
+      "name": "detail-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "page": {
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "light": true
+      }
+    },
+    {
+      "name": "form-bottom-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "page": {
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "light": true
+      }
+    },
+    {
+      "name": "form-top-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "page": {
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "light": true
+      }
+    },
+    {
+      "name": "search-empty-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "empty-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "edit-missing-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "required-errors-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    }
+  ],
+  "limitations": "Backend deferred. No native/Figma/global root auth/all shared callers/API persistence/accessibility/OS keyboard certification."
+}

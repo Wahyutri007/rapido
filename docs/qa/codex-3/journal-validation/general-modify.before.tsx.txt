@@ -1,0 +1,692 @@
+import Feather from "@expo/vector-icons/Feather";
+import * as DateTimePicker from "@react-native-community/datetimepicker";
+import { router, useLocalSearchParams } from "expo-router";
+import { useMemo, useRef, useState } from "react";
+import { Platform, Pressable, ScrollView, TextInput, View } from "react-native";
+import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import SuccessModal from "@/components/common/SuccessModal";
+import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import Card from "@/components/common/Card";
+import Text from "@/components/common/Text";
+import JournalFormNotFound from "@/components/feature/accounting/general-journal/JournalFormNotFound";
+import {
+	Actionsheet,
+	ActionsheetBackdrop,
+	ActionsheetContent,
+	ActionsheetDragIndicator,
+	ActionsheetDragIndicatorWrapper,
+} from "@/components/ui/actionsheet";
+import { Button, ButtonText } from "@/components/ui/button";
+import { Colors } from "@/constants/Colors";
+import { JOURNAL_ACCOUNT_OPTIONS } from "@/constants/data/accounting/general-journal";
+import { FONT_NAMES } from "@/constants/Fonts";
+import { journalPickerDate } from "@/lib/accounting/journal-date";
+import { cn, formatRp, parseNumber } from "@/lib/utils";
+import { useAccountingStore } from "@/store/accountingStore";
+import type {
+	GeneralJournal,
+	JournalLine,
+} from "@/types/ui/accounting/journal";
+
+const MONTH_NAMES = [
+	"Januari",
+	"Februari",
+	"Maret",
+	"April",
+	"Mei",
+	"Juni",
+	"Juli",
+	"Agustus",
+	"September",
+	"Oktober",
+	"November",
+	"Desember",
+];
+
+function formatDateDisplay(date: Date): string {
+	const day = String(date.getDate()).padStart(2, "0");
+	const month = MONTH_NAMES[date.getMonth()].substring(0, 3);
+	const year = date.getFullYear();
+	return `${day} ${month} ${year}`;
+}
+
+export default function GeneralJournalModifyScreen() {
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const id = Array.isArray(params.id) ? params.id[0] : params.id;
+	const journals = useAccountingStore((state) => state.journals);
+	const existing = journals.find((journal) => journal.id === id);
+	if (id !== undefined && !existing) {
+		return (
+			<JournalFormNotFound
+				entity="Jurnal Umum"
+				onBack={() =>
+					router.replace(
+						"/(no-layout)/(back-office)/report/accounting/general-journal",
+					)
+				}
+			/>
+		);
+	}
+	return (
+		<GeneralJournalForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+			initialJournal={existing}
+		/>
+	);
+}
+
+function GeneralJournalForm({
+	id,
+	initialJournal,
+}: {
+	id?: string;
+	initialJournal?: GeneralJournal;
+}) {
+	const isEdit = id !== undefined;
+	const addJournal = useAccountingStore((state) => state.addJournal);
+	const updateJournal = useAccountingStore((state) => state.updateJournal);
+
+	const finishModal = useAlertModal();
+	const errorModal = useAlertModal();
+	const [errorMessage, setErrorMessage] = useState("");
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
+
+	// Form State
+	const [date, setDate] = useState(initialJournal?.date ?? "08 Oct 2025");
+	const [selectedDateObj, setSelectedDateObj] = useState(
+		() =>
+			journalPickerDate(initialJournal?.date ?? "08 Oct 2025") ??
+			new Date(2025, 9, 8),
+	);
+	const [showDatePicker, setShowDatePicker] = useState(false);
+	const [referenceNumber, setReferenceNumber] = useState(
+		initialJournal?.referenceNumber ?? "11001",
+	);
+	const [description, setDescription] = useState(
+		initialJournal?.description ?? "Penyesuaian beban operasional",
+	);
+
+	// Journal Lines State (default 2 lines)
+	const [lines, setLines] = useState<JournalLine[]>(
+		() =>
+			initialJournal?.lines.map((line) => ({ ...line })) ?? [
+				{
+					id: "line-1",
+					accountId: "10001",
+					accountCode: "10001",
+					accountName: "Kas Kecil",
+					debit: 1000000,
+					credit: 0,
+				},
+				{
+					id: "line-2",
+					accountId: "40001",
+					accountCode: "40001",
+					accountName: "Pendapatan usaha",
+					debit: 0,
+					credit: 1000000,
+				},
+			],
+	);
+
+	// Account Picker ActionSheet State
+	const [isAccountPickerOpen, setIsAccountPickerOpen] = useState(false);
+	const [pickingLineIndex, setPickingLineIndex] = useState<number | null>(null);
+
+	// Calculations
+	const totalDebit = useMemo(
+		() => lines.reduce((acc, curr) => acc + (curr.debit || 0), 0),
+		[lines],
+	);
+
+	const totalCredit = useMemo(
+		() => lines.reduce((acc, curr) => acc + (curr.credit || 0), 0),
+		[lines],
+	);
+
+	const difference = Math.abs(totalDebit - totalCredit);
+	const isBalanced = totalDebit > 0 && totalDebit === totalCredit;
+
+	// Date Picker Handler
+	const handleDateChange = (
+		event: DateTimePicker.DateTimePickerEvent,
+		newDate?: Date,
+	) => {
+		setShowDatePicker(false);
+		if (event.type === "set" && newDate) {
+			setSelectedDateObj(newDate);
+			setDate(formatDateDisplay(newDate));
+		}
+	};
+
+	const openDatePicker = () => {
+		if (Platform.OS === "android") {
+			DateTimePicker.DateTimePickerAndroid.open({
+				value: selectedDateObj,
+				onChange: handleDateChange,
+				mode: "date",
+			});
+		} else {
+			setShowDatePicker(true);
+		}
+	};
+
+	// Line Actions
+	const handleAddLine = () => {
+		setLines((prev) => [
+			...prev,
+			{
+				id: `line-${Date.now()}`,
+				accountId: "",
+				accountCode: "",
+				accountName: "",
+				debit: 0,
+				credit: 0,
+			},
+		]);
+	};
+
+	const handleRemoveLine = (index: number) => {
+		if (lines.length <= 2) return;
+		setLines((prev) => prev.filter((_, i) => i !== index));
+	};
+
+	const handleOpenAccountPicker = (index: number) => {
+		setPickingLineIndex(index);
+		setIsAccountPickerOpen(true);
+	};
+
+	const handleSelectAccount = (acc: (typeof JOURNAL_ACCOUNT_OPTIONS)[0]) => {
+		if (pickingLineIndex !== null) {
+			setLines((prev) =>
+				prev.map((line, i) =>
+					i === pickingLineIndex
+						? {
+								...line,
+								accountId: acc.value,
+								accountCode: acc.code,
+								accountName: acc.name,
+							}
+						: line,
+				),
+			);
+		}
+		setIsAccountPickerOpen(false);
+		setPickingLineIndex(null);
+	};
+
+	const handleDebitChange = (index: number, val: number) => {
+		setLines((prev) =>
+			prev.map((line, i) =>
+				i === index
+					? {
+							...line,
+							debit: val,
+							credit: val > 0 ? 0 : line.credit,
+						}
+					: line,
+			),
+		);
+	};
+
+	const handleCreditChange = (index: number, val: number) => {
+		setLines((prev) =>
+			prev.map((line, i) =>
+				i === index
+					? {
+							...line,
+							credit: val,
+							debit: val > 0 ? 0 : line.debit,
+						}
+					: line,
+			),
+		);
+	};
+
+	// Form Submission
+	const handleSave = () => {
+		if (saved.current) return;
+		if (
+			id !== undefined &&
+			!useAccountingStore
+				.getState()
+				.journals.some((journal) => journal.id === id)
+		)
+			return;
+		if (!date.trim()) {
+			setErrorMessage("Tanggal jurnal wajib diisi.");
+			errorModal.open();
+			return;
+		}
+
+		if (!referenceNumber.trim()) {
+			setErrorMessage("No. Referensi wajib diisi.");
+			errorModal.open();
+			return;
+		}
+
+		if (!description.trim()) {
+			setErrorMessage("Deskripsi jurnal wajib diisi.");
+			errorModal.open();
+			return;
+		}
+
+		const hasEmptyAccount = lines.some((l) => !l.accountCode || !l.accountName);
+		if (hasEmptyAccount) {
+			setErrorMessage("Semua baris jurnal harus memiliki akun yang dipilih.");
+			errorModal.open();
+			return;
+		}
+
+		if (!isBalanced) {
+			setErrorMessage(
+				"Total debit dan kredit harus seimbang dan bernilai lebih dari 0.",
+			);
+			errorModal.open();
+			return;
+		}
+
+		saved.current = true;
+		if (id !== undefined) {
+			updateJournal(id, {
+				date,
+				referenceNumber,
+				description,
+				lines,
+				totalAmount: totalDebit,
+				isBalanced: true,
+			});
+		} else {
+			addJournal({
+				date,
+				referenceNumber,
+				description,
+				lines,
+				totalAmount: totalDebit,
+				isBalanced: true,
+			});
+		}
+
+		setIsSaved(true);
+		finishModal.open();
+	};
+
+	const handleFinishModalClose = () => {
+		finishModal.close();
+		router.back();
+	};
+
+	return (
+		<View className="flex-1 bg-gray-50">
+			<AnimatedWrapper
+				avoidKeyboard={Platform.OS === "ios"}
+				hasActionButton
+				fabBottomOffset={96}
+				contentContainerStyle={{ padding: 16, gap: 16 }}
+			>
+				{/* Section 1: Informasi Jurnal */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-4">
+						{/* Header with blue info icon box */}
+						<View className="flex-row items-center gap-3">
+							<View className="size-10 items-center justify-center rounded-xl bg-blue-50">
+								<Feather name="info" size={18} color={Colors.primary} />
+							</View>
+							<View>
+								<Text w="semibold" className="text-sm text-foreground">
+									Informasi Jurnal
+								</Text>
+								<Text className="text-xs text-zinc-400">
+									Lengkapi detail jurnal umum anda
+								</Text>
+							</View>
+						</View>
+
+						<View className="h-px bg-gray-100" />
+
+						{/* Tanggal */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								Tanggal <Text className="text-red-500">*</Text>
+							</Text>
+							<Pressable
+								onPress={openDatePicker}
+								className="h-11 flex-row items-center justify-between rounded-lg border border-zinc-200 bg-white px-3"
+							>
+								<Text
+									className="text-sm text-foreground"
+									style={{ fontFamily: FONT_NAMES.regular }}
+								>
+									{date}
+								</Text>
+								<Feather name="calendar" size={16} color={Colors.zinc[400]} />
+							</Pressable>
+						</View>
+
+						{/* iOS Date Picker */}
+						{showDatePicker && Platform.OS === "ios" && (
+							<DateTimePicker.default
+								value={selectedDateObj}
+								mode="date"
+								display="spinner"
+								onChange={handleDateChange}
+							/>
+						)}
+
+						{/* No. Referensi */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								No. Referensi <Text className="text-red-500">*</Text>
+							</Text>
+							<View className="h-11 justify-center rounded-lg border border-zinc-200 bg-zinc-50 px-3">
+								<TextInput
+									className="text-sm text-foreground"
+									style={{ fontFamily: FONT_NAMES.regular, fontSize: 14 }}
+									placeholder="11001"
+									placeholderTextColor={Colors.zinc[400]}
+									value={referenceNumber}
+									onChangeText={setReferenceNumber}
+								/>
+							</View>
+						</View>
+
+						{/* Deskripsi */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								Deskripsi <Text className="text-red-500">*</Text>
+							</Text>
+							<View className="h-24 rounded-lg border border-zinc-200 bg-white p-3">
+								<TextInput
+									className="flex-1 text-sm text-foreground"
+									style={{
+										fontFamily: FONT_NAMES.regular,
+										fontSize: 14,
+										textAlignVertical: "top",
+									}}
+									placeholder="Penyesuaian beban operasional"
+									placeholderTextColor={Colors.zinc[400]}
+									multiline
+									numberOfLines={3}
+									value={description}
+									onChangeText={setDescription}
+								/>
+							</View>
+						</View>
+					</View>
+				</Card>
+
+				{/* Section 2: Baris Jurnal */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-4">
+						{/* Header with blue document icon box */}
+						<View className="flex-row items-center gap-3">
+							<View className="size-10 items-center justify-center rounded-xl bg-blue-50">
+								<Feather name="file-text" size={18} color={Colors.primary} />
+							</View>
+							<View>
+								<Text w="semibold" className="text-sm text-foreground">
+									Baris Jurnal
+								</Text>
+								<Text className="text-xs text-zinc-400">
+									Lengkapi baris jurnal umum anda
+								</Text>
+							</View>
+						</View>
+
+						{/* Lines List */}
+						<View className="gap-3">
+							{lines.map((line, index) => (
+								<View
+									key={line.id}
+									className="gap-2.5 rounded-xl border border-zinc-200 bg-white p-3"
+								>
+									{/* Line Top: Akun label & Delete button */}
+									<View className="flex-row items-center justify-between">
+										<Text className="text-xs font-medium text-foreground">
+											Akun
+										</Text>
+										{lines.length > 2 && (
+											<Pressable
+												onPress={() => handleRemoveLine(index)}
+												className="size-7 items-center justify-center rounded-md bg-red-50 active:opacity-75"
+												hitSlop={6}
+											>
+												<Feather
+													name="trash-2"
+													size={14}
+													color={Colors.red[500]}
+												/>
+											</Pressable>
+										)}
+									</View>
+
+									{/* Account Dropdown */}
+									<Pressable
+										onPress={() => handleOpenAccountPicker(index)}
+										className="h-11 flex-row items-center justify-between rounded-lg border border-zinc-200 bg-white px-3"
+									>
+										<Text
+											className={cn(
+												"text-sm",
+												line.accountCode ? "text-foreground" : "text-zinc-400",
+											)}
+											style={{ fontFamily: FONT_NAMES.regular }}
+										>
+											{line.accountCode
+												? `${line.accountCode} - ${line.accountName}`
+												: "Pilih Akun"}
+										</Text>
+										<Feather
+											name="chevron-down"
+											size={16}
+											color={Colors.zinc[500]}
+										/>
+									</Pressable>
+
+									{/* Debit & Credit Row */}
+									<View className="flex-row gap-3">
+										{/* Debit */}
+										<View className="flex-1 gap-1">
+											<Text className="text-xs text-zinc-500">Debit</Text>
+											<View className="h-11 flex-row items-center rounded-lg border border-zinc-200 bg-white px-3">
+												<TextInput
+													className="flex-1 text-sm text-foreground"
+													style={{
+														fontFamily: FONT_NAMES.regular,
+														fontSize: 14,
+													}}
+													keyboardType="numeric"
+													placeholder="Rp0"
+													value={
+														line.debit > 0
+															? formatRp(line.debit).replace(/\s/g, "")
+															: "Rp0"
+													}
+													onChangeText={(text) => {
+														const parsed = parseNumber(text);
+														handleDebitChange(index, parsed);
+													}}
+												/>
+											</View>
+										</View>
+
+										{/* Kredit */}
+										<View className="flex-1 gap-1">
+											<Text className="text-xs text-zinc-500">Kredit</Text>
+											<View className="h-11 flex-row items-center rounded-lg border border-zinc-200 bg-white px-3">
+												<TextInput
+													className="flex-1 text-sm text-foreground"
+													style={{
+														fontFamily: FONT_NAMES.regular,
+														fontSize: 14,
+													}}
+													keyboardType="numeric"
+													placeholder="Rp0"
+													value={
+														line.credit > 0
+															? formatRp(line.credit).replace(/\s/g, "")
+															: "Rp0"
+													}
+													onChangeText={(text) => {
+														const parsed = parseNumber(text);
+														handleCreditChange(index, parsed);
+													}}
+												/>
+											</View>
+										</View>
+									</View>
+								</View>
+							))}
+
+							{/* + Tambah Baris Baru Button */}
+							<Pressable
+								onPress={handleAddLine}
+								className="h-11 flex-row items-center justify-center gap-2 rounded-xl border border-dashed border-primary-400 bg-blue-50/40 active:bg-blue-100"
+							>
+								<Feather name="plus" size={16} color={Colors.primary} />
+								<Text w="semibold" className="text-sm text-primary-500">
+									Tambah Baris Baru
+								</Text>
+							</Pressable>
+						</View>
+					</View>
+				</Card>
+
+				{/* Section 3: Ringkasan */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-3">
+						<Text w="semibold" className="text-sm text-foreground">
+							Ringkasan
+						</Text>
+
+						{/* Total Debit & Total Kredit side by side */}
+						<View className="flex-row items-center justify-between py-1">
+							<View className="flex-1 items-center">
+								<Text className="text-xs text-zinc-400">Total Debit</Text>
+								<Text w="bold" className="text-sm text-primary-500">
+									{formatRp(totalDebit).replace(/\s/g, "")}
+								</Text>
+							</View>
+
+							<View className="h-7 w-px bg-gray-200" />
+
+							<View className="flex-1 items-center">
+								<Text className="text-xs text-zinc-400">Total Kredit</Text>
+								<Text w="bold" className="text-sm text-primary-500">
+									{formatRp(totalCredit).replace(/\s/g, "")}
+								</Text>
+							</View>
+						</View>
+
+						{/* Selisih & Status Badge */}
+						<View className="items-center gap-1.5 pt-1">
+							<Text className="text-xs text-zinc-400">Selisih</Text>
+							<Text w="bold" className="text-sm text-primary-500">
+								{formatRp(difference).replace(/\s/g, "")}
+							</Text>
+
+							{isBalanced ? (
+								<View className="flex-row items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1">
+									<Feather name="check-circle" size={13} color="#059669" />
+									<Text className="text-xs font-semibold text-success">
+										Seimbang
+									</Text>
+								</View>
+							) : (
+								<View className="flex-row items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1">
+									<Feather name="alert-circle" size={13} color="#DC2626" />
+									<Text className="text-xs font-semibold text-red-500">
+										Tidak Seimbang
+									</Text>
+								</View>
+							)}
+						</View>
+					</View>
+				</Card>
+			</AnimatedWrapper>
+
+			{/* Sticky Bottom "Simpan" Button */}
+			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+				<Button
+					size="xl"
+					className="h-12 rounded-full bg-primary-500"
+					onPress={handleSave}
+					isDisabled={isSaved}
+				>
+					<ButtonText className="text-base font-semibold text-white">
+						Simpan
+					</ButtonText>
+				</Button>
+			</View>
+
+			{/* Account Selection Actionsheet */}
+			<Actionsheet
+				isOpen={isAccountPickerOpen}
+				onClose={() => setIsAccountPickerOpen(false)}
+			>
+				<ActionsheetBackdrop />
+				<ActionsheetContent className="pb-8 pt-2">
+					<ActionsheetDragIndicatorWrapper>
+						<ActionsheetDragIndicator />
+					</ActionsheetDragIndicatorWrapper>
+
+					<View className="w-full flex-row items-center justify-between border-b border-gray-100 px-4 py-3">
+						<Text w="semibold" className="text-base text-foreground">
+							Pilih Akun
+						</Text>
+						<Pressable
+							onPress={() => setIsAccountPickerOpen(false)}
+							hitSlop={8}
+						>
+							<Text className="text-sm font-medium text-primary-500">
+								Tutup
+							</Text>
+						</Pressable>
+					</View>
+
+					<ScrollView className="max-h-80 w-full px-2 pt-2">
+						{JOURNAL_ACCOUNT_OPTIONS.map((opt) => (
+							<Pressable
+								key={opt.value}
+								onPress={() => handleSelectAccount(opt)}
+								className="flex-row items-center justify-between px-4 py-3.5 border-b border-gray-100"
+							>
+								<Text className="text-sm text-foreground">{opt.label}</Text>
+								<Feather
+									name="chevron-right"
+									size={16}
+									color={Colors.zinc[400]}
+								/>
+							</Pressable>
+						))}
+					</ScrollView>
+				</ActionsheetContent>
+			</Actionsheet>
+
+			{/* Success Alert Modal */}
+			<SuccessModal
+				openState={finishModal.openState}
+				onClose={handleFinishModalClose}
+				title={isEdit ? "Jurnal Umum Diperbarui!" : "Jurnal Umum Tersimpan!"}
+				description={
+					isEdit
+						? "Perubahan pada jurnal umum telah berhasil disimpan."
+						: "Jurnal umum barumu sudah aktif dan bisa dikelola pada daftar jurnal umum."
+				}
+				buttonText="Tutup"
+			/>
+
+			{/* Error Alert Modal */}
+			<AlertModal
+				openState={errorModal.openState}
+				onClose={errorModal.close}
+				title="Validasi Gagal"
+				message={errorMessage}
+				confirmText="Mengerti"
+				hideCancelButton
+			/>
+		</View>
+	);
+}

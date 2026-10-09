@@ -1,0 +1,434 @@
+diff --git a/metro.config.js b/metro.config.js
+index f0c0ee6..25b4734 100644
+--- a/metro.config.js
++++ b/metro.config.js
+@@ -1,49 +1,57 @@
+ const { getDefaultConfig } = require("expo/metro-config");
+ const { withNativeWind } = require("nativewind/metro");
+ const path = require("node:path");
+-const { preserveNativewindCache } = require("./scripts/preserve-nativewind-cache.cjs");
++const {
++	preserveNativewindCache,
++} = require("./scripts/preserve-nativewind-cache.cjs");
+ 
+ const config = getDefaultConfig(__dirname);
+ 
+ // Large warm bundles can exceed Windows' open-file limit during cache reads.
+ function limitCacheRequests(store, limit = 64) {
+-  let active = 0;
+-  const pending = [];
+-  function run(operation) {
+-    return new Promise((resolve, reject) => {
+-      const start = () => {
+-        active += 1;
+-        Promise.resolve()
+-          .then(operation)
+-          .then(resolve, reject)
+-          .finally(() => {
+-            active -= 1;
+-            pending.shift()?.();
+-          });
+-      };
+-      if (active < limit) start();
+-      else pending.push(start);
+-    });
+-  }
+-  return {
+-    get: (key) => run(() => store.get(key)),
+-    set: (key, value) => run(() => store.set(key, value)),
+-    clear: () => store.clear(),
+-  };
++	let active = 0;
++	const pending = [];
++	function run(operation) {
++		return new Promise((resolve, reject) => {
++			const start = () => {
++				active += 1;
++				Promise.resolve()
++					.then(operation)
++					.then(resolve, reject)
++					.finally(() => {
++						active -= 1;
++						pending.shift()?.();
++					});
++			};
++			if (active < limit) start();
++			else pending.push(start);
++		});
++	}
++	return {
++		get: (key) => run(() => store.get(key)),
++		set: (key, value) => run(() => store.set(key, value)),
++		clear: () => store.clear(),
++	};
+ }
+ 
+ if (process.platform === "win32") {
+-  config.cacheStores = config.cacheStores.map((store) => limitCacheRequests(store));
++	config.cacheStores = config.cacheStores.map((store) =>
++		limitCacheRequests(store),
++	);
+ }
+ 
+ config.resolver.assetExts.push("md");
+ 
+ module.exports = preserveNativewindCache(
+-  () => withNativeWind(config, {
+-    input: "./global.css",
+-    inlineRem: 16,
+-    // Keep generated styles on disk for SDK 57's Metro pipeline.
+-    forceWriteFileSystem: true,
+-  }),
+-  path.join(path.dirname(require.resolve("react-native-css-interop/package.json")), ".cache"),
++	() =>
++		withNativeWind(config, {
++			input: "./global.css",
++			inlineRem: 16,
++			// Keep generated styles on disk for SDK 57's Metro pipeline.
++			forceWriteFileSystem: true,
++		}),
++	path.join(
++		path.dirname(require.resolve("react-native-css-interop/package.json")),
++		".cache",
++	),
+ );
+diff --git a/scripts/verify-nativewind-cache.cjs b/scripts/verify-nativewind-cache.cjs
+index 680a422..4869321 100644
+--- a/scripts/verify-nativewind-cache.cjs
++++ b/scripts/verify-nativewind-cache.cjs
+@@ -6,7 +6,14 @@ const vm = require("node:vm");
+ const { createRequire } = require("node:module");
+ const { preserveNativewindCache } = require("./preserve-nativewind-cache.cjs");
+ 
+-const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), "rapido-css-init-"));
++const temporaryRoot = fs.mkdtempSync(
++	path.join(os.tmpdir(), "rapido-css-init-"),
++);
++if (
++	path.dirname(temporaryRoot) !== os.tmpdir() ||
++	!path.basename(temporaryRoot).startsWith("rapido-css-init-")
++)
++	throw Error("Unexpected temporary path");
+ const cacheDirectory = path.join(temporaryRoot, ".cache");
+ const originalWrite = fs.writeFileSync;
+ const checks = [];
+@@ -18,52 +25,119 @@ try {
+ 	// Run the installed CSS Interop initializer against an isolated cache.
+ 	const entry = require.resolve("react-native-css-interop/metro");
+ 	const installedRequire = createRequire(entry);
+-	const localRequire = (name) => name === "./expo"
+-		? { expoColorSchemeWarning() {} }
+-		: installedRequire(name);
++	const localRequire = (name) =>
++		name === "./expo"
++			? { expoColorSchemeWarning() {} }
++			: installedRequire(name);
+ 	localRequire.resolve = installedRequire.resolve;
+ 	const dependency = { exports: {} };
+ 	vm.runInNewContext(fs.readFileSync(entry, "utf8"), {
+-		module: dependency, exports: dependency.exports, require: localRequire,
+-		__dirname: path.join(temporaryRoot, "dist", "metro"), process,
++		module: dependency,
++		exports: dependency.exports,
++		require: localRequire,
++		__dirname: path.join(temporaryRoot, "dist", "metro"),
++		process,
+ 	});
+-	const initialize = () => dependency.exports.withCssInterop(
+-		{ resolver: { sourceExts: [] }, transformer: {}, server: {} },
+-		{ input: "global.css", forceWriteFileSystem: true },
+-	);
++	const initialize = () =>
++		dependency.exports.withCssInterop(
++			{ resolver: { sourceExts: [] }, transformer: {}, server: {} },
++			{ input: "global.css", forceWriteFileSystem: true },
++		);
+ 	fs.mkdirSync(cacheDirectory, { recursive: true });
+ 	const android = path.join(cacheDirectory, "android.js");
+ 	const payload = '({flags:{darkMode:"class dark"},rules:[]})';
+ 	fs.writeFileSync(android, payload);
+ 	initialize();
+-	check("installed initializer reproduces Android cache truncation", fs.readFileSync(android, "utf8"), "");
++	check(
++		"installed initializer reproduces Android cache truncation",
++		fs.readFileSync(android, "utf8"),
++		"",
++	);
+ 	fs.writeFileSync(android, payload);
+ 	const protectedConfig = preserveNativewindCache(initialize, cacheDirectory);
+-	check("guarded installed initializer preserves Android CSS and flags", fs.readFileSync(android, "utf8"), payload);
+-	check("guard returns full Metro config", typeof protectedConfig.resolver.resolveRequest, "function");
+-	check("initializer creates missing platform files", fs.existsSync(path.join(cacheDirectory, "ios.js")), true);
+-	check("filesystem implementation restored after configuration", fs.writeFileSync, originalWrite);
++	check(
++		"guarded installed initializer preserves Android CSS and flags",
++		fs.readFileSync(android, "utf8"),
++		payload,
++	);
++	check(
++		"guard returns full Metro config",
++		typeof protectedConfig.resolver.resolveRequest,
++		"function",
++	);
++	check(
++		"initializer creates missing platform files",
++		fs.existsSync(path.join(cacheDirectory, "ios.js")),
++		true,
++	);
++	check(
++		"filesystem implementation restored after configuration",
++		fs.writeFileSync,
++		originalWrite,
++	);
+ 	const nativePlatforms = ["ios", "native", "macos", "windows"];
+-	for (const platform of nativePlatforms) fs.writeFileSync(path.join(cacheDirectory, `${platform}.js`), payload);
++	for (const platform of nativePlatforms)
++		fs.writeFileSync(path.join(cacheDirectory, `${platform}.js`), payload);
+ 	preserveNativewindCache(initialize, cacheDirectory);
+-	check("second config preserves all populated native platform caches", nativePlatforms.every(p => fs.readFileSync(path.join(cacheDirectory, `${p}.js`), "utf8") === payload), true);
+-	preserveNativewindCache(() => fs.writeFileSync(android, "updated styles"), cacheDirectory);
+-	check("compiler nonempty synchronous write is allowed", fs.readFileSync(android, "utf8"), "updated styles");
++	check(
++		"second config preserves all populated native platform caches",
++		nativePlatforms.every(
++			(p) =>
++				fs.readFileSync(path.join(cacheDirectory, `${p}.js`), "utf8") ===
++				payload,
++		),
++		true,
++	);
++	preserveNativewindCache(
++		() => fs.writeFileSync(android, "updated styles"),
++		cacheDirectory,
++	);
++	check(
++		"compiler nonempty synchronous write is allowed",
++		fs.readFileSync(android, "utf8"),
++		"updated styles",
++	);
+ 	const unrelated = path.join(cacheDirectory, "web.css");
+ 	fs.writeFileSync(unrelated, "web styles");
+-	preserveNativewindCache(() => fs.writeFileSync(unrelated, ""), cacheDirectory);
+-	check("unrelated web writes are not intercepted", fs.readFileSync(unrelated, "utf8"), "");
++	preserveNativewindCache(
++		() => fs.writeFileSync(unrelated, ""),
++		cacheDirectory,
++	);
++	check(
++		"unrelated web writes are not intercepted",
++		fs.readFileSync(unrelated, "utf8"),
++		"",
++	);
+ 	const expected = new Error("configuration failure");
+-	assert.throws(() => preserveNativewindCache(() => { throw expected; }, cacheDirectory), error => error === expected);
+-	check("filesystem implementation restored after initializer failure", fs.writeFileSync, originalWrite);
++	assert.throws(
++		() =>
++			preserveNativewindCache(() => {
++				throw expected;
++			}, cacheDirectory),
++		(error) => error === expected,
++	);
++	check(
++		"filesystem implementation restored after initializer failure",
++		fs.writeFileSync,
++		originalWrite,
++	);
+ 	fs.writeFileSync(android, "");
+-	check("writes outside initialization retain original semantics", fs.readFileSync(android, "utf8"), "");
+-	const result = { status: "PASS", count: checks.length, checks, dependencyVersion: require("react-native-css-interop/package.json").version };
+-	if (process.argv[2]) fs.writeFileSync(process.argv[2], JSON.stringify(result, null, 2) + "\n");
++	check(
++		"writes outside initialization retain original semantics",
++		fs.readFileSync(android, "utf8"),
++		"",
++	);
++	const result = {
++		status: "PASS",
++		count: checks.length,
++		checks,
++		dependencyVersion: require("react-native-css-interop/package.json").version,
++	};
++	if (process.argv[2])
++		fs.writeFileSync(process.argv[2], JSON.stringify(result, null, 2) + "\n");
+ 	console.log(JSON.stringify(result, null, 2));
+ } finally {
+ 	assert.equal(fs.writeFileSync, originalWrite);
+ 	// The directory is freshly created with mkdtemp and used only by this test.
+-	if (path.dirname(temporaryRoot) !== os.tmpdir() || !path.basename(temporaryRoot).startsWith("rapido-css-init-")) throw Error("Unexpected temporary path");
+ 	fs.rmSync(temporaryRoot, { recursive: true, force: true });
+ }
+diff --git a/scripts/verify-metro-cache.cjs b/scripts/verify-metro-cache.cjs
+index ecea791..f6022f1 100644
+--- a/scripts/verify-metro-cache.cjs
++++ b/scripts/verify-metro-cache.cjs
+@@ -4,88 +4,88 @@ const path = require("node:path");
+ const vm = require("node:vm");
+ 
+ async function main() {
+-  let active = 0;
+-  let maximum = 0;
+-  let writes = 0;
+-  let cleared = false;
+-  const store = {
+-    async get(key) {
+-      active += 1;
+-      maximum = Math.max(maximum, active);
+-      await new Promise((resolve) => setTimeout(resolve, 1));
+-      active -= 1;
+-      if (key === -1) throw new Error("cache read failure");
+-      return key;
+-    },
+-    async set() {
+-      active += 1;
+-      maximum = Math.max(maximum, active);
+-      await new Promise((resolve) => setTimeout(resolve, 1));
+-      active -= 1;
+-      writes += 1;
+-    },
+-    clear() {
+-      cleared = true;
+-    },
+-  };
+-  const root = path.dirname(require.resolve("../metro.config.js"));
+-  const sandbox = {
+-    module: { exports: {} },
+-    __dirname: root,
+-    process: { platform: "win32" },
+-    require(name) {
+-      if (name === "expo/metro-config") {
+-        return {
+-          getDefaultConfig: () => ({
+-            cacheStores: [store],
+-            resolver: { assetExts: [] },
+-          }),
+-        };
+-      }
+-      if (name === "nativewind/metro") {
+-        return { withNativeWind: (config) => config };
+-      }
+-      if (name === "node:path") return path;
+-      if (name === "./scripts/preserve-nativewind-cache.cjs") {
+-        return require("./preserve-nativewind-cache.cjs");
+-      }
+-      throw new Error(`Unexpected Metro dependency: ${name}`);
+-    },
+-  };
+-  sandbox.require.resolve = require.resolve;
+-  vm.runInNewContext(
+-    fs.readFileSync(path.join(root, "metro.config.js"), "utf8"),
+-    sandbox,
+-  );
+-  const cache = sandbox.module.exports.cacheStores[0];
+-  const reads = await Promise.all(
+-    Array.from({ length: 3000 }, (_, key) => cache.get(key)),
+-  );
+-  assert.equal(reads.length, 3000);
+-  assert.equal(reads[2999], 2999);
+-  assert.ok(maximum <= 64);
+-  assert.ok(maximum > 1);
+-  const results = await Promise.allSettled([
+-    cache.get(-1),
+-    ...Array.from({ length: 200 }, (_, key) => cache.set(key, key)),
+-  ]);
+-  assert.equal(results[0].status, "rejected");
+-  assert.equal(writes, 200);
+-  assert.ok(maximum <= 64);
+-  await cache.clear();
+-  assert.equal(cleared, true);
+-  console.log(
+-    JSON.stringify({
+-      reads: reads.length,
+-      writes,
+-      maximumOpenRequests: maximum,
+-      errorQueueRecovered: true,
+-      clearDelegated: cleared,
+-    }),
+-  );
++	let active = 0;
++	let maximum = 0;
++	let writes = 0;
++	let cleared = false;
++	const store = {
++		async get(key) {
++			active += 1;
++			maximum = Math.max(maximum, active);
++			await new Promise((resolve) => setTimeout(resolve, 1));
++			active -= 1;
++			if (key === -1) throw new Error("cache read failure");
++			return key;
++		},
++		async set() {
++			active += 1;
++			maximum = Math.max(maximum, active);
++			await new Promise((resolve) => setTimeout(resolve, 1));
++			active -= 1;
++			writes += 1;
++		},
++		clear() {
++			cleared = true;
++		},
++	};
++	const root = path.dirname(require.resolve("../metro.config.js"));
++	const sandbox = {
++		module: { exports: {} },
++		__dirname: root,
++		process: { platform: "win32" },
++		require(name) {
++			if (name === "expo/metro-config") {
++				return {
++					getDefaultConfig: () => ({
++						cacheStores: [store],
++						resolver: { assetExts: [] },
++					}),
++				};
++			}
++			if (name === "nativewind/metro") {
++				return { withNativeWind: (config) => config };
++			}
++			if (name === "node:path") return path;
++			if (name === "./scripts/preserve-nativewind-cache.cjs") {
++				return require("./preserve-nativewind-cache.cjs");
++			}
++			throw new Error(`Unexpected Metro dependency: ${name}`);
++		},
++	};
++	sandbox.require.resolve = require.resolve;
++	vm.runInNewContext(
++		fs.readFileSync(path.join(root, "metro.config.js"), "utf8"),
++		sandbox,
++	);
++	const cache = sandbox.module.exports.cacheStores[0];
++	const reads = await Promise.all(
++		Array.from({ length: 3000 }, (_, key) => cache.get(key)),
++	);
++	assert.equal(reads.length, 3000);
++	assert.equal(reads[2999], 2999);
++	assert.ok(maximum <= 64);
++	assert.ok(maximum > 1);
++	const results = await Promise.allSettled([
++		cache.get(-1),
++		...Array.from({ length: 200 }, (_, key) => cache.set(key, key)),
++	]);
++	assert.equal(results[0].status, "rejected");
++	assert.equal(writes, 200);
++	assert.ok(maximum <= 64);
++	await cache.clear();
++	assert.equal(cleared, true);
++	console.log(
++		JSON.stringify({
++			reads: reads.length,
++			writes,
++			maximumOpenRequests: maximum,
++			errorQueueRecovered: true,
++			clearDelegated: cleared,
++		}),
++	);
+ }
+ 
+ main().catch((error) => {
+-  console.error(error);
+-  process.exitCode = 1;
++	console.error(error);
++	process.exitCode = 1;
+ });

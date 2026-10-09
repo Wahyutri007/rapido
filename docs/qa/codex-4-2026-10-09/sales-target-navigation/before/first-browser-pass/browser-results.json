@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "passed": 17,
+  "checks": [
+    "Kelola opens production Target Penjualan list with one active header",
+    "Trimmed search selects one target without changing its record",
+    "List opens detail with correct target ID and product totals",
+    "Detail opens edit form with correct title, ID and original draft",
+    "Saving preview edit updates same target then header returns to its detail",
+    "Detail back restores list search and saved target once",
+    "Add after editing has empty ID, correct title and fresh draft",
+    "Second target opens category detail and prefill without first ID leaking",
+    "Direct detail reload preserves target ID then exits through list to Kelola",
+    "Direct edit reload retains edit title, ID and prefill",
+    "Direct add has empty draft and a working list fallback",
+    "Unknown ID on detail is guarded with a reachable header back",
+    "Unknown ID on modify is guarded with a reachable header back",
+    "Browser back and forward preserve target identity and usable headers",
+    "List and form actions stay clickable at 320x844",
+    "List and form actions stay clickable at 844x390",
+    "Unauthenticated direct target route redirects to login without feature access"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "apiRequests": [
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/user"
+    }
+  ],
+  "checkedAt": "2026-10-09T03:05:13.868Z",
+  "scope": "Production app entry/providers/guard/ExpoRouter with isolated auth/API fixtures and HTML/CSS boot adapter. Target fixture/session store, no backend/native/SSR/Figma certification."
+}

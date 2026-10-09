@@ -1,0 +1,132 @@
+{
+  "passed": 2,
+  "failed": 2,
+  "checks": [
+    {
+      "name": "390 adjustment Total Stok Awal value receives semantic warning",
+      "pass": true,
+      "detail": {
+        "actual": "rgb(250, 128, 42)",
+        "expected": "rgb(250, 128, 42)"
+      }
+    },
+    {
+      "name": "390 adjustment Total Stok Awal label fits",
+      "pass": true
+    },
+    {
+      "name": "390 adjustment Total Penyusutan value receives semantic destructive",
+      "pass": false,
+      "detail": {
+        "actual": "rgb(44, 44, 44)",
+        "expected": "rgb(230, 53, 53)"
+      }
+    },
+    {
+      "name": "Browser completed",
+      "pass": false,
+      "error": "Error: 390 adjustment Total Penyusutan value receives semantic destructive: {\"actual\":\"rgb(44, 44, 44)\",\"expected\":\"rgb(230, 53, 53)\"}\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-5-2026-10-09\\inventory-qc-colors\\check-browser.cjs:11:85)\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-5-2026-10-09\\inventory-qc-colors\\check-browser.cjs:51:9"
+    }
+  ],
+  "observed": [
+    {
+      "width": 390,
+      "label": "Total Stok Awal",
+      "row": [
+        {
+          "text": "Total Stok Awal",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 32,
+            "y": 144,
+            "width": 82,
+            "height": 32,
+            "top": 144,
+            "right": 114,
+            "bottom": 176,
+            "left": 32
+          }
+        },
+        {
+          "text": "300",
+          "color": "rgb(250, 128, 42)",
+          "r": {
+            "x": 57.65625,
+            "y": 180,
+            "width": 30.6875,
+            "height": 24,
+            "top": 180,
+            "right": 88.34375,
+            "bottom": 204,
+            "left": 57.65625
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 63.109375,
+            "y": 208,
+            "width": 19.78125,
+            "height": 16,
+            "top": 208,
+            "right": 82.890625,
+            "bottom": 224,
+            "left": 63.109375
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "label": "Total Penyusutan",
+      "row": [
+        {
+          "text": "Total Penyusutan",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 154,
+            "y": 144,
+            "width": 82,
+            "height": 32,
+            "top": 144,
+            "right": 236,
+            "bottom": 176,
+            "left": 154
+          }
+        },
+        {
+          "text": "34",
+          "color": "rgb(44, 44, 44)",
+          "r": {
+            "x": 184.78125,
+            "y": 180,
+            "width": 20.4375,
+            "height": 24,
+            "top": 180,
+            "right": 205.21875,
+            "bottom": 204,
+            "left": 184.78125
+          }
+        },
+        {
+          "text": "Pcs",
+          "color": "rgb(143, 143, 143)",
+          "r": {
+            "x": 185.109375,
+            "y": 208,
+            "width": 19.78125,
+            "height": 16,
+            "top": 208,
+            "right": 204.890625,
+            "bottom": 224,
+            "left": 185.109375
+          }
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "scope": "Actual production Inventory screens/store/shared components and fonts; router transport adapter. Fixture-only temporary mixed-unit update restored; no application seed/API/real device certification."
+}

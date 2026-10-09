@@ -1,0 +1,140 @@
+{
+  "ticket": "SD5-010-NARROW",
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "status": "READY_FOR_QA",
+  "globalFigmaStatus": "NOT_100_PERCENT; other frames/states and Android/full-router comparison pending",
+  "frame": "1:12401",
+  "frameSize": [
+    390,
+    1347
+  ],
+  "delta": "Only opt-in BottomTab columnGap: 8 below 360px, 14 at reference 390px and wider. Default appearance unaffected.",
+  "sourceHashes": {
+    "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "8d66263f18b26eb12c2afd72139c2f83c5febf741592dee084ec043f29079f5e",
+    "app/(back-office)/inventory/_layout.tsx": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+    "app/(back-office)/_layout.tsx": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/custom/BottomTab.tsx": "4bf76a34267565c30484c7d58996aea83e878454a9d47bee6fd13e3b9ff9d3cb",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+    "assets/images/figma/back-office/home.svg": "01950a87d0c77d3786b4c466826f0d14e7ecf128aaf8c83103db826bcd6ff970",
+    "assets/images/figma/back-office/report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "assets/images/figma/back-office/catalog.svg": "ead314ccb6d12bc7d1be5ecc3898a63b4d50aa5c5ae008f9735f0fabf71ebc68",
+    "assets/images/figma/back-office/inventory.svg": "eec32d9810b9bb365bceda431a47acb2c345fcefbee58b08b6c00ea54d10279e",
+    "assets/images/figma/back-office/manage.svg": "2874a27983252c24db92f55212ffb6f4c4326f8aa3ca074e6f0ecc9bf929dabd",
+    "assets/images/figma/back-office/chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+    "assets/images/figma/back-office/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "assets/images/figma/back-office/divider.svg": "cfc07e1e025349dcb250715322b81d72f0b7edc5e504073f5c6ec62dc99d3aa3",
+    "assets/images/figma/back-office/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed"
+  },
+  "checks": {
+    "browser": 52,
+    "scope": 17,
+    "totalExecuted": 69,
+    "failed": 0,
+    "headerReused": 4,
+    "eslint": {
+      "exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "stderr": ""
+    },
+    "typeDiagnostics": 0,
+    "biomeExit": 0,
+    "biomeInheritedWarnings": 2,
+    "diffExit": 0,
+    "runtimeErrors": 0,
+    "consoleErrors": 0
+  },
+  "geometryDifferences": {
+    "search": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "store": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "status": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "card": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "tier": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "food": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "drink": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "bar": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "assetsVerified": 11,
+  "responsiveObservation": "Inventory natural label width fits at 320/844/768; no horizontal overflow, final row clears bar, dividers fill without scaling. Screenshot reviewed at 320px.",
+  "reusedEvidence": {
+    "parentPacket": "../closing-stock-figma",
+    "parentArtifactsMatched": 76,
+    "parentSourceHashesUnchanged": 17,
+    "parentChangedSource": "components/custom/BottomTab.tsx",
+    "parentChangedHash": "1fc4c55b830aef78419d6b16417efc02b3024b33d817edffecaf04fceec7bcc7",
+    "headerChecks": 4,
+    "headerSourceHash": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+    "modelChecks": 41,
+    "helperHash": "093ed466a2d8bfe73a52839d973766318aedf3b603e86f19d5f0a3374cae3fee",
+    "previousArtifactsMatched": 133,
+    "note": "Replayed browser/scope checks replace the latest cohort, not added to prior 70. Four header and 41 model checks reused by identical source hash; not executed again. Both historical packets remain frozen."
+  },
+  "runtime": {
+    "bundleHash": "6c6a8b0b62d7c1f7c0481c280f4313ff62061c9af31172225155f46dadc43dd1",
+    "inputHashes": {
+      "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "8d66263f18b26eb12c2afd72139c2f83c5febf741592dee084ec043f29079f5e",
+      "app/(back-office)/inventory/_layout.tsx": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+      "app/(back-office)/_layout.tsx": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad",
+      "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+      "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+      "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+      "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+      "components/custom/BottomTab.tsx": "4bf76a34267565c30484c7d58996aea83e878454a9d47bee6fd13e3b9ff9d3cb",
+      "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d"
+    },
+    "scope": "Own one-shot build/cache on D; actual UI/store, router transport adapter, Figma examples only in comparison fixture. No listener/server/root Metro config/native full router.",
+    "rootConfigUnchanged": true
+  },
+  "limitations": [
+    "Only initial Stok Akhir frame compared against current full context. Starter limit prevents retrieving other frames; no global 100% approval.",
+    "Production UI/store/font with RNWeb navigation/router transport adapters; not full app auth/native/Android/backend certification.",
+    "Figma rows only in comparison fixture; existing Inventory rows restored for interaction tests. No new application dummy seed or API mutation.",
+    "Screenshot reference is service-downscaled. No pixel-byte identity across renderer/scales; native font scale, keyboard, safe area and independent QA/QC pending.",
+    "Copied primary/intermediate artifacts retain historical results. Latest authoritative results are browser-results.json, scope-results.json, quality-results.json, build.json and this verification."
+  ],
+  "verifiedAt": "2026-10-09T03:41:15.092Z"
+}

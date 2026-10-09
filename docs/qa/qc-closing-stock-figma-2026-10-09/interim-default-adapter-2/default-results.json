@@ -1,0 +1,224 @@
+{
+  "scope": "Executed current/baseline shared component JSX with hook/native/router host adapters. Presentation/props comparison only; callback bodies independently checked by scope suite. Not browser/default caller/native certification.",
+  "passed": 40,
+  "failed": 10,
+  "results": [
+    {
+      "name": "components/common/Header.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 320 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 320 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 320 / 2",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    props: {\n      children: [\n        {\n          props: {\n...\n      ],\n+     className: 'bg-white gap-4 p-0 rounded-xl shadow-main'\n-     className: 'bg-white gap-4 p-4 rounded-xl shadow-main'\n    },\n    type: 'View'\n  }\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 320 / 0",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  props: {\n    children: [\n      {\n        props: {\n          children: [\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n                      style: {\n                        transform: [\n                          {\n                            scale: 1\n                          }\n                        ]\n                      }\n                    },\n                    type: 'AnimatedView'\n                  },\n                  {\n                    props: {\n                      children: [\n                        'home'\n                      ],\n                      className: 'Object] [object mt-1 text-[11px] text-foreground',\n                      numberOfLines: 1,\n                      style: {\n                        color: '#222222',\n                        fontFamily: 'InterRegular'\n                      }\n                    },\n                    type: 'NativeText'\n                  }\n                ],\n                className: 'flex-1 items-center justify-center py-1',\n                onPress: '<callback>',\n                onPressIn: '<callback>',\n                onPressOut: '<callback>'\n              },\n              type: 'Pressable'\n            },\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n...}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 360 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 360 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 360 / 2",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    props: {\n      children: [\n        {\n          props: {\n...\n      ],\n+     className: 'bg-white gap-4 p-0 rounded-xl shadow-main'\n-     className: 'bg-white gap-4 p-4 rounded-xl shadow-main'\n    },\n    type: 'View'\n  }\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 360 / 0",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  props: {\n    children: [\n      {\n        props: {\n          children: [\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n                      style: {\n                        transform: [\n                          {\n                            scale: 1\n                          }\n                        ]\n                      }\n                    },\n                    type: 'AnimatedView'\n                  },\n                  {\n                    props: {\n                      children: [\n                        'home'\n                      ],\n                      className: 'Object] [object mt-1 text-[11px] text-foreground',\n                      numberOfLines: 1,\n                      style: {\n                        color: '#222222',\n                        fontFamily: 'InterRegular'\n                      }\n                    },\n                    type: 'NativeText'\n                  }\n                ],\n                className: 'flex-1 items-center justify-center py-1',\n                onPress: '<callback>',\n                onPressIn: '<callback>',\n                onPressOut: '<callback>'\n              },\n              type: 'Pressable'\n            },\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n...}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 390 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 390 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 390 / 2",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    props: {\n      children: [\n        {\n          props: {\n...\n      ],\n+     className: 'bg-white gap-4 p-0 rounded-xl shadow-main'\n-     className: 'bg-white gap-4 p-4 rounded-xl shadow-main'\n    },\n    type: 'View'\n  }\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 390 / 0",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  props: {\n    children: [\n      {\n        props: {\n          children: [\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n                      style: {\n                        transform: [\n                          {\n                            scale: 1\n                          }\n                        ]\n                      }\n                    },\n                    type: 'AnimatedView'\n                  },\n                  {\n                    props: {\n                      children: [\n                        'home'\n                      ],\n                      className: 'Object] [object mt-1 text-[11px] text-foreground',\n                      numberOfLines: 1,\n                      style: {\n                        color: '#222222',\n                        fontFamily: 'InterRegular'\n                      }\n                    },\n                    type: 'NativeText'\n                  }\n                ],\n                className: 'flex-1 items-center justify-center py-1',\n                onPress: '<callback>',\n                onPressIn: '<callback>',\n                onPressOut: '<callback>'\n              },\n              type: 'Pressable'\n            },\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n...}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Header.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx default output matches baseline 844 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx default output matches baseline 844 / 2",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 0",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 1",
+      "pass": true
+    },
+    {
+      "name": "components/common/Card.tsx default output matches baseline 844 / 2",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    props: {\n      children: [\n        {\n          props: {\n...\n      ],\n+     className: 'bg-white gap-4 p-0 rounded-xl shadow-main'\n-     className: 'bg-white gap-4 p-4 rounded-xl shadow-main'\n    },\n    type: 'View'\n  }\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "components/custom/BottomTab.tsx default output matches baseline 844 / 0",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n... Skipped lines\n{\n  props: {\n    children: [\n      {\n        props: {\n          children: [\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n                      style: {\n                        transform: [\n                          {\n                            scale: 1\n                          }\n                        ]\n                      }\n                    },\n                    type: 'AnimatedView'\n                  },\n                  {\n                    props: {\n                      children: [\n                        'home'\n                      ],\n                      className: 'Object] [object mt-1 text-[11px] text-foreground',\n                      numberOfLines: 1,\n                      style: {\n                        color: '#222222',\n                        fontFamily: 'InterRegular'\n                      }\n                    },\n                    type: 'NativeText'\n                  }\n                ],\n                className: 'flex-1 items-center justify-center py-1',\n                onPress: '<callback>',\n                onPressIn: '<callback>',\n                onPressOut: '<callback>'\n              },\n              type: 'Pressable'\n            },\n            {\n              props: {\n                children: [\n                  {\n                    props: {\n                      className: 'items-center justify-center size-7',\n...}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:61:123\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:60:2)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "TabItemButton default label/icon/weight matches baseline focused=false",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n{\n  props: {\n    children: [\n      {\n        props: {\n          className: 'items-center justify-center size-7',\n          style: {\n            transform: [\n              {\n                scale: 1\n              }\n            ]\n          }\n        },\n        type: 'AnimatedView'\n      },\n      {\n        props: {\n          children: [\n            'Inventory'\n          ],\n          className: 'Object] [object mt-1 text-[11px] text-foreground',\n          numberOfLines: 1,\n          style: {\n            color: '#222222',\n            fontFamily: 'InterRegular'\n          }\n        },\n        type: 'NativeText'\n      }\n    ],\n    className: 'flex-1 items-center justify-center py-1',\n    onPress: '<callback>',\n    onPressIn: '<callback>',\n    onPressOut: '<callback>'\n  },\n  type: 'Pressable'\n}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:65:154\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:64:35)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "TabItemButton default label/icon/weight matches baseline focused=true",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:\n\n{\n  props: {\n    children: [\n      {\n        props: {\n          className: 'items-center justify-center size-7',\n          style: {\n            transform: [\n              {\n                scale: 1\n              }\n            ]\n          }\n        },\n        type: 'AnimatedView'\n      },\n      {\n        props: {\n          children: [\n            'Inventory'\n          ],\n          className: 'Object] [object mt-1 text-[11px] text-foreground',\n          numberOfLines: 1,\n          style: {\n            color: '#222222',\n            fontFamily: 'InterSemiBold'\n          }\n        },\n        type: 'NativeText'\n      }\n    ],\n    className: 'flex-1 items-center justify-center py-1',\n    onPress: '<callback>',\n    onPressIn: '<callback>',\n    onPressOut: '<callback>'\n  },\n  type: 'Pressable'\n}\n\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:65:154\n    at check (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:45:30)\n    at Object.<anonymous> (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-closing-stock-figma-2026-10-09\\check-defaults.cjs:64:35)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    }
+  ],
+  "sourceHashes": {
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/custom/BottomTab.tsx": "4bf76a34267565c30484c7d58996aea83e878454a9d47bee6fd13e3b9ff9d3cb"
+  }
+}

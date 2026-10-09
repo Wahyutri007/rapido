@@ -1,0 +1,226 @@
+{
+  "signal": "QC-ROLE-WORKER-20261009-PASS-DELTA",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "createdAt": "2026-10-08T19:17:39.966Z",
+  "status": "PASS_DELTA",
+  "reviewedSourceHashes": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+  },
+  "trackedAfter": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+    "app/(no-layout)/(back-office)/manage/roles/modify.tsx": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+    "app/(no-layout)/manage/workers/modify.tsx": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "schema/add/role.ts": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+    "schema/add/worker.ts": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "docs/qa/codex-3/role-worker-identity/HANDOFF.md": "7ded696e687c8cf3a4363fc339994fe94201f758b1a7e79149d680b18305d170",
+    "docs/qa/codex-3/role-worker-identity/check.cjs": "0f80ececc7512a861d6094f66b7635e8e023ee6b9731887b8dcf8cd3d618e979",
+    "docs/qa/codex-3/role-worker-identity/baseline.json": "6a99526614a5a4d440fd5a018a8cc7153245284796aa2cf5f18165b294285343",
+    "docs/qa/codex-3/role-worker-identity/results.json": "125b85ec4724d5561ad07647a216bedb9a51772f12b573d8009f8c3ed6edc0ba",
+    "docs/qa/codex-3/role-worker-identity/quality.cjs": "25a654c2438a370f7acea8e76897728ce1f39bc57c3cbef4c4add44f1a3c1ea5",
+    "docs/qa/codex-3/role-worker-identity/quality-results.json": "6dff7ebdcccc263c7f9b5487ad9d69b828638263c192a850585d3e214a418da5",
+    "docs/qa/codex-3/role-worker-identity/typecheck.cjs": "b90d9572be8f0c4b989e3f02cf7128b9ae76b29d56ec5022a6a397fb5b432bb9",
+    "docs/qa/codex-3/role-worker-identity/typecheck-results.json": "3cc1f705ff6720bf518ed87a1549f195f017395d9ca9481ee47114f670e33e72",
+    "docs/qa/codex-3/role-worker-identity/role.before.tsx.txt": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+    "docs/qa/codex-3/role-worker-identity/worker.before.tsx.txt": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce",
+    "docs/qa/codex-3/role-worker-identity/verify.cjs": "87d0c953413e4ed0096c54ff59c50adcc0ce82001873c50ac7f9285d268d6f4f",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "api/hooks/stores.ts": "09e773358b1846009525f56efcf3d5693385193eb9613e740ec32f2d379b39dc",
+    "components/feature/manage/roles/RolePermissionEditor.tsx": "1ae61d08ffab2ae76c7da980d1cf53cacfda3dae8e59c4d7ebd71a1ab13f1b9b",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/common/ImageUploader.tsx": "9cf83086da9221bb261c35498679cb4a3bd16a498efd86ad3754be7c6acdb05d",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "biome.json": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+    "eslint.config.js": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+    "docs/qa/codex-3/role-worker-identity/verification.json": "43363c704409d0faba8df53a00672498dd9ae2ba56750f19fdf743ad83f8aa68"
+  },
+  "trackedStableThroughoutReview": true,
+  "productionLoadedSourceMatchesFinal": [
+    {
+      "file": "lib/manage/workers.ts",
+      "tested": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "current": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/manage/roles/modify.tsx",
+      "tested": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "current": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "tested": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "current": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "tested": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "current": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "tested": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "current": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "tested": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "current": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "tested": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "current": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "tested": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "current": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "tested": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "current": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "schema/add/role.ts",
+      "tested": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "current": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/workers/modify.tsx",
+      "tested": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "current": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "tested": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "current": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/stores.ts",
+      "tested": "09e773358b1846009525f56efcf3d5693385193eb9613e740ec32f2d379b39dc",
+      "current": "09e773358b1846009525f56efcf3d5693385193eb9613e740ec32f2d379b39dc",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "tested": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "current": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "file": "schema/add/worker.ts",
+      "tested": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "current": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "passed": true
+    }
+  ],
+  "quality": {
+    "owner": "Codex-3",
+    "status": "PASS",
+    "lint": {
+      "command": [
+        "node",
+        "node_modules/eslint/bin/eslint.js",
+        "components/feature/manage/roles/RoleModifyScreen.tsx",
+        "components/feature/manage/workers/WorkerModifyScreen.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "files": [
+        {
+          "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        }
+      ]
+    },
+    "biome": {
+      "command": [
+        "node",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "components/feature/manage/roles/RoleModifyScreen.tsx",
+        "components/feature/manage/workers/WorkerModifyScreen.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 2 files in 14ms. No fixes applied.",
+      "stderr": ""
+    },
+    "diff": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "renderChecks": [
+      {
+        "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+        "comparison": "Editor JSX unchanged except intentional submit event binding and saved disabled condition",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+        "comparison": "Editor JSX unchanged except intentional submit event binding and saved disabled condition",
+        "passed": true
+      }
+    ],
+    "sourceHashes": {
+      "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+    }
+  },
+  "checks": {
+    "developerReplay": 106,
+    "qcProductionQueryMutationIntegration": 34,
+    "totalExecutions": 140,
+    "runtimeErrors": 0,
+    "realHTTPRequests": 0,
+    "note": "Execution count includes overlapping regression coverage."
+  },
+  "publication": "QC_APPROVED_TWO_EDITOR_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+  "findings": [],
+  "limits": [
+    "Native/presentation/form control/route params/auth/photo fetch adapters",
+    "Axios custom transport; production hooks/factory/common/error mapper/usePostRequest/QueryClient execute but no live HTTP/backend/auth interceptors",
+    "No browser/native/root/auth/SSR/keyboard/accessibility/Figma/full app certification",
+    "Requests already sent are not cancelled; cache invalidation follows production contract",
+    "Developer focused typecheck reviewed, not rerun/global gate"
+  ],
+  "unrelatedOpenFinding": "QC-JOURNAL-001 is a separate package; no closure by this decision",
+  "report": "REPORT.md"
+}

@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-09",
+  "scope": "Independent QC additional request-lifetime cases: A -> B -> reopened A and StrictMode. Production route/editor/RHF/Zod; API/query/modal/native primitives adapted. Not browser/native/backend.",
+  "passed": 23,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "success pending request retains original ID/payload",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ]
+    },
+    {
+      "name": "success old A cannot replace reopened A draft",
+      "passed": true,
+      "actual": "Reopened A draft",
+      "expected": "Reopened A draft"
+    },
+    {
+      "name": "success old A cannot lock reopened A save",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "success old A cannot open reopened A success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "success old A cannot open reopened A error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "success old A cannot attach reopened A field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation error pending request retains original ID/payload",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ]
+    },
+    {
+      "name": "validation error old A cannot replace reopened A draft",
+      "passed": true,
+      "actual": "Reopened A draft",
+      "expected": "Reopened A draft"
+    },
+    {
+      "name": "validation error old A cannot lock reopened A save",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation error old A cannot open reopened A success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation error old A cannot open reopened A error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation error old A cannot attach reopened A field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "server error pending request retains original ID/payload",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a",
+          "First A draft"
+        ]
+      ]
+    },
+    {
+      "name": "server error old A cannot replace reopened A draft",
+      "passed": true,
+      "actual": "Reopened A draft",
+      "expected": "Reopened A draft"
+    },
+    {
+      "name": "server error old A cannot lock reopened A save",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "server error old A cannot open reopened A success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "server error old A cannot open reopened A error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "server error old A cannot attach reopened A field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "StrictMode setup/cleanup replay hydrates editor",
+      "passed": true,
+      "actual": "Strict Member",
+      "expected": "Strict Member"
+    },
+    {
+      "name": "StrictMode submit reaches original ID once",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "strict"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "strict"
+        ]
+      ]
+    },
+    {
+      "name": "StrictMode replay keeps mounted guard active for success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "StrictMode successful editor locks repeated save",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "no unexpected React errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "hashes": {
+    "components/feature/manage/member/MemberModifyScreen.tsx": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "app/(no-layout)/manage/member/modify.tsx": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+    "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  }
+}

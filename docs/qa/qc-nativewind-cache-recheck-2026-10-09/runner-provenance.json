@@ -1,0 +1,20 @@
+{
+  "copies": [
+    {
+      "original": "docs/qa/qc-nativewind-cache-2026-10-09/guard-boundaries.cjs",
+      "originalHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "copy": "guard-boundaries.cjs",
+      "copyHash": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "byteIdentical": true
+    },
+    {
+      "original": "docs/qa/qc-nativewind-cache-2026-10-09/queue-boundaries.cjs",
+      "originalHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "copy": "queue-boundaries.cjs",
+      "copyHash": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "byteIdentical": true
+    }
+  ],
+  "initializer": "Run actual scripts/verify-nativewind-cache.cjs with output in own QC folder",
+  "queue": "Run actual scripts/verify-metro-cache.cjs in isolated VM; stdout captured in own QC folder"
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "useProtectedRoute root with imported dependency/declaration closure; not a full-project check",
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

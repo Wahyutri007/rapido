@@ -1,0 +1,36 @@
+{
+  "kind": "INTERNAL_QA_EVIDENCE_AUDIT",
+  "status": "HISTORICAL_PROPOSAL_EVIDENCE_VALID_WITH_LIMITS",
+  "date": "2026-10-09T01:33:41.387Z",
+  "ticket": "SD3-012",
+  "owner": "Codex-3 delegated internal reviewer / review_success_modal",
+  "reviewedSourceHashes": {
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+  },
+  "qcDecisionSha256": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+  "qcArtifactManifestSha256": "2bdbd0836b174333d5bc17095a7efc0ba71606c6cc302263a0578d7fba9231df",
+  "qcArtifactsVerified": 139,
+  "historicalQCProposalExecutionsReviewed": 270,
+  "newRuntimeExecutions": 0,
+  "geometryReuse": "Valid to cite as historical QC proposal geometry proof at byte-identical source and reviewed fixture contracts; not a new browser run, external approval, native proof or certification of changed runtime inputs/current Stock.",
+  "externalFinding": {
+    "id": "QC-SUCCESS-001",
+    "status": "OPEN_PENDING_ACTUAL_SOURCE_FINAL_RECHECK",
+    "closedByThisAudit": false
+  },
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "limits": [
+    "Lightweight fingerprint/source/evidence audit only; no new runtime assertions",
+    "QC proposal proof remains labelled PROPOSAL_ONLY_NOT_APPLIED in immutable historical files",
+    "Current browser timeout with no assertions remains inconclusive",
+    "Input/runtime changes are reported separately and not certified by source equality",
+    "No source/frozen packet edit, server/build/heavy typecheck/Metro/HP/API/Git actions"
+  ],
+  "artifactFingerprints": {
+    "audit.cjs": "19abe90bd2d2387698d54f4e8366f297dd8789d2f8dd2d21d03880eb98c5f7c1",
+    "audit.json": "ed4b9776faa08433697ceb2e378412a54b7dbbae23cfcafe471558263becaa1f",
+    "finalize.cjs": "0ab9898f4a774fccfd9b43366727f78f231173344f29ddb7c411ce7888bf29f8",
+    "REPORT.md": "2a3216672406d8cd060762e6caee2b195dc6ce1ef00fa8e08e22b079fae4d218"
+  }
+}

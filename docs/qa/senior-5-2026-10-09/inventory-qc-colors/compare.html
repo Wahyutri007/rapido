@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inventory — bukti koreksi warna SD5-011</title>
+<style>
+body{font:15px/1.5 system-ui;color:#2c2c2c;background:#f7f8fa;margin:24px}main{max-width:950px;margin:auto}h1{font-size:23px}h2{font-size:18px}section{display:flex;gap:24px;overflow:auto;margin-bottom:32px}figure{margin:0;flex:none}figcaption{margin:8px 0;max-width:390px}img{display:block;max-width:390px;height:auto}p{max-width:850px}.notice{padding:16px;background:white;border-radius:12px}
+</style>
+<main>
+<h1>Inventory: bukti koreksi warna</h1>
+<p>Angka Stok Awal, Penyusutan dan Stok Akhir kini mengikuti warna status. Jumlah serta persentase Rusak tetap merah. Ikon informasi pada daftar Transfer dan Pembelian sekarang abu-abu; link dan tombol tetap biru.</p>
+<p class="notice">Koreksi warna saja, belum persetujuan seluruh desain. Referensi Figma tersimpan berasal dari frame 1:13605, 1:12059 dan 1:14945; akses baru masih terkena batas Starter. Screenshot referensi diperkecil oleh layanan. Tampilan aplikasi memakai data Inventory existing. Layar daftar diuji pada 320 px, sedangkan acuan 390 px: tata letak, bentuk ikon dan seluruh state masih perlu pemeriksaan terpisah.</p>
+<h2>Detail Penyesuaian Stok</h2>
+<section>
+<figure><figcaption>Referensi tersimpan Figma 1:13605</figcaption><img src="figma-1-13605.png" alt="Referensi Detail Penyesuaian Stok"></figure>
+<figure><figcaption>Aplikasi 390 × 844: 300 / 34 / 266 dan Rusak berwarna</figcaption><img src="adjustment-390.png" alt="Detail Penyesuaian Stok setelah koreksi"></figure>
+<figure><figcaption>Aplikasi 320 × 640</figcaption><img src="adjustment-320.png" alt="Detail Penyesuaian Stok pada layar kecil"></figure>
+</section>
+<h2>Daftar Transfer Stok</h2>
+<section>
+<figure><figcaption>Referensi tersimpan Figma 1:12059</figcaption><img src="figma-1-12059.png" alt="Referensi Transfer Stok"></figure>
+<figure><figcaption>Aplikasi 320 × 640: ikon informasi abu-abu</figcaption><img src="transfer-320.png" alt="Daftar Transfer Stok setelah koreksi warna"></figure>
+</section>
+<h2>Daftar Pembelian Barang</h2>
+<section>
+<figure><figcaption>Referensi tersimpan Figma 1:14945</figcaption><img src="figma-1-14945.png" alt="Referensi Pembelian Barang"></figure>
+<figure><figcaption>Aplikasi 320 × 640: ikon informasi abu-abu</figcaption><img src="purchase-320.png" alt="Daftar Pembelian Barang setelah koreksi warna"></figure>
+</section>
+<p>44 pemeriksaan browser lulus, runtime/console 0; tujuh pemeriksaan source menjaga perubahan hanya pada prop warna dan prioritas warna. Lint, tipe dan formatting terfokus lulus. QA/QC independen belum menutup temuan.</p>
+<p><a href="HANDOFF.md">Handoff dan batas pemeriksaan</a> · <a href="verification.json">Manifest hasil</a> · <a href="visual-observations.json">Temuan visual yang masih terbuka</a></p>
+</main>
+</html>

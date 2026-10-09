@@ -1,0 +1,33 @@
+{
+  "scope": "All seven direct hook/sheet callers read; source and type review, not full-screen runtime tests.",
+  "files": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/summary.tsx",
+      "sha256": "8a1f4b7ae1ae90368f64ee705df113319182ff0b7fd9a46d523cdb0dafacb0b0"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/sales.tsx",
+      "sha256": "11029b6700859563856257cc9eaac0f85c095fc4a21afa6e466a89420e2b3c61"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/purchase-supplier.tsx",
+      "sha256": "fb45b75e437163018e93c35b7ddfac032d3dd014150ab50e772d34a487c87f81"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/product-stock.tsx",
+      "sha256": "efdb586a8b222a3a792255f6cfd02252f76944aae3f809dd889be06431dc7384"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/operational-team.tsx",
+      "sha256": "af7f648bf432fade6efdaa397d7be3b793f3278b2af455528b5be3cb26d0813f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/customers-promos.tsx",
+      "sha256": "3951ab41e774e95d9ec1e33dc681269cfa8bb95a6932506dc88aa371d6e024c2"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/cash.tsx",
+      "sha256": "7817ea98f4d9e300244fbd58f6209d0f1d1a0b029bf58621f17e6f592d3cb7ea"
+    }
+  ]
+}

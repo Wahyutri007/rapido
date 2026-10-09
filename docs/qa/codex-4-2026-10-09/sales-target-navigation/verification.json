@@ -1,0 +1,212 @@
+{
+  "owner": "Software Developer Senior4 / Codex-4",
+  "ticket": "SD4-005",
+  "status": "READY_FOR_QA",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sealedAt": "2026-10-09T03:13:23.168Z",
+  "ownedSources": [
+    "app/(no-layout)/manage/sales-target/_layout.tsx"
+  ],
+  "selectedInputs": 43,
+  "checks": {
+    "browser": 17,
+    "navigationCallbacks": 18,
+    "proof": 7,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "apiMutations": 0,
+    "typecheckRoots": 4,
+    "typecheckSourceFiles": 1310,
+    "typecheckDiagnostics": 0,
+    "eslintFiles": 1,
+    "biomeObservedExit": 0,
+    "diffObservedExit": 0
+  },
+  "boundaries": [
+    "Developer evidence on shared working tree; no independent QA/QC/PM approval.",
+    "Production entry/providers/guard/router, isolated auth/API fixtures and HTML/CSS boot adapter; no SSR/backend/native certification.",
+    "Selected43 input fingerprints, not all imported modules. External dependencies remain owner/reviewer gated.",
+    "Figma metadata references; full screenshot/context parity pending. No new UI frame slicing.",
+    "Repeated initial17PASS preserved; final recheck counted once. Startup/adapter/baseline failures not passed assertions.",
+    "One layout delta; forms/store/shared primitives not changed. No dependency/Git publication.",
+    "Own8097 stopped; HP8088/backend8001 preserved."
+  ],
+  "fingerprints": [
+    {
+      "file": "app/(no-layout)/manage/sales-target/_layout.tsx",
+      "sha256": "8e2b5dd7052d22587f83f640a0b96ecc1e8009fffe4e9cf17bec330b9261f574"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/add-320x844.png",
+      "sha256": "8648419d9126be8f9988902f8d0187316052d79a9a97ef925051455214b9b746"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/add-844x390.png",
+      "sha256": "c9d769f77f3db98b96778dccd3ec28bd3b62dfd0d5e2ad11ba3fc5301cf9ef9a"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/browser-failure.json",
+      "sha256": "f835084e683a08203cb8a7e995033224b21df15341f8b22c74b8b4bf3079ce45"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/browser-failure.png",
+      "sha256": "e0112f04120952fa92ce9dd71577f52928409a7dc87abaa87073e40b817c941f"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/dependency-delta.json",
+      "sha256": "e65f10a2b3b378c092c2f6c0416439beb607b6c562008029363766895fb76912"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/add-320x844.png",
+      "sha256": "8648419d9126be8f9988902f8d0187316052d79a9a97ef925051455214b9b746"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/add-844x390.png",
+      "sha256": "c9d769f77f3db98b96778dccd3ec28bd3b62dfd0d5e2ad11ba3fc5301cf9ef9a"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/browser-results.json",
+      "sha256": "192f09288be6793176adf766379931517cafef8424e5df0934e5c2ae2011f4bf"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/detail-390.png",
+      "sha256": "a0d31082b50d815c29af66c11eba22065eab04167ea5690c6e2729f859e19b0b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/edit-390.png",
+      "sha256": "bc005c12051e78854f39ba84aeef080f838a64ec288b037f951f3af37cd4a5dd"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/list-320x844.png",
+      "sha256": "3d3c1f3f9fe4b297983ed87a547d2fc7baea81af7acbde8a078d8c31d810fcb9"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/list-390.png",
+      "sha256": "8b1bd1717a8a9df67af932c7288aaf834e11f4c5b1f8fd441d29e15933100bf5"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/list-844x390.png",
+      "sha256": "f7dca83543cee7912adeadea22a6806c2013a3a1f4e704bd2cda1b6b58641943"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/navigation-results.json",
+      "sha256": "1bec00b41d0bb0c62c7fc960c002d5a8637bcb8899c10dcdea00919c8207ba1c"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/source-inputs.json",
+      "sha256": "1f12634f51d2786b1574b5d4456fea5586fe3278e95065b577ec9dfc7b6a8022"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/first-browser-pass/typecheck-results.json",
+      "sha256": "dc694322befd90b1cd92e7912afceeda550cd9684b9a7fe436f9b62bcdc3869e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/navigation-fixture-errors.json",
+      "sha256": "5c7ed1b3deb4d7cf223ee635ab10c81e91190a8f7c1aee989a28ab5af12d1442"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/navigation-results.json",
+      "sha256": "48f0c22873cf719b33c1427e6d923d79305e1495f60640dd699ba84c26ef6bea"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/startup-failure.json",
+      "sha256": "41e50ad0e96fde1b9df3b9c99d92e548d5257c8af3518bc737d3252a7bd04b20"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/startup-failure.png",
+      "sha256": "fb32313e11bc8ffbd5310a1660e630b64cedb4622f8462a5eae2d5464ac8279e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/before/_layout.tsx",
+      "sha256": "55e364d381dd2fc5c828569c616f74920f0ef1ceadc087316398061159aa45cc"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/browser-check.cjs",
+      "sha256": "4c254ac9d638b55923c6473c8b22fe35c8cfc8c61f10f8d4421a2c599ee7f7bc"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/browser-results.json",
+      "sha256": "f7a9cac622acf71a1eaa7cc33cc73b111016652e9fbf83b3a7d3467cfb9d5725"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/detail-390.png",
+      "sha256": "a0d31082b50d815c29af66c11eba22065eab04167ea5690c6e2729f859e19b0b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/edit-390.png",
+      "sha256": "bc005c12051e78854f39ba84aeef080f838a64ec288b037f951f3af37cd4a5dd"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/eslint-results.json",
+      "sha256": "f4d0ae179cedb169fcdaf83e74b7b5839d8e2721984750da14a2f823ea63985a"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/freeze-proof-results.json",
+      "sha256": "ca17f3020e67c86347c0c05ed32136246cfe710aa1c8848924302a2cf1aa1600"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/freeze-proof.cjs",
+      "sha256": "05dca81cc6aa9e654928b3975c77827ea79437886c5cfb86c2f27d340d60c187"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/HANDOFF.md",
+      "sha256": "c07aba729f77045e91795e57ce14de1353064d0e2b5bbde0dadd29e912133356"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/input-check.cjs",
+      "sha256": "3bba74ba431ba5739c18f72c1e38eda0cb385a8b5267ae176fb305a96826caa5"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/list-320x844.png",
+      "sha256": "3d3c1f3f9fe4b297983ed87a547d2fc7baea81af7acbde8a078d8c31d810fcb9"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/list-390.png",
+      "sha256": "8b1bd1717a8a9df67af932c7288aaf834e11f4c5b1f8fd441d29e15933100bf5"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/list-844x390.png",
+      "sha256": "f7dca83543cee7912adeadea22a6806c2013a3a1f4e704bd2cda1b6b58641943"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/navigation-check.cjs",
+      "sha256": "3cc7f26fa52e6e605af8b0e7af8b2b9aa048289027f416df63e8fdbb5ca915cc"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/navigation-results.json",
+      "sha256": "867dcc6618d924b11190d4f37e74fc8aaa3eaafac025bae74a63aab814d96740"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/post-test-dependency-delta.json",
+      "sha256": "b4218d10526ce846f1b0d958e2e172b3652c58834c0fdebdb5ce44986b313a63"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/proof-results.json",
+      "sha256": "90e6ba9de3461001b065660ce08e2b2b404bd5ec70a27fd268c7ebd51c50acae"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/proof.cjs",
+      "sha256": "bb29288a06e112ff4f0c333852eadb55598a3d37cc4cce130505ce4e04d3d58d"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/seal.cjs",
+      "sha256": "63de61024e98afdf3a29041615c3c88b045192ab7941147101cd350fbea73760"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/SETUP_NOTES.md",
+      "sha256": "ca7972ade4a7ca309ab601086820fa10346e7a8905ca738aa3524c1432194804"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/source-inputs.json",
+      "sha256": "a5d3dbf90cd9c916ad74d579aa6047293677392856906bea2b8cf8a06aff45a2"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/typecheck-results.json",
+      "sha256": "8a5a9adc69513f3a7b4eec5788d38c2fcca7ed2383e08013c137ee665e7d1a1f"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/sales-target-navigation/typecheck.cjs",
+      "sha256": "ba24fa2dc701cbc3ba0b9779f74f13f0d6c9b67db837a454425dca4abb457414"
+    }
+  ]
+}

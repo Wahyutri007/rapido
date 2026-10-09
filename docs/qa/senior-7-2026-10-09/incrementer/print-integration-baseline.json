@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "checks": [
+    "dialog uses the actual Incrementer and initial print count",
+    "increment updates dialog print count",
+    "decrement updates dialog print count"
+  ],
+  "source": [
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "sha256": "bda55f6874c0303c7527505672e7841c87b23a0cf748bb971531ecc5845b079a"
+    },
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "sha256": "9fa996d22bcaa2fed81fc2fe7b48b9bdf90ad328b519f5c0fa13e44f19e5280f"
+    }
+  ],
+  "message": "pending print quantity cannot be incremented after enqueue\n\n4 !== 3\n",
+  "actual": 4,
+  "expected": 3
+}

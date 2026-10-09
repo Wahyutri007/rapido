@@ -1,0 +1,9 @@
+{
+  "ticket": "SD5-011",
+  "files": {
+    "components/feature/inventory/InventoryUi.tsx": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791",
+    "components/feature/inventory/StockOperationDetail.tsx": "957ad8bc7a2aedfc168ae14b10241af55e9f8fdc18a51495c89947c9174004df",
+    "components/feature/inventory/StockOperationList.tsx": "862fee45c32f56c8f3e0e98268e463b12cf3171aa370084761b277ac3b1cd3bc",
+    "components/feature/inventory/PurchaseListScreen.tsx": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76"
+  }
+}

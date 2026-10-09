@@ -1,0 +1,23 @@
+
+Stok Akhir
+
+Toko Degri
+
+Semua Status
+
+Hanya bahan yang terdaftar di toko ini. Jumlah stok per toko belum tersedia; tanda — bukan berarti stok habis.
+Reset Filter
+Produk
+Stok Akhir
+Bahan Baku
+Bahan Uji QA
+SD5-QA-ONLY
+—
+
+Beranda
+Laporan
+
+Katalog
+Inventory
+
+Kelola

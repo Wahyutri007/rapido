@@ -1,0 +1,134 @@
+{
+  "source": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+  "sourceHash": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+  "checks": [
+    {
+      "name": "category roundtrip preserves content type and IDs",
+      "passed": true
+    },
+    {
+      "name": "item roundtrip preserves menu IDs",
+      "passed": true
+    },
+    {
+      "name": "disabled category config preserves exclusions",
+      "passed": true
+    },
+    {
+      "name": "late settings populate untouched category selection",
+      "passed": true
+    },
+    {
+      "name": "edited switch survives category response change",
+      "passed": true
+    },
+    {
+      "name": "category picker commits only category IDs and protects pair from item refetch",
+      "passed": true
+    },
+    {
+      "name": "open item picker keeps item identity when settings change to categories",
+      "passed": true
+    },
+    {
+      "name": "open category picker keeps category identity when settings change to items",
+      "passed": true
+    },
+    {
+      "name": "category cancel accepts latest untouched server selection",
+      "passed": true
+    },
+    {
+      "name": "item cancel leaves committed IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "clearing category exclusions sends all mode with empty array",
+      "passed": true
+    },
+    {
+      "name": "category search and picker draft survive list and settings refetch",
+      "passed": true
+    },
+    {
+      "name": "picker reopens with committed selection and empty search",
+      "passed": true
+    },
+    {
+      "name": "loading menu list displays loading without sample IDs",
+      "passed": true
+    },
+    {
+      "name": "empty menu list displays empty state without samples",
+      "passed": true
+    },
+    {
+      "name": "failed menu list offers retry without samples",
+      "passed": true
+    },
+    {
+      "name": "empty category list never shows menu rows",
+      "passed": true
+    },
+    {
+      "name": "category list error retries correct endpoint",
+      "passed": true
+    },
+    {
+      "name": "category list loading uses category state",
+      "passed": true
+    },
+    {
+      "name": "actual menu labels contain no invented stock quantities",
+      "passed": true
+    },
+    {
+      "name": "category labels and counts reflect category contract",
+      "passed": true
+    },
+    {
+      "name": "failed save keeps committed category pair",
+      "passed": true
+    },
+    {
+      "name": "pending settings prevent destructive default save",
+      "passed": true
+    },
+    {
+      "name": "failed initial settings prevent save and offer retry",
+      "passed": true
+    },
+    {
+      "name": "successful missing settings allow all default",
+      "passed": true
+    },
+    {
+      "name": "all mode ignores stale exclusion details",
+      "passed": true
+    },
+    {
+      "name": "legacy missing content type infers category from relation type",
+      "passed": true
+    },
+    {
+      "name": "legacy missing content type defaults menu to item",
+      "passed": true
+    },
+    {
+      "name": "category mode enables category query and suspends menu query",
+      "passed": true
+    },
+    {
+      "name": "search with no matches displays clear message",
+      "passed": true
+    },
+    {
+      "name": "clearing data from catalog never drops existing IDs on save",
+      "passed": true
+    }
+  ],
+  "runtimeConsoleErrors": [],
+  "passed": 31,
+  "failed": 0,
+  "limitations": "Actual screen/React DOM; UI/query/router adapters, not browser/native/backend certification"
+}

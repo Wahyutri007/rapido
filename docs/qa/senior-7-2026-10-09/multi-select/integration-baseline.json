@@ -1,0 +1,107 @@
+{
+  "suite": "integration",
+  "status": "FAIL",
+  "passed": 10,
+  "failed": 5,
+  "checks": [
+    {
+      "name": "RHF value stays committed while drafting",
+      "pass": true
+    },
+    {
+      "name": "RHF remains pristine while drafting",
+      "pass": true
+    },
+    {
+      "name": "RHF parent rerender with fresh arrays preserves draft",
+      "pass": true
+    },
+    {
+      "name": "confirm updates RHF",
+      "pass": true
+    },
+    {
+      "name": "confirm marks RHF dirty",
+      "pass": true
+    },
+    {
+      "name": "RHF reset during open replaces draft",
+      "pass": false,
+      "actual": [
+        "Alpha",
+        "Beta",
+        "Gamma"
+      ],
+      "expected": [
+        "Gamma"
+      ]
+    },
+    {
+      "name": "confirm after reset cannot resurrect old form values",
+      "pass": false,
+      "actual": [
+        "a",
+        "b",
+        "c"
+      ],
+      "expected": [
+        "c"
+      ]
+    },
+    {
+      "name": "confirm unchanged reset value stays pristine",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "RHF setValue empty clears pending choices",
+      "pass": false,
+      "actual": [
+        "Beta",
+        "Gamma"
+      ],
+      "expected": []
+    },
+    {
+      "name": "empty field confirmation remains empty",
+      "pass": false,
+      "actual": [
+        "b",
+        "c"
+      ],
+      "expected": []
+    },
+    {
+      "name": "RHF cancel keeps value and pristine state",
+      "pass": true
+    },
+    {
+      "name": "pill removal updates RHF immediately",
+      "pass": true
+    },
+    {
+      "name": "other form fields are untouched",
+      "pass": true
+    },
+    {
+      "name": "no unexpected runtime or act errors",
+      "pass": true
+    },
+    {
+      "name": "production inputs stable during test",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "c6d6cb13a86e1c0a7ff178abd1e28492521171059f88c49c24785519df392f72"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "scope": "StrictMode React production MultiSelect; integration also uses installed RHF Controller/useForm. Native/UI/SearchBar adapters, no native/browser/route/API certification."
+}

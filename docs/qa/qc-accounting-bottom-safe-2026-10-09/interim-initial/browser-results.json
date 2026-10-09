@@ -1,0 +1,2635 @@
+{
+  "createdAt": "2026-10-09T02:34:38.801Z",
+  "owner": "QC",
+  "ticket": "ACCOUNTING-BOTTOM-SAFE-001",
+  "passed": 110,
+  "failed": 3,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "checks": [
+    {
+      "name": "form-0: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16,
+              "y": 576,
+              "width": 288,
+              "height": 48
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-0: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16
+      }
+    },
+    {
+      "name": "form-0: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 559,
+          "width": 320,
+          "height": 81
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-0: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 16,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-0: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 412,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1984,
+          "clientHeight": 640,
+          "scrollTop": 1344
+        },
+        "footerTop": 559
+      }
+    },
+    {
+      "name": "form-0: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "form-16: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 15.999984741210938,
+              "y": 560,
+              "width": 288.00001525878906,
+              "height": 48
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 16,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-16: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16
+      }
+    },
+    {
+      "name": "form-16: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 543,
+          "width": 320,
+          "height": 97
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 32,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-16: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 32,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-16: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 396,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2000,
+          "clientHeight": 640,
+          "scrollTop": 1360
+        },
+        "footerTop": 543
+      }
+    },
+    {
+      "name": "form-16: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "form-24: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16.002731323242188,
+              "y": 552.0004272460938,
+              "width": 287.99452209472656,
+              "height": 47.99908447265625
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 24,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-24: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.00048828125
+      }
+    },
+    {
+      "name": "form-24: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 535,
+          "width": 320,
+          "height": 105
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 40,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-24: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 40,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-24: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 388,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2008,
+          "clientHeight": 640,
+          "scrollTop": 1368
+        },
+        "footerTop": 535
+      }
+    },
+    {
+      "name": "form-24: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "form-34: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16.005706787109375,
+              "y": 542.0009765625,
+              "width": 287.98858642578125,
+              "height": 47.998046875
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 34,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-34: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.0009765625
+      }
+    },
+    {
+      "name": "form-34: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 525,
+          "width": 320,
+          "height": 115
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 50,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-34: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 50,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-34: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 378,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2018,
+          "clientHeight": 640,
+          "scrollTop": 1378
+        },
+        "footerTop": 525
+      }
+    },
+    {
+      "name": "form-34: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "form-48: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16.006271362304688,
+              "y": 528.0010375976562,
+              "width": 287.98744201660156,
+              "height": 47.9979248046875
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-48: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.00103759765625
+      }
+    },
+    {
+      "name": "form-48: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 511,
+          "width": 320,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-48: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-48: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 364,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2032,
+          "clientHeight": 640,
+          "scrollTop": 1392
+        },
+        "footerTop": 511
+      }
+    },
+    {
+      "name": "form-48: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "form-64: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16,
+              "y": 512,
+              "width": 288,
+              "height": 48
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 64,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "form-64: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16
+      }
+    },
+    {
+      "name": "form-64: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 495,
+          "width": 320,
+          "height": 145
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 80,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "form-64: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 80,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "form-64: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 348,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2048,
+          "clientHeight": 640,
+          "scrollTop": 1408
+        },
+        "footerTop": 495
+      }
+    },
+    {
+      "name": "form-64: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "animated-48: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 15.999725341796875,
+              "y": 731.9999389648438,
+              "width": 358.00054931640625,
+              "height": 48.0001220703125
+            }
+          }
+        ],
+        "safe": {
+          "width": 390,
+          "height": 844,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "animated-48: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 15.99993896484375
+      }
+    },
+    {
+      "name": "animated-48: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "animated-48: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "animated-48: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 568,
+          "width": 358,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2032,
+          "clientHeight": 844,
+          "scrollTop": 1188
+        },
+        "footerTop": 715
+      }
+    },
+    {
+      "name": "animated-48: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "manual100-48: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 15.998428344726562,
+              "y": 731.9998168945312,
+              "width": 358.00315856933594,
+              "height": 48.00042724609375
+            }
+          }
+        ],
+        "safe": {
+          "width": 390,
+          "height": 844,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "manual100-48: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 15.999755859375
+      }
+    },
+    {
+      "name": "manual100-48: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "manual100-48: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "manual100-48: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 628,
+          "width": 358,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1972,
+          "clientHeight": 844,
+          "scrollTop": 1128
+        },
+        "footerTop": 715
+      }
+    },
+    {
+      "name": "manual100-48: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "manual110-48: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 15.99810791015625,
+              "y": 731.999755859375,
+              "width": 358.0037841796875,
+              "height": 48.00048828125
+            }
+          }
+        ],
+        "safe": {
+          "width": 390,
+          "height": 844,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "manual110-48: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 15.999755859375
+      }
+    },
+    {
+      "name": "manual110-48: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "manual110-48: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "manual110-48: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 618,
+          "width": 358,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1982,
+          "clientHeight": 844,
+          "scrollTop": 1138
+        },
+        "footerTop": 715
+      }
+    },
+    {
+      "name": "manual110-48: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "row-48: buttons clear simulated system bars and remain at least44px high",
+      "passed": false,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Edit",
+            "box": {
+              "x": 15.999420166015625,
+              "y": 753.9999389648438,
+              "width": 173.00115966796875,
+              "height": 26.0001220703125
+            }
+          },
+          {
+            "label": "Hapus",
+            "box": {
+              "x": 201,
+              "y": 755,
+              "width": 173,
+              "height": 24
+            }
+          }
+        ],
+        "safe": {
+          "width": 390,
+          "height": 844,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "row-48: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 15.99993896484375
+      }
+    },
+    {
+      "name": "row-48: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 737,
+          "width": 390,
+          "height": 107
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "row-48: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "row-48: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 568,
+          "width": 358,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2032,
+          "clientHeight": 844,
+          "scrollTop": 1188
+        },
+        "footerTop": 737
+      }
+    },
+    {
+      "name": "row-48: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Edit"
+      ]
+    },
+    {
+      "name": "row-side: buttons clear simulated system bars and remain at least44px high",
+      "passed": false,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Edit",
+            "box": {
+              "x": 64.00210571289062,
+              "y": 332.0001525878906,
+              "width": 363.99578857421875,
+              "height": 25.99969482421875
+            }
+          },
+          {
+            "label": "Hapus",
+            "box": {
+              "x": 440,
+              "y": 333,
+              "width": 364,
+              "height": 24
+            }
+          }
+        ],
+        "safe": {
+          "width": 844,
+          "height": 390,
+          "bottom": 16,
+          "left": 48,
+          "right": 24
+        }
+      }
+    },
+    {
+      "name": "row-side: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.000152587890625
+      }
+    },
+    {
+      "name": "row-side: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 315,
+          "width": 844,
+          "height": 75
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 32,
+          "left": 64,
+          "right": 40
+        }
+      }
+    },
+    {
+      "name": "row-side: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 32,
+        "left": 64,
+        "right": 40
+      }
+    },
+    {
+      "name": "row-side: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 146,
+          "width": 812,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2000,
+          "clientHeight": 390,
+          "scrollTop": 1610
+        },
+        "footerTop": 315
+      }
+    },
+    {
+      "name": "row-side: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Edit"
+      ]
+    },
+    {
+      "name": "report-0: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Aksi laporan",
+            "box": {
+              "x": 16,
+              "y": 572,
+              "width": 288,
+              "height": 44
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "report-0: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 24
+      }
+    },
+    {
+      "name": "report-0: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 563,
+          "width": 320,
+          "height": 77
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 24,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "report-0: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 8,
+        "bottom": 24,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "report-0: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 460,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1936,
+          "clientHeight": 640,
+          "scrollTop": 1296
+        },
+        "footerTop": 563
+      }
+    },
+    {
+      "name": "report-0: production report trigger invokes callback once and opens sheet",
+      "passed": true,
+      "detail": [
+        "report-open",
+        "report-state-true"
+      ]
+    },
+    {
+      "name": "report-0: selecting fixture action closes sheet",
+      "passed": false
+    },
+    {
+      "name": "report-34: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Aksi laporan",
+            "box": {
+              "x": 16,
+              "y": 538,
+              "width": 288,
+              "height": 44
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 34,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "report-34: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 24
+      }
+    },
+    {
+      "name": "report-34: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 529,
+          "width": 320,
+          "height": 111
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 58,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "report-34: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 8,
+        "bottom": 58,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "report-34: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 426,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1970,
+          "clientHeight": 640,
+          "scrollTop": 1330
+        },
+        "footerTop": 529
+      }
+    },
+    {
+      "name": "report-34: production report trigger invokes callback once and opens sheet",
+      "passed": true,
+      "detail": [
+        "report-open",
+        "report-state-true"
+      ]
+    },
+    {
+      "name": "report-34: selecting fixture action closes sheet",
+      "passed": true
+    },
+    {
+      "name": "report-64: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Aksi laporan",
+            "box": {
+              "x": 16,
+              "y": 508,
+              "width": 288,
+              "height": 44
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 64,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "report-64: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 24
+      }
+    },
+    {
+      "name": "report-64: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 499,
+          "width": 320,
+          "height": 141
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 88,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "report-64: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 8,
+        "bottom": 88,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "report-64: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 396,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2000,
+          "clientHeight": 640,
+          "scrollTop": 1360
+        },
+        "footerTop": 499
+      }
+    },
+    {
+      "name": "report-64: production report trigger invokes callback once and opens sheet",
+      "passed": true,
+      "detail": [
+        "report-open",
+        "report-state-true"
+      ]
+    },
+    {
+      "name": "report-64: selecting fixture action closes sheet",
+      "passed": true
+    },
+    {
+      "name": "standalone: no fixed bottom bar added without footer mode",
+      "passed": true
+    },
+    {
+      "name": "standalone: production report trigger invokes callback once and opens sheet",
+      "passed": true,
+      "detail": [
+        "standalone-open"
+      ]
+    },
+    {
+      "name": "standalone: selecting fixture action closes sheet",
+      "passed": true
+    },
+    {
+      "name": "none: no fixed bottom bar added without footer mode",
+      "passed": true
+    },
+    {
+      "name": "live-initial: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16,
+              "y": 528,
+              "width": 288,
+              "height": 48
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 48,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "live-initial: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16
+      }
+    },
+    {
+      "name": "live-initial: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 511,
+          "width": 320,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "live-initial: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 64,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "live-initial: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 364,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2032,
+          "clientHeight": 640,
+          "scrollTop": 1392
+        },
+        "footerTop": 511
+      }
+    },
+    {
+      "name": "live-initial: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "live-landscape: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 64.00506591796875,
+              "y": 296.0004577636719,
+              "width": 535.9898681640625,
+              "height": 47.99908447265625
+            }
+          }
+        ],
+        "safe": {
+          "width": 640,
+          "height": 360,
+          "bottom": 0,
+          "left": 48,
+          "right": 24
+        }
+      }
+    },
+    {
+      "name": "live-landscape: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.000457763671875
+      }
+    },
+    {
+      "name": "live-landscape: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 279,
+          "width": 640,
+          "height": 81
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "left": 64,
+          "right": 40
+        }
+      }
+    },
+    {
+      "name": "live-landscape: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 16,
+        "left": 64,
+        "right": 40
+      }
+    },
+    {
+      "name": "live-landscape: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 132,
+          "width": 608,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 1984,
+          "clientHeight": 360,
+          "scrollTop": 1624
+        },
+        "footerTop": 279
+      }
+    },
+    {
+      "name": "live-landscape: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "live-portrait: buttons clear simulated system bars and remain at least44px high",
+      "passed": true,
+      "detail": {
+        "buttons": [
+          {
+            "label": "Simpan",
+            "box": {
+              "x": 16.003448486328125,
+              "y": 512.0005493164062,
+              "width": 287.99310302734375,
+              "height": 47.9989013671875
+            }
+          }
+        ],
+        "safe": {
+          "width": 320,
+          "height": 640,
+          "bottom": 64,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "live-portrait: usable gap above system area preserved",
+      "passed": true,
+      "detail": {
+        "bottomGap": 16.00054931640625
+      }
+    },
+    {
+      "name": "live-portrait: left/right safe inset additive and footer remains in viewport",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 0,
+          "y": 495,
+          "width": 320,
+          "height": 145
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 80,
+          "left": 16,
+          "right": 16
+        }
+      }
+    },
+    {
+      "name": "live-portrait: status-bar top inset does not increase footer top",
+      "passed": true,
+      "detail": {
+        "top": 16,
+        "bottom": 80,
+        "left": 16,
+        "right": 16
+      }
+    },
+    {
+      "name": "live-portrait: last field fully reachable above fixed footer after scrolling",
+      "passed": true,
+      "detail": {
+        "last": {
+          "x": 16,
+          "y": 348,
+          "width": 288,
+          "height": 52
+        },
+        "scroll": {
+          "scrollHeight": 2048,
+          "clientHeight": 640,
+          "scrollTop": 1408
+        },
+        "footerTop": 495
+      }
+    },
+    {
+      "name": "live-portrait: wrapper passes original button callback once",
+      "passed": true,
+      "detail": [
+        "Simpan"
+      ]
+    },
+    {
+      "name": "same mounted instance survives orientation and inset updates",
+      "passed": true,
+      "detail": {
+        "instance": "0.ce42rbl3k1"
+      }
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external HTTP/API attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "measurements": [
+    {
+      "label": "form-0",
+      "config": {
+        "kind": "form",
+        "bottom": 0,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16,
+            "y": 576,
+            "width": 288,
+            "height": 48
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 559,
+          "width": 320,
+          "height": 81
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1984,
+        "clientHeight": 640,
+        "scrollTop": 1344
+      },
+      "last": {
+        "x": 16,
+        "y": 412,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "form-16",
+      "config": {
+        "kind": "form",
+        "bottom": 16,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 15.999984741210938,
+            "y": 560,
+            "width": 288.00001525878906,
+            "height": 48
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 543,
+          "width": 320,
+          "height": 97
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 32,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2000,
+        "clientHeight": 640,
+        "scrollTop": 1360
+      },
+      "last": {
+        "x": 16,
+        "y": 396,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "form-24",
+      "config": {
+        "kind": "form",
+        "bottom": 24,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16.002731323242188,
+            "y": 552.0004272460938,
+            "width": 287.99452209472656,
+            "height": 47.99908447265625
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 535,
+          "width": 320,
+          "height": 105
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 40,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2008,
+        "clientHeight": 640,
+        "scrollTop": 1368
+      },
+      "last": {
+        "x": 16,
+        "y": 388,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "form-34",
+      "config": {
+        "kind": "form",
+        "bottom": 34,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16.005706787109375,
+            "y": 542.0009765625,
+            "width": 287.98858642578125,
+            "height": 47.998046875
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 525,
+          "width": 320,
+          "height": 115
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 50,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2018,
+        "clientHeight": 640,
+        "scrollTop": 1378
+      },
+      "last": {
+        "x": 16,
+        "y": 378,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "form-48",
+      "config": {
+        "kind": "form",
+        "bottom": 48,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16.006271362304688,
+            "y": 528.0010375976562,
+            "width": 287.98744201660156,
+            "height": 47.9979248046875
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 511,
+          "width": 320,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2032,
+        "clientHeight": 640,
+        "scrollTop": 1392
+      },
+      "last": {
+        "x": 16,
+        "y": 364,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "form-64",
+      "config": {
+        "kind": "form",
+        "bottom": 64,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16,
+            "y": 512,
+            "width": 288,
+            "height": 48
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 495,
+          "width": 320,
+          "height": 145
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 80,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2048,
+        "clientHeight": 640,
+        "scrollTop": 1408
+      },
+      "last": {
+        "x": 16,
+        "y": 348,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "animated-48",
+      "config": {
+        "kind": "animated",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 15.999725341796875,
+            "y": 731.9999389648438,
+            "width": 358.00054931640625,
+            "height": 48.0001220703125
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2032,
+        "clientHeight": 844,
+        "scrollTop": 1188
+      },
+      "last": {
+        "x": 16,
+        "y": 568,
+        "width": 358,
+        "height": 52
+      }
+    },
+    {
+      "label": "manual100-48",
+      "config": {
+        "kind": "manual100",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 15.998428344726562,
+            "y": 731.9998168945312,
+            "width": 358.00315856933594,
+            "height": 48.00042724609375
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1972,
+        "clientHeight": 844,
+        "scrollTop": 1128
+      },
+      "last": {
+        "x": 16,
+        "y": 628,
+        "width": 358,
+        "height": 52
+      }
+    },
+    {
+      "label": "manual110-48",
+      "config": {
+        "kind": "manual110",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 15.99810791015625,
+            "y": 731.999755859375,
+            "width": 358.0037841796875,
+            "height": 48.00048828125
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 715,
+          "width": 390,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1982,
+        "clientHeight": 844,
+        "scrollTop": 1138
+      },
+      "last": {
+        "x": 16,
+        "y": 618,
+        "width": 358,
+        "height": 52
+      }
+    },
+    {
+      "label": "row-48",
+      "config": {
+        "kind": "row",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "buttons": [
+        {
+          "label": "Edit",
+          "box": {
+            "x": 15.999420166015625,
+            "y": 753.9999389648438,
+            "width": 173.00115966796875,
+            "height": 26.0001220703125
+          }
+        },
+        {
+          "label": "Hapus",
+          "box": {
+            "x": 201,
+            "y": 755,
+            "width": 173,
+            "height": 24
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 737,
+          "width": 390,
+          "height": 107
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2032,
+        "clientHeight": 844,
+        "scrollTop": 1188
+      },
+      "last": {
+        "x": 16,
+        "y": 568,
+        "width": 358,
+        "height": 52
+      }
+    },
+    {
+      "label": "row-side",
+      "config": {
+        "kind": "row",
+        "bottom": 16,
+        "top": 0,
+        "left": 48,
+        "right": 24
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "buttons": [
+        {
+          "label": "Edit",
+          "box": {
+            "x": 64.00210571289062,
+            "y": 332.0001525878906,
+            "width": 363.99578857421875,
+            "height": 25.99969482421875
+          }
+        },
+        {
+          "label": "Hapus",
+          "box": {
+            "x": 440,
+            "y": 333,
+            "width": 364,
+            "height": 24
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 315,
+          "width": 844,
+          "height": 75
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 32,
+          "left": 64,
+          "right": 40
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2000,
+        "clientHeight": 390,
+        "scrollTop": 1610
+      },
+      "last": {
+        "x": 16,
+        "y": 146,
+        "width": 812,
+        "height": 52
+      }
+    },
+    {
+      "label": "report-0",
+      "config": {
+        "kind": "report",
+        "bottom": 0,
+        "top": 30,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Aksi laporan",
+          "box": {
+            "x": 16,
+            "y": 572,
+            "width": 288,
+            "height": 44
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 563,
+          "width": 320,
+          "height": 77
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 24,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1936,
+        "clientHeight": 640,
+        "scrollTop": 1296
+      },
+      "last": {
+        "x": 16,
+        "y": 460,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "report-34",
+      "config": {
+        "kind": "report",
+        "bottom": 34,
+        "top": 30,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Aksi laporan",
+          "box": {
+            "x": 16,
+            "y": 538,
+            "width": 288,
+            "height": 44
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 529,
+          "width": 320,
+          "height": 111
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 58,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1970,
+        "clientHeight": 640,
+        "scrollTop": 1330
+      },
+      "last": {
+        "x": 16,
+        "y": 426,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "report-64",
+      "config": {
+        "kind": "report",
+        "bottom": 64,
+        "top": 30,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Aksi laporan",
+          "box": {
+            "x": 16,
+            "y": 508,
+            "width": 288,
+            "height": 44
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 499,
+          "width": 320,
+          "height": 141
+        },
+        "padding": {
+          "top": 8,
+          "bottom": 88,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2000,
+        "clientHeight": 640,
+        "scrollTop": 1360
+      },
+      "last": {
+        "x": 16,
+        "y": 396,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "standalone",
+      "config": {
+        "kind": "standalone",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "buttons": [
+        {
+          "label": "Aksi mandiri",
+          "box": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 44
+          }
+        }
+      ],
+      "footer": null,
+      "scroll": {
+        "scrollHeight": 1824,
+        "clientHeight": 844,
+        "scrollTop": 980
+      },
+      "last": {
+        "x": 16,
+        "y": 776,
+        "width": 358,
+        "height": 52
+      }
+    },
+    {
+      "label": "none",
+      "config": {
+        "kind": "none",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [],
+      "footer": null,
+      "scroll": {
+        "scrollHeight": 1824,
+        "clientHeight": 640,
+        "scrollTop": 1184
+      },
+      "last": {
+        "x": 16,
+        "y": 572,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "live-initial",
+      "config": {
+        "kind": "animated",
+        "bottom": 48,
+        "top": 24,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16,
+            "y": 528,
+            "width": 288,
+            "height": 48
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 511,
+          "width": 320,
+          "height": 129
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 64,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2032,
+        "clientHeight": 640,
+        "scrollTop": 1392
+      },
+      "last": {
+        "x": 16,
+        "y": 364,
+        "width": 288,
+        "height": 52
+      }
+    },
+    {
+      "label": "live-landscape",
+      "config": {
+        "kind": "animated",
+        "bottom": 0,
+        "top": 0,
+        "left": 48,
+        "right": 24
+      },
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 64.00506591796875,
+            "y": 296.0004577636719,
+            "width": 535.9898681640625,
+            "height": 47.99908447265625
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 279,
+          "width": 640,
+          "height": 81
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "left": 64,
+          "right": 40
+        }
+      },
+      "scroll": {
+        "scrollHeight": 1984,
+        "clientHeight": 360,
+        "scrollTop": 1624
+      },
+      "last": {
+        "x": 16,
+        "y": 132,
+        "width": 608,
+        "height": 52
+      }
+    },
+    {
+      "label": "live-portrait",
+      "config": {
+        "kind": "animated",
+        "bottom": 64,
+        "top": 32,
+        "left": 0,
+        "right": 0
+      },
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "buttons": [
+        {
+          "label": "Simpan",
+          "box": {
+            "x": 16.003448486328125,
+            "y": 512.0005493164062,
+            "width": 287.99310302734375,
+            "height": 47.9989013671875
+          }
+        }
+      ],
+      "footer": {
+        "box": {
+          "x": 0,
+          "y": 495,
+          "width": 320,
+          "height": 145
+        },
+        "padding": {
+          "top": 16,
+          "bottom": 80,
+          "left": 16,
+          "right": 16
+        }
+      },
+      "scroll": {
+        "scrollHeight": 2048,
+        "clientHeight": 640,
+        "scrollTop": 1408
+      },
+      "last": {
+        "x": 16,
+        "y": 348,
+        "width": 288,
+        "height": 52
+      }
+    }
+  ],
+  "offlineBuild": {
+    "createdAt": "2026-10-09T02:33:57.432Z",
+    "entry": "docs\\qa\\qc-accounting-bottom-safe-2026-10-09\\footer-entry.fixture.jsx",
+    "entryHash": "e03197637b612fc7938a05a54e549c641311b1719a1e25a044856679eca6a3ac",
+    "output": ".expo\\qc-accounting-bottom-safe-offline\\entry.bundle.js",
+    "bundleHash": "c3bf300bcc2cffc489c60ca13917474f74751d73272e41e1c04b9875113aba92",
+    "assetsPath": ".expo\\qc-accounting-bottom-safe-offline\\assets.json",
+    "assetsHash": "de8d16d5651b60d557acc3db91db5c072d0f074d80fa31c255f8e28c9ea27f4e",
+    "bytes": 5746118,
+    "assets": 23,
+    "inputHashes": {
+      "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx": "d439975ccc898e9b6894f53189be5d61079ffacff0c1cc791327de8e6d7c54e4",
+      "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx": "89f8947beb49ff63526c6c684ee3d8a90c184ba4882a33f55c581d83581eac9e",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx": "3793e50928bbda2e4cbcceb9e5e4051a914b36683eb0648568350f1b9738acd6",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx": "ffa92dabb0da42b18b1b842f5af40e17c901e5a0e052a0dfe4948437e6578da0",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "846f1a8353b2ced2884d2d5dfbbe6f04535ca2cbb57ccd6b946c5dd29068acf4",
+      "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx": "3922889b284bacddf2d3d5ded857e1d8b7910023a4600399e32aaea14c1ab471",
+      "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx": "1615d3f577c27beab2a6935790a077f1b331188c9a9321f36c85012548080fb3",
+      "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx": "6d27c7ff407fe16e268b58ebe09a3f6fe2f9a29052cf3614e601a4e4c49b4c3e",
+      "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx": "cbf034894331b654dbce325df34dd8d9f5d1f18cabb589db148c4f212b1ddc8a",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx": "3486908d48c53328d625a2ff559356370f8d7bf30a3dc20fef656c39c8148186",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx": "f768645fe0881834386ab8a41ba5a172735e82f8bc2294542b25ac12b1c4051f",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c96496c04ff5f8a1b053c7eb9d6bc2e65d63497c6aac50e2810ef0909a3fa7a2",
+      "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx": "9fd103b6c6af39c9f31f87af9d28ba791f936ce2c611fc07037c729a997e6316",
+      "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx": "8555826fd5281a47296e2a5bd5af9ee89ceb7c5c4941f27710a523808d5cd11e",
+      "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx": "e5048c17160c041d4a09ba5d0c4ffb11b2f039bae48b464d8eb5ab17ac02497f",
+      "components/common/Wrapper.tsx": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+      "components/common/AnimatedWrapper.tsx": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f",
+      "components/feature/reports/ReportActionButton.tsx": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f",
+      "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1",
+      "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+      "components/ui/gluestack-ui-provider/index.tsx": "b32bee6c6810e5ff75dc429bcfc608c0ae5c564dd735e0f445c5c8ba77c54b73",
+      "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+      "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+      "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "hooks/useScrollProgress.ts": "7b505734afd7a12fa970ce307ad133feb48f1b5709f488eaf777aa923d4516b2",
+      "components/common/ScrollToTopFab.tsx": "94e92c2bab7a38c67f7ab50b9fc97993f5405965e4cddeb86aea24ab4a1969aa",
+      "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+      "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    "runtimeInputs": {
+      "assets/fonts/Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "assets/fonts/Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "assets/fonts/Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "assets/fonts/Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "components/common/AnimatedWrapper.tsx": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f",
+      "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1",
+      "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+      "components/common/ScrollToTopFab.tsx": "94e92c2bab7a38c67f7ab50b9fc97993f5405965e4cddeb86aea24ab4a1969aa",
+      "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "components/common/Wrapper.tsx": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+      "components/feature/reports/ReportActionButton.tsx": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f",
+      "components/icons/add.tsx": "031d2ef49655cef59eec90acf606b3b45f0b47c51f52de75e0caddeda0236dac",
+      "components/icons/ai.tsx": "d6b21a5dc83c486ae5262d1dadd3e92c5b55e7ba3b76983cb28d7aee3314b430",
+      "components/icons/arrow-circle-right.tsx": "1b79da943e59815f9562854ee00822eadcf3dac2649268273c6156b487eb6804",
+      "components/icons/arrow-up.tsx": "f6216c5492383e58bb99f1ee3b07627e1de9090fcf27dd990a7be7eefaa3c377",
+      "components/icons/backspace.tsx": "3ff28ba5f63bd40c3362eddf210c6d7f85a449b1bd064dde6be6de220b0b4389",
+      "components/icons/calculator.tsx": "126f1f4e1309bd70087e4fc7bf04ad46eb093e3f368d5b934545470e390a7859",
+      "components/icons/calendar.tsx": "4a662338753001969da8af7696f03b8d3560e5369b7d3ed65349d5d7985baf3f",
+      "components/icons/camera.tsx": "316198ebbd885bf5d592a0f0e24dbad9f67879fe31276e8dc86d2c4963e734f7",
+      "components/icons/card.tsx": "45791056056dd8834a00c446ccffe476d90d4696074a0c0a858e4d5d9d5a5aa2",
+      "components/icons/chart.tsx": "f49b41d2955afcc0ae1560ed8c43778bb95616129d3511d33f014b530a16037d",
+      "components/icons/check-circle.tsx": "c0c3b76d2e81be146dff373518cec7426d0c00e795c8e8a96bc853fb69f80623",
+      "components/icons/createIcon.tsx": "bd454462e49dc3033314f34aabb295b6c804a28f409778d356c146f569d5f43b",
+      "components/icons/discount.tsx": "21753737172a7613ccf6a76ed59a56aad521a56f05713a3d491a76010336b257",
+      "components/icons/down-trend.tsx": "cd5b284d322ade7996399e34469e798eecd087db3703ae3bcec3027ce3bec0dc",
+      "components/icons/download.tsx": "fc81b1296866c93959013bc3a716c4e76e8fd84bd9ab233da7b25a9488213567",
+      "components/icons/filter.tsx": "364baba070b5b581822bec207e37563ab26da9bddc690d5c89358be1061e4279",
+      "components/icons/index.ts": "e49cb21f2e590db3616832f63c6431fb5647c18b4e88b4f91b278ddea39d7540",
+      "components/icons/info.tsx": "a945b2e2bb9c77a05998d0b321c23f889ff8a7d5b860aa92a3c0c04d3111d1d1",
+      "components/icons/inventory.tsx": "a424597d1c2797701e5d5a0ca22f4abe8bf09da43dd5872b7e3962be3c7bd75e",
+      "components/icons/journal-code.tsx": "daafc055f639564f520abbb1eb2d30e5532dffd3fe26cd85de3f2e408ee3df59",
+      "components/icons/list.tsx": "4f14980045a9e467d92bacce356091c8d83daff8eee012bec4034ee575094756",
+      "components/icons/manager.tsx": "070ef68138b1d5f970dc00a068c39719ede069dee2a004dfdf3181d5943f446e",
+      "components/icons/menu.tsx": "5407961aa28f3a95084d38cc3426b3673c7deca54b39290a70114cfc0553d7e1",
+      "components/icons/profit.tsx": "5a97e5b299460848fb241c50fe551584734551c466342686fc5a6c629f78ae86",
+      "components/icons/receipt.tsx": "a49b5ac38f47b39ca02a79238228a379d2472de699df084c32ad0759b10944b0",
+      "components/icons/report.tsx": "b17659169db8004aee576841f9a2434d587031ce28ab2d845edd19869bb053fb",
+      "components/icons/search.tsx": "e141252da7687fca49774af836c92820966a0ef0d2ecccc620a250d7be247a41",
+      "components/icons/store.tsx": "04b7c12bee15bdc2d3e5596ac3a44c28c3a60f3a2b0ba287a3a7dabfd14d9f79",
+      "components/icons/table.tsx": "53df755415cf3321bf5383091578c11504040ff78b97a9be3213d7116190efa3",
+      "components/icons/wallet.tsx": "c97ab0830f25e688c4886d9a71f74d057e520e2cc8a26b7760d83641dab190b3",
+      "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+      "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+      "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "components/ui/gluestack-ui-provider/script.ts": "88491a29b8e68985338a9eb8ab69f934c0dc63ea24c44dbce944f391cd62d7b1",
+      "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "hooks/useScrollProgress.ts": "7b505734afd7a12fa970ce307ad133feb48f1b5709f488eaf777aa923d4516b2",
+      "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "lib/utils/colors.ts": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+      "lib/utils/dates.ts": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+      "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996"
+    },
+    "cacheBefore": {
+      "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+    },
+    "cacheAfter": {
+      "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+    },
+    "limits": "Default Expo Metro with installed browser resolution; own cache, no root config require or NativeWind Metro plugin, no listener/native/full-app startup claim. Safe-area insets injected by fixture."
+  },
+  "receipts": [
+    {
+      "path": "/.expo/qc-accounting-footer-entry.bundle",
+      "bytes": 5746118,
+      "sha256": "c3bf300bcc2cffc489c60ca13917474f74751d73272e41e1c04b9875113aba92"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Regular.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Regular.ttf",
+      "bytes": 342732,
+      "sha256": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Medium.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Medium.ttf",
+      "bytes": 342936,
+      "sha256": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-SemiBold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-SemiBold.ttf",
+      "bytes": 343640,
+      "sha256": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Bold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Bold.ttf",
+      "bytes": 344028,
+      "sha256": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+    },
+    {
+      "path": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf",
+      "file": "node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf",
+      "bytes": 165548,
+      "sha256": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8"
+    },
+    {
+      "path": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf",
+      "file": "node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf",
+      "bytes": 55596,
+      "sha256": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Bold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Bold.ttf",
+      "bytes": 344028,
+      "sha256": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Medium.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Medium.ttf",
+      "bytes": 342936,
+      "sha256": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Regular.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Regular.ttf",
+      "bytes": 342732,
+      "sha256": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-SemiBold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-SemiBold.ttf",
+      "bytes": 343640,
+      "sha256": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023"
+    }
+  ],
+  "limits": "Production shared Bar/Wrapper/AnimatedWrapper/Report/Button/Text RN-web, injected safe-inset contexts, long fixture parent content and simulated system overlays. Not the 15 financial screens, native device/system navigation, keyboard, API, persistence or full-app approval."
+}

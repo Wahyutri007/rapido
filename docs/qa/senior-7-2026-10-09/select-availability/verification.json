@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "owner": "Software Developer Senior 7",
+  "status": "READY_FOR_QA",
+  "headContext": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "files": [
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+    }
+  ],
+  "readOnlyIntegrationSources": [
+    {
+      "file": "components/common/Form.tsx",
+      "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "baseline": {
+    "file": "baseline-results.json",
+    "source": {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "e967d1ef262507b316619e1ebf9ef90138abdb78e202883c48496c3da50bfb27"
+    },
+    "passed": 7,
+    "failed": 19,
+    "rootIssues": 2
+  },
+  "tests": {
+    "availability": 26,
+    "legacyRegression": 30,
+    "productionFormIntegration": 26,
+    "total": 82,
+    "runtimeErrors": 0
+  },
+  "eslint": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\SingleSelect.tsx",
+      "errorCount": 0,
+      "warningCount": 0,
+      "messages": []
+    }
+  ],
+  "biome": "check SingleSelect: exit 0, no fixes",
+  "diffCheck": "scoped source and evidence: exit 0",
+  "typecheck": {
+    "scope": "Selected roots and dependency closure using project TypeScript options",
+    "diagnosticCount": 0,
+    "fullProject": false
+  },
+  "harnesses": [
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/availability.cjs",
+      "sha256": "5ccde200666e75d60ba4f094e619b6633e3a8accfe95d3896ea3a7155c5a6915"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/form-integration.cjs",
+      "sha256": "71552db91e330d56c3fd3c0be77ed13655e8e593e8de30c33b2a42273c39b112"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/typecheck.cjs",
+      "sha256": "0af9c69fc72347d2ea061755399ac0ffa1f2d5040f71e707e86a670e22b75bd1"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/shared-picker-lifecycle.cjs",
+      "sha256": "b7aa4dead3510b52e8ea7f20a084c2c8360ae6b5693714d784da4092ba2fb6e5"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/barcode-lifecycle.cjs",
+      "sha256": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/baseline-results.json",
+      "sha256": "99b495382acd113366a4b17bef53e5d8ee14c6079a20ff1bcc025a3fd181698b"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/availability-results.json",
+      "sha256": "764d24e42efc741a5f57ef2ff95ee67728f5b68fa0c8ceb5d3d428cb09ef9cf2"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/form-results.json",
+      "sha256": "ef7c7996bb83362fdf9c8757bd98587b82afc413b9ce88d0019fe3cdf38c959f"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/lint-results.json",
+      "sha256": "5fa98e469fb6f6ae2190a894fe7e6df93f027bc215225d646a6328c142775873"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/select-availability/typecheck-results.json",
+      "sha256": "081414b913d14bcba9907eeeb9d5c7e25cdf23300fada67d52897d6234c6e575"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/single-select-results.json",
+      "sha256": "dab8eee26c1bb0ea16e8a7eb3670bea83890fac19a4df48c21d822ce82e13247"
+    }
+  ],
+  "qcBarcodeSourcesStillMatch": [
+    {
+      "file": "components/feature/barcode/ProductPickerSheet.tsx",
+      "sha256": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37"
+    },
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "sha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1"
+    },
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+    }
+  ],
+  "qaApproval": false,
+  "qcApproval": false,
+  "limits": [
+    "RN/UI primitives are host adapters; no complete screen/router/browser/native/accessibility runtime.",
+    "No full-project TypeScript claim; final gate belongs to PM.",
+    "Figma editor access denied on fresh metadata request."
+  ]
+}

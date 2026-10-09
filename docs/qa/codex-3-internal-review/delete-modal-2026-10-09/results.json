@@ -1,0 +1,570 @@
+{
+  "status": "INTERNAL_QA_REVIEW",
+  "outcome": "PASS_WITH_SCOPE_LIMITS",
+  "reviewer": "/root/audit_delete_modal",
+  "source": {
+    "path": "components/common/DeleteConfirmModal.tsx",
+    "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+  },
+  "passed": 53,
+  "failed": 0,
+  "runtimeErrors": [],
+  "runtimeWarnings": [],
+  "loadedProductionModules": [
+    {
+      "path": "hooks/useAlertModal.ts",
+      "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "path": "components/common/DeleteConfirmModal.tsx",
+      "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    }
+  ],
+  "adapters": [
+    "RN host presentation",
+    "window dimensions useSyncExternalStore fixture",
+    "modal/button/Text presentation",
+    "illustration source fixture"
+  ],
+  "checks": [
+    {
+      "name": "Final source matches hash supplied by parent",
+      "passed": true,
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    {
+      "name": "Baseline has one Dimensions import",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Final has one useWindowDimensions import",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Final has exactly one window hook declaration",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Final retains width minus32 and maximum380",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Final adds exactly one explicit Image sizing prop",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "After reversing four geometry deltas, entire source AST remains identical",
+      "passed": true,
+      "actual": "import type React from \"react\";\nimport { Image, type ImageSourcePropType, View, } from \"react-native\";\nimport { ILLUSTRATIONS } from \"@/assets/images/illustrations\";\nimport Text from \"@/components/common/Text\";\nimport { Button, ButtonGroup, ButtonText } from \"@/components/ui/button\";\nimport { Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, } from \"@/components/ui/modal\";\nimport type { State } from \"@/types\";\nexport type DeleteConfirmModalProps = {\n    isOpen?: boolean;\n    openState?: State<boolean>;\n    onClose?: () => void;\n    onConfirm: () => void | Promise<void>;\n    title?: string;\n    itemName?: string;\n    description?: string | React.ReactNode;\n    message?: string | React.ReactNode;\n    cancelText?: string;\n    confirmText?: string;\n    isLoading?: boolean;\n    image?: ImageSourcePropType;\n};\nexport default function DeleteConfirmModal(props: DeleteConfirmModalProps) {\n    const { isOpen: propIsOpen, openState, onClose, onConfirm, title, itemName, description, message, cancelText = \"Batal\", confirmText = \"Hapus\", isLoading = false, image = ILLUSTRATIONS.deleteConfirmation, } = props;\n    const isControlled = openState !== undefined;\n    const isModalOpen = isControlled ? openState[0] : (propIsOpen ?? false);\n    const handleClose = () => {\n        if (isControlled) {\n            openState[1](false);\n        }\n        onClose?.();\n    };\n    const resolvedTitle = title ?? (itemName ? `Hapus ${itemName}?` : \"Hapus Item?\");\n    const resolvedDescription = description ??\n        message ??\n        \"Data ini akan dihapus dan tidak dapat digunakan lagi.\";\n    return (<Modal isOpen={isModalOpen} onClose={handleClose}>\n\t\t\t<ModalBackdrop />\n\t\t\t<ModalContent className=\"rounded-[28px] p-6 shadow-main\" style={{ width: Dimensions.get(\"screen\").width - 32, maxWidth: 380 }}>\n\t\t\t\t<ModalHeader className=\"flex-col items-center gap-3\">\n\t\t\t\t\t{image && (<View className=\"w-full items-center justify-center overflow-hidden\">\n\t\t\t\t\t\t\t<Image source={image} className=\"h-44 w-full\" resizeMode=\"contain\"/>\n\t\t\t\t\t\t</View>)}\n\t\t\t\t\t<Text className=\"w-full text-center text-[19px] text-gray-900\" w=\"bold\">\n\t\t\t\t\t\t{resolvedTitle.trim()}\n\t\t\t\t\t</Text>\n\t\t\t\t</ModalHeader>\n\n\t\t\t\t{resolvedDescription && (<ModalBody className=\"mx-0 mb-2 mt-1\">\n\t\t\t\t\t\t{typeof resolvedDescription === \"string\" ? (<Text className=\"text-center text-sm leading-relaxed text-muted\">\n\t\t\t\t\t\t\t\t{resolvedDescription}\n\t\t\t\t\t\t\t</Text>) : (resolvedDescription)}\n\t\t\t\t\t</ModalBody>)}\n\n\t\t\t\t<ModalFooter className=\"mt-4 flex-row gap-3 p-0\">\n\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t<Button size=\"xl\" onPress={handleClose} variant=\"outline\" className=\"h-12 w-full rounded-full border-gray-200\" disabled={isLoading}>\n\t\t\t\t\t\t\t<ButtonText size=\"sm\" className=\"font-semibold text-gray-800\">\n\t\t\t\t\t\t\t\t{cancelText}\n\t\t\t\t\t\t\t</ButtonText>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</ButtonGroup>\n\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t<Button size=\"xl\" onPress={onConfirm} action=\"negative\" className=\"h-12 w-full rounded-full bg-error-600 active:bg-error-700\" disabled={isLoading}>\n\t\t\t\t\t\t\t<ButtonText size=\"sm\" className=\"font-semibold text-white\">\n\t\t\t\t\t\t\t\t{confirmText}\n\t\t\t\t\t\t\t</ButtonText>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</ButtonGroup>\n\t\t\t\t</ModalFooter>\n\t\t\t</ModalContent>\n\t\t</Modal>);\n}\nexport { useAlertModal } from \"@/hooks/useAlertModal\";\n",
+      "expected": "import type React from \"react\";\nimport { Image, type ImageSourcePropType, View, } from \"react-native\";\nimport { ILLUSTRATIONS } from \"@/assets/images/illustrations\";\nimport Text from \"@/components/common/Text\";\nimport { Button, ButtonGroup, ButtonText } from \"@/components/ui/button\";\nimport { Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, } from \"@/components/ui/modal\";\nimport type { State } from \"@/types\";\nexport type DeleteConfirmModalProps = {\n    isOpen?: boolean;\n    openState?: State<boolean>;\n    onClose?: () => void;\n    onConfirm: () => void | Promise<void>;\n    title?: string;\n    itemName?: string;\n    description?: string | React.ReactNode;\n    message?: string | React.ReactNode;\n    cancelText?: string;\n    confirmText?: string;\n    isLoading?: boolean;\n    image?: ImageSourcePropType;\n};\nexport default function DeleteConfirmModal(props: DeleteConfirmModalProps) {\n    const { isOpen: propIsOpen, openState, onClose, onConfirm, title, itemName, description, message, cancelText = \"Batal\", confirmText = \"Hapus\", isLoading = false, image = ILLUSTRATIONS.deleteConfirmation, } = props;\n    const isControlled = openState !== undefined;\n    const isModalOpen = isControlled ? openState[0] : (propIsOpen ?? false);\n    const handleClose = () => {\n        if (isControlled) {\n            openState[1](false);\n        }\n        onClose?.();\n    };\n    const resolvedTitle = title ?? (itemName ? `Hapus ${itemName}?` : \"Hapus Item?\");\n    const resolvedDescription = description ??\n        message ??\n        \"Data ini akan dihapus dan tidak dapat digunakan lagi.\";\n    return (<Modal isOpen={isModalOpen} onClose={handleClose}>\n\t\t\t<ModalBackdrop />\n\t\t\t<ModalContent className=\"rounded-[28px] p-6 shadow-main\" style={{ width: Dimensions.get(\"screen\").width - 32, maxWidth: 380 }}>\n\t\t\t\t<ModalHeader className=\"flex-col items-center gap-3\">\n\t\t\t\t\t{image && (<View className=\"w-full items-center justify-center overflow-hidden\">\n\t\t\t\t\t\t\t<Image source={image} className=\"h-44 w-full\" resizeMode=\"contain\"/>\n\t\t\t\t\t\t</View>)}\n\t\t\t\t\t<Text className=\"w-full text-center text-[19px] text-gray-900\" w=\"bold\">\n\t\t\t\t\t\t{resolvedTitle.trim()}\n\t\t\t\t\t</Text>\n\t\t\t\t</ModalHeader>\n\n\t\t\t\t{resolvedDescription && (<ModalBody className=\"mx-0 mb-2 mt-1\">\n\t\t\t\t\t\t{typeof resolvedDescription === \"string\" ? (<Text className=\"text-center text-sm leading-relaxed text-muted\">\n\t\t\t\t\t\t\t\t{resolvedDescription}\n\t\t\t\t\t\t\t</Text>) : (resolvedDescription)}\n\t\t\t\t\t</ModalBody>)}\n\n\t\t\t\t<ModalFooter className=\"mt-4 flex-row gap-3 p-0\">\n\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t<Button size=\"xl\" onPress={handleClose} variant=\"outline\" className=\"h-12 w-full rounded-full border-gray-200\" disabled={isLoading}>\n\t\t\t\t\t\t\t<ButtonText size=\"sm\" className=\"font-semibold text-gray-800\">\n\t\t\t\t\t\t\t\t{cancelText}\n\t\t\t\t\t\t\t</ButtonText>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</ButtonGroup>\n\t\t\t\t\t<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t<Button size=\"xl\" onPress={onConfirm} action=\"negative\" className=\"h-12 w-full rounded-full bg-error-600 active:bg-error-700\" disabled={isLoading}>\n\t\t\t\t\t\t\t<ButtonText size=\"sm\" className=\"font-semibold text-white\">\n\t\t\t\t\t\t\t\t{confirmText}\n\t\t\t\t\t\t\t</ButtonText>\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t</ButtonGroup>\n\t\t\t\t</ModalFooter>\n\t\t\t</ModalContent>\n\t\t</Modal>);\n}\nexport { useAlertModal } from \"@/hooks/useAlertModal\";\n"
+    },
+    {
+      "name": "Both Batal and Hapus actions render",
+      "passed": true,
+      "actual": [
+        "Batal",
+        "Hapus"
+      ],
+      "expected": [
+        "Batal",
+        "Hapus"
+      ]
+    },
+    {
+      "name": "Cancel remains outline and confirm remains destructive",
+      "passed": true,
+      "actual": [
+        [
+          "outline",
+          null
+        ],
+        [
+          null,
+          "negative"
+        ]
+      ],
+      "expected": [
+        [
+          "outline",
+          null
+        ],
+        [
+          null,
+          "negative"
+        ]
+      ]
+    },
+    {
+      "name": "Both buttons are enabled when idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Footer remains side-by-side with gap12",
+      "passed": true,
+      "actual": "mt-4 flex-row gap-3 p-0",
+      "expected": "mt-4 flex-row gap-3 p-0"
+    },
+    {
+      "name": "Footer preserves two equal flex groups",
+      "passed": true,
+      "actual": [
+        "flex-1",
+        "flex-1"
+      ],
+      "expected": [
+        "flex-1",
+        "flex-1"
+      ]
+    },
+    {
+      "name": "Default title/description resolve unchanged",
+      "passed": true,
+      "actual": [
+        "Hapus Item?",
+        "Data ini akan dihapus dan tidak dapat digunakan lagi."
+      ],
+      "expected": [
+        "Hapus Item?",
+        "Data ini akan dihapus dan tidak dapat digunakan lagi."
+      ]
+    },
+    {
+      "name": "Default illustration resolves unchanged",
+      "passed": true,
+      "actual": "fixture-default-delete",
+      "expected": "fixture-default-delete"
+    },
+    {
+      "name": "Image explicit size matches original intent",
+      "passed": true,
+      "actual": {
+        "height": 176,
+        "width": "100%"
+      },
+      "expected": {
+        "height": 176,
+        "width": "100%"
+      }
+    },
+    {
+      "name": "Image className and contain mode are preserved",
+      "passed": true,
+      "actual": [
+        "h-44 w-full",
+        "contain"
+      ],
+      "expected": [
+        "h-44 w-full",
+        "contain"
+      ]
+    },
+    {
+      "name": "Initial 320px window yields width288/max380",
+      "passed": true,
+      "actual": {
+        "width": 288,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 288,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "StrictMode keeps one active dimension subscription",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Width changes while same modal instance/props stays mounted",
+      "passed": true,
+      "actual": [
+        {
+          "width": 358,
+          "maxWidth": 380
+        },
+        true
+      ],
+      "expected": [
+        {
+          "width": 358,
+          "maxWidth": 380
+        },
+        true
+      ]
+    },
+    {
+      "name": "Tablet width retains maximum380",
+      "passed": true,
+      "actual": {
+        "width": 736,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 736,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "Open modal follows resize back to320",
+      "passed": true,
+      "actual": {
+        "width": 288,
+        "maxWidth": 380
+      },
+      "expected": {
+        "width": 288,
+        "maxWidth": 380
+      }
+    },
+    {
+      "name": "Confirm invokes only onConfirm once",
+      "passed": true,
+      "actual": [
+        1,
+        [
+          "onClose",
+          "onClose"
+        ]
+      ],
+      "expected": [
+        1,
+        []
+      ]
+    },
+    {
+      "name": "Confirm does not close legacy modal automatically",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Cancel invokes only onClose",
+      "passed": true,
+      "actual": [
+        1,
+        [
+          "onClose",
+          "onClose"
+        ]
+      ],
+      "expected": [
+        1,
+        [
+          "onClose"
+        ]
+      ]
+    },
+    {
+      "name": "Modal dismissal preserves onClose callback",
+      "passed": true,
+      "actual": [
+        "onClose",
+        "onClose"
+      ],
+      "expected": [
+        "onClose",
+        "onClose"
+      ]
+    },
+    {
+      "name": "Loading disables both cancel and confirm",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Disabled-button host interactions dispatch no callbacks",
+      "passed": true,
+      "actual": [
+        0,
+        [
+          "onClose"
+        ]
+      ],
+      "expected": [
+        0,
+        []
+      ]
+    },
+    {
+      "name": "Loading preserves existing backdrop dismissal contract",
+      "passed": true,
+      "actual": [
+        "onClose"
+      ],
+      "expected": [
+        "onClose"
+      ]
+    },
+    {
+      "name": "Busy-to-idle rerender reenables both actions",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Reenabled confirm invokes callback normally",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "openState true takes precedence over legacy false",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Controlled cancel updates state before optional onClose",
+      "passed": true,
+      "actual": [
+        [
+          "setOpen",
+          false
+        ],
+        [
+          "onClose"
+        ]
+      ],
+      "expected": [
+        [
+          "setOpen",
+          false
+        ],
+        [
+          "onClose"
+        ]
+      ]
+    },
+    {
+      "name": "openState false takes precedence over legacy true",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "No open props defaults to hidden",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Explicit trimmed title overrides itemName",
+      "passed": true,
+      "actual": "Hapus khusus?",
+      "expected": "Hapus khusus?"
+    },
+    {
+      "name": "Description overrides legacy message",
+      "passed": true,
+      "actual": "Description wins",
+      "expected": "Description wins"
+    },
+    {
+      "name": "Custom public button labels remain supported",
+      "passed": true,
+      "actual": [
+        "Kembali",
+        "Ya, hapus"
+      ],
+      "expected": [
+        "Kembali",
+        "Ya, hapus"
+      ]
+    },
+    {
+      "name": "itemName resolves title when explicit title missing",
+      "passed": true,
+      "actual": "Hapus Member?",
+      "expected": "Hapus Member?"
+    },
+    {
+      "name": "Legacy message remains description fallback",
+      "passed": true,
+      "actual": "Fallback message",
+      "expected": "Fallback message"
+    },
+    {
+      "name": "Explicit empty title/description preserve nullish precedence",
+      "passed": true,
+      "actual": [
+        [
+          ""
+        ],
+        0
+      ],
+      "expected": [
+        [
+          ""
+        ],
+        0
+      ]
+    },
+    {
+      "name": "React-node description renders without conversion",
+      "passed": true,
+      "actual": [
+        1,
+        "Node content"
+      ],
+      "expected": [
+        1,
+        "Node content"
+      ]
+    },
+    {
+      "name": "Custom image source retains fixed sizing/contain",
+      "passed": true,
+      "actual": [
+        {
+          "uri": "fixture://custom-image"
+        },
+        {
+          "height": 176,
+          "width": "100%"
+        },
+        "contain"
+      ],
+      "expected": [
+        {
+          "uri": "fixture://custom-image"
+        },
+        {
+          "height": 176,
+          "width": "100%"
+        },
+        "contain"
+      ]
+    },
+    {
+      "name": "Falsy numeric image preserves existing image suppression",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Async confirmation callback promise is preserved",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Component does not infer pending/auto-close from callback promise",
+      "passed": true,
+      "actual": [
+        true,
+        [
+          false,
+          false
+        ]
+      ],
+      "expected": [
+        true,
+        [
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "name": "useAlertModal public re-export matches production hook",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Unmount releases dimension subscription",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Dimension update after unmount creates no listeners",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Runtime/React/act errors are absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Runtime warnings are absent except suppressed renderer deprecation",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Baseline audit SHA remains attached to original snapshot",
+      "passed": true,
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0"
+    },
+    {
+      "name": "All63caller source fingerprints remain unchanged during review",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Source remains supplied final hash after checks",
+      "passed": true,
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    }
+  ],
+  "limits": [
+    "Internal delegated QA review, not external QC approval",
+    "No browser/Metro/backend/native/Figma/HTTP/fullTypeScript",
+    "Renderer checks component contracts, not CSS/button geometry",
+    "Loading click suppression is a disabled-aware host driver, not the Gluestack implementation",
+    "Screen dimensions fixture throws if accessed; dynamic window fixture checks component hook subscription intent"
+  ]
+}

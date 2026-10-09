@@ -1,0 +1,12 @@
+{
+  "owner": "Codex-3",
+  "scope": "Four journal roots and imported dependency closure, project compiler options/declarations; not full-project typecheck",
+  "diagnostics": [],
+  "sourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+    "components/feature/accounting/general-journal/JournalFormNotFound.tsx": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71"
+  },
+  "exitCode": 0
+}

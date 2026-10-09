@@ -1,0 +1,14 @@
+import { useFonts } from "expo-font";
+import { JSStack } from "@/components/custom/JSStack";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+export default function Root() {
+	const [loaded,error] = useFonts({
+		InterRegular: require("../../../assets/fonts/Inter_24pt-Regular.ttf"),
+		InterMedium: require("../../../assets/fonts/Inter_24pt-Medium.ttf"),
+		InterSemiBold: require("../../../assets/fonts/Inter_24pt-SemiBold.ttf"),
+		InterBold: require("../../../assets/fonts/Inter_24pt-Bold.ttf"),
+	});
+	if(error)throw error;
+	if(!loaded)return null;
+	return <GluestackUIProvider mode="light"><JSStack screenOptions={{headerShown:false}} /></GluestackUIProvider>;
+}

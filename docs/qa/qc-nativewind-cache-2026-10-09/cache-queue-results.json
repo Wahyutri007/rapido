@@ -1,0 +1,8 @@
+{
+  "recordedFrom": "QC terminal output: node scripts/verify-metro-cache.cjs",
+  "reads": 3000,
+  "writes": 200,
+  "maximumOpenRequests": 64,
+  "errorQueueRecovered": true,
+  "clearDelegated": true
+}

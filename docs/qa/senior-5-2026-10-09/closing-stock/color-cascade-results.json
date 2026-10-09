@@ -1,0 +1,20 @@
+{
+  "scope": "Generated production CSS with the exact class ordering observed from NativeWind/production Text, updated only with final status-token priority. Not a rerender of the full application screen.",
+  "checks": [
+    {
+      "name": "Final destructive semantic token overrides default foreground",
+      "pass": true
+    },
+    {
+      "name": "Final muted semantic token overrides default foreground",
+      "pass": true
+    }
+  ],
+  "colors": {
+    "zero": "rgb(230, 53, 53)",
+    "low": "rgb(143, 143, 143)",
+    "error": "230 53 53",
+    "muted": "143 143 143"
+  },
+  "runtimeErrors": []
+}

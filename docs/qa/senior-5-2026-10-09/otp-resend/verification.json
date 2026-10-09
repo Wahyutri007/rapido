@@ -1,0 +1,167 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-007",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-09T00:23:55.169Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "branch": "main",
+  "sourceOrigin": "Current working tree; developer made no Git mutations",
+  "editedSources": {
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07"
+  },
+  "executedSourceHashes": {
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "readOnlyContracts": {
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "api/queries/registration.ts": "1852521180d7990140203925d98ee6ebf9e64eac50f2e445320b22a600b55821",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "types/api/registration.ts": "749c3350443be07ea73381ca2b3d3b4d5e0f925d34bc0c8eeac1182735520ca5",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+    "app/(onboarding)/_layout.tsx": "80aef406fbd01cfea5041c5ad211dd79d22c12d928348772e4b0c4416de5a031",
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  },
+  "runtimeLibraryHashes": {
+    "node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    "node_modules/react/jsx-runtime.js": "b392951a77d0a2e6a6bd017e49d768481ae5b63c4109c6c31f622cf7b2433edc",
+    "node_modules/@tanstack/react-query/build/modern/index.cjs": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+    "node_modules/axios/dist/node/axios.cjs": "6de6f72b4ee4912fbfa9e4257b391fbcaeb7620db2cf26ecbea994b146712d82",
+    "node_modules/zod/index.cjs": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+    "node_modules/zustand/index.js": "544c29c7aa257a566dbc6f3e94dd4a9f11c9ae8ac4b3c39b235a9900810934d8",
+    ".expo/senior7-test-tools/node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    ".expo/senior7-test-tools/node_modules/react/cjs/react.development.js": "1919eb95d51bdaed6c771bcd506d65a11639142032e44d0e9212e5c745be1b65",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/index.js": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/cjs/react-test-renderer.development.js": "747ea6897c0e4077df71c44b0debf487c6cbdd8e61e8528c83100176eb01a08b"
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/otp-resend/HANDOFF.md": "dff3185e6fa9fbbe1bb11d21dc6597901c6d9b01f4badd77ee8fdefd601e2bd8",
+    "docs/qa/senior-5-2026-10-09/otp-resend/baseline-results.json": "5b0100338770ab1bb7de61ef81d84e69141a8a0424be0f71477c7efae361c2f7",
+    "docs/qa/senior-5-2026-10-09/otp-resend/before/otp.tsx.txt": "fa06c378a0d9ad29bec79dbe7e58ef86600948ac0a8d585ab9af5c20807574f6",
+    "docs/qa/senior-5-2026-10-09/otp-resend/check.cjs": "f9cf313423e254a5175be9ba9a0864f66fcd00ac0b0e860da1bdf1a22255da62",
+    "docs/qa/senior-5-2026-10-09/otp-resend/eslint-baseline.json": "bfdacf1f52733ba5a11dba13a47a586df67fe16eb787857cdf3c54da2a898067",
+    "docs/qa/senior-5-2026-10-09/otp-resend/eslint-final.json": "e1a41cb2845ffc8c18faf6479c4d23c1f6199a53a1766b5749d663405d4d2635",
+    "docs/qa/senior-5-2026-10-09/otp-resend/figma-access.json": "7d96dd7696c135536e764b047b685b890c38b6138087a00984ba8402bd5841ff",
+    "docs/qa/senior-5-2026-10-09/otp-resend/final-results.json": "794afdbf751a4e21342e4960c531d0517d41dbf6a30e3606b19ed21078b3585a",
+    "docs/qa/senior-5-2026-10-09/otp-resend/harness-notes.json": "1f70f42af88b5f0a31f916778099dfe7feef5068daa2bbdf4f33de4ee15a0d93",
+    "docs/qa/senior-5-2026-10-09/otp-resend/historical-packets-check.json": "72023e689a71eecaa6563b95b75d8d9bc6f753a7804603494f290b2c2d248d06",
+    "docs/qa/senior-5-2026-10-09/otp-resend/quality-results.json": "4424ae2d96560f86bc8635d1a9b88c761c74bc73359e367c6da2ec44d9df3ddd",
+    "docs/qa/senior-5-2026-10-09/otp-resend/scope-proof.json": "ebacad92879ec020b1d2bc4ae1a64d6525f28b85b6e9b29c93bbd7dba2055242",
+    "docs/qa/senior-5-2026-10-09/otp-resend/source-before.json": "abd6d902f61d39ecd0a0f48ba8d778255f7f3d5382261149b6afaacbd759f519",
+    "docs/qa/senior-5-2026-10-09/otp-resend/typecheck-results.json": "47891b167759d23fea5e6f4dd33fbf4cd2a28d6e3fe65173d2aa1d7cbbda70c9",
+    "docs/qa/senior-5-2026-10-09/otp-resend/typecheck.cjs": "fa3da3ba9c59a910fd0e27cfe6b5d8c7d4b5678a580f178ee23be78b139be3e4"
+  },
+  "assertions": {
+    "baseline": {
+      "passed": 44,
+      "failed": 61
+    },
+    "final": {
+      "passed": 105,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "unhandledRejections": 0,
+      "rejectedUiActions": 0
+    }
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "suppressed": 0,
+    "biomeExit": 0,
+    "trackedDiffExit": 0,
+    "newSourceWhitespaceViolations": 0,
+    "focusedTypecheckDiagnostics": 0
+  },
+  "preservedHistoricalArtifacts": 78,
+  "scopeProof": {
+    "factoryMatchesExistingStart": {
+      "config": "{path:\"/register/start\",method:\"post\",name:\"registration\",}",
+      "types": [
+        "VerifyDataResponse",
+        "PersonalInfoSchema"
+      ]
+    },
+    "input": {
+      "digits": 4,
+      "theme": "otpInputTheme",
+      "autoFocus": false,
+      "coreCopyPreserved": [
+        "Masukkan kode Verifikasi",
+        "Kode telah dikirimkan ke email-mu!",
+        "Kode belum diterima?",
+        "Kirim ulang kode",
+        "Masuk"
+      ]
+    },
+    "intentionalUiChanges": [
+      "Wrapper scroll/keyboard container",
+      "Text semantic sizes",
+      "Resend busy/disabled/accessibility/countdown labels",
+      "Masuk disabled with incomplete input and explicit unavailable feedback",
+      "New session resets child lifetime/input/cooldown",
+      "Invalid-session single alert/back"
+    ],
+    "noOtpLogsOrSuccessNavigation": true,
+    "readOnlyContracts": {
+      "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+      "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+      "api/queries/registration.ts": "1852521180d7990140203925d98ee6ebf9e64eac50f2e445320b22a600b55821",
+      "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+      "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+      "types/api/registration.ts": "749c3350443be07ea73381ca2b3d3b4d5e0f925d34bc0c8eeac1182735520ca5",
+      "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+      "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+      "app/(onboarding)/_layout.tsx": "80aef406fbd01cfea5041c5ad211dd79d22c12d928348772e4b0c4416de5a031",
+      "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+    }
+  },
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "boundaries": [
+    "Resend only; OTP verification/final registration not implemented",
+    "Factory uses existing POST/register/start and PersonalInfoSchema/VerifyDataResponse",
+    "Production screen/Wrapper/store/request/Common/QueryClient/Axios with memory HTTP and host native/router/clock adapters",
+    "Lock/deadline per child instance; POST not canceled and cooldown not persisted across unmount",
+    "Session identities use personalInfo/verifyResponse object references; same identity rerender preserves input",
+    "Global alert presentation, real email delivery, actual keyboard/scroll/browser/native/root navigation not certified",
+    "No backend/API/storage/dummy/dependency/server/Metro/HP/Git publication operations",
+    "Prior registration/provider/QC packages and read-only contracts preserved"
+  ]
+}

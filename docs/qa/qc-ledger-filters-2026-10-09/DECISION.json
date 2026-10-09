@@ -1,0 +1,146 @@
+{
+  "signal": "QC-LEDGER-FILTERS-20261009-PASS-DELTA",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "createdAt": "2026-10-08T18:52:13.044Z",
+  "owner": "QC",
+  "status": "PASS_DELTA",
+  "findings": [
+    {
+      "id": "QC-S8-LEGACY-001",
+      "status": "CLOSED"
+    },
+    {
+      "id": "QC-S8-LEGACY-002",
+      "status": "CLOSED"
+    }
+  ],
+  "reviewedSourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f",
+    "lib/accounting/ledger-filter.ts": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+  },
+  "trackedHashesAfterIndependentChecks": {
+    "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f",
+    "lib/accounting/ledger-filter.ts": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48",
+    "app/(no-layout)/catalog/bundling/detail.tsx": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+    "app/(no-layout)/catalog/extra-menu/detail.tsx": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+    "app/(no-layout)/catalog/menu/detail.tsx": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+    "components/feature/accounting/accounts/AccountBalanceCard.tsx": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "constants/data/accounting/accounts.ts": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "constants/data/accounting/closing-journal.ts": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+    "constants/data/accounting/expenses.ts": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/general-ledger.ts": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+    "constants/data/accounting/incomes.ts": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "components/feature/accounting/general-ledger/LedgerPeriodActionSheet.tsx": "d14561a873c5f47be5d507f7bcf0d6fc3a8d37052c5aaa0d79458ad97361901a",
+    "components/feature/accounting/general-ledger/LedgerTypeActionSheet.tsx": "d96165b2d12c9b33cfe6d93a0b32197c21de4d318fbc540b25d0839476a63be9",
+    "components/feature/accounting/general-ledger/LedgerDetailSummaryCard.tsx": "e43db00bf58ee08825a2036ba820efedbd68e6a65df5fe46dd9e2e358a05e1d3",
+    "types/ui/accounting/ledger.ts": "e458d5fc1c67908531b2f13569db279f6b25e0177c8128d6f36aaf99c485d34f",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "eslint.config.js": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+    "biome.json": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/baseline-all.json": "58aea9fbfda2213348db6cff1957a81c8d18b08ba7755f2bc1a52b33b5694742",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/check.cjs": "03b9f38fa49cb935dee5be35d0e848e457f780659d66292e6572704b8bdf1d00",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/date-results.json": "f30732ce491d1d31d56726aa4fbcc26a1c8780856f09bde09884348c5692ac0a",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/dates.cjs": "b3500bfb44258e78fb3b7ceef93be1f76bcfa2096378c59e98ef4156afd22b3d",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/final-all.json": "5d781ad9e0d4c033856c3474c040a7f5ad309943f8b0b952bff5491c1ef2258d",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/final-totals.json": "23ab9714b0fd5ed4b31ef26528c9d3a7b30b681cbd78364006289288925bfb94",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/lint-final.json": "e6d27d7494047096fc763f911e0965298e208b6f2ea56adc982e2b6af4729b13",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/lint-totals.json": "1f365b71e10a68bf006b242a2ce7c36c465757de9902e98636529e8eb7c3d5a4",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/manifest.cjs": "7e3aa374b1b59fe57ea13a2045940cc0df894ef0665585e92bb1a380b8e79da0",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/typecheck.cjs": "b7f852482d401ae5608431b1d79f789805fb2dca8a49c657f5470db51bc981e1",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/typecheck.json": "3f58ffad12277874caabcad5547af9cd8ea90f6f54b5a782d45ba3b019250bf8",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/verification.json": "49425984c927ea05c7c2fcb578c94e1b29ad6efcc03859672df38e85c0d9ae41",
+    "docs/qa/senior-8-2026-10-09/ledger-filters/HANDOFF.md": "90f8c0267ff6b006b0a5329bcdfd0eaeebbc1480b67b90df13b4ce08351f50dc"
+  },
+  "stableThroughoutReview": true,
+  "actualTestHashesMatchCurrent": true,
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "gates": {
+      "component": {
+        "command": [
+          "D:\\laragon\\bin\\node.exe",
+          "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-ledger-filters-2026-10-09\\developer-check.cjs"
+        ],
+        "exitCode": 0
+      },
+      "dates": {
+        "command": [
+          "D:\\laragon\\bin\\node.exe",
+          "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-ledger-filters-2026-10-09\\developer-dates.cjs"
+        ],
+        "exitCode": 0
+      },
+      "eslint": {
+        "command": [
+          "D:\\laragon\\bin\\node.exe",
+          "node_modules/eslint/bin/eslint.js",
+          "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+          "lib/accounting/ledger-filter.ts",
+          "--no-cache",
+          "--max-warnings",
+          "0",
+          "--format",
+          "json"
+        ],
+        "exitCode": 0
+      },
+      "biome": {
+        "command": [
+          "D:\\laragon\\bin\\node.exe",
+          "node_modules/@biomejs/biome/bin/biome",
+          "check",
+          "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+          "lib/accounting/ledger-filter.ts"
+        ],
+        "exitCode": 0
+      },
+      "diff": {
+        "command": [
+          "git",
+          "-c",
+          "core.autocrlf=false",
+          "diff",
+          "--check",
+          "--",
+          "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+          "lib/accounting/ledger-filter.ts"
+        ],
+        "exitCode": 0
+      }
+    }
+  },
+  "checks": {
+    "developerComponentReplay": 31,
+    "developerDateReplay": 63,
+    "qcProductionSheetsAndSummary": 30,
+    "qcTimezoneBoundary": 32,
+    "totalExecutions": 156,
+    "note": "Execution count includes overlapping regression coverage.",
+    "runtimeErrors": 0
+  },
+  "dependencyChangesSinceDeveloperTest": [
+    {
+      "file": "store/accountingStore.ts",
+      "historical": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509",
+      "current": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "approval": "DEPENDENCY_SNAPSHOT_ONLY_NOT_QC_APPROVED_BY_THIS_BATCH"
+    }
+  ],
+  "publication": "QC_APPROVED_TWO_SOURCE_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+  "limitations": [
+    "RN, actionsheet primitives, common UI, currency formatter and navigation adapters",
+    "No native/browser/keyboard/geometric/Figma/API/full-application certification",
+    "Ending balance remains metadata; no period closing balance derivation",
+    "Current accountingStore ID patch was dependency only; no QC approval for LEDGER-ID-001",
+    "Existing invalid-account fallback and UI legacy remain outside delta"
+  ],
+  "report": "REPORT.md"
+}

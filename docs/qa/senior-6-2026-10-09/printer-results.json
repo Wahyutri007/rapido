@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "Printer create remains available",
+      "passed": true
+    },
+    {
+      "name": "Printer route ID switches to edit",
+      "passed": true
+    },
+    {
+      "name": "Printer edit-to-create resets entity modal state",
+      "passed": true
+    },
+    {
+      "name": "Printer invalid ID alerts and returns without save controls",
+      "passed": true
+    },
+    {
+      "name": "Printer invalid ID can transition to a valid entity",
+      "passed": true
+    },
+    {
+      "name": "Printer pending save cannot open success on a different entity",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "sourceSha256": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e"
+}

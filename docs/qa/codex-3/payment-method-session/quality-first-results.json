@@ -1,0 +1,153 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-013",
+  "status": "FAILED",
+  "sourceHashes": {
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+    "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "f82a622e28bd535f0eea6434976f75abb444ba2f2bb7465a54564f036044d072",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "schema/manage/payment-method.ts": "a014eaa947b6fbe1c7db64ecf87f3cc6316b53101264cd57c818be6219fc8ded"
+  },
+  "lint": {
+    "exitCode": 1,
+    "stderr": "",
+    "files": [
+      {
+        "file": "app/(no-layout)/manage/payment-method/_layout.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/detail.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDetailScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "errors": 1,
+        "warnings": 0,
+        "messages": [
+          {
+            "ruleId": "react-hooks/refs",
+            "severity": 2,
+            "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\manage\\settings\\PaymentMethodModifyScreen.tsx:194:32\n  192 | \t\t\t</Wrapper>\n  193 | \t\t\t<BottomActionButton\n> 194 | \t\t\t\tonPress={form.handleSubmit(save)}\n      | \t\t\t\t                           ^^^^ Passing a ref to a function may read its value during render\n  195 | \t\t\t\tisDisabled={form.formState.isSubmitting}\n  196 | \t\t\t>\n  197 | \t\t\t\tSimpan Sementara",
+            "line": 194,
+            "column": 32,
+            "nodeType": null,
+            "endLine": 194,
+            "endColumn": 36
+          }
+        ]
+      },
+      {
+        "file": "schema/manage/payment-method.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "store/managePaymentMethodStore.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "stdout": "Checked 10 files in 142ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "diagnostics": [
+    {
+      "code": 2322,
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "line": 42,
+      "message": "Type 'Resolver<{ value: number; type: string; name: string; bank: string; adminType: string; accountNumber: string; accountName: string; }, any, { value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }>' is not assignable to type 'Resolver<{ value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }, any, { value: number; type: \"bank_transfer\"; ... 4 more ...; accountName: string; }>'.\n  Types of parameters 'options' and 'options' are incompatible.\n    Type 'ResolverOptions<{ value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }>' is not assignable to type 'ResolverOptions<{ value: number; type: string; name: string; bank: string; adminType: string; accountNumber: string; accountName: string; }>'.\n      Type 'string' is not assignable to type '\"bank_transfer\"'."
+    },
+    {
+      "code": 2322,
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "line": 45,
+      "message": "Type '\"\" | \"bank_transfer\"' is not assignable to type '\"bank_transfer\" | undefined'.\n  Type '\"\"' is not assignable to type '\"bank_transfer\"'."
+    },
+    {
+      "code": 2322,
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "line": 46,
+      "message": "Type '\"\" | \"percentage\" | \"nominal\"' is not assignable to type '\"percentage\" | \"nominal\" | undefined'.\n  Type '\"\"' is not assignable to type '\"percentage\" | \"nominal\" | undefined'."
+    },
+    {
+      "code": 2345,
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "line": 212,
+      "message": "Argument of type '(values: { value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }) => void' is not assignable to parameter of type 'SubmitHandler<TFieldValues>'.\n  Types of parameters 'values' and 'data' are incompatible.\n    Type 'TFieldValues' is not assignable to type '{ value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }'.\n      Type 'FieldValues' is missing the following properties from type '{ value: number; type: \"bank_transfer\"; name: string; bank: string; adminType: \"percentage\" | \"nominal\"; accountNumber: string; accountName: string; }': value, type, name, bank, and 3 more."
+    }
+  ],
+  "focusedTypecheck": {
+    "roots": [
+      "app/(no-layout)/manage/payment-method/index.tsx",
+      "app/(no-layout)/manage/payment-method/modify.tsx",
+      "app/(no-layout)/manage/payment-method/detail.tsx",
+      "app/(no-layout)/manage/payment-method/_layout.tsx",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodListScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodDetailScreen.tsx",
+      "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+      "store/managePaymentMethodStore.ts",
+      "schema/manage/payment-method.ts"
+    ],
+    "config": "tsconfig.json",
+    "declarationRoots": [
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+    ],
+    "programSourceFiles": 1304,
+    "scope": "Actual tsconfig and ten source roots/import/declaration closure, not full-project TypeScript"
+  }
+}

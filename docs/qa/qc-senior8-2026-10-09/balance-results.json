@@ -1,0 +1,29 @@
+{
+  "kind": "production state and handlers in React DOM with prop/callback fixtures",
+  "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+  "checks": [
+    "initial external debit and credit prefill",
+    "debit sanitizes text and preserves credit in callback",
+    "credit edit preserves current debit",
+    "numeric echo retains leading-zero debit draft",
+    "metadata-only refetch retains draft",
+    "external credit update does not discard debit draft",
+    "external reset clears both fields without write-back",
+    "credit accepts zero text and emits numeric zero",
+    "account identity switch resets drafts even for same balances",
+    "new identity used by callback",
+    "clear debit emits zero and stays blank",
+    "disable parent echo for draft test",
+    "unacknowledged edit retains draft",
+    "same external balances do not discard unacknowledged draft",
+    "delayed matching acknowledgment retains draft",
+    "different external value replaces draft",
+    "credit draft survives external debit update",
+    "only changed side adopts external value",
+    "credit acknowledgment keeps numeric-equivalent text",
+    "stable NaN prop does not trigger render loop",
+    "ordinary render with NaN remains stable",
+    "external valid balance recovers after NaN"
+  ],
+  "runtimeErrors": []
+}

@@ -1,0 +1,79 @@
+{
+  "suite": "integration",
+  "status": "PASS",
+  "passed": 15,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "RHF value stays committed while drafting",
+      "pass": true
+    },
+    {
+      "name": "RHF remains pristine while drafting",
+      "pass": true
+    },
+    {
+      "name": "RHF parent rerender with fresh arrays preserves draft",
+      "pass": true
+    },
+    {
+      "name": "confirm updates RHF",
+      "pass": true
+    },
+    {
+      "name": "confirm marks RHF dirty",
+      "pass": true
+    },
+    {
+      "name": "RHF reset during open replaces draft",
+      "pass": true
+    },
+    {
+      "name": "confirm after reset cannot resurrect old form values",
+      "pass": true
+    },
+    {
+      "name": "confirm unchanged reset value stays pristine",
+      "pass": true
+    },
+    {
+      "name": "RHF setValue empty clears pending choices",
+      "pass": true
+    },
+    {
+      "name": "empty field confirmation remains empty",
+      "pass": true
+    },
+    {
+      "name": "RHF cancel keeps value and pristine state",
+      "pass": true
+    },
+    {
+      "name": "pill removal updates RHF immediately",
+      "pass": true
+    },
+    {
+      "name": "other form fields are untouched",
+      "pass": true
+    },
+    {
+      "name": "no unexpected runtime or act errors",
+      "pass": true
+    },
+    {
+      "name": "production inputs stable during test",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "scope": "StrictMode React production MultiSelect; integration also uses installed RHF Controller/useForm. Native/UI/SearchBar adapters, no native/browser/route/API certification."
+}

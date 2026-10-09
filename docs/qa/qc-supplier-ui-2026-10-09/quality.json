@@ -1,0 +1,27 @@
+{
+  "capturedAt": "2026-10-08T20:12:28.477Z",
+  "files": [
+    "components/feature/inventory/supplier/SupplierListScreen.tsx",
+    "components/feature/inventory/supplier/SupplierDetailScreen.tsx",
+    "components/feature/inventory/supplier/SupplierFormScreen.tsx",
+    "components/feature/inventory/supplier/SupplierDeleteDialog.tsx"
+  ],
+  "hashes": {
+    "components/feature/inventory/supplier/SupplierListScreen.tsx": "4fcbf03978b4caa093db80afe709f3bfef563455187da38bd7d815f5aead78f3",
+    "components/feature/inventory/supplier/SupplierDetailScreen.tsx": "a4c2e60560c97ea8136a20438718dfae0e67815b18b9106718f5b3256dfd9483",
+    "components/feature/inventory/supplier/SupplierFormScreen.tsx": "ba3a7fc477962f61e14b84484b53273f4fadbaf0cc8c8168405533c885b5d569",
+    "components/feature/inventory/supplier/SupplierDeleteDialog.tsx": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8"
+  },
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0,
+    "stderr": ""
+  },
+  "biome": {
+    "exit": 0
+  },
+  "diffCheck": {
+    "exit": 0
+  }
+}

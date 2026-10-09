@@ -1,0 +1,772 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "ticket": "SD5-008",
+  "baseline": true,
+  "sources": {
+    "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+    "hooks/useRegistrationForm.ts": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "checks": [
+    {
+      "name": "empty session complete controlled defaults",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {},
+        "password": {},
+        "index": 0
+      },
+      "expected": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        "password": {
+          "password": "",
+          "confirmPassword": ""
+        },
+        "index": 0
+      }
+    },
+    {
+      "name": "empty consent remains false",
+      "passed": true
+    },
+    {
+      "name": "unchecked consent opens terms without granting",
+      "passed": true
+    },
+    {
+      "name": "actual form/schema rejects missing consent",
+      "passed": true
+    },
+    {
+      "name": "consent validation message",
+      "passed": true
+    },
+    {
+      "name": "terms acceptance updates checkbox/form/store",
+      "passed": true
+    },
+    {
+      "name": "acceptance preserves typed credentials",
+      "passed": true
+    },
+    {
+      "name": "accepted form validates",
+      "passed": true
+    },
+    {
+      "name": "external revocation propagates to form",
+      "passed": false,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "revocation invalidates schema",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "programmatic true synchronizes store",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "checkbox false synchronizes store",
+      "passed": true
+    },
+    {
+      "name": "mount consent true strict=false: no stale false write",
+      "passed": false,
+      "actual": [
+        false,
+        true,
+        true,
+        [
+          false
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        []
+      ]
+    },
+    {
+      "name": "mount consent true strict=false: rerender stable",
+      "passed": false,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "mount consent true strict=true: no stale false write",
+      "passed": false,
+      "actual": [
+        false,
+        true,
+        true,
+        [
+          false,
+          false
+        ]
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        []
+      ]
+    },
+    {
+      "name": "mount consent true strict=true: rerender stable",
+      "passed": false,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "full store restores all three forms and password stage",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        "password": {},
+        "index": 1
+      },
+      "expected": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        "password": {
+          "password": "FixtureOnly123!",
+          "confirmPassword": "FixtureOnly123!"
+        },
+        "index": 2
+      }
+    },
+    {
+      "name": "restored values have clean field state",
+      "passed": true
+    },
+    {
+      "name": "restored consent validates",
+      "passed": true
+    },
+    {
+      "name": "restored bank validates",
+      "passed": true
+    },
+    {
+      "name": "restored password validates",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "URL seed restores valid forms with existing accepted consent",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        "password": {},
+        "index": 1
+      },
+      "expected": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        "password": {
+          "password": "FixtureOnly123!",
+          "confirmPassword": "FixtureOnly123!"
+        },
+        "index": 2
+      }
+    },
+    {
+      "name": "URL cannot grant consent or skip personal stage",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": false
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        "password": {},
+        "index": 1
+      },
+      "expected": {
+        "personal": {
+          "name": "Fixture Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": false
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        "password": {
+          "password": "FixtureOnly123!",
+          "confirmPassword": "FixtureOnly123!"
+        },
+        "index": 0
+      }
+    },
+    {
+      "name": "URL does not grant store consent",
+      "passed": true
+    },
+    {
+      "name": "URL with no accepted consent fails validation",
+      "passed": true
+    },
+    {
+      "name": "store seeds retain priority over URL",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "Store Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountNumber": "store-number",
+          "accountName": "Fixture Owner"
+        },
+        "password": {},
+        "index": 1
+      },
+      "expected": {
+        "personal": {
+          "name": "Store Owner",
+          "email": "resume@example.test",
+          "phone": "081200000000",
+          "password": "FixtureOnly123!",
+          "tnc": true
+        },
+        "bank": {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "store-number"
+        },
+        "password": {
+          "password": "StoreFixture123!",
+          "confirmPassword": "StoreFixture123!"
+        },
+        "index": 2
+      }
+    },
+    {
+      "name": "invalid store personal does not fall through to URL",
+      "passed": true
+    },
+    {
+      "name": "personal only: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "personal only: safe future defaults",
+      "passed": false,
+      "actual": [
+        {},
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        {
+          "password": "",
+          "confirmPassword": ""
+        }
+      ]
+    },
+    {
+      "name": "personal plus bank: earliest incomplete stage",
+      "passed": false,
+      "actual": 1,
+      "expected": 2
+    },
+    {
+      "name": "personal plus bank: safe future defaults",
+      "passed": false,
+      "actual": [
+        {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        {
+          "password": "",
+          "confirmPassword": ""
+        }
+      ]
+    },
+    {
+      "name": "invalid bank: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "invalid bank: safe future defaults",
+      "passed": false,
+      "actual": [
+        {},
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        {
+          "password": "FixtureOnly123!",
+          "confirmPassword": "FixtureOnly123!"
+        }
+      ]
+    },
+    {
+      "name": "invalid password: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "invalid password: safe future defaults",
+      "passed": false,
+      "actual": [
+        {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        {
+          "password": "",
+          "confirmPassword": ""
+        }
+      ]
+    },
+    {
+      "name": "missing personal invalid bank: earliest incomplete stage",
+      "passed": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "missing personal invalid bank: safe future defaults",
+      "passed": false,
+      "actual": [
+        {},
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        {
+          "password": "FixtureOnly123!",
+          "confirmPassword": "FixtureOnly123!"
+        }
+      ]
+    },
+    {
+      "name": "missing personal bank only: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "missing personal bank only: safe future defaults",
+      "passed": false,
+      "actual": [
+        {
+          "bankName": "Fixture bank",
+          "accountNumber": "000000001",
+          "accountName": "Fixture Owner"
+        },
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "Fixture bank",
+          "accountName": "Fixture Owner",
+          "accountNumber": "000000001"
+        },
+        {
+          "password": "",
+          "confirmPassword": ""
+        }
+      ]
+    },
+    {
+      "name": "missing bank invalid password: earliest incomplete stage",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "missing bank invalid password: safe future defaults",
+      "passed": false,
+      "actual": [
+        {},
+        {}
+      ],
+      "expected": [
+        {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        {
+          "password": "",
+          "confirmPassword": ""
+        }
+      ]
+    },
+    {
+      "name": "malformed JSON: safe blank defaults",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {},
+        "password": {},
+        "index": 0
+      },
+      "expected": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        "password": {
+          "password": "",
+          "confirmPassword": ""
+        },
+        "index": 0
+      }
+    },
+    {
+      "name": "wrong types: safe blank defaults",
+      "passed": false,
+      "actual": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {},
+        "password": {},
+        "index": 0
+      },
+      "expected": {
+        "personal": {
+          "name": "",
+          "email": "",
+          "phone": "",
+          "password": "",
+          "tnc": false
+        },
+        "bank": {
+          "bankName": "",
+          "accountName": "",
+          "accountNumber": ""
+        },
+        "password": {
+          "password": "",
+          "confirmPassword": ""
+        },
+        "index": 0
+      }
+    },
+    {
+      "name": "accepted store restores otherwise valid personal even if old draft tnc false",
+      "passed": false,
+      "actual": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "password": "",
+        "tnc": true
+      },
+      "expected": {
+        "name": "Fixture Owner",
+        "email": "resume@example.test",
+        "phone": "081200000000",
+        "password": "FixtureOnly123!",
+        "tnc": true
+      }
+    },
+    {
+      "name": "canonical accepted consent determines resume stage",
+      "passed": false,
+      "actual": 0,
+      "expected": 1
+    },
+    {
+      "name": "URL/store seed changes do not overwrite mounted draft/index",
+      "passed": true
+    },
+    {
+      "name": "live consent false alone updates personal draft",
+      "passed": false,
+      "actual": {
+        "name": "Fixture Owner",
+        "email": "typed@example.test",
+        "phone": "081200000000",
+        "password": "FixtureOnly123!",
+        "tnc": true
+      },
+      "expected": {
+        "name": "Fixture Owner",
+        "email": "typed@example.test",
+        "phone": "081200000000",
+        "password": "FixtureOnly123!",
+        "tnc": false
+      }
+    },
+    {
+      "name": "live consent does not overwrite bank/password/index",
+      "passed": true
+    },
+    {
+      "name": "new mount restores latest valid seed while preserving revoked consent",
+      "passed": false,
+      "actual": [
+        "late-store@example.test",
+        false,
+        "Late owner",
+        null,
+        1
+      ],
+      "expected": [
+        "late-store@example.test",
+        false,
+        "Late owner",
+        "LateFixture123!",
+        0
+      ]
+    },
+    {
+      "name": "registration store reset revokes form consent",
+      "passed": false,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "store reset does not silently wipe mounted input",
+      "passed": true
+    },
+    {
+      "name": "explicit form reset updates shared consent",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "two forms initial consent does not fight",
+      "passed": true
+    },
+    {
+      "name": "two forms keep shared accepted true",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "one form revocation propagates to second",
+      "passed": false,
+      "actual": [
+        false,
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "one form acceptance propagates without feedback loop",
+      "passed": false,
+      "actual": [
+        false,
+        false,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "consent writes bounded without repeated echoes",
+      "passed": false,
+      "actual": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "unmounted form cannot change shared consent",
+      "passed": false,
+      "actual": [
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        1
+      ]
+    },
+    {
+      "name": "no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "no unhandled rejections",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandledRejections": [],
+  "passed": 24,
+  "failed": 36
+}

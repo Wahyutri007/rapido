@@ -1,0 +1,32 @@
+{
+  "before": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\CardList.tsx",
+      "errorCount": 1,
+      "warningCount": 0,
+      "messages": [
+        {
+          "rule": "react-hooks/set-state-in-effect",
+          "line": 652,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders"
+        }
+      ]
+    }
+  ],
+  "sheetBatch": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\CardList.tsx",
+      "errorCount": 0,
+      "warningCount": 0,
+      "messages": []
+    }
+  ],
+  "final": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\CardList.tsx",
+      "errorCount": 0,
+      "warningCount": 0,
+      "messages": []
+    }
+  ]
+}

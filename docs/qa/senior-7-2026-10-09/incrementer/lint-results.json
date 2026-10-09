@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "before",
+    "results": [
+      {
+        "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\Incrementer.tsx",
+        "errorCount": 1,
+        "warningCount": 0,
+        "messages": [
+          {
+            "rule": "react-hooks/set-state-in-effect",
+            "line": 37,
+            "message": "Error: Calling setState synchronously within an effect can trigger cascading renders"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "after",
+    "results": [
+      {
+        "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\Incrementer.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      }
+    ]
+  },
+  {
+    "stage": "final-integration",
+    "sources": [
+      {
+        "file": "components/custom/Incrementer.tsx",
+        "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+      },
+      {
+        "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+        "sha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1"
+      }
+    ],
+    "results": [
+      {
+        "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\Incrementer.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\barcode\\PrintBarcodeModal.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      }
+    ]
+  }
+]

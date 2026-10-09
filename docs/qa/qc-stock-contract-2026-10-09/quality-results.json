@@ -1,0 +1,29 @@
+{
+  "eslint": {
+    "exitCode": 0,
+    "files": 1,
+    "errorCount": 0,
+    "warningCount": 0,
+    "command": "node node_modules/eslint/bin/eslint.js 'app/(no-layout)/manage/pos-settings/stock-limit.tsx' --no-cache --max-warnings 0 --format json --output-file docs/qa/qc-stock-contract-2026-10-09/eslint.json"
+  },
+  "biome": {
+    "exitCode": 0,
+    "output": "Checked 1 file in 20ms. No fixes applied.",
+    "command": "node node_modules/@biomejs/biome/bin/biome check 'app/(no-layout)/manage/pos-settings/stock-limit.tsx'"
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "command": "git diff --check -- 'app/(no-layout)/manage/pos-settings/stock-limit.tsx'",
+    "workingDirectory": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev",
+    "output": "No whitespace errors; Git emitted LF/CRLF conversion advisory."
+  },
+  "typecheck": {
+    "qcRerun": false,
+    "developerClaim": "Scoped one root/dependency closure, 0 diagnostic in HANDOFF.md",
+    "fullProjectCertification": false
+  },
+  "figma": {
+    "callableToolsDiscovered": 0,
+    "parityCertified": false
+  }
+}

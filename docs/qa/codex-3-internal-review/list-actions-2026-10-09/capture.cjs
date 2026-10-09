@@ -1,0 +1,21 @@
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const root = path.resolve(__dirname, "../../../..");
+const audit = path.join(__dirname, "../next-module-audit-2026-10-09");
+const original = JSON.parse(fs.readFileSync(path.join(audit, "results.json"), "utf8"));
+const hash = (bytes) => crypto.createHash("sha256").update(bytes).digest("hex");
+const sources = ["components/feature/manage/roles/RoleListScreen.tsx", "components/feature/manage/workers/WorkerListScreen.tsx", "components/feature/manage/member/MemberListScreen.tsx"];
+const contracts = ["components/custom/ItemActionSheet.tsx", "components/feature/manage/roles/RoleDeleteDialog.tsx", "components/feature/manage/workers/WorkerDeleteDialog.tsx", "components/feature/manage/member/MemberDeleteDialog.tsx", "components/common/AlertModal.tsx", "components/common/DeleteConfirmModal.tsx", "components/common/SuccessModal.tsx", "hooks/useAlertModal.ts", "hooks/useRefreshControl.ts", "hooks/usePostRequest.ts", "api/hooks/roles.ts", "api/hooks/workers.ts", "api/hooks/customers.ts", "api/factory.ts", "api/common.ts", "lib/api-utils.ts", "lib/manage/roles.ts", "lib/manage/workers.ts", "lib/manage/members.ts"];
+if (fs.existsSync(path.join(__dirname, "baseline-capture.json"))) throw new Error("Frozen capture exists.");
+fs.mkdirSync(path.join(__dirname, "before"), { recursive: true });
+const sourceHashes = Object.fromEntries(sources.map((file) => {
+	const bytes = fs.readFileSync(path.join(audit, "before", path.basename(file)));
+	if (hash(bytes) !== original.loadedSourceHashes[file]) throw new Error(`Audit baseline mismatch ${file}`);
+	fs.writeFileSync(path.join(__dirname, "before", path.basename(file)), bytes);
+	return [file, hash(bytes)];
+}));
+const contractHashes = Object.fromEntries(contracts.map((file) => [file, hash(fs.readFileSync(path.join(root, file)))]));
+const result = { status: "BASELINE_CAPTURE", externalQcApproval: false, capturedAt: new Date().toISOString(), sourceHashes, contractHashes, auditSource: "../next-module-audit-2026-10-09/results.json", auditSourceHash: hash(fs.readFileSync(path.join(audit, "results.json"))), auditSummary: original.summary };
+fs.writeFileSync(path.join(__dirname, "baseline-capture.json"), JSON.stringify(result, null, 2) + "\n");
+process.stdout.write(JSON.stringify({ sources: sources.length, contracts: contracts.length, auditSummary: original.summary }) + "\n");

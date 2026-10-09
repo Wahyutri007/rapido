@@ -1,0 +1,17 @@
+{
+  "status": "FAIL",
+  "passed": 5,
+  "checks": [
+    "Kelola opens the real Absensi list with four existing preview records",
+    "Search no-result and clearing search preserve source records",
+    "Unknown-status filter and reset restore all records",
+    "Combined complete/store/date filters select the matching record only",
+    "Detail navigation retains the selected record ID and recorded values"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "error": "TimeoutError: locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Absensi', { exact: true }).filter({ visible: true }).first().locator('..').locator('[tabindex=\"0\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <div tabindex=\"0\" class=\"css-g5y9jx r-1loqt21 r-1otgn73 absolute left-4 size-10 items-center justify-center rounded-full\">…</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    72 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+  "url": "http://127.0.0.1:8088/manage/absence",
+  "body": "\nAbsensi\n\nPratinjau Catatan Absensi\nCatatan dari mode Absensi selama aplikasi terbuka. Belum menjadi rekap kehadiran seluruh karyawan.\nRingkasan Hasil\n4\nCatatan\n3\nBelum Keluar\n1\nMasuk & Keluar\nFilter Catatan\nSemua Status\n\nSemua Toko\n\nSemua Tanggal\n\nCatatan Absensi · 4\n\nCabang Utama\n06 Maret 2026\nMasuk 17:00 · Keluar Belum dicatat\nBelum Keluar\n\nCabang Utama\n06 Maret 2026\nMasuk 17:00 · Keluar Belum dicatat\nBelum Keluar\n\nCabang Utama\n06 Maret 2026\nMasuk 17:00 · Keluar 17:00\nMasuk & Keluar\n\nCabang Utama\n06 Maret 2026\nMasuk 17:00 · Keluar Belum dicatat\nBelum Keluar",
+  "checkedAt": "2026-10-09T01:37:50.741Z"
+}

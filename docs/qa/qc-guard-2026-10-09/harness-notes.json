@@ -1,0 +1,21 @@
+{
+  "fixtureOrigin": "Frozen QC Login setup reused after read-only audit: actual React Query, Axios, react-hook-form, LoginScreen, Form, auth hook, Common and provider. QC guard scenarios and frame scheduler are separate new code.",
+  "providerIsolation": "SD5-005 was actively editing the provider. Pin the exact f311 production snapshot named by the guard handoff, verified against both handoff and QC Login raw snapshot. Current workspace provider is not approved.",
+  "initialGateStop": {
+    "evidence": "handoff-changes.json",
+    "cause": "Expected provider fingerprint drift while another owner implements SD5-005.",
+    "applicationFailure": false,
+    "replayRunBeforeIsolation": false
+  },
+  "initialQualityComparison": {
+    "evidence": "harness-initial-quality-results.json",
+    "cause": "QC scanner retained the optional trailing comma in some(callback,), while the developer AST printer omitted it. Baseline and current scanner policies were already identical.",
+    "correction": "Compare baseline and current independently with all tokens retained. Normalize only the optional final call-argument comma in isOnboarding for handoff equality.",
+    "applicationFailure": false,
+    "rerun": "Quality PASS; both final application suites remain 105+46 PASS."
+  },
+  "replayIntegrity": "Restoring only output directory and provider read seam exactly reproduces developer runner bytes; scenario/assertion logic unchanged.",
+  "strictScope": "StrictMode only on Guard subtree; actual handoff AuthProvider outside StrictMode. Guard remount after loading runs setup-cleanup-setup with two IDs and one active frame.",
+  "scheduler": "RAF/cancel adapter returns distinct IDs. History can deliver canceled callbacks after cleanup to test the active flag; normal queued callbacks are delivered once.",
+  "externalIO": "No HTTP, backend, DB, real storage, native host/router, server, or device operation."
+}

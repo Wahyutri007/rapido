@@ -1,0 +1,24 @@
+diff --git a/app/Domain/Catalog/Models/Menu.php b/app/Domain/Catalog/Models/Menu.php
+--- a/app/Domain/Catalog/Models/Menu.php
++++ b/app/Domain/Catalog/Models/Menu.php
+@@ -80,7 +80,19 @@ class Menu extends Model
+         } elseif ($ownerStockSetting->type === StockSettingTypeEnum::ALL->value) {
+             $isManaged = true;
+         } else {
+-            $isManaged = (bool) $this->stockSettingDetail;
++            // Details belong to the current owner's setting and describe exclusions.
++            $details = $ownerStockSetting->details;
++            $contentType = $ownerStockSetting->content_type
++                ?? ($details->isNotEmpty() && $details->every(fn ($detail) => $detail->stockable_type === Category::$polymorphicType)
++                    ? 'category'
++                    : 'item');
++            $isCategory = $contentType === 'category';
++            $stockableType = $isCategory ? Category::$polymorphicType : self::$polymorphicType;
++            $stockableId = $isCategory ? $this->category_id : $this->id;
++            $isManaged = !$details->contains(fn ($detail) =>
++                $detail->stockable_type === $stockableType
++                && $detail->stockable_id === $stockableId
++            );
+         }
+         return Attribute::make(
+             get: fn() => $isManaged,

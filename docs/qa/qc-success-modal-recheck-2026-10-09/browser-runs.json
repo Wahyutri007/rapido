@@ -1,0 +1,13 @@
+{
+  "sequential": true,
+  "runs": [
+    {
+      "file": "shared-browser.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "orientation-browser.cjs",
+      "exitCode": 0
+    }
+  ]
+}

@@ -1,0 +1,1579 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-008",
+  "mode": "baseline-production-source",
+  "passed": 72,
+  "failed": 43,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "checks": [
+    {
+      "name": "closed initial modal is hidden",
+      "passed": true
+    },
+    {
+      "name": "direct-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": -4,
+        "y": -28.25,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-320: width follows current window",
+      "passed": false,
+      "detail": {
+        "x": -4,
+        "y": -28.25,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 21,
+        "y": 595.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 595.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 21,
+          "y": 595.25,
+          "width": 133,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 595.25,
+          "width": 133,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "direct-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "direct-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "direct-360: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-360: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-360: Batal fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-360: Hapus fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 186,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-360: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 697.25,
+          "width": 133,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 186,
+          "y": 697.25,
+          "width": 133,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-360: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -174,
+        "y": 98.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "direct-360: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "direct-360: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "direct-390: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 31,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-390: width follows current window",
+      "passed": false,
+      "detail": {
+        "x": 31,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-390: Batal fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 56,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-390: Hapus fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 201,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-390: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 56,
+          "y": 697.25,
+          "width": 133,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 201,
+          "y": 697.25,
+          "width": 133,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-390: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -159,
+        "y": 98.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "direct-390: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "direct-390: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "direct-768: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 194,
+        "y": 163.75,
+        "width": 380,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-768: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 194,
+        "y": 163.75,
+        "width": 380,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "direct-768: Batal fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 219,
+        "y": 787.25,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-768: Hapus fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 390,
+        "y": 787.25,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-768: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 219,
+          "y": 787.25,
+          "width": 159,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 390,
+          "y": 787.25,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-768: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": 30,
+        "y": 188.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "direct-768: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "direct-768: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "role-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -51,
+        "width": 288,
+        "height": 742
+      }
+    },
+    {
+      "name": "role-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -51,
+        "width": 288,
+        "height": 742
+      }
+    },
+    {
+      "name": "role-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 618,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "role-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 618,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "role-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 618,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 618,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "role-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -26,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "role-320: Batal closes without delete request or acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "role-320: production delete stays fixture and acknowledges once",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/contents/roles/fixture-delete"
+      }
+    },
+    {
+      "name": "worker-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -39.625,
+        "width": 288,
+        "height": 719.25
+      }
+    },
+    {
+      "name": "worker-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -39.625,
+        "width": 288,
+        "height": 719.25
+      }
+    },
+    {
+      "name": "worker-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 606.625,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "worker-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 606.625,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "worker-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 606.625,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 606.625,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "worker-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -14.625,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "worker-320: Batal closes without delete request or acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "worker-320: production delete stays fixture and acknowledges once",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/contents/workers/fixture-delete"
+      }
+    },
+    {
+      "name": "member-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "member-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "member-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "member-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "member-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "member-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "member-320: Batal closes without delete request or acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "member-320: production delete stays fixture and acknowledges once",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/customers/data/fixture-delete"
+      }
+    },
+    {
+      "name": "legacy-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "legacy-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "legacy-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "legacy-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "legacy-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "legacy-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "legacy-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "legacy-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "message-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -16.875,
+        "width": 288,
+        "height": 673.75
+      }
+    },
+    {
+      "name": "message-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -16.875,
+        "width": 288,
+        "height": 673.75
+      }
+    },
+    {
+      "name": "message-320: Batal fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 583.875,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "message-320: Hapus fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 166,
+        "y": 583.875,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "message-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 583.875,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 583.875,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "message-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": 8.125,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "message fallback visible",
+      "passed": true
+    },
+    {
+      "name": "message-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "message-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "node-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -29.5,
+        "width": 288,
+        "height": 699
+      }
+    },
+    {
+      "name": "node-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -29.5,
+        "width": 288,
+        "height": 699
+      }
+    },
+    {
+      "name": "node-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 596.5,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "node-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 596.5,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "node-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 596.5,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 596.5,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "node-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -4.5,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "React-node description visible",
+      "passed": true
+    },
+    {
+      "name": "node-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "node-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "custom-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 80.75,
+        "width": 288,
+        "height": 478.5
+      }
+    },
+    {
+      "name": "custom-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 80.75,
+        "width": 288,
+        "height": 478.5
+      }
+    },
+    {
+      "name": "custom-320: Batal fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 486.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "custom-320: Hapus fully visible, minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 166,
+        "y": 486.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "custom-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 486.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 486.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "custom-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -190,
+        "y": 105.75,
+        "width": 700,
+        "height": 272
+      }
+    },
+    {
+      "name": "custom-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "custom-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "long-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -108.125,
+        "width": 288,
+        "height": 856.25
+      }
+    },
+    {
+      "name": "long-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -108.125,
+        "width": 288,
+        "height": 856.25
+      }
+    },
+    {
+      "name": "long-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 675.125,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 675.125,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 675.125,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 675.125,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -83.125,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "long-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "long-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "loading-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "loading-320: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      }
+    },
+    {
+      "name": "loading-320: Batal fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "loading-320: Hapus fully visible, minimum44px",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "loading-320: buttons stay side by side",
+      "passed": true,
+      "detail": {
+        "cancelBox": {
+          "x": 41,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirmBox": {
+          "x": 166,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "loading-320: image respects176px and content width",
+      "passed": false,
+      "detail": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "name": "loading disables both buttons",
+      "passed": true
+    },
+    {
+      "name": "disabled buttons trigger neither callback nor request",
+      "passed": true
+    },
+    {
+      "name": "loading-320: Batal closes and calls onClose once",
+      "passed": true
+    },
+    {
+      "name": "loading-320: Hapus invokes only confirm once",
+      "passed": true
+    },
+    {
+      "name": "open resize768: modal and both buttons follow viewport without props change",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": 240,
+          "y": 163.75,
+          "width": 288,
+          "height": 696.5
+        },
+        "cancel": {
+          "x": 265,
+          "y": 787.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirm": {
+          "x": 390,
+          "y": 787.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "open resize320: modal and both buttons follow viewport without props change",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": 16,
+          "y": -28.25,
+          "width": 288,
+          "height": 696.5
+        },
+        "cancel": {
+          "x": 41,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirm": {
+          "x": 166,
+          "y": 595.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "open resize390: modal and both buttons follow viewport without props change",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": 51,
+          "y": 73.75,
+          "width": 288,
+          "height": 696.5
+        },
+        "cancel": {
+          "x": 76,
+          "y": 697.25,
+          "width": 113,
+          "height": 48
+        },
+        "confirm": {
+          "x": 201,
+          "y": 697.25,
+          "width": 113,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no HTTP API attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "measurements": [
+    {
+      "label": "direct-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": -4,
+        "y": -28.25,
+        "width": 328,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 21,
+        "y": 595.25,
+        "width": 133,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 595.25,
+        "width": 133,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "direct-360",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      },
+      "screen": {
+        "width": 360,
+        "height": 844
+      },
+      "modal": {
+        "x": 16,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 41,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      },
+      "confirm": {
+        "x": 186,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      },
+      "image": {
+        "x": -174,
+        "y": 98.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "direct-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": {
+        "width": 390,
+        "height": 844
+      },
+      "modal": {
+        "x": 31,
+        "y": 73.75,
+        "width": 328,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 56,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      },
+      "confirm": {
+        "x": 201,
+        "y": 697.25,
+        "width": 133,
+        "height": 48
+      },
+      "image": {
+        "x": -159,
+        "y": 98.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "direct-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": {
+        "width": 768,
+        "height": 1024
+      },
+      "modal": {
+        "x": 194,
+        "y": 163.75,
+        "width": 380,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 219,
+        "y": 787.25,
+        "width": 159,
+        "height": 48
+      },
+      "confirm": {
+        "x": 390,
+        "y": 787.25,
+        "width": 159,
+        "height": 48
+      },
+      "image": {
+        "x": 30,
+        "y": 188.75,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "role-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -51,
+        "width": 288,
+        "height": 742
+      },
+      "cancel": {
+        "x": 41,
+        "y": 618,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 618,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -26,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "worker-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -39.625,
+        "width": 288,
+        "height": 719.25
+      },
+      "cancel": {
+        "x": 41,
+        "y": 606.625,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 606.625,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -14.625,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "member-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "legacy-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "message-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -16.875,
+        "width": 288,
+        "height": 673.75
+      },
+      "cancel": {
+        "x": 41,
+        "y": 583.875,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 583.875,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": 8.125,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "node-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -29.5,
+        "width": 288,
+        "height": 699
+      },
+      "cancel": {
+        "x": 41,
+        "y": 596.5,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 596.5,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -4.5,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "custom-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 80.75,
+        "width": 288,
+        "height": 478.5
+      },
+      "cancel": {
+        "x": 41,
+        "y": 486.25,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 486.25,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -190,
+        "y": 105.75,
+        "width": 700,
+        "height": 272
+      }
+    },
+    {
+      "label": "long-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -108.125,
+        "width": 288,
+        "height": 856.25
+      },
+      "cancel": {
+        "x": 41,
+        "y": 675.125,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 675.125,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -83.125,
+        "width": 708,
+        "height": 490
+      }
+    },
+    {
+      "label": "loading-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": -28.25,
+        "width": 288,
+        "height": 696.5
+      },
+      "cancel": {
+        "x": 41,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "confirm": {
+        "x": 166,
+        "y": 595.25,
+        "width": 113,
+        "height": 48
+      },
+      "image": {
+        "x": -194,
+        "y": -3.25,
+        "width": 708,
+        "height": 490
+      }
+    }
+  ],
+  "sourceHash": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+  "fixtureHash": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+  "limits": "RN-web/production providers/font/modal/button and three delete-dialog domains; isolated fixture with browser-local Axios transport, no native/root auth/full router/backend/Figma claim"
+}

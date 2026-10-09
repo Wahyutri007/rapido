@@ -50,3 +50,8 @@ Bukti Member pembuat: 45 tes komponen, 12 router, dan 26 API Laravel terpisah. B
 Review source/diff terbaru dan pemilik scope → developer memperbaiki temuan → QA menguji perilaku dan regresi → QC mencocokkan kontrak, UI, dokumentasi dan batas fitur → branch modul dipublikasikan → baru integrasi main setelah semua syarat relevan lolos. Dokumentasikan commit yang diuji dan jangan mengandalkan laporan historis saja.
 
 Execution Profile & Operator Tips: High untuk backlog yang melintasi lifecycle auth, form dan primitive bersama. Kerjakan batch katalog/laporan, form/shared, lalu onboarding; jalankan pemeriksaan terfokus setiap batch dan gate integrasi setelah perubahan selesai. Pertahankan draft form dan source sesi lain; gunakan panduan UI sebelum mengedit komponen.
+
+
+## Publikasi berdasarkan instruksi pengguna — 9 Oktober 2026
+
+Pengguna meminta QC mengambil alih PM, push branch sendiri lalu main. Keputusan historis di atas tidak menjadi kelulusan source baru. Lihat [laporan integrasi terkini](qa/pm-main-integration-2026-10-09/REPORT.md) untuk source yang diterbitkan, cakupan pemeriksaan dan sembilan diagnostic lint baseline yang masih terbuka. Kasir yang belum diserahkan tetap tidak ikut. Publikasi source bukan sertifikasi desain/native/produksi.

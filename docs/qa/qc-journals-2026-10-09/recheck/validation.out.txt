@@ -1,0 +1,3 @@
+Validation general
+Validation adjusting
+{"passed":187,"failed":0,"failures":[]}

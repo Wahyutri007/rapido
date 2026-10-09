@@ -1,0 +1,487 @@
+{
+  "baseline": true,
+  "passed": 22,
+  "failed": 14,
+  "checks": [
+    {
+      "name": "initial preview contains first five accounts",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "initial toggle offers all",
+      "actual": "Lihat Semua",
+      "expected": "Lihat Semua",
+      "passed": true
+    },
+    {
+      "name": "collapsed last row ends list",
+      "actual": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "passed": false
+    },
+    {
+      "name": "expand reveals every matching account",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "expanded toggle offers fewer",
+      "actual": "Tampilkan Sedikit",
+      "expected": "Tampilkan Sedikit",
+      "passed": true
+    },
+    {
+      "name": "expanded last row ends list",
+      "actual": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "expand leaves global summary unchanged",
+      "actual": {
+        "date": "2026-10-09",
+        "netBalance": 280,
+        "totalDebit": 800,
+        "totalCredit": 0
+      },
+      "expected": {
+        "date": "2026-10-09",
+        "netBalance": 280,
+        "totalDebit": 800,
+        "totalCredit": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "collapse restores preview",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "search finds item beyond original preview",
+      "actual": [
+        "a7"
+      ],
+      "expected": [
+        "a7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "single result hides toggle",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "search by code uses all accounts",
+      "actual": [
+        "a7"
+      ],
+      "expected": [
+        "a7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "empty query result has no cards",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "empty result has no toggle",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "empty message rendered",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "category searches beyond original preview",
+      "actual": [
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a6",
+        "a7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "short category has no toggle",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "six-result category starts with preview",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "expand respects category",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ],
+      "passed": true
+    },
+    {
+      "name": "expanded preference survives category change",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "sort applies before preview",
+      "actual": [
+        "a7",
+        "a6",
+        "a5",
+        "a4",
+        "a3",
+        "a2",
+        "a1",
+        "a0"
+      ],
+      "expected": [
+        "a7",
+        "a6",
+        "a5",
+        "a4",
+        "a3"
+      ],
+      "passed": false
+    },
+    {
+      "name": "sort does not mutate store order",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "ascending balance preview",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "code sort preview",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "name sort preview",
+      "actual": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7"
+      ],
+      "expected": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "passed": false
+    },
+    {
+      "name": "filter sheet opens",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "filter sheet closes",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "visible account opens its own detail",
+      "actual": [
+        "/report/accounting/general-ledger/detail?id=a1"
+      ],
+      "expected": [
+        "/report/accounting/general-ledger/detail?id=a1"
+      ],
+      "passed": true
+    },
+    {
+      "name": "exactly five accounts render all",
+      "actual": 5,
+      "expected": 5,
+      "passed": true
+    },
+    {
+      "name": "five accounts need no toggle",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "growing collection remains collapsed",
+      "actual": 6,
+      "expected": 5,
+      "passed": false
+    },
+    {
+      "name": "growing collection offers expansion",
+      "actual": "Lihat Semua",
+      "expected": "Lihat Semua",
+      "passed": true
+    },
+    {
+      "name": "expanded collection update reveals added accounts",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "expanded preference survives narrow search",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "empty store hides toggle",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "empty store leaves global summary contract",
+      "actual": {
+        "date": "2026-10-09",
+        "netBalance": 280,
+        "totalDebit": 800,
+        "totalCredit": 0
+      },
+      "expected": {
+        "date": "2026-10-09",
+        "netBalance": 280,
+        "totalDebit": 800,
+        "totalCredit": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "no unexpected React errors",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/index.tsx",
+      "sha256": "b0addd2512a3ab48b5f1c215874390ba5f26b0074269ef890a6528930b927ec4"
+    }
+  ],
+  "limits": "Full screen and production Zustand, host/presentation/router adapters, StrictMode. No native/browser/Figma validation."
+}

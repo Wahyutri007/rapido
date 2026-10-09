@@ -1,0 +1,67 @@
+{
+    "rules": [
+        "required",
+        "integer",
+        "min:0",
+        "max:10"
+    ],
+    "cases": [
+        {
+            "scenario": "backend exponent 2 roundtrip without edit",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "backendFactor": 100,
+            "upRoundedTotal": 15100
+        },
+        {
+            "scenario": "UI multiple 100",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 100
+            },
+            "valid": false,
+            "errors": {
+                "decimal_places": [
+                    "decimal places tidak boleh lebih besar dari 10."
+                ]
+            },
+            "backendFactor": 1.0000000000000002e+100,
+            "upRoundedTotal": 1.0000000000000002e+100
+        },
+        {
+            "scenario": "UI multiple 1000",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1000
+            },
+            "valid": false,
+            "errors": {
+                "decimal_places": [
+                    "decimal places tidak boleh lebih besar dari 10."
+                ]
+            },
+            "backendFactor": "overflow",
+            "upRoundedTotal": null
+        },
+        {
+            "scenario": "UI multiple 10",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 10
+            },
+            "valid": true,
+            "errors": [],
+            "backendFactor": 10000000000,
+            "upRoundedTotal": 10000000000
+        }
+    ],
+    "scope": "Laravel production Request validation, arithmetic matching CartPricingService; no API\/database mutation."
+}

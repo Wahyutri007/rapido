@@ -1,0 +1,13 @@
+{
+  "scope": "Two production layouts and dependency closure; not global typecheck",
+  "roots": [
+    "app/(no-layout)/_layout.tsx",
+    "app/(no-layout)/(cashier)/catalog/_layout.tsx",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

@@ -1,0 +1,28 @@
+{
+  "developer": "Senior5 / Codex-5",
+  "ticket": "SD5-006",
+  "editedSources": {
+    "api/hooks/registration.ts": "899397514ad20d02995be71cb38d8eb39f4472595a824548ccf22eb293c4655c",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "f328daba38fa0ce99db5f0917ca6c7df4e4d97595012ce391a4a6c804c0204bb"
+  },
+  "readOnlyContracts": {
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "hooks/useRegistrationForm.ts": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  },
+  "guardQc": {
+    "signal": "QC-GUARD-20261009-PASS-DELTA",
+    "status": "PASS_DELTA",
+    "passed": 151,
+    "sourceStillMatches": true,
+    "excludesNewProvider": true
+  }
+}

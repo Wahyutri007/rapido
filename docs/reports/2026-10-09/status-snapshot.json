@@ -1,0 +1,556 @@
+{
+  "title": "Laporan Progres Pekerjaan Rapido",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "snapshotUtc": "2026-10-08T18:31:22.787Z",
+  "snapshotWib": "9 Oktober 2026 pukul 01.31 WIB",
+  "author": "QC",
+  "gitHead": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "method": "Curated list of documented feature/fix work packages; equal weight 1. Done requires explicit QC approval for the stated limited scope and current matching fingerprints. Older builder previews count as awaiting independent review, not certified READY_FOR_QA or production-ready. Unconnected Inventory menu flows are queued. Release/API/native/Figma gaps are reported separately and not included in this denominator.",
+  "counts": {
+    "done": 9,
+    "ready": 16,
+    "active": 3,
+    "queued": 7
+  },
+  "total": 35,
+  "completed": 9,
+  "remaining": 26,
+  "completedPercent": 25.7,
+  "remainingPercent": 74.3,
+  "items": [
+    {
+      "id": 1,
+      "status": "done",
+      "name": "Member — lifecycle editor",
+      "owner": "Codex-3 / QC",
+      "note": "Temuan identitas editor dan respons lama ditutup; 98 eksekusi assertion QC lulus.",
+      "evidence": "docs/qa/qc-member-2026-10-09/recheck/REPORT.md",
+      "decision": "docs/qa/qc-member-2026-10-09/recheck/DECISION.json"
+    },
+    {
+      "id": 2,
+      "status": "done",
+      "name": "Katalog — memoization 3 detail",
+      "owner": "Senior 8 / QC",
+      "note": "Delta detail bundling, extra-menu dan menu lulus dalam paket QC Senior 8.",
+      "evidence": "docs/qa/qc-senior8-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-senior8-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 3,
+      "status": "done",
+      "name": "Saldo akun — AccountBalanceCard",
+      "owner": "Senior 8 / QC",
+      "note": "Sinkronisasi saldo/draft lulus QC; bagian dari paket 72 assertion, bukan 72 khusus kartu.",
+      "evidence": "docs/qa/qc-senior8-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-senior8-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 4,
+      "status": "done",
+      "name": "Printer — lifecycle pengaturan",
+      "owner": "Senior 6 / QC",
+      "note": "Delta lifecycle lulus; printer fisik dan applyTo tetap di luar persetujuan.",
+      "evidence": "docs/qa/qc-sd6-2026-10-09/recheck/REPORT.md",
+      "decision": "docs/qa/qc-sd6-2026-10-09/recheck/DECISION.json"
+    },
+    {
+      "id": 5,
+      "status": "done",
+      "name": "Pembulatan — kontrak pangkat",
+      "owner": "Senior 6 / QC",
+      "note": "P1 nominal/pangkat ditutup; payload dan CartPricingService produksi diperiksa tanpa mutasi DB.",
+      "evidence": "docs/qa/qc-sd6-2026-10-09/recheck/REPORT.md",
+      "decision": "docs/qa/qc-sd6-2026-10-09/recheck/DECISION.json"
+    },
+    {
+      "id": 6,
+      "status": "done",
+      "name": "Barcode — picker/cetak/jumlah",
+      "owner": "Senior 7 / QC",
+      "note": "ProductPicker, Print dan Incrementer lulus 105 assertion; cetak fisik belum disahkan.",
+      "evidence": "docs/qa/qc-barcode-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-barcode-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 7,
+      "status": "done",
+      "name": "Picker bersama — pilih dan urut",
+      "owner": "Senior 7 / QC",
+      "note": "SingleSelect/SortActionSheet lulus 111 assertion; batas native/accessibility tetap berlaku.",
+      "evidence": "docs/qa/qc-pickers-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-pickers-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 8,
+      "status": "done",
+      "name": "Onboarding dan transisi mode",
+      "owner": "Senior 5 / QC",
+      "note": "SD5-001 lulus 81 assertion; boot/auth SD5-002 merupakan paket terpisah.",
+      "evidence": "docs/qa/qc-sd5-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-sd5-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 9,
+      "status": "done",
+      "name": "CardList — filter laporan",
+      "owner": "Senior 7 / QC",
+      "note": "Filter sheet/hook dan 7 pemanggil lulus 125 assertion; nominal laporan tidak disahkan.",
+      "evidence": "docs/qa/qc-cardlist-2026-10-09/REPORT.md",
+      "decision": "docs/qa/qc-cardlist-2026-10-09/DECISION.json"
+    },
+    {
+      "id": 10,
+      "status": "ready",
+      "name": "Migrasi SDK57 / snapshot integrasi",
+      "owner": "Senior 5 / PM",
+      "note": "Branch integrasi tersedia; penerimaan QC independen dan gate main masih diperlukan.",
+      "evidence": "docs/SDK57_UPGRADE.md"
+    },
+    {
+      "id": 11,
+      "status": "ready",
+      "name": "Pendapatan / penerimaan",
+      "owner": "Developer modul / QA-QC",
+      "note": "UI/model memiliki bukti pembuat; API/persistensi/jurnal otomatis belum terhubung.",
+      "evidence": "docs/previews/income/README.md"
+    },
+    {
+      "id": 12,
+      "status": "ready",
+      "name": "Biaya / pengeluaran",
+      "owner": "Developer modul / QA-QC",
+      "note": "UI/model tersedia pada state contoh; menunggu review independen dan integrasi nyata.",
+      "evidence": "docs/previews/expenses/README.md"
+    },
+    {
+      "id": 13,
+      "status": "ready",
+      "name": "Inventory — 5 alur yang terhubung",
+      "owner": "Developer Inventory / QA-QC",
+      "note": "Hub/summary/transfer/adjustment/purchase memiliki pratinjau; backend/native belum disahkan.",
+      "evidence": "docs/previews/inventory/README.md"
+    },
+    {
+      "id": 14,
+      "status": "ready",
+      "name": "Pemasok / kaitan pembelian",
+      "owner": "Developer Inventory / QA-QC",
+      "note": "Alur pratinjau selesai; data sesi dan wilayah terbatas, belum persistensi backend.",
+      "evidence": "docs/previews/inventory/suppliers/README.md"
+    },
+    {
+      "id": 15,
+      "status": "ready",
+      "name": "Bantuan — FAQ/feedback/fitur",
+      "owner": "Codex-3 / QA-QC",
+      "note": "Handoff tersedia; API dan lampiran mengikuti batas laporan, belum QC independen terbaru.",
+      "evidence": "docs/SUPPORT_UI_PROGRESS.md"
+    },
+    {
+      "id": 16,
+      "status": "ready",
+      "name": "Role / hak akses",
+      "owner": "Codex-3 / QA-QC",
+      "note": "CRUD dan bukti API tersedia; cocokkan backend dan lakukan QC independen sebelum publikasi.",
+      "evidence": "docs/ROLES_UI_PROGRESS.md"
+    },
+    {
+      "id": 17,
+      "status": "ready",
+      "name": "Karyawan",
+      "owner": "Codex-3 / QA-QC",
+      "note": "UI/router/API memiliki bukti pembuat; audit independen/source backend masih diperlukan.",
+      "evidence": "docs/WORKERS_UI_PROGRESS.md"
+    },
+    {
+      "id": 18,
+      "status": "ready",
+      "name": "Manajemen Tempat / denah",
+      "owner": "Developer modul / PM-QC",
+      "note": "UI/model tersedia; fix Reanimated sudah dicek PM, fitur/native penuh belum disahkan.",
+      "evidence": "docs/previews/place/README.md"
+    },
+    {
+      "id": 19,
+      "status": "ready",
+      "name": "Tampilan struk",
+      "owner": "Developer modul / QA-QC",
+      "note": "Pratinjau/settings tersedia; belum API/persistensi perangkat/integrasi printer.",
+      "evidence": "docs/previews/receipt/README.md"
+    },
+    {
+      "id": 20,
+      "status": "ready",
+      "name": "Target penjualan",
+      "owner": "Developer modul / QA-QC",
+      "note": "UI/model tersedia; target masih contoh lokal, belum capaian transaksi nyata/persistensi.",
+      "evidence": "docs/previews/sales-target/README.md"
+    },
+    {
+      "id": 21,
+      "status": "ready",
+      "name": "Batas Stok — kontrak ID/jenis",
+      "owner": "Senior 6 / QA-QC",
+      "note": "SD6-002 source READY_FOR_QA; supplement Query/Axios masih dilengkapi, hash baru perlu QC.",
+      "evidence": "docs/qa/senior-6-2026-10-09/stock-contract/HANDOFF.md"
+    },
+    {
+      "id": 22,
+      "status": "ready",
+      "name": "Buku Besar — filter/total/periode",
+      "owner": "Senior 8 / QA-QC",
+      "note": "Perbaikan QC-S8-LEGACY-001/002 READY_FOR_QA; belum keputusan QC pada delta baru.",
+      "evidence": "docs/qa/senior-8-2026-10-09/ledger-filters/HANDOFF.md"
+    },
+    {
+      "id": 23,
+      "status": "ready",
+      "name": "Startup HP — cache NativeWind",
+      "owner": "Senior 7 / QA-QC",
+      "note": "Developer membuktikan 2 cold launch HP berhasil; guard cache baru menunggu QA/QC.",
+      "evidence": "docs/qa/senior-7-2026-10-09/startup/HANDOFF.md"
+    },
+    {
+      "id": 24,
+      "status": "ready",
+      "name": "Jurnal Umum / Penyesuaian",
+      "owner": "Codex-3 / QA-QC",
+      "note": "Lifecycle SD3-002 dan validasi SD3-003 siap QA; gunakan supplement/hash terbaru.",
+      "evidence": "docs/qa/codex-3/journal-validation/HANDOFF.md"
+    },
+    {
+      "id": 25,
+      "status": "ready",
+      "name": "4 form Kelola / koreksi import",
+      "owner": "Codex-3 / QC",
+      "note": "92 pemeriksaan browser lulus. P3 import sudah dikoreksi developer; QC recheck belum menutup temuan.",
+      "evidence": "docs/qa/codex-3/manage-imports/HANDOFF.md"
+    },
+    {
+      "id": 26,
+      "status": "active",
+      "name": "Payroll — router utama",
+      "owner": "Senior 4",
+      "note": "IN_PROGRESS; verifikasi deep link, ID/periode, reload, pembayaran dan slip belum final.",
+      "evidence": "docs/qa/payroll-navigation-2026-10-09/HANDOFF.md"
+    },
+    {
+      "id": 27,
+      "status": "active",
+      "name": "Boot / tujuan auth",
+      "owner": "Senior 5",
+      "note": "SD5-002 app/index.tsx IN_PROGRESS; belum handoff final yang ditemukan pada snapshot.",
+      "evidence": "docs/SESSION_COORDINATION.md"
+    },
+    {
+      "id": 28,
+      "status": "active",
+      "name": "Buku Besar — alokasi ID",
+      "owner": "Senior 8",
+      "note": "LEDGER-ID-001 IN_PROGRESS; perbaikan collision ID store belum handoff final pada snapshot.",
+      "evidence": "docs/SESSION_COORDINATION.md"
+    },
+    {
+      "id": 29,
+      "status": "queued",
+      "name": "Tanggal Promo / Voucher",
+      "owner": "PM / pemilik berikutnya",
+      "note": "WAITING_FOR_SOURCE_HANDOVER pada board; belum ada handoff final baru yang ditemukan.",
+      "evidence": "docs/PM_TASK_BOARD.md"
+    },
+    {
+      "id": 30,
+      "status": "queued",
+      "name": "Choose-store / pemilihan toko",
+      "owner": "PM / pemilik auth",
+      "note": "Antrean lanjutan; membutuhkan tiket/acknowledgment terpisah, belum klaim final pada snapshot.",
+      "evidence": "docs/qa/senior-5-2026-10-09/HANDOFF.md"
+    },
+    {
+      "id": 31,
+      "status": "queued",
+      "name": "Inventory — Bahan Baku",
+      "owner": "PM / developer Inventory",
+      "note": "Menu hub belum memiliki href. Alur ini belum terhubung; tidak menyimpulkan seluruh domain belum punya source.",
+      "evidence": "app/(back-office)/inventory/index.tsx"
+    },
+    {
+      "id": 32,
+      "status": "queued",
+      "name": "Inventory — Komposisi Produk",
+      "owner": "PM / developer Inventory",
+      "note": "Menu hub belum memiliki href. Alur ini belum terhubung; tidak menyimpulkan seluruh domain belum punya source.",
+      "evidence": "app/(back-office)/inventory/index.tsx"
+    },
+    {
+      "id": 33,
+      "status": "queued",
+      "name": "Inventory — Pembayaran Tagihan",
+      "owner": "PM / developer Inventory",
+      "note": "Menu hub belum memiliki href. Alur ini belum terhubung; tidak menyimpulkan seluruh domain belum punya source.",
+      "evidence": "app/(back-office)/inventory/index.tsx"
+    },
+    {
+      "id": 34,
+      "status": "queued",
+      "name": "Inventory — Riwayat Mutasi Stok",
+      "owner": "PM / developer Inventory",
+      "note": "Menu hub belum memiliki href. Alur ini belum terhubung; tidak menyimpulkan seluruh domain belum punya source.",
+      "evidence": "app/(back-office)/inventory/index.tsx"
+    },
+    {
+      "id": 35,
+      "status": "queued",
+      "name": "Inventory — Stok Akhir",
+      "owner": "PM / developer Inventory",
+      "note": "Menu hub belum memiliki href. Alur ini belum terhubung; tidak menyimpulkan seluruh domain belum punya source.",
+      "evidence": "app/(back-office)/inventory/index.tsx"
+    }
+  ],
+  "approvedSourceChecks": [
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "expected": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+      "actual": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "expected": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+      "actual": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "expected": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+      "actual": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+      "matched": true
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "expected": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+      "actual": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/printer/modify.tsx",
+      "expected": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "actual": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "matched": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/rounding.tsx",
+      "expected": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "actual": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "matched": true
+    },
+    {
+      "file": "components/feature/barcode/ProductPickerSheet.tsx",
+      "expected": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+      "actual": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+      "matched": true
+    },
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "expected": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+      "actual": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+      "matched": true
+    },
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "expected": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+      "actual": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+      "matched": true
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "expected": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+      "actual": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+      "matched": true
+    },
+    {
+      "file": "components/common/SortActionSheet.tsx",
+      "expected": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+      "actual": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+      "matched": true
+    },
+    {
+      "file": "app/(onboarding)/onboarding.tsx",
+      "expected": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+      "actual": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+      "matched": true
+    },
+    {
+      "file": "components/custom/LayoutTransitionSplash.tsx",
+      "expected": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+      "actual": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+      "matched": true
+    },
+    {
+      "file": "components/custom/CardList.tsx",
+      "expected": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2",
+      "actual": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2",
+      "matched": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberModifyScreen.tsx",
+      "expected": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "actual": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "matched": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "docs/SESSION_COORDINATION.md",
+      "sha256": "71f51101bf56aa5636a8d01b7e8556484a284058599973b88fcbb731f746ed0b"
+    },
+    {
+      "file": "docs/PM_TASK_BOARD.md",
+      "sha256": "7500110e7bc9aa86dcfa8ba05a864b5dc8ae4a3d3ef6fd1e43a4c40c41782499"
+    },
+    {
+      "file": "docs/PROJECT_MANAGER_REVIEW.md",
+      "sha256": "7e51b567a65036463d916ca442df137229e668126609d93869685966f1f59962"
+    },
+    {
+      "file": "docs/PROJECT_CONTEXT.md",
+      "sha256": "299d4d3890b10d494665b09dc3ea0575d654f1f0ecce3eeee889b0e3e916505f"
+    },
+    {
+      "file": "docs/qa/qc-member-2026-10-09/recheck/REPORT.md",
+      "sha256": "10e6e94fb3db9d9bbb16c7b73b7d4a5511e994072c5eff8aae3792ba49bba80e"
+    },
+    {
+      "file": "docs/qa/qc-member-2026-10-09/recheck/DECISION.json",
+      "sha256": "a101f69d9cc414a48223446ced22253048afb75200dead51d14f75d9a2f090c6"
+    },
+    {
+      "file": "docs/qa/qc-senior8-2026-10-09/REPORT.md",
+      "sha256": "40e3e30f884f016e6bafb8577dc86fdf060a9de0dba1b7851ad96c55e83456a4"
+    },
+    {
+      "file": "docs/qa/qc-senior8-2026-10-09/DECISION.json",
+      "sha256": "9e94687e26e91d351742686c23df3280c898d9afe00227635f78609ebb3881a4"
+    },
+    {
+      "file": "docs/qa/qc-sd6-2026-10-09/recheck/REPORT.md",
+      "sha256": "08b5346bf210cc2c8278035d1a16faf6c06c9daea8702129e67336be0f8a4bb3"
+    },
+    {
+      "file": "docs/qa/qc-sd6-2026-10-09/recheck/DECISION.json",
+      "sha256": "bed11585a26898698d4035151454a5ea2fce578dff3171f575a41dca7f625577"
+    },
+    {
+      "file": "docs/qa/qc-barcode-2026-10-09/REPORT.md",
+      "sha256": "aaa5633a83276419a1a09fff1ce970f09dd06db49047457430df1c6e3b50298a"
+    },
+    {
+      "file": "docs/qa/qc-barcode-2026-10-09/DECISION.json",
+      "sha256": "bd1aca595c4cce0a92b640927bac9bad88857e3f1412d7235c2ffb9346aff017"
+    },
+    {
+      "file": "docs/qa/qc-pickers-2026-10-09/REPORT.md",
+      "sha256": "002a66c0d295269da330772c64e0e54094e06765ba484e51d644041817ae8193"
+    },
+    {
+      "file": "docs/qa/qc-pickers-2026-10-09/DECISION.json",
+      "sha256": "5e2cbc8c8baae798b46a3404c1c08670d346232bbbbcbac0a688a269bd38d0ad"
+    },
+    {
+      "file": "docs/qa/qc-sd5-2026-10-09/REPORT.md",
+      "sha256": "1ea5c9cec6057bb394c273e13a0ff4af097e620901b49ea7532440a21765c51e"
+    },
+    {
+      "file": "docs/qa/qc-sd5-2026-10-09/DECISION.json",
+      "sha256": "c2295cc752040c4c01909a1328df3cac52ab23becc13f98d49bca340a054124e"
+    },
+    {
+      "file": "docs/qa/qc-cardlist-2026-10-09/REPORT.md",
+      "sha256": "804b772841573f75f3f5b8656f983367abbfb8df3c339048f6848e17967cc649"
+    },
+    {
+      "file": "docs/qa/qc-cardlist-2026-10-09/DECISION.json",
+      "sha256": "fd9d6ff55e7ea0e85da38833ef836114bf6f5c6a3913c5a4d86aad3a83567731"
+    },
+    {
+      "file": "docs/SDK57_UPGRADE.md",
+      "sha256": "7d4e8b5b6962c425eb2417f6023bb3ac4c2429854d6e09325c1c087b65603ec5"
+    },
+    {
+      "file": "docs/previews/income/README.md",
+      "sha256": "6ca2e4d459dedd5e552ef96177c47200f6cb1a7d716243c8d693f7b852d7f9c6"
+    },
+    {
+      "file": "docs/previews/expenses/README.md",
+      "sha256": "42521404d2bafd098c2e80057e476f3010369c05b1916bc4591ba1172aef92e0"
+    },
+    {
+      "file": "docs/previews/inventory/README.md",
+      "sha256": "f8dc1345ccab5c73978b814760c54ffef4402b8335edcb10b833da662d029589"
+    },
+    {
+      "file": "docs/previews/inventory/suppliers/README.md",
+      "sha256": "86faac14a08766be089520c7a6d144405a63d61c6c607ec806a04416817a4f57"
+    },
+    {
+      "file": "docs/SUPPORT_UI_PROGRESS.md",
+      "sha256": "d69cc246e828d5d53efe9f24586744a6c0f23f068a7d0a428df202d4bdb556fa"
+    },
+    {
+      "file": "docs/ROLES_UI_PROGRESS.md",
+      "sha256": "e063b5be5c3ee82acabc6391b7f14fbba1573737be54ffa2eb07e3b08dc03342"
+    },
+    {
+      "file": "docs/WORKERS_UI_PROGRESS.md",
+      "sha256": "a4aed4bd80da4d116a288d1990ded9980d8541abe96fbe6926e2ec34123f7d0d"
+    },
+    {
+      "file": "docs/previews/place/README.md",
+      "sha256": "50bfa3862d93158a7873a8926d7bec08b31125e54c0c243c6916d5bb16857c78"
+    },
+    {
+      "file": "docs/previews/receipt/README.md",
+      "sha256": "8170d3babe4c68e9d23a1df3f13050d256a0529e7c76b7f3520cfeec51665f72"
+    },
+    {
+      "file": "docs/previews/sales-target/README.md",
+      "sha256": "4cf3e4a935ad2f593c272c800f742575f8e03bbf81d6dc0f8ed6ee11d9456909"
+    },
+    {
+      "file": "docs/qa/senior-6-2026-10-09/stock-contract/HANDOFF.md",
+      "sha256": "d038abf89f25ab06913439e69edaeb3b5f734e3938138b18a87d6e95bb6b73fe"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/ledger-filters/HANDOFF.md",
+      "sha256": "90f8c0267ff6b006b0a5329bcdfd0eaeebbc1480b67b90df13b4ce08351f50dc"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/HANDOFF.md",
+      "sha256": "3ee46a8256ea40abad130f010ca4215dc89276d938da603023dc67d486a061c0"
+    },
+    {
+      "file": "docs/qa/codex-3/journal-validation/HANDOFF.md",
+      "sha256": "7e424b60af1bb3ad8b2a41f9cdc3fabadf71d7f7b1826344048ca8e3fc5497ec"
+    },
+    {
+      "file": "docs/qa/codex-3/manage-imports/HANDOFF.md",
+      "sha256": "f2a491567c7aace5bface9523af30e4ba27e3bb9f5ee4a556e40debe052c64ea"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/HANDOFF.md",
+      "sha256": "aef010db9581de57bc3ed1acb4f59785f81b00a3d5330beb8c30cdefb1614d35"
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/HANDOFF.md",
+      "sha256": "93c32540cc14ca9e28bf354e8288bb1f9690723ee16ff05116e3d84fd3151c82"
+    },
+    {
+      "file": "app/(back-office)/inventory/index.tsx",
+      "sha256": "016b05a98dd36488bd1b04fe3096eb28965714400e5e10326e95685207460e4d"
+    }
+  ],
+  "globalCompletionPercent": null,
+  "globalCompletionReason": "No complete signed-off product WBS/effort baseline or final integration approval available. Counts do not measure total application completion, elapsed work hours, or release readiness."
+}

@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+        "--max-warnings",
+        "0"
+      ],
+      "status": 1,
+      "stdout": "\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\accounts\\modify.tsx\n  103:32  warning  Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\accounts\\modify.tsx:103:32\n  101 | \t});\n  102 |\n> 103 | \tconst watchedClassification = form.watch(\"classification\");\n      | \t                              ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  104 |\n  105 | \t// Available subclassifications based on chosen classification\n  106 | \tconst subClassificationOptions = useMemo(() => {  react-hooks/incompatible-library\n\n✖ 1 problem (0 errors, 1 warning)\n\n",
+      "stderr": "ESLint found too many warnings (maximum: 0).\n"
+    },
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx"
+      ],
+      "status": 1,
+      "stdout": "Checked 1 file in 39ms. No fixes applied.\nFound 1 error.\n",
+      "stderr": "app\\(no-layout)\\(back-office)\\report\\accounting\\accounts\\modify.tsx:1:1 assist/source/organizeImports  FIXABLE  ━━━━━━━━━━\n\n  × Sort these imports.\n  \n   > 1 │ import { zodResolver } from \"@hookform/resolvers/zod\";\n       │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   > 2 │ import { router, useLocalSearchParams } from \"expo-router\";\n   > 3 │ import { useEffect, useMemo, useRef, useState } from \"react\";\n   > 4 │ import { useForm } from \"react-hook-form\";\n        ...\n  > 17 │ \tFormSelect,\n  > 18 │ } from \"@/components/common/Form\";\n       │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    19 │ import Text from \"@/components/common/Text\";\n    20 │ import Wrapper from \"@/components/common/Wrapper\";\n  \n  i Safe fix: Organize imports and exports (Biome)\n  \n      5   5 │   import { KeyboardAvoidingView, Platform, ScrollView, View } from \"react-native\";\n      6   6 │   import { useAlertModal } from \"@/components/common/AlertModal\";\n      7     │ - import·SuccessModal·from·\"@/components/common/SuccessModal\";\n      8     │ - import·Card·from·\"@/components/common/Card\";\n      9     │ - import·{\n     10     │ - → Form,\n     11     │ - → FormControl,\n     12     │ - → FormField,\n     13     │ - → FormInput,\n     14     │ - → FormItem,\n     15     │ - → FormLabel,\n     16     │ - → FormMessage,\n     17     │ - → FormSelect,\n     18     │ - }·from·\"@/components/common/Form\";\n          7 │ + import·Card·from·\"@/components/common/Card\";\n          8 │ + import·{\n          9 │ + → Form,\n         10 │ + → FormControl,\n         11 │ + → FormField,\n         12 │ + → FormInput,\n         13 │ + → FormItem,\n         14 │ + → FormLabel,\n         15 │ + → FormMessage,\n         16 │ + → FormSelect,\n         17 │ + }·from·\"@/components/common/Form\";\n         18 │ + import·SuccessModal·from·\"@/components/common/SuccessModal\";\n     19  19 │   import Text from \"@/components/common/Text\";\n     20  20 │   import Wrapper from \"@/components/common/Wrapper\";\n  \n\ncheck ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n  × Some errors were emitted while running checks.\n  \n\n"
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

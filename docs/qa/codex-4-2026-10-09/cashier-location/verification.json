@@ -1,0 +1,257 @@
+{
+  "owner": "Software Developer Senior 4 / Codex-4",
+  "ticket": "SD4-003",
+  "status": "READY_FOR_QA",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sealedAt": "2026-10-09T02:19:51.727Z",
+  "sourceFiles": [
+    "app/(cashier)/location/index.tsx",
+    "app/(cashier)/_layout.tsx",
+    "app/(no-layout)/(cashier)/_layout.tsx",
+    "app/(no-layout)/(cashier)/location/_layout.tsx",
+    "app/(no-layout)/(cashier)/location/detail.tsx",
+    "components/feature/cashier/location/CashierLocationScreen.tsx",
+    "components/feature/cashier/location/CashierLocationDetailScreen.tsx",
+    "components/feature/cashier/location/LocationCommon.tsx",
+    "lib/cashier/location.ts",
+    "types/ui/cashier/location.ts"
+  ],
+  "readOnlyContracts": [
+    "store/placeStore.ts",
+    "types/ui/manage/place.ts",
+    "constants/data/manage/place.ts",
+    "components/common/Header.tsx",
+    "components/common/Wrapper.tsx",
+    "components/common/SingleSelect.tsx",
+    "components/common/SearchBar.tsx",
+    "components/custom/CatalogItemCard.tsx",
+    "components/custom/DetailRow.tsx",
+    "components/custom/JSStack.tsx"
+  ],
+  "checks": {
+    "model": 28,
+    "browser": 13,
+    "integration": 3,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "apiMutations": 0,
+    "typecheckDiagnostics": 0,
+    "typecheckSourceFiles": 1195,
+    "lintSourceFiles": 10,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "biomeObservedExitCode": 0,
+    "sourceDiffObservedExitCode": 0
+  },
+  "boundaries": [
+    "Developer evidence on a shared working tree, not independent QA/QC approval or an isolated commit.",
+    "Read-only existing local design outlets/areas/places; explicit preview selection, no mapping to active backend store, no occupancy/reservations/orders/API/persistence.",
+    "Actual production app entry/providers/router with isolated browser owner/token/API and HTML/CSS boot adapter; not real backend/auth or native/Figma certification.",
+    "Selected shared hashes are recorded at sealing. Other shared dependencies are not sealed; concurrent changes require QA replay.",
+    "Initial and second browser failures preserved in before; repeated assertions counted only in final suite.",
+    "Metro8088 and backend8001 remain active for HP. CI disables watchers: later source changes need owner restart.",
+    "Historical Payroll/Absensi packets and reports were not resealed. Git publication remains PM-owned."
+  ],
+  "fingerprints": [
+    {
+      "file": "app/(cashier)/location/index.tsx",
+      "sha256": "0e6693a62a6643ba1de3ad6f033b2673b00bca6ddd36c49a78892313a3a3ddaa"
+    },
+    {
+      "file": "app/(cashier)/_layout.tsx",
+      "sha256": "0cdff1ec0d097a935e0fd12f6ede6f48d9aa3f39570f4c5957a2897aeb5a7666"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/_layout.tsx",
+      "sha256": "68d2c6af629b76aa363182e24e9a1cbe9332b2d0dc1b3ef64bc34adb0c7be450"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/location/_layout.tsx",
+      "sha256": "d065025a727fa0801268a49fb0c456886e37b59a52f6c89aa4b0938b7dcf7274"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/location/detail.tsx",
+      "sha256": "4d7f256968646ed8d62fdae444d94f9f7d809f65397c43ef00375a40f0156a44"
+    },
+    {
+      "file": "components/feature/cashier/location/CashierLocationScreen.tsx",
+      "sha256": "a5f4fe8dfb2c2eaae1aef9fcc343b632e8f305ebfe16a1f7ca7b6a99990e75b8"
+    },
+    {
+      "file": "components/feature/cashier/location/CashierLocationDetailScreen.tsx",
+      "sha256": "d70823bccc66234c476aed8978bf9e06b2d2f354a86f232bf0495e91d8fbca57"
+    },
+    {
+      "file": "components/feature/cashier/location/LocationCommon.tsx",
+      "sha256": "aee3459bc82f23695cce13e9d3edc30344003c6dbb7778b82d286e35340d839f"
+    },
+    {
+      "file": "lib/cashier/location.ts",
+      "sha256": "c0b4866b2a030c4f7c5bc6cde234f8349c4309ad685b371f3082402851fa5d33"
+    },
+    {
+      "file": "types/ui/cashier/location.ts",
+      "sha256": "cf628f1758d3fd556c2b91d266f6dd16442f9d46d32f095005b8ea2726c9485a"
+    },
+    {
+      "file": "store/placeStore.ts",
+      "sha256": "4c753cff1a300b963e80459a465c5e3fec07022188033ef352c8d156b7493892"
+    },
+    {
+      "file": "types/ui/manage/place.ts",
+      "sha256": "912fd74aa526cef6985b2d3fc38cd5f16ed8e7fed0ed235456bd5cd07502a0ce"
+    },
+    {
+      "file": "constants/data/manage/place.ts",
+      "sha256": "d4d6f424ca53144dc6ec4abb5ea72c779655323b4cbbee623627ac71b9552cb0"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "sha256": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8"
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "sha256": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0"
+    },
+    {
+      "file": "components/custom/CatalogItemCard.tsx",
+      "sha256": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425"
+    },
+    {
+      "file": "components/custom/DetailRow.tsx",
+      "sha256": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351"
+    },
+    {
+      "file": "components/custom/JSStack.tsx",
+      "sha256": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/cashier-layout.tsx",
+      "sha256": "c062c1ce7923d8ec6e1e5a7e83dd8363ee3f64cc29b696a2d77a74016d29f0b5"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/cashier-no-layout.tsx",
+      "sha256": "45ae8a2d80cbff408157a15e07cfea2b75feb863952447472d87831e96fd7f5e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/first-browser-failure.json",
+      "sha256": "3239f907887336f2d796633dcf8467db103388930533cc61a6c9ea3758e4a9af"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/first-browser-failure.png",
+      "sha256": "42cc337cdaf7602f8e6508ebe4d45f885d6cf700939aa5898c5381a2254e01b9"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/location-index.tsx",
+      "sha256": "893348419cac26ae51658c971ef3bc8a68db90c71334d64f776561225df90f0b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/pre-fallback-layout.tsx",
+      "sha256": "35d5ad1d8202a7a33499935ce1006be838afb0e1f239b6b9021dcc5d6b862b53"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/readonly-inputs.json",
+      "sha256": "3c178037d603d793eb489dfbbd81042d2025108e65d96b66cca65187f1f6bb94"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/second-browser-failure.json",
+      "sha256": "d5fa6c8e7097cf7522fa62f824053026a14fb7a120367413a6976ed0b2f9ccb6"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/before/second-browser-failure.png",
+      "sha256": "6363c3f41e070edc5f4971457b77388108733dd8ee8791bff9c45391eb008719"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/browser-check.cjs",
+      "sha256": "b5c4a15372701a639a8248bcb8760cc036c8052f9017f87195e27bd9b909b851"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/browser-results.json",
+      "sha256": "971486d344c0887b81b7f13889a4a5349c5aad8089fb73e1187af365f9dcc369"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/capture-check.cjs",
+      "sha256": "ee48f1b11f049a2c38d0b668f2e4a62aa3a8c7cf54aff31de078992dedf71a07"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/capture-results.json",
+      "sha256": "f1c4a1e1262e23bc1cb82ecbf6d29ecf9c38853bfda13e20664e18d5cd78faad"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/detail-320x640.png",
+      "sha256": "e7a018e5779ca780d40a0bd8c2ffb908d200f8d04f662d50a22b65becf556949"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/detail-390.png",
+      "sha256": "2fe30bcd61c8d8dfe35a90128a9eb474a65a54adafc962d4a3640c3d797d5572"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/detail-844x390.png",
+      "sha256": "c2cfca92eedf7d8bde615dc3b9d18a7240362530482d321fe1c4e5ec3860dcac"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/eslint-results.json",
+      "sha256": "8d180f350a325966759079812e7ca35b401e8089a19361690ca18b2e74edd616"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/filtered-390.png",
+      "sha256": "111af0d0141f0f7cf5e19848df0d8c4dae9666570a98a3db16c3671e8fd1d233"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/HANDOFF.md",
+      "sha256": "9f1d8168ac4091e05f00b09ac48dfdb8ae3e386a51127b74518976b57d4cd98e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/initial-390.png",
+      "sha256": "d2505733a0d25e16ca7d2bc0bea4a7512e84719b601a5791b7d5c3ca49dc9ce9"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/integration-check.cjs",
+      "sha256": "4b53f6c31a3be33a41a430c177ee10e68fb1279c82ff8b023e7d5d1e67ef6d5f"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/integration-results.json",
+      "sha256": "3f314f320df4f6ff6a6d231f42bc5d51aff665bc99042ef5a0e72d6a0712bf9f"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/list-320x640.png",
+      "sha256": "f3f9891c2a8821ef793535c052612ad7f2817c2693dae7353f13fb5e6840ef2e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/list-844x390.png",
+      "sha256": "e8499352cc01b6c1da123967dd8e027f8e86ab8b20e6d10783b1546b22c5526e"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/list-row-390.png",
+      "sha256": "433a4b6e6a51513e131fc68cc8da547edc63878c6dd7d854782b2a1bc7c9683a"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/model-check.cjs",
+      "sha256": "6ee1527c4a6b6dc47db9b41722bafdf56001f8f69421a15f4274f3c14f875c2c"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/model-results.json",
+      "sha256": "af03fbaa3b3a464e0c03a27444942843a45aadce7639fe75936230feff0b5a0b"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/seal.cjs",
+      "sha256": "dde0cf0791b1ca33c506ff80d50999d1c8462eee2d22c8c0dd8e5ba1b52631af"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/typecheck-results.json",
+      "sha256": "4f9a40f238b21a074fd6f067bf8fd1f43a55d9b8af3416cdd1cb1e9a0cf416a2"
+    },
+    {
+      "file": "docs/qa/codex-4-2026-10-09/cashier-location/typecheck.cjs",
+      "sha256": "1fb04b1b8002693981b36e4a7ae7535ca61eaab9e594c8a9eb7fc2a353367a76"
+    }
+  ]
+}

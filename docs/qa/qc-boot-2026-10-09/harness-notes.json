@@ -1,0 +1,11 @@
+{
+  "excludedInitialRun": [
+    "harness-initial-independent-runner.cjs",
+    "harness-initial-independent.out.txt",
+    "harness-initial-independent.err.txt"
+  ],
+  "cause": "Adapter Reanimated awal tidak mempunyai __esModule:true. TypeScript import interop membungkus adapter, sehingga Animated.View undefined dan fixture gagal mount. Ini kesalahan adapter QC, bukan source aplikasi.",
+  "correction": "Tambahkan penanda export interop pada adapter; simpan bukti awal sebelum menjalankan ulang suite terkait.",
+  "finalResult": "41 assertion lulus, runtime/React/act error 0. Hasil awal dikeluarkan dari hitungan aplikasi.",
+  "fixtureOrigin": "Setup AuthProvider/storage/query/navigation dari harness developer, diaudit dan dipakai ulang. Skenario QC baru memakai SplashScreenView dan haptic produksi dengan adapter host/Reanimated serta StrictMode hanya pada Boot."
+}

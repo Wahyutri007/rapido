@@ -1,0 +1,335 @@
+{
+  "checks": [
+    {
+      "name": "existing preview records render without invented closing balances",
+      "passed": true,
+      "detail": {
+        "events": 32
+      }
+    },
+    {
+      "name": "actual inventory hub opens new movement route",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "list 320: long name fits, no overflow, detail target>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 318,
+        "width": 288,
+        "height": 240
+      }
+    },
+    {
+      "name": "detail 320: metadata wraps and source button reachable",
+      "passed": true,
+      "detail": {
+        "x": 32,
+        "y": 568,
+        "width": 256,
+        "height": 40
+      }
+    },
+    {
+      "name": "list 360: long name fits, no overflow, detail target>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 318,
+        "width": 328,
+        "height": 220
+      }
+    },
+    {
+      "name": "detail 360: metadata wraps and source button reachable",
+      "passed": true,
+      "detail": {
+        "x": 32,
+        "y": 708,
+        "width": 296,
+        "height": 40
+      }
+    },
+    {
+      "name": "list 390: long name fits, no overflow, detail target>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 318,
+        "width": 358,
+        "height": 220
+      }
+    },
+    {
+      "name": "detail 390: metadata wraps and source button reachable",
+      "passed": true,
+      "detail": {
+        "x": 32,
+        "y": 772,
+        "width": 326,
+        "height": 40
+      }
+    },
+    {
+      "name": "list 768: long name fits, no overflow, detail target>=44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 302,
+        "width": 736,
+        "height": 220
+      }
+    },
+    {
+      "name": "detail 768: metadata wraps and source button reachable",
+      "passed": true,
+      "detail": {
+        "x": 32,
+        "y": 896,
+        "width": 704,
+        "height": 40
+      }
+    },
+    {
+      "name": "actual search trims spaces and matches store",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "search empty result and reset restore list/input",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "product tab shows product snapshots and original units",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "type picker selects two transfer legs",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "location picker isolates incoming store leg",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "date filter combines with store and type",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "combined empty result resets all controlled pickers",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "captured rows disclose unknown date/store/unit",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "captured detail does not invent a source transaction",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "detail Transfer Masuk: signed quantity and encoded source link",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "detail Transfer Keluar: signed quantity and encoded source link",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "detail Pembelian: signed quantity and encoded source link",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "detail Penyusutan: signed quantity and encoded source link",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "list detail link safely round-trips opaque event ID",
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "row": {
+        "x": 16,
+        "y": 318,
+        "width": 288,
+        "height": 240
+      },
+      "source": {
+        "x": 32,
+        "y": 568,
+        "width": 256,
+        "height": 40
+      }
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 780
+      },
+      "row": {
+        "x": 16,
+        "y": 318,
+        "width": 328,
+        "height": 220
+      },
+      "source": {
+        "x": 32,
+        "y": 708,
+        "width": 296,
+        "height": 40
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "row": {
+        "x": 16,
+        "y": 318,
+        "width": 358,
+        "height": 220
+      },
+      "source": {
+        "x": 32,
+        "y": 772,
+        "width": 326,
+        "height": 40
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "row": {
+        "x": 16,
+        "y": 302,
+        "width": 736,
+        "height": 220
+      },
+      "source": {
+        "x": 32,
+        "y": 896,
+        "width": 704,
+        "height": 40
+      }
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blocked": [],
+  "before": {
+    "lib/inventory-stock-movement.ts": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+    "components/feature/inventory/stock-movement/StockMovementDetail.tsx": "9809627e56bd9c3d5a227d0c6c3ce20d51ff9f4596a0b7c1d9ca3dab19dd3dba",
+    "components/feature/inventory/stock-movement/StockMovementList.tsx": "e102d0212493f8ffc312b57f254ebf5bc482f9649cf1d9a8815526d5d3f73dca",
+    "components/feature/inventory/stock-movement/useStockMovements.ts": "339c24b3157c02a3184385dbc43140bd483c6cc4fac1f093901fc7bf3e3a8027",
+    "app/(no-layout)/inventory/stock-movement/detail.tsx": "14c11320e092f0093e371c6555ccea23cd4c803a161dcc58d1463bc4e29bff69",
+    "app/(no-layout)/inventory/stock-movement/index.tsx": "e0657c1f2a38cf500e870bfa1640bd63a90a765b0533b9c570ffa4d03afe1b8e",
+    "app/(no-layout)/inventory/stock-movement/_layout.tsx": "fd03398a5c750c5f6d3fb44d2483488666cc0f8db6f276266a96c9fdbf7e50db",
+    "app/(no-layout)/inventory/_layout.tsx": "130299e720d6267d535ec9c633e00a6c80d115303e63a46853fd11ff09ecf274",
+    "app/(back-office)/inventory/index.tsx": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75",
+    "store/inventoryStore.ts": "050db175f2a522644ca627a9203f76d1e5bbaa1418a915240889378a68724713",
+    "store/inventoryMaterialStore.ts": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30",
+    "store/inventoryCompositionStore.ts": "b5a37d0e741c8ca8825df46462e6650bdcc46f4a4467451d655b227fee4dc1a5",
+    "lib/inventory-material.ts": "06bf405b5e51a127888b4453bf709be85e63ff376f39df946b80308d719599ee",
+    "schema/inventory/material.ts": "64da566f0aef9c04a9b1aca1d3bbfe4185ea7c34e432edc032f003126a83f687",
+    "types/ui/inventory.ts": "fcba64e12d5653514c60e049253236ca71e619a59796371a01a557cb5869a7c0",
+    "types/ui/inventory/material.ts": "f781e865b36188ad7fb3debc898ae3aa0257841812a8c9d28ad65bcc708a4669",
+    "constants/data/inventory.ts": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d",
+    "constants/data/inventory-materials.ts": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08",
+    "components/feature/inventory/InventoryUi.tsx": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/DataPlaceholder.tsx": "11f552716277208846cec844383d2689beceba7f08605f11df08b2e4eefc0a61",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/custom/NavList.tsx": "1a551d874e80edcc957e48427e93f95d2ba1c47885a6755e240ead4097f601e3",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\ui-entry.jsx": "2e8298ad0448358c3c9792504cd0796b6fe40e4a01ce71853b43abf279cad04a",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\browser.cjs": "badbcb75fdd094faeed39c94f20f169de7016f5f6705349736a07da34094ca1d",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\web.css": "65cc94771bd247e36d431706cf6c372cf6c5c09ef96ce102249747c06241fbc9",
+    ".expo\\senior6-stock-movement-offline\\entry.bundle.js": "d4b24b4643456006185abd40f1595c57fdf26b758f4df62d90e5433586d0b790"
+  },
+  "after": {
+    "lib/inventory-stock-movement.ts": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+    "components/feature/inventory/stock-movement/StockMovementDetail.tsx": "9809627e56bd9c3d5a227d0c6c3ce20d51ff9f4596a0b7c1d9ca3dab19dd3dba",
+    "components/feature/inventory/stock-movement/StockMovementList.tsx": "e102d0212493f8ffc312b57f254ebf5bc482f9649cf1d9a8815526d5d3f73dca",
+    "components/feature/inventory/stock-movement/useStockMovements.ts": "339c24b3157c02a3184385dbc43140bd483c6cc4fac1f093901fc7bf3e3a8027",
+    "app/(no-layout)/inventory/stock-movement/detail.tsx": "14c11320e092f0093e371c6555ccea23cd4c803a161dcc58d1463bc4e29bff69",
+    "app/(no-layout)/inventory/stock-movement/index.tsx": "e0657c1f2a38cf500e870bfa1640bd63a90a765b0533b9c570ffa4d03afe1b8e",
+    "app/(no-layout)/inventory/stock-movement/_layout.tsx": "fd03398a5c750c5f6d3fb44d2483488666cc0f8db6f276266a96c9fdbf7e50db",
+    "app/(no-layout)/inventory/_layout.tsx": "130299e720d6267d535ec9c633e00a6c80d115303e63a46853fd11ff09ecf274",
+    "app/(back-office)/inventory/index.tsx": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75",
+    "store/inventoryStore.ts": "050db175f2a522644ca627a9203f76d1e5bbaa1418a915240889378a68724713",
+    "store/inventoryMaterialStore.ts": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30",
+    "store/inventoryCompositionStore.ts": "b5a37d0e741c8ca8825df46462e6650bdcc46f4a4467451d655b227fee4dc1a5",
+    "lib/inventory-material.ts": "06bf405b5e51a127888b4453bf709be85e63ff376f39df946b80308d719599ee",
+    "schema/inventory/material.ts": "64da566f0aef9c04a9b1aca1d3bbfe4185ea7c34e432edc032f003126a83f687",
+    "types/ui/inventory.ts": "fcba64e12d5653514c60e049253236ca71e619a59796371a01a557cb5869a7c0",
+    "types/ui/inventory/material.ts": "f781e865b36188ad7fb3debc898ae3aa0257841812a8c9d28ad65bcc708a4669",
+    "constants/data/inventory.ts": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d",
+    "constants/data/inventory-materials.ts": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08",
+    "components/feature/inventory/InventoryUi.tsx": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/DataPlaceholder.tsx": "11f552716277208846cec844383d2689beceba7f08605f11df08b2e4eefc0a61",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/custom/NavList.tsx": "1a551d874e80edcc957e48427e93f95d2ba1c47885a6755e240ead4097f601e3",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\ui-entry.jsx": "2e8298ad0448358c3c9792504cd0796b6fe40e4a01ce71853b43abf279cad04a",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\browser.cjs": "badbcb75fdd094faeed39c94f20f169de7016f5f6705349736a07da34094ca1d",
+    "docs\\qa\\senior-6-2026-10-09\\stock-movement\\web.css": "65cc94771bd247e36d431706cf6c372cf6c5c09ef96ce102249747c06241fbc9",
+    ".expo\\senior6-stock-movement-offline\\entry.bundle.js": "d4b24b4643456006185abd40f1595c57fdf26b758f4df62d90e5433586d0b790"
+  },
+  "error": {
+    "message": "page.evaluate: ReferenceError: purchase is not defined\n    at eval (eval at evaluate (:370:30), <anonymous>:1:26)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+    "stack": "page.evaluate: ReferenceError: purchase is not defined\n    at eval (eval at evaluate (:370:30), <anonymous>:1:26)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\stock-movement\\browser.cjs:64:14"
+  },
+  "limitations": "Actual production screens/stores/helpers/primitives; browser-only navigator/params and session fixtures. Does not certify full auth/router/native/Figma/backend/persistence."
+}

@@ -1,0 +1,272 @@
+{
+  "owner": "QC",
+  "completedAt": "2026-10-09T01:49:38.309Z",
+  "signal": "QC-DELETE-20261009-CHANGES-REQUESTED",
+  "status": "CHANGES_REQUESTED",
+  "scope": "SD3-008 DeleteConfirmModal width/image/footer delta, public callbacks and orientation. No approval of other source deltas.",
+  "source": {
+    "path": "components/common/DeleteConfirmModal.tsx",
+    "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "modifiedByQC": false
+  },
+  "findings": [
+    {
+      "id": "QC-DELETE-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "owner": "Codex-3 / SD3-008",
+      "title": "Tinggi modal konfirmasi hapus tidak mengikuti viewport; kedua tombol terpotong pada pesan panjang di landscape",
+      "reproduction": [
+        "Buka DeleteConfirmModal dengan title dan description panjang yang sama dengan fixture developer.",
+        "Viewport640×360 atau844×390; ulangi dengan modal tetap terbuka lalu rotasi320×640 ke640×360."
+      ],
+      "expected": "Seluruh modal mengikuti tinggi window; dua tombol minimal44px terlihat penuh dan akhir pesan dapat digulir.",
+      "actual": "Long modal473.75px; Batal/Hapus48px hanya terlihat16.125px pada640×360 dan31.125px pada844×390. Rotasi hidup mengulang kondisi640×360. Modal direct382.5px juga melewati viewport360px.",
+      "failedAssertions": 16,
+      "measurements": [
+        {
+          "label": "direct-640x360",
+          "viewport": {
+            "width": 640,
+            "height": 360
+          },
+          "modal": {
+            "x": 130,
+            "y": -11.25,
+            "width": 380,
+            "height": 382.5
+          },
+          "cancel": {
+            "x": 155,
+            "y": 298.25,
+            "width": 159,
+            "height": 48
+          },
+          "confirm": {
+            "x": 326,
+            "y": 298.25,
+            "width": 159,
+            "height": 48
+          },
+          "cancelVisibleHeight": 48,
+          "confirmVisibleHeight": 48
+        },
+        {
+          "label": "direct-844x390",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "modal": {
+            "x": 232,
+            "y": 3.75,
+            "width": 380,
+            "height": 382.5
+          },
+          "cancel": {
+            "x": 257,
+            "y": 313.25,
+            "width": 159,
+            "height": 48
+          },
+          "confirm": {
+            "x": 428,
+            "y": 313.25,
+            "width": 159,
+            "height": 48
+          },
+          "cancelVisibleHeight": 48,
+          "confirmVisibleHeight": 48
+        },
+        {
+          "label": "long-640x360",
+          "viewport": {
+            "width": 640,
+            "height": 360
+          },
+          "modal": {
+            "x": 130,
+            "y": -56.875,
+            "width": 380,
+            "height": 473.75
+          },
+          "cancel": {
+            "x": 155,
+            "y": 343.875,
+            "width": 159,
+            "height": 48
+          },
+          "confirm": {
+            "x": 326,
+            "y": 343.875,
+            "width": 159,
+            "height": 48
+          },
+          "cancelVisibleHeight": 16.125,
+          "confirmVisibleHeight": 16.125
+        },
+        {
+          "label": "long-844x390",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "modal": {
+            "x": 232,
+            "y": -41.875,
+            "width": 380,
+            "height": 473.75
+          },
+          "cancel": {
+            "x": 257,
+            "y": 358.875,
+            "width": 159,
+            "height": 48
+          },
+          "confirm": {
+            "x": 428,
+            "y": 358.875,
+            "width": 159,
+            "height": 48
+          },
+          "cancelVisibleHeight": 31.125,
+          "confirmVisibleHeight": 31.125
+        },
+        {
+          "label": "long-live-rotate-640x360",
+          "viewport": {
+            "width": 640,
+            "height": 360
+          },
+          "modal": {
+            "x": 130,
+            "y": -56.875,
+            "width": 380,
+            "height": 473.75
+          },
+          "cancel": {
+            "x": 155,
+            "y": 343.875,
+            "width": 159,
+            "height": 48
+          },
+          "confirm": {
+            "x": 326,
+            "y": 343.875,
+            "width": 159,
+            "height": 48
+          },
+          "cancelVisibleHeight": 16.125,
+          "confirmVisibleHeight": 16.125
+        }
+      ],
+      "proposal": {
+        "path": "proposal/DeleteConfirmModal.tsx",
+        "sha256": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+        "patch": "proposal/delete-modal-height.patch",
+        "patchHash": "7f6e05ddf80ee72db32d304d62ddbd572971ed3e31e66e26df647ec0ef349912",
+        "expectedAppliedHash": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+        "applied": false,
+        "testsPassed": 322,
+        "testsFailed": 0,
+        "applyCheckExit": 0
+      }
+    }
+  ],
+  "tests": {
+    "current": {
+      "portrait": {
+        "passed": 115,
+        "failed": 0
+      },
+      "lifecycle": {
+        "passed": 156,
+        "failed": 0
+      },
+      "orientation": {
+        "passed": 29,
+        "failed": 16
+      }
+    },
+    "currentTotal": {
+      "passed": 300,
+      "failed": 16
+    },
+    "proposalOnly": {
+      "portrait": {
+        "passed": 115,
+        "failed": 0
+      },
+      "lifecycle": {
+        "passed": 156,
+        "failed": 0
+      },
+      "orientation": {
+        "passed": 51,
+        "failed": 0
+      }
+    },
+    "proposalTotal": {
+      "passed": 322,
+      "failed": 0
+    },
+    "overlappingCoverage": true,
+    "projectCompletionPercentage": null
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "focusedTypeDiagnostics": 0,
+    "typeRoots": 2,
+    "importedSourceCount": 19,
+    "astCurrentPreservesPublicContract": true,
+    "astProposalPreservesPublicContract": true,
+    "stableInputs": 43,
+    "historicalArtifacts": 163,
+    "runtimeModules": 16
+  },
+  "dependencies": {
+    "SuccessModal": {
+      "file": "components/common/SuccessModal.tsx",
+      "initial": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "current": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "source": "Codex-3 SD3-012 applied previous QC copy; external recheck still required",
+      "previousQcCopy": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "approval": "Dependency execution only; no SuccessModal delta approved by this packet"
+    },
+    "AlertModal": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "sourceDeltasApproved": []
+  },
+  "callers": {
+    "files": 64,
+    "usages": 64,
+    "staticOnly": true,
+    "allCallerScreensExecuted": false,
+    "domainsExecuted": [
+      "RoleDeleteDialog",
+      "WorkerDeleteDialog",
+      "MemberDeleteDialog"
+    ],
+    "newCallers": [
+      "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+      "components/feature/inventory/bill-payment/BillPaymentDeleteDialog.tsx"
+    ]
+  },
+  "transport": "Isolated one-shot Metro API bundle, fixed current web stylesheet and browser-local Axios. No listener or business HTTP.",
+  "limits": [
+    "No actual Android/HP/keyboard/accessibility/full router/auth/backend/physical device verification",
+    "No Figma access/parity claim",
+    "Shared generated Android cache/listener PIDs changed outside QC scope; no full cache stability/startup approval",
+    "SuccessModal7508 is an executed current dependency, not externally approved by this Delete packet"
+  ],
+  "handoff": {
+    "method": "Local workspace report, decision and coordination note",
+    "receiptFromOtherSession": false,
+    "developer": "Apply/review own source correction and supply new exact-hash handoff for QA/QC recheck",
+    "pm": "Keep this module awaiting correction/recheck; PM owns integration and push after final PASS"
+  },
+  "applicationSourceEdited": false,
+  "commitPushMergePerformed": false
+}

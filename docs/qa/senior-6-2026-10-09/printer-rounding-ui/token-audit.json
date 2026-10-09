@@ -1,0 +1,141 @@
+{
+  "results": [
+    {
+      "source": "app/(no-layout)/manage/printer/modify.tsx",
+      "sourceHash": "0174597063bea4d9604925c4d3e43c52160ec4c3a4ab1685c3338866578bf126",
+      "beforeHash": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+      "before": {
+        "count": 4,
+        "findings": [
+          {
+            "category": "nonsemantic-color",
+            "component": "View",
+            "line": 62,
+            "token": "bg-zinc-100"
+          },
+          {
+            "category": "arbitrary-radius",
+            "component": "View",
+            "line": 68,
+            "token": "rounded-[20px]"
+          },
+          {
+            "category": "text-typography",
+            "component": "Text",
+            "line": 71,
+            "token": "text-sm"
+          },
+          {
+            "category": "nonsemantic-color",
+            "component": "Text",
+            "line": 71,
+            "token": "text-gray-900"
+          }
+        ]
+      },
+      "after": {
+        "count": 0,
+        "findings": []
+      },
+      "logicBeforeJsxIdentical": true,
+      "eventAttributesIdentical": true,
+      "classNameOnlyDelta": false
+    },
+    {
+      "source": "app/(no-layout)/manage/pos-settings/rounding.tsx",
+      "sourceHash": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8",
+      "beforeHash": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+      "before": {
+        "count": 13,
+        "findings": [
+          {
+            "category": "fractional-spacing",
+            "component": "Text",
+            "line": 111,
+            "token": "mt-0.5"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "Pressable",
+            "line": 127,
+            "token": "mt-2.5"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "View",
+            "line": 140,
+            "token": "gap-1.5"
+          },
+          {
+            "category": "nonsemantic-color",
+            "component": "View",
+            "line": 147,
+            "token": "bg-zinc-100"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "Pressable",
+            "line": 150,
+            "token": "py-2.5"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "Pressable",
+            "line": 168,
+            "token": "py-2.5"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "Card",
+            "line": 194,
+            "token": "p-2.5"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "BouncyPressable",
+            "line": 207,
+            "token": "p-3.5"
+          },
+          {
+            "category": "nonsemantic-color",
+            "component": "BouncyPressable",
+            "line": 207,
+            "token": "border-zinc-200"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "View",
+            "line": 215,
+            "token": "mt-0.5"
+          },
+          {
+            "category": "nonsemantic-color",
+            "component": "View",
+            "line": 215,
+            "token": "border-zinc-300"
+          },
+          {
+            "category": "fractional-spacing",
+            "component": "Text",
+            "line": 239,
+            "token": "mt-0.5"
+          },
+          {
+            "category": "primitive-override",
+            "component": "Card",
+            "line": 256,
+            "token": "p-3"
+          }
+        ]
+      },
+      "after": {
+        "count": 0,
+        "findings": []
+      },
+      "logicBeforeJsxIdentical": true,
+      "eventAttributesIdentical": true,
+      "classNameOnlyDelta": true
+    }
+  ],
+  "limitations": "Static selected token categories; primitive internals/literal icon and Switch props excluded. Printer intentionally replaces containers/CTA and Text props. Layout tested separately; no backend certification."
+}

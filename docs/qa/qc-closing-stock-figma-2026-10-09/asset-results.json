@@ -1,0 +1,84 @@
+{
+  "scope": "Local SVG integrity against saved Figma export receipts and their URLs in full frame context. No live API download or cross-renderer pixel identity claim.",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "file": "assets/images/figma/back-office/home.svg",
+      "sha256": "01950a87d0c77d3786b4c466826f0d14e7ecf128aaf8c83103db826bcd6ff970",
+      "expected": "01950a87d0c77d3786b4c466826f0d14e7ecf128aaf8c83103db826bcd6ff970",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/report.svg",
+      "sha256": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+      "expected": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/catalog.svg",
+      "sha256": "ead314ccb6d12bc7d1be5ecc3898a63b4d50aa5c5ae008f9735f0fabf71ebc68",
+      "expected": "ead314ccb6d12bc7d1be5ecc3898a63b4d50aa5c5ae008f9735f0fabf71ebc68",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/inventory.svg",
+      "sha256": "eec32d9810b9bb365bceda431a47acb2c345fcefbee58b08b6c00ea54d10279e",
+      "expected": "eec32d9810b9bb365bceda431a47acb2c345fcefbee58b08b6c00ea54d10279e",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/manage.svg",
+      "sha256": "2874a27983252c24db92f55212ffb6f4c4326f8aa3ca074e6f0ecc9bf929dabd",
+      "expected": "2874a27983252c24db92f55212ffb6f4c4326f8aa3ca074e6f0ecc9bf929dabd",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/chevron-down.svg",
+      "sha256": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+      "expected": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/back.svg",
+      "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+      "expected": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/divider.svg",
+      "sha256": "cfc07e1e025349dcb250715322b81d72f0b7edc5e504073f5c6ec62dc99d3aa3",
+      "expected": "cfc07e1e025349dcb250715322b81d72f0b7edc5e504073f5c6ec62dc99d3aa3",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/figma/back-office/search.svg",
+      "sha256": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+      "expected": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/inventory/closing-stock/store.svg",
+      "sha256": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255",
+      "expected": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255",
+      "contextUrlPresent": true,
+      "pass": true
+    },
+    {
+      "file": "assets/images/inventory/closing-stock/status.svg",
+      "sha256": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88",
+      "expected": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88",
+      "contextUrlPresent": true,
+      "pass": true
+    }
+  ]
+}

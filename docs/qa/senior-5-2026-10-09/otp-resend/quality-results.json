@@ -1,0 +1,30 @@
+{
+  "sourceHashes": {
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07"
+  },
+  "baselineEslint": {
+    "errors": 0,
+    "warnings": 12,
+    "suppressed": 0
+  },
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0,
+    "suppressed": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "biome": {
+    "exit": 0,
+    "stdout": "Checked 2 files in 16ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "trackedSourceDiff": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'app/(onboarding)/otp.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "newSourceWhitespaceViolations": 0
+}

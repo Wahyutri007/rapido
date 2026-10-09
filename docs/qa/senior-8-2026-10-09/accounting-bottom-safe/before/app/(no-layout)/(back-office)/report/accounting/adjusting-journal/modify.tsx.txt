@@ -1,0 +1,805 @@
+import Feather from "@expo/vector-icons/Feather";
+import * as DateTimePicker from "@react-native-community/datetimepicker";
+import { router, useLocalSearchParams } from "expo-router";
+import { useMemo, useRef, useState } from "react";
+import { Platform, Pressable, TextInput, View } from "react-native";
+import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import Card from "@/components/common/Card";
+import SuccessModal from "@/components/common/SuccessModal";
+import Text from "@/components/common/Text";
+import JournalFormNotFound from "@/components/feature/accounting/general-journal/JournalFormNotFound";
+import {
+	Actionsheet,
+	ActionsheetBackdrop,
+	ActionsheetContent,
+	ActionsheetDragIndicator,
+	ActionsheetDragIndicatorWrapper,
+} from "@/components/ui/actionsheet";
+import { Button, ButtonText } from "@/components/ui/button";
+import { Colors } from "@/constants/Colors";
+import {
+	ADJUSTING_JOURNAL_ACCOUNT_OPTIONS,
+	ADJUSTMENT_TYPE_OPTIONS,
+	type AdjustmentTypePreset,
+} from "@/constants/data/accounting/adjusting-journal";
+import { FONT_NAMES } from "@/constants/Fonts";
+import { journalPickerDate } from "@/lib/accounting/journal-date";
+import { journalValidationError } from "@/lib/accounting/journal-validation";
+import { cn, formatRp, parseNumber } from "@/lib/utils";
+import { useAccountingStore } from "@/store/accountingStore";
+import type {
+	AdjustingJournal,
+	JournalLine,
+} from "@/types/ui/accounting/journal";
+
+const MONTH_NAMES = [
+	"Januari",
+	"Februari",
+	"Maret",
+	"April",
+	"Mei",
+	"Juni",
+	"Juli",
+	"Agustus",
+	"September",
+	"Oktober",
+	"November",
+	"Desember",
+];
+
+function formatDateDisplay(date: Date): string {
+	const day = String(date.getDate()).padStart(2, "0");
+	const month = MONTH_NAMES[date.getMonth()].substring(0, 3);
+	const year = date.getFullYear();
+	return `${day} ${month} ${year}`;
+}
+
+export default function AdjustingJournalModifyScreen() {
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const id = Array.isArray(params.id) ? params.id[0] : params.id;
+	const adjustingJournals = useAccountingStore(
+		(state) => state.adjustingJournals,
+	);
+	const existing = adjustingJournals.find((journal) => journal.id === id);
+	if (id !== undefined && !existing) {
+		return (
+			<JournalFormNotFound
+				entity="Jurnal Penyesuaian"
+				onBack={() =>
+					router.replace(
+						"/(no-layout)/(back-office)/report/accounting/adjusting-journal",
+					)
+				}
+			/>
+		);
+	}
+	return (
+		<AdjustingJournalForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+			initialJournal={existing}
+		/>
+	);
+}
+
+function AdjustingJournalForm({
+	id,
+	initialJournal,
+}: {
+	id?: string;
+	initialJournal?: AdjustingJournal;
+}) {
+	const isEdit = id !== undefined;
+	const addAdjustingJournal = useAccountingStore(
+		(state) => state.addAdjustingJournal,
+	);
+	const updateAdjustingJournal = useAccountingStore(
+		(state) => state.updateAdjustingJournal,
+	);
+
+	const finishModal = useAlertModal();
+	const errorModal = useAlertModal();
+	const [errorMessage, setErrorMessage] = useState("");
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
+
+	// Form State
+	const [date, setDate] = useState(initialJournal?.date ?? "08 Oct 2025");
+	const [selectedDateObj, setSelectedDateObj] = useState(
+		() =>
+			journalPickerDate(initialJournal?.date ?? "08 Oct 2025") ??
+			new Date(2025, 9, 8),
+	);
+	const [showDatePicker, setShowDatePicker] = useState(false);
+	const [referenceNumber, setReferenceNumber] = useState(
+		initialJournal?.referenceNumber ?? "AJP-0626-005",
+	);
+	const [adjustmentType, setAdjustmentType] = useState(
+		initialJournal?.adjustmentType ?? "Penyusutan Aset",
+	);
+	const [description, setDescription] = useState(
+		initialJournal?.description ?? "Penyusutan peralatan kantor juni 2026",
+	);
+
+	// Journal Lines State (default 2 lines matching default adjustment type)
+	const [lines, setLines] = useState<JournalLine[]>(
+		() =>
+			initialJournal?.lines.map((line) => ({ ...line })) ?? [
+				{
+					id: "line-1",
+					accountId: "6101-00-014",
+					accountCode: "6101-00-014",
+					accountName: "Beban Penyusutan Peralatan",
+					debit: 1000000,
+					credit: 0,
+				},
+				{
+					id: "line-2",
+					accountId: "1209-00-002",
+					accountCode: "1209-00-002",
+					accountName: "Akumulasi Penyusutan Peralatan",
+					debit: 0,
+					credit: 1000000,
+				},
+			],
+	);
+
+	// Picker States
+	const [isAccountPickerOpen, setIsAccountPickerOpen] = useState(false);
+	const [pickingLineIndex, setPickingLineIndex] = useState<number | null>(null);
+	const [isAdjustmentTypePickerOpen, setIsAdjustmentTypePickerOpen] =
+		useState(false);
+
+	// Calculations
+	const totalDebit = useMemo(
+		() => lines.reduce((acc, curr) => acc + (curr.debit || 0), 0),
+		[lines],
+	);
+
+	const totalCredit = useMemo(
+		() => lines.reduce((acc, curr) => acc + (curr.credit || 0), 0),
+		[lines],
+	);
+
+	const difference = Math.abs(totalDebit - totalCredit);
+	const isBalanced =
+		lines.every(
+			(line) =>
+				Number.isFinite(line.debit) &&
+				Number.isFinite(line.credit) &&
+				line.debit >= 0 &&
+				line.credit >= 0,
+		) &&
+		Number.isFinite(totalDebit) &&
+		Number.isFinite(totalCredit) &&
+		totalDebit > 0 &&
+		totalDebit === totalCredit;
+
+	// Date Picker Handler
+	const handleDateChange = (
+		event: DateTimePicker.DateTimePickerEvent,
+		newDate?: Date,
+	) => {
+		setShowDatePicker(false);
+		if (event.type === "set" && newDate) {
+			setSelectedDateObj(newDate);
+			setDate(formatDateDisplay(newDate));
+		}
+	};
+
+	const openDatePicker = () => {
+		if (Platform.OS === "android") {
+			DateTimePicker.DateTimePickerAndroid.open({
+				value: selectedDateObj,
+				onChange: handleDateChange,
+				mode: "date",
+			});
+		} else {
+			setShowDatePicker(true);
+		}
+	};
+
+	// Adjustment Type Selection Handler (Auto-applies default accounts)
+	const handleSelectAdjustmentType = (preset: AdjustmentTypePreset) => {
+		setAdjustmentType(preset.value);
+		setIsAdjustmentTypePickerOpen(false);
+
+		// If the preset provides default accounts, auto apply them to the first 2 lines
+		const { defaultDebit, defaultCredit } = preset;
+		if (defaultDebit && defaultCredit) {
+			setLines((prev) => {
+				const currentAmount = prev[0]?.debit || prev[1]?.credit || 1000000;
+				const newLine1: JournalLine = {
+					id: prev[0]?.id || `line-${Date.now()}-1`,
+					accountId: defaultDebit.id,
+					accountCode: defaultDebit.code,
+					accountName: defaultDebit.name,
+					debit: currentAmount,
+					credit: 0,
+				};
+				const newLine2: JournalLine = {
+					id: prev[1]?.id || `line-${Date.now()}-2`,
+					accountId: defaultCredit.id,
+					accountCode: defaultCredit.code,
+					accountName: defaultCredit.name,
+					debit: 0,
+					credit: currentAmount,
+				};
+				return [newLine1, newLine2, ...prev.slice(2)];
+			});
+		}
+
+		if (preset.defaultDescription && !description) {
+			setDescription(preset.defaultDescription);
+		}
+	};
+
+	// Line Actions
+	const handleAddLine = () => {
+		setLines((prev) => [
+			...prev,
+			{
+				id: `line-${Date.now()}`,
+				accountId: "",
+				accountCode: "",
+				accountName: "",
+				debit: 0,
+				credit: 0,
+			},
+		]);
+	};
+
+	const handleRemoveLine = (index: number) => {
+		if (lines.length <= 2) return;
+		setLines((prev) => prev.filter((_, i) => i !== index));
+	};
+
+	const handleOpenAccountPicker = (index: number) => {
+		setPickingLineIndex(index);
+		setIsAccountPickerOpen(true);
+	};
+
+	const handleSelectAccount = (
+		acc: (typeof ADJUSTING_JOURNAL_ACCOUNT_OPTIONS)[0],
+	) => {
+		if (pickingLineIndex !== null) {
+			setLines((prev) =>
+				prev.map((line, i) =>
+					i === pickingLineIndex
+						? {
+								...line,
+								accountId: acc.value,
+								accountCode: acc.code,
+								accountName: acc.name,
+							}
+						: line,
+				),
+			);
+		}
+		setIsAccountPickerOpen(false);
+		setPickingLineIndex(null);
+	};
+
+	const handleAmountChange = (index: number, val: number) => {
+		setLines((prev) =>
+			prev.map((line, i) => {
+				if (i !== index) return line;
+				// Maintain current debit/credit designation
+				if (
+					line.debit > 0 ||
+					(line.debit === 0 && line.credit === 0 && index % 2 === 0)
+				) {
+					return { ...line, debit: val, credit: 0 };
+				}
+				return { ...line, credit: val, debit: 0 };
+			}),
+		);
+	};
+
+	const toggleLineType = (index: number) => {
+		setLines((prev) =>
+			prev.map((line, i) => {
+				if (i !== index) return line;
+				const currentAmount = line.debit || line.credit || 0;
+				if (line.debit > 0) {
+					return { ...line, debit: 0, credit: currentAmount };
+				}
+				return { ...line, debit: currentAmount, credit: 0 };
+			}),
+		);
+	};
+
+	// Form Submission
+	const handleSave = () => {
+		if (saved.current) return;
+		if (
+			id !== undefined &&
+			!useAccountingStore
+				.getState()
+				.adjustingJournals.some((journal) => journal.id === id)
+		)
+			return;
+		const validationError = journalValidationError(
+			{ date, referenceNumber, adjustmentType, description, lines },
+			"adjusting",
+		);
+		if (validationError) {
+			setErrorMessage(validationError);
+			errorModal.open();
+			return;
+		}
+
+		saved.current = true;
+		if (id !== undefined) {
+			updateAdjustingJournal(id, {
+				date,
+				referenceNumber,
+				adjustmentType,
+				description,
+				lines,
+				totalAmount: totalDebit,
+				isBalanced: true,
+			});
+		} else {
+			addAdjustingJournal({
+				date,
+				referenceNumber,
+				adjustmentType,
+				description,
+				lines,
+				totalAmount: totalDebit,
+				isBalanced: true,
+			});
+		}
+
+		setIsSaved(true);
+		finishModal.open();
+	};
+
+	const handleFinishModalClose = () => {
+		finishModal.close();
+		router.back();
+	};
+
+	return (
+		<View className="flex-1 bg-gray-50">
+			<AnimatedWrapper
+				avoidKeyboard={Platform.OS === "ios"}
+				hasActionButton
+				fabBottomOffset={96}
+				contentContainerStyle={{ padding: 16, gap: 16 }}
+			>
+				{/* Section 1: Informasi Jurnal */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-4">
+						{/* Header with blue info icon box */}
+						<View className="flex-row items-center gap-3">
+							<View className="size-10 items-center justify-center rounded-xl bg-blue-50">
+								<Feather name="info" size={18} color={Colors.primary} />
+							</View>
+							<View>
+								<Text w="semibold" className="text-sm text-foreground">
+									Informasi Jurnal
+								</Text>
+								<Text className="text-xs text-zinc-400">
+									Lengkapi detail jurnal penyesuaian anda
+								</Text>
+							</View>
+						</View>
+
+						{/* Tanggal */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								Tanggal <Text className="text-red-500">*</Text>
+							</Text>
+							<Pressable
+								onPress={openDatePicker}
+								className="h-11 flex-row items-center justify-between rounded-lg border border-zinc-200 bg-white px-3"
+							>
+								<Text
+									className="text-sm text-foreground"
+									style={{ fontFamily: FONT_NAMES.regular }}
+								>
+									{date}
+								</Text>
+								<Feather name="calendar" size={16} color={Colors.zinc[500]} />
+							</Pressable>
+						</View>
+
+						{/* iOS Date Picker */}
+						{showDatePicker && Platform.OS === "ios" && (
+							<DateTimePicker.default
+								value={selectedDateObj}
+								mode="date"
+								display="spinner"
+								onChange={handleDateChange}
+							/>
+						)}
+
+						{/* No. Referensi */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								No. Referensi <Text className="text-red-500">*</Text>
+							</Text>
+							<View className="h-11 justify-center rounded-lg border border-zinc-200 bg-zinc-50 px-3">
+								<TextInput
+									className="text-sm text-foreground"
+									style={{ fontFamily: FONT_NAMES.regular, fontSize: 14 }}
+									placeholder="AJP-0626-005"
+									placeholderTextColor={Colors.zinc[400]}
+									value={referenceNumber}
+									onChangeText={setReferenceNumber}
+								/>
+							</View>
+						</View>
+
+						{/* Jenis Penyesuaian */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								Jenis Penyesuaian <Text className="text-red-500">*</Text>
+							</Text>
+							<Pressable
+								onPress={() => setIsAdjustmentTypePickerOpen(true)}
+								className="h-11 flex-row items-center justify-between rounded-lg border border-zinc-200 bg-white px-3"
+							>
+								<Text
+									className={cn(
+										"text-sm",
+										adjustmentType ? "text-foreground" : "text-zinc-400",
+									)}
+									style={{ fontFamily: FONT_NAMES.regular }}
+								>
+									{adjustmentType || "Pilih Jenis Penyesuaian"}
+								</Text>
+								<Feather
+									name="chevron-down"
+									size={16}
+									color={Colors.zinc[500]}
+								/>
+							</Pressable>
+						</View>
+
+						{/* Deskripsi */}
+						<View className="gap-1.5">
+							<Text className="text-xs font-medium text-foreground">
+								Deskripsi <Text className="text-red-500">*</Text>
+							</Text>
+							<View className="h-24 rounded-lg border border-zinc-200 bg-white p-3">
+								<TextInput
+									className="flex-1 text-sm text-foreground"
+									style={{
+										fontFamily: FONT_NAMES.regular,
+										fontSize: 14,
+										textAlignVertical: "top",
+									}}
+									placeholder="Penyusutan peralatan kantor juni 2026"
+									placeholderTextColor={Colors.zinc[400]}
+									multiline
+									numberOfLines={3}
+									value={description}
+									onChangeText={setDescription}
+								/>
+							</View>
+						</View>
+					</View>
+				</Card>
+
+				{/* Section 2: Baris Jurnal */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-4">
+						{/* Header with blue document icon box */}
+						<View className="flex-row items-center justify-between">
+							<View className="flex-row items-center gap-3">
+								<View className="size-10 items-center justify-center rounded-xl bg-blue-50">
+									<Feather name="file-text" size={18} color={Colors.primary} />
+								</View>
+								<View>
+									<Text w="semibold" className="text-sm text-foreground">
+										Baris Jurnal
+									</Text>
+									<Text className="text-xs text-zinc-400">
+										Akun default diterapkan otomatis
+									</Text>
+								</View>
+							</View>
+
+							<Pressable
+								onPress={handleAddLine}
+								className="flex-row items-center gap-1 rounded-lg border border-primary-500 px-2.5 py-1.5 active:bg-blue-50"
+							>
+								<Feather name="plus" size={14} color={Colors.primary} />
+								<Text className="text-xs font-semibold text-primary-500">
+									Tambah
+								</Text>
+							</Pressable>
+						</View>
+
+						{/* Lines List */}
+						<View className="gap-3">
+							{lines.map((line, index) => {
+								const isDebit =
+									line.debit > 0 ||
+									(line.debit === 0 && line.credit === 0 && index % 2 === 0);
+								const amount = isDebit ? line.debit : line.credit;
+
+								return (
+									<View
+										key={line.id}
+										className="gap-2.5 rounded-xl border border-zinc-200 bg-white p-3"
+									>
+										{/* Line Top: Account details on left, Badge & Trash on right */}
+										<View className="flex-row items-start justify-between">
+											<Pressable
+												onPress={() => handleOpenAccountPicker(index)}
+												className="flex-1 pr-2 active:opacity-75"
+											>
+												<View className="flex-row items-center gap-1.5">
+													<Text w="bold" className="text-sm text-foreground">
+														{line.accountCode || "Pilih Akun"}
+													</Text>
+													<Feather
+														name="chevron-down"
+														size={14}
+														color={Colors.zinc[400]}
+													/>
+												</View>
+												<Text className="text-xs text-zinc-400">
+													{line.accountName || "Tekan untuk memilih akun"}
+												</Text>
+											</Pressable>
+
+											<View className="flex-row items-center gap-2">
+												{/* Debit / Kredit Badge (tappable to switch) */}
+												<Pressable
+													onPress={() => toggleLineType(index)}
+													className={cn(
+														"rounded-full px-3 py-1",
+														isDebit ? "bg-emerald-50" : "bg-amber-50",
+													)}
+												>
+													<Text
+														className={cn(
+															"text-xs font-semibold",
+															isDebit ? "text-success" : "text-warning",
+														)}
+													>
+														{isDebit ? "Debit" : "Kredit"}
+													</Text>
+												</Pressable>
+
+												{/* Trash button */}
+												{lines.length > 2 && (
+													<Pressable
+														onPress={() => handleRemoveLine(index)}
+														className="size-8 items-center justify-center rounded-lg bg-red-50 active:opacity-75"
+														hitSlop={6}
+													>
+														<Feather
+															name="trash-2"
+															size={15}
+															color={Colors.red[500]}
+														/>
+													</Pressable>
+												)}
+											</View>
+										</View>
+
+										{/* Single Amount Input Row */}
+										<View className="h-11 flex-row items-center rounded-lg border border-zinc-200 bg-white px-3">
+											<TextInput
+												className="flex-1 text-sm text-foreground"
+												style={{
+													fontFamily: FONT_NAMES.regular,
+													fontSize: 14,
+												}}
+												keyboardType="numeric"
+												placeholder="Rp0"
+												value={
+													amount > 0
+														? formatRp(amount).replace(/\s/g, "")
+														: "Rp0"
+												}
+												onChangeText={(text) => {
+													const parsed = parseNumber(text);
+													handleAmountChange(index, parsed);
+												}}
+											/>
+										</View>
+									</View>
+								);
+							})}
+						</View>
+					</View>
+				</Card>
+
+				{/* Section 3: Ringkasan */}
+				<Card className="rounded-2xl border border-gray-100 bg-white p-4">
+					<View className="gap-3">
+						<Text w="semibold" className="text-sm text-foreground">
+							Ringkasan
+						</Text>
+
+						<View className="flex-row items-center justify-between py-1">
+							<View className="flex-1 items-center">
+								<Text className="text-xs text-zinc-400">Total Debit</Text>
+								<Text w="bold" className="text-sm text-foreground">
+									{formatRp(totalDebit).replace(/\s/g, "")}
+								</Text>
+							</View>
+
+							<View className="h-7 w-px bg-gray-200" />
+
+							<View className="flex-1 items-center">
+								<Text className="text-xs text-zinc-400">Total Kredit</Text>
+								<Text w="bold" className="text-sm text-foreground">
+									{formatRp(totalCredit).replace(/\s/g, "")}
+								</Text>
+							</View>
+						</View>
+
+						<View className="items-center gap-1.5 pt-1">
+							<Text className="text-xs text-zinc-400">Selisih</Text>
+							<Text
+								w="bold"
+								className={cn(
+									"text-sm",
+									difference === 0 ? "text-success" : "text-red-500",
+								)}
+							>
+								{formatRp(difference).replace(/\s/g, "")}
+							</Text>
+
+							{isBalanced ? (
+								<View className="flex-row items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1">
+									<Feather name="check-circle" size={13} color="#059669" />
+									<Text className="text-xs font-semibold text-success">
+										Seimbang
+									</Text>
+								</View>
+							) : (
+								<View className="flex-row items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1">
+									<Feather name="alert-circle" size={13} color="#DC2626" />
+									<Text className="text-xs font-semibold text-red-500">
+										Tidak Seimbang
+									</Text>
+								</View>
+							)}
+						</View>
+					</View>
+				</Card>
+			</AnimatedWrapper>
+
+			{/* Sticky Bottom Save Button */}
+			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+				<Button
+					size="xl"
+					className="h-12 rounded-full bg-primary-500"
+					onPress={handleSave}
+					isDisabled={isSaved}
+				>
+					<ButtonText className="text-base font-semibold text-white">
+						Simpan
+					</ButtonText>
+				</Button>
+			</View>
+
+			{/* Account Picker Actionsheet */}
+			<Actionsheet
+				isOpen={isAccountPickerOpen}
+				onClose={() => setIsAccountPickerOpen(false)}
+			>
+				<ActionsheetBackdrop />
+				<ActionsheetContent className="max-h-[80%] pb-8 pt-2">
+					<ActionsheetDragIndicatorWrapper>
+						<ActionsheetDragIndicator />
+					</ActionsheetDragIndicatorWrapper>
+
+					<View className="w-full border-b border-gray-100 px-4 py-3">
+						<Text w="semibold" className="text-base text-foreground">
+							Pilih Akun
+						</Text>
+					</View>
+
+					<View className="w-full px-2 pt-2">
+						{ADJUSTING_JOURNAL_ACCOUNT_OPTIONS.map((acc) => (
+							<Pressable
+								key={acc.value}
+								onPress={() => handleSelectAccount(acc)}
+								className="flex-row items-center justify-between px-4 py-3.5 border-b border-gray-50 active:bg-gray-50"
+							>
+								<View>
+									<Text w="medium" className="text-sm text-foreground">
+										{acc.label}
+									</Text>
+								</View>
+							</Pressable>
+						))}
+					</View>
+				</ActionsheetContent>
+			</Actionsheet>
+
+			{/* Jenis Penyesuaian Picker Actionsheet */}
+			<Actionsheet
+				isOpen={isAdjustmentTypePickerOpen}
+				onClose={() => setIsAdjustmentTypePickerOpen(false)}
+			>
+				<ActionsheetBackdrop />
+				<ActionsheetContent className="max-h-[80%] pb-8 pt-2">
+					<ActionsheetDragIndicatorWrapper>
+						<ActionsheetDragIndicator />
+					</ActionsheetDragIndicatorWrapper>
+
+					<View className="w-full border-b border-gray-100 px-4 py-3">
+						<Text w="semibold" className="text-base text-foreground">
+							Pilih Jenis Penyesuaian
+						</Text>
+					</View>
+
+					<View className="w-full px-2 pt-2">
+						{ADJUSTMENT_TYPE_OPTIONS.map((preset) => {
+							const isSelected = adjustmentType === preset.value;
+							return (
+								<Pressable
+									key={preset.value}
+									onPress={() => handleSelectAdjustmentType(preset)}
+									className="flex-row items-center justify-between px-4 py-3.5 border-b border-gray-50 active:bg-gray-50"
+								>
+									<View>
+										<Text
+											w={isSelected ? "semibold" : "regular"}
+											className={cn(
+												"text-sm",
+												isSelected ? "text-primary-500" : "text-foreground",
+											)}
+										>
+											{preset.label}
+										</Text>
+										{preset.defaultDescription && (
+											<Text className="text-xs text-zinc-400">
+												{preset.defaultDescription}
+											</Text>
+										)}
+									</View>
+
+									{isSelected && (
+										<Feather name="check" size={18} color={Colors.primary} />
+									)}
+								</Pressable>
+							);
+						})}
+					</View>
+				</ActionsheetContent>
+			</Actionsheet>
+
+			{/* Finish Success Modal */}
+			<SuccessModal
+				openState={finishModal.openState}
+				onClose={handleFinishModalClose}
+				title={
+					isEdit
+						? "Jurnal Penyesuaian Diperbarui!"
+						: "Jurnal Penyesuaian Tersimpan!"
+				}
+				description={
+					isEdit
+						? "Perubahan pada jurnal penyesuaian telah berhasil disimpan."
+						: "Jurnal penyesuaian barumu sudah aktif dan berhasil disimpan."
+				}
+				buttonText="Tutup"
+			/>
+
+			{/* Error Modal */}
+			<AlertModal
+				openState={errorModal.openState}
+				onClose={errorModal.close}
+				onConfirm={errorModal.close}
+				title="Perhatian"
+				message={errorMessage}
+				confirmText="Mengerti"
+				hideCancelButton
+				confirmAction="negative"
+			/>
+		</View>
+	);
+}

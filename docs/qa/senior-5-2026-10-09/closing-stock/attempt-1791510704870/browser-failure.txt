@@ -1,0 +1,13 @@
+Error: Invariant Violation: __fbBatchedBridgeConfig is not set, cannot invoke native modules
+    at invariant (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46399:17)
+    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46502:5
+    at loadModuleImplementation (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:163:7)
+    at guardedLoadModule (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:100:14)
+    at metroRequire (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:42:75)
+    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46347:25
+    at loadModuleImplementation (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:163:7)
+    at guardedLoadModule (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:100:14)
+    at metroRequire (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:42:75)
+    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46327:50
+    at wait (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:12:81)
+    at async C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:21:1

@@ -1,0 +1,2 @@
+// Wait for Moti scale to settle independently of expected viewport dimensions.
+module.exports=async page=>page.waitForFunction(()=>{const node=document.querySelector('[role="dialog"]');if(!node)return false;const rect=node.getBoundingClientRect(),css=getComputedStyle(node);return Math.abs(rect.width-parseFloat(css.width))<0.1&&Math.abs(rect.height-parseFloat(css.height))<0.1;},undefined,{timeout:12000});

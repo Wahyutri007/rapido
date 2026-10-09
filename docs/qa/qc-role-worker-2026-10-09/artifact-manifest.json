@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-10-08T19:19:26.958Z",
+  "files": {
+    "DECISION.json": "205e0e630ecbb05c49719d4d37baa8fe2c54f8c3356fabf833d43f95aa683f30",
+    "developer-check.cjs": "0f80ececc7512a861d6094f66b7635e8e023ee6b9731887b8dcf8cd3d618e979",
+    "developer-quality.cjs": "25a654c2438a370f7acea8e76897728ce1f39bc57c3cbef4c4add44f1a3c1ea5",
+    "finalize.cjs": "3257f795e97a245ece614ce5ecbe448cd21a7628a223534f8ad8b19067614c29",
+    "lifecycle.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lifecycle.out.txt": "c37652c3068e294e9ce19441fefa544fa2738f99255d1dcf0760b441e306e7f3",
+    "production-hooks-results.json": "65676c9bed1c2775dbec3504e194388d17e14444d06b19afd3c0752ce0b10080",
+    "production-hooks.cjs": "68477679d051a34b4b9c889bb16ff8f22454bf617b933180b3c2df162f1d2045",
+    "quality-results.json": "3ec72ac52cc25b153251ae5816d7e878fa5f425074432aba96ac15b940b71e21",
+    "quality.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "quality.out.txt": "b7429767b70c4f8d722cfbfe1a6f25b6293f6ae9f3787933c226a434f7409315",
+    "REPORT.md": "81b83da2165836d14363f295790d508c0ea3101bfa4fa7ccd2517787d0c3610c",
+    "results.json": "125b85ec4724d5561ad07647a216bedb9a51772f12b573d8009f8c3ed6edc0ba",
+    "role.before.tsx.txt": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+    "source-before.json": "04ede117fdc5be15e353715fed56b834743d838d4001a5b6656b5bed22372ddc",
+    "verification.json": "b82dbd7f5d5d66055377ec26108b1bd45878acc32fe39f54cd75d76d8053682e",
+    "verify.cjs": "5e260a26a8e1b764677eab789367fc8bd4e1fe18a08637b6c6e08cdb75c55a9a",
+    "worker.before.tsx.txt": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce"
+  }
+}

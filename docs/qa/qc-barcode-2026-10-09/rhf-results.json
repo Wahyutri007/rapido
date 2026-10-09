@@ -1,0 +1,22 @@
+{
+  "passed": 9,
+  "checks": [
+    "RHF initial default displayed without minimum flicker",
+    "real RHF accepts increment",
+    "Incrementer displays RHF echo",
+    "real RHF reset updates counter",
+    "maximum preserved in RHF payload",
+    "minimum preserved in RHF payload",
+    "disabled counter leaves RHF draft unchanged",
+    "reenabling counter updates RHF draft",
+    "no runtime warnings or errors"
+  ],
+  "errors": [],
+  "source": {
+    "file": "components/custom/Incrementer.tsx",
+    "sha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+    "before": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+    "stable": true
+  },
+  "scope": "Production Incrementer + production RHF useForm/useController, props matching Barcode label_count caller; host UI adapters. Full screen/router/native not rendered."
+}

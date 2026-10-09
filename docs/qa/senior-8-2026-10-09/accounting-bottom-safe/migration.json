@@ -1,0 +1,111 @@
+{
+  "screens": [
+    "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx"
+  ],
+  "changes": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "before": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "before": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+      "before": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+      "before": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "before": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+      "before": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+      "before": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+      "before": "641e445d92588d6f6be91451636c05fb0f18c10f6492988bb6c8c70ea288a768",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+      "before": "98297f84ae4661aa01d1bce5e1ad9f92ab2853ced3376906e6865f1b09b346bb",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+      "before": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+      "before": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "before": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+      "before": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+      "before": "d8eb69bc0b7750a68b8106e74a191c1f621d11393df7b4f67ab89e77098a066d",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx.txt"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+      "before": "5ae67e1e95c8fa82243a158b5f309145f48e73c9a4f65b36cc23b70477d7d0ce",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx.txt"
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "before": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/common/Wrapper.tsx.txt"
+    },
+    {
+      "file": "components/common/AnimatedWrapper.tsx",
+      "before": "b579878f55e6806fc782b2fde16dfb71ce673a6211737349d609836ade3cce14",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/common/AnimatedWrapper.tsx.txt"
+    },
+    {
+      "file": "components/feature/reports/ReportActionButton.tsx",
+      "before": "e63203fe1111173a35b3763f4b608e78bd167b252dde18b630b7265d56b532bc",
+      "snapshot": "docs/qa/senior-8-2026-10-09/accounting-bottom-safe/before/components/feature/reports/ReportActionButton.tsx.txt"
+    }
+  ]
+}

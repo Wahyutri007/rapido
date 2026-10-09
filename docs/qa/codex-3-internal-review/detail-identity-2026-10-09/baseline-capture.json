@@ -1,0 +1,33 @@
+{
+  "status": "READ_ONLY_BASELINE_CAPTURE",
+  "externalQcApproval": false,
+  "capturedAt": "2026-10-09T00:11:14.148Z",
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "1a3b993214194b9ddff74ad47f2e320be1132bea483c2160576ccdf3f827a851",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7fb9fa3ca423674a070fdc4c75168b8ceadaec2de07a0c08cdfa26ebb3749b6b",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e"
+  },
+  "contractHashes": {
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/feature/manage/roles/RoleWorkers.tsx": "329fd2161234d75c2df32fef8e703b465a1d61a82d5499841e9668fe8faff64b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "app/(no-layout)/(back-office)/manage/roles/detail.tsx": "725ab58db1d1072dc005e8b899a4e17c99b2cc2b1b6ee26ab75258970c238a3b",
+    "app/(no-layout)/manage/workers/detail.tsx": "b75a8abad632ad86d2c5beb47d28f64ffc81ee594cbfd2eb57038af03cf0ebaa",
+    "app/(no-layout)/manage/member/detail.tsx": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "figmaCallableTools": [],
+  "observedRisk": "Parent detail modal and Role permission search have no identity boundary when route id changes; keyed delete child receives retained parent openState.",
+  "limitations": "No application/source/shared/frozen edits. Contracts captured for independent reviewer checks; browser/native/API not exercised."
+}

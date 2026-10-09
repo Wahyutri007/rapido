@@ -1,0 +1,749 @@
+{
+  "owner": "QC",
+  "ticket": "SD3-005",
+  "createdAt": "2026-10-08T19:35:37.012Z",
+  "scope": "Independent actual support routes/components, shared FormInput/FormField/FormMessage/FormControl, AlertModal/useAlertModal, RHF and Zod under StrictMode; native/UI/picker host adapters, no browser/native/API",
+  "passed": 61,
+  "failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "feedback: production route selects mode and CTA",
+      "actual": [
+        "feedback",
+        "Kirim",
+        "Isi feedback"
+      ],
+      "expected": [
+        "feedback",
+        "Kirim",
+        "Isi feedback"
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: real FormProvider defaults",
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "passed": true
+    },
+    {
+      "name": "feedback: real FormMessage renders both required errors",
+      "actual": [
+        "Deskripsi wajib diisi",
+        "Judul wajib diisi"
+      ],
+      "expected": [
+        "Deskripsi wajib diisi",
+        "Judul wajib diisi"
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: invalid submit leaves production modal closed",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feedback: production FormInput stores typed title",
+      "actual": "  QC draft title  ",
+      "expected": "  QC draft title  ",
+      "passed": true
+    },
+    {
+      "name": "feedback: production FormInput marks title dirty/touched",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: title watch and textarea reflect typed values",
+      "actual": [
+        "  QC draft title  ",
+        "  QC draft description  "
+      ],
+      "expected": [
+        "  QC draft title  ",
+        "  QC draft description  "
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: real Controllers bind radio and related page",
+      "actual": [
+        "criticism",
+        "Laporan"
+      ],
+      "expected": [
+        "criticism",
+        "Laporan"
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: production attachment Controller stores selected file",
+      "actual": {
+        "uri": "file:///qc-old.pdf",
+        "name": "qc-old.pdf",
+        "mimeType": "application/pdf",
+        "size": 512
+      },
+      "expected": {
+        "uri": "file:///qc-old.pdf",
+        "name": "qc-old.pdf",
+        "mimeType": "application/pdf",
+        "size": 512
+      },
+      "passed": true
+    },
+    {
+      "name": "feedback: valid submit opens actual AlertModal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feedback: delivery copy states not sent and remains available",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: submit preserves untrimmed editable draft",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "criticism",
+        "relatedPage": "Laporan",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "criticism",
+        "relatedPage": "Laporan",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "feedback: actual confirm button closes delivery modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feedback: closing delivery modal preserves draft",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "criticism",
+        "relatedPage": "Laporan",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "criticism",
+        "relatedPage": "Laporan",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "feedback: invalid replacement opens production attachment alert",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feedback: oversize message and previous file retained",
+      "actual": [
+        "Ukuran lampiran maksimal 5 MB",
+        {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      ],
+      "expected": [
+        "Ukuran lampiran maksimal 5 MB",
+        {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "feedback: real attachment alert confirm closes modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feedback: actual Controller picker double event opens one",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "feedback: busy accessibility matches pending",
+      "actual": {
+        "disabled": true,
+        "busy": true
+      },
+      "expected": {
+        "disabled": true,
+        "busy": true
+      },
+      "passed": true
+    },
+    {
+      "name": "feedback: removing through actual Controller clears value",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "feedback: remove keeps native picker busy until completion",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feedback: removed pending result cannot repopulate RHF",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "feedback: removed pending result opens no error modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feedback: retry after removed result attaches",
+      "actual": {
+        "uri": "file:///qc-new.png",
+        "name": "qc-new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///qc-new.png",
+        "name": "qc-new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: production route selects mode and CTA",
+      "actual": [
+        "feature-request",
+        "Ajukan",
+        "Deskripsi permintaan"
+      ],
+      "expected": [
+        "feature-request",
+        "Ajukan",
+        "Deskripsi permintaan"
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: real FormProvider defaults",
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: real FormMessage renders both required errors",
+      "actual": [
+        "Deskripsi wajib diisi",
+        "Judul wajib diisi"
+      ],
+      "expected": [
+        "Deskripsi wajib diisi",
+        "Judul wajib diisi"
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: invalid submit leaves production modal closed",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feature-request: production FormInput stores typed title",
+      "actual": "  QC draft title  ",
+      "expected": "  QC draft title  ",
+      "passed": true
+    },
+    {
+      "name": "feature-request: production FormInput marks title dirty/touched",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: title watch and textarea reflect typed values",
+      "actual": [
+        "  QC draft title  ",
+        "  QC draft description  "
+      ],
+      "expected": [
+        "  QC draft title  ",
+        "  QC draft description  "
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: production attachment Controller stores selected file",
+      "actual": {
+        "uri": "file:///qc-old.pdf",
+        "name": "qc-old.pdf",
+        "mimeType": "application/pdf",
+        "size": 512
+      },
+      "expected": {
+        "uri": "file:///qc-old.pdf",
+        "name": "qc-old.pdf",
+        "mimeType": "application/pdf",
+        "size": 512
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: valid submit opens actual AlertModal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feature-request: delivery copy states not sent and remains available",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: submit preserves untrimmed editable draft",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: actual confirm button closes delivery modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feature-request: closing delivery modal preserves draft",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: invalid replacement opens production attachment alert",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feature-request: oversize message and previous file retained",
+      "actual": [
+        "Ukuran lampiran maksimal 5 MB",
+        {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      ],
+      "expected": [
+        "Ukuran lampiran maksimal 5 MB",
+        {
+          "uri": "file:///qc-old.pdf",
+          "name": "qc-old.pdf",
+          "mimeType": "application/pdf",
+          "size": 512
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "feature-request: real attachment alert confirm closes modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feature-request: actual Controller picker double event opens one",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "feature-request: busy accessibility matches pending",
+      "actual": {
+        "disabled": true,
+        "busy": true
+      },
+      "expected": {
+        "disabled": true,
+        "busy": true
+      },
+      "passed": true
+    },
+    {
+      "name": "feature-request: removing through actual Controller clears value",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "feature-request: remove keeps native picker busy until completion",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "feature-request: removed pending result cannot repopulate RHF",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "name": "feature-request: removed pending result opens no error modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "feature-request: retry after removed result attaches",
+      "actual": {
+        "uri": "file:///qc-new.png",
+        "name": "qc-new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///qc-new.png",
+        "name": "qc-new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "passed": true
+    },
+    {
+      "name": "A-B-A: returning instance has fresh full defaults",
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "passed": true
+    },
+    {
+      "name": "A-B-A: returning instance has no inherited busy state",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "A-B-A: old callbacks cannot delete current attachment or draft",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-new.png",
+          "name": "qc-new.png",
+          "mimeType": "image/png",
+          "size": 1024
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-new.png",
+          "name": "qc-new.png",
+          "mimeType": "image/png",
+          "size": 1024
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "A-B-A: old submit cannot open current delivery modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "A-B-A: out of order old results cannot overwrite current attachment",
+      "actual": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-new.png",
+          "name": "qc-new.png",
+          "mimeType": "image/png",
+          "size": 1024
+        }
+      },
+      "expected": {
+        "title": "  QC draft title  ",
+        "description": "  QC draft description  ",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": {
+          "uri": "file:///qc-new.png",
+          "name": "qc-new.png",
+          "mimeType": "image/png",
+          "size": 1024
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "A-B-A: old rejection cannot show current attachment alert",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "A-B-A: old completions leave current picker available",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "A-B-A: earlier B draft was populated independently",
+      "actual": [
+        "  QC draft title  ",
+        "  QC draft description  ",
+        null
+      ],
+      "expected": [
+        "  QC draft title  ",
+        "  QC draft description  ",
+        null
+      ],
+      "passed": true
+    },
+    {
+      "name": "validation transition: old async valid submit cannot open new modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "validation transition: new mode retains fresh defaults",
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "passed": true
+    },
+    {
+      "name": "validation transition: old actual modal state was initially closed",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "validation transition: new lifetime remains submittable after StrictMode",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "validation transition: modal reset when switching again",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "validation transition: errors reset with fresh real FormControls",
+      "actual": [
+        null,
+        null
+      ],
+      "expected": [
+        null,
+        null
+      ],
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/support.ts": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "app/(no-layout)/manage/feedback/index.tsx": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+    "app/(no-layout)/manage/feature-request/index.tsx": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f"
+  },
+  "loadedProductionModules": [
+    "hooks/useAlertModal.ts",
+    "components/common/AlertModal.tsx",
+    "constants/Colors.ts",
+    "constants/Fonts.ts",
+    "components/common/Form.tsx",
+    "schema/support.ts",
+    "components/feature/support/SupportAttachmentInput.tsx",
+    "components/feature/support/SupportFormScreen.tsx",
+    "app/(no-layout)/manage/feedback/index.tsx",
+    "app/(no-layout)/manage/feature-request/index.tsx"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "passed": 25,
+  "checks": [
+    {
+      "name": "Existing production preview records and truthful source notice render",
+      "detail": {}
+    },
+    {
+      "name": "List 320x640: full row and >=44px tap target reachable, no horizontal overflow",
+      "detail": {
+        "x": 16,
+        "y": 508,
+        "width": 288,
+        "height": 116
+      }
+    },
+    {
+      "name": "Detail 320x640: long source value wraps and scrolls",
+      "detail": {}
+    },
+    {
+      "name": "List 390x844: full row and >=44px tap target reachable, no horizontal overflow",
+      "detail": {
+        "x": 16,
+        "y": 508,
+        "width": 358,
+        "height": 116
+      }
+    },
+    {
+      "name": "Detail 390x844: long source value wraps and scrolls",
+      "detail": {}
+    },
+    {
+      "name": "List 844x390: full row and >=44px tap target reachable, no horizontal overflow",
+      "detail": {
+        "x": 16,
+        "y": 169,
+        "width": 812,
+        "height": 116
+      }
+    },
+    {
+      "name": "Detail 844x390: long source value wraps and scrolls",
+      "detail": {}
+    },
+    {
+      "name": "Actual search trims input and matches recorded location",
+      "detail": {}
+    },
+    {
+      "name": "Unmatched search shows clear empty result",
+      "detail": {}
+    },
+    {
+      "name": "Reset restores controlled search and all records",
+      "detail": {}
+    },
+    {
+      "name": "Status picker isolates open records",
+      "detail": {}
+    },
+    {
+      "name": "Combined status/store filters use intersection",
+      "detail": {}
+    },
+    {
+      "name": "Combined filters reset to their actual displayed defaults",
+      "detail": {}
+    },
+    {
+      "name": "Returning to still-mounted list preserves its search/filter state",
+      "detail": {}
+    },
+    {
+      "name": "List navigation safely preserves opaque ID and recorded/missing time",
+      "detail": {}
+    },
+    {
+      "name": "Mounted detail responds to a new route ID",
+      "detail": {}
+    },
+    {
+      "name": "Live detail reads updated source without reopening",
+      "detail": {}
+    },
+    {
+      "name": "Live deletion invalidates detail and missing action returns within Absensi",
+      "detail": {}
+    },
+    {
+      "name": "Live empty source uses session-empty message",
+      "detail": {}
+    },
+    {
+      "name": "Live additions refresh list",
+      "detail": {}
+    },
+    {
+      "name": "Removed filter option preserves filtering until explicit reset",
+      "detail": {}
+    },
+    {
+      "name": "Absent/empty/array/missing IDs cannot expose another record",
+      "detail": {}
+    },
+    {
+      "name": "Unknown date/store/time remain disclosed without invented identity or schedule",
+      "detail": {}
+    },
+    {
+      "name": "Zero runtime/console errors and zero external/business requests",
+      "detail": {}
+    },
+    {
+      "name": "Production and harness fingerprints stable throughout browser run",
+      "detail": {}
+    }
+  ],
+  "metrics": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 640
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    }
+  ],
+  "runtime": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "before": {
+    "lib/absence-history.ts": "eb599fe8205c5d5e6d38bc81aaa70ec3e1e82bb9e159892c33eb292cb46c8850",
+    "components/feature/absence/history/HistoryDetailScreen.tsx": "a79638145970a129015f610c87076329ba0ac54fe99541ea8ce335bb357d0d99",
+    "components/feature/absence/history/HistoryListScreen.tsx": "f54f2c593bfce54b824951b588514b905439b814d272fd636761bb0331cb82eb",
+    "components/feature/absence/history/HistoryNotice.tsx": "d8dc3efd76df452cef8506e4c3ef9d554c44444a1489fe8785816344cde7d49e",
+    "app/(absence)/history/detail.tsx": "1fd21133176efa2fe30c09794aecbc42bdc9f988136836f677639ebab1d8f84d",
+    "app/(absence)/history/index.tsx": "c0af470534769bace4e21247a5fd3d0da58dd8c0c518483160524137f9a63b89",
+    "app/(absence)/history/_layout.tsx": "b3c66725341e4e33a9dee1aba197ef08beb96c6aca55c58dea4a0cb5828ba513",
+    "app/(absence)/home.tsx": "f36873523eab85188bcd2400138e1e32f0dd3830e11ba9e6ba98a3ee61e0bb52",
+    "app/(absence)/_layout.tsx": "7122e23e4db75b33dd4a7a040bcfcb8e9dd4cd90655fafac72c3437512f65739",
+    "store/useAbsenceStore.ts": "830772595c33ade8a35924fd08d1894887637e850251944e81253b530aeba568",
+    "lib/manage/absence.ts": "7457001261c802eed40e229379d2ca9853864217f44a5aff605c646f7b8bede8",
+    "types/ui/manage/absence.ts": "8c2506f39e44ff35d231f161bc14e7b8cce4113f182f9aa4dc940fd5c44bdb9a",
+    "components/feature/manage/absence/AbsenceCommon.tsx": "783fe1a68b72e1e54b925e684f3c034ba1eaf769693684244909ff7367b6a41a",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "b7b3344b34055a2de676cc27e16187a88e03b69e91ad5d6f7ed0705ebd72d90c",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/DataPlaceholder.tsx": "11f552716277208846cec844383d2689beceba7f08605f11df08b2e4eefc0a61",
+    "components/custom/CatalogItemCard.tsx": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+    "components/custom/DetailRow.tsx": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "docs\\qa\\senior-6-2026-10-09\\absence-history\\ui-entry.jsx": "f1f7ff0bb1b50c52cc581cc911b8fb03d7804adb21090cd0ab1a1c08a36563e7",
+    "docs\\qa\\senior-6-2026-10-09\\absence-history\\web.css": "5b2b1ca44a362984bbeb88e7ed90822ea381f23a55cf472621b2d887fc0ca863",
+    ".expo\\senior6-absence-history-offline\\entry.bundle.js": "1188930862d822a728e503ac617838904f55b6d41e2117d23ee95672d822bd6d"
+  },
+  "after": {
+    "lib/absence-history.ts": "eb599fe8205c5d5e6d38bc81aaa70ec3e1e82bb9e159892c33eb292cb46c8850",
+    "components/feature/absence/history/HistoryDetailScreen.tsx": "a79638145970a129015f610c87076329ba0ac54fe99541ea8ce335bb357d0d99",
+    "components/feature/absence/history/HistoryListScreen.tsx": "f54f2c593bfce54b824951b588514b905439b814d272fd636761bb0331cb82eb",
+    "components/feature/absence/history/HistoryNotice.tsx": "d8dc3efd76df452cef8506e4c3ef9d554c44444a1489fe8785816344cde7d49e",
+    "app/(absence)/history/detail.tsx": "1fd21133176efa2fe30c09794aecbc42bdc9f988136836f677639ebab1d8f84d",
+    "app/(absence)/history/index.tsx": "c0af470534769bace4e21247a5fd3d0da58dd8c0c518483160524137f9a63b89",
+    "app/(absence)/history/_layout.tsx": "b3c66725341e4e33a9dee1aba197ef08beb96c6aca55c58dea4a0cb5828ba513",
+    "app/(absence)/home.tsx": "f36873523eab85188bcd2400138e1e32f0dd3830e11ba9e6ba98a3ee61e0bb52",
+    "app/(absence)/_layout.tsx": "7122e23e4db75b33dd4a7a040bcfcb8e9dd4cd90655fafac72c3437512f65739",
+    "store/useAbsenceStore.ts": "830772595c33ade8a35924fd08d1894887637e850251944e81253b530aeba568",
+    "lib/manage/absence.ts": "7457001261c802eed40e229379d2ca9853864217f44a5aff605c646f7b8bede8",
+    "types/ui/manage/absence.ts": "8c2506f39e44ff35d231f161bc14e7b8cce4113f182f9aa4dc940fd5c44bdb9a",
+    "components/feature/manage/absence/AbsenceCommon.tsx": "783fe1a68b72e1e54b925e684f3c034ba1eaf769693684244909ff7367b6a41a",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Wrapper.tsx": "b7b3344b34055a2de676cc27e16187a88e03b69e91ad5d6f7ed0705ebd72d90c",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/DataPlaceholder.tsx": "11f552716277208846cec844383d2689beceba7f08605f11df08b2e4eefc0a61",
+    "components/custom/CatalogItemCard.tsx": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+    "components/custom/DetailRow.tsx": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "docs\\qa\\senior-6-2026-10-09\\absence-history\\ui-entry.jsx": "f1f7ff0bb1b50c52cc581cc911b8fb03d7804adb21090cd0ab1a1c08a36563e7",
+    "docs\\qa\\senior-6-2026-10-09\\absence-history\\web.css": "5b2b1ca44a362984bbeb88e7ed90822ea381f23a55cf472621b2d887fc0ca863",
+    ".expo\\senior6-absence-history-offline\\entry.bundle.js": "1188930862d822a728e503ac617838904f55b6d41e2117d23ee95672d822bd6d"
+  },
+  "limitations": "Production React Native Web screens, store, helpers, shared inputs/status/rows/providers/fonts; browser-local navigation/params and data fixture, not full app router/auth/native/Figma/backend/persistence."
+}

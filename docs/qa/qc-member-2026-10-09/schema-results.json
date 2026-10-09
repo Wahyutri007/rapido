@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-09",
+  "passed": 23,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "required minimal member",
+      "pass": true
+    },
+    {
+      "name": "blank name",
+      "pass": true
+    },
+    {
+      "name": "blank phone",
+      "pass": true
+    },
+    {
+      "name": "name at 255",
+      "pass": true
+    },
+    {
+      "name": "name exceeds 255",
+      "pass": true
+    },
+    {
+      "name": "phone at 50",
+      "pass": true
+    },
+    {
+      "name": "phone exceeds 50",
+      "pass": true
+    },
+    {
+      "name": "valid email",
+      "pass": true
+    },
+    {
+      "name": "invalid email",
+      "pass": true
+    },
+    {
+      "name": "address storage limit",
+      "pass": true
+    },
+    {
+      "name": "address exceeds storage",
+      "pass": true
+    },
+    {
+      "name": "identity exceeds limit",
+      "pass": true
+    },
+    {
+      "name": "valid leap date",
+      "pass": true
+    },
+    {
+      "name": "invalid leap date",
+      "pass": true
+    },
+    {
+      "name": "invalid day",
+      "pass": true
+    },
+    {
+      "name": "invalid month",
+      "pass": true
+    },
+    {
+      "name": "invalid date format",
+      "pass": true
+    },
+    {
+      "name": "unsupported gender",
+      "pass": true
+    },
+    {
+      "name": "supported female gender",
+      "pass": true
+    },
+    {
+      "name": "schema trims required strings",
+      "pass": true
+    },
+    {
+      "name": "empty optionals become null",
+      "pass": true
+    },
+    {
+      "name": "backend nullable values prefill empty fields",
+      "pass": true
+    },
+    {
+      "name": "unsupported backend keys excluded",
+      "pass": true
+    }
+  ],
+  "hashes": {
+    "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "scope": "Production Zod schema and payload helpers; no API/native/router execution."
+}

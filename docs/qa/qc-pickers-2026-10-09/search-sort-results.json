@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "caller defaults to newest actual search results",
+      "pass": true
+    },
+    {
+      "name": "sort draft leaves actual caller results unchanged",
+      "pass": true
+    },
+    {
+      "name": "search rerender preserves pending sort draft",
+      "pass": true
+    },
+    {
+      "name": "save updates actual search order and closes sheet",
+      "pass": true
+    },
+    {
+      "name": "reopen uses actual caller callback echo",
+      "pass": true
+    },
+    {
+      "name": "cancel leaves actual order and callback count unchanged",
+      "pass": true
+    },
+    {
+      "name": "external reset during open sheet replaces pending sort",
+      "pass": true
+    },
+    {
+      "name": "confirm external reset uses actual newest results",
+      "pass": true
+    },
+    {
+      "name": "sort preserves actual active search and filtered results",
+      "pass": true
+    },
+    {
+      "name": "clearing search retains committed descending sort",
+      "pass": true
+    },
+    {
+      "name": "backdrop cancel discards draft through actual SearchBar state",
+      "pass": true
+    },
+    {
+      "name": "custom sort callback bypasses built-in opening",
+      "pass": true
+    },
+    {
+      "name": "caller unmount clears timers and produces no runtime warnings",
+      "pass": true
+    },
+    {
+      "name": "caller sources stable before and after test",
+      "pass": true
+    }
+  ],
+  "before": {
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "hooks/useSearch.ts": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10"
+  },
+  "after": {
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "hooks/useSearch.ts": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10"
+  },
+  "errors": [],
+  "scope": "Actual SearchBar, SortActionSheet and useSearch with host primitive adapters; no full screen/API/native."
+}

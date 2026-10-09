@@ -1,0 +1,115 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-004",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-08T20:48:00.124Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceOrigin": "Working tree, not committed; hashes bind source and developer evidence",
+  "editedSources": [
+    "hooks/useProtectedRoute.ts"
+  ],
+  "executedSourceHashes": {
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c"
+  },
+  "reviewOnlyContractHashes": {
+    "app/_layout.tsx": "5f1b79e7793e77ad983f94eae5bd37775c3b719563fc97b5eeff2322e43937f5",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "hooks/useNavigateAuthenticated.ts": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "lib/storage.web.ts": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2"
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/guard/HANDOFF.md": "05a55385d245e56335e7d47d617ced0536f0a707c9e6fa18d5c09fb6e3f94f78",
+    "docs/qa/senior-5-2026-10-09/guard/check.cjs": "3e4a9738d8a4e3509ebda461a285f1d7f6c3992c129bb14d1378a98073f6fbcb",
+    "docs/qa/senior-5-2026-10-09/guard/typecheck.cjs": "77e9f1db7b3094899142a86226cbf7aa653f1651971ffe1b46b672ea7705d995",
+    "docs/qa/senior-5-2026-10-09/guard/baseline-results.json": "d9ac6dbd5117128d8ab83c8003266653641c2488cf38bc559739a98be58158b3",
+    "docs/qa/senior-5-2026-10-09/guard/final-results.json": "3ae7fc68198a188f3edda0216916b2b616a7c38ddce0b16a1e3b49e7ad3f7f59",
+    "docs/qa/senior-5-2026-10-09/guard/typecheck-results.json": "fe1b640d9a07c31a3c795579a8c2a606d8b09a7c189e20f5fb72f46e0cda700f",
+    "docs/qa/senior-5-2026-10-09/guard/figma-access.json": "08b49e5f6eb31b1786b2c848bb8e22dc7e1446c5b3e0d2e98ee222ccb8b71759"
+  },
+  "routingPolicyASTUnchanged": true,
+  "routingPolicy": {
+    "vars": {
+      "PUBLIC_ROUTES": "[ \"maintenance\" , \"terms-and-condition\" ]",
+      "isOnboarding": "segments . some ( ( s ) => s === \"(onboarding)\" || s === \"login\" || s === \"onboarding\" || s === \"register\" || s === \"otp\" || s === \"forgot-password\" || s === \"reset-password\" || s === \"choose-store\" )",
+      "inPublicGroup": "isOnboarding || segments . some ( ( segment ) => PUBLIC_ROUTES . includes ( segment ) )",
+      "isIndex": "segments . length === 0 || ( segments . length === 1 && segments [ 0 ] === \"index\" )"
+    },
+    "conditions": [
+      "isLoading",
+      "authenticated && inPublicGroup",
+      "isOnboarding",
+      "! authenticated && ! inPublicGroup && ! isIndex"
+    ],
+    "destinations": [
+      "/(back-office)/home",
+      "/(onboarding)/login"
+    ],
+    "deps": "[ authenticated , segments , isLoading ]"
+  },
+  "lifecycle": {
+    "baselineRef": "acba0d92460c1af3149abc3775f09888a2943cab",
+    "baselinePassed": 78,
+    "baselineFailed": 27,
+    "passed": 105,
+    "failed": 0,
+    "runtimeActErrors": 0
+  },
+  "baselineLint": [
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "finalLint": [
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "biome": {
+    "exitCode": 0,
+    "output": "Checked 1 file in 18ms. No fixes applied.",
+    "files": 1
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "scope": [
+      "hooks/useProtectedRoute.ts",
+      "docs/README.md"
+    ]
+  },
+  "typecheck": {
+    "diagnosticCount": 0,
+    "scope": "useProtectedRoute root with imported dependency/declaration closure; not a full-project check"
+  },
+  "separateBootReview": {
+    "decision": "docs/qa/qc-boot-2026-10-09/DECISION.json",
+    "signal": "QC-BOOT-20261009-PASS-DELTA",
+    "status": "PASS_DELTA",
+    "passed": 105,
+    "bootSourceStillMatches": true,
+    "appliesToNewGuard": false,
+    "oldDependencyFingerprintIsHistorical": true
+  },
+  "adapters": [
+    "router/auth/segments for policy matrix",
+    "RAF/cancel queue with post-cancellation callback delivery",
+    "AuthProvider storage/query client/refetch transport and Zustand query binding"
+  ],
+  "boundaries": [
+    "Routing policy and destinations unchanged; only frame/callback lifetime is changed",
+    "StrictMode covers guard subtree, not the full AuthProvider in StrictMode",
+    "Cancel/active guard takes effect on effect cleanup; completed navigation cannot be undone",
+    "Old boot/login package guard-dependency fingerprints are historical, not retrofitted",
+    "No real API/storage/permissions/browser/native/SSR/full router/concurrent frame certification",
+    "No visual/design/dependency/backend/server/HP/branch/index/commit/push changes"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "Exact raw byte preservation for archival evidence in staged Git blobs; sha1 Git object identity checked without filters, not source QA approval.",
+  "files": 3468,
+  "mismatches": []
+}

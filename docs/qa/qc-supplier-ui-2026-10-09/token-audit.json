@@ -1,0 +1,122 @@
+{
+  "authority": "AGENTS_UI.md 1.1/2.1/2.2/2.6",
+  "files": [
+    "components/feature/inventory/supplier/SupplierListScreen.tsx",
+    "components/feature/inventory/supplier/SupplierDetailScreen.tsx",
+    "components/feature/inventory/supplier/SupplierFormScreen.tsx",
+    "components/feature/inventory/supplier/SupplierDeleteDialog.tsx",
+    "components/custom/DetailRow.tsx",
+    "components/custom/DetailBottomActions.tsx",
+    "components/common/DeleteConfirmModal.tsx",
+    "components/common/SuccessModal.tsx"
+  ],
+  "findings": [
+    {
+      "file": "components/custom/DetailRow.tsx",
+      "scope": "shared-existing",
+      "line": 27,
+      "component": "View",
+      "token": "border-gray-100",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/custom/DetailRow.tsx",
+      "scope": "shared-existing",
+      "line": 43,
+      "component": "Text",
+      "token": "text-sm",
+      "category": "nonsemantic-typography"
+    },
+    {
+      "file": "components/custom/DetailRow.tsx",
+      "scope": "shared-existing",
+      "line": 51,
+      "component": "Text",
+      "token": "text-sm",
+      "category": "nonsemantic-typography"
+    },
+    {
+      "file": "components/custom/DetailBottomActions.tsx",
+      "scope": "shared-existing",
+      "line": 27,
+      "component": "View",
+      "token": "border-gray-100",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "scope": "shared-existing",
+      "line": 87,
+      "component": "Text",
+      "token": "text-[19px]",
+      "category": "nonsemantic-typography"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "scope": "shared-existing",
+      "line": 87,
+      "component": "Text",
+      "token": "text-gray-900",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "scope": "shared-existing",
+      "line": 97,
+      "component": "Text",
+      "token": "text-sm",
+      "category": "nonsemantic-typography"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "scope": "shared-existing",
+      "line": 112,
+      "component": "Button",
+      "token": "border-gray-200",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "scope": "shared-existing",
+      "line": 115,
+      "component": "ButtonText",
+      "token": "text-gray-800",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "scope": "shared-existing",
+      "line": 85,
+      "component": "Pressable",
+      "token": "bg-zinc-100",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "scope": "shared-existing",
+      "line": 102,
+      "component": "Text",
+      "token": "text-[19px]",
+      "category": "nonsemantic-typography"
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "scope": "shared-existing",
+      "line": 102,
+      "component": "Text",
+      "token": "text-gray-900",
+      "category": "nonsemantic-color"
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "scope": "shared-existing",
+      "line": 112,
+      "component": "Text",
+      "token": "text-sm",
+      "category": "nonsemantic-typography"
+    }
+  ],
+  "featureOccurrences": 0,
+  "sharedOccurrences": 13,
+  "limitation": "Shared existing token violations are separate from feature geometry defects. This is a literal JSX className audit, not complete conformance certification."
+}

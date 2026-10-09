@@ -1,0 +1,82 @@
+{
+  "owner": "Codex-3",
+  "lint": {
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "lib/accounting/journal-validation.ts",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      {
+        "file": "lib/accounting/journal-validation.ts",
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      }
+    ]
+  },
+  "format": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "format",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "lib/accounting/journal-validation.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 3 files in 23ms. No fixes applied.",
+    "stderr": ""
+  },
+  "biome": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "lib/accounting/journal-validation.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 3 files in 75ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "renderComparisons": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "comparison": "Editor JSX identical to SD3-003 saved baseline",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "comparison": "Editor JSX identical to SD3-003 saved baseline",
+      "passed": true
+    }
+  ]
+}

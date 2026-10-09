@@ -1,0 +1,51 @@
+{
+  "publicHookContractUnchanged": {
+    "parameters": 0,
+    "returnedKeys": [
+      "personalInfoForm",
+      "bankInfoForm",
+      "passwordInfoForm",
+      "indexState"
+    ],
+    "resolvers": [
+      "zodResolver(personalInfoSchema)",
+      "zodResolver(bankInfoSchema)",
+      "zodResolver(passwordInfoSchema)"
+    ],
+    "modes": [
+      "\"onChange\""
+    ]
+  },
+  "readOnlyContracts": {
+    "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/feature/register/wizard/InformationScreen.tsx": "87d8dd2b1c47144054812fd7648a79b692905d584cc7d51eebe71c1baaf590bf",
+    "components/feature/register/wizard/BankInformationScreen.tsx": "cf6bdbbe7b90eeeb5a9cf42f9892b900223c85c83c0fb9041a16821ff4f1f54d",
+    "components/feature/register/wizard/PasswordInformationScreen.tsx": "241a63442728117caccfac2b9f001ae513a8c8aa6086c36c25c89a5932f0c36b",
+    "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+    "app/(no-layout)/terms-and-condition.tsx": "02c5feca1c00bf6b946cb1d21ded7098ef14ef74e210624dcbb86e466881889e",
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07"
+  },
+  "intentionalBehaviorChanges": [
+    "One-time validated seed/default initialization; password/confirmation restored",
+    "Earliest incomplete initial step; no automatic success stage",
+    "Store consent canonical; URL/old seed cannot grant acceptance",
+    "Live true/false consent synchronization via subscription with teardown",
+    "Mounted seed changes/resetStore do not replace typed input or manual index"
+  ],
+  "dependencyOverlay": {
+    "priorPackage": "SD5-006 registration-start",
+    "priorHookHash": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+    "currentHookHash": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c",
+    "priorPacketPreserved": true,
+    "currentCombinedWizardApproval": false
+  },
+  "noRouteApiSchemaStoreUiChanges": true
+}

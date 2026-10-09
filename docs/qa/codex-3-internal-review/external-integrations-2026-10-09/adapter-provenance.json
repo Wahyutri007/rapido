@@ -1,0 +1,12 @@
+{
+  "previousRunner": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/check.cjs",
+  "sha256": "28a6cfff75c909f61efc99b4b30407eeeca52001d7c876a335106256b762ce6a",
+  "copiedPrefixSha256": "0fab3ff7442bb4bf16c3c2ef6fba368686b1697a976cf98706f95640169b9b0c",
+  "adaptations": [
+    "No Payment schema/store/test cases copied",
+    "Provide real URL constructor to schema VM",
+    "JSStack host implemented as a function when layout is statically/renderer examined"
+  ],
+  "sourceEdits": false,
+  "externalQcApproval": false
+}

@@ -1,0 +1,13 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const read=n=>JSON.parse(fs.readFileSync(path.join(__dirname,n),'utf8').replace(/^\uFEFF/,''));
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const checks=[];function check(name,f){f();checks.push(name);}
+const inputs=read('source-inputs.json'),nav=read('navigation-results.json'),browser=read('browser-results.json'),type=read('typecheck-results.json'),lint=read('eslint-results.json'),baseline=read('before/navigation-results.json');
+check('All43 final selected runtime/build inputs remain unchanged',()=>{assert.equal(inputs.inputs.length,43);for(const i of inputs.inputs)assert.equal(hash(i.file),i.sha256,i.file);});
+check('Final actual Header/layout callback suite18PASS',()=>{assert.equal(nav.status,'PASS');assert.equal(nav.passed,18);assert.equal(nav.failed,0);for(const i of nav.inputs)assert.equal(hash(i.file),i.sha256,i.file);});
+check('Production browser17PASS, runtime/console/mutations0',()=>{assert.equal(browser.status,'PASS');assert.equal(browser.passed,17);assert.deepEqual(browser.errors,[]);assert.deepEqual(browser.consoleErrors,[]);assert.equal(browser.apiRequests.filter(x=>!['GET','OPTIONS'].includes(x.method)).length,0);});
+check('Scoped TypeScript and owned layout ESLint clean',()=>{assert.equal(type.status,'PASS');assert.equal(type.roots.length,4);assert.deepEqual(type.diagnostics,[]);assert.equal(lint.length,1);assert.ok(lint.every(x=>x.errorCount===0&&x.warningCount===0));});
+check('Preserved baseline6PASS/12FAIL is bound to actual old layout',()=>{assert.equal(baseline.passed,6);assert.equal(baseline.failed,12);assert.equal(hash(path.join(__dirname,'before/_layout.tsx')),baseline.inputs.find(x=>x.file.endsWith('/_layout.tsx')).sha256);});
+check('Recheck retains exactly same one owned layout as first browser PASS',()=>{const old=read('before/first-browser-pass/source-inputs.json');assert.equal(inputs.inputs[0].sha256,old.inputs[0].sha256);assert.equal(inputs.owned.length,1);});
+check('Previous17PASS and six external dependency changes preserved separately',()=>{assert.equal(read('before/first-browser-pass/browser-results.json').passed,17);assert.equal(read('before/dependency-delta.json').length,6);});
+fs.writeFileSync(path.join(__dirname,'proof-results.json'),JSON.stringify({status:'PASS',passed:checks.length,checks,checkedAt:new Date().toISOString(),scope:'Evidence/source identity and scoped developer results. No independent QC decision or Figma/native approval.'},null,2)+'\n');console.log(`PASS ${checks.length} proof checks.`);

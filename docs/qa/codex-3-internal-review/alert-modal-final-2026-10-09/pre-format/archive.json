@@ -1,0 +1,10 @@
+{
+  "status": "PREFORMAT_RESULTS_RETAINED",
+  "sourceHash": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+  "reason": "Parent Biome requires multiline function signature; these60renderer+4proof outputs precede formatter delta, not final approval",
+  "artifacts": {
+    "results.json": "9ea82e8216a8de73e844a963bf4b8275d830789a72602fa4544ea0c5c0374979",
+    "alias-proof.json": "103c0b4169ed31aac669cf20fef576df420eee246cbdefbe7c36bd69960c161b",
+    "AlertModal.final.tsx.txt": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95"
+  }
+}

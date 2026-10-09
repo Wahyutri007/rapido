@@ -1,0 +1,20 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root=process.cwd(),packet=__dirname,own=path.join(root,'.expo/qc-success-recheck-offline'),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+fs.mkdirSync(path.join(own,'file-map-cache'),{recursive:true});
+const before=JSON.parse(fs.readFileSync(path.join(packet,'source-before.json'),'utf8'));
+for(const [file,expected]of Object.entries(before.hashes))assert.equal(hash(file),expected,'Input drift '+file);
+const caches=['node_modules/react-native-css-interop/.cache/android.js','node_modules/react-native-css-interop/.cache/web.js'],cacheHashes=()=>Object.fromEntries(caches.filter(f=>fs.existsSync(f)).map(f=>[f,hash(f)]));
+const cacheBefore=cacheHashes(),entryFile=path.join(packet,'offline-entry.jsx');
+const fixture=fs.readFileSync(path.join(packet,'modal-entry.fixture.jsx'),'utf8');const entry=fixture.replace(/import "\.\.\/global\.css";\r?\n/,'').replaceAll('"../','"../../../');
+assert.equal(entry.replaceAll('"../../../','"../'),fixture.replace(/import "\.\.\/global\.css";\r?\n/,''));fs.writeFileSync(entryFile,entry);
+process.env.EXPO_ROUTER_APP_ROOT=path.join(root,'app');
+const Metro=require('metro'),{getDefaultConfig}=require('expo/metro-config'),{FileStore}=require('metro-cache');
+const config=getDefaultConfig(root);config.watchFolders=[root];config.resolver.useWatchman=false;config.maxWorkers=1;config.cacheStores=[new FileStore({root:path.join(own,'transform-cache')})];config.cacheVersion='qc-success-recheck';config.fileMapCacheDirectory=path.join(own,'file-map-cache');
+config.resolver.resolveRequest=(context,name,platform)=>{const web=platform==='web'?{...context,preferNativePlatform:false,mainFields:['browser','module','main']}:context,resolve=name=>context.resolveRequest(web,name,platform);if(platform==='web'&&require('node:module').isBuiltin(name)){try{return resolve(name);}catch{return {type:'empty'};}}const alias=platform==='web'?{'react-native':'react-native-web','react-native/index':'react-native-web','react-native/Libraries/Image/resolveAssetSource':'expo-asset/build/resolveAssetSource','@react-native/assets-registry/registry':'react-native-web/dist/modules/AssetRegistry'}:{};return resolve(alias[name]??name);};
+config.reporter={update:event=>{if(event.type==='transformer_load_failed')console.error(event.error);}};
+Metro.runBuild(config,{entry:path.relative(root,entryFile),platform:'web',dev:false,minify:false,assets:true,onBegin:()=>console.log('Building isolated current SuccessModal; no listener'),onProgress:(done,total)=>{if(done%300===0)console.log(done+'/'+total);}}).then(result=>{
+ const output=path.join(own,'entry.bundle.js');fs.writeFileSync(output,result.code);fs.writeFileSync(path.join(own,'assets.json'),JSON.stringify(result.assets??[],null,2)+'\n');
+ const inputsAfter=Object.fromEntries(Object.keys(before.hashes).map(f=>[f,hash(f)]));assert.deepEqual(inputsAfter,before.hashes,'Actual source/dependency/config changed during build');
+ const record={createdAt:new Date().toISOString(),entry:path.relative(root,entryFile),entryHash:hash(entryFile),fixtureHash:hash(path.join(packet,'modal-entry.fixture.jsx')),output:path.relative(root,output),bundleHash:hash(output),assetsPath:path.relative(root,path.join(own,'assets.json')),assetsHash:hash(path.join(own,'assets.json')),bytes:Buffer.byteLength(result.code),assets:result.assets?.length??0,inputHashes:inputsAfter,cacheBefore,cacheAfter:cacheHashes(),limits:'One-shot default Expo Metro with installed browser resolution, own cache, actual source, fixed current stylesheet. No root Metro/NativeWind plugin/server/native/full application startup approval.'};
+ fs.writeFileSync(path.join(packet,'offline-build.json'),JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify({ready:true,bytes:record.bytes,sourceInputsStable:true}));
+}).catch(error=>{fs.writeFileSync(path.join(packet,'offline-error.json'),JSON.stringify({message:error.message,stack:error.stack,cacheBefore,cacheAfter:cacheHashes()},null,2)+'\n');console.error(error);process.exitCode=1;});

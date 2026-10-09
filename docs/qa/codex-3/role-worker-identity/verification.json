@@ -1,0 +1,230 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-004",
+  "status": "READY_FOR_QA",
+  "createdAt": "2026-10-08T18:52:04.198Z",
+  "approval": "Developer evidence only; independent QA/QC review and PM publication remain pending",
+  "results": {
+    "baseline": {
+      "passed": 75,
+      "failed": 31
+    },
+    "final": {
+      "passed": 106,
+      "failed": 0,
+      "runtimeErrors": 0
+    },
+    "typeDiagnostics": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExitCode": 0,
+    "diffExitCode": 0,
+    "jsxComparisonsPassed": true
+  },
+  "changedSource": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+  },
+  "readOnlyContractFingerprint": {
+    "app/(no-layout)/(back-office)/manage/roles/modify.tsx": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+    "app/(no-layout)/manage/workers/modify.tsx": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "schema/add/role.ts": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+    "schema/add/worker.ts": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22"
+  },
+  "artifactFingerprint": {
+    "docs/qa/codex-3/role-worker-identity/HANDOFF.md": "7ded696e687c8cf3a4363fc339994fe94201f758b1a7e79149d680b18305d170",
+    "docs/qa/codex-3/role-worker-identity/check.cjs": "0f80ececc7512a861d6094f66b7635e8e023ee6b9731887b8dcf8cd3d618e979",
+    "docs/qa/codex-3/role-worker-identity/baseline.json": "6a99526614a5a4d440fd5a018a8cc7153245284796aa2cf5f18165b294285343",
+    "docs/qa/codex-3/role-worker-identity/results.json": "125b85ec4724d5561ad07647a216bedb9a51772f12b573d8009f8c3ed6edc0ba",
+    "docs/qa/codex-3/role-worker-identity/quality.cjs": "25a654c2438a370f7acea8e76897728ce1f39bc57c3cbef4c4add44f1a3c1ea5",
+    "docs/qa/codex-3/role-worker-identity/quality-results.json": "6dff7ebdcccc263c7f9b5487ad9d69b828638263c192a850585d3e214a418da5",
+    "docs/qa/codex-3/role-worker-identity/typecheck.cjs": "b90d9572be8f0c4b989e3f02cf7128b9ae76b29d56ec5022a6a397fb5b432bb9",
+    "docs/qa/codex-3/role-worker-identity/typecheck-results.json": "3cc1f705ff6720bf518ed87a1549f195f017395d9ca9481ee47114f670e33e72",
+    "docs/qa/codex-3/role-worker-identity/role.before.tsx.txt": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+    "docs/qa/codex-3/role-worker-identity/worker.before.tsx.txt": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce",
+    "docs/qa/codex-3/role-worker-identity/verify.cjs": "87d0c953413e4ed0096c54ff59c50adcc0ce82001873c50ac7f9285d268d6f4f"
+  },
+  "localRawLintEvidence": {
+    "file": ".expo/codex-3-role-worker-lint.json",
+    "sha256": "94133e04da519f95015614ccb6153564f7b029f928275396f5fadc7a6def72dd",
+    "reusedOnUnchangedSource": true
+  },
+  "testedSourceMatches": [
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "expected": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "actual": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "expected": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "actual": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/(back-office)/manage/roles/modify.tsx",
+      "expected": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "actual": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/manage/workers/modify.tsx",
+      "expected": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "actual": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "lib/manage/workers.ts",
+      "expected": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "actual": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "schema/add/role.ts",
+      "expected": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "actual": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "schema/add/worker.ts",
+      "expected": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "actual": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "suite": "quality",
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "expected": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "actual": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "passed": true
+    },
+    {
+      "suite": "quality",
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "expected": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "actual": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "expected": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "actual": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "expected": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "actual": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+      "passed": true
+    }
+  ],
+  "baselineSnapshotMatches": [
+    {
+      "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+      "snapshot": "docs/qa/codex-3/role-worker-identity/role.before.tsx.txt",
+      "expected": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+      "actual": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+      "snapshot": "docs/qa/codex-3/role-worker-identity/worker.before.tsx.txt",
+      "expected": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce",
+      "actual": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce",
+      "passed": true
+    }
+  ],
+  "unchangedContractMatches": [
+    {
+      "file": "app/(no-layout)/(back-office)/manage/roles/modify.tsx",
+      "expected": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "baseline": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/workers/modify.tsx",
+      "expected": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "baseline": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "baseline": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/workers.ts",
+      "expected": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "baseline": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "passed": true
+    },
+    {
+      "file": "schema/add/role.ts",
+      "expected": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "baseline": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+      "passed": true
+    },
+    {
+      "file": "schema/add/worker.ts",
+      "expected": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "baseline": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "baseline": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "baseline": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Actual routes/editors/RHF/Zod/Role helpers/worker multipart helper; query/mutation/error mapper/router/native/UI/fetch adapters",
+    "Node FormData/Blob and web image fixture, no HTTP/backend write or production Query/Axios/invalidation execution",
+    "Existing request already sent is not cancelled; guard prevents stale UI and request after late image preparation",
+    "No browser/full navigator/root-auth/SSR/native/accessibility/Figma or full-project TypeScript gate",
+    "Historical browser/router/Laravel results are not reruns on these new editor hashes",
+    "JSX comparison excludes only submit event binding and saved disabled condition; no new screenshot or visual approval"
+  ]
+}

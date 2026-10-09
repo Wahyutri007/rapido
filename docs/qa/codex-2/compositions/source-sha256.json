@@ -1,0 +1,74 @@
+[
+    {
+        "path":  "components/feature/inventory/composition/CompositionUi.tsx",
+        "sha256":  "8690caacc41bcf7525ce48c38e6c00b5154d0fc01dd8d1a5f4b115c7418dcee2"
+    },
+    {
+        "path":  "components/feature/inventory/composition/CompositionListScreen.tsx",
+        "sha256":  "4cc18c7cc4736e88d48fd2b780a463e81695a7c2b82a47ab57368bc2f13200ea"
+    },
+    {
+        "path":  "components/feature/inventory/composition/CompositionFormScreen.tsx",
+        "sha256":  "022fb692765733e2d9aa2b2facc584fb1fd7c2c941d311fd164c309e1938650f"
+    },
+    {
+        "path":  "components/feature/inventory/composition/CompositionDetailScreen.tsx",
+        "sha256":  "e1a963d0ac03e6e009247c98ceeeaa110fb47d83032e08e8789c7c7c0b2fdd5b"
+    },
+    {
+        "path":  "components/feature/inventory/composition/CompositionSimulation.tsx",
+        "sha256":  "06d1fc00647dac36017e95aa588ab4a2c84b60c20c8fba0a68a95716d5dcdd4b"
+    },
+    {
+        "path":  "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+        "sha256":  "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d"
+    },
+    {
+        "path":  "types/ui/inventory/composition.ts",
+        "sha256":  "6774d773344f999e6a248b00caca8941f67b3616b645567e58e66fa4c6462960"
+    },
+    {
+        "path":  "schema/inventory/composition.ts",
+        "sha256":  "7ac719bc0043b3c98dca3d0f830b8c2eae08ade9e9d08d5901acddafa5ca82b9"
+    },
+    {
+        "path":  "constants/data/inventory-compositions.ts",
+        "sha256":  "fa0640fdd7378bef3279900ba00aaab895952560b882d1a212766cbf0236bd61"
+    },
+    {
+        "path":  "lib/inventory/composition.ts",
+        "sha256":  "58ddfc6dd04d581882735adcc31f41ede67b8aabfab8c607f8949a6fe90d5e48"
+    },
+    {
+        "path":  "store/inventoryCompositionStore.ts",
+        "sha256":  "b5a37d0e741c8ca8825df46462e6650bdcc46f4a4467451d655b227fee4dc1a5"
+    },
+    {
+        "path":  "store/inventoryMaterialStore.ts",
+        "sha256":  "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30"
+    },
+    {
+        "path":  "app/(no-layout)/inventory/compositions/_layout.tsx",
+        "sha256":  "905f052322c67f168e9125b622e0601bd49fe6e32e27a86c356b529569357e56"
+    },
+    {
+        "path":  "app/(no-layout)/inventory/compositions/index.tsx",
+        "sha256":  "0bf9947251cf388dd46dd62a53d4d84d665c56d8160c11c5b280b98f71366a68"
+    },
+    {
+        "path":  "app/(no-layout)/inventory/compositions/modify.tsx",
+        "sha256":  "cb82b53545e27104b2aadf109e97cfb0eb12d137baa5ee34a3cf46dfdf3592d4"
+    },
+    {
+        "path":  "app/(no-layout)/inventory/compositions/detail.tsx",
+        "sha256":  "86020d6774caff3a9091b436c6ef8e00ae29911176d955315cd9c5013a9cc3c2"
+    },
+    {
+        "path":  "app/(no-layout)/inventory/_layout.tsx",
+        "sha256":  "62aa2ce5a2d51fddfeedf78501e988e9caf748034c190f66eab37ae14ae3d850"
+    },
+    {
+        "path":  "app/(back-office)/inventory/index.tsx",
+        "sha256":  "f22ee6746be00dee7ef8aded3e64fda37eba0774e7a09475b1af0cd961a3c4ea"
+    }
+]

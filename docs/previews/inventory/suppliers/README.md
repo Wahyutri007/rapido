@@ -28,6 +28,7 @@ a purchase. That purchase subsequently prevented deletion of its supplier.
 Its Rp 20.000 purchase total appeared on the supplier card. Confirmed deletion
 from detail returned to the list, and back navigation then returned to the hub.
 Feature ESLint and Biome checks passed without warnings or errors.
+Project-wide `tsc --noEmit` passed after the temporary preview routes were removed.
 
 Supplier data is session-only, and the regional fixture only includes the
 captured Riau/Pekanbaru/Rumbai Selatan hierarchy. Existing region values are

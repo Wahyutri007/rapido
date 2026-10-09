@@ -1,0 +1,264 @@
+{
+  "owner": "QC",
+  "capturedAt": "2026-10-09T00:50:37.378Z",
+  "signal": "QC-NATIVEWIND-CACHE-20261009-PASS-RECHECK",
+  "artifacts": [
+    {
+      "file": "before/metro.config.js.txt",
+      "bytes": 1488,
+      "sha256": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160"
+    },
+    {
+      "file": "before/preserve-nativewind-cache.cjs.txt",
+      "bytes": 1131,
+      "sha256": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed"
+    },
+    {
+      "file": "before/verify-metro-cache.cjs.txt",
+      "bytes": 2502,
+      "sha256": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f"
+    },
+    {
+      "file": "before/verify-nativewind-cache.cjs.txt",
+      "bytes": 4217,
+      "sha256": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274"
+    },
+    {
+      "file": "biome.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "biome.out.txt",
+      "bytes": 43,
+      "sha256": "0e4ec070875cf42e7a446726059bde45929751e58993da87cf72bc25db972fb7"
+    },
+    {
+      "file": "DECISION.json",
+      "bytes": 5517,
+      "sha256": "b3c8dcaaac6c526ff5da1659fa7249b66362c43df854aee25e343197b5b1e94c"
+    },
+    {
+      "file": "diff.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "diff.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "eslint.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "eslint.out.txt",
+      "bytes": 1042,
+      "sha256": "f4d7313b544037c8c42976e49673ddda21faca5f64df0776de629995a7a79fde"
+    },
+    {
+      "file": "finalize.cjs",
+      "bytes": 10482,
+      "sha256": "2c2f684db9541840e8ab5f65984e730c631520261203bd4f53fe05c78efae5de"
+    },
+    {
+      "file": "guard-boundaries-results.json",
+      "bytes": 1035,
+      "sha256": "a04e943c473dd28582b2701d9fbb6736eb20915823da69df881860724f63b463"
+    },
+    {
+      "file": "guard-boundaries.cjs",
+      "bytes": 6151,
+      "sha256": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81"
+    },
+    {
+      "file": "guard.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "guard.out.txt",
+      "bytes": 935,
+      "sha256": "c4cb12511c0382d4cccca3820ff13e2cceb5edb18081947b04ff27a8b0cee6a4"
+    },
+    {
+      "file": "harness-notes.json",
+      "bytes": 563,
+      "sha256": "32cf0727ad815ae4f6300a06c8c2f16db9ae14c6d14b2312e35c504d2126adcf"
+    },
+    {
+      "file": "independent-results.json",
+      "bytes": 1647,
+      "sha256": "20e5f6094700cce0b619c5104e01f7a247a260e4c4645dff59a7535b8c093b94"
+    },
+    {
+      "file": "independent.cjs",
+      "bytes": 8824,
+      "sha256": "e7895815d3776040a45596d93f12cc0cc7ef1f7149caa87f7591e940b2c2b737"
+    },
+    {
+      "file": "initial-replay-metadata.json",
+      "bytes": 980,
+      "sha256": "8f97a84709e6713442a53c22fedf009e4c994b62ce8db27960504100ae20e4a6"
+    },
+    {
+      "file": "initializer-results.json",
+      "bytes": 674,
+      "sha256": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae"
+    },
+    {
+      "file": "initializer.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "initializer.out.txt",
+      "bytes": 674,
+      "sha256": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae"
+    },
+    {
+      "file": "prepare.cjs",
+      "bytes": 5474,
+      "sha256": "d9f3c18796d68d16faeba3a0a1931264f2f7a180fedc79fd1bc7ce81b9f74fd9"
+    },
+    {
+      "file": "quality-results.json",
+      "bytes": 23671,
+      "sha256": "9e596c3a38b2eafbaa7ca12e03263d8a24ffb40fb6f0e06828c245f18cec1698"
+    },
+    {
+      "file": "quality.cjs",
+      "bytes": 4216,
+      "sha256": "a05d26455996054f7fc377fce08b2f76ffdd1c352ed456a1d9afae74604ceeb4"
+    },
+    {
+      "file": "queue-boundaries-results.json",
+      "bytes": 963,
+      "sha256": "3cf4d5e97ec84486e54404d1b310b49746a4dbaf5e6485aa1613ea0b8864a464"
+    },
+    {
+      "file": "queue-boundaries.cjs",
+      "bytes": 4824,
+      "sha256": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433"
+    },
+    {
+      "file": "queue-boundaries.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "queue-boundaries.out.txt",
+      "bytes": 856,
+      "sha256": "39ea43b3a63384183d677391c776e597e16e8e0acb3711cbf0dfd859bd059750"
+    },
+    {
+      "file": "queue-stress.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "queue-stress.out.txt",
+      "bytes": 102,
+      "sha256": "0e89d3dec8b19c8a0ab8dfce09e4d325309c7db66aa0aa9bed92fc364197c85d"
+    },
+    {
+      "file": "replay-results.json",
+      "bytes": 1128,
+      "sha256": "39501efc63cd9cc756bab5795dcf9c967309a680999eff98c529c85ab9f6d2f2"
+    },
+    {
+      "file": "replay.cjs",
+      "bytes": 1930,
+      "sha256": "e44e82af26e20c3b58e5c2bd13de2658dd3bf6150936d0d8a5662e727f8b3bfc"
+    },
+    {
+      "file": "REPORT.md",
+      "bytes": 6664,
+      "sha256": "81e9f035b31dd2b7ee6e02e187ebe1411e9e7c40318de885c5c988068a896c02"
+    },
+    {
+      "file": "reviewed/metro.config.js.txt",
+      "bytes": 1430,
+      "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+    },
+    {
+      "file": "reviewed/preserve-nativewind-cache.cjs.txt",
+      "bytes": 1125,
+      "sha256": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956"
+    },
+    {
+      "file": "reviewed/verify-metro-cache.cjs.txt",
+      "bytes": 2323,
+      "sha256": "55bd6d366887d4815fec99b548d8582c68e504cea2812291c28adc33e69bf0be"
+    },
+    {
+      "file": "reviewed/verify-nativewind-cache.cjs.txt",
+      "bytes": 4408,
+      "sha256": "0d5146864121ff56a8a6ca261134af9268a876a27ca29dc566d16d56de366529"
+    },
+    {
+      "file": "runner-provenance.json",
+      "bytes": 894,
+      "sha256": "f5f580382a65da4707826cf3d3da483b0e5e14aeb512fb991fa854bbb9b551c4"
+    },
+    {
+      "file": "runtime-observation.json",
+      "bytes": 723,
+      "sha256": "e15f29cc604b5c0be123bd9f5914b179ae2eedffdc193167ec0e7875502d38b6"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 16596,
+      "sha256": "d67671ac9c2e939c2383d4245510351d95af54f1d96586ba1b81dc7d8ea53a03"
+    },
+    {
+      "file": "syntax-0.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-0.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-1.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-1.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-2.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-2.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-3.err.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "syntax-3.out.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "verify-artifacts.cjs",
+      "bytes": 649,
+      "sha256": "1a27deda832fa9744221a2cf7486c7e242055202bd333a463ab00de9049f6b5c"
+    }
+  ],
+  "resealAllowed": false,
+  "scope": "This QC packet; shared SESSION_COORDINATION outside manifest"
+}

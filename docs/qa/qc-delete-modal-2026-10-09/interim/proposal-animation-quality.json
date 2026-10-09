@@ -1,0 +1,3802 @@
+{
+  "owner": "QC",
+  "status": "FAILED",
+  "applicationGate": "CHANGES_REQUESTED",
+  "sourceHash": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+  "proposalHash": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+  "applied": false,
+  "lint": {
+    "run": {
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "components/common/DeleteConfirmModal.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "proposalLint": {
+    "run": {
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "--stdin",
+        "--stdin-filename",
+        "components/common/DeleteConfirmModal.tsx",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/common/DeleteConfirmModal.tsx"
+    ],
+    "exitCode": 0
+  },
+  "proposalBiome": {
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "--write",
+      "--stdin-file-path=components/common/DeleteConfirmModal.tsx"
+    ],
+    "exitCode": 0
+  },
+  "candidateBiomeUnchanged": true,
+  "diffExit": 0,
+  "currentContractUnchangedExceptGeometry": true,
+  "proposalContractUnchangedExceptHeightAndScroll": true,
+  "exactGeometry": {
+    "currentWindow": true,
+    "currentWidth": true,
+    "currentImage": true,
+    "currentFooter": true,
+    "proposalHeight": true,
+    "proposalScroll": true,
+    "proposalFooterOutside": true
+  },
+  "trackedFilesStable": [
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "initialExpected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "initialExpected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "initialExpected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "initialExpected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "initialExpected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "initialExpected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "initialExpected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true,
+      "dependencyUpdated": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "initialExpected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "initialExpected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/factory.ts",
+      "initialExpected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/common.ts",
+      "initialExpected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "initialExpected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "initialExpected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "initialExpected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "initialExpected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "initialExpected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "initialExpected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "initialExpected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "initialExpected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.web.tsx",
+      "initialExpected": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "expected": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "actual": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "tailwind.config.js",
+      "initialExpected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "tsconfig.json",
+      "initialExpected": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "expected": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "actual": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "babel.config.js",
+      "initialExpected": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "expected": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "actual": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "package.json",
+      "initialExpected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "package-lock.json",
+      "initialExpected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "api/axios.ts",
+      "initialExpected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "expected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "actual": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/images/illustrations/index.ts",
+      "initialExpected": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "expected": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "actual": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/images/illustrations/delete-confirmation.png",
+      "initialExpected": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "expected": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "actual": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/images/illustrations/action-success.png",
+      "initialExpected": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "expected": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "actual": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/images/alerts/index.ts",
+      "initialExpected": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "expected": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "actual": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/images/alerts/category.jpg",
+      "initialExpected": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "expected": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "actual": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Regular.ttf",
+      "initialExpected": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "expected": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "actual": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Medium.ttf",
+      "initialExpected": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "expected": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "actual": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-SemiBold.ttf",
+      "initialExpected": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "expected": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "actual": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Bold.ttf",
+      "initialExpected": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "expected": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "actual": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "initialExpected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "metro.config.js",
+      "initialExpected": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "expected": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "initialExpected": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "expected": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "actual": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "global.css",
+      "initialExpected": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "expected": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "actual": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "types/index.ts",
+      "initialExpected": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+      "expected": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+      "actual": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/verification.json",
+      "initialExpected": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "expected": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "actual": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/verification.json",
+      "initialExpected": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "expected": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "actual": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "passed": true,
+      "dependencyUpdated": false
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/verification.json",
+      "initialExpected": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12",
+      "expected": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12",
+      "actual": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12",
+      "passed": true,
+      "dependencyUpdated": false
+    }
+  ],
+  "historicalMatches": [
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/browser-results.json",
+      "expected": "b37f86ab414b944ab5efd234b2d4cac07205597a0f33c4d33bd380f986af6c4c",
+      "actual": "b37f86ab414b944ab5efd234b2d4cac07205597a0f33c4d33bd380f986af6c4c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/custom-320.png",
+      "expected": "57bf8efdbec1f9912a6af3cd220b503566bcdd137c4e1d92c219eb3eb4feb31f",
+      "actual": "57bf8efdbec1f9912a6af3cd220b503566bcdd137c4e1d92c219eb3eb4feb31f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/direct-320.png",
+      "expected": "0b5bc4ff393fe9ce612af2443fa4bb93925baadce4f8af117b9db2a355da003e",
+      "actual": "0b5bc4ff393fe9ce612af2443fa4bb93925baadce4f8af117b9db2a355da003e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/direct-360.png",
+      "expected": "33328f99000e6c1faa573c41a371ec4fb6809e04b29e910a22d6e56b6ee60943",
+      "actual": "33328f99000e6c1faa573c41a371ec4fb6809e04b29e910a22d6e56b6ee60943",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/direct-390.png",
+      "expected": "3ae89fa645fa954548bebc53c5cecf57507182ef206b6a86a05f3a3030d41954",
+      "actual": "3ae89fa645fa954548bebc53c5cecf57507182ef206b6a86a05f3a3030d41954",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/direct-768.png",
+      "expected": "3a192d73705e1dabf56b3c61cb9661f6bb854445c06157cf5eb3bb7259df8f89",
+      "actual": "3a192d73705e1dabf56b3c61cb9661f6bb854445c06157cf5eb3bb7259df8f89",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/legacy-320.png",
+      "expected": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+      "actual": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/loading-320.png",
+      "expected": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+      "actual": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/long-320.png",
+      "expected": "3503af5e9c3c86744b66bd8e5257adeef92b247d58a50db03ea5dbd9e03b60d0",
+      "actual": "3503af5e9c3c86744b66bd8e5257adeef92b247d58a50db03ea5dbd9e03b60d0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/member-320.png",
+      "expected": "c9c4e4a0266edd384f0bdb1d519cbe7ebd22d0b2374f8b8190a93600d8dc4c20",
+      "actual": "c9c4e4a0266edd384f0bdb1d519cbe7ebd22d0b2374f8b8190a93600d8dc4c20",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/message-320.png",
+      "expected": "f0f915c91e3ac96aaf85764d3be9c5f02b14d09b58cfa78fe21009b348c2967d",
+      "actual": "f0f915c91e3ac96aaf85764d3be9c5f02b14d09b58cfa78fe21009b348c2967d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/node-320.png",
+      "expected": "b3e0b5dbb49372d48c50e0c06506bdad2cbb096d92a473f723e0f6b5c9cf4e9b",
+      "actual": "b3e0b5dbb49372d48c50e0c06506bdad2cbb096d92a473f723e0f6b5c9cf4e9b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/role-320.png",
+      "expected": "c982d40fb6c67f9a42656f25a994848a2431be704aae88013c2c380f1eae3b9a",
+      "actual": "c982d40fb6c67f9a42656f25a994848a2431be704aae88013c2c380f1eae3b9a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/baseline/worker-320.png",
+      "expected": "352248b1b137029c6d447427d305d68635f4da7a735ce86d05b7b29e5327c646",
+      "actual": "352248b1b137029c6d447427d305d68635f4da7a735ce86d05b7b29e5327c646",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/browser.cjs",
+      "expected": "71af2d53971d1e2ca69b0776a75bbf4edc6d058bb8ba3e4d82778f0f9371bd19",
+      "actual": "71af2d53971d1e2ca69b0776a75bbf4edc6d058bb8ba3e4d82778f0f9371bd19",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/callers.json",
+      "expected": "38008b0d3af8f277e397a2e58e3b4cc43a1f0b2ae91e9b696c2bdb3fdfaaf990",
+      "actual": "38008b0d3af8f277e397a2e58e3b4cc43a1f0b2ae91e9b696c2bdb3fdfaaf990",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/delete-lifecycle/results.json",
+      "expected": "4d64ddf558ea33930f9371525b1cbcc78fd0290cabcda6421b69947a3fefa1c5",
+      "actual": "4d64ddf558ea33930f9371525b1cbcc78fd0290cabcda6421b69947a3fefa1c5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/DeleteConfirmModal.before.tsx.txt",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/browser-results.json",
+      "expected": "85bcc15f1432ed963dc76737697bb6861073c9cccfe3f6fe74d1b054c9f6303d",
+      "actual": "85bcc15f1432ed963dc76737697bb6861073c9cccfe3f6fe74d1b054c9f6303d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/custom-320.png",
+      "expected": "b363ba1f0268fa8ae8d4ab1e59ff32ff1301729d0b62fa3880d6234fd99224b7",
+      "actual": "b363ba1f0268fa8ae8d4ab1e59ff32ff1301729d0b62fa3880d6234fd99224b7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/direct-320.png",
+      "expected": "81318705063ed4e6003006d0bd0f27eb84bcb1bf5a61e2231d9ff6424877da87",
+      "actual": "81318705063ed4e6003006d0bd0f27eb84bcb1bf5a61e2231d9ff6424877da87",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/direct-360.png",
+      "expected": "8ed3abbd7bcc4dea2c6a6f4235d8cdded0929556a250fafd1e539319ff9191f0",
+      "actual": "8ed3abbd7bcc4dea2c6a6f4235d8cdded0929556a250fafd1e539319ff9191f0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/direct-390.png",
+      "expected": "1a6f7202b2d9327160e0f50f37bff12962e1e504263e3da217cfc943a51cd613",
+      "actual": "1a6f7202b2d9327160e0f50f37bff12962e1e504263e3da217cfc943a51cd613",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/direct-768.png",
+      "expected": "742a8343b403757feed6ffa8c2fa40e903a43fab9b432dcfdb5f1ede0d3b8aba",
+      "actual": "742a8343b403757feed6ffa8c2fa40e903a43fab9b432dcfdb5f1ede0d3b8aba",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/legacy-320.png",
+      "expected": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+      "actual": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/loading-320.png",
+      "expected": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+      "actual": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/long-320.png",
+      "expected": "15516e2a236f258beb86240f754a171356463922c754e9bf57810af9b1c92dfa",
+      "actual": "15516e2a236f258beb86240f754a171356463922c754e9bf57810af9b1c92dfa",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/member-320.png",
+      "expected": "ed181bfad9c5cd5e3645878660c52fc48271961ebf7b2e1d350084589c7c2421",
+      "actual": "ed181bfad9c5cd5e3645878660c52fc48271961ebf7b2e1d350084589c7c2421",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/message-320.png",
+      "expected": "7e1a29338fc621c66aaa21ea435225dbd61d27e737ab7375970683b34b808b13",
+      "actual": "7e1a29338fc621c66aaa21ea435225dbd61d27e737ab7375970683b34b808b13",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/node-320.png",
+      "expected": "aa6988b05d89b8823df1ec88770c574cc0037e1f75c771020e4c5c9a52578f09",
+      "actual": "aa6988b05d89b8823df1ec88770c574cc0037e1f75c771020e4c5c9a52578f09",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/role-320.png",
+      "expected": "41abb7e9fe4c1a741f84c78b848947035130e7f794788738af0ca0ac23c105f9",
+      "actual": "41abb7e9fe4c1a741f84c78b848947035130e7f794788738af0ca0ac23c105f9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/final/worker-320.png",
+      "expected": "7a578ffefb52f9f825dde9c3d1c7cdec1094847138a621c25a8e3135dfcb62a4",
+      "actual": "7a578ffefb52f9f825dde9c3d1c7cdec1094847138a621c25a8e3135dfcb62a4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/HANDOFF.md",
+      "expected": "db78e53137e205346d1c86f078e83f3f2fe86a2d725a2466752d5e0449bff219",
+      "actual": "db78e53137e205346d1c86f078e83f3f2fe86a2d725a2466752d5e0449bff219",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/inputs-before.json",
+      "expected": "202e92c6e8fc15f4daef44186df39b355b18efb7d1b8cb71aa69dd9cb7d39337",
+      "actual": "202e92c6e8fc15f4daef44186df39b355b18efb7d1b8cb71aa69dd9cb7d39337",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/prepare.cjs",
+      "expected": "728080cee8a58249338aa13ab387e5dbc9db68ca57c15a44d2d2b23b74818a34",
+      "actual": "728080cee8a58249338aa13ab387e5dbc9db68ca57c15a44d2d2b23b74818a34",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/preview-entry.fixture.jsx",
+      "expected": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "actual": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/quality-results.json",
+      "expected": "2115c576d4340057708f986c7174adff3be71ad8b0b51f21c5cea4b8f430e519",
+      "actual": "2115c576d4340057708f986c7174adff3be71ad8b0b51f21c5cea4b8f430e519",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/quality.cjs",
+      "expected": "a919b8776dda7b0452d58ee846685d50ea830094af96f62839f2996ad6a1a648",
+      "actual": "a919b8776dda7b0452d58ee846685d50ea830094af96f62839f2996ad6a1a648",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/replay-delete.cjs",
+      "expected": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "actual": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/verify.cjs",
+      "expected": "5036b9c97f8c6b115f52161f29a885ab74cbbef4c19df93cc6fa522af47589ef",
+      "actual": "5036b9c97f8c6b115f52161f29a885ab74cbbef4c19df93cc6fa522af47589ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/AlertModal.before.tsx.txt",
+      "expected": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "actual": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/archive-format.cjs",
+      "expected": "1209d06d14f57020dd24673fc427ace37a320bca5bbfcb10ceefb83ae0545ebe",
+      "actual": "1209d06d14f57020dd24673fc427ace37a320bca5bbfcb10ceefb83ae0545ebe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/archive-interim.cjs",
+      "expected": "2be4a01c7359612352b3b47d00b51689fb7a7907a0a927981df59052f1989a2d",
+      "actual": "2be4a01c7359612352b3b47d00b51689fb7a7907a0a927981df59052f1989a2d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/browser-results.json",
+      "expected": "27da3a1bf0468240b99b79ec08947d4384b5195822000086e3ab198d296c020f",
+      "actual": "27da3a1bf0468240b99b79ec08947d4384b5195822000086e3ab198d296c020f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/cancel-only-320.png",
+      "expected": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "actual": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/category-320.png",
+      "expected": "844db7d554e0670b238bce0a239254b4de354268133efc78c5b94d336e805a92",
+      "actual": "844db7d554e0670b238bce0a239254b4de354268133efc78c5b94d336e805a92",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/children-320.png",
+      "expected": "4163409a94578d3d3746f14a92b48556d7b4184fc84909c7b2793d4ddec340b5",
+      "actual": "4163409a94578d3d3746f14a92b48556d7b4184fc84909c7b2793d4ddec340b5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/confirm-only-320.png",
+      "expected": "1a0fa7ca1f096a79b3472e3bba1e926ff7d5b8f23d8b5a3ba03318e783b778f5",
+      "actual": "1a0fa7ca1f096a79b3472e3bba1e926ff7d5b8f23d8b5a3ba03318e783b778f5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/default-close-320.png",
+      "expected": "a45cdf5f04224e6f080c045c084466f0fcb566363d7d5161e1d2a3659ab5918d",
+      "actual": "a45cdf5f04224e6f080c045c084466f0fcb566363d7d5161e1d2a3659ab5918d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-320.png",
+      "expected": "3f5cdf9a98a91be3846e7860bbdc3d899cbbc808b9bbbfa06f5725d311c01f45",
+      "actual": "3f5cdf9a98a91be3846e7860bbdc3d899cbbc808b9bbbfa06f5725d311c01f45",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-360.png",
+      "expected": "4b5c363969eb1887b661ac4c20d49836adf23a826ffa126189af1c083d7827bb",
+      "actual": "4b5c363969eb1887b661ac4c20d49836adf23a826ffa126189af1c083d7827bb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-390.png",
+      "expected": "f0f26a88f3bff4064c327b43697c9b55074feea31a5fd92b1f56ec19afe4b4ec",
+      "actual": "f0f26a88f3bff4064c327b43697c9b55074feea31a5fd92b1f56ec19afe4b4ec",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-768.png",
+      "expected": "632be407af74bac2e9b10f62e7f7301e36b967124f68b5737a2c7ba7677f10c4",
+      "actual": "632be407af74bac2e9b10f62e7f7301e36b967124f68b5737a2c7ba7677f10c4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/fallback-320.png",
+      "expected": "c096fc8515187cd188753173652f55ed985ff204d5c84ca8b5ebb53f0ca603d8",
+      "actual": "c096fc8515187cd188753173652f55ed985ff204d5c84ca8b5ebb53f0ca603d8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/loading-320.png",
+      "expected": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "actual": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/long-320.png",
+      "expected": "9768124c5a8f9fab983bafb00989826eeaadee25269b865a0952815053a855b4",
+      "actual": "9768124c5a8f9fab983bafb00989826eeaadee25269b865a0952815053a855b4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/member-320.png",
+      "expected": "20f0c5fc44b818cfe06c7302f3f2782dc590b1ed425db869bf0ea521f4acfe3f",
+      "actual": "20f0c5fc44b818cfe06c7302f3f2782dc590b1ed425db869bf0ea521f4acfe3f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/no-footer-320.png",
+      "expected": "2f4099dc1cc63c1f4e97267deaf136b661c81f102adf7a032b052eb24372eb78",
+      "actual": "2f4099dc1cc63c1f4e97267deaf136b661c81f102adf7a032b052eb24372eb78",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/node-320.png",
+      "expected": "fcc6caad2c72ab910afe4224eedbe3b116d85cad43396e8ac984e94fcd3dd0a2",
+      "actual": "fcc6caad2c72ab910afe4224eedbe3b116d85cad43396e8ac984e94fcd3dd0a2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/order-type-320.png",
+      "expected": "df0988de02a5abf1731bc2b9d126aaa0500e1314f01a7e86eb9b6cf12ca7c9ac",
+      "actual": "df0988de02a5abf1731bc2b9d126aaa0500e1314f01a7e86eb9b6cf12ca7c9ac",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/role-320.png",
+      "expected": "681af73fcf1d3ffa3f3533c0aa9d38a58aaa3d56811fe6b76d6d7b2365005942",
+      "actual": "681af73fcf1d3ffa3f3533c0aa9d38a58aaa3d56811fe6b76d6d7b2365005942",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/support-320.png",
+      "expected": "b1b0539f334f5c5694873fb31840726dffcebec1295a975b209ac241b63ca967",
+      "actual": "b1b0539f334f5c5694873fb31840726dffcebec1295a975b209ac241b63ca967",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/worker-320.png",
+      "expected": "fa8c2bccfe169523dcb97b21eeb49a8aa389207dd535b5bbc67f1f340bec280f",
+      "actual": "fa8c2bccfe169523dcb97b21eeb49a8aa389207dd535b5bbc67f1f340bec280f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/browser.cjs",
+      "expected": "6ee54b35ffa4c15861569ad26e09b87c2256bde48e1e6e6f823383c1790a03b9",
+      "actual": "6ee54b35ffa4c15861569ad26e09b87c2256bde48e1e6e6f823383c1790a03b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/callers.json",
+      "expected": "375676edcc5303d5002b8e6beb66a2554c67301f65787dd165f20fc5e9ad1c7f",
+      "actual": "375676edcc5303d5002b8e6beb66a2554c67301f65787dd165f20fc5e9ad1c7f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/results.json",
+      "expected": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "actual": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/browser-results.json",
+      "expected": "20bd9cc78e55ee09e2bf14b832f4cda47b02ef3421a89a3c3b98dcb8de788dc9",
+      "actual": "20bd9cc78e55ee09e2bf14b832f4cda47b02ef3421a89a3c3b98dcb8de788dc9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/cancel-only-320.png",
+      "expected": "51dd3dac27ba130b4c8162d33fa29b0ea4a8901bae1e1ef8baba5c0cc0fc35ff",
+      "actual": "51dd3dac27ba130b4c8162d33fa29b0ea4a8901bae1e1ef8baba5c0cc0fc35ff",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/category-320.png",
+      "expected": "a0d7f945bafcc523a6c727b274dd773ceb082efe3659dbbb2d0a66c45f95fdb8",
+      "actual": "a0d7f945bafcc523a6c727b274dd773ceb082efe3659dbbb2d0a66c45f95fdb8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/children-320.png",
+      "expected": "bc82068db6b1d869b894d493669e4b6a8c9a95586d9d7579a6bed603fce80c75",
+      "actual": "bc82068db6b1d869b894d493669e4b6a8c9a95586d9d7579a6bed603fce80c75",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/confirm-only-320.png",
+      "expected": "062056e85e3d008a3761963ef61a30a307d22dec8651c228af5da260591f3f13",
+      "actual": "062056e85e3d008a3761963ef61a30a307d22dec8651c228af5da260591f3f13",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/default-close-320.png",
+      "expected": "c312e7b0ff98a0a77f39e70fe6c95e40dd74bbf6b42a3a7d95c2529a7bd5f50a",
+      "actual": "c312e7b0ff98a0a77f39e70fe6c95e40dd74bbf6b42a3a7d95c2529a7bd5f50a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-320.png",
+      "expected": "ad69a91861b79cd56787e7784e6dcf31b3445620017858eb4f75fba4710426c0",
+      "actual": "ad69a91861b79cd56787e7784e6dcf31b3445620017858eb4f75fba4710426c0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-360.png",
+      "expected": "90e899f96ebe72f91d44f037a2c13da0a9c5760db5d06803b46c57925e957726",
+      "actual": "90e899f96ebe72f91d44f037a2c13da0a9c5760db5d06803b46c57925e957726",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-390.png",
+      "expected": "180835b6ae45d23adcfb032bb13f68f710aa3f60559455496fcbe7aae52fe8f6",
+      "actual": "180835b6ae45d23adcfb032bb13f68f710aa3f60559455496fcbe7aae52fe8f6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-768.png",
+      "expected": "c2c098ccde6790e33d12500aaa4cb1bee6e2dba64888e38f8b6fd840e1c956b5",
+      "actual": "c2c098ccde6790e33d12500aaa4cb1bee6e2dba64888e38f8b6fd840e1c956b5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/fallback-320.png",
+      "expected": "ff6a65b7282963a68794f3bedf3fa3d42c6356ed12d3e289ebf382a4860623d5",
+      "actual": "ff6a65b7282963a68794f3bedf3fa3d42c6356ed12d3e289ebf382a4860623d5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/loading-320.png",
+      "expected": "e9cb7c39c240d134bea4b5116fb6449a1ddecb7776f0c1b72f5c461fdf8ebf93",
+      "actual": "e9cb7c39c240d134bea4b5116fb6449a1ddecb7776f0c1b72f5c461fdf8ebf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/long-320.png",
+      "expected": "2b6414fbc3b1a31681576f4c3497ac90dee2c6da1899267e9801a7f72fa37a88",
+      "actual": "2b6414fbc3b1a31681576f4c3497ac90dee2c6da1899267e9801a7f72fa37a88",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/member-320.png",
+      "expected": "fd1e3b7c3f190f905a3cb3fe0a259d3ab8bf2476faca8079adfe685ec9802509",
+      "actual": "fd1e3b7c3f190f905a3cb3fe0a259d3ab8bf2476faca8079adfe685ec9802509",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/no-footer-320.png",
+      "expected": "4dbc8ef948c0708a7ab9d6c1640d11d2fd8584b51b8173d8f674616d4b412755",
+      "actual": "4dbc8ef948c0708a7ab9d6c1640d11d2fd8584b51b8173d8f674616d4b412755",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/node-320.png",
+      "expected": "2b7f6a173568c246e25610c6f0fd281c947dc6ded519e067d1b193444b5ae9f4",
+      "actual": "2b7f6a173568c246e25610c6f0fd281c947dc6ded519e067d1b193444b5ae9f4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/order-type-320.png",
+      "expected": "260216dc8ed417f16daf75ed9c6cbc6d606008eb9ad4aed8fb5f3c44bceeffa2",
+      "actual": "260216dc8ed417f16daf75ed9c6cbc6d606008eb9ad4aed8fb5f3c44bceeffa2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/role-320.png",
+      "expected": "2977b692658d26bb24221068e29064b01b55dc495df7409abd825b81f67acd5c",
+      "actual": "2977b692658d26bb24221068e29064b01b55dc495df7409abd825b81f67acd5c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/support-320.png",
+      "expected": "e32b630cc708a1331bf68e9233770c2237d5d555274bdc1c39e1c5661e077862",
+      "actual": "e32b630cc708a1331bf68e9233770c2237d5d555274bdc1c39e1c5661e077862",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/worker-320.png",
+      "expected": "3bbb2cfa640bc311b0b5a2ac52d157ef774bbbddb2cd9c15f70a25d97c92bd00",
+      "actual": "3bbb2cfa640bc311b0b5a2ac52d157ef774bbbddb2cd9c15f70a25d97c92bd00",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+      "expected": "6fe2cb3192bd693f2a0691ab09a4be7f23d8f3b608817c8fb17a48269f2bec7e",
+      "actual": "6fe2cb3192bd693f2a0691ab09a4be7f23d8f3b608817c8fb17a48269f2bec7e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/inputs-before.json",
+      "expected": "9b3fcd9620fc760269dca154c4fd518c07e41975132330a9a50444c79d518f84",
+      "actual": "9b3fcd9620fc760269dca154c4fd518c07e41975132330a9a50444c79d518f84",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/AlertModal.tsx.txt",
+      "expected": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "actual": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/results.json",
+      "expected": "3e5990145c448956a1067e8f820ccff9105a1d607077ff17a1fc7f6ba25d6182",
+      "actual": "3e5990145c448956a1067e8f820ccff9105a1d607077ff17a1fc7f6ba25d6182",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/browser-results.json",
+      "expected": "2ae151ea3c71b19901cd73a437e961c16375dfdbfe2626eb247552ab023eadc5",
+      "actual": "2ae151ea3c71b19901cd73a437e961c16375dfdbfe2626eb247552ab023eadc5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/cancel-only-320.png",
+      "expected": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "actual": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/category-320.png",
+      "expected": "ca243215198d216052cb8d601627879a5a5b2a58ac388071db2f9941b279da2e",
+      "actual": "ca243215198d216052cb8d601627879a5a5b2a58ac388071db2f9941b279da2e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/children-320.png",
+      "expected": "dfbc685287f938cd53554cc7e1aefeee8fc02edadf925d66aea092169c361e15",
+      "actual": "dfbc685287f938cd53554cc7e1aefeee8fc02edadf925d66aea092169c361e15",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/confirm-only-320.png",
+      "expected": "ae7aa3390c78541223b951dd44297a90678f0eee20fba60d93667978217b8f7d",
+      "actual": "ae7aa3390c78541223b951dd44297a90678f0eee20fba60d93667978217b8f7d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/default-close-320.png",
+      "expected": "63ada9a18b38a07725e00888e99556aba76613dc8e9fffd35ccfbf3533727da2",
+      "actual": "63ada9a18b38a07725e00888e99556aba76613dc8e9fffd35ccfbf3533727da2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-320.png",
+      "expected": "b5a5f2c38536756b18ca2d56fc047a36b22ab3d6bd07b2f23ac951f0e78a1bee",
+      "actual": "b5a5f2c38536756b18ca2d56fc047a36b22ab3d6bd07b2f23ac951f0e78a1bee",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-360.png",
+      "expected": "3057b2a06e1ca50224410e23364c4adfdc823cac63728d9eda65d854fa6b65ef",
+      "actual": "3057b2a06e1ca50224410e23364c4adfdc823cac63728d9eda65d854fa6b65ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-390.png",
+      "expected": "ae54e92d4e966f1f9794e9fbf344808ff0f82937fb1ef6b9b0e12661774cd9c0",
+      "actual": "ae54e92d4e966f1f9794e9fbf344808ff0f82937fb1ef6b9b0e12661774cd9c0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-768.png",
+      "expected": "c2358c9a1a4b0461cbbb38bc018436f9bcc5dad01fcdf961dfad161c7f5bc705",
+      "actual": "c2358c9a1a4b0461cbbb38bc018436f9bcc5dad01fcdf961dfad161c7f5bc705",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/fallback-320.png",
+      "expected": "c275b7b45aaecc8dbb708e508c55c4c644467b1f6c7d81a25b72984716af74c4",
+      "actual": "c275b7b45aaecc8dbb708e508c55c4c644467b1f6c7d81a25b72984716af74c4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/loading-320.png",
+      "expected": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "actual": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/long-320.png",
+      "expected": "8114b46e433c8f536424d993de4bfa7aa39e2888e56c64197a78f85152db5857",
+      "actual": "8114b46e433c8f536424d993de4bfa7aa39e2888e56c64197a78f85152db5857",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/member-320.png",
+      "expected": "27d87dd94f97a14224d5d2d078658a175af8976f9bf088fb96ea02a67d5b7bc2",
+      "actual": "27d87dd94f97a14224d5d2d078658a175af8976f9bf088fb96ea02a67d5b7bc2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/no-footer-320.png",
+      "expected": "4c6f4d8ea45a17e439704596971186f93338f557b968e2b7256c45271ee991c8",
+      "actual": "4c6f4d8ea45a17e439704596971186f93338f557b968e2b7256c45271ee991c8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/node-320.png",
+      "expected": "0ea4935c54fae22057c049148729d69589ab3d4828034677ccff7bb134cc1a31",
+      "actual": "0ea4935c54fae22057c049148729d69589ab3d4828034677ccff7bb134cc1a31",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/order-type-320.png",
+      "expected": "599cb2420ffb8959e2c7429b64d5ae9e727650284262eb31a81e3611da8cb38d",
+      "actual": "599cb2420ffb8959e2c7429b64d5ae9e727650284262eb31a81e3611da8cb38d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/role-320.png",
+      "expected": "bc951724441aea625b6ae9db878b47c06a9976084a3213eeb77b0d740ce779a1",
+      "actual": "bc951724441aea625b6ae9db878b47c06a9976084a3213eeb77b0d740ce779a1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/support-320.png",
+      "expected": "e386f788735389a7c52bce5e5f892d699519b1ec095fbf0cdd84d2aff5d21d8e",
+      "actual": "e386f788735389a7c52bce5e5f892d699519b1ec095fbf0cdd84d2aff5d21d8e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/worker-320.png",
+      "expected": "76c592e310aaabaa65ba336997ca6278bc20d5a73e00901e9baa458b3fb4e101",
+      "actual": "76c592e310aaabaa65ba336997ca6278bc20d5a73e00901e9baa458b3fb4e101",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/quality-results.json",
+      "expected": "3ce6808418af94079d474b5e4f8268d535d1c01461c65075af25cf8a6663d8ac",
+      "actual": "3ce6808418af94079d474b5e4f8268d535d1c01461c65075af25cf8a6663d8ac",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/quality.cjs",
+      "expected": "00f2c7778543aac2203287ef4b47297a4a140fca12281c05b015ec5530b15f42",
+      "actual": "00f2c7778543aac2203287ef4b47297a4a140fca12281c05b015ec5530b15f42",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/README.md",
+      "expected": "19ab2e89b50ef48696dc4aeccc74068f9f6b2056322705214d0fd31bbf20942a",
+      "actual": "19ab2e89b50ef48696dc4aeccc74068f9f6b2056322705214d0fd31bbf20942a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/AlertModal.tsx.txt",
+      "expected": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+      "actual": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/results.json",
+      "expected": "7f82b4b0f41c76c3ea64c35790188e6268907103252ab3dbb594a9868f653ed3",
+      "actual": "7f82b4b0f41c76c3ea64c35790188e6268907103252ab3dbb594a9868f653ed3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/browser-results.json",
+      "expected": "e6dfdacb6e0cb31dda2a48d06ae37fb360afe09c89424607ea86a05969bdf37b",
+      "actual": "e6dfdacb6e0cb31dda2a48d06ae37fb360afe09c89424607ea86a05969bdf37b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/cancel-only-320.png",
+      "expected": "e77492452583bf470d53597d13f189ca70d918a3cc43b88923ad91dc8ac9d15f",
+      "actual": "e77492452583bf470d53597d13f189ca70d918a3cc43b88923ad91dc8ac9d15f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/category-320.png",
+      "expected": "1fefcca08c1c756c30f1492f216014d62787631fe63c8afae6efa9280a9f47d3",
+      "actual": "1fefcca08c1c756c30f1492f216014d62787631fe63c8afae6efa9280a9f47d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/children-320.png",
+      "expected": "807791f593c282be0d82310e770fd7d4786bf0c6784ecea20c0712622d8d69e9",
+      "actual": "807791f593c282be0d82310e770fd7d4786bf0c6784ecea20c0712622d8d69e9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/confirm-only-320.png",
+      "expected": "2962462de3b6d894de33e31f795ca4b953da53283b94afd106093649e3d9c06e",
+      "actual": "2962462de3b6d894de33e31f795ca4b953da53283b94afd106093649e3d9c06e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/default-close-320.png",
+      "expected": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "actual": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-320.png",
+      "expected": "bd13e2f6d138b5c43dda1f5abdee829613ca12e63e530dd35abb9164a4550e03",
+      "actual": "bd13e2f6d138b5c43dda1f5abdee829613ca12e63e530dd35abb9164a4550e03",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-360.png",
+      "expected": "826da49b14e62aa74a91a5c382b8383cf2f299a025c1221dfa4927aacbac7c55",
+      "actual": "826da49b14e62aa74a91a5c382b8383cf2f299a025c1221dfa4927aacbac7c55",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-390.png",
+      "expected": "da47cc26a192442016b20b09cc8085552dce606037f5f4857b17ae30f4877197",
+      "actual": "da47cc26a192442016b20b09cc8085552dce606037f5f4857b17ae30f4877197",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-768.png",
+      "expected": "a62b664a451ec333e63fc1360b97ebfb7c99f9d860b9927c034445f4d712644e",
+      "actual": "a62b664a451ec333e63fc1360b97ebfb7c99f9d860b9927c034445f4d712644e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/fallback-320.png",
+      "expected": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "actual": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/loading-320.png",
+      "expected": "737830bf9c958c9525e87f0f7e69ef6171a28b9abfc47979c5b3669c77cd6876",
+      "actual": "737830bf9c958c9525e87f0f7e69ef6171a28b9abfc47979c5b3669c77cd6876",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/long-320.png",
+      "expected": "2a8a3759364652578ddbe684f3e5ed9572d8f4c93dfba2bc44bd906e2674a0dc",
+      "actual": "2a8a3759364652578ddbe684f3e5ed9572d8f4c93dfba2bc44bd906e2674a0dc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/member-320.png",
+      "expected": "9d6231a1005ca2d1fa76ffe512c8cf0f9aca8539b17f35d135f940f37e2906c2",
+      "actual": "9d6231a1005ca2d1fa76ffe512c8cf0f9aca8539b17f35d135f940f37e2906c2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/no-footer-320.png",
+      "expected": "65c82dbaed633f4951f945f78fe9be262405a26f7597783e3aac23a9f1f1658f",
+      "actual": "65c82dbaed633f4951f945f78fe9be262405a26f7597783e3aac23a9f1f1658f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/node-320.png",
+      "expected": "1b4017e5d84b249a8cef8ad634a593de9d35a86ea6cf794e9c3f6dd7a267b657",
+      "actual": "1b4017e5d84b249a8cef8ad634a593de9d35a86ea6cf794e9c3f6dd7a267b657",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/order-type-320.png",
+      "expected": "4ebf7fa92479fe4d6b97307c2e7214025bb5683857130bff01a0d7ae220a9dda",
+      "actual": "4ebf7fa92479fe4d6b97307c2e7214025bb5683857130bff01a0d7ae220a9dda",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/role-320.png",
+      "expected": "956aff3840b3858d40fd8784d604f4cfb9592a7c7f3d0755015cda9eee72e0e0",
+      "actual": "956aff3840b3858d40fd8784d604f4cfb9592a7c7f3d0755015cda9eee72e0e0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/support-320.png",
+      "expected": "dbf2b9bf922a1e3c22378f745391f0998325d4d2ef063b23881fd6e22df0eb2c",
+      "actual": "dbf2b9bf922a1e3c22378f745391f0998325d4d2ef063b23881fd6e22df0eb2c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/worker-320.png",
+      "expected": "f93e59f6422ad18f3833bbb09ec6095cb138f7961aca208664396c6e4f64fcd6",
+      "actual": "f93e59f6422ad18f3833bbb09ec6095cb138f7961aca208664396c6e4f64fcd6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/quality-results.json",
+      "expected": "940f6d5db55fb641c6d2404ae175216e01cdede2ecd909b9a656615397245def",
+      "actual": "940f6d5db55fb641c6d2404ae175216e01cdede2ecd909b9a656615397245def",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/quality.cjs",
+      "expected": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "actual": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/README.md",
+      "expected": "b101ec7f190629d768204367bace36329a3261de05b451fabf2ca7e0fa01e7d3",
+      "actual": "b101ec7f190629d768204367bace36329a3261de05b451fabf2ca7e0fa01e7d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/prepare.cjs",
+      "expected": "2a9a51bf42229c3df17bea3f6f093a51380ad88315618665da6ccdc94213cacd",
+      "actual": "2a9a51bf42229c3df17bea3f6f093a51380ad88315618665da6ccdc94213cacd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/preview-entry.fixture.jsx",
+      "expected": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a",
+      "actual": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/quality-results.json",
+      "expected": "81040d640c7178cabf4a406102921ace12e6c6a3a39bb8b5a6c95727c7d6c37a",
+      "actual": "81040d640c7178cabf4a406102921ace12e6c6a3a39bb8b5a6c95727c7d6c37a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/quality.cjs",
+      "expected": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "actual": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/replay-delete.cjs",
+      "expected": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "actual": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/verify.cjs",
+      "expected": "6b933abb37960e1f23acbd34bf871fb103132c743609626ab3a63ed98465e4ef",
+      "actual": "6b933abb37960e1f23acbd34bf871fb103132c743609626ab3a63ed98465e4ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/README.md",
+      "expected": "f0398f1c55916f17c0a8c62cc343bd41335e78238e25d7f37cec97148f68b0a7",
+      "actual": "f0398f1c55916f17c0a8c62cc343bd41335e78238e25d7f37cec97148f68b0a7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/REPORT.md",
+      "expected": "a69dbb19acf9fa10a4f36ded2dc287e1cd47989557fc218790a86798fc1a954c",
+      "actual": "a69dbb19acf9fa10a4f36ded2dc287e1cd47989557fc218790a86798fc1a954c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/audit.cjs",
+      "expected": "3c2baa2e9f054a18fe65794f1398153c4c8e5a37b9248c826d6c71ea138d53e3",
+      "actual": "3c2baa2e9f054a18fe65794f1398153c4c8e5a37b9248c826d6c71ea138d53e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/audit-before.json",
+      "expected": "1f2cff710af707cd952a724858a3acd9504bb1e4f96adde507776e4c590ce071",
+      "actual": "1f2cff710af707cd952a724858a3acd9504bb1e4f96adde507776e4c590ce071",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/DeleteConfirmModal.before.tsx.txt",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/DeleteConfirmModal.final.tsx.txt",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/check.cjs",
+      "expected": "977a16d13ea5aad0945a7e31f3ee27ac9ebd37e5b350e7432b26917dce98d8da",
+      "actual": "977a16d13ea5aad0945a7e31f3ee27ac9ebd37e5b350e7432b26917dce98d8da",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/results.json",
+      "expected": "03b90043379437deb8389da928119aba5e9abaa197bce306da287468ddc04ccb",
+      "actual": "03b90043379437deb8389da928119aba5e9abaa197bce306da287468ddc04ccb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/manifest.cjs",
+      "expected": "35b2838db5148ca5aed235fa13d5099597a486aab6e9c6261806a2cdc9a9c656",
+      "actual": "35b2838db5148ca5aed235fa13d5099597a486aab6e9c6261806a2cdc9a9c656",
+      "passed": true
+    }
+  ],
+  "fixtureMatches": [
+    {
+      "file": ".expo/qc-delete-modal-entry.jsx",
+      "expected": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "actual": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/web.css",
+      "expected": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "actual": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "passed": true
+    }
+  ],
+  "runtimeMatches": [
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "passed": true
+    }
+  ],
+  "proposalRuntimeMatches": [
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "testedPath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-delete-modal-2026-10-09\\proposal\\DeleteConfirmModal.tsx",
+      "expected": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "actual": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "testedPath": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "testedPath": "components/common/SuccessModal.tsx",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "testedPath": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "testedPath": "components/common/AlertModal.tsx",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "testedPath": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "testedPath": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "testedPath": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "testedPath": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "testedPath": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "testedPath": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "testedPath": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "testedPath": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "testedPath": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "testedPath": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "testedPath": "api/hooks/customers.ts",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "passed": true
+    }
+  ],
+  "ownBundles": [
+    {
+      "mode": "current",
+      "path": ".expo\\qc-delete-offline\\current\\entry.bundle.js",
+      "expected": "247e6339ff68aa44281a5b52d09eef4284fe91217f2f65ac9a1c733be71c4abf",
+      "actual": "247e6339ff68aa44281a5b52d09eef4284fe91217f2f65ac9a1c733be71c4abf",
+      "passed": true,
+      "guardedUnchanged": true
+    },
+    {
+      "mode": "proposal",
+      "path": ".expo\\qc-delete-offline\\proposal\\entry.bundle.js",
+      "expected": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f",
+      "actual": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f",
+      "passed": true,
+      "guardedUnchanged": true
+    }
+  ],
+  "sourceChecks": {
+    "portrait": {
+      "passed": 115,
+      "failed": 0
+    },
+    "lifecycle": {
+      "passed": 156,
+      "failed": 0
+    },
+    "orientation": {
+      "passed": 29,
+      "failed": 16
+    }
+  },
+  "proposalChecks": {
+    "portrait": {
+      "passed": 113,
+      "failed": 2
+    },
+    "lifecycle": {
+      "passed": 156,
+      "failed": 0
+    },
+    "orientation": {
+      "passed": 51,
+      "failed": 0
+    }
+  },
+  "totalCurrentPassed": 300,
+  "totalCurrentFailed": 16,
+  "totalProposalPassed": 320,
+  "totalProposalFailed": 2,
+  "includesOverlappingCoverage": true,
+  "focusedTypecheck": {
+    "roots": [
+      "components/common/DeleteConfirmModal.tsx",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-delete-modal-2026-10-09\\proposal\\DeleteConfirmModal.tsx"
+    ],
+    "diagnostics": 0,
+    "importedSourceCount": 19,
+    "fullProjectCheck": false
+  },
+  "callerInventory": {
+    "owner": "QC",
+    "capturedAt": "2026-10-09T01:41:25.700Z",
+    "scope": "Static current DeleteConfirmModal JSX prop audit, not execution or approval of all caller screens",
+    "historicalFiles": 63,
+    "historicalUsages": 63,
+    "currentFiles": 64,
+    "currentUsages": 64,
+    "historical": [
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/detail.tsx",
+        "historicalHash": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+        "currentHash": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/index.tsx",
+        "historicalHash": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+        "currentHash": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "historicalHash": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+        "currentHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "historicalHash": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "currentHash": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "historicalHash": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "currentHash": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "historicalHash": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "currentHash": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "historicalHash": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "currentHash": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/index.tsx",
+        "historicalHash": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+        "currentHash": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "historicalHash": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "currentHash": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "historicalHash": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "currentHash": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "historicalHash": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "currentHash": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onClose",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/detail.tsx",
+        "historicalHash": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+        "currentHash": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/index.tsx",
+        "historicalHash": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+        "currentHash": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+        "historicalHash": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+        "currentHash": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/index.tsx",
+        "historicalHash": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+        "currentHash": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/detail.tsx",
+        "historicalHash": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+        "currentHash": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/index.tsx",
+        "historicalHash": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+        "currentHash": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/detail.tsx",
+        "historicalHash": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+        "currentHash": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/index.tsx",
+        "historicalHash": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+        "currentHash": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/detail.tsx",
+        "historicalHash": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+        "currentHash": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/index.tsx",
+        "historicalHash": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+        "currentHash": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+        "historicalHash": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+        "currentHash": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/index.tsx",
+        "historicalHash": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+        "currentHash": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/detail.tsx",
+        "historicalHash": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+        "currentHash": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/index.tsx",
+        "historicalHash": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+        "currentHash": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/detail.tsx",
+        "historicalHash": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+        "currentHash": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/index.tsx",
+        "historicalHash": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+        "currentHash": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/detail.tsx",
+        "historicalHash": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+        "currentHash": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/index.tsx",
+        "historicalHash": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+        "currentHash": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/detail.tsx",
+        "historicalHash": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+        "currentHash": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/index.tsx",
+        "historicalHash": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+        "currentHash": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/detail.tsx",
+        "historicalHash": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+        "currentHash": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/index.tsx",
+        "historicalHash": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+        "currentHash": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/detail.tsx",
+        "historicalHash": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+        "currentHash": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/index.tsx",
+        "historicalHash": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+        "currentHash": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/detail.tsx",
+        "historicalHash": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+        "currentHash": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/index.tsx",
+        "historicalHash": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+        "currentHash": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isLoading",
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/backup/index.tsx",
+        "historicalHash": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+        "currentHash": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/detail.tsx",
+        "historicalHash": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+        "currentHash": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "title",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/index.tsx",
+        "historicalHash": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+        "currentHash": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "title",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/extra/index.tsx",
+        "historicalHash": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+        "currentHash": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/income/detail.tsx",
+        "historicalHash": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+        "currentHash": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "title",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/income/index.tsx",
+        "historicalHash": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+        "currentHash": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "title",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/order-type/index.tsx",
+        "historicalHash": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+        "currentHash": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "historicalHash": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false
+      },
+      {
+        "file": "app/(no-layout)/manage/place/area.tsx",
+        "historicalHash": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+        "currentHash": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/place/store.tsx",
+        "historicalHash": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+        "currentHash": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notification-detail.tsx",
+        "historicalHash": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+        "currentHash": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notifications.tsx",
+        "historicalHash": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+        "currentHash": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/printer/index.tsx",
+        "historicalHash": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+        "currentHash": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/detail.tsx",
+        "historicalHash": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+        "currentHash": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/index.tsx",
+        "historicalHash": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+        "currentHash": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "onClose",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/tax/index.tsx",
+        "historicalHash": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+        "currentHash": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/offer/discount/index.tsx",
+        "historicalHash": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+        "currentHash": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/offer/promo/index.tsx",
+        "historicalHash": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+        "currentHash": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/offer/voucher/index.tsx",
+        "historicalHash": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+        "currentHash": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "onConfirm",
+            "openState",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+        "historicalHash": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+        "currentHash": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+        "historicalHash": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+        "currentHash": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/inventory/PurchaseListScreen.tsx",
+        "historicalHash": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+        "currentHash": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/inventory/supplier/SupplierDeleteDialog.tsx",
+        "historicalHash": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+        "currentHash": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+        "historicalHash": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "currentHash": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "itemName",
+            "description",
+            "onConfirm",
+            "isLoading"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+        "historicalHash": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "currentHash": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "itemName",
+            "description",
+            "onConfirm",
+            "isLoading"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+        "historicalHash": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "currentHash": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "sourceUnchanged": true,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "itemName",
+            "description",
+            "onConfirm",
+            "isLoading"
+          ]
+        ]
+      }
+    ],
+    "sourceChanges": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "historicalHash": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+        "currentHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": true,
+        "currentProps": [
+          [
+            "openState",
+            "onConfirm",
+            "title",
+            "description"
+          ]
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "historicalHash": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false
+      },
+      {
+        "file": "components/feature/inventory/PurchaseListScreen.tsx",
+        "historicalHash": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+        "currentHash": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      }
+    ],
+    "changedCallSites": [
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "historicalHash": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false
+      },
+      {
+        "file": "components/feature/inventory/PurchaseListScreen.tsx",
+        "historicalHash": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+        "currentHash": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76",
+        "sourceUnchanged": false,
+        "callSiteAstUnchanged": false,
+        "currentProps": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      }
+    ],
+    "newCallers": [
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+        "sha256": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+        "uses": 1,
+        "props": [
+          [
+            "openState",
+            "itemName",
+            "description",
+            "onConfirm"
+          ]
+        ]
+      },
+      {
+        "file": "components/feature/inventory/bill-payment/BillPaymentDeleteDialog.tsx",
+        "sha256": "693a26ce42308a24ac1b07edb61d677084c05f7bfb547c8f4a88c0da8f1d3b0d",
+        "uses": 1,
+        "props": [
+          [
+            "isOpen",
+            "itemName",
+            "onClose",
+            "onConfirm"
+          ]
+        ]
+      }
+    ],
+    "currentInventory": [
+      {
+        "file": "app/(no-layout)/offer/voucher/index.tsx",
+        "sha256": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+        "uses": [
+          {
+            "line": 33,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/offer/promo/index.tsx",
+        "sha256": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+        "uses": [
+          {
+            "line": 35,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/offer/discount/index.tsx",
+        "sha256": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+        "uses": [
+          {
+            "line": 33,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/index.tsx",
+        "sha256": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+        "uses": [
+          {
+            "line": 201,
+            "props": [
+              "isOpen",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/backup/index.tsx",
+        "sha256": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+        "uses": [
+          {
+            "line": 40,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/detail.tsx",
+        "sha256": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+        "uses": [
+          {
+            "line": 175,
+            "props": [
+              "isOpen",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/index.tsx",
+        "sha256": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+        "uses": [
+          {
+            "line": 98,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/detail.tsx",
+        "sha256": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+        "uses": [
+          {
+            "line": 122,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/extra/index.tsx",
+        "sha256": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+        "uses": [
+          {
+            "line": 37,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/tax/index.tsx",
+        "sha256": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+        "uses": [
+          {
+            "line": 35,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/order-type/index.tsx",
+        "sha256": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+        "uses": [
+          {
+            "line": 38,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/index.tsx",
+        "sha256": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+        "uses": [
+          {
+            "line": 86,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "sha256": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "uses": [
+          {
+            "line": 180,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/detail.tsx",
+        "sha256": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+        "uses": [
+          {
+            "line": 74,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "sha256": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "uses": [
+          {
+            "line": 220,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/index.tsx",
+        "sha256": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+        "uses": [
+          {
+            "line": 195,
+            "props": [
+              "isOpen",
+              "onClose",
+              "title",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/index.tsx",
+        "sha256": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+        "uses": [
+          {
+            "line": 86,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/detail.tsx",
+        "sha256": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+        "uses": [
+          {
+            "line": 34,
+            "props": [
+              "isOpen",
+              "onClose",
+              "title",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/detail.tsx",
+        "sha256": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+        "uses": [
+          {
+            "line": 66,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "sha256": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "uses": [
+          {
+            "line": 215,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/income/index.tsx",
+        "sha256": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+        "uses": [
+          {
+            "line": 215,
+            "props": [
+              "isOpen",
+              "onClose",
+              "title",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+        "sha256": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "uses": [
+          {
+            "line": 71,
+            "props": [
+              "openState",
+              "itemName",
+              "description",
+              "onConfirm",
+              "isLoading"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/income/detail.tsx",
+        "sha256": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+        "uses": [
+          {
+            "line": 36,
+            "props": [
+              "isOpen",
+              "onClose",
+              "title",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/index.tsx",
+        "sha256": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+        "uses": [
+          {
+            "line": 100,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/detail.tsx",
+        "sha256": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+        "uses": [
+          {
+            "line": 274,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx",
+        "sha256": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+        "uses": [
+          {
+            "line": 47,
+            "props": [
+              "openState",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/place/store.tsx",
+        "sha256": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+        "uses": [
+          {
+            "line": 166,
+            "props": [
+              "isOpen",
+              "onClose",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/index.tsx",
+        "sha256": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+        "uses": [
+          {
+            "line": 136,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/detail.tsx",
+        "sha256": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+        "uses": [
+          {
+            "line": 122,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+        "sha256": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "uses": [
+          {
+            "line": 72,
+            "props": [
+              "openState",
+              "itemName",
+              "description",
+              "onConfirm",
+              "isLoading"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/place/area.tsx",
+        "sha256": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+        "uses": [
+          {
+            "line": 189,
+            "props": [
+              "isOpen",
+              "onClose",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notifications.tsx",
+        "sha256": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+        "uses": [
+          {
+            "line": 274,
+            "props": [
+              "openState",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/index.tsx",
+        "sha256": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+        "uses": [
+          {
+            "line": 97,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/detail.tsx",
+        "sha256": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+        "uses": [
+          {
+            "line": 72,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/index.tsx",
+        "sha256": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+        "uses": [
+          {
+            "line": 109,
+            "props": [
+              "isOpen",
+              "onClose",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notification-detail.tsx",
+        "sha256": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+        "uses": [
+          {
+            "line": 250,
+            "props": [
+              "openState",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/detail.tsx",
+        "sha256": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+        "uses": [
+          {
+            "line": 34,
+            "props": [
+              "isOpen",
+              "onClose",
+              "itemName",
+              "description",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+        "sha256": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "uses": [
+          {
+            "line": 71,
+            "props": [
+              "openState",
+              "itemName",
+              "description",
+              "onConfirm",
+              "isLoading"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/index.tsx",
+        "sha256": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+        "uses": [
+          {
+            "line": 117,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/manage/printer/index.tsx",
+        "sha256": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+        "uses": [
+          {
+            "line": 34,
+            "props": [
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/detail.tsx",
+        "sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+        "uses": [
+          {
+            "line": 144,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/index.tsx",
+        "sha256": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+        "uses": [
+          {
+            "line": 109,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+        "sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+        "uses": [
+          {
+            "line": 93,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "sha256": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "uses": [
+          {
+            "line": 161,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "sha256": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "uses": [
+          {
+            "line": 166,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "sha256": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "uses": [
+          {
+            "line": 232,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "sha256": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "uses": [
+          {
+            "line": 240,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/index.tsx",
+        "sha256": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+        "uses": [
+          {
+            "line": 99,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/detail.tsx",
+        "sha256": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+        "uses": [
+          {
+            "line": 77,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+        "sha256": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+        "uses": [
+          {
+            "line": 33,
+            "props": [
+              "isOpen",
+              "itemName",
+              "onClose",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/inventory/PurchaseListScreen.tsx",
+        "sha256": "6c995385e4548e1f9757f9d9cba9829de7748f1a53a2f47fc1b7f93302debd76",
+        "uses": [
+          {
+            "line": 184,
+            "props": [
+              "isOpen",
+              "itemName",
+              "onClose",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/inventory/supplier/SupplierDeleteDialog.tsx",
+        "sha256": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+        "uses": [
+          {
+            "line": 32,
+            "props": [
+              "isOpen",
+              "itemName",
+              "onClose",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/index.tsx",
+        "sha256": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+        "uses": [
+          {
+            "line": 117,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/detail.tsx",
+        "sha256": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+        "uses": [
+          {
+            "line": 163,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+        "sha256": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+        "uses": [
+          {
+            "line": 32,
+            "props": [
+              "isOpen",
+              "itemName",
+              "onClose",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/index.tsx",
+        "sha256": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+        "uses": [
+          {
+            "line": 198,
+            "props": [
+              "openState",
+              "onClose",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "components/feature/inventory/bill-payment/BillPaymentDeleteDialog.tsx",
+        "sha256": "693a26ce42308a24ac1b07edb61d677084c05f7bfb547c8f4a88c0da8f1d3b0d",
+        "uses": [
+          {
+            "line": 21,
+            "props": [
+              "isOpen",
+              "itemName",
+              "onClose",
+              "onConfirm"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "sha256": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+        "uses": [
+          {
+            "line": 202,
+            "props": [
+              "openState",
+              "onConfirm",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/detail.tsx",
+        "sha256": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+        "uses": [
+          {
+            "line": 77,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/detail.tsx",
+        "sha256": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+        "uses": [
+          {
+            "line": 74,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/index.tsx",
+        "sha256": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+        "uses": [
+          {
+            "line": 93,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/index.tsx",
+        "sha256": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+        "uses": [
+          {
+            "line": 88,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+        "sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+        "uses": [
+          {
+            "line": 145,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/index.tsx",
+        "sha256": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+        "uses": [
+          {
+            "line": 96,
+            "props": [
+              "isLoading",
+              "onConfirm",
+              "openState",
+              "title",
+              "description"
+            ]
+          }
+        ]
+      }
+    ],
+    "allHistoricalCallSitesAstUnchanged": false,
+    "allCallersExecuted": false
+  },
+  "dependencyUpdate": {
+    "file": "components/common/SuccessModal.tsx",
+    "initial": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "current": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "source": "Codex-3 SD3-012 applied previous QC copy; external recheck still required",
+    "previousQcCopy": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "approval": "Dependency execution only; no SuccessModal delta approved by this packet"
+  },
+  "externalContextChanges": [
+    {
+      "file": "node_modules/react-native-css-interop/.cache/android.js",
+      "initial": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+      "current": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf",
+      "certified": false,
+      "note": "Shared generated cache changed during external listener activity; QC offline renderer does not load the NativeWind Metro plugin."
+    }
+  ]
+}

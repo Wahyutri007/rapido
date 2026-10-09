@@ -1,0 +1,6 @@
+{
+  "scope": "Previously QC-tested candidate applied only to isolated integration checkout. Shared workspace unchanged.",
+  "beforeSha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+  "afterSha256": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+  "changedFile": "components/common/DeleteConfirmModal.tsx"
+}

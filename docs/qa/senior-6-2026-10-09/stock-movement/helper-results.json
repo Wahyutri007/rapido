@@ -1,0 +1,86 @@
+{
+  "sourceHash": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+  "checks": [
+    {
+      "name": "only completed purchases create incoming stock",
+      "passed": true
+    },
+    {
+      "name": "transfer creates equal opposing store legs",
+      "passed": true
+    },
+    {
+      "name": "adjustment is shrinkage with a single outgoing leg",
+      "passed": true
+    },
+    {
+      "name": "captured dates/stores and missing units stay unknown",
+      "passed": true
+    },
+    {
+      "name": "historical closing balances never inferred from current stock",
+      "passed": true
+    },
+    {
+      "name": "namespace IDs are unique across record domains and transfer legs",
+      "passed": true
+    },
+    {
+      "name": "IDs survive record sorting and unrelated line insertion",
+      "passed": true
+    },
+    {
+      "name": "duplicate item lines and captured IDs remain independently addressable",
+      "passed": true
+    },
+    {
+      "name": "transaction snapshots retain name and unit after catalog changes",
+      "passed": true
+    },
+    {
+      "name": "mixed product/material transactions follow each line kind",
+      "passed": true
+    },
+    {
+      "name": "nonfinite/zero/negative transaction quantities excluded; signed captured quantities retained",
+      "passed": true
+    },
+    {
+      "name": "invalid calendar date remains undated instead of rolling over",
+      "passed": true
+    },
+    {
+      "name": "missing transfer destination never invents a receipt",
+      "passed": true
+    },
+    {
+      "name": "dated records newest first, undated last, deterministic ties",
+      "passed": true
+    },
+    {
+      "name": "search trims case and matches SKU/reference/store/name/operation",
+      "passed": true
+    },
+    {
+      "name": "store/type/date filters combine and exclude unknown metadata",
+      "passed": true
+    },
+    {
+      "name": "reset filter restores full selected-kind history",
+      "passed": true
+    },
+    {
+      "name": "small fractional amounts stay nonzero and retain the source unit",
+      "passed": true
+    },
+    {
+      "name": "projection and filtering leave source records untouched",
+      "passed": true
+    },
+    {
+      "name": "empty source and missing IDs produce no invented events",
+      "passed": true
+    }
+  ],
+  "limitations": "Pure projection/filter tests against the production helper; fixtures exist only in this runner."
+}

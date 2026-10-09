@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "owner": "Software Developer Senior 7",
+  "status": "READY_FOR_QA",
+  "headContext": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "files": [
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "sha256": "9fa996d22bcaa2fed81fc2fe7b48b9bdf90ad328b519f5c0fa13e44f19e5280f"
+    },
+    {
+      "file": "components/feature/barcode/ProductPickerSheet.tsx",
+      "sha256": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37"
+    }
+  ],
+  "eslint": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\barcode\\PrintBarcodeModal.tsx",
+      "errorCount": 0,
+      "warningCount": 0,
+      "messages": []
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\barcode\\ProductPickerSheet.tsx",
+      "errorCount": 0,
+      "warningCount": 0,
+      "messages": []
+    }
+  ],
+  "biome": "check: exit 0, 2 files, no fixes",
+  "diffCheck": "exit 0, scoped to two source files",
+  "lifecycle": {
+    "print": 21,
+    "picker": 20,
+    "errors": 0
+  },
+  "typecheck": "Final integrated snapshot pending coordinated PM gate. Own duplicate run interrupted; no pass claim.",
+  "qaApproval": false,
+  "qcApproval": false,
+  "harnesses": [
+    {
+      "file": "barcode-lifecycle.cjs",
+      "sha256": "7cca8b0bdaf586352cf92bb338d4d0c31c8253b850280cda65076a27473fe24d"
+    }
+  ],
+  "snapshotNote": "Original Barcode batch evidence retained. Print source and print-results.json have been superseded by incrementer/verification.json; ProductPicker source is unchanged.",
+  "supplement": {
+    "file": "incrementer/verification.json",
+    "latestPrintSource": {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "sha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1"
+    },
+    "originalPickerSourceStillMatches": true,
+    "harnessUpdate": {
+      "current": {
+        "file": "docs/qa/senior-7-2026-10-09/barcode-lifecycle.cjs",
+        "sha256": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768"
+      },
+      "description": "Only three Print assertions now inspect isDisabled instead of disabled. Imported helper behavior is unchanged. Print suite rerun: 21 pass; original Picker result not rerun."
+    }
+  }
+}

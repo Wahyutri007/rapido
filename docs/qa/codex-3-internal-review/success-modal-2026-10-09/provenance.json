@@ -1,0 +1,26 @@
+{
+  "kind": "INTERNAL_QA_REVIEW",
+  "capturedAt": "2026-10-08T20:45:50.985Z",
+  "stockRunnerOnlyOutputAndEntryUrlChanged": true,
+  "deleteRunnerOnlyDimensionHostAdaptation": true,
+  "stockFixtureAlwaysUsesProductionScreen": true,
+  "stockOriginalSha256": "b2163de739d913467b0a8ad3800befb42e327247ab0dc8911e7bbd0e75567df6",
+  "deleteOriginalSha256": "afd8786234688411ca458a85f3d4c7df08ff30891c33778201cac64402eeab67",
+  "visualEvidenceInspected": [
+    {
+      "file": "docs/qa/codex-3/success-modal-size/role-320.png",
+      "sha256": "92973a3e1d654336cb9e22718c2129f987dbc8547b46924852bc56e36d3bda3b",
+      "review": "320x640 fixture screenshot shows entire modal, title, X and Tutup action inside the viewport"
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/success-resize-320.png",
+      "sha256": "d9e5791c0b41485dd7f431ee348f04f5437c5ab977b69b601f0f5f19d81b3497",
+      "review": "320x640 fixture screenshot shows entire success modal and Mengerti action inside the viewport"
+    }
+  ],
+  "limits": [
+    "Reviewed existing screenshots rather than launching a browser or capturing new images",
+    "Byte comparison of allowed runner/fixture adaptations, not rerun of the 243 developer assertions"
+  ],
+  "status": "PASS"
+}

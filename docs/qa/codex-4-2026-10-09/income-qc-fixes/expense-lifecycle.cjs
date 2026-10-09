@@ -1,0 +1,116 @@
+﻿const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const ts = require('typescript');
+const React = require(path.resolve('.expo/senior7-test-tools/node_modules/react'));
+require('react'); require.cache[require.resolve('react')].exports = React;
+const { act, create } = require(path.resolve('.expo/senior7-test-tools/node_modules/react-test-renderer'));
+const RHF = require('react-hook-form');
+const { zodResolver } = require('@hookform/resolvers/zod');
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+const checks = [], errors = [], loaded = new Map(), sourceHashes = {};
+const originalError = console.error;
+console.error = (...args) => { if (String(args[0]).includes('react-test-renderer is deprecated')) return; errors.push(args.map(String).join(' ')); originalError(...args); };
+const check = (name, actual, expected) => checks.push({ name, actual, expected, passed: JSON.stringify(actual) === JSON.stringify(expected) });
+const host = (...names) => Object.fromEntries(names.map((name) => [name, name]));
+const defaultHost = (name) => ({ __esModule: true, default: name });
+const ui = { input: host('Input', 'InputField', 'InputIcon'), button: host('Button', 'ButtonGroup', 'ButtonText'), checkbox: host('Checkbox', 'CheckboxGroup', 'CheckboxIcon', 'CheckboxIndicator', 'CheckboxLabel'), radio: host('Radio', 'RadioCircleIndicator', 'RadioGroup', 'RadioLabel'), modal: host('Modal', 'ModalBackdrop', 'ModalBody', 'ModalContent', 'ModalFooter', 'ModalHeader') };
+const native = { ...host('View', 'Pressable', 'Image'), Platform: { OS: 'web' }, Dimensions: { get: () => ({ width: 360, height: 800 }) }, useWindowDimensions: () => ({ width: 360, height: 800, scale: 1, fontScale: 1 }) };
+let params = {}, renderer, backCalls = 0, validationQueue = [];
+const componentFiles = new Set(['components/feature/manage/income/IncomeForm.tsx', 'components/feature/accounting/CashEntryForm.tsx', 'components/common/Form.tsx', 'components/common/DeleteConfirmModal.tsx']);
+const proposal = process.argv.includes('--proposal');
+if (proposal && ['CashEntryForm.tsx', 'detail.tsx'].some((name) => !fs.existsSync(path.join(__dirname, 'proposal', name)))) throw new Error('Proposal mode requires both prepared candidate sources');
+function resolveFile(name, parent) {
+  const base = name.startsWith('@/') ? name.slice(2) : path.relative(process.cwd(), path.resolve(path.dirname(parent), name)).replaceAll('\\', '/');
+  return [base, `${base}.tsx`, `${base}.ts`].find((candidate) => fs.existsSync(candidate));
+}
+function load(file) {
+  if (loaded.has(file)) return loaded.get(file);
+  const candidateFile = path.join(__dirname, 'proposal', file === 'components/feature/accounting/CashEntryForm.tsx' ? 'CashEntryForm.tsx' : file === 'app/(no-layout)/manage/income/detail.tsx' ? 'detail.tsx' : '__not_overridden__');
+  const testedFile = proposal && fs.existsSync(candidateFile) ? candidateFile : file;
+  sourceHashes[file] = crypto.createHash('sha256').update(fs.readFileSync(testedFile)).digest('hex');
+  const code = ts.transpileModule(fs.readFileSync(testedFile, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
+  const module = { exports: {} };
+  const customRequire = (name) => {
+    if (name === 'react') return React;
+    if (name === 'react/jsx-runtime') return require(path.resolve('.expo/senior7-test-tools/node_modules/react/jsx-runtime'));
+    if (name === 'react-native') return native;
+    if (name === '@hookform/resolvers/zod') return { zodResolver: (schema) => { const actual = zodResolver(schema); return async (...args) => { const wait = validationQueue.shift(); if (wait) await wait.promise; return actual(...args); }; } };
+    if (name === 'expo-router') return { useLocalSearchParams: () => params, router: { push: () => {} }, Link: 'Link' };
+    if (name === '@/components/custom/JSStack') return { delayedBack: () => { backCalls++; } };
+    if (name === '@/components/common/DataPlaceholder') return host('SearchNotFound');
+    if (name === '@/components/icons') return host('EFeather', 'CheckCircleIcon');
+    if (name === '@/assets/images/illustrations') return { ILLUSTRATIONS: { deleteConfirmation: 1 } };
+    if (name === '@/lib/utils') return { cn: (...values) => values.filter(Boolean).join(' '), tw: (n) => n * 4, formatRp: (number) => `Rp${number}`, route: (url, values) => ({ pathname: url, params: values }) };
+    if (name === '@react-native-community/datetimepicker' || name === 'expo-document-picker') return {};
+    if (name === '@expo/vector-icons/Entypo') return defaultHost('Entypo');
+    const uiName = name.match(/(?:^|\/)ui\/([^/]+)$/)?.[1];
+    if (uiName && ui[uiName]) return ui[uiName];
+    const resolved = name.startsWith('@/') || name.startsWith('.') ? resolveFile(name, file) : null;
+    if (resolved && (componentFiles.has(resolved) || !resolved.startsWith('components/'))) return load(resolved);
+    if (name.startsWith('@/components/') || name.startsWith('.')) return defaultHost(name.split('/').at(-1));
+    return require(name);
+  };
+  vm.runInNewContext(code, { module, exports: module.exports, require: customRequire, console, Date, setTimeout, clearTimeout }, { filename: path.resolve(file) });
+  loaded.set(file, module.exports); return module.exports;
+}
+const Modify = load('app/(no-layout)/manage/income/modify.tsx').default;
+const Detail = load('app/(no-layout)/manage/income/detail.tsx').default;
+const DeleteModal = load('components/common/DeleteConfirmModal.tsx').default;
+const CashForm = load('components/feature/accounting/CashEntryForm.tsx').default;
+const store = load('store/accountingStore.ts').useAccountingStore;
+const { DEFAULT_INCOMES } = load('constants/data/accounting/incomes.ts');
+const { incomeFormValues } = load('lib/manage/incomes.ts');
+const initial = store.getState();
+const read = () => store.getState();
+const incomes = () => JSON.parse(JSON.stringify(read().incomes));
+const seed = incomeFormValues(DEFAULT_INCOMES[0]);
+const unmount = async () => { if (renderer) await act(async () => renderer.unmount()); renderer = null; };
+async function reset() { await unmount(); params = {}; backCalls = 0; validationQueue = []; store.setState({ ...initial, incomes: JSON.parse(JSON.stringify(initial.incomes)) }, true); }
+async function render(Component, id) { params = id === undefined ? {} : { id }; await act(async () => { const element = React.createElement(React.StrictMode, null, React.createElement(Component)); if (renderer) renderer.update(element); else renderer = create(element); }); }
+const form = () => renderer.root.findByType(RHF.FormProvider).props;
+const input = (label) => renderer.root.findAllByType('InputField').find((node) => node.props['aria-label'] === label).props;
+const submit = () => renderer.root.findByType('BottomActionButton').props.onPress;
+const success = () => renderer.root.findByType('SuccessModal').props;
+const deleteModal = () => renderer.root.findByType(DeleteModal);
+const confirmButton = () => deleteModal().findAllByType('Button').find((node) => node.findAllByType('ButtonText').some((text) => text.props.children === 'Hapus')).props.onPress;
+const cancelButton = () => deleteModal().findAllByType('Button').find((node) => node.findAllByType('ButtonText').some((text) => text.props.children === 'Batal')).props.onPress;
+const openDelete = async () => { await act(async () => renderer.root.findByType('DetailBottomActions').props.onDelete()); };
+const fill = async (reference = 'QC-CREATE-1') => { await act(async () => {
+  for (const [key, value] of Object.entries({ ...seed, referenceNumber: reference, date: '2026-10-09', description: 'QC local draft' })) form().setValue(key, value);
+}); };
+const deferred = () => { let resolve; const promise = new Promise((yes) => { resolve = yes; }); return { promise, resolve }; };
+(async () => {
+  const expenseValues = load('lib/manage/expenses.ts').expenseFormValues;
+  const expenseSeed = expenseValues(initial.expenses[0]);
+  const mountExpense = async (reference) => {
+    await reset();
+    await act(async () => { renderer = create(React.createElement(React.StrictMode, null, React.createElement(CashForm, { kind: 'expense', initialValues: { ...expenseSeed, referenceNumber: reference } }))); });
+  };
+  await mountExpense('QC-EXPENSE-DOUBLE');
+  const beforeIncome = incomes(), press = submit();
+  await act(async () => { await Promise.all([press(), press()]); });
+  const created = read().expenses.find((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE');
+  check('expense application: double press creates exactly one expense', read().expenses.filter((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE').length, 1);
+  check('expense application: no false duplicate validation error', Boolean(form().getFieldState('referenceNumber').error), false);
+  check('expense application: income collection remains unchanged', incomes(), beforeIncome);
+  await act(async () => success().onClose());
+  await act(async () => input('Deskripsi').onChangeText('QC expense second save'));
+  await act(async () => submit()());
+  check('expense application: repeat save retains first ID', [read().expenses.filter((item) => item.referenceNumber === 'QC-EXPENSE-DOUBLE').length, read().expenses.find((item) => item.id === created.id)?.description], [1, 'QC expense second save']);
+  await mountExpense('QC-EXPENSE-STALE'); const stale = submit(); await unmount();
+  const beforeStale = JSON.parse(JSON.stringify(read().expenses));
+  await act(async () => stale());
+  check('expense application: disposed cached callback cannot write', read().expenses, beforeStale);
+  await mountExpense('QC-EXPENSE-PENDING'); const wait = deferred(); validationQueue.push(wait); let pending;
+  await act(async () => { pending = submit()(); });
+  await unmount(); const beforePending = JSON.parse(JSON.stringify(read().expenses));
+  await act(async () => { wait.resolve(); await pending; });
+  check('expense application: pending validation after unmount cannot write', read().expenses, beforePending);
+  const output = { owner: 'Developer Codex-4', tested: 'CURRENT_PRODUCTION_SOURCE', scope: 'Six shared CashEntryForm expense-kind application regression checks, real RHF/schema/helper/Zustand with adapters; not approval of complete Expenses feature', passed: checks.filter((item) => item.passed).length, failed: checks.filter((item) => !item.passed).length, errors, checks, sourceHashes };
+  fs.writeFileSync(path.join(__dirname, 'expense-results.json'), JSON.stringify(output, null, 2) + '\n');
+  console.log(JSON.stringify({ passed: output.passed, failed: output.failed, errors: errors.length, failures: checks.filter((item) => !item.passed).map((item) => item.name) }));
+  process.exitCode = output.failed || errors.length ? 1 : 0;
+})().catch((error) => { console.error(error); process.exitCode = 1; });
+

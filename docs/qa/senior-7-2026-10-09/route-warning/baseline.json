@@ -1,0 +1,171 @@
+{
+  "status": "FAIL",
+  "passed": 17,
+  "failed": 3,
+  "checks": [
+    {
+      "name": "app/(no-layout)/_layout.tsx has no registration warning",
+      "pass": false,
+      "actual": [
+        [
+          "[Layout children]: No route named \"menu/search\" exists in nested children:",
+          [
+            "(back-office)",
+            "(cashier)",
+            "catalog",
+            "home",
+            "inventory",
+            "maintenance",
+            "manage",
+            "offer",
+            "order",
+            "order-detail",
+            "terms-and-condition"
+          ]
+        ],
+        [
+          "[Layout children]: No route named \"menu\" exists in nested children:",
+          [
+            "(back-office)",
+            "(cashier)",
+            "catalog",
+            "home",
+            "inventory",
+            "maintenance",
+            "manage",
+            "offer",
+            "order",
+            "order-detail",
+            "terms-and-condition"
+          ]
+        ],
+        [
+          "[Layout children]: No route named \"catalog/menu\" exists in nested children:",
+          [
+            "(back-office)",
+            "(cashier)",
+            "catalog",
+            "home",
+            "inventory",
+            "maintenance",
+            "manage",
+            "offer",
+            "order",
+            "order-detail",
+            "terms-and-condition"
+          ]
+        ]
+      ],
+      "expected": []
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx preserves every direct child",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx retains transition options",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx has unique registered names",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx has no registration warning",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx preserves every direct child",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx retains transition options",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx has unique registered names",
+      "pass": true
+    },
+    {
+      "name": "search header belongs to cashier catalog",
+      "pass": false,
+      "expected": {
+        "back": true,
+        "title": "Cari"
+      }
+    },
+    {
+      "name": "index header remains Katalog",
+      "pass": true
+    },
+    {
+      "name": "detail header remains Detail Pesanan",
+      "pass": true
+    },
+    {
+      "name": "terms header preserved",
+      "pass": true
+    },
+    {
+      "name": "root hides cashier parent header",
+      "pass": true
+    },
+    {
+      "name": "cashier hides catalog parent header",
+      "pass": true
+    },
+    {
+      "name": "root hides back office catalog header",
+      "pass": true
+    },
+    {
+      "name": "back office menu retains child registration",
+      "pass": true
+    },
+    {
+      "name": "legacy registrations removed only at wrong parent",
+      "pass": false,
+      "actual": [
+        "menu/search",
+        "menu",
+        "catalog/menu"
+      ],
+      "expected": []
+    },
+    {
+      "name": "search screen file still exists",
+      "pass": true
+    },
+    {
+      "name": "catalog menu child still exists",
+      "pass": true
+    },
+    {
+      "name": "inputs stable during verification",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "app/(no-layout)/_layout.tsx",
+      "sha256": "e23611f5f3666d076e731aabe88d73165ec74f81d9e084de6f27b5e7feee46ef"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/catalog/_layout.tsx",
+      "sha256": "2a7268551f11a43c069945501c35a1a82eeeb2f6c0832866cea3b557d3e14c07"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/_layout.tsx",
+      "sha256": "45ae8a2d80cbff408157a15e07cfea2b75feb863952447472d87831e96fd7f5e"
+    },
+    {
+      "file": "app/(no-layout)/catalog/_layout.tsx",
+      "sha256": "1eaaf0089dfe37a70e443016ed7a31acc5bfedc3b090a6608b9803e4dc1b43fc"
+    }
+  ],
+  "sorter": {
+    "file": "node_modules/expo-router/build/useScreens.js",
+    "sha256": "fe94c51fb0d6091e3467cde1401d437f9b8c94b2fe2172e5768cf46774a81498"
+  },
+  "scope": "Production layout functions and installed expo-router sorter + filesystem; JSStack/Header adapters; not native navigation"
+}

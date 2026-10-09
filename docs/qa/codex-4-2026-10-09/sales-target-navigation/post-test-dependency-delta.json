@@ -1,0 +1,18 @@
+{
+  "status": "PENDING_SHARED_DEPENDENCY_RECHECK",
+  "observedAt": "2026-10-09T03:13:19.031Z",
+  "ownedUnchanged": true,
+  "changes": [
+    {
+      "file": "components/common/SearchBar.tsx",
+      "sha256": "07e3960ec2bb3668c2493975e66bfe7b1439a377d21a1d4e578e65522f735330",
+      "current": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f"
+    },
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "2a141e7ac94e93cce54157879635d947531b8e5fad328ba811ab9c1fad8a2fdb",
+      "current": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b"
+    }
+  ],
+  "scope": "External edits after final test and initial proof; not part of owned layout or a tested overlay."
+}

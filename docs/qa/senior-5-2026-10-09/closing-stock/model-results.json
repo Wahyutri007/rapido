@@ -1,0 +1,172 @@
+{
+  "source": "lib/inventory-closing-stock.ts",
+  "sourceHash": "093ed466a2d8bfe73a52839d973766318aedf3b603e86f19d5f0a3374cae3fee",
+  "passed": 41,
+  "failed": 0,
+  "results": [
+    {
+      "name": "zero is empty even with a positive minimum",
+      "pass": true
+    },
+    {
+      "name": "positive quantity without a minimum remains available",
+      "pass": true
+    },
+    {
+      "name": "at the minimum is low",
+      "pass": true
+    },
+    {
+      "name": "below the minimum is low",
+      "pass": true
+    },
+    {
+      "name": "above the minimum is available",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity null is unknown",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity NaN is unknown",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity Infinity is unknown",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity -Infinity is unknown",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity -1 is unknown",
+      "pass": true
+    },
+    {
+      "name": "invalid minimum NaN does not invent low stock",
+      "pass": true
+    },
+    {
+      "name": "invalid minimum Infinity does not invent low stock",
+      "pass": true
+    },
+    {
+      "name": "invalid minimum -1 does not invent low stock",
+      "pass": true
+    },
+    {
+      "name": "groups keep category and source order",
+      "pass": true
+    },
+    {
+      "name": "a live material minimum controls the status",
+      "pass": true
+    },
+    {
+      "name": "search trims whitespace and ignores case",
+      "pass": true
+    },
+    {
+      "name": "search matches SKU",
+      "pass": true
+    },
+    {
+      "name": "search matches category",
+      "pass": true
+    },
+    {
+      "name": "no matching search removes empty categories",
+      "pass": true
+    },
+    {
+      "name": "available includes low positive balances",
+      "pass": true
+    },
+    {
+      "name": "low never invents product thresholds",
+      "pass": true
+    },
+    {
+      "name": "empty includes only known zero",
+      "pass": true
+    },
+    {
+      "name": "unknown is separate from zero",
+      "pass": true
+    },
+    {
+      "name": "store filters explicit material membership",
+      "pass": true
+    },
+    {
+      "name": "store membership does not imply a per-store quantity",
+      "pass": true
+    },
+    {
+      "name": "unknown store quantities are not classified as empty",
+      "pass": true
+    },
+    {
+      "name": "unknown store quantities are not available or low",
+      "pass": true
+    },
+    {
+      "name": "store and unknown status compose",
+      "pass": true
+    },
+    {
+      "name": "search and store compose",
+      "pass": true
+    },
+    {
+      "name": "unassigned store has no fabricated balances",
+      "pass": true
+    },
+    {
+      "name": "store names compare after normalization",
+      "pass": true
+    },
+    {
+      "name": "blank category has a readable group",
+      "pass": true
+    },
+    {
+      "name": "identity is separated by item kind",
+      "pass": true
+    },
+    {
+      "name": "live material edits supply the latest quantity",
+      "pass": true
+    },
+    {
+      "name": "empty inventory is valid",
+      "pass": true
+    },
+    {
+      "name": "null quantity formats as a dash without a unit",
+      "pass": true
+    },
+    {
+      "name": "invalid quantity formats as a dash",
+      "pass": true
+    },
+    {
+      "name": "known zero keeps its unit",
+      "pass": true
+    },
+    {
+      "name": "fractional units retain precision",
+      "pass": true
+    },
+    {
+      "name": "localized separators and independent units",
+      "pass": true
+    },
+    {
+      "name": "input objects remain unchanged",
+      "pass": true
+    }
+  ]
+}

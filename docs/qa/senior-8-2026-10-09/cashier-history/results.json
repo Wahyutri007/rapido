@@ -1,0 +1,376 @@
+{
+  "passed": 50,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "counts actual rows, not fictional group totals",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "stable unique composite IDs",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "latest first",
+      "passed": true,
+      "actual": "2026-06-30",
+      "expected": "2026-06-30"
+    },
+    {
+      "name": "time descending within date",
+      "passed": true,
+      "actual": "21:15",
+      "expected": "21:15"
+    },
+    {
+      "name": "date key wins over conflicting display label",
+      "passed": true,
+      "actual": "2026-06-29",
+      "expected": "2026-06-29"
+    },
+    {
+      "name": "source not mutated",
+      "passed": true,
+      "actual": "[{\"date\":\"Selasa, 30 Juni 2026\",\"dateKey\":\"2026-06-30\",\"totalTransactions\":12,\"totalAmount\":1285000,\"items\":[{\"id\":\"TRX-0629-1842\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"21:15\",\"cashier\":\"Siti Aisyah\",\"amount\":325000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"},{\"id\":\"TRX-0629-1841\",\"customer\":\"Pelanggan Umum\",\"channel\":\"QRIS\",\"time\":\"21:08\",\"cashier\":\"Siti Aisyah\",\"amount\":85000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"QRIS\"},{\"id\":\"TRX-0629-1840\",\"customer\":\"Rini Kusuma\",\"channel\":\"Delivery\",\"time\":\"21:03\",\"cashier\":\"Rina Setiawati\",\"amount\":210000,\"status\":\"refund\",\"statusLabel\":\"Pengembalian\",\"paymentMethod\":\"Delivery\"},{\"id\":\"TRX-0629-1839\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"20:58\",\"cashier\":\"Budi Saputra\",\"amount\":175000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"}]},{\"date\":\"Senin, 30 Juni 2026\",\"dateKey\":\"2026-06-29\",\"totalTransactions\":12,\"totalAmount\":1285000,\"items\":[{\"id\":\"TRX-0629-1838\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"21:15\",\"cashier\":\"Siti Aisyah\",\"amount\":325000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"},{\"id\":\"TRX-0629-1837\",\"customer\":\"Pelanggan Umum\",\"channel\":\"QRIS\",\"time\":\"21:08\",\"cashier\":\"Siti Aisyah\",\"amount\":85000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"QRIS\"},{\"id\":\"TRX-0629-1836\",\"customer\":\"Rini Kusuma\",\"channel\":\"Delivery\",\"time\":\"21:03\",\"cashier\":\"Rina Setiawati\",\"amount\":210000,\"status\":\"refund\",\"statusLabel\":\"Pengembalian\",\"paymentMethod\":\"Delivery\"},{\"id\":\"TRX-0629-1835\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"20:58\",\"cashier\":\"Budi Saputra\",\"amount\":175000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"}]}]",
+      "expected": "[{\"date\":\"Selasa, 30 Juni 2026\",\"dateKey\":\"2026-06-30\",\"totalTransactions\":12,\"totalAmount\":1285000,\"items\":[{\"id\":\"TRX-0629-1842\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"21:15\",\"cashier\":\"Siti Aisyah\",\"amount\":325000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"},{\"id\":\"TRX-0629-1841\",\"customer\":\"Pelanggan Umum\",\"channel\":\"QRIS\",\"time\":\"21:08\",\"cashier\":\"Siti Aisyah\",\"amount\":85000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"QRIS\"},{\"id\":\"TRX-0629-1840\",\"customer\":\"Rini Kusuma\",\"channel\":\"Delivery\",\"time\":\"21:03\",\"cashier\":\"Rina Setiawati\",\"amount\":210000,\"status\":\"refund\",\"statusLabel\":\"Pengembalian\",\"paymentMethod\":\"Delivery\"},{\"id\":\"TRX-0629-1839\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"20:58\",\"cashier\":\"Budi Saputra\",\"amount\":175000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"}]},{\"date\":\"Senin, 30 Juni 2026\",\"dateKey\":\"2026-06-29\",\"totalTransactions\":12,\"totalAmount\":1285000,\"items\":[{\"id\":\"TRX-0629-1838\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"21:15\",\"cashier\":\"Siti Aisyah\",\"amount\":325000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"},{\"id\":\"TRX-0629-1837\",\"customer\":\"Pelanggan Umum\",\"channel\":\"QRIS\",\"time\":\"21:08\",\"cashier\":\"Siti Aisyah\",\"amount\":85000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"QRIS\"},{\"id\":\"TRX-0629-1836\",\"customer\":\"Rini Kusuma\",\"channel\":\"Delivery\",\"time\":\"21:03\",\"cashier\":\"Rina Setiawati\",\"amount\":210000,\"status\":\"refund\",\"statusLabel\":\"Pengembalian\",\"paymentMethod\":\"Delivery\"},{\"id\":\"TRX-0629-1835\",\"customer\":\"Pelanggan Umum\",\"channel\":\"Toko Fisik\",\"time\":\"20:58\",\"cashier\":\"Budi Saputra\",\"amount\":175000,\"status\":\"success\",\"statusLabel\":\"Berhasil\",\"paymentMethod\":\"Toko Fisik\"}]}]"
+    },
+    {
+      "name": "case and whitespace search",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "invoice search",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "cashier search",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "status filter",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "date filter",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "combined filters",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "unknown date no fallback",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "cancelled empty",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "date options newest first",
+      "passed": true,
+      "actual": [
+        "",
+        "2026-06-30",
+        "2026-06-29"
+      ],
+      "expected": [
+        "",
+        "2026-06-30",
+        "2026-06-29"
+      ]
+    },
+    {
+      "name": "payment options derived/deduplicated",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "empty source",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "exact detail",
+      "passed": true,
+      "actual": "TRX-0629-1840",
+      "expected": "TRX-0629-1840"
+    },
+    {
+      "name": "invalid key fails closed undefined",
+      "passed": true
+    },
+    {
+      "name": "invalid key fails closed \"\"",
+      "passed": true
+    },
+    {
+      "name": "invalid key fails closed \"missing\"",
+      "passed": true
+    },
+    {
+      "name": "invalid key fails closed \"TRX-0629-1842\"",
+      "passed": true
+    },
+    {
+      "name": "invalid key fails closed [\"[\\\"2026-06-30\\\",\\\"TRX-0629-1842\\\"]\"]",
+      "passed": true
+    },
+    {
+      "name": "duplicate composite ID fails closed",
+      "passed": true
+    },
+    {
+      "name": "same invoice on different date distinct",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "list initially renders all actual records",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "search updates displayed rows",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "date combines with search",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "selection uses cashier route group",
+      "passed": true,
+      "actual": "/(cashier)/report/history-detail",
+      "expected": "/(cashier)/report/history-detail"
+    },
+    {
+      "name": "selection carries exact source key",
+      "passed": true,
+      "actual": "TRX-0629-1836",
+      "expected": "TRX-0629-1836"
+    },
+    {
+      "name": "conflicting filters show empty",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "empty message rendered",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reset restores rows",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "reset restores search",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "reset restores status",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "payment picker filters",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "detail uses selected customer",
+      "passed": true,
+      "actual": "Rini Kusuma",
+      "expected": "Rini Kusuma"
+    },
+    {
+      "name": "detail uses selected date",
+      "passed": true,
+      "actual": "2026-06-29",
+      "expected": "2026-06-29"
+    },
+    {
+      "name": "missing detail renders no record rows",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "missing detail returns to cashier history",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/report/history"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/report/history"
+      ]
+    },
+    {
+      "name": "param changes refresh detail",
+      "passed": true,
+      "actual": "2026-06-30",
+      "expected": "2026-06-30"
+    },
+    {
+      "name": "direct entry anchor",
+      "passed": true,
+      "actual": "index",
+      "expected": "index"
+    },
+    {
+      "name": "registers list/detail alongside original index",
+      "passed": true,
+      "actual": [
+        "index",
+        "history",
+        "history-detail"
+      ],
+      "expected": [
+        "index",
+        "history",
+        "history-detail"
+      ]
+    },
+    {
+      "name": "empty-stack fallback 0",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/home"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/home"
+      ]
+    },
+    {
+      "name": "empty-stack fallback 1",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/report"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/report"
+      ]
+    },
+    {
+      "name": "empty-stack fallback 2",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/report/history"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/report/history"
+      ]
+    },
+    {
+      "name": "existing stack back",
+      "passed": true,
+      "actual": [
+        "back"
+      ],
+      "expected": [
+        "back"
+      ]
+    },
+    {
+      "name": "entry button opens history",
+      "passed": true,
+      "actual": [
+        "push",
+        "/(cashier)/report/history"
+      ],
+      "expected": [
+        "push",
+        "/(cashier)/report/history"
+      ]
+    },
+    {
+      "name": "inactive headers do not intercept pointer",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "lib/cashier/transaction-history.ts",
+      "sha256": "bf5d0ceeac6c94e233c7a874a22e03195dd27b97517ef3520e3b2f7f3581b839"
+    },
+    {
+      "file": "components/feature/reports/transaction/mockData.ts",
+      "sha256": "860fa6a89abb942386a6f94d9f92be1cdffb7b094c4af257a92c8f2abdd20a74"
+    },
+    {
+      "file": "app/(cashier)/report/history.tsx",
+      "sha256": "d23bf584fd41881efc9a7c69bb2621612e0881e753d2a692fbcfc702dbdd9292"
+    },
+    {
+      "file": "components/feature/cashier/history/HistoryScreen.tsx",
+      "sha256": "6a67420b130b76284a25a8d5840b12bbfe71362b7c13358957dc146f1e3e5d2e"
+    },
+    {
+      "file": "app/(cashier)/report/history-detail.tsx",
+      "sha256": "3b469e65b32d97959cc4b8c146eaefa124ab31d6fb6a53e2bddbee7e36deca9f"
+    },
+    {
+      "file": "components/feature/cashier/history/HistoryDetailScreen.tsx",
+      "sha256": "dc89e6e196e6e49490b1754b880ba9c3667cfc51f1ee745c605761ea7f20bac3"
+    },
+    {
+      "file": "app/(cashier)/report/_layout.tsx",
+      "sha256": "95026046bd278468d7009b7c88831229e26b6407d83eb770ccd3ab0e1a578548"
+    }
+  ],
+  "limits": "Actual helper/screens/layout React renderer; UI/native/router adapters. No full router, browser visual, API or device execution."
+}

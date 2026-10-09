@@ -1,0 +1,6 @@
+{
+  "generatedAt": "2026-10-08T20:47:56.311Z",
+  "assertions": 49,
+  "failures": 0,
+  "scope": "Production recipe schema/store/cost/simulation and material-reference guard with session fixtures"
+}

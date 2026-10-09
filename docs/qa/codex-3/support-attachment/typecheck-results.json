@@ -1,0 +1,10 @@
+{
+  "owner": "Codex-3",
+  "scope": "Two support component roots plus imported dependency closure with actual project options/declarations; not full-project gate",
+  "diagnostics": [],
+  "sourceHashes": {
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de"
+  },
+  "exitCode": 0
+}

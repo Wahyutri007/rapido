@@ -1,0 +1,148 @@
+{
+  "owner": "QC",
+  "signal": "QC-INCOME-20261009-CHANGES-REQUESTED",
+  "status": "CHANGES_REQUESTED",
+  "completedAt": "2026-10-08T20:24:38.078Z",
+  "scope": "Penerimaan manual: modify/detail/IncomeForm, dengan CashEntryForm bersama sebagai dependency yang diuji",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "approvedSourceHashes": {},
+  "reviewedSourceHashes": {
+    "app/(no-layout)/manage/income/modify.tsx": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+    "app/(no-layout)/manage/income/detail.tsx": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+    "components/feature/manage/income/IncomeForm.tsx": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+    "components/feature/accounting/CashEntryForm.tsx": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7"
+  },
+  "assertions": {
+    "currentIndependent": {
+      "passed": 24,
+      "failed": 12,
+      "errors": 0
+    },
+    "currentReplayedModel": {
+      "passed": 43,
+      "failed": 0
+    },
+    "currentCombined": {
+      "passed": 67,
+      "failed": 12,
+      "includesOverlappingCoverage": true
+    },
+    "proposalIncome": {
+      "passed": 36,
+      "failed": 0,
+      "errors": 0
+    },
+    "proposalExpenseRegression": {
+      "passed": 6,
+      "failed": 0,
+      "errors": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "QC-INCOME-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "title": "Callback simpan dari instance form yang ditinggalkan masih menulis store lokal",
+      "source": "components/feature/accounting/CashEntryForm.tsx",
+      "reproduction": "Mulai create/edit A, simpan callback atau tahan resolusi validasi RHF, pindah ke B/unmount, lalu selesaikan callback lama. Store incomes masih bertambah atau A berubah.",
+      "expected": "Instance yang telah unmount tidak memulai penulisan store; draft halaman aktif tetap terpisah.",
+      "checks": [
+        "create to B: old cached submit cannot mutate incomes",
+        "A to B: old cached submit cannot edit A after unmount",
+        "async validation: old pending create cannot mutate after mode switch",
+        "disposed page: cached create callback cannot write store"
+      ],
+      "proposal": "Guard mounted pada entry dan sesudah validasi, lock pending sinkron, ref savedId; salinan saja."
+    },
+    {
+      "id": "QC-INCOME-002",
+      "severity": "P2",
+      "status": "OPEN",
+      "title": "Konfirmasi hapus tetap aktif saat ID berpindah dan callback lama dapat menghapus/navigasi",
+      "source": "app/(no-layout)/manage/income/detail.tsx",
+      "reproduction": "Buka konfirmasi A lalu ubah ID ke B: dialog tetap terbuka. Callback konfirmasi lama juga menghapus A dan delayedBack setelah pindah, Batal, atau unmount.",
+      "expected": "B mulai dengan dialog tertutup; callback dari dialog yang dibatalkan atau instance lama tidak menghapus dan tidak menavigasi.",
+      "checks": [
+        "delete A to B: confirmation must reset closed",
+        "delete A to B: stale confirm cannot delete old target",
+        "delete A to B: stale confirm cannot navigate away from B",
+        "cancel then queued confirm: dismissed dialog cannot delete",
+        "cancel then queued confirm: dismissed dialog cannot navigate",
+        "disposed detail: old confirmation cannot mutate records",
+        "disposed detail: old confirmation cannot navigate"
+      ],
+      "proposal": "Child keyed per ID, guard mounted dan ref konfirmasi aktif yang dikonsumsi sebelum penghapusan; salinan saja."
+    },
+    {
+      "id": "QC-INCOME-003",
+      "severity": "P3",
+      "status": "OPEN",
+      "title": "Dua tekan Simpan pada event yang sama menampilkan error referensi duplikat setelah sukses",
+      "source": "components/feature/accounting/CashEntryForm.tsx",
+      "reproduction": "Form create valid; jalankan dua onPress sebelum render berikutnya. Satu record berhasil dibuat, modal sukses terbuka, tetapi referenceNumber mendapat error duplicate dari panggilan kedua.",
+      "expected": "Satu operasi diterima selama validasi/simpan berlangsung; sukses tidak disertai error duplicate palsu.",
+      "checks": [
+        "same-event double submit: successful create has no duplicate error"
+      ],
+      "proposal": "Lock pending sinkron dan savedId ref; simpan normal berikutnya tetap memperbarui ID pertama."
+    }
+  ],
+  "proposal": {
+    "applied": false,
+    "sourceHashes": {
+      "app/(no-layout)/manage/income/detail.tsx": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+      "components/feature/accounting/CashEntryForm.tsx": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50"
+    },
+    "patch": {
+      "file": "income-lifecycle.patch",
+      "sha256": "7ca7345581c1df22e73695011c5345625f9d47cd97fa1af5e603678f0cce0013",
+      "applied": false,
+      "applyCheck": {
+        "executable": "git",
+        "args": [
+          "-c",
+          "core.autocrlf=false",
+          "apply",
+          "--check",
+          "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-income-2026-10-09\\income-lifecycle.patch"
+        ],
+        "exitCode": 0
+      }
+    },
+    "passedAssertions": 42,
+    "approvalOfApplication": false
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "sourceBiomeExit": 0,
+    "sourceDiffExit": 0,
+    "candidateLintClean": true,
+    "candidateBiomeExit": 0,
+    "returnedJsxMatchesAfterIntentionalEventBindings": true
+  },
+  "trackedFilesStable": 35,
+  "productionModulesLoaded": 24,
+  "focusedTypecheck": "Tidak direrun QC; bukti TypeScript preview lama tidak menyertifikasi kandidat ini.",
+  "limitations": [
+    "Fixture Node dengan komponen/form/modal/helper produksi dan adapter host/router/timing, bukan pengujian native/browser/router lengkap.",
+    "SuccessModal/presentation memakai adapter; temuan visual shared SuccessModal pada paket QC stok tetap terpisah.",
+    "Data contoh Zustand hanya dalam proses tes; tanpa HTTP/API, DB, persistensi atau verifikasi jurnal/saldo otomatis.",
+    "Figma callable tidak tersedia pada sesi QC ini; parity desain tidak disertifikasi.",
+    "Enam regresi expense-kind hanya menguji delta shared form, bukan kelulusan seluruh Pengeluaran."
+  ],
+  "nextAction": "Developer Penerimaan dan pemilik CashEntryForm/PM menerapkan koreksi sesuai scope, menjalankan tipe/lint/regresi terfokus dan menyerahkan hash baru untuk recheck. Temuan tetap OPEN sampai source aplikasi diperiksa ulang.",
+  "evidence": [
+    "REPORT.md",
+    "lifecycle-results.json",
+    "model-results.json",
+    "proposal-results.json",
+    "expense-proposal-results.json",
+    "quality-results.json",
+    "harness-notes.json",
+    "final-verification.json",
+    "artifact-manifest.json"
+  ]
+}

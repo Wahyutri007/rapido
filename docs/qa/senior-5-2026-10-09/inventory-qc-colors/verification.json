@@ -1,0 +1,58 @@
+{
+  "ticket": "SD5-011",
+  "developer": "Software Developer Senior5 / Codex-5",
+  "status": "READY_FOR_QA_QC_RECHECK",
+  "globalFigmaStatus": "NOT_100_PERCENT",
+  "findings": {
+    "QC-FIGMA-003": "Semantic color contract corrected, independent recheck pending; not CLOSED",
+    "QC-FIGMA-004": "Metadata color corrected at eight callsites; original icon assets pending, not CLOSED"
+  },
+  "sourceHashes": {
+    "components/feature/inventory/InventoryUi.tsx": "a61c9231a076d3c0eb4e5794c49a093d0f9add403e80999fe254745dfbc9f633",
+    "components/feature/inventory/StockOperationDetail.tsx": "817b6643fea304e63860666454161cea08c4ddacbc936d8c2fe04dd39c911e88",
+    "components/feature/inventory/StockOperationList.tsx": "54b28fd5d26337eb5a2d31c781e5dc1a296e3b9d754e93ee0e26978998e8cc5c",
+    "components/feature/inventory/PurchaseListScreen.tsx": "678b403164d7dc6177c2a396a3d251fa003aa654933a1b83efddf6e1237d126b"
+  },
+  "checks": {
+    "browser": 44,
+    "scope": 7,
+    "totalExecuted": 51,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "eslint": {
+      "exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "stderr": ""
+    },
+    "typeDiagnostics": 0,
+    "biomeExit": 0,
+    "diffExit": 0
+  },
+  "runtime": {
+    "bundleHash": "472d85171e0a328dfde1d6928487eb1d728d59aff13e313b2705bcd7c672d262",
+    "inputHashes": {
+      "components/feature/inventory/InventoryUi.tsx": "a61c9231a076d3c0eb4e5794c49a093d0f9add403e80999fe254745dfbc9f633",
+      "components/feature/inventory/StockOperationDetail.tsx": "817b6643fea304e63860666454161cea08c4ddacbc936d8c2fe04dd39c911e88",
+      "components/feature/inventory/StockOperationList.tsx": "54b28fd5d26337eb5a2d31c781e5dc1a296e3b9d754e93ee0e26978998e8cc5c",
+      "components/feature/inventory/PurchaseListScreen.tsx": "678b403164d7dc6177c2a396a3d251fa003aa654933a1b83efddf6e1237d126b"
+    },
+    "scope": "Own offline RNWeb build, actual Inventory UI/store/font; router transport adapter only. No application data seed changes or server/root Metro config/native certification.",
+    "configsUnchanged": true
+  },
+  "historicalProtection": {
+    "closingStockNarrowArtifactsMatched": 77,
+    "closingStockOwnedSourceHashesMatched": 18,
+    "notes": "No historical packet or QC decisions edited. InventoryUi shared consumers require source dependency overlay, not inherited approval."
+  },
+  "limitations": [
+    "Current semantic tokens, not new exact-color full Figma context; Starter limit persists.",
+    "Official SVG shapes and full frame spacing/typography remain pending; see visual-observations.json.",
+    "Actual production screens/store/font with router transport adapter and offline assets; no full ExpoRoot/auth/Android/backend certification.",
+    "Mixed-unit test temporarily updates only isolated browser store and restores it; no new application dummy data or API mutation.",
+    "Only two metric default variants/metadata default and unchanged source guards tested, not every consumer/native state.",
+    "Initial launch/cascade failure and previous40PASS cohort preserved, not summed into final51."
+  ],
+  "verifiedAt": "2026-10-09T04:52:43.961Z"
+}

@@ -1,0 +1,109 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-006",
+  "status": "READY_FOR_QA",
+  "date": "2026-10-08T20:16:04.533Z",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "sourceMatches": [
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true
+    }
+  ],
+  "baselineSourceHashes": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "1f07b5ca96cf1e89d825b19a36932d3cbe0cde2f3f29c4c5804a0a983438c8c0",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1d9bec3111c964666c14385c39077cf021a302700b8cca041f3780d789dbddee",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf"
+  },
+  "snapshotMatches": [
+    {
+      "file": "role.before.tsx.txt",
+      "expected": "1f07b5ca96cf1e89d825b19a36932d3cbe0cde2f3f29c4c5804a0a983438c8c0",
+      "actual": "1f07b5ca96cf1e89d825b19a36932d3cbe0cde2f3f29c4c5804a0a983438c8c0",
+      "passed": true
+    },
+    {
+      "file": "worker.before.tsx.txt",
+      "expected": "1d9bec3111c964666c14385c39077cf021a302700b8cca041f3780d789dbddee",
+      "actual": "1d9bec3111c964666c14385c39077cf021a302700b8cca041f3780d789dbddee",
+      "passed": true
+    },
+    {
+      "file": "member.before.tsx.txt",
+      "expected": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+      "actual": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+      "passed": true
+    }
+  ],
+  "checks": {
+    "baseline": {
+      "passed": 66,
+      "failed": 90,
+      "runtimeErrors": 0
+    },
+    "final": {
+      "passed": 156,
+      "failed": 0,
+      "runtimeErrors": 0
+    },
+    "quality": "PASS",
+    "focusedTypeDiagnostics": 0
+  },
+  "contractHashes": {
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/DeleteConfirmModal.tsx": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+  },
+  "artifactFingerprints": {
+    "HANDOFF.md": "423265a61448be07823a0b395d63df9ee7130b2f67370691fe91d108513a40fe",
+    "check.cjs": "afd8786234688411ca458a85f3d4c7df08ff30891c33778201cac64402eeab67",
+    "baseline.json": "cb772cb64f098666726b7572a682245b597968559da35c8a2c14ac8688c2cc50",
+    "results.json": "d4a29354c68f5cb5e641178dab57153a45621c714d34edbe29a2917a8f8df9d0",
+    "quality.cjs": "8990694706fc7ac6d54628f25f594fa8c9704c5804fc7a0fed983533ec08d5ee",
+    "quality-results.json": "cc3760a01613ad77f03e9251583cdff9038a64dfd30e077ee7393e8d208dcc2a",
+    "typecheck.cjs": "b560f150b4016a9cf181ea7b1de2e5ba0ca89a58e6cea6ee0669db19c687ae5f",
+    "typecheck-results.json": "a3859bb3b57c278104d957fbeb6957d2fb801a562887e1db71a27538fb8740cd",
+    "verify.cjs": "b3e133d02396da8839aa7d2ef2c05307dcaadb7c5949c8f4092a7382d2b42c74",
+    "role.before.tsx.txt": "1f07b5ca96cf1e89d825b19a36932d3cbe0cde2f3f29c4c5804a0a983438c8c0",
+    "worker.before.tsx.txt": "1d9bec3111c964666c14385c39077cf021a302700b8cca041f3780d789dbddee",
+    "member.before.tsx.txt": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf"
+  },
+  "limits": [
+    "React test renderer/RN/button/modal/Text/vector-icon/image host presentation",
+    "Axios adapter promise outcomes; API client/auth interceptor excluded; no HTTP",
+    "Standalone parent state/QueryClient provider; no actual navigator/list/detail screen",
+    "No HTTP/backend DELETE, native/browser/router/list/detail/root auth/Figma/full-app gate",
+    "Local instance lock; already-dispatched DELETE is not cancelled; cross-remount/per-device idempotency is backend scope"
+  ],
+  "qaRequest": "Independent behavior review, then QC delta decision and PM final gate; preserve developer artifacts and existing reviewed packets"
+}

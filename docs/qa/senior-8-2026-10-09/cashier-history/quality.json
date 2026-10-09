@@ -1,0 +1,75 @@
+{
+  "sources": [
+    "app/(cashier)/report/history.tsx",
+    "app/(cashier)/report/history-detail.tsx",
+    "app/(cashier)/report/_layout.tsx",
+    "components/feature/cashier/history/HistoryScreen.tsx",
+    "components/feature/cashier/history/HistoryDetailScreen.tsx",
+    "lib/cashier/transaction-history.ts"
+  ],
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(cashier)/report/history.tsx",
+        "app/(cashier)/report/history-detail.tsx",
+        "app/(cashier)/report/_layout.tsx",
+        "components/feature/cashier/history/HistoryScreen.tsx",
+        "components/feature/cashier/history/HistoryDetailScreen.tsx",
+        "lib/cashier/transaction-history.ts",
+        "--max-warnings",
+        "0"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(cashier)/report/history.tsx",
+        "app/(cashier)/report/history-detail.tsx",
+        "app/(cashier)/report/_layout.tsx",
+        "components/feature/cashier/history/HistoryScreen.tsx",
+        "components/feature/cashier/history/HistoryDetailScreen.tsx",
+        "lib/cashier/transaction-history.ts"
+      ],
+      "status": 0,
+      "stdout": "Checked 6 files in 75ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(cashier)/report/history.tsx",
+        "app/(cashier)/report/history-detail.tsx",
+        "app/(cashier)/report/_layout.tsx",
+        "components/feature/cashier/history/HistoryScreen.tsx",
+        "components/feature/cashier/history/HistoryDetailScreen.tsx",
+        "lib/cashier/transaction-history.ts"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(cashier)/report/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(cashier)/report/history.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(cashier)/report/history.tsx",
+    "app/(cashier)/report/history-detail.tsx",
+    "app/(cashier)/report/_layout.tsx",
+    "components/feature/cashier/history/HistoryScreen.tsx",
+    "components/feature/cashier/history/HistoryDetailScreen.tsx",
+    "lib/cashier/transaction-history.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

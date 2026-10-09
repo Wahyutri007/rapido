@@ -1,0 +1,4 @@
+const fs=require('node:fs'),path=require('node:path');
+const replacements=[['Modal tetap instansi yang sama','Modal dan judul tetap elemen yang sama'],['Empat screenshot tersebut diperiksa dalam packet;640 sebelum/sesudah diperiksa langsung secara visual.','Screenshot 640×360 sebelum/sesudah scroll serta 844×390 setelah scroll diperiksa langsung secara visual.'],['koreksi,139','koreksi, 139'],['terdahulu,120','terdahulu, 120'],['pada source7508','pada source 7508'],['Alert76b6/DeleteDABC','Alert 76b6/Delete DABC'],['SuccessModal7508','SuccessModal 7508'],['berurutan,51 lalu27','berurutan, 51 lalu 27'],['Lifecycle156 rujukan','Lifecycle 156 rujukan']];
+for(const name of ['REPORT.md','finalize.cjs']){const file=path.join(__dirname,name);let code=fs.readFileSync(file,'utf8');for(const [from,to]of replacements)code=code.replaceAll(from,to);fs.writeFileSync(file,code);}
+console.log('Final report wording corrected; source and test results unchanged.');

@@ -1,0 +1,9 @@
+{
+  "bundle": "bundle/entry.bundle.js",
+  "sha256": "a1641dfdb4a3a3805731375405ca3a78d7b50d58a7831b748932ec053af63b7c",
+  "bytes": 5747009,
+  "assets": "bundle/assets.json",
+  "assetsSha256": "de8d16d5651b60d557acc3db91db5c072d0f074d80fa31c255f8e28c9ea27f4e",
+  "originalRecord": "offline-build.json",
+  "note": "Exact browser-tested bundle copied after source/evidence checks; .expo path is execution context."
+}

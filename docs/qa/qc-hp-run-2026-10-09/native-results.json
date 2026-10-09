@@ -1,0 +1,137 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T19:56:36.144Z",
+  "device": {
+    "serial": "35b9a8aa",
+    "model": "vivo 1918",
+    "android": "11",
+    "expoGo": "57.0.9",
+    "previousPid": "not-running",
+    "pid": "22161"
+  },
+  "scope": "Actual USB readiness, reverse setup, Expo Go cold relaunch and native hierarchy/logcat; existing Metro/backend preserved, app data retained",
+  "passed": 10,
+  "failed": 2,
+  "checks": [
+    {
+      "name": "actual readiness reports matching Expo Go/backend/Metro",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "actual launcher reused Rapido Metro and opened HP",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "native cold relaunch uses fresh Expo process",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "actual Metro reverse installed",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "actual backend reverse installed",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native Expo experience is foreground after cold launch",
+      "actual": false,
+      "expected": true,
+      "passed": false
+    },
+    {
+      "name": "native UI hierarchy can be captured without idle error",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "native app renders recognizable application UI",
+      "actual": false,
+      "expected": true,
+      "passed": false
+    },
+    {
+      "name": "native hierarchy has no blocking red error",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "fresh Expo process has zero ReactNativeJS/AndroidRuntime error lines",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "live backend health remains HTTP 200 online",
+      "actual": [
+        200,
+        "online"
+      ],
+      "expected": [
+        200,
+        "online"
+      ],
+      "passed": true
+    },
+    {
+      "name": "Android NativeWind cache was not changed/truncated",
+      "actual": {
+        "bytes": 193003,
+        "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+      },
+      "expected": {
+        "bytes": 193003,
+        "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+      },
+      "passed": true
+    }
+  ],
+  "screenLabels": [],
+  "cacheBefore": {
+    "bytes": 193003,
+    "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+  },
+  "cacheAfter": {
+    "bytes": 193003,
+    "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+  },
+  "sourceHashes": {
+    "scripts/start-hp.cjs": "1bc1bf4ac7f1ce18c63f96057211b645daea679b3bf93f9c161ab4a5fa0d7a89",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "app/index.tsx": "65709db3181464d7fb336b13a7f7b0145685f18be78511927b2f60f849d6473c"
+  },
+  "privateEvidence": ".expo/qc-hp-run-screen.xml and .expo/qc-hp-run-errors.txt stay local; report exposes only known app labels/counts, no private screen or credentials",
+  "limitations": [
+    "One Android/Expo Go device and root startup only; unrelated yellow route/deprecation warnings remain separate",
+    "No complete feature QA/backend writes/auth persistence guarantees/production APK/iOS certification"
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "owner": "QC",
+  "finding": "QC-MANAGE-FORMS-001",
+  "createdAt": "2026-10-08T18:45:32.695Z",
+  "status": "PASS_DELTA",
+  "comparisons": [
+    {
+      "file": "app/(no-layout)/manage/extra/modify.tsx",
+      "changed": false,
+      "expected": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "actual": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "unchanged": true,
+      "matchesDeveloperManifest": true
+    },
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "changed": true,
+      "baselineSha256": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "matchesOriginalQC": true,
+      "expected": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "actual": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "changed": true,
+      "baselineSha256": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "matchesOriginalQC": true,
+      "expected": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "actual": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "changed": true,
+      "baselineSha256": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "matchesOriginalQC": true,
+      "expected": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "actual": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "changed": true,
+      "baselineSha256": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "matchesOriginalQC": true,
+      "expected": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "actual": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/ManageFormNotFound.tsx",
+      "changed": false,
+      "expected": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "actual": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "unchanged": true,
+      "matchesDeveloperManifest": true
+    },
+    {
+      "file": "components/feature/manage/settings/ManagePreviewForm.tsx",
+      "changed": false,
+      "expected": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "actual": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "unchanged": true,
+      "matchesDeveloperManifest": true
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "changed": true,
+      "baselineSha256": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "matchesOriginalQC": true,
+      "expected": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "actual": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "changed": true,
+      "baselineSha256": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "matchesOriginalQC": true,
+      "expected": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "actual": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "changed": true,
+      "baselineSha256": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174",
+      "matchesOriginalQC": true,
+      "expected": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "actual": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "rawHashMatchesQCProposal": true,
+      "matchesDeveloperManifest": true,
+      "syntaxErrors": 0,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    }
+  ],
+  "sourceBefore": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+    "app/(no-layout)/manage/tax/modify.tsx": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885"
+  },
+  "sourceAfter": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+    "app/(no-layout)/manage/tax/modify.tsx": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885"
+  },
+  "sourceStable": true,
+  "evidenceBefore": {
+    "docs/qa/codex-3/manage-imports/HANDOFF.md": "f2a491567c7aace5bface9523af30e4ba27e3bb9f5ee4a556e40debe052c64ea",
+    "docs/qa/codex-3/manage-imports/apply.cjs": "4de04cd11aab673eed2f20461e96be5a0095fe14ee130aec2485931cffa7a9f5",
+    "docs/qa/codex-3/manage-imports/apply-results.json": "1ebc8fa7e3de26177a2bbdad58db86840dafb61bf85e5eba6e3a7c7bb0d75f9d",
+    "docs/qa/codex-3/manage-imports/check.cjs": "cbe624f1937de8c48b62328d1b8be441d0583e5cc288eb7395cc06bdfb114469",
+    "docs/qa/codex-3/manage-imports/results.json": "f1a6789f979a85c57c13bddb12012ddd8155b18414d38dfe1561e8f362495454",
+    "docs/qa/codex-3/manage-imports/verification.json": "92c084ae5ff23d7d43d859d53200f4f77ef0ec474ad8918d1c0381f3f0e4b7e3",
+    "docs/qa/qc-manage-forms-2026-10-09/style-findings.json": "75c7b41b13196b2e308754466fb5efb4a89d24cf23a6509a27612023c8f83ce3",
+    "docs/qa/qc-manage-forms-2026-10-09/source-before.json": "67806dd490a9d19b85b63654ee0dec25a2235317dca5c14b5f1a3ecf81e751d4",
+    "docs/qa/qc-manage-forms-2026-10-09/organize-imports.patch": "03222369ff63b2adc87622dc09eb7a12e326ef7b5f52c9079b23f75e122fd30c"
+  },
+  "evidenceAfter": {
+    "docs/qa/codex-3/manage-imports/HANDOFF.md": "f2a491567c7aace5bface9523af30e4ba27e3bb9f5ee4a556e40debe052c64ea",
+    "docs/qa/codex-3/manage-imports/apply.cjs": "4de04cd11aab673eed2f20461e96be5a0095fe14ee130aec2485931cffa7a9f5",
+    "docs/qa/codex-3/manage-imports/apply-results.json": "1ebc8fa7e3de26177a2bbdad58db86840dafb61bf85e5eba6e3a7c7bb0d75f9d",
+    "docs/qa/codex-3/manage-imports/check.cjs": "cbe624f1937de8c48b62328d1b8be441d0583e5cc288eb7395cc06bdfb114469",
+    "docs/qa/codex-3/manage-imports/results.json": "f1a6789f979a85c57c13bddb12012ddd8155b18414d38dfe1561e8f362495454",
+    "docs/qa/codex-3/manage-imports/verification.json": "92c084ae5ff23d7d43d859d53200f4f77ef0ec474ad8918d1c0381f3f0e4b7e3",
+    "docs/qa/qc-manage-forms-2026-10-09/style-findings.json": "75c7b41b13196b2e308754466fb5efb4a89d24cf23a6509a27612023c8f83ce3",
+    "docs/qa/qc-manage-forms-2026-10-09/source-before.json": "67806dd490a9d19b85b63654ee0dec25a2235317dca5c14b5f1a3ecf81e751d4",
+    "docs/qa/qc-manage-forms-2026-10-09/organize-imports.patch": "03222369ff63b2adc87622dc09eb7a12e326ef7b5f52c9079b23f75e122fd30c"
+  },
+  "evidenceStable": true,
+  "manifestEvidenceMatches": true,
+  "gates": {
+    "eslint": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0,
+      "files": [
+        {
+          "file": "app/(no-layout)/manage/extra/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/order-type/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/manage/tax/modify.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ManageFormNotFound.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/ManagePreviewForm.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        }
+      ]
+    },
+    "biome": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    },
+    "diff": {
+      "command": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    }
+  },
+  "priorBrowserChecks": {
+    "passed": 92,
+    "rerunThisBatch": false,
+    "reason": "Exact QC proposal; non-import AST and import bindings unchanged. Original results remain historical."
+  }
+}

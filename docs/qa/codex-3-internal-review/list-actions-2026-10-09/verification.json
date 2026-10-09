@@ -1,0 +1,106 @@
+{
+  "status": "INTERNAL_QA_REVIEW_PASS",
+  "externalQcApproval": false,
+  "finishedAt": "2026-10-09T01:07:20.302Z",
+  "reviewedSourceHashes": {
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3"
+  },
+  "productionContractHashes": {
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "loadedProductionSourceHashes": {
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "baseline": {
+    "assertions": 180,
+    "passed": 96,
+    "failed": 84,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "primary": {
+    "assertions": 199,
+    "passed": 199,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "supplemental": {
+    "assertions": 78,
+    "passed": 78,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "final": {
+    "assertions": 277,
+    "passed": 277,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "counts": {
+    "stateAndIntegration": 258,
+    "contractFingerprints": 19
+  },
+  "artifactHashes": {
+    "additional-final-results.json": "f90af6fcc136d3b1f3b9e3eab401e43151d522c5f78b3f2e40cc0ca4368d1b4f",
+    "additional-final.cjs": "f0ce402f0aa3e4d3914f7c30e96bb321cdcc7990d83afa30ace7e9f53fa15beb",
+    "additional-results.json": "57b0f97065e4bd57d6621f6b8782094791a057e63de334f3bfc4e2d5a08ad70c",
+    "additional.cjs": "c47b5ab4bd3c0fd4bcf28dd39434b11ae352fe0a01f62e61e923f5890c1817f3",
+    "baseline-capture.json": "16de91bb36afe392a4bc597bf2c11a8a8426de82cbff3c64aa167c4e86672768",
+    "baseline-results.json": "e05fa8c2152e7f5b9b5b4d0f4c47c822b8b36d38a058587156f6555776c15742",
+    "before/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+    "before/RoleListScreen.tsx": "426b20d5e66c816d1ec2a64f69f8780a6e0257432aa13135be6b29b6345cfe68",
+    "before/WorkerListScreen.tsx": "7219730a1e3ecead9431bad0d1a4ebeba6295c6e793b6ecb74f87839823bda3b",
+    "capture.cjs": "879d002e3c8ab7c7df3aaaac27486009be528d3c2fde1d51ad28dd2d70ddbbba",
+    "REPORT.md": "a94a3abef6b053a28883397754ac79d96c7888e98fc321b5fd99cc40b26be1e9",
+    "results.json": "81da49762a91429f997831271f5185ab793c4c5f6e264b7ebda108e1b8cb4cd2",
+    "review.cjs": "4bbe4c13b2861a11ea23d5ab2282e0f4d90d9c8ee12958d47e4e58e444eaba54",
+    "seal.cjs": "0a6812fb1ff4bd8eaa6dfbd23fb63e240ee607bffb37db9597b512d0ec48250e"
+  },
+  "sealedBy": "Codex-3 root: delegated reviewer completed primary/supplementary executions; its turn ended before report/manifest. Root verified existing results/source/contract/artifacts and sealed without rerunning or changing review tests.",
+  "limitations": "Actual List/helper/sheet/delete/mutation/factory/Common/QueryClient/Axios memory transport; GET/native/presentation/router adapters. Original supplemental74/4 remains archived, corrected unique search78/0 counted once. No external QC or geometry/native/backend/full-router approval."
+}

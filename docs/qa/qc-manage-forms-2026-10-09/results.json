@@ -1,0 +1,244 @@
+{
+  "owner": "QC",
+  "scope": "Four production modify routes with isolated Expo Router and list fixtures",
+  "sdk": 57,
+  "passed": 54,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "extra: existing record is prefilled",
+      "passed": true
+    },
+    {
+      "name": "extra: every stored selection has a visible label",
+      "passed": true
+    },
+    {
+      "name": "extra: unrelated route update keeps draft",
+      "passed": true
+    },
+    {
+      "name": "extra: validation does not claim persistence",
+      "passed": true
+    },
+    {
+      "name": "extra: closing result keeps draft",
+      "passed": true
+    },
+    {
+      "name": "extra: edit to create starts blank",
+      "passed": true
+    },
+    {
+      "name": "extra: required fields block empty check",
+      "passed": true
+    },
+    {
+      "name": "extra: create to edit restores record",
+      "passed": true
+    },
+    {
+      "name": "extra: styled action fits 320px and stays at bottom",
+      "passed": true
+    },
+    {
+      "name": "extra: unknown id blocks form",
+      "passed": true
+    },
+    {
+      "name": "extra: missing record returns to matching list",
+      "passed": true
+    },
+    {
+      "name": "extra: empty supplied id cannot create",
+      "passed": true
+    },
+    {
+      "name": "order-type: existing record is prefilled",
+      "passed": true
+    },
+    {
+      "name": "order-type: every stored selection has a visible label",
+      "passed": true
+    },
+    {
+      "name": "order-type: unrelated route update keeps draft",
+      "passed": true
+    },
+    {
+      "name": "order-type: validation does not claim persistence",
+      "passed": true
+    },
+    {
+      "name": "order-type: closing result keeps draft",
+      "passed": true
+    },
+    {
+      "name": "order-type: edit to create starts blank",
+      "passed": true
+    },
+    {
+      "name": "order-type: required fields block empty check",
+      "passed": true
+    },
+    {
+      "name": "order-type: create to edit restores record",
+      "passed": true
+    },
+    {
+      "name": "order-type: styled action fits 320px and stays at bottom",
+      "passed": true
+    },
+    {
+      "name": "order-type: unknown id blocks form",
+      "passed": true
+    },
+    {
+      "name": "order-type: missing record returns to matching list",
+      "passed": true
+    },
+    {
+      "name": "order-type: empty supplied id cannot create",
+      "passed": true
+    },
+    {
+      "name": "payment-method: existing record is prefilled",
+      "passed": true
+    },
+    {
+      "name": "payment-method: every stored selection has a visible label",
+      "passed": true
+    },
+    {
+      "name": "payment-method: unrelated route update keeps draft",
+      "passed": true
+    },
+    {
+      "name": "payment-method: validation does not claim persistence",
+      "passed": true
+    },
+    {
+      "name": "payment-method: closing result keeps draft",
+      "passed": true
+    },
+    {
+      "name": "payment-method: edit to create starts blank",
+      "passed": true
+    },
+    {
+      "name": "payment-method: required fields block empty check",
+      "passed": true
+    },
+    {
+      "name": "payment-method: create to edit restores record",
+      "passed": true
+    },
+    {
+      "name": "payment-method: styled action fits 320px and stays at bottom",
+      "passed": true
+    },
+    {
+      "name": "payment-method: unknown id blocks form",
+      "passed": true
+    },
+    {
+      "name": "payment-method: missing record returns to matching list",
+      "passed": true
+    },
+    {
+      "name": "payment-method: empty supplied id cannot create",
+      "passed": true
+    },
+    {
+      "name": "tax: existing record is prefilled",
+      "passed": true
+    },
+    {
+      "name": "tax: every stored selection has a visible label",
+      "passed": true
+    },
+    {
+      "name": "tax: unrelated route update keeps draft",
+      "passed": true
+    },
+    {
+      "name": "tax: validation does not claim persistence",
+      "passed": true
+    },
+    {
+      "name": "tax: closing result keeps draft",
+      "passed": true
+    },
+    {
+      "name": "tax: edit to create starts blank",
+      "passed": true
+    },
+    {
+      "name": "tax: required fields block empty check",
+      "passed": true
+    },
+    {
+      "name": "tax: create to edit restores record",
+      "passed": true
+    },
+    {
+      "name": "tax: styled action fits 320px and stays at bottom",
+      "passed": true
+    },
+    {
+      "name": "tax: unknown id blocks form",
+      "passed": true
+    },
+    {
+      "name": "tax: missing record returns to matching list",
+      "passed": true
+    },
+    {
+      "name": "tax: empty supplied id cannot create",
+      "passed": true
+    },
+    {
+      "name": "order-type: changing id replaces previous draft",
+      "passed": true
+    },
+    {
+      "name": "order-type: changing id replaces selected values",
+      "passed": true
+    },
+    {
+      "name": "order-type: record 2 draft survives rerender",
+      "passed": true
+    },
+    {
+      "name": "order-type: return to previous id hydrates fresh values",
+      "passed": true
+    },
+    {
+      "name": "Preview does not write to an API",
+      "passed": true
+    },
+    {
+      "name": "No runtime exceptions or console errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "sourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+    "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+  },
+  "limitations": [
+    "No full application auth/root navigation or SSR response tested",
+    "No API integration/persistence in these four existing fixture forms",
+    "No native device or full Figma screenshot comparison"
+  ]
+}

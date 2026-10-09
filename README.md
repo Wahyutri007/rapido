@@ -56,6 +56,14 @@ Copy `.env.example` to `.env.local` and set the backend base/API URLs for your e
 
 ## Android over USB without an Expo account
 
+From PowerShell in the application directory, with the backend running and USB
+debugging authorized, run `npm.cmd run start:hp`. The launcher finds ADB,
+checks the device/Expo Go/backend, reconnects USB port forwarding, reuses this
+project's Metro server or starts one, and opens Rapido on the phone. Repeat it
+after reconnecting the cable. See [the step-by-step Android guide](docs/RUN_DI_HP.md)
+for prerequisites and troubleshooting. Use `npm.cmd run start:hp -- --check`
+for a readiness check without opening the phone.
+
 Install Expo Go for SDK 57, enable USB debugging, connect the phone, and authorize the computer. With Android Platform Tools installed:
 
 ```powershell

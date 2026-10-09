@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Candidate text using actual production file paths and ESLint configuration; no source writes",
+  "results": [
+    {
+      "source": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "candidate": "docs/qa/qc-journals-2026-10-09/proposal/general.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "source": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "candidate": "docs/qa/qc-journals-2026-10-09/proposal/adjusting.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ]
+}

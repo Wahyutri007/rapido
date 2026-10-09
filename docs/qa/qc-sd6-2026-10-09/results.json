@@ -1,0 +1,107 @@
+{
+  "sources": {
+    "app/(no-layout)/manage/printer/modify.tsx": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "6d10d71f7ad5056a6621e5d73f538d3478005adbb3651e16f113dae5ad51c817",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4"
+  },
+  "checks": [
+    {
+      "name": "Printer create remains available",
+      "passed": true
+    },
+    {
+      "name": "Printer route ID switches to edit",
+      "passed": true
+    },
+    {
+      "name": "Printer edit-to-create resets entity modal state",
+      "passed": true
+    },
+    {
+      "name": "Printer invalid ID alerts and returns without save controls",
+      "passed": true
+    },
+    {
+      "name": "Printer invalid ID can transition to a valid entity",
+      "passed": true
+    },
+    {
+      "name": "Printer pending save cannot open success on a different entity",
+      "passed": true
+    },
+    {
+      "name": "Rounding defaults before API response",
+      "passed": true
+    },
+    {
+      "name": "Rounding late data preserves false and zero",
+      "passed": true
+    },
+    {
+      "name": "Rounding untouched fields follow refetch",
+      "passed": true
+    },
+    {
+      "name": "Rounding edited method survives refetch while other fields update",
+      "passed": true
+    },
+    {
+      "name": "Rounding local false and selected multiple survive refetch",
+      "passed": true
+    },
+    {
+      "name": "Rounding failure retains draft and opens only error feedback",
+      "passed": true
+    },
+    {
+      "name": "Rounding remount uses latest server values",
+      "passed": true
+    },
+    {
+      "name": "Rounding read-more navigation remains wired",
+      "passed": true
+    },
+    {
+      "name": "Stock defaults before API response",
+      "passed": true
+    },
+    {
+      "name": "Stock prefill loads false and excluded IDs",
+      "passed": true
+    },
+    {
+      "name": "Stock cancel discards picker changes",
+      "passed": true
+    },
+    {
+      "name": "Stock picker draft survives refetch and search",
+      "passed": true
+    },
+    {
+      "name": "Stock saved selection survives a later refetch",
+      "passed": true
+    },
+    {
+      "name": "Stock clearing every exclusion preserves an empty draft",
+      "passed": true
+    },
+    {
+      "name": "Stock edited switch survives refetch and failed save",
+      "passed": true
+    },
+    {
+      "name": "Stock remount clears local overrides",
+      "passed": true
+    },
+    {
+      "name": "Stock absent details clear an untouched server selection",
+      "passed": true
+    },
+    {
+      "name": "Stock read-more navigation remains wired",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "limitations": "Native views/router/API replaced by adapters. No native, visual, network or independent QA approval."
+}

@@ -1,0 +1,12 @@
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto'), { spawnSync } = require('node:child_process');
+const before = JSON.parse(fs.readFileSync(path.join(__dirname, 'fingerprints-before.json')));
+const run = args => spawnSync(process.execPath, args, { encoding: 'utf8' });
+const eslint = run(['node_modules/eslint/bin/eslint.js', ...before.components, '--no-cache', '--format', 'json']);
+fs.writeFileSync(path.join(__dirname, 'eslint.json'), eslint.stdout);
+const lint = eslint.stdout ? JSON.parse(eslint.stdout) : [];
+const biome = run(['node_modules/@biomejs/biome/bin/biome', 'check', ...before.components]);
+fs.writeFileSync(path.join(__dirname, 'biome-output.txt'), biome.stdout + biome.stderr);
+const diff = spawnSync('git', ['diff', '--check', '--', ...before.components], { encoding: 'utf8' });
+fs.writeFileSync(path.join(__dirname, 'diff-check.txt'), diff.stdout + diff.stderr);
+const result = { capturedAt: new Date().toISOString(), files: before.components, hashes: Object.fromEntries(before.components.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')])), eslint: { exit: eslint.status, errors: lint.reduce((sum, file) => sum + file.errorCount, 0), warnings: lint.reduce((sum, file) => sum + file.warningCount, 0), stderr: eslint.stderr }, biome: { exit: biome.status }, diffCheck: { exit: diff.status } };
+fs.writeFileSync(path.join(__dirname, 'quality.json'), JSON.stringify(result, null, 2) + '\n'); console.log(JSON.stringify(result));

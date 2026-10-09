@@ -1,0 +1,116 @@
+<frame id="1:12401" name="Stok Sekarang" x="15046" y="17166" width="390" height="1347">
+  <frame id="1:12402" name="Filter Wrapper" x="16" y="152" width="358" height="48">
+    <frame id="1:12403" name="Filter Block" x="0" y="0" width="172" height="48">
+      <frame id="1:12404" name="Filter Label" x="12" y="16" width="95" height="16">
+        <frame id="1:12405" name="material-symbols:store" x="0" y="0" width="16" height="16" />
+        <text id="1:12407" name="Semua Toko" x="24" y="0" width="71" height="16" />
+      </frame>
+      <frame id="1:12408" name="mingcute:down-line" x="144" y="16" width="16" height="16" />
+    </frame>
+    <frame id="1:12412" name="Filter Block" x="186" y="0" width="172" height="48">
+      <frame id="1:12413" name="Filter Label" x="12" y="16" width="90.30000305175781" height="16">
+        <frame id="1:12414" name="uis:calender" x="0" y="0.5" width="15.300000190734863" height="15" />
+        <text id="1:12416" name="Status Stok" x="23.299999237060547" y="0" width="67" height="16" />
+      </frame>
+      <frame id="1:12417" name="mingcute:down-line" x="144" y="16" width="16" height="16" />
+    </frame>
+  </frame>
+  <instance id="1:12421" name="Heading Page" x="0" y="0" width="390" height="72" />
+  <frame id="1:12422" name="Frame 1000007881" x="16" y="216" width="357" height="754">
+    <frame id="1:12423" name="Frame 427319577" x="0" y="0" width="357" height="50">
+      <text id="1:12424" name="Produk" x="16" y="16" width="49" height="18" />
+      <text id="1:12425" name="Stok Akhir" x="270" y="16" width="71" height="18" />
+    </frame>
+    <frame id="1:12426" name="Product Stok Wrapp" x="0" y="50" width="357" height="704">
+      <frame id="1:12427" name="Frame 1171277486" x="12" y="16" width="333" height="388">
+        <frame id="1:12428" name="Frame 1171277485" x="12" y="12" width="309" height="34">
+          <text id="1:12429" name="Makanan" x="0" y="0" width="62" height="18" />
+          <line id="1:12430" name="Divider" x="0" y="34" width="309" height="0" />
+        </frame>
+        <frame id="1:12431" name="Frame 427319578" x="12" y="46" width="309" height="60">
+          <frame id="1:12432" name="Frame 1000007880" x="0" y="12" width="243" height="36">
+            <text id="1:12433" name="Pizza politan" x="0" y="0" width="73" height="16" />
+            <frame id="1:12434" name="Frame 1000007877" x="0" y="20" width="34" height="16">
+              <text id="1:12435" name="Size L" x="0" y="0" width="34" height="16" />
+            </frame>
+          </frame>
+          <text id="1:12436" name="20 Pcs" x="263" y="21" width="46" height="18" />
+        </frame>
+        <frame id="1:12437" name="Frame 427319586" x="12" y="106" width="309" height="60">
+          <frame id="1:12438" name="Frame 1000007880" x="0" y="12" width="243" height="36">
+            <text id="1:12439" name="Pizza politan" x="0" y="0" width="73" height="16" />
+            <frame id="1:12440" name="Frame 1000007877" x="0" y="20" width="38" height="16">
+              <text id="1:12441" name="Size M" x="0" y="0" width="38" height="16" />
+            </frame>
+          </frame>
+          <text id="1:12442" name="15 Pcs" x="265" y="21" width="44" height="18" />
+        </frame>
+        <frame id="1:12443" name="Frame 427319581" x="12" y="166" width="309" height="42">
+          <frame id="1:12444" name="Frame 1000007881" x="0" y="13" width="204" height="16">
+            <text id="1:12445" name="Teh Es" x="0" y="0" width="38" height="16" />
+          </frame>
+          <text id="1:12446" name="200 Cup" x="251" y="12" width="58" height="18" />
+        </frame>
+        <frame id="1:12447" name="Frame 427319582" x="12" y="208" width="309" height="42">
+          <frame id="1:12448" name="Frame 1000007881" x="0" y="13" width="204" height="16">
+            <text id="1:12449" name="Sushi" x="0" y="0" width="32" height="16" />
+          </frame>
+          <text id="1:12450" name="2 Pcs" x="272" y="12" width="37" height="18" />
+        </frame>
+        <frame id="1:12451" name="Frame 427319580" x="12" y="250" width="309" height="42">
+          <frame id="1:12452" name="Frame 1000007880" x="0" y="13" width="204" height="16">
+            <text id="1:12453" name="Salad Yumme" x="0" y="0" width="79" height="16" />
+          </frame>
+          <text id="1:12454" name="0 Pcs" x="271" y="12" width="38" height="18" />
+        </frame>
+        <frame id="1:12455" name="Frame 427319584" x="12" y="292" width="309" height="42">
+          <frame id="1:12456" name="Frame 1000007880" x="0" y="13" width="204" height="16">
+            <text id="1:12457" name="Mie Goreng Dumai" x="0" y="0" width="204" height="16" />
+          </frame>
+          <text id="1:12458" name="0 Pcs" x="271" y="12" width="38" height="18" />
+        </frame>
+        <frame id="1:12459" name="Frame 427319585" x="12" y="334" width="309" height="42">
+          <frame id="1:12460" name="Frame 1000007880" x="0" y="13" width="204" height="16">
+            <text id="1:12461" name="Roti Sosis Jumbo" x="0" y="0" width="204" height="16" />
+          </frame>
+          <text id="1:12462" name="0 Pcs" x="271" y="12" width="38" height="18" />
+        </frame>
+      </frame>
+      <frame id="1:12463" name="Frame 1171277487" x="12" y="420" width="333" height="268">
+        <frame id="1:12464" name="Frame 1171277485" x="12" y="12" width="309" height="26">
+          <text id="1:12465" name="Minuman" x="0" y="0" width="63" height="18" />
+          <line id="1:12466" name="Divider" x="0" y="26" width="309" height="0" />
+        </frame>
+        <frame id="1:12467" name="Frame 427319578" x="12" y="38" width="309" height="68">
+          <frame id="1:12468" name="Frame 1000007880" x="0" y="16" width="243" height="36">
+            <text id="1:12469" name="Teh Sisri" x="0" y="0" width="50" height="16" />
+            <frame id="1:12470" name="Frame 1000007877" x="0" y="20" width="34" height="16">
+              <text id="1:12471" name="Size L" x="0" y="0" width="34" height="16" />
+            </frame>
+          </frame>
+          <text id="1:12472" name="20 Pcs" x="263" y="25" width="46" height="18" />
+        </frame>
+        <frame id="1:12473" name="Frame 427319586" x="12" y="106" width="309" height="50">
+          <frame id="1:12474" name="Frame 1000007880" x="0" y="17" width="243" height="16">
+            <text id="1:12475" name="Pop Ice" x="0" y="0" width="43" height="16" />
+          </frame>
+          <text id="1:12476" name="15 Pcs" x="265" y="16" width="44" height="18" />
+        </frame>
+        <frame id="1:12477" name="Frame 427319581" x="12" y="156" width="309" height="50">
+          <frame id="1:12478" name="Frame 1000007881" x="0" y="17" width="204" height="16">
+            <text id="1:12479" name="Teh Es" x="0" y="0" width="38" height="16" />
+          </frame>
+          <text id="1:12480" name="200 Cup" x="251" y="16" width="58" height="18" />
+        </frame>
+        <frame id="1:12481" name="Frame 427319585" x="12" y="206" width="309" height="50">
+          <frame id="1:12482" name="Frame 1000007880" x="0" y="17" width="204" height="16">
+            <text id="1:12483" name="Roti Sosis Jumbo" x="0" y="0" width="204" height="16" />
+          </frame>
+          <text id="1:12484" name="0 Pcs" x="271" y="16" width="38" height="18" />
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <instance id="1:12485" name="search-container" x="16" y="88" width="358" height="48" />
+  <instance id="1:12486" name="Navigation Bar Back Office" x="0" y="1254" width="390" height="93" />
+</frame>

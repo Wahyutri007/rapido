@@ -1,0 +1,16 @@
+[
+  {
+    "name": "store.svg",
+    "url": "https://www.figma.com/api/mcp/asset/b38da6c7-3fc0-4cff-a864-0af38e10e65b.svg",
+    "bytes": 425,
+    "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+    "sha256": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255"
+  },
+  {
+    "name": "status.svg",
+    "url": "https://www.figma.com/api/mcp/asset/fa110413-2c4e-4633-ba97-117574ce2413.svg",
+    "bytes": 688,
+    "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"15.3\" height=\"15\" viewBox=\"0 0 15.3 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+    "sha256": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88"
+  }
+]

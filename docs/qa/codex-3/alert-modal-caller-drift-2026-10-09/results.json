@@ -1,0 +1,19 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-009-caller-drift",
+  "kind": "READ_ONLY_STATIC_CALLER_RECHECK",
+  "source": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+  "expectedBeforeHash": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+  "capturedCurrentHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+  "baselineUsages": 1,
+  "currentUsages": 1,
+  "jsxContractUnchanged": true,
+  "sourceStableThroughRead": true,
+  "beforeJsx": [
+    "<AlertModal\n\t\t\t\topenState={resetConfirmModal.openState}\n\t\t\t\tonConfirm={confirmResetBalance}\n\t\t\t\ttitle={`Reset Saldo ${selectedAccount?.name || \"\"}?`}\n\t\t\t\tmessage=\"Saldo debit dan kredit untuk akun ini akan direset menjadi Rp0.\"\n\t\t\t\tconfirmText=\"Ya, Reset\"\n\t\t\t\tcancelText=\"Batal\"\n\t\t\t/>"
+  ],
+  "currentJsx": [
+    "<AlertModal\n\t\t\t\topenState={resetConfirmModal.openState}\n\t\t\t\tonConfirm={confirmResetBalance}\n\t\t\t\ttitle={`Reset Saldo ${selectedAccount?.name || \"\"}?`}\n\t\t\t\tmessage=\"Saldo debit dan kredit untuk akun ini akan direset menjadi Rp0.\"\n\t\t\t\tconfirmText=\"Ya, Reset\"\n\t\t\t\tcancelText=\"Batal\"\n\t\t\t/>"
+  ],
+  "limits": "Static AlertModal JSX props/callback expressions only; no execution or approval of accounts screen/helper/store/lifecycle changes owned by Senior8"
+}

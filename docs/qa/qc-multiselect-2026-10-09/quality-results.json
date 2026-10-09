@@ -1,0 +1,24 @@
+{
+  "kind": "Recorded QC command results; source hash tied by snapshot before/after",
+  "source": "components/common/MultiSelect.tsx",
+  "eslint": {
+    "command": "node node_modules/eslint/bin/eslint.js components/common/MultiSelect.tsx --format json --output-file docs/qa/qc-multiselect-2026-10-09/eslint-results.json",
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "command": "node node_modules/@biomejs/biome/bin/biome check components/common/MultiSelect.tsx",
+    "status": "PASS",
+    "output": "Checked 1 file in 18ms. No fixes applied."
+  },
+  "diffCheck": {
+    "command": "git diff --check -- components/common/MultiSelect.tsx",
+    "status": "PASS",
+    "output": "Only Git LF/CRLF conversion notice; no diff-check errors"
+  },
+  "typecheck": {
+    "kind": "Developer selected-root result and fingerprints reviewed; not QC rerun/global TypeScript",
+    "roots": 10,
+    "diagnostics": 0
+  }
+}

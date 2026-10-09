@@ -1,0 +1,1 @@
+Private type renamed, source3323ecad: browser114/lifecycle156/lint/AST/type/runtime-erasure PASS. Biome requests only multiline function signature. Final source formats that signature; this stage remains historical.

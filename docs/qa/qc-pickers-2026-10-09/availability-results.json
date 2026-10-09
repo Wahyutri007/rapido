@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "disabled while open disables every option",
+      "pass": true
+    },
+    {
+      "name": "disabled while open disables confirmation",
+      "pass": true
+    },
+    {
+      "name": "disabled option handler preserves pending draft",
+      "pass": true
+    },
+    {
+      "name": "disabled confirmation cannot emit draft",
+      "pass": true
+    },
+    {
+      "name": "disabled confirmation preserves sheet for cancel or reenable",
+      "pass": true
+    },
+    {
+      "name": "reenabling can confirm preserved draft",
+      "pass": true
+    },
+    {
+      "name": "cancel remains usable while disabled",
+      "pass": true
+    },
+    {
+      "name": "immediate mode disabled blocks callback (dismiss=true)",
+      "pass": true
+    },
+    {
+      "name": "disabled action schedules no dismiss timer (dismiss=true)",
+      "pass": true
+    },
+    {
+      "name": "reenabling restores immediate selection (dismiss=true)",
+      "pass": true
+    },
+    {
+      "name": "immediate mode disabled blocks callback (dismiss=false)",
+      "pass": true
+    },
+    {
+      "name": "disabled action schedules no dismiss timer (dismiss=false)",
+      "pass": true
+    },
+    {
+      "name": "reenabling restores immediate selection (dismiss=false)",
+      "pass": true
+    },
+    {
+      "name": "removed draft disables confirmation",
+      "pass": true
+    },
+    {
+      "name": "removed draft cannot emit stale value",
+      "pass": true
+    },
+    {
+      "name": "removed draft keeps sheet available for another choice",
+      "pass": true
+    },
+    {
+      "name": "removed draft can be replaced with an available option",
+      "pass": true
+    },
+    {
+      "name": "disabled draft disables confirmation",
+      "pass": true
+    },
+    {
+      "name": "disabled draft cannot emit stale value",
+      "pass": true
+    },
+    {
+      "name": "disabled draft keeps sheet available for another choice",
+      "pass": true
+    },
+    {
+      "name": "disabled draft can be replaced with an available option",
+      "pass": true
+    },
+    {
+      "name": "same values on refetch preserve draft",
+      "pass": true
+    },
+    {
+      "name": "refreshed valid draft commits its value",
+      "pass": true
+    },
+    {
+      "name": "zero remains a valid confirm value",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "pass": true
+    },
+    {
+      "name": "source stable during checks",
+      "pass": true
+    }
+  ],
+  "source": {
+    "file": "components/common/SingleSelect.tsx",
+    "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+  },
+  "scope": "Production SingleSelect with React test renderer and host UI adapters; not native UI."
+}

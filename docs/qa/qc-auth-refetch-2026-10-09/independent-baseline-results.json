@@ -1,0 +1,299 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-005",
+  "tested": "BASELINE_PROVIDER_CURRENT_GUARD",
+  "sourceHashes": {
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b"
+  },
+  "checks": [
+    {
+      "name": "P2 reproduction: successful POST then user GET pending",
+      "passed": true
+    },
+    {
+      "name": "P2 reproduction: validation pending keeps actual button disabled",
+      "passed": true
+    },
+    {
+      "name": "QC-LOGIN-001: actual button path sets generic form error",
+      "passed": false,
+      "actual": null,
+      "expected": "Terdapat kesalahan. Silakan coba lagi."
+    },
+    {
+      "name": "QC-LOGIN-001: production FormMessage renders the error",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "QC-LOGIN-001: actual button permits retry after validation failure",
+      "passed": true
+    },
+    {
+      "name": "QC-LOGIN-001: credentials retained for retry",
+      "passed": true
+    },
+    {
+      "name": "validation failure: provider is anonymous and no route replaced",
+      "passed": true
+    },
+    {
+      "name": "validation failure: actual Query status/error and fetch settled",
+      "passed": true
+    },
+    {
+      "name": "existing contract: validation failure does not roll back saved token",
+      "passed": true
+    },
+    {
+      "name": "retry after validation failure: same-event double press adds one POST",
+      "passed": true
+    },
+    {
+      "name": "retry after validation failure: button becomes busy",
+      "passed": true
+    },
+    {
+      "name": "retry after validation failure: exactly one new token write",
+      "passed": true
+    },
+    {
+      "name": "retry after validation failure: exactly one new user GET",
+      "passed": true
+    },
+    {
+      "name": "retry succeeds: authenticated and actual button released",
+      "passed": true
+    },
+    {
+      "name": "retry succeeds: previous generic error cleared from form",
+      "passed": true
+    },
+    {
+      "name": "retry succeeds: actual current guard replaces home once",
+      "passed": true
+    },
+    {
+      "name": "QC-LOGIN-001: hook caller receives user-validation error tuple",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "hook caller user error: local loading released",
+      "passed": true
+    },
+    {
+      "name": "hook caller user error: no authenticated redirect",
+      "passed": true
+    },
+    {
+      "name": "StrictMode reverse completion: two storage reads",
+      "passed": true
+    },
+    {
+      "name": "StrictMode reverse completion: current read starts one GET",
+      "passed": true
+    },
+    {
+      "name": "retired missing-token result while current GET pending: loading preserved",
+      "passed": false,
+      "actual": [
+        false,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "retired missing-token result: current authenticated state preserved",
+      "passed": false,
+      "actual": [
+        false,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "StrictMode current completion/rerenders: no extra bootstrap or GET",
+      "passed": true
+    },
+    {
+      "name": "StrictMode reverse completion: current guard reaches home once",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        "/(back-office)/home"
+      ]
+    },
+    {
+      "name": "StrictMode active effect completes before retired read",
+      "passed": true
+    },
+    {
+      "name": "retired missing-token result after current completion: auth retained",
+      "passed": false,
+      "actual": [
+        false,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "retired result after current completion: no additional user request",
+      "passed": true
+    },
+    {
+      "name": "retired result after current completion: live home redirect retained",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        "/(back-office)/home"
+      ]
+    },
+    {
+      "name": "retired storage rejection: current bootstrap still loading",
+      "passed": false,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "retired storage rejection: no API request",
+      "passed": true
+    },
+    {
+      "name": "active missing-token result settles bootstrap",
+      "passed": true
+    },
+    {
+      "name": "old provider after remount: late storage starts no GET",
+      "passed": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "new provider after old result: its own bootstrap stays pending",
+      "passed": true
+    },
+    {
+      "name": "new provider: its own missing-token read finishes independently",
+      "passed": true
+    },
+    {
+      "name": "anonymous helpers before validation: all deny",
+      "passed": true
+    },
+    {
+      "name": "staff helpers: single permission grants and denies accurately",
+      "passed": true
+    },
+    {
+      "name": "staff helpers: any-permission grants and denies accurately",
+      "passed": true
+    },
+    {
+      "name": "staff helpers: all-permissions grants and denies accurately",
+      "passed": true
+    },
+    {
+      "name": "staff helpers: role scalar/array and owner denial preserved",
+      "passed": true
+    },
+    {
+      "name": "actual staff signOut: token and user cache cleared",
+      "passed": true
+    },
+    {
+      "name": "helpers after signOut: all deny",
+      "passed": true
+    },
+    {
+      "name": "reload after signOut: loading starts and one explicit read added",
+      "passed": true
+    },
+    {
+      "name": "reload after signOut: false/anonymous/settled",
+      "passed": true
+    },
+    {
+      "name": "reload after signOut missing token: no additional GET",
+      "passed": true
+    },
+    {
+      "name": "signOut/reload on public login: canceled home frame never navigates",
+      "passed": true
+    },
+    {
+      "name": "final: no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "final: no unhandled rejection",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "case": "validation-failure-retry",
+      "requests": [
+        {
+          "method": "post",
+          "url": "/login"
+        },
+        {
+          "method": "get",
+          "url": "/user"
+        },
+        {
+          "method": "post",
+          "url": "/login"
+        },
+        {
+          "method": "get",
+          "url": "/user"
+        }
+      ],
+      "writes": 2,
+      "routes": [
+        "/(back-office)/home"
+      ]
+    }
+  ],
+  "runtimeErrors": [],
+  "unhandledRejections": [],
+  "passed": 38,
+  "failed": 10
+}

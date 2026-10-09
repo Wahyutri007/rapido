@@ -1,0 +1,65 @@
+{
+  "id": "QC-MULTISELECT-20261009-PASS-DELTA",
+  "recordedAt": "2026-10-08T18:57:01.133Z",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "qaBehaviorPassed": true,
+  "qcContractPassed": true,
+  "approvedScope": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1"
+    }
+  ],
+  "tests": {
+    "developerRerunLifecycle": 28,
+    "developerRerunRHF": 15,
+    "independentQC": 50,
+    "total": 93,
+    "unexpectedRuntimeErrors": 0
+  },
+  "publicPropsUnchanged": true,
+  "returnedJSXUnchanged": true,
+  "callerFiles": 9,
+  "callerUses": 11,
+  "inputFingerprintsStable": 30,
+  "quality": {
+    "kind": "Recorded QC command results; source hash tied by snapshot before/after",
+    "source": "components/common/MultiSelect.tsx",
+    "eslint": {
+      "command": "node node_modules/eslint/bin/eslint.js components/common/MultiSelect.tsx --format json --output-file docs/qa/qc-multiselect-2026-10-09/eslint-results.json",
+      "errors": 0,
+      "warnings": 0
+    },
+    "biome": {
+      "command": "node node_modules/@biomejs/biome/bin/biome check components/common/MultiSelect.tsx",
+      "status": "PASS",
+      "output": "Checked 1 file in 18ms. No fixes applied."
+    },
+    "diffCheck": {
+      "command": "git diff --check -- components/common/MultiSelect.tsx",
+      "status": "PASS",
+      "output": "Only Git LF/CRLF conversion notice; no diff-check errors"
+    },
+    "typecheck": {
+      "kind": "Developer selected-root result and fingerprints reviewed; not QC rerun/global TypeScript",
+      "roots": 10,
+      "diagnostics": 0
+    }
+  },
+  "newBlockingFindings": [],
+  "existingStartupGate": "CHANGES_REQUESTED on separate cache/warning packet; not closed here",
+  "approvalsNotIncluded": [
+    "native/browser full-screen",
+    "full caller routes",
+    "API/backend/auth/persistence/domain ownership",
+    "final target submit",
+    "Figma/UI alignment",
+    "Metro/cache/runtime startup",
+    "global TypeScript/app integration"
+  ],
+  "appSourceEdited": false,
+  "developerEvidenceOverwritten": false,
+  "runtimeServersOrDeviceOperated": false,
+  "gitPublished": false,
+  "publicationGateOwner": "Project Manager after final integration checks"
+}

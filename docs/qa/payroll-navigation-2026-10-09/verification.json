@@ -1,0 +1,117 @@
+{
+  "owner": "Software Developer Senior 4 / Codex-4",
+  "status": "READY_FOR_QA",
+  "scope": "Payroll navigation; exactly one application layout changed by this task.",
+  "baseHeadAtBrowserRun": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceSha256": "7044c595a766905e29045fcf4758b7f9056704a8a744fd22b23d86c8426f445b",
+  "checkedAtBrowserRun": "2026-10-08T20:30:24.738Z",
+  "sealedAt": "2026-10-09T01:09:03.089Z",
+  "timezone": "Asia/Jakarta",
+  "verification": {
+    "browser": {
+      "status": "PASS",
+      "scenarios": 21,
+      "runtimeErrors": 0,
+      "consoleErrors": 0,
+      "apiMutations": 0,
+      "evidence": "results.json"
+    },
+    "layout": {
+      "status": "PASS",
+      "assertions": 20,
+      "evidence": "layout-results.json"
+    },
+    "typecheck": {
+      "status": "PASS",
+      "sourceFiles": 1041,
+      "diagnostics": 0,
+      "scope": "Payroll layout root, project declarations and imported dependency closure; not the full application route tree.",
+      "evidence": "typecheck-results.json"
+    },
+    "eslint": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "evidence": "eslint-results.json"
+    },
+    "biome": {
+      "observedExitCode": 0,
+      "command": "node node_modules/@biomejs/biome/bin/biome check \"app/(no-layout)/manage/payroll/_layout.tsx\""
+    },
+    "diff": {
+      "observedExitCode": 0,
+      "command": "git diff --check -- \"app/(no-layout)/manage/payroll/_layout.tsx\""
+    }
+  },
+  "boundaries": [
+    "Developer evidence from a shared working tree, not independent QA/QC approval or an isolated commit.",
+    "Only the layout source has a tested source fingerprint; shared dependencies were not sealed at browser run time. Later shared changes require reviewer replay.",
+    "Browser uses production app entry/providers/router with an HTML/CSS boot adapter and isolated API fixtures; SSR and real backend were not exercised.",
+    "Payroll data is session-only fixture state. Reload restores fixtures; backend persistence/permissions, native Share, transfers and accounting integrations are outside this delta.",
+    "Historical model/component checks in previews/payroll were not rerun and are not included in current counts.",
+    "No new Figma visual parity or native device certification.",
+    "Baseline before-pointer-fix files preserve a pre-fix failure; they are not final results."
+  ],
+  "fingerprints": [
+    {
+      "file": "app/(no-layout)/manage/payroll/_layout.tsx",
+      "sha256": "7044c595a766905e29045fcf4758b7f9056704a8a744fd22b23d86c8426f445b"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/before-pointer-fix.json",
+      "sha256": "42889163d4e5e426de1d5cdffe3fdf055f1ecea185ce25b89dbc521712037053"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/before-pointer-fix.png",
+      "sha256": "6088ff4af0af9ee3c5e6f736a6733b204c853c8bee39880533cd1d0f18f83194"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/check.cjs",
+      "sha256": "b50000a3e239efb22008f41e4e50290375f909719fb608fc30b7ae00bf0d1536"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/eslint-results.json",
+      "sha256": "2dab71e3b0c8faad09a6729e081fd5817f65df958ecdf657fc02c74a2dfa1007"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/HANDOFF.md",
+      "sha256": "28f654301a9c2d6175bf7129f1b8e67fb40179333f106321c2ca164f532cd4d3"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/layout-check.cjs",
+      "sha256": "f4fcb237fb2f1d3f6c71a22bfaf240b26e20e15a70367e7dcfe1b1bd16773ad5"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/layout-results.json",
+      "sha256": "84cb93a665064aa32e2e78df1f0dcf0c14bfabe689e67c5dc770f92c925e03f6"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/list-router.png",
+      "sha256": "f59dcfda18df6fdbef59e4541bcec3556b873e91703d156b0453976683f639f6"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/paid-detail-after-back.png",
+      "sha256": "4d4cc5be29183efbde349cd97d27a55ddd817832651f1099289b739f86a2bee3"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/results.json",
+      "sha256": "592afbf84bcccd801f7a220b6d59e5e0f612eaf929817e29689ad707d8371138"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/seal.cjs",
+      "sha256": "92b159b6fd997ecbd45bbfbf55bda2aed7ce05b6d7970151a88f48c8dc186342"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/slip-router.png",
+      "sha256": "5b13e0c6e3d03ffb581ac472205c1e5e0382075f3cc52b81649faea7291a1ef9"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/typecheck-results.json",
+      "sha256": "8ed5cc3a777e06e5a4a77e75de6760ac7ab07af9604a34e199b386b5f55c6490"
+    },
+    {
+      "file": "docs/qa/payroll-navigation-2026-10-09/typecheck.cjs",
+      "sha256": "3adf73f8f11c7bb2cc422eb2a8ca86f6d7cf6ca2b62ed604125e16304080274b"
+    }
+  ]
+}

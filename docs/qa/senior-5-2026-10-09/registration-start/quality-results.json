@@ -1,0 +1,49 @@
+{
+  "eslint": {
+    "baseline": {
+      "errors": 0,
+      "warnings": 1
+    },
+    "final": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "noSuppression": true
+  },
+  "biome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "api/hooks/registration.ts",
+      "components/feature/register/wizard/PersonalInfoAction.tsx"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 2 files in 11ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "diff",
+      "--check",
+      "--",
+      "api/hooks/registration.ts",
+      "components/feature/register/wizard/PersonalInfoAction.tsx",
+      "docs/README.md",
+      "docs/qa/senior-5-2026-10-09/HANDOFF.md"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'api/hooks/registration.ts', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'components/feature/register/wizard/PersonalInfoAction.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/README.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  "focusedTypecheck": {
+    "diagnosticCount": 0,
+    "scope": "Registration hook/sheet/Wizard consumer and imported source/declaration closure; not full-project TypeScript",
+    "roots": [
+      "api/hooks/registration.ts",
+      "components/feature/register/wizard/PersonalInfoAction.tsx",
+      "app/(onboarding)/register/wizard.tsx"
+    ]
+  }
+}

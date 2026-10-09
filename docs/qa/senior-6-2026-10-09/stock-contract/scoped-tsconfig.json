@@ -1,0 +1,9 @@
+{
+	"extends": "../tsconfig.json",
+	"include": [
+		"../app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+		"../expo-env.d.ts",
+		"../nativewind-env.d.ts",
+		"types/**/*.ts"
+	]
+}

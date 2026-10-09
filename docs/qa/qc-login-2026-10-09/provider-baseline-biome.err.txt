@@ -1,0 +1,58 @@
+context\AuthContext.tsx:61:12 lint/correctness/noUnusedVariables  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! This variable error is unused.
+  
+    59 │ 			const res = await userQuery.refetch();
+    60 │ 			return !!res.data;
+  > 61 │ 		} catch (error) {
+       │ 		         ^^^^^
+    62 │ 			// console.error("Failed to load token:", error);
+    63 │ 			return false;
+  
+  i Unused variables are often the result of typos, incomplete refactors, or other sources of bugs.
+  
+  i Unsafe fix: If this is intentional, prepend error with an underscore.
+  
+     59  59 │         const res = await userQuery.refetch();
+     60  60 │         return !!res.data;
+     61     │ - → → }·catch·(error)·{
+         61 │ + → → }·catch·(_error)·{
+     62  62 │         // console.error("Failed to load token:", error);
+     63  63 │         return false;
+  
+
+context\AuthContext.tsx:136:8 lint/correctness/useExhaustiveDependencies  FIXABLE  ━━━━━━━━━━━━━━━━━
+
+  × This hook does not specify its dependency on loadToken.
+  
+    135 │ 	// Load token from store
+  > 136 │ 	React.useEffect(() => {
+        │ 	      ^^^^^^^^^
+    137 │ 		loadToken();
+    138 │ 	}, []);
+  
+  i This dependency is being used here, but is not specified in the hook dependency list.
+  
+    135 │ 	// Load token from store
+    136 │ 	React.useEffect(() => {
+  > 137 │ 		loadToken();
+        │ 		^^^^^^^^^
+    138 │ 	}, []);
+    139 │ 
+  
+  i React relies on hook dependencies to determine when to re-compute Effects.
+    Failing to specify dependencies can result in Effects not updating correctly when state changes.
+    These "stale closures" are a common source of surprising bugs.
+  
+  i Either include it or remove the dependency array.
+  
+  i Unsafe fix: Add the missing dependency loadToken to the list.
+  
+    138 │ → },·[loadToken]);
+        │       +++++++++   
+
+check ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  × Some errors were emitted while running checks.
+  
+

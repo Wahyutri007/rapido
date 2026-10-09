@@ -1,0 +1,341 @@
+{
+  "passed": 27,
+  "failed": 2,
+  "checks": [
+    {
+      "name": "Inventory hub renders closing-stock entry",
+      "pass": true
+    },
+    {
+      "name": "hub opens production stock route",
+      "pass": true
+    },
+    {
+      "name": "current product and material snapshot appears",
+      "pass": true
+    },
+    {
+      "name": "Inventory bottom tab remains present",
+      "pass": true
+    },
+    {
+      "name": "exported SVG filter assets load",
+      "pass": true
+    },
+    {
+      "name": "search accepts typing and filters by SKU",
+      "pass": true
+    },
+    {
+      "name": "search empty state appears",
+      "pass": true
+    },
+    {
+      "name": "reset restores query and results",
+      "pass": true
+    },
+    {
+      "name": "low filter uses material minimum",
+      "pass": true
+    },
+    {
+      "name": "store filter shows registered materials without inventing product scope",
+      "pass": true
+    },
+    {
+      "name": "unknown store quantity is explained",
+      "pass": true
+    },
+    {
+      "name": "unknown store balances are not empty stock",
+      "pass": true
+    },
+    {
+      "name": "material updates appear without reloading",
+      "pass": true
+    },
+    {
+      "name": "zero quantity is filterable",
+      "pass": true
+    },
+    {
+      "name": "known zero uses the destructive text color",
+      "pass": true,
+      "detail": {
+        "className": "css-text-146c3p1 text-right !text-destructive text-foreground text-sm",
+        "color": "rgb(230, 53, 53)",
+        "error": "230 53 53"
+      }
+    },
+    {
+      "name": "narrow-320 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow-320 scrolls to the final material",
+      "pass": true
+    },
+    {
+      "name": "landscape-844 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "landscape-844 scrolls to the final material",
+      "pass": true
+    },
+    {
+      "name": "tablet-768 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "tablet-768 scrolls to the final material",
+      "pass": true
+    },
+    {
+      "name": "removed materials disappear live",
+      "pass": true
+    },
+    {
+      "name": "existing material creation validates successfully",
+      "pass": true,
+      "detail": {
+        "id": "material-1791512202279-6"
+      }
+    },
+    {
+      "name": "new material and decimal unit appear live",
+      "pass": true
+    },
+    {
+      "name": "material store is searchable in the picker",
+      "pass": true
+    },
+    {
+      "name": "store membership filters the new material",
+      "pass": true
+    },
+    {
+      "name": "header back returns to the Inventory hub",
+      "pass": true
+    },
+    {
+      "name": "cold-link back has a working Inventory fallback",
+      "pass": false
+    },
+    {
+      "name": "Browser execution completed",
+      "pass": false,
+      "error": "cold-link back has a working Inventory fallback"
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "network": [
+    {
+      "url": "http://127.0.0.1:8088/inventory",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "url": "http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-SemiBold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Medium.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Regular.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Bold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/Entypo.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/Feather.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/MaterialIcons.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-SemiBold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Regular.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Medium.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/summary.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/transfer.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/adjustment.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/supplier.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/movement.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/closing.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/material.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/purchase.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/payment.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/store.svg",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/status.svg",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/composition.png",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/favicon.ico",
+      "status": 200,
+      "type": "Other"
+    },
+    {
+      "url": "http://127.0.0.1:8088/favicon.ico",
+      "status": 200,
+      "type": "Other"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Bold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/inventory/closing-stock",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "url": "http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Medium.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Regular.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-SemiBold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Bold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/Entypo.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/Feather.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fnode_modules%2F%40expo%2Fvector-icons%2Fbuild%2Fvendor%2Freact-native-vector-icons%2FFonts/MaterialIcons.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-SemiBold.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Regular.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Ffonts/Inter_24pt-Medium.ttf",
+      "status": 200,
+      "type": "Font"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/store.svg",
+      "status": 200,
+      "type": "Image"
+    },
+    {
+      "url": "http://127.0.0.1:8088/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/status.svg",
+      "status": 200,
+      "type": "Image"
+    }
+  ],
+  "scope": "Production Inventory hub, stock screen, tab/layout, shared controls and material store; test-only ExpoRoot context bypasses authentication/API, mutations live only in this browser page."
+}

@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),assert=require('node:assert/strict');
+const root='D:/Rapido-QC-temp/pm-main-2026-10-09';
+const lint=JSON.parse(fs.readFileSync(path.join(__dirname,'eslint.json'),'utf8'));
+const errorFiles=lint.results.filter(r=>r.messages.some(m=>m.severity===2));
+const normalized=data=>data.toString('utf8').replaceAll('\r\n','\n');
+const baseline=errorFiles.map(r=>{const old=cp.execFileSync('git',['show','origin/main:'+r.file],{cwd:root,maxBuffer:2e6});const current=fs.readFileSync(path.join(root,r.file));return {file:r.file,errors:r.messages.filter(m=>m.severity===2).map(m=>({line:m.line,rule:m.ruleId})),identicalSourceToRemoteMain:normalized(old)===normalized(current)};});
+assert(baseline.every(i=>i.identicalSourceToRemoteMain),'Lint failure includes changed source');
+const result={scope:'Errors detected under SDK57/React Compiler rules. These eight sources are byte-equivalent to existing remote main after Git line-ending normalization, not newly edited files. Does not claim global lint PASS.',errors:lint.errors,warnings:lint.warnings,errorFiles:baseline,newlyEditedSourceErrors:0,baselineMain:cp.execFileSync('git',['rev-parse','origin/main'],{cwd:root}).toString().trim()};
+fs.writeFileSync(path.join(__dirname,'lint-baseline.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({inheritedErrors:result.errors,unchangedFiles:baseline.length,changedSourceErrors:0}));

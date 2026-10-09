@@ -1,0 +1,13 @@
+{
+  "scope": "Same-drive build fixture contains bytes applied to isolated integration checkout; shared application source unchanged.",
+  "integrationCandidateSha256": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+  "sharedCallerMatches": {
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab"
+  },
+  "reason": "Metro file-map package resolution failed for cross-drive dependency junction; failed attempts retained in isolated integration packet."
+}

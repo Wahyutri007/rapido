@@ -1,0 +1,123 @@
+{
+  "before": {
+    "schema/manage/digital-order-channel.ts": "fe5f3a9036b2f7a1686ee26f51a059816c43616efc83cd49a726c4dbf21c5ef2",
+    "store/digitalOrderChannelStore.ts": "7ad5993856dd2f79ad44d0cac1a3ccd60725d879a1c1edb78e5654522a437b91",
+    "types/ui/manage/digital-order-channel.ts": "4bca6568ce0f75a25ba36021933c74ddde7237d5772782bd74cd3dc97467a28c",
+    "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx": "9dfe66eee0edb6156715302fa5aeb32634da3dbdbccc2eac2331c3001a7b2a4d",
+    "components/feature/manage/digital-orders/ChannelDetailScreen.tsx": "afc326883efe96154c70523181aabecbe63881b8cec177d5134dbcc1890223d9",
+    "components/feature/manage/digital-orders/ChannelListScreen.tsx": "40a7f9162cfec7fe38c29dd9305de1f2e0f9202a781f0464010daa076391efc4",
+    "components/feature/manage/digital-orders/ChannelModifyScreen.tsx": "714bd3c7f51ef08e806ac462b38382d0bba633cca9c375f083111d90c9e4d206",
+    "components/feature/manage/digital-orders/ChannelNotice.tsx": "335a03cc1ccb217ce2347a1934ec96c7b02809bf2392dde6d0bc15e1599e90f8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx": "b0defc79556765cd2769c16064cffc8da2b26a3aadf4507f3e95b92c924e2ef8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx": "598004ee1b5ac2c2fdf4f1e2a0ca270629c6b50792ca0dde73c64e31d4d98f53",
+    "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx": "1f77d5850dce1f6911d754822129b7b6ef2cd123ab86f9a547b7b58bd7c83ad9",
+    "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx": "c5b3f1deefeccb6d2d6135ac8ae39789db1942804ad12cd13d332531ba6be0df",
+    "app/(no-layout)/manage/pos-settings/index.tsx": "460fff3d582c7d7e6a10cef24419704ded62c1cf69652f8d769617528cc358f5",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f"
+  },
+  "after": {
+    "schema/manage/digital-order-channel.ts": "fe5f3a9036b2f7a1686ee26f51a059816c43616efc83cd49a726c4dbf21c5ef2",
+    "store/digitalOrderChannelStore.ts": "7ad5993856dd2f79ad44d0cac1a3ccd60725d879a1c1edb78e5654522a437b91",
+    "types/ui/manage/digital-order-channel.ts": "4bca6568ce0f75a25ba36021933c74ddde7237d5772782bd74cd3dc97467a28c",
+    "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx": "9dfe66eee0edb6156715302fa5aeb32634da3dbdbccc2eac2331c3001a7b2a4d",
+    "components/feature/manage/digital-orders/ChannelDetailScreen.tsx": "afc326883efe96154c70523181aabecbe63881b8cec177d5134dbcc1890223d9",
+    "components/feature/manage/digital-orders/ChannelListScreen.tsx": "40a7f9162cfec7fe38c29dd9305de1f2e0f9202a781f0464010daa076391efc4",
+    "components/feature/manage/digital-orders/ChannelModifyScreen.tsx": "714bd3c7f51ef08e806ac462b38382d0bba633cca9c375f083111d90c9e4d206",
+    "components/feature/manage/digital-orders/ChannelNotice.tsx": "335a03cc1ccb217ce2347a1934ec96c7b02809bf2392dde6d0bc15e1599e90f8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx": "b0defc79556765cd2769c16064cffc8da2b26a3aadf4507f3e95b92c924e2ef8",
+    "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx": "598004ee1b5ac2c2fdf4f1e2a0ca270629c6b50792ca0dde73c64e31d4d98f53",
+    "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx": "1f77d5850dce1f6911d754822129b7b6ef2cd123ab86f9a547b7b58bd7c83ad9",
+    "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx": "c5b3f1deefeccb6d2d6135ac8ae39789db1942804ad12cd13d332531ba6be0df",
+    "app/(no-layout)/manage/pos-settings/index.tsx": "460fff3d582c7d7e6a10cef24419704ded62c1cf69652f8d769617528cc358f5",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f"
+  },
+  "checks": [
+    {
+      "name": "ESLint fourteen touched sources",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "schema/manage/digital-order-channel.ts",
+        "store/digitalOrderChannelStore.ts",
+        "types/ui/manage/digital-order-channel.ts",
+        "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx",
+        "components/feature/manage/digital-orders/ChannelDetailScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelListScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelModifyScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelNotice.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx",
+        "app/(no-layout)/manage/pos-settings/index.tsx",
+        "app/(no-layout)/manage/pos-settings/_layout.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json",
+        "--output-file",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\digital-orders\\eslint.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Biome twelve new sources",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "schema/manage/digital-order-channel.ts",
+        "store/digitalOrderChannelStore.ts",
+        "types/ui/manage/digital-order-channel.ts",
+        "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx",
+        "components/feature/manage/digital-orders/ChannelDetailScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelListScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelModifyScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelNotice.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 12 files in 61ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "name": "TypeScript six route/POS roots and dependency closure",
+      "args": [
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\digital-orders\\typecheck.cjs"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"status\":\"PASS\",\"sourceFiles\":1315,\"diagnostics\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "Scoped whitespace",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "schema/manage/digital-order-channel.ts",
+        "store/digitalOrderChannelStore.ts",
+        "types/ui/manage/digital-order-channel.ts",
+        "components/feature/manage/digital-orders/ChannelDeleteDialog.tsx",
+        "components/feature/manage/digital-orders/ChannelDetailScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelListScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelModifyScreen.tsx",
+        "components/feature/manage/digital-orders/ChannelNotice.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/detail.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/index.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/digital-orders/_layout.tsx",
+        "app/(no-layout)/manage/pos-settings/index.tsx",
+        "app/(no-layout)/manage/pos-settings/_layout.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/manage/pos-settings/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/manage/pos-settings/index.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "limitations": "Formatting scoped to twelve new sources. All fourteen touched sources linted and both shared roots typechecked. POS slot/parent inverse-delta after EOL normalization is verified by model checks."
+}

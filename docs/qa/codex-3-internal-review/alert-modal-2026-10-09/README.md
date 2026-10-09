@@ -1,0 +1,13 @@
+# Audit internal AlertModal SD3-009
+
+Audit ini hanya membaca source aplikasi. Paket ini milik reviewer internal terdelegasi; implementasi, browser dan handoff developer ditangani Codex-3 utama. Status internal tidak menggantikan keputusan QC eksternal atau gate publikasi PM.
+
+Baseline AlertModal: `da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7`. Snapshot byte sumber disimpan sebelum perubahan di `AlertModal.before.tsx.txt`. `audit-before.json` mencatat fingerprint 71 caller dengan 78 pemakaian dari 841 source pada 10 direktori produksi, import alias, setiap props/children dan asset registry.
+
+Semua caller memakai default import bernama AlertModal, tanpa namespace alias atau props spread. Image eksplisit hanya `ALERTS_ILLUSTRATIONS.category` pada form kategori: JPG 700×272, SHA `46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b`. Tinggi desain Alert 128 px (`h-32`), `resizeMode="cover"`. Alert tidak memiliki maximum eksplisit; primitive Modal default `size="md"` memberi `max-w-[510px]`. Batas 380 dari Success/Delete tidak berlaku pada kontrak Alert.
+
+Satu caller memakai children ikon peringatan (OpenStoreButton), satu message ReactNode (`StoreSalesOverview`), enam pemakaian menyembunyikan dua tombol sekaligus. Dua logout caller memakai isLoading. Pertahankan footer dua grup flex-1, satu tombol ketika satu disembunyikan, dan footer hilang ketika keduanya disembunyikan. isLoading menonaktifkan confirm saja; cancel tetap dapat menutup modal. onClose default menulis state false, sedangkan onClose custom diteruskan langsung tanpa penutupan otomatis. Confirm tanpa onConfirm memakai onClose. Children tetap di antara header dan body message.
+
+Tidak ada klaim implementasi AlertModal aktif lain pada koordinasi yang dibaca; source Success/Delete, primitive Modal/Button/Text dan useAlertModal adalah kontrak baca. Parent telah diberi tahu baseline/caller hash sudah dicapture sebelum perubahan. Semua source di luar direktori produksi yang dipindai juga dicari dengan rg tanpa menemukan referensi caller tambahan. Figma callable tidak tersedia menurut pengecekan parent. Audit ini bukan eksekusi 71 layar atau sertifikasi geometri browser/native.
+
+Execution Profile & Operator Tips: Medium untuk shared sizing dan contract review. Baseline/caller snapshot -> hash final dari parent -> AST geometry-only -> renderer StrictMode dengan dimensi dan primitive host -> fingerprint final -> internal QA -> QC eksternal/PM. Jangan menyalin tinggi/cover/maximum/footer/aturan loading dari Success/Delete. Tidak ada HTTP/backend, server/Metro/HP, data pengguna, dependency, full TypeScript atau operasi Git mutasi.

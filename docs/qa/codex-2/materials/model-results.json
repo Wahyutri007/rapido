@@ -1,0 +1,6 @@
+{
+    "generatedAt":  "2026-10-08T20:26:39.856Z",
+    "assertions":  67,
+    "failures":  0,
+    "scope":  "Production material/schema/store/helpers and inventory integration, with in-memory session fixtures"
+}

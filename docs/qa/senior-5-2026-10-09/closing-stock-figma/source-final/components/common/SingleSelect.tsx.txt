@@ -1,0 +1,376 @@
+import { Entypo, Feather } from "@expo/vector-icons";
+import { tva } from "@gluestack-ui/utils/nativewind-utils";
+import { Image } from "expo-image";
+import React from "react";
+import { Pressable, View } from "react-native";
+import BouncyPressable from "@/components/common/BouncyPressable";
+import SearchBar from "@/components/common/SearchBar";
+import Text from "@/components/common/Text";
+import {
+	Actionsheet,
+	ActionsheetBackdrop,
+	ActionsheetContent,
+	ActionsheetDragIndicator,
+	ActionsheetDragIndicatorWrapper,
+	ActionsheetScrollView,
+} from "@/components/ui/actionsheet";
+import { Colors } from "@/constants/Colors";
+import { haptic } from "@/lib/haptics";
+import { cn } from "@/lib/utils";
+import type { SelectItemProps } from "@/types";
+
+const singleSelectTriggerStyle = tva({
+	base: "flex-row items-center justify-between overflow-hidden px-3",
+	variants: {
+		size: {
+			xl: "h-11",
+			lg: "h-11",
+			md: "h-10",
+			sm: "h-9",
+		},
+		variant: {
+			outline: "rounded-lg border border-zinc-200 bg-white",
+			rounded: "rounded-lg border-0 bg-zinc-100",
+			underlined: "rounded-none border-b border-zinc-200 bg-transparent px-0",
+			ghost: "border-0 bg-transparent px-0",
+		},
+	},
+});
+
+export type SingleSelectProps<T = string> = {
+	items: SelectItemProps<T>[];
+	value?: T;
+	onValueChange?: (value: T) => void;
+	placeholder?: string;
+	label?: string;
+	searchPlaceholder?: string;
+	searchable?: boolean;
+	variant?: "outline" | "rounded" | "underlined" | "ghost";
+	size?: "xl" | "lg" | "md" | "sm";
+	className?: string;
+	disabled?: boolean;
+	leftIcon?: React.ReactNode;
+	renderItemIcon?: (item: SelectItemProps<T>) => React.ReactNode;
+	showConfirmButton?: boolean;
+	confirmText?: string;
+	dismissOnSelect?: boolean;
+	appearance?: "default" | "figma";
+};
+
+export default function SingleSelect<T = string>({
+	items,
+	value,
+	onValueChange,
+	placeholder = "Pilih salah satu",
+	label = "Pilih Opsi",
+	searchPlaceholder,
+	searchable,
+	variant = "outline",
+	size = "xl",
+	className,
+	disabled = false,
+	leftIcon,
+	renderItemIcon,
+	showConfirmButton = false,
+	confirmText = "Selesai",
+	dismissOnSelect = true,
+	appearance = "default",
+}: SingleSelectProps<T>) {
+	const [isOpen, setIsOpen] = React.useState(false);
+	const [draftSelected, setDraftSelected] = React.useState<T | undefined>(
+		value,
+	);
+	const [previousValue, setPreviousValue] = React.useState(value);
+	const [search, setSearch] = React.useState("");
+	const dismissTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(
+		null,
+	);
+
+	// Reconcile an external reset before rendering children; preserve local draft
+	// changes while the committed value stays the same.
+	if (!Object.is(previousValue, value)) {
+		setPreviousValue(() => value);
+		setDraftSelected(() => value);
+	}
+
+	React.useEffect(() => {
+		return () => {
+			if (dismissTimerRef.current) {
+				clearTimeout(dismissTimerRef.current);
+			}
+		};
+	}, []);
+
+	const handleOpen = () => {
+		if (disabled) return;
+		setDraftSelected(value);
+		setSearch("");
+		setIsOpen(true);
+	};
+
+	const handleClose = () => {
+		if (dismissTimerRef.current) {
+			clearTimeout(dismissTimerRef.current);
+		}
+		setIsOpen(false);
+		setSearch("");
+	};
+
+	const handleSelectOption = (item: SelectItemProps<T>) => {
+		if (disabled || item.disabled) return;
+
+		haptic.selection();
+		setDraftSelected(item.value);
+
+		if (showConfirmButton) {
+			return;
+		}
+
+		if (dismissOnSelect) {
+			onValueChange?.(item.value);
+			if (dismissTimerRef.current) {
+				clearTimeout(dismissTimerRef.current);
+			}
+			dismissTimerRef.current = setTimeout(() => {
+				setIsOpen(false);
+				setSearch("");
+			}, 150);
+		} else {
+			onValueChange?.(item.value);
+		}
+	};
+
+	// A refetch may remove or disable a pending choice before confirmation.
+	const isSaveDisabled =
+		disabled ||
+		(draftSelected !== undefined &&
+			!items.some((item) => item.value === draftSelected && !item.disabled));
+
+	const handleSave = () => {
+		if (isSaveDisabled) return;
+		if (draftSelected !== undefined) {
+			onValueChange?.(draftSelected);
+		}
+		handleClose();
+	};
+
+	const selectedItem = items.find((item) => item.value === value);
+
+	const isSearchEnabled =
+		searchable ??
+		(items.length > 6 || items.some((item) => Boolean(item.description)));
+
+	const filteredItems = React.useMemo(() => {
+		if (!search.trim()) return items;
+		const query = search.toLowerCase();
+		return items.filter(
+			(item) =>
+				item.label.toLowerCase().includes(query) ||
+				item.description?.toLowerCase().includes(query),
+		);
+	}, [items, search]);
+
+	const activeIcon = selectedItem?.icon ?? leftIcon;
+
+	return (
+		<>
+			<BouncyPressable
+				onPress={handleOpen}
+				disabled={disabled}
+				activeScale={0.98}
+				hapticType="light"
+				className={cn(
+					singleSelectTriggerStyle({ variant, size }),
+					appearance === "figma" &&
+						"h-12 border-border-muted bg-transparent px-[11px]",
+					disabled && "opacity-50",
+					className,
+				)}
+			>
+				<View className="flex-1 flex-row items-center gap-2 mr-2">
+					{activeIcon ? (
+						<View className="items-center justify-center">{activeIcon}</View>
+					) : null}
+
+					<Text
+						size={appearance === "figma" ? "small" : "normal"}
+						w={selectedItem ? "medium" : "regular"}
+						className={selectedItem ? "text-foreground" : "text-muted"}
+						numberOfLines={1}
+					>
+						{selectedItem ? selectedItem.label : placeholder}
+					</Text>
+				</View>
+
+				{appearance === "figma" ? (
+					<Image
+						source={require("@/assets/images/figma/back-office/chevron-down.svg")}
+						style={{ width: 16, height: 16 }}
+					/>
+				) : (
+					<Entypo
+						name="chevron-small-down"
+						size={20}
+						color={Colors.zinc[500]}
+					/>
+				)}
+			</BouncyPressable>
+
+			<Actionsheet isOpen={isOpen} onClose={handleClose}>
+				<ActionsheetBackdrop />
+				<ActionsheetContent className="px-4 pb-6 pt-2">
+					<ActionsheetDragIndicatorWrapper className="mb-2">
+						<ActionsheetDragIndicator className="h-1 w-10 rounded-full bg-zinc-300" />
+					</ActionsheetDragIndicatorWrapper>
+
+					{/* Modal Header */}
+					<View className="w-full flex-row items-center justify-between pb-3">
+						<Pressable onPress={handleClose} hitSlop={8}>
+							<Text size="body" w="medium" className="text-primary">
+								Batal
+							</Text>
+						</Pressable>
+
+						<Text
+							size="body"
+							w="bold"
+							numberOfLines={1}
+							className="max-w-[60%] text-center"
+						>
+							{label}
+						</Text>
+
+						{showConfirmButton ? (
+							<Pressable
+								onPress={handleSave}
+								disabled={isSaveDisabled}
+								accessibilityState={{ disabled: isSaveDisabled }}
+								className={isSaveDisabled ? "opacity-50" : undefined}
+								hitSlop={8}
+							>
+								<Text size="body" w="semibold" className="text-primary">
+									{confirmText}
+								</Text>
+							</Pressable>
+						) : (
+							<View className="w-10" />
+						)}
+					</View>
+
+					<View className="mb-3 h-px w-full bg-zinc-100" />
+
+					{/* Search Bar */}
+					{isSearchEnabled && (
+						<SearchBar
+							search={search}
+							setSearch={setSearch}
+							placeholder={
+								searchPlaceholder ?? `Cari ${label.toLowerCase()}...`
+							}
+							className="mb-3 bg-white"
+							debounce={false}
+						/>
+					)}
+
+					{/* Items List */}
+					<ActionsheetScrollView
+						className="max-h-[60vh] w-full"
+						showsVerticalScrollIndicator={false}
+						keyboardShouldPersistTaps="handled"
+					>
+						{filteredItems.length === 0 ? (
+							<View className="items-center justify-center py-8">
+								<Text size="normal" className="text-muted">
+									Tidak ada opsi ditemukan
+								</Text>
+							</View>
+						) : (
+							filteredItems.map((item) => {
+								const isSelected = draftSelected === item.value;
+								const iconNode = item.icon ?? renderItemIcon?.(item);
+
+								return (
+									<BouncyPressable
+										key={String(item.value)}
+										onPress={() => handleSelectOption(item)}
+										disabled={disabled || item.disabled}
+										activeScale={0.98}
+										hapticType="none"
+										className={cn(
+											"mb-2.5 w-full flex-row items-center justify-between rounded-2xl border p-3.5",
+											isSelected
+												? "border-primary bg-primary/5"
+												: "border-zinc-200 bg-white",
+											(disabled || item.disabled) && "opacity-40",
+										)}
+									>
+										<View className="flex-1 flex-row items-center gap-3 mr-3">
+											{iconNode ? (
+												<View
+													className={cn(
+														"size-10 items-center justify-center rounded-xl",
+														isSelected ? "bg-primary-100" : "bg-primary-50",
+													)}
+												>
+													{iconNode}
+												</View>
+											) : null}
+
+											<View className="flex-1 justify-center">
+												<View className="flex-row items-center gap-2">
+													<Text
+														size="normal"
+														w={isSelected ? "bold" : "medium"}
+														className={
+															isSelected ? "text-primary" : "text-foreground"
+														}
+													>
+														{item.label}
+													</Text>
+													{item.badge ? (
+														<View className="rounded-full bg-primary-100 px-2 py-0.5">
+															<Text
+																size="small"
+																w="medium"
+																className="text-primary"
+															>
+																{item.badge}
+															</Text>
+														</View>
+													) : null}
+												</View>
+
+												{item.description ? (
+													<Text
+														size="small"
+														className="mt-0.5 leading-tight text-muted"
+													>
+														{item.description}
+													</Text>
+												) : null}
+											</View>
+										</View>
+
+										{/* Selection Radio / Check Pill */}
+										<View
+											className={cn(
+												"h-5 w-5 items-center justify-center rounded-full border",
+												isSelected
+													? "border-primary bg-primary"
+													: "border-zinc-300 bg-white",
+											)}
+										>
+											{isSelected && (
+												<Feather name="check" size={12} color="#ffffff" />
+											)}
+										</View>
+									</BouncyPressable>
+								);
+							})
+						)}
+					</ActionsheetScrollView>
+				</ActionsheetContent>
+			</Actionsheet>
+		</>
+	);
+}

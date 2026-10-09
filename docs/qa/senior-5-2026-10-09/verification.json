@@ -1,0 +1,123 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-001",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceOrigin": "Working tree, not yet committed; SHA-256 hashes bind the developer results",
+  "editedSources": [
+    "app/(onboarding)/onboarding.tsx",
+    "components/custom/LayoutTransitionSplash.tsx"
+  ],
+  "sha256": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/onboarding.tsx": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "docs/qa/senior-5-2026-10-09/lifecycle.cjs": "604e4308d4d249370485749e8b24bf4d3d204ff4a69339acd1e37a7c2c1fca93",
+    "docs/qa/senior-5-2026-10-09/typecheck-focused.cjs": "81bb36a0d1cb45b71a2dee1548740c402da7c34b531282e218def516cabcbd76",
+    "docs/qa/senior-5-2026-10-09/lifecycle-results.json": "afb67e5f172f01abb8f68879518bd8e10125266073ecb68ace2f030663975254",
+    "docs/qa/senior-5-2026-10-09/baseline-results.json": "ed0b8af55e64d087eab13f5b99f1067252e47abf5d2e1c17ea470daea1f9a4ac",
+    "docs/qa/senior-5-2026-10-09/typecheck-results.json": "cde6eebfd9f18083c2ceb9ae7bd0523cd7d70329be2100cf57b0b2fff9a52210"
+  },
+  "lifecycle": {
+    "baselinePassed": 52,
+    "baselineFailed": 9,
+    "passed": 61,
+    "failed": 0,
+    "runtimeErrors": []
+  },
+  "baselineLint": [
+    {
+      "file": "app/(onboarding)/onboarding.tsx",
+      "errors": 6,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        },
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        },
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        },
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        },
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Passing a ref to a function may read its value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        },
+        {
+          "rule": "react-hooks/refs",
+          "line": 30,
+          "severity": 2,
+          "message": "Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(onboarding)\\onboarding.tsx:30:18\n  28 | \tconst { width: windowWidth } = useWindowDimensions();\n  29 | \tconst [pageWidth, setPageWidth] = React.useState(windowWidth);\n> 30 | \tconst scrollX = React.useRef(new Animated.Value(0)).current;\n     | \t                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  31 |\n  32 | \tconst flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);\n  33 |"
+        }
+      ]
+    },
+    {
+      "file": "components/custom/LayoutTransitionSplash.tsx",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "rule": "react-hooks/set-state-in-effect",
+          "line": 12,
+          "severity": 2,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\LayoutTransitionSplash.tsx:12:4\n  10 | \tuseEffect(() => {\n  11 | \t\tif (isTransitioning) {\n> 12 | \t\t\tsetIsVisible(true);\n     | \t\t\t^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  13 | \t\t}\n  14 | \t}, [isTransitioning]);\n  15 |"
+        }
+      ]
+    }
+  ],
+  "finalLint": [
+    {
+      "file": "app/(onboarding)/onboarding.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "components/custom/LayoutTransitionSplash.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ],
+  "biome": {
+    "exitCode": 0,
+    "files": 2
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "scope": "Two edited source files"
+  },
+  "typecheck": {
+    "diagnostics": 0,
+    "scope": "Selected roots plus imported dependency closure; not a full-project check"
+  },
+  "sdkPublication": "fa860c91a7f230e18f1eb03fd321c5d434814cba",
+  "sdkCacheRerun": {
+    "reads": 3000,
+    "writes": 200,
+    "maximumOpenRequests": 64,
+    "errorQueueRecovered": true,
+    "clearDelegated": true
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "signal": "QC-JOURNALS-20261009-CHANGES-REQUESTED",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "createdAt": "2026-10-08T19:07:17.833Z",
+  "status": "CHANGES_REQUESTED",
+  "functionalStatus": "MUTATION_LIFECYCLE_PASS_BALANCED_BADGE_FAILED",
+  "publication": "HOLD_QC_APPROVAL_PENDING_QC_JOURNAL_001_AND_FINAL_HASHES",
+  "findings": [
+    {
+      "id": "QC-JOURNAL-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "category": "MISLEADING_BALANCED_BADGE_FOR_NEGATIVE_OR_NAN_ROW",
+      "affectedSources": [
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx"
+      ],
+      "failures": [
+        "general: NaN row must not show balanced badge",
+        "general: negative typed through production parser must not show balanced badge",
+        "adjusting: NaN row must not show balanced badge",
+        "adjusting: negative typed through production parser must not show balanced badge"
+      ],
+      "dataWritesFromInvalidCases": 0,
+      "patch": "balanced-badge.patch",
+      "appliedToApplication": false
+    }
+  ],
+  "reviewedSourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca"
+  },
+  "trackedHashesAfterIndependentChecks": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "schema/accounting/general-journal.ts": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+    "schema/accounting/adjusting-journal.ts": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "types/ui/accounting/journal.ts": "a16278a683b2f344ed07ba2e3293293998f52a81f8ea68dee8223e724242ae44",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "components/feature/accounting/general-journal/JournalFormNotFound.tsx": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "docs/qa/codex-3/journal-validation/HANDOFF.md": "7e424b60af1bb3ad8b2a41f9cdc3fabadf71d7f7b1826344048ca8e3fc5497ec",
+    "docs/qa/codex-3/journal-validation/check.cjs": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+    "docs/qa/codex-3/journal-validation/baseline.json": "7ebc7937fad41d6c7aa3e462796254a02aba69e5aa31afaef0627b01c468be94",
+    "docs/qa/codex-3/journal-validation/balance-baseline.json": "bfe21dd545845f9b9234bb8a20f581840f5a341f924746184aadda5d0d6d061e",
+    "docs/qa/codex-3/journal-validation/results.json": "392f2ace6f7168cb1246600e9e3826f3eea35c6707dc6765d8d7e90c3ef94e23",
+    "docs/qa/codex-3/journal-validation/regression.cjs": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+    "docs/qa/codex-3/journal-validation/regression-results.json": "1509ae97c683c3860b557d8fe4c4e53512f9050624c6f90c7150a85bb16d7e65",
+    "docs/qa/codex-3/journal-validation/typecheck.cjs": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+    "docs/qa/codex-3/journal-validation/typecheck-results.json": "a12dfa13361d94bd0d313a3d8cbea03150ebcbe6563b81792a579c867f86b0d9",
+    "docs/qa/codex-3/journal-validation/quality.cjs": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+    "docs/qa/codex-3/journal-validation/quality-results.json": "255e79d1fc1bf50ec0fe42697c520656b3ab6428792b729a9d8d826617cc6191",
+    "docs/qa/codex-3/journal-validation/verify.cjs": "2a27682fcd22bb81d8309b9011d7c8d8f3c7ef5b0a88a602be358046ff16d355",
+    "docs/qa/codex-3/journal-validation/general-modify.before.tsx.txt": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+    "docs/qa/codex-3/journal-validation/adjusting-modify.before.tsx.txt": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+    "docs/qa/codex-3/journals/lifecycle.cjs": "efd4b17b687a982ebabdff8d56281f327b1033d09a3aedfff0d2f08cb8d5f8e1",
+    "docs/qa/codex-3/journal-validation/verification.json": "e6d13bdf3188a130698d3917a6e60f3b0f0d40166338e73b4310c2398b08dc01",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "biome.json": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+    "eslint.config.js": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1"
+  },
+  "stableThroughoutReview": true,
+  "independentHashesMatch": true,
+  "checks": {
+    "developerValidationReplay": 187,
+    "developerLifecycleReplay": 55,
+    "independentPassed": 37,
+    "independentFailed": 4,
+    "totalCurrentSourcePassed": 279,
+    "totalCurrentSourceFailed": 4,
+    "runtimeErrors": 0,
+    "note": "Execution count includes overlapping regression coverage."
+  },
+  "quality": {
+    "owner": "Codex-3",
+    "lint": {
+      "command": [
+        "node",
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "files": [
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        },
+        {
+          "file": "lib/accounting/journal-validation.ts",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        }
+      ]
+    },
+    "format": {
+      "command": [
+        "node",
+        "node_modules/@biomejs/biome/bin/biome",
+        "format",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 3 files in 13ms. No fixes applied.",
+      "stderr": ""
+    },
+    "biome": {
+      "command": [
+        "node",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 3 files in 32ms. No fixes applied.",
+      "stderr": ""
+    },
+    "diff": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "renderComparisons": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "comparison": "Editor JSX identical to SD3-003 saved baseline",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "comparison": "Editor JSX identical to SD3-003 saved baseline",
+        "passed": true
+      }
+    ]
+  },
+  "proposal": {
+    "status": "TESTED_SUGGESTION_NOT_APPLIED",
+    "checksPassed": 41,
+    "checksFailed": 0,
+    "lint": {
+      "passed": true,
+      "scope": "Candidate text using actual production file paths and ESLint configuration; no source writes",
+      "results": [
+        {
+          "source": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "candidate": "docs/qa/qc-journals-2026-10-09/proposal/general.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        },
+        {
+          "source": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+          "candidate": "docs/qa/qc-journals-2026-10-09/proposal/adjusting.tsx",
+          "errors": 0,
+          "warnings": 0,
+          "messages": []
+        }
+      ]
+    },
+    "verification": {
+      "owner": "QC",
+      "finding": "QC-JOURNAL-001",
+      "appliedToApplication": false,
+      "comparisons": [
+        {
+          "source": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "candidate": "docs/qa/qc-journals-2026-10-09/proposal/general.tsx",
+          "sourceSha256": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+          "proposalSha256": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+          "astUnchangedExceptBalancedPredicate": true,
+          "syntaxErrors": 0
+        },
+        {
+          "source": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+          "candidate": "docs/qa/qc-journals-2026-10-09/proposal/adjusting.tsx",
+          "sourceSha256": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+          "proposalSha256": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+          "astUnchangedExceptBalancedPredicate": true,
+          "syntaxErrors": 0
+        }
+      ],
+      "biome": {
+        "exitCode": 0
+      },
+      "applicability": {
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "patch": "balanced-badge.patch",
+      "passed": true
+    }
+  },
+  "report": "REPORT.md",
+  "limitations": [
+    "UI/native/router/calendar adapters",
+    "No API/persistence/posting/browser/native/Figma/full-project certification",
+    "ID-store patch only dependency, no approval for separate package"
+  ]
+}

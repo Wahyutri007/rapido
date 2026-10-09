@@ -1,0 +1,23 @@
+{
+  "suite": "sort",
+  "count": 15,
+  "checks": [
+    "sort opens with newest default",
+    "sort option remains draft until save",
+    "unrelated sort rerender preserves draft",
+    "sort cancel emits no change",
+    "sort reopen discards cancelled draft",
+    "sort save emits selected value and requests close",
+    "sort reopen follows committed callback echo",
+    "external sort value replaces pending draft while open",
+    "same external sort value preserves draft",
+    "external value changed while closed takes effect on open",
+    "cleared sort value restores newest default",
+    "backdrop close does not commit draft",
+    "reopen after backdrop close resets draft",
+    "save without option change emits current default",
+    "no React runtime errors or act warnings"
+  ],
+  "errors": [],
+  "scope": "Production component with React 19 test renderer and UI/native/haptic host stubs; no application navigator or native interaction."
+}

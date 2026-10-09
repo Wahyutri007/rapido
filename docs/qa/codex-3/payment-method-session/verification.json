@@ -1,0 +1,297 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-013",
+  "status": "READY_FOR_QA_QC",
+  "externalQcApproval": false,
+  "publishApproved": false,
+  "sourceHashes": {
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+    "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+  },
+  "baselineSourceHashes": {
+    "app/(no-layout)/manage/payment-method/index.tsx": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+    "schema/manage/payment-method.ts": "c0f6d5772a57efae20a32e8ba2278f7c24fd8489cf5b4d2baa1246c57b5626fd"
+  },
+  "contractHashes": {
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/custom/CatalogItemCard.tsx": "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+    "types/ui/manage/payment-method.ts": "5b0b90203b650910fafbd163f77433d0cbccb49e4b389e9417738273cefb4b63",
+    "constants/data/other/bank-types.ts": "e278fa746c65d292cd811b3148a31c987a2a8f493fb71838e92f65eac1ed154a",
+    "constants/data/manage/payment-method.ts": "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "api/hooks/payment-methods.ts": "f3c0430576d8f4c560cf77531428f125d217cdc4e4f01c8ffadd233757fc619b",
+    "types/api/payment-method.ts": "5eded549294f2a9e09f53c42dd16b2f8c7333b01695aa547dc72d4c26b6797b8",
+    "schema/add/payment-method.ts": "0e8baf098b363841f61a30c1a470dd466e24db72e46eaed4bb1f245b5b0e13ec",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "runtimeInputHashes": {
+    "node_modules/typescript/package.json": "9332e97c30d3e53ed54910b89207ed657fb444066484df6e5b6965bf130865e9",
+    "node_modules/react-hook-form/package.json": "eac0e7c80afbe6b66bbfde07a13b934f46cdf1856edf85fccb71f56fde4d270d",
+    "node_modules/@hookform/resolvers/package.json": "64bdc0580067f78fd11defec9f5d2472d6bb81cb8cdccb7f8476493e3813ce2a",
+    "node_modules/zod/package.json": "70eedbe34fd52385a4ae2f3e5759b19682189f0118ea73a6e7c32c677f61668e",
+    "node_modules/zustand/package.json": "6c83df709ccdc90bbba8093e835363e7d7fdfaee94fb43b0d8349784e99b5ccb",
+    ".expo/senior7-test-tools/node_modules/react/package.json": "c383aced6a67c8d06f02996015c0a163e78532a330a96dff1ccfd107b00ab326",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/package.json": "d9624d9b806bd06cc91b03474c7817185f39509477d060bba369a2b8825d832b"
+  },
+  "sourceInputDrift": [
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "before": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+    }
+  ],
+  "internalReview": {
+    "status": "INTERNAL_QA_REVIEW_PASS",
+    "report": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/REPORT.md",
+    "manifest": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/verification.json",
+    "externalQcApproval": false,
+    "checks": {
+      "passed": 50,
+      "failed": 0,
+      "rendererPassed": 47,
+      "replayedPriorAssertions": 45,
+      "newErrorActionChecks": 2,
+      "labelProofChecks": 3,
+      "runtimeErrors": 0,
+      "runtimeWarnings": 0
+    },
+    "sourceHashes": {
+      "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+      "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+      "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+      "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+      "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+      "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+      "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+      "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+      "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+    },
+    "artifacts": [
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/check.cjs",
+        "sha256": "28a6cfff75c909f61efc99b4b30407eeeca52001d7c876a335106256b762ce6a"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/finalize.cjs",
+        "sha256": "a9fc61db6ee5cfb24c32d7f08011500097e83e61f4ff0f318e7516dc126e7856"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/form.before.tsx.txt",
+        "sha256": "ae4011c260e7fcde0087fa7f5adf9bc1812356096535664ee39c3d1dd2185ff4"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/form.final.tsx.txt",
+        "sha256": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/preparation.json",
+        "sha256": "c78f64c1cee93b35d372f2c0ca41e00c4e7ec069d69dc61cc4f8c249d9e3e5e0"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/prepare.cjs",
+        "sha256": "f1b72fed495d2b4c0d03aa2f04a847897e3190b37c134b35529f62b53455ddc0"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/previous-review-manifest.json",
+        "sha256": "8c17b74441cbabeb64a9d989fceea9c584aebc840aadc654e88031371d00fa9a"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/proof.cjs",
+        "sha256": "775f3b40d1d73b5d9ce0976fa57d23651aa40ab3136c22e94739ff2a8b664ec3"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/proof.json",
+        "sha256": "69f8efafa21a7265cb84dd21392aed6ccda1a49b87ef3e2c7c5415b34c83f88f"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/README.md",
+        "sha256": "b5026dbc6f3804a20882d2ae1aa66bb67106a907f7dd760362ab4cdd276e9975"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/REPORT.md",
+        "sha256": "96a6f110726bec81391ded354c057e7c5c664dcdd64b01226fc9a6ae5dfd0ac3"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/app__(no-layout)__manage__payment-method__index.tsx.txt",
+        "sha256": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/app__(no-layout)__manage__payment-method__modify.tsx.txt",
+        "sha256": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__AlertModal.tsx.txt",
+        "sha256": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__DeleteConfirmModal.tsx.txt",
+        "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__Form.tsx.txt",
+        "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__SuccessModal.tsx.txt",
+        "sha256": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__ManageListActions.tsx.txt",
+        "sha256": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__ManageFormNotFound.tsx.txt",
+        "sha256": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodDeleteDialog.tsx.txt",
+        "sha256": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodDetailScreen.tsx.txt",
+        "sha256": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodListScreen.tsx.txt",
+        "sha256": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodModifyScreen.tsx.txt",
+        "sha256": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/constants__data__other__bank-types.ts.txt",
+        "sha256": "e278fa746c65d292cd811b3148a31c987a2a8f493fb71838e92f65eac1ed154a"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/hooks__useAlertModal.ts.txt",
+        "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/schema__manage__payment-method.ts.txt",
+        "sha256": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/store__managePaymentMethodStore.ts.txt",
+        "sha256": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results.json",
+        "sha256": "a1ef6b9c5a193189d42942c7f04746633e8dadf1f8bc2d5f6ae520bc583fdb90"
+      },
+      {
+        "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/verification.json",
+        "sha256": "ee255d9e41868e43847902a95a9e58d667f30eba822d8c49ea80521e96613fb6"
+      }
+    ]
+  },
+  "checks": {
+    "passed": 58,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "productionModules": 20,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "typeDiagnostics": 0
+  },
+  "artifacts": [
+    {
+      "file": "HANDOFF.md",
+      "sha256": "a66a11385a83379db0c3d1a4f46edb175ed78133d48a17ccd22bcdbe7dbf0e06"
+    },
+    {
+      "file": "check.cjs",
+      "sha256": "f947a71c1c37f85af8317ff913c85e3838acf31bed55429150ed689086566bbf"
+    },
+    {
+      "file": "form.before.tsx.txt",
+      "sha256": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41"
+    },
+    {
+      "file": "index.before.tsx.txt",
+      "sha256": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe"
+    },
+    {
+      "file": "inputs-before.json",
+      "sha256": "08bc08ea89e8efa920bc114bc92c76ce39d8727b54626930617851cf4a9f29d3"
+    },
+    {
+      "file": "layout.before.tsx.txt",
+      "sha256": "7e534efac3ed3fb5185cab62fbfa8df5d9d320a5868b70ef2d23ff12535df746"
+    },
+    {
+      "file": "modify.before.tsx.txt",
+      "sha256": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a"
+    },
+    {
+      "file": "quality-before-close-copy.json",
+      "sha256": "23c9ed488ff4b2c30fbba94c4bdf76ca435cab26dedacc6db117e08dca4fa842"
+    },
+    {
+      "file": "quality-first-results.json",
+      "sha256": "b65c2fe410d7eb8d040d3d66d96c7aa96a7880cd3b721cdfc280779ee7d52795"
+    },
+    {
+      "file": "quality-results.json",
+      "sha256": "45fa53d4c8a9672b245620ec1c52963e12a150f55e1ccce0b0602f0cccfb1fdc"
+    },
+    {
+      "file": "quality.cjs",
+      "sha256": "a2a22cdf120772cd055427dc9c22a273b0757397dabbe3f7ead19a0b3a6dbc7a"
+    },
+    {
+      "file": "results-before-close-copy.json",
+      "sha256": "b973a788eddce2def3fee9a6d503f4dff2e7b2b4522b993b74e339f5a3e384ae"
+    },
+    {
+      "file": "results-first.json",
+      "sha256": "42f6dc9f25eeb1a269476b3f9807f0b2b2bc5270571ebc5bb5c5193e3e75d46f"
+    },
+    {
+      "file": "results-interim-54.json",
+      "sha256": "d5d3d46c76848a1e3c11951ed3f12cbcf50cf72883fc568a4837fa536c1b6d7e"
+    },
+    {
+      "file": "results-interim-55-close-copy.json",
+      "sha256": "d15cd4d8d0a9610378d581e9e9c22ee777a06fd2da840717ead771a246d57a80"
+    },
+    {
+      "file": "results.json",
+      "sha256": "33bb5bdcfea5bfebc6fa2de29dc0ca757f80df0c411c839424abb0f289f42333"
+    },
+    {
+      "file": "schema.before.ts.txt",
+      "sha256": "c0f6d5772a57efae20a32e8ba2278f7c24fd8489cf5b4d2baa1246c57b5626fd"
+    },
+    {
+      "file": "verify.cjs",
+      "sha256": "6b762a1be281f5f3c7325b810e9d27823d004680dcd56147a9147dee74da6b8d"
+    }
+  ],
+  "limits": "Production three session routes/list/form/detail/delete/store/schema/RHF/Zod/shared Form/controller/input logic/ManageListActions/ItemActionSheet/modal logic under StrictMode. Native/presentation/picker/FlatList/router/DetailRow are host adapters. No backend, transaction application, disk persistence, browser/native/keyboard geometry/full root/Figma certification."
+}

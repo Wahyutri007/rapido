@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const { spawnSync } = require('node:child_process');
+const original = fs.readFileSync('.expo/income-model-check.cjs', 'utf8');
+const directory = path.relative(process.cwd(), __dirname).replaceAll('\\', '/');
+const copied = original.replaceAll('docs/previews/income', directory);
+if (original === copied || copied.replaceAll(directory, 'docs/previews/income') !== original) throw new Error('Expected model output redirect is not reversible');
+const file = path.join(__dirname, 'developer-model.cjs'); fs.writeFileSync(file, copied);
+const result = spawnSync(process.execPath, [file], { encoding: 'utf8' });
+fs.writeFileSync(path.join(__dirname, 'model.out.txt'), result.stdout || '');
+fs.writeFileSync(path.join(__dirname, 'model.err.txt'), result.stderr || '');
+const report = JSON.parse(fs.readFileSync(path.join(__dirname, 'model-results.json'), 'utf8'));
+console.log(JSON.stringify({ exitCode: result.status, assertions: report.checks.length, onlyOutputPathChanged: true }));
+process.exitCode = result.status ?? 1;

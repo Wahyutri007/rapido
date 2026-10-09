@@ -1,0 +1,1179 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-003",
+  "scope": "Actual journal routes/store and production numeric declarations; native/UI/router/calendar adapters. No API/persistence/browser/native.",
+  "passed": 183,
+  "failed": 4,
+  "checks": [
+    {
+      "name": "general: invalid ISO day blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: invalid ISO day opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: invalid ISO day leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: invalid ISO day retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: invalid abbreviated day blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: invalid abbreviated day opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: invalid abbreviated day leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: invalid abbreviated day retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: non-leap date blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: non-leap date opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: non-leap date leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: non-leap date retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: foreign date text blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: foreign date text opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: foreign date text leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: foreign date text retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: missing account ID blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: missing account ID opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: missing account ID leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: missing account ID retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: whitespace account identity blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: whitespace account identity opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: whitespace account identity leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: whitespace account identity retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: empty lines blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: empty lines opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: empty lines leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: empty lines retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: one balanced line blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: one balanced line opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: one balanced line leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: one balanced line retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: balanced negative netting blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: balanced negative netting opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: balanced negative netting leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: balanced negative netting retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: balanced infinity cannot show balanced badge",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "general: balanced infinity blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: balanced infinity opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: balanced infinity leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: balanced infinity retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: NaN hidden by totals fallback blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: NaN hidden by totals fallback opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: NaN hidden by totals fallback leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: NaN hidden by totals fallback retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: finite rows overflowing total cannot show balanced badge",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "general: finite rows overflowing total blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: finite rows overflowing total opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: finite rows overflowing total leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: finite rows overflowing total retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: unbalanced journal blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: unbalanced journal opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: unbalanced journal leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: unbalanced journal retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: all zero journal blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: all zero journal opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: all zero journal leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: all zero journal retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: whitespace reference blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: whitespace reference opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: whitespace reference leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: whitespace reference retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "general: whitespace description blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: whitespace description opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: whitespace description leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: whitespace description retains description draft",
+      "passed": true,
+      "actual": " ",
+      "expected": " "
+    },
+    {
+      "name": "general: valid 2026-06-30 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid 2026-06-30 preserves date text",
+      "passed": true,
+      "actual": "2026-06-30",
+      "expected": "2026-06-30"
+    },
+    {
+      "name": "general: valid 2026-06-30 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: valid 17 Maret 2026 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid 17 Maret 2026 preserves date text",
+      "passed": true,
+      "actual": "17 Maret 2026",
+      "expected": "17 Maret 2026"
+    },
+    {
+      "name": "general: valid 17 Maret 2026 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: valid 08 Oct 2025 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid 08 Oct 2025 preserves date text",
+      "passed": true,
+      "actual": "08 Oct 2025",
+      "expected": "08 Oct 2025"
+    },
+    {
+      "name": "general: valid 08 Oct 2025 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: valid 08 Okt 2025 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid 08 Okt 2025 preserves date text",
+      "passed": true,
+      "actual": "08 Okt 2025",
+      "expected": "08 Okt 2025"
+    },
+    {
+      "name": "general: valid 08 Okt 2025 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: valid 29 Feb 2024 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid 29 Feb 2024 preserves date text",
+      "passed": true,
+      "actual": "29 Feb 2024",
+      "expected": "29 Feb 2024"
+    },
+    {
+      "name": "general: valid 29 Feb 2024 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: surrounding whitespace stays compatible",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: valid record payload identity unchanged",
+      "passed": true,
+      "actual": [
+        [
+          "a-d",
+          "  10001  "
+        ],
+        [
+          "a-c",
+          "  40001  "
+        ]
+      ],
+      "expected": [
+        [
+          "a-d",
+          "  10001  "
+        ],
+        [
+          "a-c",
+          "  40001  "
+        ]
+      ]
+    },
+    {
+      "name": "general: overflowing input through production numeric parser blocked",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "general: overflowing input leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: invalid date can be corrected and retried once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: successful retry keeps reference draft",
+      "passed": true,
+      "actual": "RETRY-REF",
+      "expected": "RETRY-REF"
+    },
+    {
+      "name": "general: successful retry keeps description draft",
+      "passed": true,
+      "actual": "Retained retry draft",
+      "expected": "Retained retry draft"
+    },
+    {
+      "name": "general: successful retry saves selected date",
+      "passed": true,
+      "actual": "30 Apr 2026",
+      "expected": "30 Apr 2026"
+    },
+    {
+      "name": "general: successful retry then locks action",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: retry cannot duplicate saved mutation",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: invalid ISO day blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: invalid ISO day opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: invalid ISO day leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: invalid ISO day retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: invalid abbreviated day blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: invalid abbreviated day opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: invalid abbreviated day leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: invalid abbreviated day retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: non-leap date blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: non-leap date opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: non-leap date leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: non-leap date retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: foreign date text blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: foreign date text opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: foreign date text leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: foreign date text retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: missing account ID blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: missing account ID opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: missing account ID leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: missing account ID retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: whitespace account identity blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: whitespace account identity opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: whitespace account identity leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: whitespace account identity retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: empty lines blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: empty lines opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: empty lines leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: empty lines retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: one balanced line blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: one balanced line opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: one balanced line leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: one balanced line retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: balanced negative netting blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: balanced negative netting opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: balanced negative netting leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: balanced negative netting retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: balanced infinity cannot show balanced badge",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "adjusting: balanced infinity blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: balanced infinity opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: balanced infinity leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: balanced infinity retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: NaN hidden by totals fallback blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: NaN hidden by totals fallback opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: NaN hidden by totals fallback leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: NaN hidden by totals fallback retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: finite rows overflowing total cannot show balanced badge",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "adjusting: finite rows overflowing total blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: finite rows overflowing total opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: finite rows overflowing total leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: finite rows overflowing total retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: unbalanced journal blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: unbalanced journal opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: unbalanced journal leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: unbalanced journal retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: all zero journal blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: all zero journal opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: all zero journal leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: all zero journal retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: whitespace reference blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: whitespace reference opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: whitespace reference leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: whitespace reference retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: whitespace description blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: whitespace description opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: whitespace description leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: whitespace description retains description draft",
+      "passed": true,
+      "actual": " ",
+      "expected": " "
+    },
+    {
+      "name": "adjusting: whitespace adjustment type blocks mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: whitespace adjustment type opens error",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: whitespace adjustment type leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: whitespace adjustment type retains description draft",
+      "passed": true,
+      "actual": "Description a",
+      "expected": "Description a"
+    },
+    {
+      "name": "adjusting: valid 2026-06-30 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid 2026-06-30 preserves date text",
+      "passed": true,
+      "actual": "2026-06-30",
+      "expected": "2026-06-30"
+    },
+    {
+      "name": "adjusting: valid 2026-06-30 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: valid 17 Maret 2026 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid 17 Maret 2026 preserves date text",
+      "passed": true,
+      "actual": "17 Maret 2026",
+      "expected": "17 Maret 2026"
+    },
+    {
+      "name": "adjusting: valid 17 Maret 2026 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: valid 08 Oct 2025 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid 08 Oct 2025 preserves date text",
+      "passed": true,
+      "actual": "08 Oct 2025",
+      "expected": "08 Oct 2025"
+    },
+    {
+      "name": "adjusting: valid 08 Oct 2025 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: valid 08 Okt 2025 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid 08 Okt 2025 preserves date text",
+      "passed": true,
+      "actual": "08 Okt 2025",
+      "expected": "08 Okt 2025"
+    },
+    {
+      "name": "adjusting: valid 08 Okt 2025 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: valid 29 Feb 2024 saves once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid 29 Feb 2024 preserves date text",
+      "passed": true,
+      "actual": "29 Feb 2024",
+      "expected": "29 Feb 2024"
+    },
+    {
+      "name": "adjusting: valid 29 Feb 2024 shows success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: surrounding whitespace stays compatible",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: valid record payload identity unchanged",
+      "passed": true,
+      "actual": [
+        [
+          "a-d",
+          "  10001  "
+        ],
+        [
+          "a-c",
+          "  40001  "
+        ]
+      ],
+      "expected": [
+        [
+          "a-d",
+          "  10001  "
+        ],
+        [
+          "a-c",
+          "  40001  "
+        ]
+      ]
+    },
+    {
+      "name": "adjusting: overflowing input through production numeric parser blocked",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: overflowing input leaves save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: invalid date can be corrected and retried once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: successful retry keeps reference draft",
+      "passed": true,
+      "actual": "RETRY-REF",
+      "expected": "RETRY-REF"
+    },
+    {
+      "name": "adjusting: successful retry keeps description draft",
+      "passed": true,
+      "actual": "Retained retry draft",
+      "expected": "Retained retry draft"
+    },
+    {
+      "name": "adjusting: successful retry saves selected date",
+      "passed": true,
+      "actual": "30 Apr 2026",
+      "expected": "30 Apr 2026"
+    },
+    {
+      "name": "adjusting: successful retry then locks action",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: retry cannot duplicate saved mutation",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "No unexpected React runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "ba9cd3788ed8ca855db17c9a06adc120b9909f158ae2c77c8731b820ae0033e9",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "fe110bbd9a2aa15258b6f1b26d692b49cb1b91a99d8e9cb31038f94316c15cdf",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "schema/accounting/general-journal.ts": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+    "schema/accounting/adjusting-journal.ts": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-10-09T00:35:45.683Z",
+  "reason": "Senior 6 edited live Stock during modal QC. Isolate the exact original caller contract; new live Stock is a separate handoff.",
+  "stock": {
+    "sourcePath": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+    "expected": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+    "liveObserved": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+    "reviewedFixture": ".expo/qc-success-stock-review-screen.tsx",
+    "reviewedHash": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+    "matchesInitialContract": true,
+    "currentLiveStockApproved": false
+  },
+  "entry": {
+    "file": ".expo/qc-success-stock-entry.jsx",
+    "originalHash": "b1a9111246deb5c09512f4ca88a412249e3ed3b0795256b80074e143c9b3f636",
+    "isolatedHash": "06a8b8929d3f78b6b41f0bce5c8f953daea4305e63c941f84aac9d0096eda614",
+    "onlyChange": "screen import to byte-identical reviewed source copy; SuccessModal stays actual production import"
+  },
+  "mutableContext": [
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "observed": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "owner": "Senior 7",
+      "disposition": "External owner edit; excluded from modal source approval, not reverted or certified"
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "observed": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "owner": "Senior 7",
+      "disposition": "External owner edit; excluded from modal source approval, not reverted or certified"
+    }
+  ],
+  "preservesInitialSnapshot": true
+}

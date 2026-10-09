@@ -1,0 +1,85 @@
+{
+  "suite": "sheet",
+  "status": "PASS",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "initial committed IDs select correct filter labels",
+      "pass": true
+    },
+    {
+      "name": "toggling draft emits no callbacks",
+      "pass": true
+    },
+    {
+      "name": "equivalent selectedIds and refreshed sections preserve draft",
+      "pass": true
+    },
+    {
+      "name": "title rerender preserves draft",
+      "pass": true
+    },
+    {
+      "name": "changed external IDs replace draft",
+      "pass": true
+    },
+    {
+      "name": "cancel only requests close",
+      "pass": true
+    },
+    {
+      "name": "reopen discards unsaved changes",
+      "pass": true
+    },
+    {
+      "name": "empty selection is applied before close",
+      "pass": true
+    },
+    {
+      "name": "explicit empty selection stays empty",
+      "pass": true
+    },
+    {
+      "name": "reset selects every current option",
+      "pass": true
+    },
+    {
+      "name": "reset emits its existing callback immediately",
+      "pass": true
+    },
+    {
+      "name": "apply after reset emits all option IDs",
+      "pass": true
+    },
+    {
+      "name": "external changes while closed initialize next open",
+      "pass": true
+    },
+    {
+      "name": "title fallback remains a usable section ID",
+      "pass": true
+    },
+    {
+      "name": "reset without callback remains usable",
+      "pass": true
+    },
+    {
+      "name": "empty sections apply empty selection",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "pass": true
+    },
+    {
+      "name": "source stable throughout suite",
+      "pass": true
+    }
+  ],
+  "source": {
+    "file": "components/custom/CardList.tsx",
+    "sha256": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2"
+  },
+  "scope": "Production CardList filter sheet/hook/section renderer; React test renderer with RN/UI adapters. No full screen, API or native runtime."
+}

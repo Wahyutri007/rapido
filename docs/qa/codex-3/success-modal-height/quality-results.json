@@ -1,0 +1,60 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-012",
+  "status": "PASS",
+  "sourceHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "lint": {
+    "exitCode": 0,
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "components/common/SuccessModal.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "stderr": "",
+    "files": [
+      {
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/common/SuccessModal.tsx"
+    ],
+    "stdout": "Checked 1 file in 53ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "contractUnchangedOutsideHeightScroll": true,
+  "exactReviewedProposal": true,
+  "diagnostics": [],
+  "focusedTypecheck": {
+    "roots": [
+      "components/common/SuccessModal.tsx"
+    ],
+    "actualConfig": "tsconfig.json",
+    "declarationRoots": [
+      "expo-env.d.ts",
+      "global.d.ts",
+      "nativewind-env.d.ts",
+      ".expo/types/router.d.ts"
+    ],
+    "programSourceFiles": 918,
+    "scope": "One edited source plus actual tsconfig declarations/import closure; not global TypeScript"
+  }
+}

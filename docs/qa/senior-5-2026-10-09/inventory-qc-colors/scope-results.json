@@ -1,0 +1,41 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "StockOperationDetail.tsx only approved opt-in props changed",
+      "pass": true
+    },
+    {
+      "name": "StockOperationList.tsx only approved opt-in props changed",
+      "pass": true
+    },
+    {
+      "name": "PurchaseListScreen.tsx only approved opt-in props changed",
+      "pass": true
+    },
+    {
+      "name": "InventorySectionHeading source behavior unchanged",
+      "pass": true
+    },
+    {
+      "name": "InventorySearch source behavior unchanged",
+      "pass": true
+    },
+    {
+      "name": "InventoryTabs source behavior unchanged",
+      "pass": true
+    },
+    {
+      "name": "StockKindBadge source behavior unchanged",
+      "pass": true
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/inventory/InventoryUi.tsx": "a61c9231a076d3c0eb4e5794c49a093d0f9add403e80999fe254745dfbc9f633",
+    "components/feature/inventory/StockOperationDetail.tsx": "817b6643fea304e63860666454161cea08c4ddacbc936d8c2fe04dd39c911e88",
+    "components/feature/inventory/StockOperationList.tsx": "54b28fd5d26337eb5a2d31c781e5dc1a296e3b9d754e93ee0e26978998e8cc5c",
+    "components/feature/inventory/PurchaseListScreen.tsx": "678b403164d7dc6177c2a396a3d251fa003aa654933a1b83efddf6e1237d126b"
+  },
+  "scope": "Three caller inverse-delta AST equality and four unchanged shared exports. Not whole default caller/native approval."
+}

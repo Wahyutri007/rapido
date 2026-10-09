@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "kind": "Independent QC: complete production Accounts/Card and Ledger components, production Zustand store, native/UI host stubs; in-memory fixture only, no API/native/geometry test.",
+  "passed": 24,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "complete ledger renders production store entry",
+      "passed": true,
+      "actual": [
+        "INV-QC-1"
+      ],
+      "expected": [
+        "INV-QC-1"
+      ]
+    },
+    {
+      "name": "production addLedgerEntry rerenders ledger without parent/route update",
+      "passed": true,
+      "actual": [
+        "le-1791481208351",
+        "INV-QC-1"
+      ],
+      "expected": [
+        "le-1791481208351",
+        "INV-QC-1"
+      ]
+    },
+    {
+      "name": "getter identity remains stable while subscription updates",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "production credit entry updates summary",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "search selects production entry",
+      "passed": true,
+      "actual": [
+        "INV-QC-1"
+      ],
+      "expected": [
+        "INV-QC-1"
+      ]
+    },
+    {
+      "name": "production store update preserves search draft",
+      "passed": true,
+      "actual": "INV-QC-1",
+      "expected": "INV-QC-1"
+    },
+    {
+      "name": "production store update preserves filtered list",
+      "passed": true,
+      "actual": [
+        "INV-QC-1"
+      ],
+      "expected": [
+        "INV-QC-1"
+      ]
+    },
+    {
+      "name": "existing period control updates selected value",
+      "passed": true,
+      "actual": "month",
+      "expected": "month"
+    },
+    {
+      "name": "empty production account store renders recoverable state",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "empty account state contains correct message",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "restoring production account store renders ledger again",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "complete accounts page hydrates debit/credit",
+      "passed": true,
+      "actual": [
+        "100",
+        "20"
+      ],
+      "expected": [
+        "100",
+        "20"
+      ]
+    },
+    {
+      "name": "debit updates real updateBalance store action",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "name": "store echo retains debit draft text",
+      "passed": true,
+      "actual": "0012",
+      "expected": "0012"
+    },
+    {
+      "name": "production parent summary reflects changed debit",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "name": "credit update preserves debit in production store",
+      "passed": true,
+      "actual": [
+        12,
+        42
+      ],
+      "expected": [
+        12,
+        42
+      ]
+    },
+    {
+      "name": "production metadata refresh retains both drafts",
+      "passed": true,
+      "actual": [
+        "0012",
+        "0042"
+      ],
+      "expected": [
+        "0012",
+        "0042"
+      ]
+    },
+    {
+      "name": "account menu opens with production account identity",
+      "passed": true,
+      "actual": "qc-a",
+      "expected": "qc-a"
+    },
+    {
+      "name": "reset opens parent confirmation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reset does not mutate before confirmation",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "name": "confirmed parent reset calls real resetBalance",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "confirmed production reset clears rendered input drafts",
+      "passed": true,
+      "actual": [
+        "",
+        ""
+      ],
+      "expected": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "reset refreshes production summary",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "no unexpected React runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "observations": [
+    {
+      "id": "QC-S8-LEGACY-001",
+      "existing": true,
+      "kind": "Filtered-empty summary fallback",
+      "actual": {
+        "rows": 0,
+        "totalDebit": 100,
+        "totalCredit": 20
+      },
+      "description": "No matches but summary uses account totals; unchanged pre-existing fallback, excluded from delta approval."
+    },
+    {
+      "id": "QC-S8-LEGACY-002",
+      "existing": true,
+      "kind": "Period not applied",
+      "actual": {
+        "before": [
+          "le-1791481208374",
+          "le-1791481208351",
+          "INV-QC-1"
+        ],
+        "after": [
+          "le-1791481208374",
+          "le-1791481208351",
+          "INV-QC-1"
+        ],
+        "outOfPeriodEntryStillPresent": true,
+        "oldEntryDate": "2020-01-01"
+      },
+      "description": "Selecting month still includes a 2020 entry; selectedPeriod is not used by filtering; no period correctness approval."
+    }
+  ],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "15fb7a72a386f860e6d0926fe1a356fd6b4acaa2b994c279b171942ef0675e8d"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "sha256": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97"
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d"
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+    }
+  ]
+}

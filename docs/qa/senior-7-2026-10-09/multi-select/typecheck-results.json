@@ -1,0 +1,60 @@
+{
+  "kind": "Selected MultiSelect and all current caller roots plus dependency closure; not global TypeScript",
+  "roots": [
+    "components/common/MultiSelect.tsx",
+    "app/(no-layout)/catalog/voucher/modify.tsx",
+    "app/(no-layout)/catalog/extra-menu/modify.tsx",
+    "app/(no-layout)/catalog/promo/modify.tsx",
+    "app/(no-layout)/catalog/payment-method/modify.tsx",
+    "app/(no-layout)/catalog/order-type/modify.tsx",
+    "app/(no-layout)/catalog/menu/modify.tsx",
+    "app/(no-layout)/catalog/discount/modify.tsx",
+    "app/(no-layout)/catalog/bundling/modify.tsx",
+    "components/feature/manage/sales-target/SalesTargetForm.tsx"
+  ],
+  "diagnostics": [],
+  "diagnosticCount": 0,
+  "stable": true,
+  "sources": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1"
+    },
+    {
+      "file": "app/(no-layout)/catalog/voucher/modify.tsx",
+      "sha256": "2e8fa3484a74e8fafff4cf4f166adf35d4389332ac81274586a11207ff4976ce"
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/modify.tsx",
+      "sha256": "e2aec36c3570f68d12dcce4f864bfc276de4252bfb5a537d5889c537603c73d4"
+    },
+    {
+      "file": "app/(no-layout)/catalog/promo/modify.tsx",
+      "sha256": "03a93f2f6efd14a44ff06a4f0cf297fe2394817ee57ad8e85bdb729da69526ae"
+    },
+    {
+      "file": "app/(no-layout)/catalog/payment-method/modify.tsx",
+      "sha256": "25b5064b50b19598f24bc2d742ab0282aa191d5800ba43f93fb56531b3597cf4"
+    },
+    {
+      "file": "app/(no-layout)/catalog/order-type/modify.tsx",
+      "sha256": "98c035e045f35f0ce848badd3222b2dfdd74b844bb3dad18f46b87877cb31791"
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/modify.tsx",
+      "sha256": "7499328b07cb5c6a97ed3a93159b769610929815fcb1c714f788bdd1f7ac6dff"
+    },
+    {
+      "file": "app/(no-layout)/catalog/discount/modify.tsx",
+      "sha256": "3cbd93aab9d5ecfea5c57fba1bf91827f3fc39e177e87ed44266c6013459b99c"
+    },
+    {
+      "file": "app/(no-layout)/catalog/bundling/modify.tsx",
+      "sha256": "cec74c0623fac3626c50ff3b4c9366d19fabc6bbac891ba4f6e9712b05156827"
+    },
+    {
+      "file": "components/feature/manage/sales-target/SalesTargetForm.tsx",
+      "sha256": "c9a682472daf973f2d161a1f90c0cbf42361ba155a6f097e4052e412d687ce0a"
+    }
+  ]
+}

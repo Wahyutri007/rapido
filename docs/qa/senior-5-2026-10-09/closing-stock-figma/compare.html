@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perbandingan Stok Akhir — Figma 1:12401</title>
+<style>
+body{font:15px/1.5 system-ui;margin:24px;background:#f7f8fa;color:#2c2c2c}main{max-width:850px;margin:auto}h1{font-size:22px}p{max-width:740px}section{display:flex;gap:24px;overflow:auto}figure{margin:0;flex:none;width:390px}figcaption{margin:8px 0;font-weight:600}img{display:block;width:390px;height:1347px}label{display:flex;gap:16px;align-items:center;margin:16px 0}input{width:240px}.overlay{position:relative;width:390px;height:1347px}.overlay img{position:absolute;inset:0}.overlay img:last-child{opacity:.5}summary{cursor:pointer;margin:16px 0}
+</style>
+<main>
+<h1>Stok Akhir: referensi dan hasil aplikasi</h1>
+<p>Frame <strong>1:12401</strong>, ukuran asli 390 × 1347. Nilai produk dari Figma dipakai hanya dalam halaman pengujian untuk menyamakan konten perbandingan. Aplikasi tetap membaca data Inventory yang tersedia.</p>
+<p>Delapan posisi dan ukuran utama cocok dengan metadata. Ini bukti tampilan browser untuk satu frame; seluruh halaman Figma dan Android belum disahkan 100%.</p>
+<section>
+<figure><figcaption>Figma</figcaption><img src="figma-reference.png" alt="Frame asli Figma Stok Akhir"></figure>
+<figure><figcaption>Implementasi</figcaption><img src="reference-390x1347.png" alt="Hasil render komponen aplikasi Stok Akhir"></figure>
+</section>
+<details><summary>Tumpuk gambar untuk membandingkan</summary>
+<p>Screenshot Figma dari layanan berukuran lebih kecil dan ditampilkan pada ukuran frame asli. Anti-alias/font antar-renderer dapat berbeda; ini bukan uji identitas byte piksel.</p>
+<label>Transparansi aplikasi <input id="opacity" type="range" min="0" max="100" value="50"></label>
+<div class="overlay"><img src="figma-reference.png" alt="Figma"><img id="app" src="reference-390x1347.png" alt="Implementasi"></div>
+</details>
+<p><a href="HANDOFF.md">Hasil dan batas QA/QC</a> · <a href="geometry.json">Ukuran terukur</a></p>
+</main>
+<script>document.getElementById('opacity').addEventListener('input',e=>document.getElementById('app').style.opacity=e.target.value/100)</script>
+</html>

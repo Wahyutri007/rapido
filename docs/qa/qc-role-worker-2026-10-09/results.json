@@ -1,0 +1,744 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-004",
+  "scope": "Actual route/editor/RHF/Zod/worker multipart helper with API/query/native/UI/fetch adapters; no API writes, browser, full router or native",
+  "passed": 106,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "role: edit prefilled",
+      "passed": true,
+      "actual": "Entity A",
+      "expected": "Entity A"
+    },
+    {
+      "name": "role: same-ID refetch keeps draft",
+      "passed": true,
+      "actual": "Draft A",
+      "expected": "Draft A"
+    },
+    {
+      "name": "role: different ID hydrates B",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "role: edit to create resets all defaults",
+      "passed": true,
+      "actual": {
+        "name": "",
+        "permissions": []
+      },
+      "expected": {
+        "name": "",
+        "permissions": []
+      }
+    },
+    {
+      "name": "role: create cannot clone old entity",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "role: return to B after create hydrates B",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "role: successful edit targets A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "role: success locks save",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: identity change clears success modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: identity change clears saved lock",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: same-event double save creates once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "role: closing success navigates back",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "role: closing modal keeps saved editor locked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: saved callback cannot send second mutation",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "role: pending success starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "role: late success preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "role: late success leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late success cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late success cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late success cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: pending 422 starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "role: late 422 preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "role: late 422 leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 422 cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 422 cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 422 cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: pending 500 starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "role: late 500 preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "role: late 500 leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 500 cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 500 cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: late 500 cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: current 422 preserves draft",
+      "passed": true,
+      "actual": "Current draft",
+      "expected": "Current draft"
+    },
+    {
+      "name": "role: current 422 maps field errors",
+      "passed": true,
+      "actual": "Name rejected",
+      "expected": "Name rejected"
+    },
+    {
+      "name": "role: indexed permission error maps to permission field",
+      "passed": true,
+      "actual": "Permission rejected",
+      "expected": "Permission rejected"
+    },
+    {
+      "name": "role: current 422 unlocks retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: retry after 422 succeeds",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: missing ID hides form",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "role: missing ID blocks save",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: query retry hydrates record",
+      "passed": true,
+      "actual": "Recovered",
+      "expected": "Recovered"
+    },
+    {
+      "name": "role: supplied empty ID cannot create",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "role: array ID uses first record",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "role: queued old submit after unmount starts no mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "role: StrictMode replay still permits current save",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "role: StrictMode save locks current editor",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: edit prefilled",
+      "passed": true,
+      "actual": "Entity A",
+      "expected": "Entity A"
+    },
+    {
+      "name": "worker: same-ID refetch keeps draft",
+      "passed": true,
+      "actual": "Draft A",
+      "expected": "Draft A"
+    },
+    {
+      "name": "worker: different ID hydrates B",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "worker: edit to create resets all defaults",
+      "passed": true,
+      "actual": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "role_id": "",
+        "store_id": "",
+        "address": "",
+        "date_of_birth": "",
+        "password": "",
+        "password_confirmation": "",
+        "face_scan": null,
+        "id_scan": null
+      },
+      "expected": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "role_id": "",
+        "store_id": "",
+        "address": "",
+        "date_of_birth": "",
+        "password": "",
+        "password_confirmation": "",
+        "face_scan": null,
+        "id_scan": null
+      }
+    },
+    {
+      "name": "worker: create cannot clone old entity",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: return to B after create hydrates B",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "worker: successful edit targets A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "worker: success locks save",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: identity change clears success modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: identity change clears saved lock",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: same-event double save creates once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "worker: closing success navigates back",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "worker: closing modal keeps saved editor locked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: saved callback cannot send second mutation",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "worker: pending success starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "worker: late success preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "worker: late success leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late success cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late success cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late success cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: pending 422 starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "worker: late 422 preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "worker: late 422 leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 422 cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 422 cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 422 cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: pending 500 starts on A",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "worker: late 500 preserves new A draft",
+      "passed": true,
+      "actual": "New A draft",
+      "expected": "New A draft"
+    },
+    {
+      "name": "worker: late 500 leaves new A unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 500 cannot open success",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 500 cannot open alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late 500 cannot attach field error",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: current 422 preserves draft",
+      "passed": true,
+      "actual": "Current draft",
+      "expected": "Current draft"
+    },
+    {
+      "name": "worker: current 422 maps field errors",
+      "passed": true,
+      "actual": "Name rejected",
+      "expected": "Name rejected"
+    },
+    {
+      "name": "worker: current 422 unlocks retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: retry after 422 succeeds",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: missing ID hides form",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: missing ID blocks save",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: query retry hydrates record",
+      "passed": true,
+      "actual": "Recovered",
+      "expected": "Recovered"
+    },
+    {
+      "name": "worker: supplied empty ID cannot create",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: array ID uses first record",
+      "passed": true,
+      "actual": "Entity B",
+      "expected": "Entity B"
+    },
+    {
+      "name": "worker: queued old submit after unmount starts no mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: StrictMode replay still permits current save",
+      "passed": true,
+      "actual": [
+        "a"
+      ],
+      "expected": [
+        "a"
+      ]
+    },
+    {
+      "name": "worker: StrictMode save locks current editor",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: success preparation awaits production image fetch",
+      "passed": true,
+      "actual": [
+        "fixture://photo-a"
+      ],
+      "expected": [
+        "fixture://photo-a"
+      ]
+    },
+    {
+      "name": "worker: late photo success starts no API request",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: late photo success keeps B draft",
+      "passed": true,
+      "actual": "New B draft",
+      "expected": "New B draft"
+    },
+    {
+      "name": "worker: late photo success cannot open B alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late photo success leaves B save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: failure preparation awaits production image fetch",
+      "passed": true,
+      "actual": [
+        "fixture://photo-a"
+      ],
+      "expected": [
+        "fixture://photo-a"
+      ]
+    },
+    {
+      "name": "worker: late photo failure starts no API request",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: late photo failure keeps B draft",
+      "passed": true,
+      "actual": "New B draft",
+      "expected": "New B draft"
+    },
+    {
+      "name": "worker: late photo failure cannot open B alert",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: late photo failure leaves B save unlocked",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: current image failure is reported",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: current image failure allows retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: image retry sends multipart method override",
+      "passed": true,
+      "actual": "PUT",
+      "expected": "PUT"
+    },
+    {
+      "name": "worker: image retry sends prepared file",
+      "passed": true,
+      "actual": {
+        "name": "current.png",
+        "size": 5,
+        "type": "image/png"
+      },
+      "expected": {
+        "name": "current.png",
+        "size": 5,
+        "type": "image/png"
+      }
+    },
+    {
+      "name": "worker: create multipart preserves password",
+      "passed": true,
+      "actual": "password123",
+      "expected": "password123"
+    },
+    {
+      "name": "worker: create multipart has no method override",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "No unexpected React runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+    "app/(no-layout)/(back-office)/manage/roles/modify.tsx": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+    "app/(no-layout)/manage/workers/modify.tsx": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "schema/add/role.ts": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+    "schema/add/worker.ts": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22"
+  }
+}

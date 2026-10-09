@@ -1,0 +1,35 @@
+{
+  "id": "QC-SD6-20261009-PASS-DELTA",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "date": "2026-10-09",
+  "closedFindings": [
+    {
+      "id": "QC-SD6-001",
+      "severity": "P1",
+      "status": "CLOSED",
+      "sourceSha256": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f"
+    }
+  ],
+  "sources": {
+    "app/(no-layout)/manage/printer/modify.tsx": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4"
+  },
+  "verification": {
+    "developerLifecycleRerun": 42,
+    "qcAdditionalScenarios": 12,
+    "lifecyclePassed": 54,
+    "requestAndPricingPayloadsPassed": 29,
+    "databaseQueryCount": 0,
+    "runtimeErrors": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biome": "PASS",
+    "diffCheck": "PASS",
+    "fullIntegrationTypecheck": "PM_PENDING",
+    "uiApiDeveloperEvidence": "FINAL_REVIEWED_AND_FINGERPRINTED_NOT_QC_BROWSER_RERUN"
+  },
+  "report": "recheck/REPORT.md",
+  "scope": "Lifecycle delta plus rounding unit contract; full native/API/printer/stock-category/applyTo/main approval excluded",
+  "handoffChannel": "Shared workspace documents; direct delivery not claimed"
+}

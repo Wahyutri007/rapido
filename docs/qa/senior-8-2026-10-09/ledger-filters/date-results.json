@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "passed": 63,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "quarter reference 1, candidate 2026-01-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 1, candidate 2026-03-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 1, candidate 2025-12-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 1, candidate 2026-04-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 3, candidate 2026-01-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 3, candidate 2026-03-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 3, candidate 2025-12-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 3, candidate 2026-04-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 4, candidate 2026-04-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 4, candidate 2026-06-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 4, candidate 2026-03-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 4, candidate 2026-07-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 6, candidate 2026-04-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 6, candidate 2026-06-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 6, candidate 2026-03-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 6, candidate 2026-07-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 7, candidate 2026-07-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 7, candidate 2026-09-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 7, candidate 2026-06-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 7, candidate 2026-10-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 9, candidate 2026-07-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 9, candidate 2026-09-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 9, candidate 2026-06-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 9, candidate 2026-10-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 10, candidate 2026-10-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 10, candidate 2026-12-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 10, candidate 2026-09-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 10, candidate 2027-01-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 12, candidate 2026-10-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 12, candidate 2026-12-15",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "quarter reference 12, candidate 2026-09-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "quarter reference 12, candidate 2027-01-15",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2024-02-29 / month / Thu Feb 29 2024 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "29-02-2024 / month / Thu Feb 29 2024 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "29 Februari 2024 / month / Thu Feb 29 2024 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2023-02-29 / year / Wed Feb 01 2023 00:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2024-02-30 / month / Thu Feb 29 2024 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "31-04-2026 / year / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "31 April 2026 / year / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-13-01 / year / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-00-01 / year / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-10-00 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-10-32 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "01-10-2026 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2026-10-31 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "1 oktober 2026 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": " 09-10-2026  / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": " 2026-10-09  / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2026-09-30 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-11-01 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2027-01-01 / year / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2027-12-31 / year / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2026-12-31 / year / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2028-01-01 / year / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2027-01-01 / month / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2026-12-31 / quarter / Fri Jan 01 2027 00:01:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "01/10/2026 / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "unknown / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "empty / month / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "unknown / all / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2020-01-01 / all / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "2026-10-09 / unsupported / Fri Oct 09 2026 12:00:00 GMT+0700 (Western Indonesia Time)",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "2026-10-09 / year / Invalid Date",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    }
+  ],
+  "files": [
+    {
+      "file": "lib/accounting/ledger-filter.ts",
+      "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+    }
+  ]
+}

@@ -1,0 +1,2064 @@
+{
+  "status": "INTERNAL_QA_REVIEW",
+  "externalQcApproval": false,
+  "finishedAt": "2026-10-09T00:31:43.396Z",
+  "baseline": false,
+  "summary": {
+    "assertions": 199,
+    "passed": 199,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "loadedSourceHashes": {
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "hooks/useRefreshControl.ts": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "checks": [
+    {
+      "name": "Role/normal: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Role/normal: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/roles/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/roles/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Role/normal: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "role A UPDATED",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/normal: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "role A UPDATED",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/normal: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Role/normal: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role/normal: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A"
+        }
+      ]
+    },
+    {
+      "name": "Role/normal: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Role/normal: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role/normal: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Role/normal: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/normal: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/normal: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/normal: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Role/StrictMode: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/roles/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/roles/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Role/StrictMode: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "role A UPDATED",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/StrictMode: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "role A UPDATED",
+      "expected": "role A UPDATED"
+    },
+    {
+      "name": "Role/StrictMode: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Role/StrictMode: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/roles/A"
+        }
+      ]
+    },
+    {
+      "name": "Role/StrictMode: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Role/StrictMode: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Role/StrictMode: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Role/StrictMode: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Role/StrictMode: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worker/normal: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/workers/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/workers/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worker/normal: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "worker A UPDATED",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/normal: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "worker A UPDATED",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/normal: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Worker/normal: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A"
+        }
+      ]
+    },
+    {
+      "name": "Worker/normal: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Worker/normal: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Worker/normal: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/normal: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/normal: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/workers/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/workers/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "worker A UPDATED",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/StrictMode: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "worker A UPDATED",
+      "expected": "worker A UPDATED"
+    },
+    {
+      "name": "Worker/StrictMode: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/contents/workers/A"
+        }
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Worker/StrictMode: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Member/normal: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/member/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/member/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Member/normal: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "member A UPDATED",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/normal: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "member A UPDATED",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/normal: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Member/normal: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A"
+        }
+      ]
+    },
+    {
+      "name": "Member/normal: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Member/normal: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Member/normal: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/normal: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/normal: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: normal shared close->edit navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Member/StrictMode: normal edit closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: cached consumed edit cannot navigate twice",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: normal shared close->detail navigates current id",
+      "pass": true,
+      "actual": [
+        {
+          "pathname": "/manage/member/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ],
+      "expected": [
+        {
+          "pathname": "/manage/member/detail",
+          "params": {
+            "id": "A"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Member/StrictMode: new B sheet is open",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: old A cannot close B actions",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: old A cannot open B confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: old A cannot navigate after B opens",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: same-A explicit reopen has fresh action lifetime",
+      "pass": true,
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: same-ID rename updates sheet title",
+      "pass": true,
+      "actual": "member A UPDATED",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/StrictMode: same-ID rename updates confirmation target label",
+      "pass": true,
+      "actual": "member A UPDATED",
+      "expected": "member A UPDATED"
+    },
+    {
+      "name": "Member/StrictMode: successful query removal closes actions",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: removed A cached action cannot open confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: reappearance does not reopen old actions/confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: explicit reselect after reappearance works",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: normal shared close->delete opens confirmation",
+      "pass": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Member/StrictMode: removal closes confirmation and cached confirm sends nothing",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: reappearance does not reopen confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: double confirm issues one actual DELETE",
+      "pass": true,
+      "actual": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A"
+        }
+      ],
+      "expected": [
+        {
+          "method": "delete",
+          "url": "/customers/data/A"
+        }
+      ]
+    },
+    {
+      "name": "Member/StrictMode: busy production modal marked loading",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: own invalidation removes A in query fixture",
+      "pass": true,
+      "actual": [
+        "B"
+      ],
+      "expected": [
+        "B"
+      ]
+    },
+    {
+      "name": "Member/StrictMode: own invalidation retains success until acknowledgement",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: actual query cache invalidated",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: own success acknowledgement closes without navigation",
+      "pass": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: pending A can complete and report success after query removal",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        1
+      ],
+      "expected": [
+        true,
+        false,
+        1
+      ]
+    },
+    {
+      "name": "Member/StrictMode: success A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: network A callback/result does not affect B generation",
+      "pass": true,
+      "actual": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ],
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "Member/StrictMode: current failure opens production error/keeps confirmation",
+      "pass": true,
+      "actual": [
+        true,
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: current error retry succeeds with actual two calls",
+      "pass": true,
+      "actual": [
+        2,
+        true,
+        false
+      ],
+      "expected": [
+        2,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "Member/StrictMode: unmounted action session sends/navigates nothing",
+      "pass": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Unchanged production contract: components/custom/ItemActionSheet.tsx",
+      "pass": true,
+      "actual": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+      "expected": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2"
+    },
+    {
+      "name": "Unchanged production contract: components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "pass": true,
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207"
+    },
+    {
+      "name": "Unchanged production contract: components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "pass": true,
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a"
+    },
+    {
+      "name": "Unchanged production contract: components/feature/manage/member/MemberDeleteDialog.tsx",
+      "pass": true,
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+    },
+    {
+      "name": "Unchanged production contract: components/common/AlertModal.tsx",
+      "pass": true,
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e"
+    },
+    {
+      "name": "Unchanged production contract: components/common/DeleteConfirmModal.tsx",
+      "pass": true,
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    {
+      "name": "Unchanged production contract: components/common/SuccessModal.tsx",
+      "pass": true,
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+    },
+    {
+      "name": "Unchanged production contract: hooks/useAlertModal.ts",
+      "pass": true,
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "name": "Unchanged production contract: hooks/useRefreshControl.ts",
+      "pass": true,
+      "actual": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+      "expected": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198"
+    },
+    {
+      "name": "Unchanged production contract: hooks/usePostRequest.ts",
+      "pass": true,
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe"
+    },
+    {
+      "name": "Unchanged production contract: api/hooks/roles.ts",
+      "pass": true,
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66"
+    },
+    {
+      "name": "Unchanged production contract: api/hooks/workers.ts",
+      "pass": true,
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22"
+    },
+    {
+      "name": "Unchanged production contract: api/hooks/customers.ts",
+      "pass": true,
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+    },
+    {
+      "name": "Unchanged production contract: api/factory.ts",
+      "pass": true,
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915"
+    },
+    {
+      "name": "Unchanged production contract: api/common.ts",
+      "pass": true,
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a"
+    },
+    {
+      "name": "Unchanged production contract: lib/api-utils.ts",
+      "pass": true,
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a"
+    },
+    {
+      "name": "Unchanged production contract: lib/manage/roles.ts",
+      "pass": true,
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc"
+    },
+    {
+      "name": "Unchanged production contract: lib/manage/workers.ts",
+      "pass": true,
+      "actual": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "expected": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b"
+    },
+    {
+      "name": "Unchanged production contract: lib/manage/members.ts",
+      "pass": true,
+      "actual": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+      "expected": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+    }
+  ],
+  "runtimeErrors": [],
+  "warnings": [],
+  "adapters": "Production three List/new helper/ItemActionSheet/three DeleteDialog/three shared modals/useAlertModal/useRefreshControl/usePostRequest/API hooks/factory/Common/error mapper/display helpers with actual QueryClient/Axios. GET list hooks use query data adapter; Axios transport uses deferred memory outcomes; API client auth/interceptors excluded. Presentation/native/Colors/router adapters; no real HTTP/browser/native/full navigator."
+}

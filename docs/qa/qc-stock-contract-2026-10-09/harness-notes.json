@@ -1,0 +1,21 @@
+{
+  "finalProductChecks": {
+    "policyPassed": 20,
+    "policyFailed": 10,
+    "frontendRuntimeErrors": 0
+  },
+  "corrections": [
+    {
+      "issue": "First git diff invocation used backend root, which is not a Git repository.",
+      "correction": "Reran scoped diff check from application root; exit 0. Initial invocation excluded from gate evidence."
+    },
+    {
+      "issue": "Initial memory fixture tried to inject Store.latestShift as a relation; production implements an accessor and queried store_shifts.",
+      "correction": "Created isolated store_shifts table and open shift fixture; production accessor/SQL now runs. No missing-table error in final run. The initial Console exception output returned shell exit 0, so success is validated by artifacts and assertions as well as exit code."
+    },
+    {
+      "issue": "Initial controller roundtrip assertion compared complete POST and GET JSON objects, including nullable defaults and relations populated during Eloquent serialization.",
+      "correction": "Compare source-consumed contract fields: ID/type/enabled/content_type default and morph-type/ID detail pairs. Record both full responses. Two harness-only mismatch assertions removed; four roundtrips pass and ten accessor/guard product failures remain."
+    }
+  ]
+}

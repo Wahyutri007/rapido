@@ -1,0 +1,170 @@
+{
+  "signal": "QC-MANAGE-FORMS-20261009-CHANGES-REQUESTED",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "status": "CHANGES_REQUESTED",
+  "functionalStatus": "PASS_FOCUSED_BROWSER",
+  "publication": "HOLD_QC_APPROVAL_PENDING_IMPORT_ORDER_FIX_AND_FINAL_HASHES",
+  "findings": [
+    {
+      "id": "QC-MANAGE-FORMS-001",
+      "severity": "P3",
+      "category": "assist/source/organizeImports",
+      "diagnostics": 7,
+      "patch": "organize-imports.patch",
+      "applied": false
+    }
+  ],
+  "reviewedSourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+    "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+  },
+  "sourceStableThroughoutReview": true,
+  "gitHeadAtDecision": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "quality": {
+    "scopedEslint": {
+      "exitCode": 0,
+      "files": 10,
+      "errors": 0,
+      "warnings": 0,
+      "command": "node node_modules/eslint/bin/eslint.js [four modify paths] components/feature/manage/settings --max-warnings 0 --no-cache"
+    },
+    "biome-format": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/@biomejs/biome/bin/biome",
+        "format",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    },
+    "biome-check": {
+      "command": [
+        "D:\\laragon\\bin\\node.exe",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "--reporter=json",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 1
+    },
+    "diff-check": {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/extra/modify.tsx",
+        "app/(no-layout)/manage/order-type/modify.tsx",
+        "app/(no-layout)/manage/payment-method/modify.tsx",
+        "app/(no-layout)/manage/tax/modify.tsx",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "components/feature/manage/settings/ManageFormNotFound.tsx",
+        "components/feature/manage/settings/ManagePreviewForm.tsx",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "components/feature/manage/settings/TaxModifyScreen.tsx"
+      ],
+      "exitCode": 0
+    }
+  },
+  "suites": [
+    {
+      "file": "results.json",
+      "passed": 54,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "apiWrites": 0
+    },
+    {
+      "file": "independent-results.json",
+      "passed": 38,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "apiWrites": 0
+    }
+  ],
+  "assertionExecutions": 92,
+  "dependencyDrift": [
+    {
+      "file": "metro.config.js",
+      "before": "f6ecc0c41505a2c259fa5bd4e89af38c6265c1c1df59eba4ec1ec93ff94418e9",
+      "current": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160"
+    }
+  ],
+  "runtime": {
+    "ownMetroPort": 8111,
+    "ownMetroPid": 24080,
+    "ownProcessesStopped": [
+      24080,
+      40388
+    ],
+    "portVerifiedClosed": true,
+    "browsersClosed": true,
+    "currentSharedMetroConfigApproved": false
+  },
+  "artefacts": {
+    "biome-check.err.txt": "be2060bf3de21faebf0302ab0a9108606da09c0d76a761b81188050f68a490d6",
+    "biome-check.json": "3e865fbe5a293a331d90b3c8b0c9c0e7125f175da7a108423f870e7879883d83",
+    "biome-check.out.txt": "7e01b2e59060bb1553a202176b0e202faa8252b853eafd76951af9c976e940df",
+    "biome-format.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "biome-format.out.txt": "07ae2762f0b2a355ad41f51b3df7c10599893973500c0b19fa199f9c0dfb1559",
+    "build-independent.cjs": "d677bdff325d70a97171ab4e56e12a201d7e86fe7ba6f23dad65d4f0a5eb59b1",
+    "check.cjs": "0f8a570fd23ffed3750028e678d286487e081e77bb1fb00957c26404e2408187",
+    "diff-check.err.txt": "64cf7b86626a4157a0f0e3c29f4dffb69332e8d4cdf29bf92f7cfac0617d34f6",
+    "diff-check.out.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "extra-320.png": "f202b15f0310188ac40b837fd29202e338122fb8611658e9bb145acf20152def",
+    "finalize.cjs": "596e83f2d50f5e9b9a69b908a2bf79fb9082dfbdd2acdfb45da28eb75f6f09ba",
+    "independent-results.json": "e27c61cb94e3631364589e4a65dbfd75cf3012251708614331cde1652c4eb2cf",
+    "independent.cjs": "294be3fff79ab559c2dca9b828808ce9c476372849976c291146b335747775f8",
+    "order-type-320.png": "66fb3b9d920735a0c18e7be70089bbba14fd4441e947022a944f29e2b3a1157f",
+    "organize-imports.patch": "03222369ff63b2adc87622dc09eb7a12e326ef7b5f52c9079b23f75e122fd30c",
+    "payment-method-320.png": "743d41852fa84da6dbea82276a7e233321ca5ceb5339ede7f25163969c6085db",
+    "prepare-style-patch.cjs": "5e360a656cf375a1e2cb26e185a9346a995fb3480a7d4181cbe341ddbdc99439",
+    "qc-extra-params.png": "fefd3da71951b4f719dc15bc8a5d358a1648c28ce7794aecc582a3f9cc517481",
+    "qc-order-type-params.png": "ef327967211815a204848734b0bff03aef21beb7f23b5edf2223878811b7dfa3",
+    "qc-payment-method-params.png": "65e99296156939a51e3a5d6329051bad93d4eebf89774989a407f886e5792e75",
+    "qc-tax-params.png": "864c474b9b76be7f4cb2267055bc712d92a133e35aa756a2d7dc5595473fcb04",
+    "quality-results.json": "b8a97d7c48926ea730a60b116aceddaf95fb9b415a3d3d91fb5439e0e64cc8b5",
+    "REPORT.md": "5f663f8dcc146ec29d4b68c90240bc872e732c2b7f7fd04cadadbfb6de8cdaee",
+    "results.json": "15420fb4f11f2c2ef7ee3fa2d36e8ba2055bcad01a4712425c81a4e8f20232a0",
+    "source-after.json": "dc3a8fec81274740cdb9dc7181d8bea4d72462db4ffe46c2d01943799c23a113",
+    "source-before.json": "67806dd490a9d19b85b63654ee0dec25a2235317dca5c14b5f1a3ecf81e751d4",
+    "style-findings.json": "75c7b41b13196b2e308754466fb5efb4a89d24cf23a6509a27612023c8f83ce3",
+    "tax-320.png": "fe82940557e7dafd14206519b04fd4faf935f0ce80fd01253b08700027f1a016"
+  },
+  "limitations": [
+    "Isolated layout/list fixtures, production routes/form/pickers/fonts",
+    "Forms remain preview with no persistence/API",
+    "No full auth/root/SSR/native/Figma verification",
+    "Shared Metro cache fix changed during review and needs separate gate",
+    "Full TypeScript/integration remain with PM"
+  ],
+  "handoff": "Codex-3 fixes import order and hands off final fingerprints; PM owns publication. No application source, Git index/branch, commit or push changed by this QC batch."
+}

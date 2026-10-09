@@ -1,0 +1,21 @@
+// Run from application root. Redirect developer evidence into independent QC output.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const {createRequire}=require('node:module');
+if(process.argv.includes('--baseline'))throw Error('Do not overwrite historical baseline evidence');
+const developerDir=path.resolve('docs/qa/senior-5-2026-10-09');
+const manifest=JSON.parse(fs.readFileSync(path.join(developerDir,'verification.json')));
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+for(const [file,expected] of Object.entries(manifest.sha256))if(hash(file)!==expected)throw Error('Handoff changed: '+file);
+const files=Object.keys(manifest.sha256);
+const hashes=()=>Object.fromEntries(files.map(file=>[file,hash(file)]));
+const before=hashes();
+process.on('exit',()=>{const after=hashes(),stable=JSON.stringify(before)===JSON.stringify(after);
+  fs.writeFileSync(path.join(__dirname,'snapshot.json'),JSON.stringify({before,after,stable},null,2)+'\n');
+  if(!stable)process.exitCode=1;
+});
+const original=path.join(developerDir,'lifecycle.cjs');
+let source=fs.readFileSync(original,'utf8');
+const anchor='const outputDir = "docs/qa/senior-5-2026-10-09";';
+if(source.split(anchor).length!==2)throw Error('Review developer output anchor before rerun');
+source=source.replace(anchor,'const outputDir = '+JSON.stringify(__dirname.replaceAll('\\','/'))+';');
+new Function('require','__dirname','__filename',source)(createRequire(original),__dirname,original);

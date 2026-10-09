@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "passed": 0,
+  "checks": [],
+  "errors": [],
+  "consoleErrors": [],
+  "error": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Kelola', { exact: true }).filter({ visible: true }).first() to be visible\u001b[22m\n",
+  "url": "http://127.0.0.1:8088/manage",
+  "body": "",
+  "checkedAt": "2026-10-09T02:54:04.211Z"
+}

@@ -1,0 +1,3 @@
+Error: Header back missing
+    at back (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:62:585)
+    at async C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:63:1

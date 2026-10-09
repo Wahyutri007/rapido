@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "file": "metro.config.js",
+      "pass": true,
+      "normalization": "None; semantic AST excludes formatting/trailing commas"
+    },
+    {
+      "file": "scripts/verify-metro-cache.cjs",
+      "pass": true,
+      "normalization": "None; semantic AST excludes formatting/trailing commas"
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "pass": true,
+      "normalization": "Anonymous function to arrow only; wrapper has no this/arguments/super/new.target"
+    }
+  ],
+  "copies": [
+    {
+      "original": "docs\\qa\\qc-nativewind-cache-2026-10-09\\guard-boundaries.cjs",
+      "originalSha256": "f769fa12c66dccc3b9815f52dc210cd462c086782bb3638757120afe51d55e81",
+      "copy": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\guard-boundaries.cjs",
+      "copySha256": "4950ea9e754bad4b9307a11ecf2b61834c144037ef05e5716443afca2a6c27f0",
+      "adaptation": "Only relative root/require depth changed; original QC code and output untouched"
+    },
+    {
+      "original": "docs\\qa\\qc-nativewind-cache-2026-10-09\\queue-boundaries.cjs",
+      "originalSha256": "7f95c867ad4d83bf6d0665a53c127013a786158a12a46d596f1d288c988f3433",
+      "copy": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-7-2026-10-09\\startup\\style-recheck\\queue-boundaries.cjs",
+      "copySha256": "2d7283970f9fd97093758e949e3bea6314bc77240aa087db4d14d035c6e99cac",
+      "adaptation": "Only relative root/require depth changed; original QC code and output untouched"
+    }
+  ]
+}

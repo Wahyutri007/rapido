@@ -1,0 +1,62 @@
+{
+    "capturedAtUtc":  "2026-10-09T04:54:13.7758690Z",
+    "owner":  "Codex-4",
+    "status":  "WAITING_FOR_REFERENCE",
+    "evidenceKind":  "read-only source inspection",
+    "latestCashierFrame":  null,
+    "figmaPluginInstalled":  false,
+    "applicationEdited":  false,
+    "runtimeTestsRun":  false,
+    "inputs":  [
+                   {
+                       "path":  "app/(cashier)/home/index.tsx",
+                       "sha256":  "b1eaa531492431f11957b8f4cbd154fc06f02a17b7e134cf22dae0e11d5b0067",
+                       "bytes":  2729
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/transaction.tsx",
+                       "sha256":  "35758d0663e176906e7cb16eaaa00bc1e1ceb01aa110ea708c58849324f4d050",
+                       "bytes":  156
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/cart/index.tsx",
+                       "sha256":  "f01d97adff7f856650835195aa566383393f508e1cedeb0ff5a6b8f3dd870d02",
+                       "bytes":  6861
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/cart/input-money-confirm.tsx",
+                       "sha256":  "aa0acb3fe8d759b066dab56186e8d9d45ffc6f6fbfcc26e8d2770bb413c5875a",
+                       "bytes":  2472
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/cart/confirm.tsx",
+                       "sha256":  "70fa27c5aeb5c624a1571bdb26a94d8c4c499ad8b02286c551c3ff431341a51d",
+                       "bytes":  1066
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/report/expense-input.tsx",
+                       "sha256":  "a1232ab1330f4d25b9f9bcbed4e284e9fad8bfcc8a6f9e692b2229ca7bb6b194",
+                       "bytes":  3287
+                   },
+                   {
+                       "path":  "app/(no-layout)/(cashier)/shift-report.tsx",
+                       "sha256":  "ca0ca8d52aac329487df9f06a60c6c9e0f8a6658b3808f8d8eac164d303fbf13",
+                       "bytes":  6543
+                   },
+                   {
+                       "path":  "components/feature/cashier-home/MainMenu.tsx",
+                       "sha256":  "177874c1f07ed1f6080ca1fcd8f9a9b4e13270d7e3392e220c3b110a86701995",
+                       "bytes":  1666
+                   },
+                   {
+                       "path":  "app/(cashier)/biling/index.tsx",
+                       "sha256":  "40abd7ec4391d2afd86fa6da505fe125309db54048f1e6c5513e5c27799a72fc",
+                       "bytes":  89
+                   },
+                   {
+                       "path":  "docs/qa/qc-figma-audit-2026-10-09/frame-index.json",
+                       "sha256":  "fc10ac220c733eaf1277f1d14bbbe0cef71f2d957acffc0ea0a676bf1d8dad29",
+                       "bytes":  165310
+                   }
+               ]
+}

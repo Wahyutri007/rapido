@@ -1,0 +1,41 @@
+{
+  "kind": "INTERNAL_QA_REVIEW",
+  "status": "PASS",
+  "date": "2026-10-08T20:45:52.292Z",
+  "ticket": "SD3-007",
+  "owner": "Codex-3 delegated internal reviewer / review_success_modal",
+  "reviewedSourceHashes": {
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+  },
+  "developerManifestSha256": "a68399be63aef1f7abc11f9e0f4f58291df544ed8af3b93fff16b09c281caf04",
+  "dependencyCaptureAt": "2026-10-08T20:42:43.291Z",
+  "developerEvidenceReviewedExecutions": 243,
+  "independentReviewerExecutions": 45,
+  "independentReviewerFailures": 0,
+  "runtimeErrors": 0,
+  "findings": [],
+  "externalFinding": {
+    "id": "QC-STOCK-UI-001",
+    "status": "OPEN_PENDING_EXTERNAL_QC_RECHECK",
+    "closedByThisReview": false
+  },
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "limits": [
+    "Internal scoped review, not external QC approval",
+    "Frozen developer browser/lifecycle/quality evidence audited, no browser replay",
+    "45 new React renderer checks use presentation/dimension adapters",
+    "Dependency fingerprint capture predates coordinated SD3-008 DeleteConfirmModal changes; later delta needs its own gate"
+  ],
+  "artifactFingerprints": {
+    "audit.cjs": "93da4ffd73cf31e794965c09bd59a798b99e5bbd7a38913bc5e44d7016e38453",
+    "audit.json": "b721d031670b8f53efe0c290d863bf569d483a450dd7e7b48dbdd424d62f3ec6",
+    "finalize.cjs": "0271601692423acdbd38c4e4f502e7c656a0c8aa57b087c55294e2b752e1d80d",
+    "independent-check.cjs": "01692c72e340aab99dccc4b8c89f2853a66fdfc5e38c921b1d1a93dc727e0f0f",
+    "independent-results.json": "16fefda175b6e30c401286b7df79890f382df75e3fe5e6ce8d4dce3b846f5b9c",
+    "provenance.cjs": "6b14608d72189f01c39ac78aad65ca0c877175ca0e4d3da8c765933de5125a08",
+    "provenance.json": "f0617ecf3d0fa0f8857ea4095474c6503cfd5d1a86c7137ca5c8abd6123d530c",
+    "REPORT.md": "2bcbe9a4fde116fc4698f551bfc763f93c4e068701a2322ad55eaf8a4495f34e",
+    "source-reviewed.tsx.txt": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+  }
+}

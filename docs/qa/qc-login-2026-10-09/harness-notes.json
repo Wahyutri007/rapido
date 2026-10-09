@@ -1,0 +1,22 @@
+{
+  "initialIntegration": {
+    "file": "initial-integration-results.json",
+    "passed": 42,
+    "failed": 2,
+    "reason": "Run awal menemukan kegagalan provider; suite kemudian diperluas dengan observasi Query dan reproduksi lewat tombol, serta verifikasi FormMessage aktual. Hitungan final44/3 menggantikannya tanpa dijumlah."
+  },
+  "guardChange": {
+    "file": "tracked-changes.json",
+    "owner": "Senior5 SD5-004, kini READY_FOR_QA",
+    "reason": "Guard produksi berubah setelah run integrasi. Preparasi kandidat berhenti oleh fingerprint gate; call --proposal berikutnya menolak kandidat yang belum tersedia dan tidak menghasilkan hasil kandidat.",
+    "fixture": "fixtures/useProtectedRoute.ts.txt",
+    "exactReviewedHash": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "reconstructedFromGit": "acba0d92460c1af3149abc3775f09888a2943cab",
+    "currentGuardApproval": false
+  },
+  "qualityComparisonCorrection": {
+    "file": "quality-initial-results.json",
+    "reason": "Perbandingan awal seluruh pesan ESLint ikut membandingkan byte range suggestion yang bergeser22byte setelah satu baris berubah. Identitas diagnostic kini rule/severity/line/column/message; diagnostic baseline dan kandidat sama. Biome baseline provider dijalankan untuk membuktikan dua issue sudah ada. Kualitas provider tetap OPEN, bukan dinyatakan bersih."
+  },
+  "noApplicationSourceEdited": true
+}

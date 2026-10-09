@@ -1,0 +1,255 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-003",
+  "tested": "CURRENT_PRODUCTION_SOURCE",
+  "sourceHashes": {
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "hooks/useProtectedRoute.ts": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b"
+  },
+  "checks": [
+    {
+      "name": "provider: anonymous bootstrap finishes before login",
+      "passed": true
+    },
+    {
+      "name": "provider: missing token does not request user",
+      "passed": true
+    },
+    {
+      "name": "real form/Common/Axios: double press sends one POST",
+      "passed": true
+    },
+    {
+      "name": "real Common/Axios: login endpoint/payload",
+      "passed": true
+    },
+    {
+      "name": "real form: request keeps button disabled",
+      "passed": true
+    },
+    {
+      "name": "real provider: successful POST starts one storage write",
+      "passed": true
+    },
+    {
+      "name": "real provider: storage uses expected key/token",
+      "passed": true
+    },
+    {
+      "name": "real provider: user refetch waits for storage commit",
+      "passed": true
+    },
+    {
+      "name": "real form: storage phase keeps button disabled",
+      "passed": true
+    },
+    {
+      "name": "real provider: storage phase prevents second POST",
+      "passed": true
+    },
+    {
+      "name": "real provider: committed token requests user",
+      "passed": true
+    },
+    {
+      "name": "real form: user refetch phase keeps button disabled",
+      "passed": true
+    },
+    {
+      "name": "real provider: successful validation authenticates user",
+      "passed": true
+    },
+    {
+      "name": "real form: successful auth releases button",
+      "passed": true
+    },
+    {
+      "name": "real login guard: validated user reaches home",
+      "passed": true
+    },
+    {
+      "name": "real form: success preserves entered draft",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 401: error mapper/form retains message",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 401: FormMessage renders mapped error",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 401: credentials remain",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 401: no auth storage write",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 401: retry sends next POST",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 429: error mapper/form retains message",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 429: FormMessage renders mapped error",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 429: credentials remain",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 429: no auth storage write",
+      "passed": true
+    },
+    {
+      "name": "real HTTP 429: retry sends next POST",
+      "passed": true
+    },
+    {
+      "name": "real provider storage failure: generic form error",
+      "passed": true
+    },
+    {
+      "name": "real provider storage failure: user GET does not start",
+      "passed": true
+    },
+    {
+      "name": "real provider storage failure: button can retry",
+      "passed": true
+    },
+    {
+      "name": "real provider storage failure: token remains absent",
+      "passed": true
+    },
+    {
+      "name": "real Query refetch failure: provider remains anonymous",
+      "passed": true
+    },
+    {
+      "name": "real Query refetch failure: no authenticated navigation",
+      "passed": true
+    },
+    {
+      "name": "real Query refetch failure: form receives generic error",
+      "passed": false,
+      "actual": null,
+      "expected": "Terdapat kesalahan. Silakan coba lagi."
+    },
+    {
+      "name": "real Query refetch failure: call returns an error",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "real Query refetch failure: local loading released",
+      "passed": true
+    },
+    {
+      "name": "real button user-query failure: generic error appears in FormMessage",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "real button user-query failure: draft retained",
+      "passed": true
+    },
+    {
+      "name": "real button user-query failure: button allows retry",
+      "passed": true
+    },
+    {
+      "name": "real provider: response after login unmount starts no storage write",
+      "passed": true
+    },
+    {
+      "name": "remount: retained old hook dispatches no extra request",
+      "passed": true
+    },
+    {
+      "name": "remount: new login remains busy independently",
+      "passed": true
+    },
+    {
+      "name": "remount: current form alone receives error",
+      "passed": true
+    },
+    {
+      "name": "strict real form/provider: double press sends one POST",
+      "passed": true
+    },
+    {
+      "name": "strict real form/provider: one token write",
+      "passed": true
+    },
+    {
+      "name": "strict real form/provider: user authenticated",
+      "passed": true
+    },
+    {
+      "name": "final: no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "final: no unhandled rejection",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "case": "user-refetch-failure",
+      "methods": [
+        {
+          "method": "post",
+          "url": "/login"
+        },
+        {
+          "method": "get",
+          "url": "/user"
+        }
+      ],
+      "storedTokenPresent": true,
+      "query": {
+        "status": "error",
+        "fetchStatus": "idle",
+        "error": {
+          "success": false,
+          "status": 500,
+          "message": "QC user unavailable",
+          "errors": "QC memory rejection"
+        }
+      },
+      "authenticated": false,
+      "result": [
+        {
+          "token": "qc-memory-session"
+        },
+        null
+      ],
+      "formError": null,
+      "loading": false
+    }
+  ],
+  "runtimeErrors": [],
+  "unhandledRejections": [],
+  "passed": 44,
+  "failed": 3
+}

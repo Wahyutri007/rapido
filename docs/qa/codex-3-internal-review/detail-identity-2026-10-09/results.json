@@ -1,0 +1,1197 @@
+{
+  "status": "INTERNAL_QA_REVIEW",
+  "externalQcApproval": false,
+  "baseline": false,
+  "finishedAt": "2026-10-09T00:15:58.212Z",
+  "summary": {
+    "assertions": 195,
+    "passed": 195,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "loadedSourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "checks": [
+    {
+      "name": "Role/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: same-id refetch keeps permission search",
+      "pass": true,
+      "actual": "Kasir",
+      "expected": "Kasir"
+    },
+    {
+      "name": "Role/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: B starts with empty search",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Role/normal: stale A search cannot write B",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Role/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/roles/modify",
+      "expected": "/manage/roles/modify"
+    },
+    {
+      "name": "Role/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Role/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: same-id refetch keeps permission search",
+      "pass": true,
+      "actual": "Kasir",
+      "expected": "Kasir"
+    },
+    {
+      "name": "Role/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: B starts with empty search",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Role/StrictMode: stale A search cannot write B",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "Role/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/roles/modify",
+      "expected": "/manage/roles/modify"
+    },
+    {
+      "name": "Role/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Role/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/workers/modify",
+      "expected": "/manage/workers/modify"
+    },
+    {
+      "name": "Worker/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Worker/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/workers/modify",
+      "expected": "/manage/workers/modify"
+    },
+    {
+      "name": "Worker/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Worker/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/member/modify",
+      "expected": "/manage/member/modify"
+    },
+    {
+      "name": "Member/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Member/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: B loading starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: stale A open cannot open B",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: loaded B requires new confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/member/modify",
+      "expected": "/manage/member/modify"
+    },
+    {
+      "name": "Member/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: stale A close cannot close B",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: missing id closes previous confirmation",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Member/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/AST: content exists",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/AST: content body identical",
+      "pass": true,
+      "actual": "{\n    const query = useRoleQuery(id);\n    const permissions = useRolePermissionsQuery();\n    const [search, setSearch] = useState(\"\");\n    const deleteDialog = useAlertModal();\n    const role = query.data;\n    const needle = search.trim().toLocaleLowerCase(\"id\");\n    const filtered = role?.permissions.filter((key) => rolePermissionName(key, permissions.data)\n        .toLocaleLowerCase(\"id\")\n        .includes(needle)) ?? [];\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<RoleQueryError message=\"Role belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !role ? (<RoleQueryError message=\"Detail role belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<SearchBar search={search} setSearch={setSearch} variant=\"light\" placeholder=\"Cari hak akses...\"/>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t<View className=\"size-10 items-center justify-center rounded-lg bg-primary/10\">\n\t\t\t\t\t\t\t\t<EFeather name=\"user\" size={24} className=\"text-primary\"/>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{roleName(role)}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{roleAccessLabels(role.permissions).join(\" · \") ||\n                \"Belum ada hak akses\"}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<View className=\"flex-row items-center justify-between\">\n\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\tHak Akses\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<View className=\"rounded-lg bg-primary/10 px-2 py-1\">\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-primary\">\n\t\t\t\t\t\t\t\t\t{role.permissions.length} Akses\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</View>\n\t\t\t\t\t\t<View className=\"gap-2\">\n\t\t\t\t\t\t\t{filtered.map((permission) => (<Card key={permission} density=\"compact\" className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t\t\t<View className=\"size-10 items-center justify-center rounded-lg bg-primary/10\">\n\t\t\t\t\t\t\t\t\t\t<EFeather name=\"shield\" size={24} className=\"text-primary\"/>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t\t\t{rolePermissionName(permission, permissions.data)}\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\tDapat mengakses fitur ini\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t</Card>))}\n\t\t\t\t\t\t\t{!filtered.length && (<Text size=\"normal\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{needle\n                    ? \"Hak akses tidak ditemukan\"\n                    : \"Role ini belum memiliki hak akses\"}\n\t\t\t\t\t\t\t\t</Text>)}\n\t\t\t\t\t\t</View>\n\t\t\t\t\t\t<RoleWorkers roleId={role.id}/>\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{role && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/roles/modify\", { id }))} onDelete={deleteDialog.open}/>)}\n\t\t\t<RoleDeleteDialog role={role ?? null} openState={deleteDialog.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}",
+      "expected": "{\n    const query = useRoleQuery(id);\n    const permissions = useRolePermissionsQuery();\n    const [search, setSearch] = useState(\"\");\n    const deleteDialog = useAlertModal();\n    const role = query.data;\n    const needle = search.trim().toLocaleLowerCase(\"id\");\n    const filtered = role?.permissions.filter((key) => rolePermissionName(key, permissions.data)\n        .toLocaleLowerCase(\"id\")\n        .includes(needle)) ?? [];\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<RoleQueryError message=\"Role belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !role ? (<RoleQueryError message=\"Detail role belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<SearchBar search={search} setSearch={setSearch} variant=\"light\" placeholder=\"Cari hak akses...\"/>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t<View className=\"size-10 items-center justify-center rounded-lg bg-primary/10\">\n\t\t\t\t\t\t\t\t<EFeather name=\"user\" size={24} className=\"text-primary\"/>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{roleName(role)}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{roleAccessLabels(role.permissions).join(\" · \") ||\n                \"Belum ada hak akses\"}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<View className=\"flex-row items-center justify-between\">\n\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\tHak Akses\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<View className=\"rounded-lg bg-primary/10 px-2 py-1\">\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-primary\">\n\t\t\t\t\t\t\t\t\t{role.permissions.length} Akses\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</View>\n\t\t\t\t\t\t<View className=\"gap-2\">\n\t\t\t\t\t\t\t{filtered.map((permission) => (<Card key={permission} density=\"compact\" className=\"flex-row items-center gap-3\">\n\t\t\t\t\t\t\t\t\t<View className=\"size-10 items-center justify-center rounded-lg bg-primary/10\">\n\t\t\t\t\t\t\t\t\t\t<EFeather name=\"shield\" size={24} className=\"text-primary\"/>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t\t\t{rolePermissionName(permission, permissions.data)}\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t\t\tDapat mengakses fitur ini\n\t\t\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t\t\t</Card>))}\n\t\t\t\t\t\t\t{!filtered.length && (<Text size=\"normal\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{needle\n                    ? \"Hak akses tidak ditemukan\"\n                    : \"Role ini belum memiliki hak akses\"}\n\t\t\t\t\t\t\t\t</Text>)}\n\t\t\t\t\t\t</View>\n\t\t\t\t\t\t<RoleWorkers roleId={role.id}/>\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{role && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/roles/modify\", { id }))} onDelete={deleteDialog.open}/>)}\n\t\t\t<RoleDeleteDialog role={role ?? null} openState={deleteDialog.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}"
+    },
+    {
+      "name": "Role/AST: same public parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Role/AST: same content parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Role/AST: old imports/statements unchanged",
+      "pass": true,
+      "actual": "import { router } from \"expo-router\";\nimport { useState } from \"react\";\nimport { View } from \"react-native\";\nimport { useRolePermissionsQuery, useRoleQuery } from \"@/api/hooks/roles\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport SearchBar from \"@/components/common/SearchBar\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { EFeather } from \"@/components/icons\";\nimport { roleAccessLabels, roleName, rolePermissionName, } from \"@/lib/manage/roles\";\nimport { route } from \"@/lib/utils\";\nimport RoleDeleteDialog from \"./RoleDeleteDialog\";\nimport RoleQueryError from \"./RoleQueryError\";\nimport RoleWorkers from \"./RoleWorkers\";",
+      "expected": "import { router } from \"expo-router\";\nimport { useState } from \"react\";\nimport { View } from \"react-native\";\nimport { useRolePermissionsQuery, useRoleQuery } from \"@/api/hooks/roles\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport SearchBar from \"@/components/common/SearchBar\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { EFeather } from \"@/components/icons\";\nimport { roleAccessLabels, roleName, rolePermissionName, } from \"@/lib/manage/roles\";\nimport { route } from \"@/lib/utils\";\nimport RoleDeleteDialog from \"./RoleDeleteDialog\";\nimport RoleQueryError from \"./RoleQueryError\";\nimport RoleWorkers from \"./RoleWorkers\";"
+    },
+    {
+      "name": "Role/AST: wrapper has one return",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/AST: keyed wrapper only",
+      "pass": true,
+      "actual": "<RoleDetailContentkey={id??\"\"}id={id}/>",
+      "expected": "<RoleDetailContentkey={id??\"\"}id={id}/>"
+    },
+    {
+      "name": "Worker/AST: content exists",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/AST: content body identical",
+      "pass": true,
+      "actual": "{\n    const query = useWorkerQuery(id);\n    const deletion = useAlertModal();\n    const worker = query.data;\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<WorkerQueryError message=\"Karyawan belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !worker ? (<WorkerQueryError message=\"Detail karyawan belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-4\">\n\t\t\t\t\t\t\t<WorkerAvatar uri={worker.worker_profile?.face_scan}/>\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{worker.name}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{worker.email}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Pribadi\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Nama Lengkap\" value={worker.name}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Email\" value={worker.email}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. Telepon\" value={worker.phone}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Role\" value={workerRoleName(worker)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Tanggal Lahir\" value={workerDate(worker.worker_profile?.date_of_birth)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Alamat\" value={worker.worker_profile?.address} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Akun\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Bergabung Sejak\" value={workerDate(worker.created_at)} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tToko yang Ditugaskan\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\t{worker.assigned_store?.name ?? \"Toko belum ditetapkan\"}\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t{worker.assigned_store && (<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{worker.assigned_store.address}\n\t\t\t\t\t\t\t\t</Text>)}\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t{worker.worker_profile?.id_scan && (<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\tScan KTP\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Image source={{ uri: worker.worker_profile.id_scan }} className=\"h-48 w-full rounded-lg\" resizeMode=\"contain\" accessibilityLabel=\"Scan KTP karyawan\"/>\n\t\t\t\t\t\t\t</Card>)}\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{worker && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/workers/modify\", { id }))} onDelete={deletion.open}/>)}\n\t\t\t<WorkerDeleteDialog worker={worker ?? null} openState={deletion.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}",
+      "expected": "{\n    const query = useWorkerQuery(id);\n    const deletion = useAlertModal();\n    const worker = query.data;\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<WorkerQueryError message=\"Karyawan belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !worker ? (<WorkerQueryError message=\"Detail karyawan belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-4\">\n\t\t\t\t\t\t\t<WorkerAvatar uri={worker.worker_profile?.face_scan}/>\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{worker.name}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{worker.email}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Pribadi\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Nama Lengkap\" value={worker.name}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Email\" value={worker.email}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. Telepon\" value={worker.phone}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Role\" value={workerRoleName(worker)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Tanggal Lahir\" value={workerDate(worker.worker_profile?.date_of_birth)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Alamat\" value={worker.worker_profile?.address} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Akun\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Bergabung Sejak\" value={workerDate(worker.created_at)} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tToko yang Ditugaskan\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<Text size=\"normal\" w=\"medium\">\n\t\t\t\t\t\t\t\t{worker.assigned_store?.name ?? \"Toko belum ditetapkan\"}\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t{worker.assigned_store && (<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{worker.assigned_store.address}\n\t\t\t\t\t\t\t\t</Text>)}\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t{worker.worker_profile?.id_scan && (<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\tScan KTP\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Image source={{ uri: worker.worker_profile.id_scan }} className=\"h-48 w-full rounded-lg\" resizeMode=\"contain\" accessibilityLabel=\"Scan KTP karyawan\"/>\n\t\t\t\t\t\t\t</Card>)}\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{worker && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/workers/modify\", { id }))} onDelete={deletion.open}/>)}\n\t\t\t<WorkerDeleteDialog worker={worker ?? null} openState={deletion.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}"
+    },
+    {
+      "name": "Worker/AST: same public parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Worker/AST: same content parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Worker/AST: old imports/statements unchanged",
+      "pass": true,
+      "actual": "import { router } from \"expo-router\";\nimport { Image, View } from \"react-native\";\nimport { useWorkerQuery } from \"@/api/hooks/workers\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { workerDate, workerRoleName } from \"@/lib/manage/workers\";\nimport { route } from \"@/lib/utils\";\nimport WorkerAvatar from \"./WorkerAvatar\";\nimport WorkerDeleteDialog from \"./WorkerDeleteDialog\";\nimport WorkerQueryError from \"./WorkerQueryError\";",
+      "expected": "import { router } from \"expo-router\";\nimport { Image, View } from \"react-native\";\nimport { useWorkerQuery } from \"@/api/hooks/workers\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { workerDate, workerRoleName } from \"@/lib/manage/workers\";\nimport { route } from \"@/lib/utils\";\nimport WorkerAvatar from \"./WorkerAvatar\";\nimport WorkerDeleteDialog from \"./WorkerDeleteDialog\";\nimport WorkerQueryError from \"./WorkerQueryError\";"
+    },
+    {
+      "name": "Worker/AST: wrapper has one return",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/AST: keyed wrapper only",
+      "pass": true,
+      "actual": "<WorkerDetailContentkey={id??\"\"}id={id}/>",
+      "expected": "<WorkerDetailContentkey={id??\"\"}id={id}/>"
+    },
+    {
+      "name": "Member/AST: content exists",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/AST: content body identical",
+      "pass": true,
+      "actual": "{\n    const query = useCustomerQuery(id);\n    const deletion = useAlertModal();\n    const member = query.data;\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<MemberQueryError message=\"Member belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !member ? (<MemberQueryError message=\"Detail member belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-4\">\n\t\t\t\t\t\t\t<MemberIcon />\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{member.name}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{member.phone}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<DetailRow label=\"Bergabung Sejak\" value={memberDate(member.created_at)} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Pribadi\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Nama Lengkap\" value={member.name}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Email\" value={member.email}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. Telepon\" value={member.phone}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. KTP\" value={member.id_number}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Jenis Kelamin\" value={memberGender(member.gender)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Tanggal Lahir\" value={memberDate(member.date_of_birth)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Alamat\" value={member.address} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tCatatan\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<Text size=\"normal\" className={member.notes ? \"text-foreground\" : \"text-muted\"}>\n\t\t\t\t\t\t\t\t{member.notes || \"Belum ada catatan.\"}\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{member && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/member/modify\", { id }))} onDelete={deletion.open}/>)}\n\t\t\t<MemberDeleteDialog member={member ?? null} openState={deletion.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}",
+      "expected": "{\n    const query = useCustomerQuery(id);\n    const deletion = useAlertModal();\n    const member = query.data;\n    return (<>\n\t\t\t<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>\n\t\t\t\t{!id ? (<MemberQueryError message=\"Member belum dipilih.\" onRetry={() => router.back()}/>) : query.isLoading ? (<LoadingPlaceholder />) : query.isError || !member ? (<MemberQueryError message=\"Detail member belum dapat dimuat.\" onRetry={() => {\n                void query.refetch();\n            }}/>) : (<>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"flex-row items-center gap-4\">\n\t\t\t\t\t\t\t<MemberIcon />\n\t\t\t\t\t\t\t<View className=\"flex-1 gap-1\">\n\t\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\t\t{member.name}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t\t<Text size=\"small\" className=\"text-muted\">\n\t\t\t\t\t\t\t\t\t{member.phone}\n\t\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t</View>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<DetailRow label=\"Bergabung Sejak\" value={memberDate(member.created_at)} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tInformasi Pribadi\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<DetailRow label=\"Nama Lengkap\" value={member.name}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Email\" value={member.email}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. Telepon\" value={member.phone}/>\n\t\t\t\t\t\t\t<DetailRow label=\"No. KTP\" value={member.id_number}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Jenis Kelamin\" value={memberGender(member.gender)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Tanggal Lahir\" value={memberDate(member.date_of_birth)}/>\n\t\t\t\t\t\t\t<DetailRow label=\"Alamat\" value={member.address} isLast/>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t\t<Card density=\"compact\" className=\"gap-3\">\n\t\t\t\t\t\t\t<Text size=\"body\" w=\"medium\">\n\t\t\t\t\t\t\t\tCatatan\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<Text size=\"normal\" className={member.notes ? \"text-foreground\" : \"text-muted\"}>\n\t\t\t\t\t\t\t\t{member.notes || \"Belum ada catatan.\"}\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t</Card>\n\t\t\t\t\t</>)}\n\t\t\t</Wrapper>\n\t\t\t{member && id && !query.isError && (<DetailBottomActions onEdit={() => router.push(route(\"/manage/member/modify\", { id }))} onDelete={deletion.open}/>)}\n\t\t\t<MemberDeleteDialog member={member ?? null} openState={deletion.openState} onDeleted={delayedBack}/>\n\t\t</>);\n}"
+    },
+    {
+      "name": "Member/AST: same public parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Member/AST: same content parameter",
+      "pass": true,
+      "actual": "{ id }: {\n    id?: string;\n}",
+      "expected": "{ id }: {\n    id?: string;\n}"
+    },
+    {
+      "name": "Member/AST: old imports/statements unchanged",
+      "pass": true,
+      "actual": "import { router } from \"expo-router\";\nimport { View } from \"react-native\";\nimport { useCustomerQuery } from \"@/api/hooks/customers\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { memberDate, memberGender } from \"@/lib/manage/members\";\nimport { route } from \"@/lib/utils\";\nimport MemberDeleteDialog from \"./MemberDeleteDialog\";\nimport MemberIcon from \"./MemberIcon\";\nimport MemberQueryError from \"./MemberQueryError\";",
+      "expected": "import { router } from \"expo-router\";\nimport { View } from \"react-native\";\nimport { useCustomerQuery } from \"@/api/hooks/customers\";\nimport { useAlertModal } from \"@/components/common/AlertModal\";\nimport Card from \"@/components/common/Card\";\nimport { LoadingPlaceholder } from \"@/components/common/DataPlaceholder\";\nimport Text from \"@/components/common/Text\";\nimport Wrapper from \"@/components/common/Wrapper\";\nimport DetailBottomActions from \"@/components/custom/DetailBottomActions\";\nimport DetailRow from \"@/components/custom/DetailRow\";\nimport { delayedBack } from \"@/components/custom/JSStack\";\nimport { memberDate, memberGender } from \"@/lib/manage/members\";\nimport { route } from \"@/lib/utils\";\nimport MemberDeleteDialog from \"./MemberDeleteDialog\";\nimport MemberIcon from \"./MemberIcon\";\nimport MemberQueryError from \"./MemberQueryError\";"
+    },
+    {
+      "name": "Member/AST: wrapper has one return",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/AST: keyed wrapper only",
+      "pass": true,
+      "actual": "<MemberDetailContentkey={id??\"\"}id={id}/>",
+      "expected": "<MemberDetailContentkey={id??\"\"}id={id}/>"
+    },
+    {
+      "name": "Contract stable: hooks/useAlertModal.ts",
+      "pass": true,
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "name": "Contract stable: components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "pass": true,
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207"
+    },
+    {
+      "name": "Contract stable: components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "pass": true,
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a"
+    },
+    {
+      "name": "Contract stable: components/feature/manage/member/MemberDeleteDialog.tsx",
+      "pass": true,
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+    },
+    {
+      "name": "Contract stable: components/feature/manage/roles/RoleWorkers.tsx",
+      "pass": true,
+      "actual": "329fd2161234d75c2df32fef8e703b465a1d61a82d5499841e9668fe8faff64b",
+      "expected": "329fd2161234d75c2df32fef8e703b465a1d61a82d5499841e9668fe8faff64b"
+    },
+    {
+      "name": "Contract stable: api/hooks/roles.ts",
+      "pass": true,
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66"
+    },
+    {
+      "name": "Contract stable: api/hooks/workers.ts",
+      "pass": true,
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22"
+    },
+    {
+      "name": "Contract stable: api/hooks/customers.ts",
+      "pass": true,
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+    },
+    {
+      "name": "Contract stable: api/factory.ts",
+      "pass": true,
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915"
+    },
+    {
+      "name": "Contract stable: app/(no-layout)/(back-office)/manage/roles/detail.tsx",
+      "pass": true,
+      "actual": "725ab58db1d1072dc005e8b899a4e17c99b2cc2b1b6ee26ab75258970c238a3b",
+      "expected": "725ab58db1d1072dc005e8b899a4e17c99b2cc2b1b6ee26ab75258970c238a3b"
+    },
+    {
+      "name": "Contract stable: app/(no-layout)/manage/workers/detail.tsx",
+      "pass": true,
+      "actual": "b75a8abad632ad86d2c5beb47d28f64ffc81ee594cbfd2eb57038af03cf0ebaa",
+      "expected": "b75a8abad632ad86d2c5beb47d28f64ffc81ee594cbfd2eb57038af03cf0ebaa"
+    },
+    {
+      "name": "Contract stable: app/(no-layout)/manage/member/detail.tsx",
+      "pass": true,
+      "actual": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+      "expected": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879"
+    },
+    {
+      "name": "Contract stable: components/common/AlertModal.tsx",
+      "pass": true,
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e"
+    },
+    {
+      "name": "Contract stable: components/common/DeleteConfirmModal.tsx",
+      "pass": true,
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    {
+      "name": "Contract stable: components/common/SuccessModal.tsx",
+      "pass": true,
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+    },
+    {
+      "name": "Contract stable: lib/manage/roles.ts",
+      "pass": true,
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc"
+    },
+    {
+      "name": "Contract stable: lib/manage/workers.ts",
+      "pass": true,
+      "actual": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "expected": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b"
+    },
+    {
+      "name": "Contract stable: lib/manage/members.ts",
+      "pass": true,
+      "actual": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+      "expected": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+    }
+  ],
+  "runtimeErrors": [],
+  "warnings": [],
+  "adapters": "Production detail body, production useAlertModal and production domain display helpers; query fixtures, child delete dialog and presentation/router hosts. Parent identity state assessed through actual callbacks and React state under normal/StrictMode. Delete IO and native geometry not exercised."
+}

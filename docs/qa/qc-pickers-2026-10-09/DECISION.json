@@ -1,0 +1,29 @@
+{
+  "id": "QC-PICKERS-20261009-PASS-DELTA",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "date": "2026-10-09",
+  "sources": {
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4"
+  },
+  "verification": {
+    "developerAssertionRerun": 97,
+    "qcCallerAssertions": 14,
+    "totalPassed": 111,
+    "failed": 0,
+    "runtimeActErrors": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biome": "PASS",
+    "diffCheck": "PASS",
+    "fullIntegrationTypecheck": "PM_PENDING"
+  },
+  "report": "REPORT.md",
+  "scope": "SingleSelect lifecycle/availability and SortActionSheet lifecycle delta with production Form/RHF/SearchBar/useSearch caller adapters",
+  "limitations": [
+    "No QC browser/native/accessibility/full navigator/API/Figma certification",
+    "Native/UI/animation/haptic primitives are host adapters",
+    "Full-project integration and publication require PM gates"
+  ],
+  "handoffChannel": "Shared workspace; direct delivery not claimed"
+}

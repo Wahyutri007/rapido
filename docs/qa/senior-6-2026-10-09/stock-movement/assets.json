@@ -1,0 +1,804 @@
+[
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets/react-navigation/elements",
+    "width": 50,
+    "height": 85,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\back-icon-mask.png"
+    ],
+    "hash": "0a328cd9c1afd0afe8e3b1ec5165b1b4",
+    "name": "back-icon-mask",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets/react-navigation/elements",
+    "width": 96,
+    "height": 96,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\back-icon.png"
+    ],
+    "hash": "35ba0eaec5a4f5ed12ca16fabeae451d",
+    "name": "back-icon",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets/react-navigation/elements",
+    "width": 64,
+    "height": 64,
+    "scales": [
+      1,
+      1,
+      2,
+      3,
+      4
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon@1x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon@2x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon@3x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon@4x.png"
+    ],
+    "hash": "61378328a719f21f093de82dd89ecfb0",
+    "name": "clear-icon",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets/react-navigation/elements",
+    "width": 96,
+    "height": 96,
+    "scales": [
+      1,
+      1,
+      2,
+      3,
+      4
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon@1x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon@2x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon@3x.png",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon@4x.png"
+    ],
+    "hash": "3162e8a244d8f6fbd259e79043e23ce4",
+    "name": "close-icon",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets/react-navigation/elements",
+    "width": 96,
+    "height": 96,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\react-navigation\\elements\\search-icon.png"
+    ],
+    "hash": "286d67d3f74808a60a78d3ebf1a5fb57",
+    "name": "search-icon",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\error.png"
+    ],
+    "hash": "d1ea1496f9057eb392d5bbf3732a61b7",
+    "name": "error",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\file.png"
+    ],
+    "hash": "19eeb73b9593a38f8e9f418337fc7d10",
+    "name": "file",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\pkg.png"
+    ],
+    "hash": "ab19f4cbc543357183a20571f68380a3",
+    "name": "pkg",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\forward.png"
+    ],
+    "hash": "d8b800c443b8972542883e0b9de2bdc6",
+    "name": "forward",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\sitemap.png"
+    ],
+    "hash": "412dd9275b6b48ad28f5e3d81bb1f626",
+    "name": "sitemap",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 48,
+    "height": 48,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\arrow_down.png"
+    ],
+    "hash": "017bc6ba3fc25503e5eb5e53826d48a8",
+    "name": "arrow_down",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets",
+    "httpServerLocation": "/assets/node_modules/expo-router/assets",
+    "width": 436,
+    "height": 266,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\expo-router\\assets\\unmatched.png"
+    ],
+    "hash": "20e71bdf79e3a97bf55fd9e164041578",
+    "name": "unmatched",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf"
+    ],
+    "hash": "31b5ffea3daddc69dd01a1f3d6cf63c5",
+    "name": "Entypo",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\AntDesign.ttf"
+    ],
+    "hash": "3f78af31cca60105799838a1a7a59fbd",
+    "name": "AntDesign",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\EvilIcons.ttf"
+    ],
+    "hash": "140c53a7643ea949007aa9a282153849",
+    "name": "EvilIcons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf"
+    ],
+    "hash": "ca4b48e04dc1ce10bfbddb262c8b835f",
+    "name": "Feather",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Fontisto.ttf"
+    ],
+    "hash": "b49ae8ab2dbccb02c4d11caaacf09eab",
+    "name": "Fontisto",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf"
+    ],
+    "hash": "b06871f281fee6b241d60582ae9369b9",
+    "name": "FontAwesome",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Regular.ttf"
+    ],
+    "hash": "1f77739ca9ff2188b539c36f30ffa2be",
+    "name": "FontAwesome5_Regular",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Solid.ttf"
+    ],
+    "hash": "605ed7926cf39a2ad5ec2d1f9d391d3d",
+    "name": "FontAwesome5_Solid",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Brands.ttf"
+    ],
+    "hash": "3b89dd103490708d19a95adcae52210e",
+    "name": "FontAwesome5_Brands",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf"
+    ],
+    "hash": "370dd5af19f8364907b6e2c41f45dbbf",
+    "name": "FontAwesome6_Regular",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf"
+    ],
+    "hash": "adec7d6f310bc577f05e8fe06a5daccf",
+    "name": "FontAwesome6_Solid",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf"
+    ],
+    "hash": "56c8d80832e37783f12c05db7c8849e2",
+    "name": "FontAwesome6_Brands",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Foundation.ttf"
+    ],
+    "hash": "e20945d7c929279ef7a6f1db184a4470",
+    "name": "Foundation",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Ionicons.ttf"
+    ],
+    "hash": "b4eb097d35f44ed943676fd56f6bdc51",
+    "name": "Ionicons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf"
+    ],
+    "hash": "6e435534bd35da5fef04168860a9b8fa",
+    "name": "MaterialCommunityIcons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialIcons.ttf"
+    ],
+    "hash": "4e85bc9ebe07e0340c9c4fc2f6c38908",
+    "name": "MaterialIcons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Octicons.ttf"
+    ],
+    "hash": "871378c6eab492a3e689a9385dc45a12",
+    "name": "Octicons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\SimpleLineIcons.ttf"
+    ],
+    "hash": "d2285965fe34b05465047401b8595dd0",
+    "name": "SimpleLineIcons",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts",
+    "httpServerLocation": "/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Zocial.ttf"
+    ],
+    "hash": "1681f34aaca71b8dfb70756bca331eb2",
+    "name": "Zocial",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\summary.png"
+    ],
+    "hash": "1cd5834fb53eaa6715d23e4eb8ef4cf2",
+    "name": "summary",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\transfer.png"
+    ],
+    "hash": "c0f6213217ce3a84de91a5744b508907",
+    "name": "transfer",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\adjustment.png"
+    ],
+    "hash": "ee84e43fd135a8984c28b3a093bc2de7",
+    "name": "adjustment",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\material.png"
+    ],
+    "hash": "2e87c6b80ef9ba260c119e06c30e2a23",
+    "name": "material",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\composition.png"
+    ],
+    "hash": "a6b1a1b635f04c130471cdc891369b0d",
+    "name": "composition",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\purchase.png"
+    ],
+    "hash": "9ea297c929f9fc1fc3e29ec012b91479",
+    "name": "purchase",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\supplier.png"
+    ],
+    "hash": "825f066d733520bba312418d858f4851",
+    "name": "supplier",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\payment.png"
+    ],
+    "hash": "e087ddb01f3b67c533a8b66b475f7969",
+    "name": "payment",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\movement.png"
+    ],
+    "hash": "92100af2936ddcd086fc9f75ff97e6ff",
+    "name": "movement",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 1254,
+    "height": 1254,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\closing.png"
+    ],
+    "hash": "a9f92840a0ec4843e84daef755a21bdb",
+    "name": "closing",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 480,
+    "height": 320,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\katsu.png"
+    ],
+    "hash": "11a9812d2bfe43f254e9cf7f4615b2a1",
+    "name": "katsu",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 744,
+    "height": 419,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\ayam.png"
+    ],
+    "hash": "5c4b64e4437c27006a2101fa27ceed5e",
+    "name": "ayam",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 320,
+    "height": 480,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\mie.png"
+    ],
+    "hash": "fb53a3e617f6286dfcae93534a9d31db",
+    "name": "mie",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 72,
+    "height": 72,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\fillet.png"
+    ],
+    "hash": "d3deef6b0f5186e31c48aacca97c7260",
+    "name": "fillet",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 72,
+    "height": 72,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\minyak.png"
+    ],
+    "hash": "cbced005ca3e94851a07c65459af934d",
+    "name": "minyak",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 72,
+    "height": 72,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\gula.png"
+    ],
+    "hash": "1aa0c89c3548c458ca6502ed1462a7e8",
+    "name": "gula",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory",
+    "httpServerLocation": "/assets/assets/images/inventory",
+    "width": 72,
+    "height": 72,
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\images\\inventory\\tepung.png"
+    ],
+    "hash": "cb21248c15c1d987a9c77e219c828961",
+    "name": "tepung",
+    "type": "png"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts",
+    "httpServerLocation": "/assets/assets/fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts\\Inter_24pt-Regular.ttf"
+    ],
+    "hash": "e48c1217adab2a0e44f8df400d33c325",
+    "name": "Inter_24pt-Regular",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts",
+    "httpServerLocation": "/assets/assets/fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts\\Inter_24pt-Medium.ttf"
+    ],
+    "hash": "4591e900425d177e6ba268d165bf12e8",
+    "name": "Inter_24pt-Medium",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts",
+    "httpServerLocation": "/assets/assets/fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts\\Inter_24pt-SemiBold.ttf"
+    ],
+    "hash": "c77560a8441d664af3e65dd57026dff9",
+    "name": "Inter_24pt-SemiBold",
+    "type": "ttf"
+  },
+  {
+    "__packager_asset": true,
+    "fileSystemLocation": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts",
+    "httpServerLocation": "/assets/assets/fonts",
+    "scales": [
+      1
+    ],
+    "files": [
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\assets\\fonts\\Inter_24pt-Bold.ttf"
+    ],
+    "hash": "8b04b3bd9435341377d7f4b4d68b6ecc",
+    "name": "Inter_24pt-Bold",
+    "type": "ttf"
+  }
+]

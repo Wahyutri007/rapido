@@ -1,0 +1,9 @@
+﻿"Sumber","ID","Jenis","Tanggal sumber","Tanggal ISO","Jam","Toko","Referensi","Akun","Kode akun","Sumber dana","Pembuat","Nominal","Deskripsi"
+"Pratinjau penerimaan sesi","a","manual","9 Oktober 2026","2026-10-09","12:00","A","a","","","","Tester","100","comma, quote"" and
+newline"
+"Pratinjau penerimaan sesi","b","manual","2026-10-10","2026-10-10","12:00","B","b","","","","Tester","100","comma, quote"" and
+newline"
+"Pratinjau penerimaan sesi","c","manual","bad","","12:00","","c","","","","Tester","100","comma, quote"" and
+newline"
+"Pratinjau pengeluaran sesi","e","expense","2026-10-09","2026-10-09","12:00","A","e","Kas","101","Tunai","Tester","100","comma, quote"" and
+newline"

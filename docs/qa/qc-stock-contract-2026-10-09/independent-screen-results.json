@@ -1,0 +1,109 @@
+{
+  "productionModules": [
+    "components/common/SearchBar.tsx",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx"
+  ],
+  "strictMode": true,
+  "checks": [
+    {
+      "name": "same textual ID renders category label and selection",
+      "passed": true
+    },
+    {
+      "name": "open picker preserves category kind despite same-ID item refetch",
+      "passed": true
+    },
+    {
+      "name": "production SearchBar immediately filters case-insensitively",
+      "passed": true
+    },
+    {
+      "name": "category commit preserves pair across same-ID cross-kind refetch",
+      "passed": true
+    },
+    {
+      "name": "actual SearchBar reset when reopening committed picker",
+      "passed": true
+    },
+    {
+      "name": "backdrop closes sheet without changing saved pair",
+      "passed": true
+    },
+    {
+      "name": "cancel accepts latest untouched item pair with same textual ID",
+      "passed": true
+    },
+    {
+      "name": "fresh item picker uses menu options after category cancel",
+      "passed": true
+    },
+    {
+      "name": "menu image URL comes from actual option",
+      "passed": true
+    },
+    {
+      "name": "batched distinct item toggles use functional updates",
+      "passed": true
+    },
+    {
+      "name": "batched same item twice preserves previous selection",
+      "passed": true
+    },
+    {
+      "name": "failure/refetch/empty list preserve committed item IDs",
+      "passed": true
+    },
+    {
+      "name": "failed save shows error without success",
+      "passed": true
+    },
+    {
+      "name": "direct save handler is blocked while mutation pending",
+      "passed": true
+    },
+    {
+      "name": "CTA carries actual pending flag",
+      "passed": true
+    },
+    {
+      "name": "save resumes after pending guard clears",
+      "passed": true
+    },
+    {
+      "name": "settingsPending direct callbacks are blocked",
+      "passed": true
+    },
+    {
+      "name": "settingsPending picker and CTA disabled props",
+      "passed": true
+    },
+    {
+      "name": "settingsError direct callbacks are blocked",
+      "passed": true
+    },
+    {
+      "name": "settingsError picker and CTA disabled props",
+      "passed": true
+    },
+    {
+      "name": "cached settings remain saveable during background error",
+      "passed": true
+    },
+    {
+      "name": "detail route remains existing stock-limit-detail",
+      "passed": true
+    },
+    {
+      "name": "all mode ignores stale IDs even when stored detail kind differs",
+      "passed": true
+    },
+    {
+      "name": "all ignores old IDs while preserving explicit category kind",
+      "passed": true
+    }
+  ],
+  "passed": 24,
+  "failed": 0,
+  "runtimeReactErrors": [],
+  "limitations": "Production screen and SearchBar, React StrictMode; query/mutation/native/UI/router/modal adapters. No actual QueryClient/Axios/server/native gesture/transaction."
+}

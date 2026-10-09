@@ -1,0 +1,42 @@
+{
+  "publicPropsUnchanged": true,
+  "jsxUnchanged": true,
+  "callers": [
+    {
+      "file": "app/(no-layout)/catalog/voucher/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "app/(no-layout)/catalog/promo/modify.tsx",
+      "count": 2
+    },
+    {
+      "file": "app/(no-layout)/catalog/payment-method/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "app/(no-layout)/catalog/order-type/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/modify.tsx",
+      "count": 2
+    },
+    {
+      "file": "app/(no-layout)/catalog/discount/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "app/(no-layout)/catalog/bundling/modify.tsx",
+      "count": 1
+    },
+    {
+      "file": "components/feature/manage/sales-target/SalesTargetForm.tsx",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "ticket": "SD5-008",
+  "baseline": false,
+  "sources": {
+    "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+    "hooks/useRegistrationForm.ts": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "checks": [
+    {
+      "name": "empty session complete controlled defaults",
+      "passed": true
+    },
+    {
+      "name": "empty consent remains false",
+      "passed": true
+    },
+    {
+      "name": "unchecked consent opens terms without granting",
+      "passed": true
+    },
+    {
+      "name": "actual form/schema rejects missing consent",
+      "passed": true
+    },
+    {
+      "name": "consent validation message",
+      "passed": true
+    },
+    {
+      "name": "terms acceptance updates checkbox/form/store",
+      "passed": true
+    },
+    {
+      "name": "acceptance preserves typed credentials",
+      "passed": true
+    },
+    {
+      "name": "accepted form validates",
+      "passed": true
+    },
+    {
+      "name": "external revocation propagates to form",
+      "passed": true
+    },
+    {
+      "name": "revocation invalidates schema",
+      "passed": true
+    },
+    {
+      "name": "programmatic true synchronizes store",
+      "passed": true
+    },
+    {
+      "name": "checkbox false synchronizes store",
+      "passed": true
+    },
+    {
+      "name": "mount consent true strict=false: no stale false write",
+      "passed": true
+    },
+    {
+      "name": "mount consent true strict=false: rerender stable",
+      "passed": true
+    },
+    {
+      "name": "mount consent true strict=true: no stale false write",
+      "passed": true
+    },
+    {
+      "name": "mount consent true strict=true: rerender stable",
+      "passed": true
+    },
+    {
+      "name": "full store restores all three forms and password stage",
+      "passed": true
+    },
+    {
+      "name": "restored values have clean field state",
+      "passed": true
+    },
+    {
+      "name": "restored consent validates",
+      "passed": true
+    },
+    {
+      "name": "restored bank validates",
+      "passed": true
+    },
+    {
+      "name": "restored password validates",
+      "passed": true
+    },
+    {
+      "name": "URL seed restores valid forms with existing accepted consent",
+      "passed": true
+    },
+    {
+      "name": "URL cannot grant consent or skip personal stage",
+      "passed": true
+    },
+    {
+      "name": "URL does not grant store consent",
+      "passed": true
+    },
+    {
+      "name": "URL with no accepted consent fails validation",
+      "passed": true
+    },
+    {
+      "name": "store seeds retain priority over URL",
+      "passed": true
+    },
+    {
+      "name": "invalid store personal does not fall through to URL",
+      "passed": true
+    },
+    {
+      "name": "personal only: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "personal only: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "personal plus bank: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "personal plus bank: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "invalid bank: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "invalid bank: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "invalid password: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "invalid password: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "missing personal invalid bank: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "missing personal invalid bank: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "missing personal bank only: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "missing personal bank only: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "missing bank invalid password: earliest incomplete stage",
+      "passed": true
+    },
+    {
+      "name": "missing bank invalid password: safe future defaults",
+      "passed": true
+    },
+    {
+      "name": "malformed JSON: safe blank defaults",
+      "passed": true
+    },
+    {
+      "name": "wrong types: safe blank defaults",
+      "passed": true
+    },
+    {
+      "name": "accepted store restores otherwise valid personal even if old draft tnc false",
+      "passed": true
+    },
+    {
+      "name": "canonical accepted consent determines resume stage",
+      "passed": true
+    },
+    {
+      "name": "URL/store seed changes do not overwrite mounted draft/index",
+      "passed": true
+    },
+    {
+      "name": "live consent false alone updates personal draft",
+      "passed": true
+    },
+    {
+      "name": "live consent does not overwrite bank/password/index",
+      "passed": true
+    },
+    {
+      "name": "new mount restores latest valid seed while preserving revoked consent",
+      "passed": true
+    },
+    {
+      "name": "registration store reset revokes form consent",
+      "passed": true
+    },
+    {
+      "name": "store reset does not silently wipe mounted input",
+      "passed": true
+    },
+    {
+      "name": "explicit form reset updates shared consent",
+      "passed": true
+    },
+    {
+      "name": "two forms initial consent does not fight",
+      "passed": true
+    },
+    {
+      "name": "two forms keep shared accepted true",
+      "passed": true
+    },
+    {
+      "name": "one form revocation propagates to second",
+      "passed": true
+    },
+    {
+      "name": "one form acceptance propagates without feedback loop",
+      "passed": true
+    },
+    {
+      "name": "consent writes bounded without repeated echoes",
+      "passed": true
+    },
+    {
+      "name": "unmounted form cannot change shared consent",
+      "passed": true
+    },
+    {
+      "name": "no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "no unhandled rejections",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandledRejections": [],
+  "passed": 60,
+  "failed": 0
+}

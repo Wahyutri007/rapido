@@ -1,0 +1,13 @@
+{
+  "initialCopiedPrefixSha256": "0fab3ff7442bb4bf16c3c2ef6fba368686b1697a976cf98706f95640169b9b0c",
+  "finalPrefixSha256": "8e2776918a683243eb884e111e297e4e7f43d3e11c4fcf6c9d9f4af614097b09",
+  "additionalAdaptation": "Route adapter now matches actual utility string path plus encoded query semantics; old object-return adapter remains only in historical Payment packet",
+  "routeSourceRead": {
+    "path": "lib/utils/index.ts",
+    "sha256": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196"
+  },
+  "bodySourceSha256": "d675f36fc403bfb75595bdefc5f1e8ad09df4c06ebb6d6c05454ea337f17cd81",
+  "assembledRunnerSha256": "4f43af553efafd366c76b3a71bed3a60cef8adf10ebd721aee5bcbb2c9abde93",
+  "sourceEdits": false,
+  "setupAttemptsBeforeRun": 0
+}

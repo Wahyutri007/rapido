@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "passed": 28,
+  "checks": [
+    "All eighteen places belong to explicitly supplied outlet",
+    "Effective activity requires both outlet and place",
+    "Area order follows configured outlet order",
+    "Place order follows saved positions without sorting source in place",
+    "Equal positions preserve original source order",
+    "Search trims and ignores case",
+    "Search can match area name",
+    "Search can match kind label",
+    "Area, search and inactive status combine",
+    "Area from another outlet cannot leak data",
+    "Unmatched search stays empty",
+    "Whitespace search returns all records",
+    "Empty outlet returns no invented places",
+    "Empty data filter has no records",
+    "Exact three IDs resolve same source object",
+    "Reject wrong outlet without first-record fallback",
+    "Reject wrong area without first-record fallback",
+    "Reject wrong place without first-record fallback",
+    "Reject cross-outlet area without first-record fallback",
+    "Reject cross-area place without first-record fallback",
+    "Reject missing ID without first-record fallback",
+    "Reject array outlet without first-record fallback",
+    "Reject array area without first-record fallback",
+    "Reject array place without first-record fallback",
+    "Removing a live source record makes its detail unavailable",
+    "Live outlet deactivation updates detail activity",
+    "Kind capacity units remain distinct",
+    "Read-only projection and filters preserve complete source"
+  ],
+  "checkedAt": "2026-10-09T02:21:29.637Z",
+  "inputs": [
+    {
+      "file": "lib/cashier/location.ts",
+      "sha256": "c0b4866b2a030c4f7c5bc6cde234f8349c4309ad685b371f3082402851fa5d33"
+    },
+    {
+      "file": "constants/data/manage/place.ts",
+      "sha256": "d4d6f424ca53144dc6ec4abb5ea72c779655323b4cbbee623627ac71b9552cb0"
+    }
+  ],
+  "scope": "Production pure helper and existing design fixture; no backend or native approval."
+}

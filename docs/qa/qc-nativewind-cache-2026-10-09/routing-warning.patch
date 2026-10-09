@@ -1,0 +1,33 @@
+diff --git a/app/(no-layout)/_layout.tsx b/app/(no-layout)/_layout.tsx
+index 835c879..80b701c 100644
+--- a/app/(no-layout)/_layout.tsx
++++ b/app/(no-layout)/_layout.tsx
+@@ -5,13 +5,7 @@ import React from "react";
+ export default function NoLayoutLayout() {
+   return (
+     <JSStack screenOptions={{ ...ScaleBackTransition }}>
+-      <JSStack.Screen
+-        name="menu/search"
+-        options={{ header: () => <Header back title="Cari" /> }}
+-      />
+-      <JSStack.Screen name="menu" options={{ headerShown: false }} />
+       <JSStack.Screen name="home" options={{ headerShown: false }} />
+-      <JSStack.Screen name="catalog/menu" options={{ headerShown: false }} />
+       <JSStack.Screen name="catalog" options={{ headerShown: false }} />
+       <JSStack.Screen name="offer" options={{ headerShown: false }} />
+       <JSStack.Screen name="inventory" options={{ headerShown: false }} />
+diff --git a/app/(no-layout)/(cashier)/catalog/_layout.tsx b/app/(no-layout)/(cashier)/catalog/_layout.tsx
+index 1a79585..2fb0e84 100644
+--- a/app/(no-layout)/(cashier)/catalog/_layout.tsx
++++ b/app/(no-layout)/(cashier)/catalog/_layout.tsx
+@@ -13,6 +13,10 @@ export default function MenuLayout() {
+ 				name="detail"
+ 				options={{ header: () => <Header title="Detail Pesanan" back /> }}
+ 			/>
++			<JSStack.Screen
++				name="search"
++				options={{ header: () => <Header back title="Cari" /> }}
++			/>
+ 		</JSStack>
+ 	);
+ }

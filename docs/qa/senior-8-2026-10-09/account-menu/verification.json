@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-09",
+  "ticket": "ACCOUNT-MENU-001",
+  "status": "READY_FOR_QA",
+  "source": {
+    "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+    "sha256": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667"
+  },
+  "contracts": [
+    {
+      "file": "components/feature/accounting/accounts/AccountActionSheet.tsx",
+      "sha256": "a15621e3424b3e8501102e31bc4f261a11de0580c0af259a2cee97415000d1b2"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "sha256": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17"
+    }
+  ],
+  "quality": "ESLint/Biome/diff exit0, focused TypeScript 0 diagnostic",
+  "verificationKind": "Source review and static checks only; no new behavioral test",
+  "artifacts": [
+    {
+      "file": "HANDOFF.md",
+      "sha256": "7d1ad3eb40b75cbe915c0956dd873395c3de008a85f199311e15d2453acbfa90"
+    },
+    {
+      "file": "index.before.tsx.txt",
+      "sha256": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97"
+    },
+    {
+      "file": "manifest.cjs",
+      "sha256": "fbc27358e3de41d79270bae96ae8944dd5f457b5a43862979a58df990518a0df"
+    },
+    {
+      "file": "quality.cjs",
+      "sha256": "4457c101840944eed88d52687bd25224607a5913f4631d83495b5469c9d1166e"
+    },
+    {
+      "file": "quality.json",
+      "sha256": "28d627fd55ae875284155f561c22eafa91a7cb8937901cd131482c656ed85115"
+    }
+  ]
+}

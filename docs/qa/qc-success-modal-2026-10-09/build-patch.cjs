@@ -1,0 +1,16 @@
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto'), assert = require('node:assert/strict'), { spawnSync } = require('node:child_process');
+const source = 'components/common/SuccessModal.tsx', proposal = 'docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.tsx';
+const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+assert.equal(hash(source), 'f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495');
+const old = fs.readFileSync(source, 'utf8'), normalized = fs.readFileSync(proposal, 'utf8').replaceAll('\r\n', '\n');
+const forPatch = 'docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.for-patch.tsx.txt';
+fs.writeFileSync(forPatch, old.includes('\r\n') ? normalized.replaceAll('\n', '\r\n') : normalized);
+const diff = spawnSync('git', ['-c', 'core.autocrlf=false', 'diff', '--no-index', '--', source, forPatch], { encoding: 'utf8' });
+assert.equal(diff.status, 1); assert.ok(diff.stdout.includes('@@'));
+const patch = path.join(__dirname, 'proposal/success-modal-height.patch');
+fs.writeFileSync(patch, 'diff --git a/' + source + ' b/' + source + '\n--- a/' + source + '\n+++ b/' + source + '\n' + diff.stdout.slice(diff.stdout.indexOf('@@')));
+const apply = spawnSync('git', ['-c', 'core.autocrlf=false', 'apply', '--check', '--', patch], { encoding: 'utf8' });
+const result = { applied: false, sourceHash: hash(source), testedCandidateLFHash: hash(proposal), expectedAppliedHashPreservingSourceEOL: hash(forPatch), patchHash: hash(patch), applyCheck: { exitCode: apply.status, stdout: apply.stdout, stderr: apply.stderr } };
+fs.writeFileSync(path.join(__dirname, 'proposal/patch-check.json'), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result));
+process.exitCode = apply.status === 0 ? 0 : 1;

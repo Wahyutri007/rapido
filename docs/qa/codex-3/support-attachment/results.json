@@ -1,0 +1,978 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-005",
+  "scope": "Production picker/form/routes/RHF Controller/Zod with native picker/presentation/modal/router adapters; no browser/native/API writes",
+  "passed": 114,
+  "failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "picker: two same-event presses open only one native picker",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "picker: busy stays set while first picker is pending",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "picker: selected result emits once",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "picker: busy is cleared after completion",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "picker: SDK options preserve one cached JPG/PNG/PDF file",
+      "passed": true,
+      "actual": {
+        "type": [
+          "image/jpeg",
+          "image/png",
+          "application/pdf"
+        ],
+        "multiple": false,
+        "copyToCacheDirectory": true
+      },
+      "expected": {
+        "type": [
+          "image/jpeg",
+          "image/png",
+          "application/pdf"
+        ],
+        "multiple": false,
+        "copyToCacheDirectory": true
+      }
+    },
+    {
+      "name": "remove valid: removal emits null immediately",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove valid: pending picker keeps its lock",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "remove valid: late result cannot reattach",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "remove valid: late result cannot emit another change",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove valid: late error cannot open modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "remove valid: completion unlocks retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "remove valid: next picker can attach a new file",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "remove invalid: removal emits null immediately",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove invalid: pending picker keeps its lock",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "remove invalid: late result cannot reattach",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "remove invalid: late result cannot emit another change",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove invalid: late error cannot open modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "remove invalid: completion unlocks retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "remove invalid: next picker can attach a new file",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "remove error: removal emits null immediately",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove error: pending picker keeps its lock",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "remove error: late result cannot reattach",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "remove error: late result cannot emit another change",
+      "passed": true,
+      "actual": [
+        null
+      ],
+      "expected": [
+        null
+      ]
+    },
+    {
+      "name": "remove error: late error cannot open modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "remove error: completion unlocks retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "remove error: next picker can attach a new file",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "unmount valid: stale result does not call parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "unmount valid: stale result does not open error modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "unmount valid: queued picker callback does not launch picker",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "unmount valid: queued remove callback does not change parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "unmount invalid: stale result does not call parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "unmount invalid: stale result does not open error modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "unmount invalid: queued picker callback does not launch picker",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "unmount invalid: queued remove callback does not change parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "unmount error: stale result does not call parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "unmount error: stale result does not open error modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "unmount error: queued picker callback does not launch picker",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "unmount error: queued remove callback does not change parent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "remount: old result cannot write through parent callback",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "remount: new instance retains its attachment",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "remount: old busy state does not lock new instance",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation jpg: updates only on valid asset",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "validation jpg: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "photo.JPG",
+      "expected": "photo.JPG"
+    },
+    {
+      "name": "validation jpg: modal matches validation outcome",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation jpg: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation png: updates only on valid asset",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "validation png: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "new.png",
+      "expected": "new.png"
+    },
+    {
+      "name": "validation png: modal matches validation outcome",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation png: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation pdf at limit: updates only on valid asset",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "validation pdf at limit: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation pdf at limit: modal matches validation outcome",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation pdf at limit: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation optional MIME: updates only on valid asset",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "validation optional MIME: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation optional MIME: modal matches validation outcome",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation optional MIME: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation generic MIME: updates only on valid asset",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "validation generic MIME: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation generic MIME: modal matches validation outcome",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation generic MIME: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation empty: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation empty: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation empty: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation empty: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation too large: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation too large: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation too large: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation too large: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation unknown size: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation unknown size: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation unknown size: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation unknown size: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation unsupported extension: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation unsupported extension: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation unsupported extension: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation unsupported extension: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation unsupported MIME: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation unsupported MIME: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation unsupported MIME: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation unsupported MIME: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "validation unreadable URI: updates only on valid asset",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "validation unreadable URI: invalid asset preserves previous selection",
+      "passed": true,
+      "actual": "old.pdf",
+      "expected": "old.pdf"
+    },
+    {
+      "name": "validation unreadable URI: modal matches validation outcome",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "validation unreadable URI: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "cancel: previous attachment remains",
+      "passed": true,
+      "actual": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      },
+      "expected": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      }
+    },
+    {
+      "name": "cancel: no callback or error modal",
+      "passed": true,
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "cancel: picker unlocks",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "missing asset: previous attachment remains",
+      "passed": true,
+      "actual": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      },
+      "expected": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      }
+    },
+    {
+      "name": "missing asset: actionable size error",
+      "passed": true,
+      "actual": "Ukuran lampiran tidak dapat diperiksa. Silakan pilih berkas lain.",
+      "expected": "Ukuran lampiran tidak dapat diperiksa. Silakan pilih berkas lain."
+    },
+    {
+      "name": "missing asset: retry after closing modal succeeds",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "current failure: picker error is shown",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "current failure: previous attachment remains",
+      "passed": true,
+      "actual": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      },
+      "expected": {
+        "uri": "file:///old.pdf",
+        "name": "old.pdf",
+        "mimeType": "application/pdf",
+        "size": 128
+      }
+    },
+    {
+      "name": "current failure: retry succeeds",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "StrictMode: effect replay still allows current attachment",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "form: valid feedback explains delivery is unavailable",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "form: valid feedback remains in form",
+      "passed": true,
+      "actual": {
+        "title": "Draft title",
+        "description": "Draft description",
+        "feedbackType": "problem",
+        "relatedPage": "Reports",
+        "attachment": {
+          "uri": "file:///old.pdf",
+          "name": "old.pdf",
+          "mimeType": "application/pdf",
+          "size": 128
+        }
+      },
+      "expected": {
+        "title": "Draft title",
+        "description": "Draft description",
+        "feedbackType": "problem",
+        "relatedPage": "Reports",
+        "attachment": {
+          "uri": "file:///old.pdf",
+          "name": "old.pdf",
+          "mimeType": "application/pdf",
+          "size": 128
+        }
+      }
+    },
+    {
+      "name": "form: same mode rerender keeps draft",
+      "passed": true,
+      "actual": {
+        "title": "Draft title",
+        "description": "Draft description",
+        "feedbackType": "problem",
+        "relatedPage": "Reports",
+        "attachment": {
+          "uri": "file:///old.pdf",
+          "name": "old.pdf",
+          "mimeType": "application/pdf",
+          "size": 128
+        }
+      },
+      "expected": {
+        "title": "Draft title",
+        "description": "Draft description",
+        "feedbackType": "problem",
+        "relatedPage": "Reports",
+        "attachment": {
+          "uri": "file:///old.pdf",
+          "name": "old.pdf",
+          "mimeType": "application/pdf",
+          "size": 128
+        }
+      }
+    },
+    {
+      "name": "form: different mode resets every field",
+      "passed": true,
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      }
+    },
+    {
+      "name": "form: different mode resets delivery modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "form: returning to feedback uses fresh defaults",
+      "passed": true,
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      }
+    },
+    {
+      "name": "form: required fields fail schema validation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "form: invalid fields cannot open unavailable modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "form: mode change clears old validation errors",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "form: old submit callback cannot open any modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "form: old submit callback cannot touch new draft",
+      "passed": true,
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      }
+    },
+    {
+      "name": "form: old picker cannot attach to different mode",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "form: new mode attachment picker is available",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "form: submit callback after unmount cannot open modal",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "StrictMode: current form validation can open unavailable modal",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "app/(no-layout)/manage/feedback/index.tsx: actual route starts empty",
+      "passed": true,
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      }
+    },
+    {
+      "name": "app/(no-layout)/manage/feedback/index.tsx: Controller passes attachment to RHF",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    },
+    {
+      "name": "app/(no-layout)/manage/feature-request/index.tsx: actual route starts empty",
+      "passed": true,
+      "actual": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      },
+      "expected": {
+        "title": "",
+        "description": "",
+        "feedbackType": "suggestion",
+        "relatedPage": "",
+        "attachment": null
+      }
+    },
+    {
+      "name": "app/(no-layout)/manage/feature-request/index.tsx: Controller passes attachment to RHF",
+      "passed": true,
+      "actual": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      },
+      "expected": {
+        "uri": "file:///new.png",
+        "name": "new.png",
+        "mimeType": "image/png",
+        "size": 1024
+      }
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+    "schema/support.ts": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+    "types/ui/support.ts": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+    "app/(no-layout)/manage/feedback/index.tsx": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+    "app/(no-layout)/manage/feature-request/index.tsx": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f"
+  }
+}

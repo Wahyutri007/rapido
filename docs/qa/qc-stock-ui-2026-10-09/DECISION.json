@@ -1,0 +1,95 @@
+{
+  "id": "QC-STOCK-UI-20261009-CHANGES-REQUESTED",
+  "capturedAt": "2026-10-08T20:04:14.468Z",
+  "owner": "QC",
+  "decision": "CHANGES_REQUESTED",
+  "scope": "UI only; backend deferred by explicit user direction",
+  "sourceHashes": {
+    "stockScreen": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+    "successModal": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745"
+  },
+  "sourceBrowser": {
+    "passed": 35,
+    "failed": 1,
+    "runtimeErrors": 0,
+    "consoleErrors": 0,
+    "httpApiAttempts": 0
+  },
+  "proposalBrowser": {
+    "passed": 36,
+    "failed": 0,
+    "applied": false,
+    "candidateHash": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f"
+  },
+  "findings": [
+    {
+      "id": "QC-STOCK-UI-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "source": "components/common/SuccessModal.tsx:96",
+      "title": "Success illustration intrinsic height clips modal actions on web 320x640",
+      "actual": {
+        "modal": {
+          "x": 16,
+          "y": -75.75,
+          "width": 288,
+          "height": 791.5
+        },
+        "confirm": {
+          "x": 41,
+          "y": 642.75,
+          "width": 238,
+          "height": 48
+        }
+      },
+      "proposal": {
+        "modal": {
+          "x": 16,
+          "y": 116.25,
+          "width": 288,
+          "height": 407.5
+        },
+        "confirm": {
+          "x": 41,
+          "y": 450.75,
+          "width": 238,
+          "height": 48
+        },
+        "applied": false,
+        "patch": "proposal/success-image-size.patch"
+      }
+    },
+    {
+      "id": "QC-STOCK-UI-002",
+      "severity": "P3",
+      "status": "OPEN",
+      "source": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+      "title": "15 existing styling occurrences violate the authoritative UI tokens or primitive override rules",
+      "summary": {
+        "fractional-spacing": 8,
+        "card-primitive-override": 1,
+        "nonsemantic-color": 5,
+        "search-primitive-override": 1
+      },
+      "evidence": "token-audit.json"
+    }
+  ],
+  "priorNativeWarnings": {
+    "ids": [
+      "QC-HP-WARNING-001",
+      "QC-HP-WARNING-002"
+    ],
+    "status": "OPEN; existing log evidence, no fresh native screenshot certification"
+  },
+  "backend": {
+    "deferred": true,
+    "uiGate": false,
+    "historicalFinding": "QC-STOCK-001 remains historical OPEN, not CLOSED"
+  },
+  "finalPublicationOwner": "PM",
+  "limitations": [
+    "Browser-local API fixtures",
+    "Isolated Expo Router layout uses production Header/title; root auth/navigation is not reviewed",
+    "Physical phone visual behavior, accessibility, keyboard, all shared-modal callers and Figma parity are not certified"
+  ]
+}

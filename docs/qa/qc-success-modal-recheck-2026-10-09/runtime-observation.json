@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-09T02:12:37.614Z",
+  "ports": {
+    "exitCode": 0,
+    "current": [
+      {
+        "LocalPort": 8088,
+        "OwningProcess": 28972
+      },
+      {
+        "LocalPort": 8001,
+        "OwningProcess": 23948
+      }
+    ]
+  },
+  "cache": {
+    "duringBuildBefore": {
+      "node_modules/react-native-css-interop/.cache/android.js": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5"
+    },
+    "duringBuildAfter": {
+      "node_modules/react-native-css-interop/.cache/android.js": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5"
+    },
+    "currentAndroidHash": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5",
+    "currentAndroidBytes": 193220
+  },
+  "qcActions": "Read-only observation. No HTTP listener, start/stop/restart, HP/ADB, NativeWind Metro plugin, root Metro config require or shared cache write.",
+  "limits": "Observed context, not native/whole startup/cache approval"
+}

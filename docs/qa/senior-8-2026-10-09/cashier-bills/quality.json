@@ -1,0 +1,70 @@
+{
+  "sources": [
+    "app/(cashier)/biling/index.tsx",
+    "app/(cashier)/biling/detail.tsx",
+    "app/(cashier)/biling/_layout.tsx",
+    "components/feature/cashier/bills/BillsScreen.tsx",
+    "lib/cashier/bills.ts"
+  ],
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(cashier)/biling/index.tsx",
+        "app/(cashier)/biling/detail.tsx",
+        "app/(cashier)/biling/_layout.tsx",
+        "components/feature/cashier/bills/BillsScreen.tsx",
+        "lib/cashier/bills.ts",
+        "--max-warnings",
+        "0"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(cashier)/biling/index.tsx",
+        "app/(cashier)/biling/detail.tsx",
+        "app/(cashier)/biling/_layout.tsx",
+        "components/feature/cashier/bills/BillsScreen.tsx",
+        "lib/cashier/bills.ts"
+      ],
+      "status": 0,
+      "stdout": "Checked 5 files in 41ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(cashier)/biling/index.tsx",
+        "app/(cashier)/biling/detail.tsx",
+        "app/(cashier)/biling/_layout.tsx",
+        "components/feature/cashier/bills/BillsScreen.tsx",
+        "lib/cashier/bills.ts"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(cashier)/biling/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(cashier)/biling/index.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(cashier)/biling/index.tsx",
+    "app/(cashier)/biling/detail.tsx",
+    "app/(cashier)/biling/_layout.tsx",
+    "components/feature/cashier/bills/BillsScreen.tsx",
+    "lib/cashier/bills.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

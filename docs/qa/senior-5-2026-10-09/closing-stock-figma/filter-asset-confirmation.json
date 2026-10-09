@@ -1,0 +1,16 @@
+[
+  {
+    "name": "store",
+    "file": "assets/images/inventory/closing-stock/store.svg",
+    "url": "https://www.figma.com/api/mcp/asset/e116b0e2-cde0-4f06-ac0b-7d8564d61f64.svg",
+    "exact": true,
+    "sha256": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255"
+  },
+  {
+    "name": "status",
+    "file": "assets/images/inventory/closing-stock/status.svg",
+    "url": "https://www.figma.com/api/mcp/asset/81b75349-ec4e-41ef-91f6-82d2aaf32423.svg",
+    "exact": true,
+    "sha256": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88"
+  }
+]

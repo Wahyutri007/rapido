@@ -1,0 +1,2767 @@
+{
+  "owner": "QC",
+  "scope": "DeleteConfirmModal horizontal orientation, live rotation and two-button/loading contract",
+  "tested": "PROPOSAL_ONLY_NOT_APPLIED",
+  "sourceHash": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+  "fixtureHash": "d80e3f0cee18c14a1918c0497f7e16c7cc671808e75b794828d81af709184c10",
+  "checks": [
+    {
+      "name": "initial closed modal remains hidden",
+      "passed": true
+    },
+    {
+      "name": "direct-640x360: entire modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "direct-640x360: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "direct-640x360: Batal fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 155,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-640x360: Batal visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-640x360: Hapus fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 326,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-640x360: Hapus visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-640x360: buttons remain side by side",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-844x390: entire modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      }
+    },
+    {
+      "name": "direct-844x390: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      }
+    },
+    {
+      "name": "direct-844x390: Batal fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 257,
+        "y": 301,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-844x390: Batal visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-844x390: Hapus fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 428,
+        "y": 301,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-844x390: Hapus visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-844x390: buttons remain side by side",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-640x360: entire modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "long-640x360: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "long-640x360: Batal fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 155,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-640x360: Batal visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-640x360: Hapus fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 326,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-640x360: Hapus visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-640x360: buttons remain side by side",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-640: overflowing content has scroll region",
+      "passed": true,
+      "detail": {
+        "found": true,
+        "clientHeight": 214,
+        "scrollHeight": 360
+      }
+    },
+    {
+      "name": "long-640: final description line reachable",
+      "passed": true
+    },
+    {
+      "name": "long-640: both footer buttons remain visible and stationary while scrolling",
+      "passed": true,
+      "detail": {
+        "beforeCancel": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "beforeConfirm": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "cancel": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-844x390: entire modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      }
+    },
+    {
+      "name": "long-844x390: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      }
+    },
+    {
+      "name": "long-844x390: Batal fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 257,
+        "y": 301,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-844x390: Batal visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-844x390: Hapus fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 428,
+        "y": 301,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-844x390: Hapus visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-844x390: buttons remain side by side",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-844: overflowing content has scroll region",
+      "passed": true,
+      "detail": {
+        "found": true,
+        "clientHeight": 244,
+        "scrollHeight": 360
+      }
+    },
+    {
+      "name": "long-844: final description line reachable",
+      "passed": true
+    },
+    {
+      "name": "long-844: both footer buttons remain visible and stationary while scrolling",
+      "passed": true,
+      "detail": {
+        "beforeCancel": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "beforeConfirm": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "cancel": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: entire modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: width follows current window",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: Batal fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 155,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: Batal visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: Hapus fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 326,
+        "y": 271,
+        "width": 159,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: Hapus visible target at least44px",
+      "passed": true,
+      "detail": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: buttons remain side by side",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "confirm": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "rotation keeps same title/modal instance",
+      "passed": true
+    },
+    {
+      "name": "rotation causes neither close nor delete callback",
+      "passed": true
+    },
+    {
+      "name": "restore portrait then cancel notifies exactly once",
+      "passed": true
+    },
+    {
+      "name": "landscape loading disables both buttons",
+      "passed": true
+    },
+    {
+      "name": "disabled landscape controls invoke no callbacks",
+      "passed": true
+    },
+    {
+      "name": "after loading ends and portrait restored cancel invokes once",
+      "passed": true
+    },
+    {
+      "name": "final no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "final no console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "final no external/business HTTP",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 51,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "exception": null,
+  "measurements": [
+    {
+      "label": "direct-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      },
+      "cancel": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "confirm": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "screen": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "label": "direct-844x390",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "modal": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      },
+      "cancel": {
+        "box": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      },
+      "confirm": {
+        "box": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      },
+      "screen": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "label": "long-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      },
+      "cancel": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "confirm": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "screen": {
+        "width": 640,
+        "height": 360
+      }
+    },
+    {
+      "label": "long-844x390",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "modal": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      },
+      "cancel": {
+        "box": {
+          "x": 257,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      },
+      "confirm": {
+        "box": {
+          "x": 428,
+          "y": 301,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 301,
+            "bottom": 349,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 374,
+            "clientHeight": 356,
+            "scrollHeight": 356
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 390,
+            "clientHeight": 390,
+            "scrollHeight": 390
+          }
+        ]
+      },
+      "screen": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "label": "long-live-rotate-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      },
+      "cancel": {
+        "box": {
+          "x": 155,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "confirm": {
+        "box": {
+          "x": 326,
+          "y": 271,
+          "width": 159,
+          "height": 48
+        },
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 271,
+            "bottom": 319,
+            "clientHeight": 48,
+            "scrollHeight": 48
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 16,
+            "bottom": 344,
+            "clientHeight": 326,
+            "scrollHeight": 326
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "top": 0,
+            "bottom": 360,
+            "clientHeight": 360,
+            "scrollHeight": 360
+          }
+        ]
+      },
+      "screen": {
+        "width": 640,
+        "height": 360
+      }
+    }
+  ],
+  "bundleReceipts": [
+    {
+      "path": "/.expo/qc-delete-proposal-entry.bundle",
+      "bytes": 5291687,
+      "sha256": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f"
+    }
+  ],
+  "receiptErrors": [],
+  "offlineBuild": {
+    "mode": "proposal",
+    "createdAt": "2026-10-09T05:07:59.277Z",
+    "entry": "docs\\qa\\pm-delete-same-drive-2026-10-09\\offline-proposal-entry.jsx",
+    "entryHash": "fc8d91b26f913fd106b525b7a9f8a7f8b78e8471c187e91147669e0474c84862",
+    "output": "D:\\Rapido-QC-temp\\pm-delete-same-drive-2026-10-09\\proposal\\entry.bundle.js",
+    "bundleHash": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f",
+    "bytes": 5291687,
+    "assets": 23,
+    "before": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+    },
+    "after": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+    },
+    "limitations": "Isolated Metro API/RNWeb with real Babel presets and fixed current stylesheet supplied by fixture. No root Metro/NativeWind-plugin pipeline, native, HP, or full application startup approval."
+  },
+  "offlineReceipts": [
+    {
+      "path": "/.expo/qc-delete-proposal-entry.bundle",
+      "bytes": 5291687,
+      "sha256": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Regular.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Regular.ttf",
+      "bytes": 342732,
+      "sha256": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Medium.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Medium.ttf",
+      "bytes": 342936,
+      "sha256": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-SemiBold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-SemiBold.ttf",
+      "bytes": 343640,
+      "sha256": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Bold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Bold.ttf",
+      "bytes": 344028,
+      "sha256": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+    },
+    {
+      "path": "/assets/assets/images/illustrations/delete-confirmation.png",
+      "file": "assets\\images\\illustrations\\delete-confirmation.png",
+      "bytes": 343818,
+      "sha256": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1"
+    }
+  ]
+}

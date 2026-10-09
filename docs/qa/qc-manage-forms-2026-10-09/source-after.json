@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-09",
+  "sourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+    "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+  },
+  "dependencyHashes": {
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "schema/manage/extra.ts": "1d6a8c3b4b57f7ec279d7f932af01af7c5d620b25884f86596f60256dc824db0",
+    "constants/data/manage/extra.ts": "4020331fc0be48f6d0fe6e750f9163c3867ccdb8d658eaf1f73ca9001671b557",
+    "schema/manage/order-type.ts": "c97ab4a5cc226203fc5a7efb4cd437e70d70110c899758ea22a2d74f919accfb",
+    "constants/data/manage/order-type.ts": "1537b03a0e0ce809234945e3dc428be608d62b2e201a24a435f103bf052b3d72",
+    "schema/manage/payment-method.ts": "c0f6d5772a57efae20a32e8ba2278f7c24fd8489cf5b4d2baa1246c57b5626fd",
+    "constants/data/manage/payment-method.ts": "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d",
+    "schema/manage/tax.ts": "b6a8551ee05516e4ffad836479b33d50f79f7885c282bc8cc35520d115dbd901",
+    "constants/data/manage/tax.ts": "e3ee5192d8ab82dedefd12b72ee7ebc6dfacaa775310dd8ed4cc1789a22458c2"
+  },
+  "mismatch": [
+    "metro.config.js"
+  ]
+}

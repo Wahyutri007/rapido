@@ -1,0 +1,17 @@
+{
+  "owner": "QC",
+  "scope": "SuccessModal horizontal orientation and live resize",
+  "tested": "CURRENT_PRODUCTION_SOURCE",
+  "sourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+  "fixtureHash": "963039c375655fac6ea9bab2e599a503b34bfd3621125faf10383606b258c69b",
+  "checks": [],
+  "passed": 0,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "exception": "locator.waitFor: Timeout 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('preview-ready') to be visible\u001b[22m\n",
+  "measurements": [],
+  "bundleReceipts": [],
+  "receiptErrors": []
+}

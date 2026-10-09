@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "actual persisted store hydrates without an idle overlay",
+      "passed": true
+    },
+    {
+      "name": "actual middleware hydration completes",
+      "passed": true
+    },
+    {
+      "name": "actual splash enters transition mode unready",
+      "passed": true
+    },
+    {
+      "name": "store navigation and actual splash badge agree",
+      "passed": true
+    },
+    {
+      "name": "actual splash starts one outro after hold",
+      "passed": true
+    },
+    {
+      "name": "rerender does not restart native outro effect",
+      "passed": true
+    },
+    {
+      "name": "finished worklet queues JS completion without synchronous removal",
+      "passed": true
+    },
+    {
+      "name": "restart mounts fresh splash callback identity",
+      "passed": true
+    },
+    {
+      "name": "restart clears readiness before next mode navigation",
+      "passed": true
+    },
+    {
+      "name": "next mode has its own outro and correct badge",
+      "passed": true
+    },
+    {
+      "name": "old and new completed worklets can coexist in JS queue",
+      "passed": true
+    },
+    {
+      "name": "late actual prior worklet cannot remove next completed splash",
+      "passed": true
+    },
+    {
+      "name": "current actual worklet removes overlay once",
+      "passed": true
+    },
+    {
+      "name": "two transitions navigate exactly once each",
+      "passed": true
+    },
+    {
+      "name": "persist middleware saves only mode snapshots",
+      "passed": true
+    },
+    {
+      "name": "latest persistence matches final selected mode",
+      "passed": true
+    },
+    {
+      "name": "same-mode production guard creates no overlay or new route",
+      "passed": true
+    },
+    {
+      "name": "native cleanup adapter cancels unfinished unmounted outro",
+      "passed": true
+    },
+    {
+      "name": "strict lifecycle and bridge handlers have no runtime or act errors",
+      "passed": true
+    },
+    {
+      "name": "integration sources stable before and after test",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "before": {
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "components/custom/SplashScreenView.tsx": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "node_modules/zustand/react.js": "4193ec2661359a71f870eb4fe4f8002505d2014934432bd9900afafd3c9f9f96",
+    "node_modules/zustand/middleware.js": "3574b91b52f6c0138393f215b8df3035ddf8e45138b1558b4fe2e586541560b1"
+  },
+  "after": {
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "components/custom/SplashScreenView.tsx": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "node_modules/zustand/react.js": "4193ec2661359a71f870eb4fe4f8002505d2014934432bd9900afafd3c9f9f96",
+    "node_modules/zustand/middleware.js": "3574b91b52f6c0138393f215b8df3035ddf8e45138b1558b4fe2e586541560b1"
+  },
+  "routes": [
+    "/(cashier)/home",
+    "/(operator)/home",
+    "/(absence)/home"
+  ],
+  "persistedSnapshots": [
+    {
+      "state": {
+        "mode": "back-office"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "cashier"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "cashier"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "cashier"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "operator"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "operator"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "operator"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "absence"
+      },
+      "version": 0
+    },
+    {
+      "state": {
+        "mode": "absence"
+      },
+      "version": 0
+    }
+  ],
+  "outroTimings": [
+    {
+      "started": 1100,
+      "duration": 320
+    },
+    {
+      "started": 2520,
+      "duration": 320
+    },
+    {
+      "started": 3940,
+      "duration": 320
+    }
+  ],
+  "scope": "Actual LayoutTransitionSplash + SplashScreenView + appModeStore + Zustand React/persist. React StrictMode; timer/worklet/bridge/native/storage/router adapters, no animation frames/device/persistent storage."
+}

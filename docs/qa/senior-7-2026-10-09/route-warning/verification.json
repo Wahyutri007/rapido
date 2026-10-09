@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-09",
+  "owner": "Software Developer Senior 7",
+  "status": "READY_FOR_QA",
+  "finding": "QC-HP-WARNING-001",
+  "sourceFiles": [
+    {
+      "file": "app/(no-layout)/_layout.tsx",
+      "sha256": "66399da5e6d829598386b1b9fc7fb4508146c771f640fcf081e79e5f1896f9f0"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/catalog/_layout.tsx",
+      "sha256": "1f55b4214222f8b59a6c1c605ac138c801fde76c4756d5b39f9eebe07da620a9"
+    }
+  ],
+  "documentation": {
+    "file": "docs/README.md",
+    "sha256": "4454c65785bd83f7cdece4e99a9d3e5dbac00af9a50b689b9d80d3d2c10e0b35"
+  },
+  "dependencies": [
+    {
+      "file": "app/(no-layout)/(cashier)/_layout.tsx",
+      "sha256": "45ae8a2d80cbff408157a15e07cfea2b75feb863952447472d87831e96fd7f5e"
+    },
+    {
+      "file": "app/(no-layout)/catalog/_layout.tsx",
+      "sha256": "1eaaf0089dfe37a70e443016ed7a31acc5bfedc3b090a6608b9803e4dc1b43fc"
+    },
+    {
+      "file": "node_modules/expo-router/build/useScreens.js",
+      "sha256": "fe94c51fb0d6091e3467cde1401d437f9b8c94b2fe2172e5768cf46774a81498"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+    },
+    {
+      "file": "components/custom/JSStack.tsx",
+      "sha256": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/catalog/search.tsx",
+      "sha256": "6a0680c08acee8a688230c3f64d59004cffb814e0e4a333dc47259c0d84e0307"
+    }
+  ],
+  "checks": {
+    "routerLayout": 20,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biome": "PASS",
+    "typecheckDiagnostics": 0,
+    "diffCheck": "PASS",
+    "nativeHeader": true,
+    "nativeBackNavigation": false,
+    "nativeNewRouteWarnings": 0
+  },
+  "evidence": [
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\baseline.json",
+      "sha256": "c87c2716e3dbc8946a9397c54d18464536243a94ff136ba01a9c80af6b0f9c7c"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\eslint-results.json",
+      "sha256": "30b3f0c0a38bee0dc3f5d0e8b62e838785b71d8b5fafe8173503c67d7931a5a0"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\HANDOFF.md",
+      "sha256": "1de06debf837e7d460e46241dc4357c332953e7c42071946f8613357af8ccb16"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\native-results.json",
+      "sha256": "aeb0e8af6541e7f11c226b4aeb3d76c44af3a5f786d1304aca712bbe4637bff0"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\results.json",
+      "sha256": "bbe37b7783fc5da3012fd0465d3cf9af09ae6e6b6e802cf1aaeed522c3065759"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\typecheck-results.json",
+      "sha256": "69fa0c760d0678ea96b8d8b1f31a83a23ce3391f0e55ecb2bffd8a08ef788ada"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\typecheck.cjs",
+      "sha256": "126fb5006edfd1356330e5c3e6007766a9f3d2f92a1c71c7178d786af71fbe21"
+    },
+    {
+      "file": "docs\\qa\\senior-7-2026-10-09\\route-warning\\verify.cjs",
+      "sha256": "664b1a864306728f009d2446059c134f7d0bbcdd317dd99bee7debf183313f20"
+    }
+  ],
+  "qaApproved": false,
+  "qcApproved": false
+}

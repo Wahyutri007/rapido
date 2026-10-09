@@ -1,0 +1,4 @@
+{
+  "executedScenarios": 0,
+  "reason": "Current SuccessModal now renders ScrollView; historical presentation adapter only exposed View, Image, Pressable. Updated own adapter, no production defect or failed business assertion counted."
+}

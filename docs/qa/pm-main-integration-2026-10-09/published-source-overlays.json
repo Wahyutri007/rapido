@@ -1,0 +1,82 @@
+{
+  "fix/android-usb-launcher": [
+    {
+      "file": "package.json",
+      "publishedSha256": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "integratedSha256": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "matches": true
+    },
+    {
+      "file": "scripts/start-hp.cjs",
+      "publishedSha256": "1bc1bf4ac7f1ce18c63f96057211b645daea679b3bf93f9c161ab4a5fa0d7a89",
+      "integratedSha256": "1bc1bf4ac7f1ce18c63f96057211b645daea679b3bf93f9c161ab4a5fa0d7a89",
+      "matches": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "publishedSha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "integratedSha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "matches": true
+    }
+  ],
+  "fix/auth-bootstrap-lifecycle": [
+    {
+      "file": "api/hooks/auth.ts",
+      "publishedSha256": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "integratedSha256": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "matches": true
+    },
+    {
+      "file": "app/index.tsx",
+      "publishedSha256": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "integratedSha256": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "matches": true
+    },
+    {
+      "file": "context/AuthContext.tsx",
+      "publishedSha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "integratedSha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "matches": true
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "publishedSha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "integratedSha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "matches": true
+    }
+  ],
+  "fix/onboarding-transition-lifecycle": [
+    {
+      "file": "app/(onboarding)/onboarding.tsx",
+      "publishedSha256": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+      "integratedSha256": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+      "matches": true
+    },
+    {
+      "file": "components/custom/LayoutTransitionSplash.tsx",
+      "publishedSha256": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+      "integratedSha256": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+      "matches": true
+    }
+  ],
+  "fix/barcode-lifecycle": [
+    {
+      "file": "components/custom/Incrementer.tsx",
+      "publishedSha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+      "integratedSha256": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2",
+      "matches": true
+    },
+    {
+      "file": "components/feature/barcode/PrintBarcodeModal.tsx",
+      "publishedSha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+      "integratedSha256": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+      "matches": true
+    },
+    {
+      "file": "components/feature/barcode/ProductPickerSheet.tsx",
+      "publishedSha256": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+      "integratedSha256": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+      "matches": true
+    }
+  ]
+}

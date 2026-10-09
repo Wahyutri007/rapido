@@ -1,0 +1,59 @@
+{
+  "executionMode": "APPLICATION_SOURCES",
+  "scope": "UI only: production screen/RN-web/primitives/modal/SearchBar/font/providers and isolated Expo Router, browser-local transport fixtures",
+  "checks": [
+    {
+      "name": "main 320: no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "main 320: CTA stays within viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    },
+    {
+      "name": "main 320: primary target height at least44",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 576,
+        "width": 288,
+        "height": 48
+      }
+    }
+  ],
+  "passed": 3,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blockedRequests": [],
+  "exception": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Kecuali Produk (Opsional)', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <div dir=\"auto\" class=\"css-146c3p1 text-foreground text-foreground text-sm\">Kecuali Produk (Opsional)</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n",
+  "metrics": [],
+  "fixtureCalls": [
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    },
+    {
+      "domain": "settings",
+      "method": "get"
+    },
+    {
+      "domain": "menus",
+      "method": "get"
+    }
+  ],
+  "limitations": "No backend/native-current-screen/root-auth/Figma/API persistence certification; physical phone not foreground. Actual window/screen metrics recorded; spring animations settle before final geometry checks."
+}

@@ -1,0 +1,70 @@
+{
+  "sources": [
+    "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+    "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+    "lib/accounting/trial-balance.ts"
+  ],
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+        "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+        "lib/accounting/trial-balance.ts",
+        "--max-warnings",
+        "0"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+        "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+        "lib/accounting/trial-balance.ts"
+      ],
+      "status": 0,
+      "stdout": "Checked 5 files in 25ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+        "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+        "lib/accounting/trial-balance.ts"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/index.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+    "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+    "lib/accounting/trial-balance.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

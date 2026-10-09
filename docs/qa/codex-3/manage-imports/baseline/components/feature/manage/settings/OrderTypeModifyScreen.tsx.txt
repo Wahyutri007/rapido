@@ -1,0 +1,87 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { View } from "react-native";
+import {
+	FormControl,
+	FormField,
+	FormInput,
+	FormItem,
+	FormLabel,
+	FormMessage,
+	FormSelect,
+} from "@/components/common/Form";
+import { ORDER_TYPE_OPTIONS } from "@/constants/data/other/order-types";
+import { EXTRA_OPTIONS } from "@/constants/data/other/extra";
+import {
+	orderTypeSchema,
+	type OrderTypeSchema,
+} from "@/schema/manage/order-type";
+import type { OrderTypeItemProps } from "@/types/ui/manage/order.type";
+import ManagePreviewForm from "./ManagePreviewForm";
+
+export default function OrderTypeModifyScreen({
+	item,
+}: {
+	item?: OrderTypeItemProps;
+}) {
+	const form = useForm<OrderTypeSchema>({
+		resolver: zodResolver(orderTypeSchema),
+		defaultValues: {
+			name: item?.name ?? "",
+			type: item?.type.value ?? "",
+			extra: item?.extra.value ?? "",
+		},
+	});
+
+	return (
+		<ManagePreviewForm form={form} title="Tipe Pesanan">
+			<View className="gap-4">
+				<FormField
+					control={form.control}
+					name="name"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Nama Tipe Pesanan</FormLabel>
+							<FormControl>
+								<FormInput placeholder="Contoh: Dine-In" />
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="type"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Jenis Tipe Pesanan</FormLabel>
+							<FormControl>
+								<FormSelect
+									placeholder="Pilih jenis pesanan"
+									data={ORDER_TYPE_OPTIONS}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name="extra"
+					render={() => (
+						<FormItem>
+							<FormLabel required>Biaya Tambahan</FormLabel>
+							<FormControl>
+								<FormSelect
+									placeholder="Pilih biaya tambahan"
+									data={EXTRA_OPTIONS}
+								/>
+							</FormControl>
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+			</View>
+		</ManagePreviewForm>
+	);
+}

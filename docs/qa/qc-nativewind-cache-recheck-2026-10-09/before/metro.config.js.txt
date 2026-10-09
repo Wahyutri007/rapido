@@ -1,0 +1,49 @@
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require("nativewind/metro");
+const path = require("node:path");
+const { preserveNativewindCache } = require("./scripts/preserve-nativewind-cache.cjs");
+
+const config = getDefaultConfig(__dirname);
+
+// Large warm bundles can exceed Windows' open-file limit during cache reads.
+function limitCacheRequests(store, limit = 64) {
+  let active = 0;
+  const pending = [];
+  function run(operation) {
+    return new Promise((resolve, reject) => {
+      const start = () => {
+        active += 1;
+        Promise.resolve()
+          .then(operation)
+          .then(resolve, reject)
+          .finally(() => {
+            active -= 1;
+            pending.shift()?.();
+          });
+      };
+      if (active < limit) start();
+      else pending.push(start);
+    });
+  }
+  return {
+    get: (key) => run(() => store.get(key)),
+    set: (key, value) => run(() => store.set(key, value)),
+    clear: () => store.clear(),
+  };
+}
+
+if (process.platform === "win32") {
+  config.cacheStores = config.cacheStores.map((store) => limitCacheRequests(store));
+}
+
+config.resolver.assetExts.push("md");
+
+module.exports = preserveNativewindCache(
+  () => withNativeWind(config, {
+    input: "./global.css",
+    inlineRem: 16,
+    // Keep generated styles on disk for SDK 57's Metro pipeline.
+    forceWriteFileSystem: true,
+  }),
+  path.join(path.dirname(require.resolve("react-native-css-interop/package.json")), ".cache"),
+);

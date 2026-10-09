@@ -1,0 +1,53 @@
+{
+  "checks": [
+    {
+      "name": "shared hub has only movement href plus concurrent Codex-2 billing href; closing link retained",
+      "passed": true
+    },
+    {
+      "name": "shared parent has movement plus concurrent billing child, both headers hidden",
+      "passed": true
+    },
+    {
+      "name": "new and touched source uses semantic typography/colors and spacing grid",
+      "passed": true
+    },
+    {
+      "name": "feature screens reuse wrappers/cards/search/pickers without inline headers",
+      "passed": true
+    },
+    {
+      "name": "route map documents list and detail URLs and session-data boundary",
+      "passed": true
+    },
+    {
+      "name": "layout index: direct-link back uses safe fallback",
+      "passed": true
+    },
+    {
+      "name": "layout index: existing history goes back",
+      "passed": true
+    },
+    {
+      "name": "layout detail: direct-link back uses safe fallback",
+      "passed": true
+    },
+    {
+      "name": "layout detail: existing history goes back",
+      "passed": true
+    }
+  ],
+  "hashes": {
+    "lib/inventory-stock-movement.ts": "5222b7534e6fa667b8070a445041fc6a1126ba70d0dad80794df5706781ff583",
+    "components/feature/inventory/stock-movement/StockMovementDetail.tsx": "9809627e56bd9c3d5a227d0c6c3ce20d51ff9f4596a0b7c1d9ca3dab19dd3dba",
+    "components/feature/inventory/stock-movement/StockMovementList.tsx": "e102d0212493f8ffc312b57f254ebf5bc482f9649cf1d9a8815526d5d3f73dca",
+    "components/feature/inventory/stock-movement/useStockMovements.ts": "339c24b3157c02a3184385dbc43140bd483c6cc4fac1f093901fc7bf3e3a8027",
+    "app/(no-layout)/inventory/stock-movement/detail.tsx": "14c11320e092f0093e371c6555ccea23cd4c803a161dcc58d1463bc4e29bff69",
+    "app/(no-layout)/inventory/stock-movement/index.tsx": "e0657c1f2a38cf500e870bfa1640bd63a90a765b0533b9c570ffa4d03afe1b8e",
+    "app/(no-layout)/inventory/stock-movement/_layout.tsx": "fd03398a5c750c5f6d3fb44d2483488666cc0f8db6f276266a96c9fdbf7e50db",
+    "app/(no-layout)/inventory/_layout.tsx": "130299e720d6267d535ec9c633e00a6c80d115303e63a46853fd11ff09ecf274",
+    "app/(back-office)/inventory/index.tsx": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75"
+  },
+  "violations": [],
+  "limitations": "Back-handler replay uses actual layout with mocked navigator/header/stack; not a full Expo Router integration test."
+}

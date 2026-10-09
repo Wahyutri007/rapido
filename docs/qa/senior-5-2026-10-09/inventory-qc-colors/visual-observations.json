@@ -1,0 +1,40 @@
+{
+  "status": "COLOR_DELTA_ONLY; GLOBAL_PARITY_NOT_100",
+  "observations": [
+    {
+      "frame": "1:13605",
+      "state": "filled",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PENDING_FULL_REFERENCE_LAYOUT_RECHECK",
+      "detail": "Current metric labels wrap while stored Figma labels fit on one line. Metric/card/header spacing and official icons remain different/unverified. Color correction does not close full frame parity."
+    },
+    {
+      "frame": "1:12059",
+      "state": "filled",
+      "viewport": [
+        320,
+        640
+      ],
+      "status": "PENDING_ORIGINAL_ASSET_EXPORT",
+      "detail": "Metadata icons now muted, but Feather grid/layers/truck shapes are not certified as official Figma assets. Counts and sample records differ from design; viewport differs."
+    },
+    {
+      "frame": "1:14945",
+      "state": "filled",
+      "viewport": [
+        320,
+        640
+      ],
+      "status": "PENDING_ORIGINAL_ASSET_AND_LAYOUT_RECHECK",
+      "detail": "Supplier/store grid and dollar symbol differ from official reference shapes; original SVG exports pending. Narrow reference text wraps; wider/full-state geometry not measured in this color-only ticket."
+    },
+    {
+      "frame": "all",
+      "status": "NATIVE_QA_PENDING",
+      "detail": "Android/font scale/keyboard/safe area/full router/backend are not covered by isolated RNWeb tests."
+    }
+  ]
+}

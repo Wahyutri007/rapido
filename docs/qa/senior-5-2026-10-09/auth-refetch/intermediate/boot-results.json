@@ -1,0 +1,273 @@
+{
+  "ticket": "SD5-002",
+  "baseline": false,
+  "baselineRef": null,
+  "sources": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "context/AuthContext.tsx": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d",
+    "hooks/useNavigateAuthenticated.ts": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c"
+  },
+  "checks": [
+    {
+      "name": "boot initially waits for AuthProvider storage validation",
+      "passed": true
+    },
+    {
+      "name": "public destination still respects minimum 850ms",
+      "passed": true
+    },
+    {
+      "name": "new user reaches ready onboarding splash",
+      "passed": true
+    },
+    {
+      "name": "new user navigates to onboarding after outro",
+      "passed": true
+    },
+    {
+      "name": "missing token makes no user refetch",
+      "passed": true
+    },
+    {
+      "name": "unmount drains boot minimum timer",
+      "passed": true
+    },
+    {
+      "name": "completed onboarding routes to start",
+      "passed": true
+    },
+    {
+      "name": "completion saved during bootstrap is read before routing",
+      "passed": true
+    },
+    {
+      "name": "expired token is validated once by AuthProvider",
+      "passed": true
+    },
+    {
+      "name": "expired token can finish public splash instead of revalidation loop",
+      "passed": true
+    },
+    {
+      "name": "expired token routes to completed onboarding start",
+      "passed": true
+    },
+    {
+      "name": "user request failure does not retry from Boot",
+      "passed": true
+    },
+    {
+      "name": "failed validation follows provider anonymous state",
+      "passed": true
+    },
+    {
+      "name": "storage read failure can finish anonymous boot",
+      "passed": true
+    },
+    {
+      "name": "valid token waits for user query even after minimum time",
+      "passed": true
+    },
+    {
+      "name": "user validation finishes authenticated splash",
+      "passed": true
+    },
+    {
+      "name": "unrelated auth/provider rerender preserves outro callback",
+      "passed": true
+    },
+    {
+      "name": "outro completion navigates once including late rerenders",
+      "passed": true
+    },
+    {
+      "name": "premature animation callback cannot bypass splash minimum",
+      "passed": true
+    },
+    {
+      "name": "error: unhealthy API outranks unresolved auth",
+      "passed": true
+    },
+    {
+      "name": "error: unhealthy API navigates to maintenance",
+      "passed": true
+    },
+    {
+      "name": "success: unhealthy API outranks unresolved auth",
+      "passed": true
+    },
+    {
+      "name": "success: unhealthy API navigates to maintenance",
+      "passed": true
+    },
+    {
+      "name": "health revalidation suspends readiness",
+      "passed": true
+    },
+    {
+      "name": "revoking readiness remounts the splash so faded animation state is reset",
+      "passed": true
+    },
+    {
+      "name": "late callback cannot use stale destination during health pending",
+      "passed": true
+    },
+    {
+      "name": "callback from revoked splash session cannot finish the recovered session",
+      "passed": true
+    },
+    {
+      "name": "health recovery resolves public destination again",
+      "passed": true
+    },
+    {
+      "name": "late authenticated outro uses latest maintenance decision",
+      "passed": true
+    },
+    {
+      "name": "sign-out during validation follows provider token state",
+      "passed": true
+    },
+    {
+      "name": "sign-out during authenticated outro uses current anonymous destination",
+      "passed": true
+    },
+    {
+      "name": "late callback after ready Boot unmount cannot navigate",
+      "passed": true
+    },
+    {
+      "name": "mode case 0: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 0: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 0: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 1: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 1: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 1: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 2: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 2: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 2: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 3: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 3: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 3: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 4: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 4: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 4: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 5: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 5: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 5: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 6: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 6: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 6: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 7: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 7: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 7: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 8: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 8: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 8: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "mode case 9: authenticated role destination",
+      "passed": true
+    },
+    {
+      "name": "mode case 9: owner/worker fallback updates mode",
+      "passed": true
+    },
+    {
+      "name": "mode case 9: assigned worker store synchronizes",
+      "passed": true
+    },
+    {
+      "name": "unmounted boot never navigates on later async completion",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": 64,
+  "failed": 0
+}

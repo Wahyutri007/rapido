@@ -1,0 +1,164 @@
+import { Image } from "expo-image";
+import React from "react";
+import { View } from "react-native";
+import Card from "@/components/common/Card";
+import { SearchNotFound } from "@/components/common/DataPlaceholder";
+import SearchBar from "@/components/common/SearchBar";
+import SingleSelect from "@/components/common/SingleSelect";
+import Text from "@/components/common/Text";
+import Wrapper from "@/components/common/Wrapper";
+import { Button, ButtonText } from "@/components/ui/button";
+import { INVENTORY_STORES } from "@/constants/data/inventory";
+import { getInventoryItems } from "@/lib/inventory";
+import {
+	type ClosingStockStatus,
+	closingStockGroups,
+	formatClosingStock,
+} from "@/lib/inventory-closing-stock";
+import { cn } from "@/lib/utils";
+import { useInventoryMaterialStore } from "@/store/inventoryMaterialStore";
+
+const STATUS_OPTIONS: { label: string; value: ClosingStockStatus }[] = [
+	{ label: "Semua Status", value: "all" },
+	{ label: "Tersedia", value: "available" },
+	{ label: "Menipis", value: "low" },
+	{ label: "Habis", value: "empty" },
+	{ label: "Belum Tersedia", value: "unknown" },
+];
+
+export default function ClosingStockScreen() {
+	const materials = useInventoryMaterialStore((state) => state.materials);
+	const [search, setSearch] = React.useState("");
+	const [store, setStore] = React.useState("all");
+	const [status, setStatus] = React.useState<ClosingStockStatus>("all");
+	const groups = closingStockGroups(getInventoryItems(materials), materials, {
+		search,
+		store,
+		status,
+	});
+	const stores = [
+		...new Set([
+			...INVENTORY_STORES,
+			...materials.flatMap((item) => item.stores),
+		]),
+	];
+	const hasFilters = search !== "" || store !== "all" || status !== "all";
+	const resetFilters = () => {
+		setSearch("");
+		setStore("all");
+		setStatus("all");
+	};
+
+	return (
+		<Wrapper hasBottomBar contentContainerStyle={{ padding: 16, gap: 16 }}>
+			<SearchBar search={search} setSearch={setSearch} />
+			<View className="flex-row gap-3">
+				<View className="min-w-0 flex-1">
+					<SingleSelect
+						label="Toko"
+						value={store}
+						onValueChange={setStore}
+						searchable
+						items={[
+							{ label: "Semua Toko", value: "all" },
+							...stores.map((name) => ({ label: name, value: name })),
+						]}
+						leftIcon={
+							<Image
+								source={require("@/assets/images/inventory/closing-stock/store.svg")}
+								style={{ width: 16, height: 16 }}
+								contentFit="contain"
+							/>
+						}
+					/>
+				</View>
+				<View className="min-w-0 flex-1">
+					<SingleSelect<ClosingStockStatus>
+						label="Status Stok"
+						value={status}
+						onValueChange={setStatus}
+						items={STATUS_OPTIONS}
+						leftIcon={
+							<Image
+								source={require("@/assets/images/inventory/closing-stock/status.svg")}
+								style={{ width: 15.3, height: 15 }}
+								contentFit="contain"
+							/>
+						}
+					/>
+				</View>
+			</View>
+			{store !== "all" && (
+				<Text size="small" className="text-muted">
+					Hanya bahan yang terdaftar di toko ini. Jumlah stok per toko belum
+					tersedia; tanda — bukan berarti stok habis.
+				</Text>
+			)}
+			{hasFilters && (
+				<View className="items-end">
+					<Button variant="link" size="sm" onPress={resetFilters}>
+						<ButtonText>Reset Filter</ButtonText>
+					</Button>
+				</View>
+			)}
+			<Card className="gap-4">
+				<View className="-mx-4 -mt-4 flex-row justify-between gap-3 rounded-t-xl bg-primary-50 p-4">
+					<Text size="normal" w="semibold" className="text-primary">
+						Produk
+					</Text>
+					<Text size="normal" w="semibold" className="text-primary">
+						Stok Akhir
+					</Text>
+				</View>
+				{groups.length === 0 ? (
+					<SearchNotFound text="Tidak ada stok yang sesuai" />
+				) : (
+					groups.map((group) => (
+						<View
+							key={group.category}
+							className="rounded-lg border border-border-muted px-3"
+						>
+							<View className="border-b border-border-muted py-3">
+								<Text size="normal" w="semibold" className="text-primary">
+									{group.category}
+								</Text>
+							</View>
+							{group.rows.map((row) => (
+								<View
+									key={row.key}
+									className="flex-row items-center justify-between gap-3 py-3"
+									accessibilityLabel={`${row.item.name}, ${row.item.sku}, ${row.quantity === null ? "Jumlah stok belum tersedia" : formatClosingStock(row.quantity, row.item.unit)}`}
+								>
+									<View className="min-w-0 flex-1 gap-1">
+										<Text size="small" w="medium">
+											{row.item.name}
+										</Text>
+										{row.item.sku !== "" && (
+											<Text size="small" className="text-muted">
+												{row.item.sku}
+											</Text>
+										)}
+									</View>
+									<Text
+										size="normal"
+										w="medium"
+										style={{ flexShrink: 1, maxWidth: "48%" }}
+										className={cn(
+											"text-right",
+											// Keep status colors above the Text primitive's default foreground.
+											row.status === "empty" && "!text-destructive",
+											(row.status === "low" || row.status === "unknown") &&
+												"!text-muted",
+										)}
+									>
+										{formatClosingStock(row.quantity, row.item.unit)}
+									</Text>
+								</View>
+							))}
+						</View>
+					))
+				)}
+			</Card>
+		</Wrapper>
+	);
+}

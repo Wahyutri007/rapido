@@ -1,0 +1,33 @@
+{
+  "passed": 0,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "Browser execution completed",
+      "pass": false,
+      "error": "UI wait timeout"
+    }
+  ],
+  "runtimeErrors": [
+    "Invariant Violation: __fbBatchedBridgeConfig is not set, cannot invoke native modules\n    at invariant (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46399:17)\n    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46502:5\n    at loadModuleImplementation (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:163:7)\n    at guardedLoadModule (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:100:14)\n    at metroRequire (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:42:75)\n    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:46347:25\n    at loadModuleImplementation (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:163:7)\n    at guardedLoadModule (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:100:14)\n    at metroRequire (http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:42:75)\n    at http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0:134115:50"
+  ],
+  "consoleErrors": [],
+  "network": [
+    {
+      "url": "http://127.0.0.1:8088/inventory",
+      "status": 200,
+      "type": "Document"
+    },
+    {
+      "url": "http://127.0.0.1:8088/.expo/sd5-closing-preview/browser-entry.bundle?platform=web&dev=true&hot=false&lazy=false&transform.engine=hermes&transform.bytecode=0",
+      "status": 200,
+      "type": "Script"
+    },
+    {
+      "url": "http://127.0.0.1:8088/favicon.ico",
+      "status": 204,
+      "type": "Other"
+    }
+  ],
+  "scope": "Production Inventory hub, stock screen, tab/layout, shared controls and material store; test-only ExpoRoot context bypasses authentication/API, mutations live only in this browser page."
+}

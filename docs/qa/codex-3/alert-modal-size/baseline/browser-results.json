@@ -1,0 +1,1709 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-009",
+  "mode": "baseline-production-source",
+  "passed": 108,
+  "failed": 6,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "checks": [
+    {
+      "name": "initial closed modal hidden",
+      "passed": true
+    },
+    {
+      "name": "direct-320: alert fits viewport",
+      "passed": false,
+      "detail": {
+        "x": -3.981689453125,
+        "y": 223.01083374023438,
+        "width": 327.96337890625,
+        "height": 193.97836303710938
+      }
+    },
+    {
+      "name": "direct-320: width follows window and existing primitive maximum",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": -3.981689453125,
+          "y": 223.01083374023438,
+          "width": 327.96337890625,
+          "height": 193.97836303710938
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "direct-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 348,
+        "width": 135,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 168,
+        "y": 348,
+        "width": 135,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 17,
+          "y": 348,
+          "width": 135,
+          "height": 48
+        },
+        "confirm": {
+          "x": 168,
+          "y": 348,
+          "width": 135,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "direct-360: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.0203857421875,
+        "y": 325.0120544433594,
+        "width": 327.959228515625,
+        "height": 193.97586059570312
+      }
+    },
+    {
+      "name": "direct-360: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.0203857421875,
+          "y": 325.0120544433594,
+          "width": 327.959228515625,
+          "height": 193.97586059570312
+        },
+        "maxWidth": 510,
+        "desiredWidth": 328
+      }
+    },
+    {
+      "name": "direct-360: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 36.9896354675293,
+        "y": 450.0020446777344,
+        "width": 135.00978469848633,
+        "height": 48.00347900390625
+      }
+    },
+    {
+      "name": "direct-360: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 188,
+        "y": 450,
+        "width": 135,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-360: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 36.9896354675293,
+          "y": 450.0020446777344,
+          "width": 135.00978469848633,
+          "height": 48.00347900390625
+        },
+        "confirm": {
+          "x": 188,
+          "y": 450,
+          "width": 135,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-360: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "direct-390: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.019989013671875,
+        "y": 325.0108337402344,
+        "width": 357.96002197265625,
+        "height": 193.97836303710938
+      }
+    },
+    {
+      "name": "direct-390: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.019989013671875,
+          "y": 325.0108337402344,
+          "width": 357.96002197265625,
+          "height": 193.97836303710938
+        },
+        "maxWidth": 510,
+        "desiredWidth": 358
+      }
+    },
+    {
+      "name": "direct-390: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37,
+        "y": 450,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-390: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 203,
+        "y": 450,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-390: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37,
+          "y": 450,
+          "width": 150,
+          "height": 48
+        },
+        "confirm": {
+          "x": 203,
+          "y": 450,
+          "width": 150,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-390: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "direct-768: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 129.019287109375,
+        "y": 427.0064392089844,
+        "width": 509.96142578125,
+        "height": 169.98715209960938
+      }
+    },
+    {
+      "name": "direct-768: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 129.019287109375,
+          "y": 427.0064392089844,
+          "width": 509.96142578125,
+          "height": 169.98715209960938
+        },
+        "maxWidth": 510,
+        "desiredWidth": 510
+      }
+    },
+    {
+      "name": "direct-768: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 150,
+        "y": 528,
+        "width": 226,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-768: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 392,
+        "y": 528,
+        "width": 226,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-768: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 150,
+          "y": 528,
+          "width": 226,
+          "height": 48
+        },
+        "confirm": {
+          "x": 392,
+          "y": 528,
+          "width": 226,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "direct-768: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "support-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.01171875,
+        "y": 175.01181030273438,
+        "width": 287.9765625,
+        "height": 289.97637939453125
+      }
+    },
+    {
+      "name": "support-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.01171875,
+          "y": 175.01181030273438,
+          "width": 287.9765625,
+          "height": 289.97637939453125
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "support-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 36.985313415527344,
+        "y": 396.00909423828125,
+        "width": 246.0293960571289,
+        "height": 48.0057373046875
+      }
+    },
+    {
+      "name": "support-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "role-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.018844604492188,
+        "y": 211.01425170898438,
+        "width": 287.96229553222656,
+        "height": 217.97146606445312
+      }
+    },
+    {
+      "name": "role-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.018844604492188,
+          "y": 211.01425170898438,
+          "width": 287.96229553222656,
+          "height": 217.97146606445312
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "role-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.00524139404297,
+        "y": 359.998291015625,
+        "width": 245.98950958251953,
+        "height": 47.997955322265625
+      }
+    },
+    {
+      "name": "role-320: rejected DELETE is local fixture",
+      "passed": true
+    },
+    {
+      "name": "role-320: Kembali dismisses error without acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "role-320: retry works and acknowledges once",
+      "passed": true
+    },
+    {
+      "name": "worker-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.03765869140625,
+        "y": 211.02850341796875,
+        "width": 287.9246826171875,
+        "height": 217.9429931640625
+      }
+    },
+    {
+      "name": "worker-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.03765869140625,
+          "y": 211.02850341796875,
+          "width": 287.9246826171875,
+          "height": 217.9429931640625
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "worker-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.01374053955078,
+        "y": 359.99554443359375,
+        "width": 245.97252655029297,
+        "height": 47.99462890625
+      }
+    },
+    {
+      "name": "worker-320: rejected DELETE is local fixture",
+      "passed": true
+    },
+    {
+      "name": "worker-320: Kembali dismisses error without acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "worker-320: retry works and acknowledges once",
+      "passed": true
+    },
+    {
+      "name": "member-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.016983032226562,
+        "y": 211.01284790039062,
+        "width": 287.96604919433594,
+        "height": 217.97427368164062
+      }
+    },
+    {
+      "name": "member-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.016983032226562,
+          "y": 211.01284790039062,
+          "width": 287.96604919433594,
+          "height": 217.97427368164062
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "member-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 36.99720764160156,
+        "y": 360.00091552734375,
+        "width": 246.0055694580078,
+        "height": 48.001068115234375
+      }
+    },
+    {
+      "name": "member-320: rejected DELETE is local fixture",
+      "passed": true
+    },
+    {
+      "name": "member-320: Kembali dismisses error without acknowledgement",
+      "passed": true
+    },
+    {
+      "name": "member-320: retry works and acknowledges once",
+      "passed": true
+    },
+    {
+      "name": "category-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.020736694335938,
+        "y": 77.03498840332031,
+        "width": 287.95851135253906,
+        "height": 485.93003845214844
+      }
+    },
+    {
+      "name": "category-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.020736694335938,
+          "y": 77.03498840332031,
+          "width": 287.95851135253906,
+          "height": 485.93003845214844
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "category-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 36.99000549316406,
+        "y": 494.01416015625,
+        "width": 246.02000427246094,
+        "height": 48.00390625
+      }
+    },
+    {
+      "name": "category-320: image128px fits content width",
+      "passed": false,
+      "detail": {
+        "x": 36.984527587890625,
+        "y": 97.97207641601562,
+        "width": 700.0880432128906,
+        "height": 272.0342102050781
+      }
+    },
+    {
+      "name": "category-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "order-type-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.006134033203125,
+        "y": 77.01036071777344,
+        "width": 287.98773193359375,
+        "height": 485.97926330566406
+      }
+    },
+    {
+      "name": "order-type-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.006134033203125,
+          "y": 77.01036071777344,
+          "width": 287.98773193359375,
+          "height": 485.97926330566406
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "order-type-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37,
+        "y": 494,
+        "width": 246,
+        "height": 48
+      }
+    },
+    {
+      "name": "order-type-320: image128px fits content width",
+      "passed": false,
+      "detail": {
+        "x": 37,
+        "y": 98,
+        "width": 700,
+        "height": 272
+      }
+    },
+    {
+      "name": "order-type-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "confirm-only-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 15.983566284179688,
+        "y": 222.9889373779297,
+        "width": 288.03285217285156,
+        "height": 194.02210998535156
+      }
+    },
+    {
+      "name": "confirm-only-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 15.983566284179688,
+          "y": 222.9889373779297,
+          "width": 288.03285217285156,
+          "height": 194.02210998535156
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "confirm-only-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37,
+        "y": 348,
+        "width": 246,
+        "height": 48
+      }
+    },
+    {
+      "name": "confirm-only-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "cancel-only-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.023681640625,
+        "y": 223.01596069335938,
+        "width": 287.95263671875,
+        "height": 193.96810913085938
+      }
+    },
+    {
+      "name": "cancel-only-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.023681640625,
+          "y": 223.01596069335938,
+          "width": 287.95263671875,
+          "height": 193.96810913085938
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "cancel-only-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 36.988372802734375,
+        "y": 348.0026550292969,
+        "width": 246.02325439453125,
+        "height": 48.004547119140625
+      }
+    },
+    {
+      "name": "cancel-only-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "no-footer-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.0267333984375,
+        "y": 255.01205444335938,
+        "width": 287.946533203125,
+        "height": 129.97586059570312
+      }
+    },
+    {
+      "name": "no-footer-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.0267333984375,
+          "y": 255.01205444335938,
+          "width": 287.946533203125,
+          "height": 129.97586059570312
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "both hidden props keep footer absent",
+      "passed": true
+    },
+    {
+      "name": "node-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.03765869140625,
+        "y": 235.02223205566406,
+        "width": 287.9246826171875,
+        "height": 169.95555114746094
+      }
+    },
+    {
+      "name": "node-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.03765869140625,
+          "y": 235.02223205566406,
+          "width": 287.9246826171875,
+          "height": 169.95555114746094
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "node-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.014503479003906,
+        "y": 335.99810791015625,
+        "width": 114.98644256591797,
+        "height": 47.99432373046875
+      }
+    },
+    {
+      "name": "node-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 167.99945068359375,
+        "y": 335.9989013671875,
+        "width": 114.991943359375,
+        "height": 47.99664306640625
+      }
+    },
+    {
+      "name": "node-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.014503479003906,
+          "y": 335.99810791015625,
+          "width": 114.98644256591797,
+          "height": 47.99432373046875
+        },
+        "confirm": {
+          "x": 167.99945068359375,
+          "y": 335.9989013671875,
+          "width": 114.991943359375,
+          "height": 47.99664306640625
+        }
+      }
+    },
+    {
+      "name": "React-node message visible",
+      "passed": true
+    },
+    {
+      "name": "node-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "children-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.036514282226562,
+        "y": 211.02764892578125,
+        "width": 287.92698669433594,
+        "height": 217.9447021484375
+      }
+    },
+    {
+      "name": "children-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.036514282226562,
+          "y": 211.02764892578125,
+          "width": 287.92698669433594,
+          "height": 217.9447021484375
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "children-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.01854705810547,
+        "y": 359.99395751953125,
+        "width": 114.98265838623047,
+        "height": 47.9927978515625
+      }
+    },
+    {
+      "name": "children-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 167.99920654296875,
+        "y": 359.99603271484375,
+        "width": 114.98858642578125,
+        "height": 47.9952392578125
+      }
+    },
+    {
+      "name": "children-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.01854705810547,
+          "y": 359.99395751953125,
+          "width": 114.98265838623047,
+          "height": 47.9927978515625
+        },
+        "confirm": {
+          "x": 167.99920654296875,
+          "y": 359.99603271484375,
+          "width": 114.98858642578125,
+          "height": 47.9952392578125
+        }
+      }
+    },
+    {
+      "name": "children slot visible",
+      "passed": true
+    },
+    {
+      "name": "children-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "long-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.020736694335938,
+        "y": 127.02778625488281,
+        "width": 287.95851135253906,
+        "height": 385.94444274902344
+      }
+    },
+    {
+      "name": "long-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.020736694335938,
+          "y": 127.02778625488281,
+          "width": 287.95851135253906,
+          "height": 385.94444274902344
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "long-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.007232666015625,
+        "y": 443.99273681640625,
+        "width": 114.99324035644531,
+        "height": 47.99713134765625
+      }
+    },
+    {
+      "name": "long-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 168.00009155273438,
+        "y": 444.001220703125,
+        "width": 115.00115966796875,
+        "height": 48.00048828125
+      }
+    },
+    {
+      "name": "long-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.007232666015625,
+          "y": 443.99273681640625,
+          "width": 114.99324035644531,
+          "height": 47.99713134765625
+        },
+        "confirm": {
+          "x": 168.00009155273438,
+          "y": 444.001220703125,
+          "width": 115.00115966796875,
+          "height": 48.00048828125
+        }
+      }
+    },
+    {
+      "name": "long-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "fallback-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.02777099609375,
+        "y": 223.01870727539062,
+        "width": 287.9444580078125,
+        "height": 193.96258544921875
+      }
+    },
+    {
+      "name": "fallback-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.02777099609375,
+          "y": 223.01870727539062,
+          "width": 287.9444580078125,
+          "height": 193.96258544921875
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "fallback-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.007911682128906,
+        "y": 347.9981994628906,
+        "width": 114.99260711669922,
+        "height": 47.996917724609375
+      }
+    },
+    {
+      "name": "fallback-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 167.99978637695312,
+        "y": 347.9992370605469,
+        "width": 114.99685668945312,
+        "height": 47.998687744140625
+      }
+    },
+    {
+      "name": "fallback-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.007911682128906,
+          "y": 347.9981994628906,
+          "width": 114.99260711669922,
+          "height": 47.996917724609375
+        },
+        "confirm": {
+          "x": 167.99978637695312,
+          "y": 347.9992370605469,
+          "width": 114.99685668945312,
+          "height": 47.998687744140625
+        }
+      }
+    },
+    {
+      "name": "fallback-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "default-close-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.029891967773438,
+        "y": 223.0201416015625,
+        "width": 287.94020080566406,
+        "height": 193.959716796875
+      }
+    },
+    {
+      "name": "default-close-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.029891967773438,
+          "y": 223.0201416015625,
+          "width": 287.94020080566406,
+          "height": 193.959716796875
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "default-close-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.00336456298828,
+        "y": 347.9992370605469,
+        "width": 114.99686431884766,
+        "height": 47.998687744140625
+      }
+    },
+    {
+      "name": "default-close-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 168.000244140625,
+        "y": 348.0008544921875,
+        "width": 115.0035400390625,
+        "height": 48.00146484375
+      }
+    },
+    {
+      "name": "default-close-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.00336456298828,
+          "y": 347.9992370605469,
+          "width": 114.99686431884766,
+          "height": 47.998687744140625
+        },
+        "confirm": {
+          "x": 168.000244140625,
+          "y": 348.0008544921875,
+          "width": 115.0035400390625,
+          "height": 48.00146484375
+        }
+      }
+    },
+    {
+      "name": "default-close-320: existing callback/fallback closes once",
+      "passed": true
+    },
+    {
+      "name": "loading-320: alert fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16.01171875,
+        "y": 223.00790405273438,
+        "width": 287.9765625,
+        "height": 193.98422241210938
+      }
+    },
+    {
+      "name": "loading-320: width follows window and existing primitive maximum",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16.01171875,
+          "y": 223.00790405273438,
+          "width": 287.9765625,
+          "height": 193.98422241210938
+        },
+        "maxWidth": 510,
+        "desiredWidth": 288
+      }
+    },
+    {
+      "name": "loading-320: cancel fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 37.0009765625,
+        "y": 347.9997863769531,
+        "width": 114.99908447265625,
+        "height": 47.999603271484375
+      }
+    },
+    {
+      "name": "loading-320: confirm fully visible and minimum44px",
+      "passed": true,
+      "detail": {
+        "x": 168.00018310546875,
+        "y": 348.0006408691406,
+        "width": 115.00259399414062,
+        "height": 48.001068115234375
+      }
+    },
+    {
+      "name": "loading-320: footer remains two side-by-side buttons",
+      "passed": true,
+      "detail": {
+        "cancel": {
+          "x": 37.0009765625,
+          "y": 347.9997863769531,
+          "width": 114.99908447265625,
+          "height": 47.999603271484375
+        },
+        "confirm": {
+          "x": 168.00018310546875,
+          "y": 348.0006408691406,
+          "width": 115.00259399414062,
+          "height": 48.001068115234375
+        }
+      }
+    },
+    {
+      "name": "loading disables confirm while cancel stays enabled",
+      "passed": true
+    },
+    {
+      "name": "disabled confirm does not notify",
+      "passed": true
+    },
+    {
+      "name": "cancel remains available during loading",
+      "passed": true
+    },
+    {
+      "name": "open resize768: follows window without changing props",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": 240.00613403320312,
+          "y": 415.004150390625,
+          "width": 287.9877624511719,
+          "height": 193.99169921875
+        },
+        "cancel": {
+          "x": 260.9972229003906,
+          "y": 540.0006103515625,
+          "width": 115.00259399414062,
+          "height": 48.0010986328125
+        },
+        "confirm": {
+          "x": 392.000732421875,
+          "y": 540.0025634765625,
+          "width": 115.01058959960938,
+          "height": 48.00445556640625
+        }
+      }
+    },
+    {
+      "name": "open resize320: follows window without changing props",
+      "passed": true,
+      "detail": {
+        "modal": {
+          "x": 16,
+          "y": 223,
+          "width": 288,
+          "height": 194
+        },
+        "cancel": {
+          "x": 37,
+          "y": 348,
+          "width": 115,
+          "height": 48
+        },
+        "confirm": {
+          "x": 168,
+          "y": 348,
+          "width": 115,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "open resize390: follows window without changing props",
+      "passed": false,
+      "detail": {
+        "modal": {
+          "x": 51,
+          "y": 325,
+          "width": 288,
+          "height": 194
+        },
+        "cancel": {
+          "x": 72,
+          "y": 450,
+          "width": 115,
+          "height": 48
+        },
+        "confirm": {
+          "x": 203,
+          "y": 450,
+          "width": 115,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no HTTP API attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "measurements": [
+    {
+      "label": "direct-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 360,
+        "height": 780
+      },
+      "modal": {
+        "x": -3.981689453125,
+        "y": 223.01083374023438,
+        "width": 327.96337890625,
+        "height": 193.97836303710938
+      },
+      "cancel": {
+        "x": 17,
+        "y": 348,
+        "width": 135,
+        "height": 48
+      },
+      "confirm": {
+        "x": 168,
+        "y": 348,
+        "width": 135,
+        "height": 48
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "direct-360",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      },
+      "screen": {
+        "width": 360,
+        "height": 844
+      },
+      "modal": {
+        "x": 16.0203857421875,
+        "y": 325.0120544433594,
+        "width": 327.959228515625,
+        "height": 193.97586059570312
+      },
+      "cancel": {
+        "x": 36.9896354675293,
+        "y": 450.0020446777344,
+        "width": 135.00978469848633,
+        "height": 48.00347900390625
+      },
+      "confirm": {
+        "x": 188,
+        "y": 450,
+        "width": 135,
+        "height": 48
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "direct-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": {
+        "width": 390,
+        "height": 844
+      },
+      "modal": {
+        "x": 16.019989013671875,
+        "y": 325.0108337402344,
+        "width": 357.96002197265625,
+        "height": 193.97836303710938
+      },
+      "cancel": {
+        "x": 37,
+        "y": 450,
+        "width": 150,
+        "height": 48
+      },
+      "confirm": {
+        "x": 203,
+        "y": 450,
+        "width": 150,
+        "height": 48
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "direct-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": {
+        "width": 768,
+        "height": 1024
+      },
+      "modal": {
+        "x": 129.019287109375,
+        "y": 427.0064392089844,
+        "width": 509.96142578125,
+        "height": 169.98715209960938
+      },
+      "cancel": {
+        "x": 150,
+        "y": 528,
+        "width": 226,
+        "height": 48
+      },
+      "confirm": {
+        "x": 392,
+        "y": 528,
+        "width": 226,
+        "height": 48
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "support-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.01171875,
+        "y": 175.01181030273438,
+        "width": 287.9765625,
+        "height": 289.97637939453125
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 36.985313415527344,
+        "y": 396.00909423828125,
+        "width": 246.0293960571289,
+        "height": 48.0057373046875
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "role-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.018844604492188,
+        "y": 211.01425170898438,
+        "width": 287.96229553222656,
+        "height": 217.97146606445312
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 37.00524139404297,
+        "y": 359.998291015625,
+        "width": 245.98950958251953,
+        "height": 47.997955322265625
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "worker-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.03765869140625,
+        "y": 211.02850341796875,
+        "width": 287.9246826171875,
+        "height": 217.9429931640625
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 37.01374053955078,
+        "y": 359.99554443359375,
+        "width": 245.97252655029297,
+        "height": 47.99462890625
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "member-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.016983032226562,
+        "y": 211.01284790039062,
+        "width": 287.96604919433594,
+        "height": 217.97427368164062
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 36.99720764160156,
+        "y": 360.00091552734375,
+        "width": 246.0055694580078,
+        "height": 48.001068115234375
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "category-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.020736694335938,
+        "y": 77.03498840332031,
+        "width": 287.95851135253906,
+        "height": 485.93003845214844
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 36.99000549316406,
+        "y": 494.01416015625,
+        "width": 246.02000427246094,
+        "height": 48.00390625
+      },
+      "image": {
+        "x": 36.984527587890625,
+        "y": 97.97207641601562,
+        "width": 700.0880432128906,
+        "height": 272.0342102050781
+      },
+      "maxWidth": 510
+    },
+    {
+      "label": "order-type-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.006134033203125,
+        "y": 77.01036071777344,
+        "width": 287.98773193359375,
+        "height": 485.97926330566406
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 37,
+        "y": 494,
+        "width": 246,
+        "height": 48
+      },
+      "image": {
+        "x": 37,
+        "y": 98,
+        "width": 700,
+        "height": 272
+      },
+      "maxWidth": 510
+    },
+    {
+      "label": "confirm-only-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 15.983566284179688,
+        "y": 222.9889373779297,
+        "width": 288.03285217285156,
+        "height": 194.02210998535156
+      },
+      "cancel": null,
+      "confirm": {
+        "x": 37,
+        "y": 348,
+        "width": 246,
+        "height": 48
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "cancel-only-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.023681640625,
+        "y": 223.01596069335938,
+        "width": 287.95263671875,
+        "height": 193.96810913085938
+      },
+      "cancel": {
+        "x": 36.988372802734375,
+        "y": 348.0026550292969,
+        "width": 246.02325439453125,
+        "height": 48.004547119140625
+      },
+      "confirm": null,
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "no-footer-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.0267333984375,
+        "y": 255.01205444335938,
+        "width": 287.946533203125,
+        "height": 129.97586059570312
+      },
+      "cancel": null,
+      "confirm": null,
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "node-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.03765869140625,
+        "y": 235.02223205566406,
+        "width": 287.9246826171875,
+        "height": 169.95555114746094
+      },
+      "cancel": {
+        "x": 37.014503479003906,
+        "y": 335.99810791015625,
+        "width": 114.98644256591797,
+        "height": 47.99432373046875
+      },
+      "confirm": {
+        "x": 167.99945068359375,
+        "y": 335.9989013671875,
+        "width": 114.991943359375,
+        "height": 47.99664306640625
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "children-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.036514282226562,
+        "y": 211.02764892578125,
+        "width": 287.92698669433594,
+        "height": 217.9447021484375
+      },
+      "cancel": {
+        "x": 37.01854705810547,
+        "y": 359.99395751953125,
+        "width": 114.98265838623047,
+        "height": 47.9927978515625
+      },
+      "confirm": {
+        "x": 167.99920654296875,
+        "y": 359.99603271484375,
+        "width": 114.98858642578125,
+        "height": 47.9952392578125
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "long-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.020736694335938,
+        "y": 127.02778625488281,
+        "width": 287.95851135253906,
+        "height": 385.94444274902344
+      },
+      "cancel": {
+        "x": 37.007232666015625,
+        "y": 443.99273681640625,
+        "width": 114.99324035644531,
+        "height": 47.99713134765625
+      },
+      "confirm": {
+        "x": 168.00009155273438,
+        "y": 444.001220703125,
+        "width": 115.00115966796875,
+        "height": 48.00048828125
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "fallback-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.02777099609375,
+        "y": 223.01870727539062,
+        "width": 287.9444580078125,
+        "height": 193.96258544921875
+      },
+      "cancel": {
+        "x": 37.007911682128906,
+        "y": 347.9981994628906,
+        "width": 114.99260711669922,
+        "height": 47.996917724609375
+      },
+      "confirm": {
+        "x": 167.99978637695312,
+        "y": 347.9992370605469,
+        "width": 114.99685668945312,
+        "height": 47.998687744140625
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "default-close-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.029891967773438,
+        "y": 223.0201416015625,
+        "width": 287.94020080566406,
+        "height": 193.959716796875
+      },
+      "cancel": {
+        "x": 37.00336456298828,
+        "y": 347.9992370605469,
+        "width": 114.99686431884766,
+        "height": 47.998687744140625
+      },
+      "confirm": {
+        "x": 168.000244140625,
+        "y": 348.0008544921875,
+        "width": 115.0035400390625,
+        "height": 48.00146484375
+      },
+      "image": null,
+      "maxWidth": 510
+    },
+    {
+      "label": "loading-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16.01171875,
+        "y": 223.00790405273438,
+        "width": 287.9765625,
+        "height": 193.98422241210938
+      },
+      "cancel": {
+        "x": 37.0009765625,
+        "y": 347.9997863769531,
+        "width": 114.99908447265625,
+        "height": 47.999603271484375
+      },
+      "confirm": {
+        "x": 168.00018310546875,
+        "y": 348.0006408691406,
+        "width": 115.00259399414062,
+        "height": 48.001068115234375
+      },
+      "image": null,
+      "maxWidth": 510
+    }
+  ],
+  "sourceHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "fixtureHash": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a",
+  "limits": "RN-web/providers/font/modal/button and three delete-error domains; representative messages/children are parent fixture data, local Axios transport; no full native/router/root auth/Figma/backend certification"
+}

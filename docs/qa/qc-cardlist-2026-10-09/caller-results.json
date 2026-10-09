@@ -1,0 +1,424 @@
+{
+  "status": "PASS",
+  "passed": 86,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "summary: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "summary: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "summary: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "summary: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "summary: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "summary: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "summary: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "summary: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "summary: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "summary: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "summary: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "summary: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "sales: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "sales: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "sales: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "sales: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "sales: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "sales: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "sales: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "sales: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "sales: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "sales: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "sales: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "sales: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "purchase-supplier: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "product-stock: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "product-stock: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "product-stock: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "product-stock: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "product-stock: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "product-stock: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "product-stock: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "product-stock: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "product-stock: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "product-stock: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "product-stock: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "product-stock: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "operational-team: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "operational-team: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "operational-team: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "operational-team: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "operational-team: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "operational-team: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "operational-team: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "operational-team: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "operational-team: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "operational-team: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "operational-team: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "operational-team: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "customers-promos: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "cash: default section IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "cash: actual screen initially displays all builder sections",
+      "passed": true
+    },
+    {
+      "name": "cash: actual FilterRow callback opens filter sheet",
+      "passed": true
+    },
+    {
+      "name": "cash: checkbox draft leaves actual report sections unchanged",
+      "passed": true
+    },
+    {
+      "name": "cash: action-state rerender preserves local draft and report",
+      "passed": true
+    },
+    {
+      "name": "cash: apply filters actual screen and closes sheet",
+      "passed": true
+    },
+    {
+      "name": "cash: cancelled restoration keeps committed report subset",
+      "passed": true
+    },
+    {
+      "name": "cash: Reset immediately restores actual report while sheet stays open",
+      "passed": true
+    },
+    {
+      "name": "cash: cancel after Reset keeps the committed reset",
+      "passed": true
+    },
+    {
+      "name": "cash: empty selection hides all actual report sections",
+      "passed": true
+    },
+    {
+      "name": "cash: Reset restores an empty report without Apply",
+      "passed": true
+    },
+    {
+      "name": "cash: route-instance remount starts with all sections again",
+      "passed": true
+    },
+    {
+      "name": "all seven StrictMode caller runs have no runtime or act errors",
+      "passed": true
+    },
+    {
+      "name": "report, builder and CardList sources stable during caller runs",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "cases": [
+    {
+      "screen": "summary",
+      "sections": 8,
+      "assertions": 12
+    },
+    {
+      "screen": "sales",
+      "sections": 9,
+      "assertions": 12
+    },
+    {
+      "screen": "purchase-supplier",
+      "sections": 6,
+      "assertions": 12
+    },
+    {
+      "screen": "product-stock",
+      "sections": 7,
+      "assertions": 12
+    },
+    {
+      "screen": "operational-team",
+      "sections": 3,
+      "assertions": 12
+    },
+    {
+      "screen": "customers-promos",
+      "sections": 5,
+      "assertions": 12
+    },
+    {
+      "screen": "cash",
+      "sections": 5,
+      "assertions": 12
+    }
+  ],
+  "before": {
+    "components/custom/CardList.tsx": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2",
+    "app/(no-layout)/(back-office)/report/summary.tsx": "8a1f4b7ae1ae90368f64ee705df113319182ff0b7fd9a46d523cdb0dafacb0b0",
+    "app/(no-layout)/(back-office)/report/sales.tsx": "11029b6700859563856257cc9eaac0f85c095fc4a21afa6e466a89420e2b3c61",
+    "app/(no-layout)/(back-office)/report/purchase-supplier.tsx": "fb45b75e437163018e93c35b7ddfac032d3dd014150ab50e772d34a487c87f81",
+    "app/(no-layout)/(back-office)/report/product-stock.tsx": "efdb586a8b222a3a792255f6cfd02252f76944aae3f809dd889be06431dc7384",
+    "app/(no-layout)/(back-office)/report/operational-team.tsx": "af7f648bf432fade6efdaa397d7be3b793f3278b2af455528b5be3cb26d0813f",
+    "app/(no-layout)/(back-office)/report/customers-promos.tsx": "3951ab41e774e95d9ec1e33dc681269cfa8bb95a6932506dc88aa371d6e024c2",
+    "app/(no-layout)/(back-office)/report/cash.tsx": "7817ea98f4d9e300244fbd58f6209d0f1d1a0b029bf58621f17e6f592d3cb7ea",
+    "components/feature/reports/summary/index.ts": "eafda8a8a1a822252c36c51b7c03462963960f64c48257e4e27a6a35268e13ff",
+    "components/feature/reports/sales/index.tsx": "cde52bc9db3c30bea8e80c5aa47d6f6db03e93cb07299ca43b52f9642b7bbf13",
+    "components/feature/reports/purchase-supplier/index.ts": "4ea7f74c7b56dc61682e73eb17f86cb17decc2ca452c305adafe39deab652f9c",
+    "components/feature/reports/product-stock/index.ts": "33a19d6d752d88dfcea611be92eccacb42edba7fa68c36dbcd27b0466d690486",
+    "components/feature/reports/operational-team/index.ts": "0c75884daa296a4d42841e9218f745beb41f894b6b14f8ee98b6d9a090ace07d",
+    "components/feature/reports/customers-promos/index.ts": "6432bb5bde52c7ed37e9fd71c3c3a59b9756894245cbd7a77f94fc2961e8cde6",
+    "components/feature/reports/cash/index.ts": "c349e9b028456e241934ede8e06802a6eab5a810c09e94f6b0737413023f1eec"
+  },
+  "after": {
+    "components/custom/CardList.tsx": "a0e976f5626a9a5e26a8b961fc288624d33e6689bbf32dca7ef8f369229c33b2",
+    "app/(no-layout)/(back-office)/report/summary.tsx": "8a1f4b7ae1ae90368f64ee705df113319182ff0b7fd9a46d523cdb0dafacb0b0",
+    "app/(no-layout)/(back-office)/report/sales.tsx": "11029b6700859563856257cc9eaac0f85c095fc4a21afa6e466a89420e2b3c61",
+    "app/(no-layout)/(back-office)/report/purchase-supplier.tsx": "fb45b75e437163018e93c35b7ddfac032d3dd014150ab50e772d34a487c87f81",
+    "app/(no-layout)/(back-office)/report/product-stock.tsx": "efdb586a8b222a3a792255f6cfd02252f76944aae3f809dd889be06431dc7384",
+    "app/(no-layout)/(back-office)/report/operational-team.tsx": "af7f648bf432fade6efdaa397d7be3b793f3278b2af455528b5be3cb26d0813f",
+    "app/(no-layout)/(back-office)/report/customers-promos.tsx": "3951ab41e774e95d9ec1e33dc681269cfa8bb95a6932506dc88aa371d6e024c2",
+    "app/(no-layout)/(back-office)/report/cash.tsx": "7817ea98f4d9e300244fbd58f6209d0f1d1a0b029bf58621f17e6f592d3cb7ea",
+    "components/feature/reports/summary/index.ts": "eafda8a8a1a822252c36c51b7c03462963960f64c48257e4e27a6a35268e13ff",
+    "components/feature/reports/sales/index.tsx": "cde52bc9db3c30bea8e80c5aa47d6f6db03e93cb07299ca43b52f9642b7bbf13",
+    "components/feature/reports/purchase-supplier/index.ts": "4ea7f74c7b56dc61682e73eb17f86cb17decc2ca452c305adafe39deab652f9c",
+    "components/feature/reports/product-stock/index.ts": "33a19d6d752d88dfcea611be92eccacb42edba7fa68c36dbcd27b0466d690486",
+    "components/feature/reports/operational-team/index.ts": "0c75884daa296a4d42841e9218f745beb41f894b6b14f8ee98b6d9a090ace07d",
+    "components/feature/reports/customers-promos/index.ts": "6432bb5bde52c7ed37e9fd71c3c3a59b9756894245cbd7a77f94fc2961e8cde6",
+    "components/feature/reports/cash/index.ts": "c349e9b028456e241934ede8e06802a6eab5a810c09e94f6b0737413023f1eec"
+  },
+  "scope": "Seven production report screens, data builders and CardList under React StrictMode. RN/UI/FilterRow/action/formatter/container adapters; no browser/native/router/backend or report amount certification."
+}

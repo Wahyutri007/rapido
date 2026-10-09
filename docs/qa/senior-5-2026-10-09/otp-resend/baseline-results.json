@@ -1,0 +1,1087 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "ticket": "SD5-007",
+  "baseline": true,
+  "sources": {
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/otp.tsx": "fa06c378a0d9ad29bec79dbe7e58ef86600948ac0a8d585ab9af5c20807574f6",
+    "api/queries/registration.ts": "1852521180d7990140203925d98ee6ebf9e64eac50f2e445320b22a600b55821",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe"
+  },
+  "checks": [
+    {
+      "name": "valid session has no initial alert or redirect",
+      "passed": true
+    },
+    {
+      "name": "no OTP response is logged",
+      "passed": false,
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "shared scroll/keyboard Wrapper used",
+      "passed": false,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "double press sends one POST",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "pending resend disabled",
+      "passed": false,
+      "actual": null,
+      "expected": true
+    },
+    {
+      "name": "existing endpoint/method/payload",
+      "passed": true
+    },
+    {
+      "name": "success feedback once",
+      "passed": false,
+      "actual": [
+        "Kode verifikasi telah dikirim ulang ke email-mu.",
+        "Kode verifikasi telah dikirim ulang ke email-mu.",
+        "Kode verifikasi telah dikirim ulang ke email-mu.",
+        "Kode verifikasi telah dikirim ulang ke email-mu."
+      ],
+      "expected": [
+        "Kode verifikasi telah dikirim ulang ke email-mu."
+      ]
+    },
+    {
+      "name": "success writes OTP once",
+      "passed": false,
+      "actual": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-sent",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-sent",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-sent",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-sent",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        }
+      ],
+      "expected": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-sent",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-sent",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        }
+      ]
+    },
+    {
+      "name": "success leaves personal info intact",
+      "passed": true
+    },
+    {
+      "name": "resend never logs in or navigates",
+      "passed": true
+    },
+    {
+      "name": "success unlocks resend",
+      "passed": true
+    },
+    {
+      "name": "500: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ],
+      "expected": [
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ]
+    },
+    {
+      "name": "500: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "500: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "500: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "500: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "422: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ],
+      "expected": [
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ]
+    },
+    {
+      "name": "422: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "422: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "422: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "422: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 missing: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 missing: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 missing: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 missing: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 missing: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 string: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 30 detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 string: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 string: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 string: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 string: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 negative: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam -2 detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 negative: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 negative: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 negative: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 negative: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 zero: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 zero: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 zero: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 zero: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 zero: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 infinite: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam Infinity detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 infinite: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 infinite: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 overflowing: one meaningful feedback",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 1.7976931348623157e+308 detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "429 overflowing: keeps OTP/no redirect",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: no invented cooldown",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: retry reaches transport",
+      "passed": true
+    },
+    {
+      "name": "429 overflowing: retry feedback once",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "network error feedback once",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ],
+      "expected": [
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ]
+    },
+    {
+      "name": "network failure preserves OTP",
+      "passed": true
+    },
+    {
+      "name": "empty success response shows one failure",
+      "passed": false,
+      "actual": [
+        "Kode verifikasi telah dikirim ulang ke email-mu.",
+        "Kode verifikasi telah dikirim ulang ke email-mu.",
+        "Terjadi kesalahan. Silakan coba lagi."
+      ],
+      "expected": [
+        "Gagal mengirim ulang kode. Silakan coba lagi."
+      ]
+    },
+    {
+      "name": "empty success keeps previous session",
+      "passed": false,
+      "actual": null,
+      "expected": {
+        "otp": {
+          "code": 1234,
+          "purpose": "register",
+          "phone": "081200000000",
+          "token": "fixture-initial",
+          "expires_at": "2026-10-09T02:00:00Z",
+          "extra_data": {
+            "name": "Fixture Owner",
+            "email": "otp@example.test",
+            "phone": "081200000000"
+          },
+          "id": "fixture-initial",
+          "updated_at": "2026-10-09T01:00:00Z",
+          "created_at": "2026-10-09T01:00:00Z"
+        },
+        "registration": {
+          "current_step": 1,
+          "message": "Fixture",
+          "attempts": 0,
+          "max_attempts": 5
+        }
+      }
+    },
+    {
+      "name": "429 3: feedback once",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 3 detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 3 detik."
+      ]
+    },
+    {
+      "name": "429 3: button shows countdown and disabled",
+      "passed": false,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "429 3: direct callbacks cannot bypass cooldown",
+      "passed": false,
+      "actual": 3,
+      "expected": 1
+    },
+    {
+      "name": "429 3: countdown remains disabled",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "429 3: deadline unlocks",
+      "passed": true
+    },
+    {
+      "name": "429 3: retry sends new POST",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "429 1.2: feedback once",
+      "passed": false,
+      "actual": [
+        "Gagal mengirim ulang kode. Silakan coba lagi.",
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 1.2 detik."
+      ],
+      "expected": [
+        "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 2 detik."
+      ]
+    },
+    {
+      "name": "429 1.2: button shows countdown and disabled",
+      "passed": false,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "429 1.2: direct callbacks cannot bypass cooldown",
+      "passed": false,
+      "actual": 3,
+      "expected": 1
+    },
+    {
+      "name": "429 1.2: countdown remains disabled",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "429 1.2: deadline unlocks",
+      "passed": true
+    },
+    {
+      "name": "429 1.2: retry sends new POST",
+      "passed": false,
+      "actual": 4,
+      "expected": 2
+    },
+    {
+      "name": "cooldown timer canceled on unmount",
+      "passed": true
+    },
+    {
+      "name": "no extra cooldown alert after unmount",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "unmount 200: no late feedback/store write/routes",
+      "passed": false,
+      "actual": [
+        [
+          "Kode verifikasi telah dikirim ulang ke email-mu.",
+          "Kode verifikasi telah dikirim ulang ke email-mu."
+        ],
+        [
+          {
+            "otp": {
+              "code": 1234,
+              "purpose": "register",
+              "phone": "081200000000",
+              "token": "fixture-late",
+              "expires_at": "2026-10-09T02:00:00Z",
+              "extra_data": {
+                "name": "Fixture Owner",
+                "email": "otp@example.test",
+                "phone": "081200000000"
+              },
+              "id": "fixture-late",
+              "updated_at": "2026-10-09T01:00:00Z",
+              "created_at": "2026-10-09T01:00:00Z"
+            },
+            "registration": {
+              "current_step": 1,
+              "message": "Fixture",
+              "attempts": 0,
+              "max_attempts": 5
+            }
+          }
+        ],
+        []
+      ],
+      "expected": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "unmount 200: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "unmount 429: no late feedback/store write/routes",
+      "passed": false,
+      "actual": [
+        [
+          "Gagal mengirim ulang kode. Silakan coba lagi.",
+          "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 30 detik."
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "unmount 429: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "unmount 500: no late feedback/store write/routes",
+      "passed": false,
+      "actual": [
+        [
+          "Gagal mengirim ulang kode. Silakan coba lagi.",
+          "Gagal mengirim ulang kode. Silakan coba lagi."
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        [],
+        [],
+        []
+      ]
+    },
+    {
+      "name": "unmount 500: old callback does not post",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: clears entered code",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "session swap 200: new resend available",
+      "passed": true
+    },
+    {
+      "name": "session swap 200: new payload",
+      "passed": false,
+      "actual": null,
+      "expected": {
+        "name": "Fixture Owner",
+        "email": "next-otp@example.test",
+        "phone": "081200000000",
+        "password": "FixtureOnly123!",
+        "tnc": true
+      }
+    },
+    {
+      "name": "session swap 200: ignores old result",
+      "passed": false,
+      "actual": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-old-result",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-old-result",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        [
+          "Kode verifikasi telah dikirim ulang ke email-mu.",
+          "Kode verifikasi telah dikirim ulang ke email-mu."
+        ],
+        [
+          {
+            "otp": {
+              "code": 1234,
+              "purpose": "register",
+              "phone": "081200000000",
+              "token": "fixture-old-result",
+              "expires_at": "2026-10-09T02:00:00Z",
+              "extra_data": {
+                "name": "Fixture Owner",
+                "email": "otp@example.test",
+                "phone": "081200000000"
+              },
+              "id": "fixture-old-result",
+              "updated_at": "2026-10-09T01:00:00Z",
+              "created_at": "2026-10-09T01:00:00Z"
+            },
+            "registration": {
+              "current_step": 1,
+              "message": "Fixture",
+              "attempts": 0,
+              "max_attempts": 5
+            }
+          }
+        ]
+      ],
+      "expected": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-next-session",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-next-session",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        [],
+        []
+      ]
+    },
+    {
+      "name": "session swap 200: old response cannot unlock new request",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "session swap 200: saved old callback ignored",
+      "passed": false,
+      "actual": 1,
+      "expected": 2
+    },
+    {
+      "name": "session swap 200: current response alone commits",
+      "passed": false,
+      "actual": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-old-result",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-old-result",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        2,
+        1
+      ],
+      "expected": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-new-result",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-new-result",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        1,
+        1
+      ]
+    },
+    {
+      "name": "session swap 429: clears entered code",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "session swap 429: new resend available",
+      "passed": true
+    },
+    {
+      "name": "session swap 429: new payload",
+      "passed": false,
+      "actual": null,
+      "expected": {
+        "name": "Fixture Owner",
+        "email": "next-otp@example.test",
+        "phone": "081200000000",
+        "password": "FixtureOnly123!",
+        "tnc": true
+      }
+    },
+    {
+      "name": "session swap 429: ignores old result",
+      "passed": false,
+      "actual": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-next-session",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-next-session",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        [
+          "Gagal mengirim ulang kode. Silakan coba lagi.",
+          "Terlalu banyak percobaan mengirim ulang kode. Coba lagi dalam 10 detik."
+        ],
+        []
+      ],
+      "expected": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-next-session",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-next-session",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        [],
+        []
+      ]
+    },
+    {
+      "name": "session swap 429: old response cannot unlock new request",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "session swap 429: saved old callback ignored",
+      "passed": false,
+      "actual": 1,
+      "expected": 2
+    },
+    {
+      "name": "session swap 429: current response alone commits",
+      "passed": false,
+      "actual": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-next-session",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-next-session",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        2,
+        0
+      ],
+      "expected": [
+        {
+          "otp": {
+            "code": 1234,
+            "purpose": "register",
+            "phone": "081200000000",
+            "token": "fixture-new-result",
+            "expires_at": "2026-10-09T02:00:00Z",
+            "extra_data": {
+              "name": "Fixture Owner",
+              "email": "otp@example.test",
+              "phone": "081200000000"
+            },
+            "id": "fixture-new-result",
+            "updated_at": "2026-10-09T01:00:00Z",
+            "created_at": "2026-10-09T01:00:00Z"
+          },
+          "registration": {
+            "current_step": 1,
+            "message": "Fixture",
+            "attempts": 0,
+            "max_attempts": 5
+          }
+        },
+        1,
+        1
+      ]
+    },
+    {
+      "name": "same session rerender keeps entered code",
+      "passed": true
+    },
+    {
+      "name": "complete OTP has explicit unavailable feedback",
+      "passed": false,
+      "actual": [],
+      "expected": [
+        "Verifikasi kode belum tersedia. Silakan coba lagi nanti."
+      ]
+    },
+    {
+      "name": "complete OTP does not fake login/navigation",
+      "passed": true
+    },
+    {
+      "name": "entered code/response never logged",
+      "passed": false,
+      "actual": 2,
+      "expected": 0
+    },
+    {
+      "name": "incomplete OTP disables Masuk",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "direct incomplete callback asks for code",
+      "passed": true
+    },
+    {
+      "name": "missingResponse: invalid session returns once",
+      "passed": false,
+      "actual": [
+        [
+          "Terjadi kesalahan. Silakan coba lagi.",
+          "Terjadi kesalahan. Silakan coba lagi."
+        ],
+        [
+          "back",
+          "back"
+        ]
+      ],
+      "expected": [
+        [
+          "Terjadi kesalahan. Silakan coba lagi."
+        ],
+        [
+          "back"
+        ]
+      ]
+    },
+    {
+      "name": "missingResponse: no actionable resend",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "missingResponse: rerender does not repeat redirect",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "missingInfo: invalid session returns once",
+      "passed": false,
+      "actual": [
+        [],
+        []
+      ],
+      "expected": [
+        [
+          "Terjadi kesalahan. Silakan coba lagi."
+        ],
+        [
+          "back"
+        ]
+      ]
+    },
+    {
+      "name": "missingInfo: no actionable resend",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "missingInfo: rerender does not repeat redirect",
+      "passed": false,
+      "actual": 0,
+      "expected": 1
+    },
+    {
+      "name": "StrictMode one POST/feedback/write",
+      "passed": false,
+      "actual": [
+        2,
+        4,
+        2
+      ],
+      "expected": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "no unhandled rejections",
+      "passed": true
+    },
+    {
+      "name": "no rejected UI action promises",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "unhandledRejections": [],
+  "actionRejections": [],
+  "passed": 44,
+  "failed": 61
+}

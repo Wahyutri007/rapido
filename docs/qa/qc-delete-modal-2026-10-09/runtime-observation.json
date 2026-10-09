@@ -1,0 +1,339 @@
+{
+  "observedAt": "2026-10-09T01:49:39.777Z",
+  "trackedInputs": [
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "initial": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "current": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "initial": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "current": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "initial": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "current": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "initial": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "current": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "initial": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "current": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "initial": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "current": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "initial": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "current": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "approvedDependencyUpdate": true,
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "initial": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "current": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "initial": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "current": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "initial": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "current": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "initial": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "current": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "initial": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "current": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "initial": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "current": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "initial": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "current": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "initial": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "current": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "initial": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "current": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "initial": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "current": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "initial": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "current": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "initial": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "current": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.web.tsx",
+      "initial": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "current": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "initial": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "current": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "tsconfig.json",
+      "initial": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "current": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "babel.config.js",
+      "initial": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "current": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "initial": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "current": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "initial": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "current": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/android.js",
+      "initial": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+      "current": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5",
+      "approvedDependencyUpdate": false,
+      "passed": false
+    },
+    {
+      "file": "api/axios.ts",
+      "initial": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "current": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/index.ts",
+      "initial": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "current": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/delete-confirmation.png",
+      "initial": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "current": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/action-success.png",
+      "initial": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "current": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/images/alerts/index.ts",
+      "initial": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "current": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/images/alerts/category.jpg",
+      "initial": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "current": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Regular.ttf",
+      "initial": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "current": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Medium.ttf",
+      "initial": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "current": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-SemiBold.ttf",
+      "initial": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "current": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Bold.ttf",
+      "initial": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "current": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "initial": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "current": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "initial": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "current": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "initial": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "current": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "global.css",
+      "initial": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "current": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "types/index.ts",
+      "initial": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+      "current": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/delete-modal-size/verification.json",
+      "initial": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "current": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/verification.json",
+      "initial": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "current": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/verification.json",
+      "initial": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12",
+      "current": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12",
+      "approvedDependencyUpdate": false,
+      "passed": true
+    }
+  ],
+  "ports": {
+    "initialObservation": {
+      "8001": 24116,
+      "8088": 9200
+    },
+    "current": [
+      {
+        "LocalPort": 8088,
+        "OwningProcess": 29296
+      },
+      {
+        "LocalPort": 8001,
+        "OwningProcess": 23948
+      }
+    ],
+    "commandsByQC": "Read-only observations; no listener start/stop/restart or HP/ADB action"
+  },
+  "androidCache": {
+    "path": "node_modules/react-native-css-interop/.cache/android.js",
+    "initial": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "afterFirstBuildAttempt": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf",
+    "current": "1b10d1da988810e3d2ddb2b2c20b202e2e789e57840fb6ea06213b05011d98d5",
+    "bytes": 193220,
+    "note": "Shared generated cache and listener PIDs changed outside the QC source scope during work. Own offline runner does not load root Metro/NativeWind plugin; no cache writes/restoration by QC. No global cache stability or native startup approval."
+  },
+  "sourcesEditedByQC": false
+}

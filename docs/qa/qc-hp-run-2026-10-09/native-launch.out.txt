@@ -1,0 +1,3 @@
+HP 35b9a8aa siap; Expo Go 57.0.9; backend online.
+Memakai Metro Rapido yang sudah aktif pada port 8088.
+Rapido dibuka di HP. Biarkan Metro/backend dan kabel USB tetap tersambung. Ulangi start:hp setelah kabel disambung ulang.

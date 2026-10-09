@@ -1,0 +1,178 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-006",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-08T21:20:00.176Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "branch": "main",
+  "sourceOrigin": "Current working tree; no commit/push",
+  "editedSources": {
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021"
+  },
+  "executedSourceHashes": {
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6"
+  },
+  "runtimeLibraryHashes": {
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "node_modules/@hookform/resolvers/zod/dist/zod.js": "73abe8d2ac3220ccb1e39d8fbc22ace3f0b0b3ccb3a3d8fba762f47a50e2624e",
+    "node_modules/@tanstack/react-query/build/modern/index.cjs": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+    "node_modules/axios/dist/node/axios.cjs": "6de6f72b4ee4912fbfa9e4257b391fbcaeb7620db2cf26ecbea994b146712d82",
+    "node_modules/zod/index.cjs": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+    "node_modules/zustand/index.js": "544c29c7aa257a566dbc6f3e94dd4a9f11c9ae8ac4b3c39b235a9900810934d8"
+  },
+  "scopeProof": {
+    "endpointMethodNameAndDtoGenericUnchanged": true,
+    "sheetElementHierarchyUnchanged": true,
+    "sheetCopyUnchanged": true,
+    "sheetLayoutClassTokensUnchanged": true,
+    "otpRouterPushUnchanged": true,
+    "textTokenChanges": [
+      "text-gray-900 -> text-foreground",
+      "Five text-sm -> size=normal",
+      "Outline ButtonText follows variant"
+    ],
+    "contractChecks": [
+      {
+        "file": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "passed": true
+      },
+      {
+        "file": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "passed": true
+      },
+      {
+        "file": "hooks/usePostRequest.ts",
+        "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "passed": true
+      },
+      {
+        "file": "lib/api-utils.ts",
+        "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "passed": true
+      },
+      {
+        "file": "schema/registration.ts",
+        "expected": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+        "actual": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+        "passed": true
+      },
+      {
+        "file": "store/otp.ts",
+        "expected": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+        "actual": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+        "passed": true
+      },
+      {
+        "file": "hooks/useRegistrationForm.ts",
+        "expected": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+        "actual": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+        "passed": true
+      },
+      {
+        "file": "components/common/Form.tsx",
+        "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "passed": true
+      },
+      {
+        "file": "app/(onboarding)/register/wizard.tsx",
+        "expected": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+        "actual": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+        "passed": true
+      },
+      {
+        "file": "context/AuthContext.tsx",
+        "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+        "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+        "passed": true
+      },
+      {
+        "file": "hooks/useProtectedRoute.ts",
+        "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "passed": true
+      }
+    ]
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/registration-start/HANDOFF.md": "b8f978138694d33866ae0120b20e267bd4a1d3aa722092003b58e8c332f52cae",
+    "docs/qa/senior-5-2026-10-09/registration-start/baseline-results.json": "d5afcc1b2b4a20c65a27b67bbe20d992119e63a5a0e089bd81d7d542129b7873",
+    "docs/qa/senior-5-2026-10-09/registration-start/before/PersonalInfoAction.tsx.txt": "f328daba38fa0ce99db5f0917ca6c7df4e4d97595012ce391a4a6c804c0204bb",
+    "docs/qa/senior-5-2026-10-09/registration-start/before/registration.ts.txt": "899397514ad20d02995be71cb38d8eb39f4472595a824548ccf22eb293c4655c",
+    "docs/qa/senior-5-2026-10-09/registration-start/check.cjs": "ed807927be3067652a39cf81cf0a8a311d0dd121f807d227c5bc9a28b14f8540",
+    "docs/qa/senior-5-2026-10-09/registration-start/eslint-baseline.json": "bd24ffe97a36a9f34a5235c2b514163c5438999d4f314b7ec0c8fa0640cb48b1",
+    "docs/qa/senior-5-2026-10-09/registration-start/eslint-final.json": "a961ba32d00fb4e4048f26ec12893782d5759c68d82a8695ac99d961f89c115c",
+    "docs/qa/senior-5-2026-10-09/registration-start/figma-access.json": "31aa7ace629c8a1df8fd152217be9819d1a23f50da1c5bee1776a5d390667964",
+    "docs/qa/senior-5-2026-10-09/registration-start/final-results.json": "7c61d51c20a6010a44b52c1a009035f10d31f668d6fa5d2a7e7f7c8a4efa9fdd",
+    "docs/qa/senior-5-2026-10-09/registration-start/harness-notes.json": "9ebfc58279d95ca52b80a8476a5d35e4430bd93822e95b4446868ef3a064e156",
+    "docs/qa/senior-5-2026-10-09/registration-start/historical-packets-check.json": "1907a5964ab41070e3556cccc434cc912c224f2cf9e4d34285713b6c942cdcfb",
+    "docs/qa/senior-5-2026-10-09/registration-start/quality-results.json": "878cb2794940f2169142b5f55f222f73e3c6b4ff6958e1bcdf073051827d8133",
+    "docs/qa/senior-5-2026-10-09/registration-start/scope-proof.json": "2dffc14a8bc20c69a90d919c3fd7fc66785495711f8aee05f59dd6dbe95a42fd",
+    "docs/qa/senior-5-2026-10-09/registration-start/source-before.json": "1207e28788c018a1bece46910118ebaea3e52c9c2f1c4ce1d28a149925afe1ee",
+    "docs/qa/senior-5-2026-10-09/registration-start/typecheck-results.json": "a38ccbbdb12b5aae4dcb57626705e9bdd7470bad89dcc1071752a328379fab2f",
+    "docs/qa/senior-5-2026-10-09/registration-start/typecheck.cjs": "cffc67c2ce9ca03baebb42b7665a9a6256eea3f0e415682a59d5c7078f904b0a"
+  },
+  "assertions": {
+    "baseline": {
+      "passed": 61,
+      "failed": 35,
+      "rejectedUiActions": 2
+    },
+    "final": {
+      "passed": 96,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "unhandledRejections": 0,
+      "rejectedUiActions": 0
+    }
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "focusedTypecheckDiagnostics": 0
+  },
+  "preservedHistoricalArtifacts": 42,
+  "separateGuardQc": {
+    "signal": "QC-GUARD-20261009-PASS-DELTA",
+    "status": "PASS_DELTA",
+    "passed": 151,
+    "sourceStillMatches": true,
+    "excludesNewProvider": true
+  },
+  "separateProviderRecheck": "SD5-005 / QC-LOGIN-001 and002 pending independent decision at initial read",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "boundaries": [
+    "Registration start only; no OTP verification/final registration implementation",
+    "Fixture parent +production sheet/Form/request/OTP state; not full WizardScreen",
+    "Memory transport, host native/UI and router adapters; no real API/storage/user data",
+    "Blocked or unmounted call returns empty tuple; actual caller ignores empty data",
+    "Lock per instance; dismissed POST is not canceled and new sheet can start another request",
+    "Conditional child unmount removes old request lifetime; native sheet exit animation requires device review",
+    "Public endpoint/payload/navigation and source dependency contracts retained",
+    "No full auth/browser/native/SSR/keyboard/scroll/viewport/Figma parity certification",
+    "Prior developer/QC packages unchanged; QA/QC/PM gate separate"
+  ]
+}

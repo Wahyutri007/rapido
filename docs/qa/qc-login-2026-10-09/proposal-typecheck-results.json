@@ -1,0 +1,14 @@
+{
+  "scope": "Candidate AuthProvider with current login hook/screen and imported dependency closure; reviewed guard bytes pinned; not full-project check",
+  "tested": "PROPOSAL_ONLY_NOT_APPLIED",
+  "roots": [
+    "api/hooks/auth.ts",
+    "app/(onboarding)/login.tsx"
+  ],
+  "sourceOverrides": {
+    "context/AuthContext.tsx": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+    "hooks/useProtectedRoute.ts": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0"
+  },
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

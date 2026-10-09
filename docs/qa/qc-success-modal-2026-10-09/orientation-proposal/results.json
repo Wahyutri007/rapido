@@ -1,0 +1,1169 @@
+{
+  "owner": "QC",
+  "scope": "SuccessModal horizontal orientation and live resize",
+  "tested": "PROPOSAL_ONLY_NOT_APPLIED",
+  "sourceHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "fixtureHash": "238021aeb4895d0bbcdcc2cbb84d1e43a58c2f8a71474a064e2f5660ad13edbe",
+  "checks": [
+    {
+      "name": "direct-640x360: whole modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "direct-640x360: action fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 155,
+        "y": 271,
+        "width": 330,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-640x360: visible action target at least44px",
+      "passed": true,
+      "detail": {
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 326,
+            "scrollHeight": 326,
+            "top": 16,
+            "bottom": 344
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-844x390: whole modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      }
+    },
+    {
+      "name": "direct-844x390: action fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 257,
+        "y": 301,
+        "width": 330,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-844x390: visible action target at least44px",
+      "passed": true,
+      "detail": {
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301,
+            "bottom": 349
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301,
+            "bottom": 349
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301,
+            "bottom": 349
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 356,
+            "scrollHeight": 356,
+            "top": 16,
+            "bottom": 374
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-640x360: whole modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 129.99269104003906,
+        "y": 15.993682861328125,
+        "width": 380.01463317871094,
+        "height": 328.01263427734375
+      }
+    },
+    {
+      "name": "long-640x360: action fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 154.98614501953125,
+        "y": 271.00762939453125,
+        "width": 330.0277404785156,
+        "height": 48.0040283203125
+      }
+    },
+    {
+      "name": "long-640x360: visible action target at least44px",
+      "passed": true,
+      "detail": {
+        "visibleHeight": 48.0054931640625,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271.0103759765625,
+            "bottom": 319.015869140625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271.0103759765625,
+            "bottom": 319.015869140625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271.0103759765625,
+            "bottom": 319.015869140625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 326,
+            "scrollHeight": 326,
+            "top": 15.981292724609375,
+            "bottom": 344.0187072753906
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-640: scroll region exists for clipped content",
+      "passed": true,
+      "detail": {
+        "found": true,
+        "clientHeight": 214,
+        "scrollHeight": 383
+      }
+    },
+    {
+      "name": "long-640: last description line reachable by scrolling",
+      "passed": true
+    },
+    {
+      "name": "long-640: footer stays visible and stationary while content scrolls",
+      "passed": true,
+      "detail": {
+        "beforeScroll": {
+          "x": 155,
+          "y": 271,
+          "width": 330,
+          "height": 48
+        },
+        "afterScroll": {
+          "x": 155,
+          "y": 271,
+          "width": 330,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-844x390: whole modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 231.99269104003906,
+        "y": 15.99310302734375,
+        "width": 380.01463317871094,
+        "height": 358.0137939453125
+      }
+    },
+    {
+      "name": "long-844x390: action fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 256.98614501953125,
+        "y": 301.0089111328125,
+        "width": 330.02777099609375,
+        "height": 48.0040283203125
+      }
+    },
+    {
+      "name": "long-844x390: visible action target at least44px",
+      "passed": true,
+      "detail": {
+        "visibleHeight": 48.00482177734375,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301.01080322265625,
+            "bottom": 349.015625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301.01080322265625,
+            "bottom": 349.015625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 301.01080322265625,
+            "bottom": 349.015625
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 356,
+            "scrollHeight": 356,
+            "top": 15.981826782226562,
+            "bottom": 374.01820373535156
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "clientHeight": 390,
+            "scrollHeight": 390,
+            "top": 0,
+            "bottom": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "long-844: scroll region exists for clipped content",
+      "passed": true,
+      "detail": {
+        "found": true,
+        "clientHeight": 244,
+        "scrollHeight": 383
+      }
+    },
+    {
+      "name": "long-844: last description line reachable by scrolling",
+      "passed": true
+    },
+    {
+      "name": "long-844: footer stays visible and stationary while content scrolls",
+      "passed": true,
+      "detail": {
+        "beforeScroll": {
+          "x": 257,
+          "y": 301,
+          "width": 330,
+          "height": 48
+        },
+        "afterScroll": {
+          "x": 257,
+          "y": 301,
+          "width": 330,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: whole modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: action fully inside viewport",
+      "passed": true,
+      "detail": {
+        "x": 155,
+        "y": 271,
+        "width": 330,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-live-rotate-640x360: visible action target at least44px",
+      "passed": true,
+      "detail": {
+        "visibleHeight": 48,
+        "ancestors": [
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 48,
+            "scrollHeight": 48,
+            "top": 271,
+            "bottom": 319
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 326,
+            "scrollHeight": 326,
+            "top": 16,
+            "bottom": 344
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "visible",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "DIV",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "BODY",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          },
+          {
+            "tag": "HTML",
+            "overflowY": "hidden",
+            "clientHeight": 360,
+            "scrollHeight": 360,
+            "top": 0,
+            "bottom": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "live orientation: same modal/title DOM instance",
+      "passed": true
+    },
+    {
+      "name": "live orientation: no implicit close callback",
+      "passed": true
+    },
+    {
+      "name": "live orientation: restored portrait close notifies once",
+      "passed": true
+    },
+    {
+      "name": "final: no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "final: no console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "final: no API/HTTP attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 27,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "exception": null,
+  "measurements": [
+    {
+      "label": "direct-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      },
+      "action": {
+        "x": 155,
+        "y": 271,
+        "width": 330,
+        "height": 48
+      },
+      "visibleHeight": 48,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "top": 16,
+          "bottom": 344
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "BODY",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "HTML",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        }
+      ]
+    },
+    {
+      "label": "direct-844x390",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "modal": {
+        "x": 232,
+        "y": 16,
+        "width": 380,
+        "height": 358
+      },
+      "action": {
+        "x": 257,
+        "y": 301,
+        "width": 330,
+        "height": 48
+      },
+      "visibleHeight": 48,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301,
+          "bottom": 349
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301,
+          "bottom": 349
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301,
+          "bottom": 349
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 356,
+          "scrollHeight": 356,
+          "top": 16,
+          "bottom": 374
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "BODY",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "HTML",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        }
+      ]
+    },
+    {
+      "label": "long-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 129.99269104003906,
+        "y": 15.993682861328125,
+        "width": 380.01463317871094,
+        "height": 328.01263427734375
+      },
+      "action": {
+        "x": 154.98614501953125,
+        "y": 271.00762939453125,
+        "width": 330.0277404785156,
+        "height": 48.0040283203125
+      },
+      "visibleHeight": 48.0054931640625,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271.0103759765625,
+          "bottom": 319.015869140625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271.0103759765625,
+          "bottom": 319.015869140625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271.0103759765625,
+          "bottom": 319.015869140625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "top": 15.981292724609375,
+          "bottom": 344.0187072753906
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "BODY",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "HTML",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        }
+      ]
+    },
+    {
+      "label": "long-844x390",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "modal": {
+        "x": 231.99269104003906,
+        "y": 15.99310302734375,
+        "width": 380.01463317871094,
+        "height": 358.0137939453125
+      },
+      "action": {
+        "x": 256.98614501953125,
+        "y": 301.0089111328125,
+        "width": 330.02777099609375,
+        "height": 48.0040283203125
+      },
+      "visibleHeight": 48.00482177734375,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301.01080322265625,
+          "bottom": 349.015625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301.01080322265625,
+          "bottom": 349.015625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 301.01080322265625,
+          "bottom": 349.015625
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 356,
+          "scrollHeight": 356,
+          "top": 15.981826782226562,
+          "bottom": 374.01820373535156
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "BODY",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        },
+        {
+          "tag": "HTML",
+          "overflowY": "hidden",
+          "clientHeight": 390,
+          "scrollHeight": 390,
+          "top": 0,
+          "bottom": 390
+        }
+      ]
+    },
+    {
+      "label": "long-live-rotate-640x360",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "modal": {
+        "x": 130,
+        "y": 16,
+        "width": 380,
+        "height": 328
+      },
+      "action": {
+        "x": 155,
+        "y": 271,
+        "width": 330,
+        "height": 48
+      },
+      "visibleHeight": 48,
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 48,
+          "scrollHeight": 48,
+          "top": 271,
+          "bottom": 319
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 326,
+          "scrollHeight": 326,
+          "top": 16,
+          "bottom": 344
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "visible",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "DIV",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "BODY",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        },
+        {
+          "tag": "HTML",
+          "overflowY": "hidden",
+          "clientHeight": 360,
+          "scrollHeight": 360,
+          "top": 0,
+          "bottom": 360
+        }
+      ]
+    }
+  ],
+  "bundleReceipts": [
+    {
+      "path": "/.expo/qc-success-proposal-entry.bundle",
+      "bytes": 5890265,
+      "sha256": "d9537b47958fa348a2f47ca419ec14483074d473c735ce4004c62ebd856e83f2"
+    }
+  ],
+  "receiptErrors": []
+}

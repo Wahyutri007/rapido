@@ -1,0 +1,90 @@
+{
+  "createdAt": "2026-10-09T02:45:30.754Z",
+  "reviewer": "QC Senior",
+  "ticket": "ACCOUNTING-BOTTOM-SAFE-001",
+  "signal": "QC-ACCOUNTING-BOTTOM-SAFE-20261009-PASS-SCOPED",
+  "status": "PASS_SCOPED",
+  "scope": "Safe-area footer and scroll-clearance delta only; financial handlers/dialogs, full screens and native runtime retain separate gates.",
+  "approvedDeltaSourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx": "d439975ccc898e9b6894f53189be5d61079ffacff0c1cc791327de8e6d7c54e4",
+    "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx": "89f8947beb49ff63526c6c684ee3d8a90c184ba4882a33f55c581d83581eac9e",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx": "3793e50928bbda2e4cbcceb9e5e4051a914b36683eb0648568350f1b9738acd6",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx": "ffa92dabb0da42b18b1b842f5af40e17c901e5a0e052a0dfe4948437e6578da0",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "846f1a8353b2ced2884d2d5dfbbe6f04535ca2cbb57ccd6b946c5dd29068acf4",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx": "3922889b284bacddf2d3d5ded857e1d8b7910023a4600399e32aaea14c1ab471",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx": "1615d3f577c27beab2a6935790a077f1b331188c9a9321f36c85012548080fb3",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx": "6d27c7ff407fe16e268b58ebe09a3f6fe2f9a29052cf3614e601a4e4c49b4c3e",
+    "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx": "cbf034894331b654dbce325df34dd8d9f5d1f18cabb589db148c4f212b1ddc8a",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx": "3486908d48c53328d625a2ff559356370f8d7bf30a3dc20fef656c39c8148186",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx": "f768645fe0881834386ab8a41ba5a172735e82f8bc2294542b25ac12b1c4051f",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c96496c04ff5f8a1b053c7eb9d6bc2e65d63497c6aac50e2810ef0909a3fa7a2",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx": "9fd103b6c6af39c9f31f87af9d28ba791f936ce2c611fc07037c729a997e6316",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx": "8555826fd5281a47296e2a5bd5af9ee89ceb7c5c4941f27710a523808d5cd11e",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx": "e5048c17160c041d4a09ba5d0c4ffb11b2f039bae48b464d8eb5ab17ac02497f",
+    "components/common/Wrapper.tsx": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+    "components/common/AnimatedWrapper.tsx": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f",
+    "components/feature/reports/ReportActionButton.tsx": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f",
+    "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1"
+  },
+  "freshChecks": {
+    "browser": 113,
+    "astAndInventory": 19,
+    "sharedQuality": {
+      "lintFindings": 0,
+      "biomeExit": 0,
+      "diffExit": 0,
+      "typeRoots": 4,
+      "typeProjectSources": 51,
+      "diagnostics": 0
+    }
+  },
+  "reusedEvidence": {
+    "developerRendererChecks": 65,
+    "developerFingerprints": 46,
+    "callerLint": {
+      "baseline": 7,
+      "final": 7,
+      "introduced": 0
+    },
+    "countedAsFreshQC": false
+  },
+  "findings": [],
+  "closedFindings": [],
+  "nativeGate": {
+    "status": "PENDING_QA_DEVICE",
+    "required": [
+      "Android physical three-button/gesture navigation",
+      "Portrait/landscape, final-field scroll, keyboard open/close",
+      "15 Accounting footer screens, three Accounting reports and affected report consumers",
+      "General Journal account-picker spacing after extra inset"
+    ],
+    "noFinancialDataMutationsRequired": true
+  },
+  "remainingSeparateGates": [
+    "QC-INCOME-001/002/003 remain OPEN pending independent recheck of new Codex4 correction handoff.",
+    "QC-DELETE-001 P2 remains OPEN on DeleteConfirmModal DABC; correction absent.",
+    "AlertModal external review queued.",
+    "Changed consumer dependencies need their own overlay/recheck, not resealing historic packets."
+  ],
+  "PM": {
+    "handoff": "Local workspace signal available; no receipt from another session implied.",
+    "publishWholeApplication": false,
+    "publicationOwner": "PM",
+    "pushPerformed": false
+  },
+  "applicationSourceEditedByQC": false,
+  "limits": [
+    "RN-web insets injected by fixture and red system overlays; no native HP interaction, keyboard, Figma, full router/auth, API or persistence approval.",
+    "Fixture exercises shared components, long content and journal-like Pressable h-12 row; not all15 financial screens.",
+    "Existing content side padding is outside this footer delta; side-inset screenshot certifies footer hit areas only.",
+    "Seven legacy caller lint findings and three developer Biome unused-import warnings remain; shared4-source QC quality clean."
+  ],
+  "evidence": {
+    "browser": "browser-results.json",
+    "audit": "audit-results.json",
+    "quality": "quality-results.json",
+    "source": "source-before.json",
+    "build": "offline-build.json",
+    "frozenBundle": "bundle-receipt.json"
+  }
+}

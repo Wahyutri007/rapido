@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "changed": 0,
+    "unchanged": 4,
+    "matches": 0,
+    "duration": 10478500,
+    "errors": 0,
+    "warnings": 1,
+    "infos": 1,
+    "skipped": 0,
+    "suggestedFixesSkipped": 0,
+    "diagnosticsNotPrinted": 0,
+    "scannerDuration": 2849100
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "message": "Template literals are preferred over string concatenation.",
+      "category": "lint/style/useTemplate",
+      "location": {
+        "path": "docs\\qa\\qc-nativewind-cache-2026-10-09\\style-proposal\\scripts\\verify-nativewind-cache.cjs",
+        "start": {
+          "line": 137,
+          "column": 37
+        },
+        "end": {
+          "line": 137,
+          "column": 75
+        }
+      },
+      "advices": []
+    },
+    {
+      "severity": "warning",
+      "message": "This function expression can be turned into an arrow function.",
+      "category": "lint/complexity/useArrowFunction",
+      "location": {
+        "path": "docs\\qa\\qc-nativewind-cache-2026-10-09\\style-proposal\\scripts\\preserve-nativewind-cache.cjs",
+        "start": {
+          "line": 16,
+          "column": 22
+        },
+        "end": {
+          "line": 29,
+          "column": 4
+        }
+      },
+      "advices": []
+    }
+  ],
+  "command": "check"
+}

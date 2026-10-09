@@ -1,0 +1,80 @@
+{
+  "endpointMethodNameAndDtoGenericUnchanged": true,
+  "sheetElementHierarchyUnchanged": true,
+  "sheetCopyUnchanged": true,
+  "sheetLayoutClassTokensUnchanged": true,
+  "otpRouterPushUnchanged": true,
+  "textTokenChanges": [
+    "text-gray-900 -> text-foreground",
+    "Five text-sm -> size=normal",
+    "Outline ButtonText follows variant"
+  ],
+  "contractChecks": [
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "schema/registration.ts",
+      "expected": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+      "actual": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+      "passed": true
+    },
+    {
+      "file": "store/otp.ts",
+      "expected": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+      "actual": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+      "passed": true
+    },
+    {
+      "file": "hooks/useRegistrationForm.ts",
+      "expected": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+      "actual": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+      "passed": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "file": "app/(onboarding)/register/wizard.tsx",
+      "expected": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+      "actual": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+      "passed": true
+    },
+    {
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    }
+  ]
+}

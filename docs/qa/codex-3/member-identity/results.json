@@ -1,0 +1,320 @@
+{
+  "date": "2026-10-09 Asia/Jakarta",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "scope": "Developer regression adapted from QC; React lifecycle/schema test; actual route/form/RHF/Zod, mocked API/query and native primitives. Not browser, real router navigation, backend or native runtime.",
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "required name",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "required phone",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "valid leap day",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid leap day",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "invalid month",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "email validation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "gender validation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "database address limit",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "trim and nullable payload",
+      "passed": true,
+      "actual": {
+        "name": "QC",
+        "phone": "0812",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      },
+      "expected": {
+        "name": "QC",
+        "phone": "0812",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "name": "edit hydrates correct member",
+      "passed": true,
+      "actual": "Member A",
+      "expected": "Member A"
+    },
+    {
+      "name": "same-ID refetch preserves draft",
+      "passed": true,
+      "actual": "Draft A",
+      "expected": "Draft A"
+    },
+    {
+      "name": "different ID hydrates new member",
+      "passed": true,
+      "actual": "Member B",
+      "expected": "Member B"
+    },
+    {
+      "name": "edit to create clears previous member",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "create without user input cannot clone previous member",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "successful edit targets correct ID",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "successful edit blocks repeated submission",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "changing ID clears saved lock",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "return to edit after create restores entity values",
+      "passed": true,
+      "actual": "Member B",
+      "expected": "Member B"
+    },
+    {
+      "name": "pending success request targets old entity",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "late success response preserves new entity draft",
+      "passed": true,
+      "actual": "Draft B",
+      "expected": "Draft B"
+    },
+    {
+      "name": "late success response leaves new save enabled",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late success response cannot open new success modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late success response cannot open new error modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late success response cannot attach old field errors",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "pending error request targets old entity",
+      "passed": true,
+      "actual": [
+        [
+          "PUT",
+          "a"
+        ]
+      ],
+      "expected": [
+        [
+          "PUT",
+          "a"
+        ]
+      ]
+    },
+    {
+      "name": "late error response preserves new entity draft",
+      "passed": true,
+      "actual": "Draft B",
+      "expected": "Draft B"
+    },
+    {
+      "name": "late error response leaves new save enabled",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late error response cannot open new success modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late error response cannot open new error modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "late error response cannot attach old field errors",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "unknown edit cannot submit",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unknown edit hides form",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "query retry hydrates recovered member",
+      "passed": true,
+      "actual": "Recovered",
+      "expected": "Recovered"
+    },
+    {
+      "name": "422 retains draft",
+      "passed": true,
+      "actual": "Draft unchanged",
+      "expected": "Draft unchanged"
+    },
+    {
+      "name": "422 can retry",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "422 attaches field error",
+      "passed": true,
+      "actual": "Nomor tidak valid",
+      "expected": "Nomor tidak valid"
+    },
+    {
+      "name": "denied permission blocks child navigator",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "loading auth blocks child navigator",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "allowed permission renders navigator",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "no unexpected React runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "hashes": {
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+    "types/api/customer.ts": "26552f68293d3421f87864ea84fc91a4a3f33952ca7e0dd5c6f4753776d3d1d4",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/SingleSelect.tsx": "e967d1ef262507b316619e1ebf9ef90138abdb78e202883c48496c3da50bfb27",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+    "components/feature/manage/member/MemberIcon.tsx": "f10289dac596e3e2e4da170f05a2f9d39769e203995da521c542a996471b96d2",
+    "components/feature/manage/member/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+    "components/feature/manage/member/MemberModifyScreen.tsx": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+    "app/(no-layout)/manage/member/detail.tsx": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+    "app/(no-layout)/manage/member/index.tsx": "f79aedbbed0258a09b8073ed652b8563c31c19c1a4cbd169fa901256df0b1cfa",
+    "app/(no-layout)/manage/member/modify.tsx": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+    "app/(no-layout)/manage/member/_layout.tsx": "d60b9c96e8d8eb3a762c496dfd66a7f016153ecd25c477a8fe7239a8f45c031d"
+  }
+}

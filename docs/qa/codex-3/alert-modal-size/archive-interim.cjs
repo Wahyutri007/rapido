@@ -1,0 +1,10 @@
+const fs = require("node:fs"), path = require("node:path"), assert = require("node:assert/strict"), crypto = require("node:crypto");
+const hash = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+const source = "components/common/AlertModal.tsx", destination = path.join(__dirname, "interim");
+assert(!fs.existsSync(destination), "Keep interim history");
+assert.equal(hash(source), "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443");
+fs.mkdirSync(destination);
+for (const file of ["final", "delete-lifecycle", "quality-results.json", "quality.cjs"]) fs.cpSync(path.join(__dirname, file), path.join(destination, file), { recursive: true });
+fs.copyFileSync(source, path.join(destination, "AlertModal.tsx.txt"));
+fs.writeFileSync(path.join(destination, "README.md"), "Interim geometry-only source a1d80665: browser114 and lifecycle156 PASS; source lint failed max-warnings0 with existing private type/function name collision. Biome/diff/type and four-geometry AST passed. Final delta also renames the private type AlertModal to AlertModalProps, preserving emitted runtime. Original internal review remains frozen separately; final hash needs a new review. These outputs are historical, not the final quality gate.\n");
+console.log("Archived geometry-only source and all interim checks before private type rename");

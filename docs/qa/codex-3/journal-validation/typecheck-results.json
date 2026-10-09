@@ -1,0 +1,11 @@
+{
+  "owner": "Codex-3",
+  "scope": "Three journal validation roots and imported dependency closure, project compiler options/declarations; not full-project typecheck",
+  "diagnostics": [],
+  "sourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca"
+  },
+  "exitCode": 0
+}

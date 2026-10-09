@@ -1,0 +1,74 @@
+[
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/summary.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/transfer.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/adjustment.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/material.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/composition.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/purchase.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/supplier.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/payment.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/movement.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory/closing.png",
+    "loaded": true,
+    "w": 0,
+    "h": 0
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/store.svg",
+    "loaded": false,
+    "w": 16,
+    "h": 16
+  },
+  {
+    "src": "/assets/?unstable_path=.%2Fassets%2Fimages%2Finventory%2Fclosing-stock/status.svg",
+    "loaded": false,
+    "w": 15.296875,
+    "h": 15
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-10-08T18:31:05.421Z",
+  "serial": "35b9a8aa",
+  "expoPid": "3305",
+  "screenshot": ".expo/qc-phone-warning-2026-10-09/current-device.png",
+  "screenshotPublished": false,
+  "operations": [
+    "screencap exec-out",
+    "pidof host.exp.exponent"
+  ],
+  "noRestartReloadNavigationOrDataClear": true,
+  "qcCurrentCapture": {
+    "rapidoForeground": false,
+    "warningTextConfirmed": false,
+    "noDeviceNavigation": true
+  },
+  "qcDeveloperCaptureReview": {
+    "file": ".expo/senior7-startup/second-device.png",
+    "screen": "Beranda Back Office",
+    "redThemeErrorVisible": false,
+    "collapsedYellowWarningVisible": true,
+    "warningTextConfirmed": false,
+    "fullScreenshotPublished": false
+  }
+}

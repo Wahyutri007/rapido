@@ -1,0 +1,54 @@
+{
+  "owner": "QC",
+  "status": "PASS",
+  "passed": 8,
+  "failed": 0,
+  "astContractChecks": 5,
+  "harnessFailureChecks": 3,
+  "checks": [
+    {
+      "name": "metro.config.js: whole semantic AST preserved",
+      "kind": "AST_CONTRACT",
+      "passed": true
+    },
+    {
+      "name": "scripts/verify-metro-cache.cjs: whole semantic AST preserved",
+      "kind": "AST_CONTRACT",
+      "passed": true
+    },
+    {
+      "name": "guard helper: whole AST preserved except declared arrow syntax",
+      "kind": "AST_CONTRACT",
+      "passed": true
+    },
+    {
+      "name": "guard helper: arrow has no receiver/arguments/super/new.target capture",
+      "kind": "AST_CONTRACT",
+      "passed": true
+    },
+    {
+      "name": "initializer harness: only cleanup validation placement and JSON template changed",
+      "kind": "AST_CONTRACT",
+      "passed": true
+    },
+    {
+      "name": "invalid temporary target fails before initializer/writes and never cleans it",
+      "kind": "HARNESS_FAILURE",
+      "passed": true
+    },
+    {
+      "name": "guarded initializer error identity survives cleanup with filesystem restored",
+      "kind": "HARNESS_FAILURE",
+      "passed": true
+    },
+    {
+      "name": "result-output failure survives cleanup after all ten harness checks",
+      "kind": "HARNESS_FAILURE",
+      "passed": true
+    }
+  ],
+  "limitations": "Three harness failure cases execute production source with memory filesystem/initializer adapters. Installed dependency execution is the separate 10-check replay.",
+  "applicationSourcesEdited": false,
+  "rootMetroRequired": false,
+  "realTemporaryDirectoryDeletedByThisSuite": false
+}

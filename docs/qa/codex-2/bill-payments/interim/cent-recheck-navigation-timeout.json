@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-10-09T01:54:14.281Z",
+  "passed": false,
+  "assertions": 0,
+  "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Pembayaran Tagihan', { exact: true }).filter({ visible: true })\u001b[22m\n\u001b[2m    - locator resolved to <div dir=\"auto\" class=\"css-text-146c3p1 text-foreground text-foreground text-sm\">Pembayaran Tagihan</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\n    at main (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-2\\bill-payments\\check-browser.cjs:149:36)",
+  "pageErrors": []
+}

@@ -1,0 +1,10 @@
+const fs = require("node:fs"), path = require("node:path"), assert = require("node:assert/strict"), { spawnSync } = require("node:child_process"), crypto = require("node:crypto");
+const directory = path.join(__dirname, "delete-lifecycle"); fs.mkdirSync(directory, { recursive: true });
+const oldFile = "docs/qa/codex-3/delete-lifecycle/check.cjs", original = fs.readFileSync(oldFile, "utf8");
+const old = 'Dimensions: { get: () => ({ width: 360, height: 800 }) }';
+assert.equal(original.split(old).length, 2);
+const adapted = original.replace(old, old + ', useWindowDimensions: () => ({ width: 360, height: 800 })');
+fs.writeFileSync(path.join(directory, "check.cjs"), adapted);
+const result = spawnSync(process.execPath, [path.join(directory, "check.cjs")], { encoding: "utf8" });
+fs.writeFileSync(path.join(directory, "replay-notes.json"), JSON.stringify({ owner: "Codex-3", originalRunnerSha256: crypto.createHash("sha256").update(fs.readFileSync(oldFile)).digest("hex"), adaptedRunnerSha256: crypto.createHash("sha256").update(adapted).digest("hex"), adaptation: "Only add host useWindowDimensions static 360/800; test scenarios/assertions unchanged; native resize tested separately in RN-web browser", exitCode: result.status, stdout: result.stdout, stderr: result.stderr }, null, 2) + "\n");
+console.log(result.stdout.trim()); if (result.stderr.trim()) console.error(result.stderr.trim()); process.exitCode = result.status;

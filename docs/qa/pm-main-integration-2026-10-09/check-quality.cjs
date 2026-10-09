@@ -1,0 +1,26 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root='D:/Rapido-QC-temp/pm-main-2026-10-09';process.chdir(root);
+const ts=require(path.join(root,'node_modules/typescript'));
+const {ESLint}=require(path.join(root,'node_modules/eslint'));
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const folders=['app','components','api','hooks','context','lib','schema','store','constants','types'];
+const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
+const files=folders.flatMap(dir=>walk(path.join(root,dir))).filter(file=>/\.[jt]sx?$/.test(file));
+(async()=>{
+ const before=Object.fromEntries(files.map(file=>[path.relative(root,file).replaceAll('\\','/'),hash(file)]));
+ const configFile=ts.readConfigFile(path.join(root,'tsconfig.json'),ts.sys.readFile);
+ if(configFile.error)throw Error(ts.flattenDiagnosticMessageText(configFile.error.messageText,'\n'));
+ const config=ts.parseJsonConfigFileContent({...configFile.config,include:folders.flatMap(dir=>[dir+'/**/*.ts',dir+'/**/*.tsx']).concat(['.expo/types/**/*.ts','expo-env.d.ts','nativewind-env.d.ts']),exclude:['node_modules','docs','dist']},ts.sys,root);
+ const program=ts.createProgram(config.fileNames,{...config.options,noEmit:true,incremental:false});
+ const diags=ts.getPreEmitDiagnostics(program);
+ const diagnostics=diags.map(d=>({file:d.file?path.relative(root,d.file.fileName).replaceAll('\\','/'):null,line:d.file&&d.start!==undefined?d.file.getLineAndCharacterOfPosition(d.start).line+1:null,code:d.code,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')}));
+ fs.writeFileSync(path.join(__dirname,'typescript.json'),JSON.stringify({scope:'All production TypeScript sources; excludes archived documentation/test fixtures. Router declarations copied from current workspace, not independently generated.',roots:config.fileNames.length,diagnostics,sourceHashes:before},null,2)+'\n');
+ console.log(JSON.stringify({typescript:diagnostics.length,roots:config.fileNames.length}));
+ const lint=await new ESLint({cwd:root}).lintFiles(files);
+ const errors=lint.reduce((n,r)=>n+r.errorCount,0),warnings=lint.reduce((n,r)=>n+r.warningCount,0);
+ fs.writeFileSync(path.join(__dirname,'eslint.json'),JSON.stringify({scope:'All production JS/TS sources',files:lint.length,errors,warnings,results:lint.filter(r=>r.messages.length).map(r=>({file:path.relative(root,r.filePath).replaceAll('\\','/'),messages:r.messages}))},null,2)+'\n');
+ const drift=Object.entries(before).filter(([file,h])=>hash(path.join(root,file))!==h).map(([f])=>f);
+ fs.writeFileSync(path.join(__dirname,'quality.json'),JSON.stringify({createdAt:new Date().toISOString(),typeRoots:config.fileNames.length,typeDiagnostics:diagnostics.length,eslintFiles:lint.length,eslintErrors:errors,eslintWarnings:warnings,sourceDrift:drift},null,2)+'\n');
+ console.log(JSON.stringify({eslintErrors:errors,eslintWarnings:warnings,files:lint.length,drift:drift.length}));
+ if(diagnostics.length||errors||drift.length)process.exitCode=1;
+})().catch(e=>{console.error(e);process.exitCode=1;});

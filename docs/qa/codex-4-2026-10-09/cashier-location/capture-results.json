@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "cardBox": {
+    "x": 16,
+    "y": 616,
+    "width": 358,
+    "height": 116
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "Full place row scrolls above fixed bottom tabs with sixteen-pixel horizontal margins"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "checkedAt": "2026-10-09T02:18:35.889Z"
+}

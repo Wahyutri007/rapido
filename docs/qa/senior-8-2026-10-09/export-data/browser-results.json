@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "production delivery returns download",
+      "passed": true
+    },
+    {
+      "name": "browser writes CSV bytes including BOM",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": 3,
+  "failed": 0,
+  "source": {
+    "file": "lib/manage/export-delivery.ts",
+    "sha256": "c61bffbf44d701475aa076c23f9cab5cfa367c5e97ad1dffb3e26e318ffcedaf"
+  },
+  "driver": {
+    "file": "docs\\qa\\senior-8-2026-10-09\\browser.cjs",
+    "sha256": "a87887c11ad0d5494e26e87f85a3f1958500724a388c3f873b75a2681fb5cc4e"
+  },
+  "download": {
+    "file": "docs\\qa\\senior-8-2026-10-09\\export-data\\browser-downloads-7LNGoC\\rapido-pratinjau-financial.csv",
+    "sha256": "0e3097f09dd9177a2ca0eeae585f4d7d9c056c124a1cd4a83dc06d8a7f2f43eb",
+    "bytes": 694
+  },
+  "limits": "Actual Edge Blob/anchor download using production delivery and generated fixture CSV. No app screen/navigation/native visual coverage; no shared Metro/API server used."
+}

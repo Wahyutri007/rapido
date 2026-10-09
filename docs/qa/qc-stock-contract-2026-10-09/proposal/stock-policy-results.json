@@ -1,0 +1,1546 @@
+{
+    "connection": "qc_stock_policy",
+    "database": ":memory:",
+    "sourceHashes": {
+        "app/Domain/User/Controllers/Settings/StockSettingController.php": "e88ccf831da08f11f4cbf5fa8c2be51adf849e6f8d1e3a20b459ed6e9c17a492",
+        "app/Domain/User/Requests/StockSettingRequest.php": "f0e8a50774cc9014eedda342411afcef9079d5186cb8dad42daf99a1b29596b9",
+        "app/Rules/ValidUserContent.php": "744e4209968270e28b304789d920a5cf47b2f58ba4cbf2be7e9870a17fcb6012",
+        "app/Domain/User/Resources/StockSettings/StockSettingResource.php": "39ebe2dade18b013fb89b16c9525c77e711c6b9cce13442630592810511126a0",
+        "app/Domain/User/Resources/StockSettings/StockSettingDetailResource.php": "caed1a1d25412eada4a076f7cfaa74a2cea68e24a3d6be736203f7b607047660",
+        "app/Domain/User/Models/StockSettings/StockSetting.php": "f83cdc40265899dd3aa80209f327a43bc4651b97e0b72ac9072360231a0f678e",
+        "app/Domain/User/Models/StockSettings/StockSettingDetail.php": "73e9e3bb9af69526757d5b145d4180d6c8382a34c19969e58693f399de641ef7",
+        "app/Domain/User/Models/User.php": "d9f4db76ec90dd12293b9026e089a7b1cc589cf59765d6641b907b26881e3d5d",
+        "app/Traits/IsUserContent.php": "958c1bdbb7017c2d35e6c8d54a45263ae7501ef593b649ede91b2adc5629322c",
+        "app/Domain/Catalog/Models/Menu.php": "7a57438ef6e1fcd419aea1ba192f2a6046fb42fa2a8d1e41b11de40a5624552e",
+        "app/Domain/Catalog/Models/Category.php": "61ede8b82fee2a0edc13662be81a08da9abb5f8540af4e9928356b1bdb51db79",
+        "app/Domain/Catalog/Models/MenuEntry.php": "be28571c11ba38c3ce684333e5ca441fab42eb0c0109be7b600b8f559c4d55a7",
+        "app/Domain/Store/Models/Store.php": "31f6d5bbfe5bdb6486cc49cab7d4ad110b5658df51c9594b4e60d9f7b96444ff",
+        "app/Domain/Store/Models/StoreShift.php": "99d5d1b9b29f6c4648ca71b2da3534120641912d909ab4885562372b839678e0",
+        "app/Domain/Order/Models/Cart.php": "920030cbffdff4379c30294b2f1e286b5308ed88d51bc72ef679172c6960888f",
+        "app/Domain/Order/Models/CartGroup.php": "862b2a3b11edd917ae8962fee958fd9889d4fc0c9a28a0bf4bd62bea9c814626",
+        "app/Domain/Order/Models/CartDetail.php": "514d43889b0bb30dd5a7863f20a7c8b456f4641c5007716fa1b9db4a83ac8f8f",
+        "app/Domain/Order/Requests/TransactionRequest.php": "cb61c6a013e8a64363c93c820996db6fd5f84f75aa66362831c367cf8ead237b",
+        "app/Domain/Order/Services/CartService.php": "f245a994803b30c1a8c1ab3a30f53507d7e9ffceab001f07389bc3c89868f82e",
+        "app/Domain/Inventory/Services/StockService.php": "81d31bd8118c5ae34df2b1d599dd78c3ea4aeb96998cad30fba4345ca0c62ed4",
+        "app/Domain/Inventory/Models/StockEntry.php": "726e85336716640dec75a7ffac4393a2a624809523c772d709bd73ff34ea7cad",
+        "app/Domain/Inventory/Models/StockEntryDetail.php": "eaacc4b5e15dc5275f7d01949d994bef568c9a3af8c02dfbfaad6ddc9b9851d9",
+        "app/Traits/HasResponseBuilder.php": "b26cf4b566177d34757806f60797db355259f5cb86db80291fa39be78b7a921c",
+        "app/Providers/ModelServiceProvider.php": "d23ce63bc45e33354400e30c6b26ecae9ef5f032314b0b266a07850d57ae2876"
+    },
+    "hashesStable": true,
+    "payloadHash": "7a60ee2991efe154a6c331570e6f0f9a1b3f1ecad3222dd9804fea7c84861878",
+    "passed": 30,
+    "failed": 0,
+    "checks": [
+        {
+            "name": "no configuration control / accessor menu-1",
+            "passed": true,
+            "actual": null,
+            "expected": null
+        },
+        {
+            "name": "no configuration control / zero-stock validation menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "all mode / controller store and GET roundtrip",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / accessor menu-1",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / zero-stock validation menu-1",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / accessor menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / zero-stock validation menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / accessor menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "all mode / zero-stock validation menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "disabled category / controller store and GET roundtrip",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "disabled category / accessor menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "disabled category / zero-stock validation menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "disabled category / accessor menu-2",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "disabled category / zero-stock validation menu-2",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "disabled category / accessor menu-no-category",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "disabled category / zero-stock validation menu-no-category",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "item exclusion / controller store and GET roundtrip",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "item exclusion / accessor menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "item exclusion / zero-stock validation menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "item exclusion / accessor menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "item exclusion / zero-stock validation menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "item exclusion / accessor menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "item exclusion / zero-stock validation menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "category exclusion / controller store and GET roundtrip",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "category exclusion / accessor menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "category exclusion / zero-stock validation menu-1",
+            "passed": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "category exclusion / accessor menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "category exclusion / zero-stock validation menu-2",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "category exclusion / accessor menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "category exclusion / zero-stock validation menu-no-category",
+            "passed": true,
+            "actual": true,
+            "expected": true
+        }
+    ],
+    "observations": [
+        {
+            "scenario": "no configuration control",
+            "menu": "menu-1",
+            "category": "category-1",
+            "expectedManagedFromExclusionCopy": null,
+            "actualManaged": null,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "all mode",
+            "menu": "menu-1",
+            "category": "category-1",
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Produk Satu tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "all mode",
+            "menu": "menu-2",
+            "category": "category-2",
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Produk Dua tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "all mode",
+            "menu": "menu-no-category",
+            "category": null,
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Tanpa Kategori tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "disabled category",
+            "menu": "menu-1",
+            "category": "category-1",
+            "expectedManagedFromExclusionCopy": false,
+            "actualManaged": false,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "disabled category",
+            "menu": "menu-2",
+            "category": "category-2",
+            "expectedManagedFromExclusionCopy": false,
+            "actualManaged": false,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "disabled category",
+            "menu": "menu-no-category",
+            "category": null,
+            "expectedManagedFromExclusionCopy": false,
+            "actualManaged": false,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "item exclusion",
+            "menu": "menu-1",
+            "category": "category-1",
+            "expectedManagedFromExclusionCopy": false,
+            "actualManaged": false,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "item exclusion",
+            "menu": "menu-2",
+            "category": "category-2",
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Produk Dua tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "item exclusion",
+            "menu": "menu-no-category",
+            "category": null,
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Tanpa Kategori tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "category exclusion",
+            "menu": "menu-1",
+            "category": "category-1",
+            "expectedManagedFromExclusionCopy": false,
+            "actualManaged": false,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": []
+        },
+        {
+            "scenario": "category exclusion",
+            "menu": "menu-2",
+            "category": "category-2",
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Produk Dua tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        },
+        {
+            "scenario": "category exclusion",
+            "menu": "menu-no-category",
+            "category": null,
+            "expectedManagedFromExclusionCopy": true,
+            "actualManaged": true,
+            "stock": 0,
+            "requiredQuantity": 1,
+            "cartError": {
+                "cart": [
+                    "Stok untuk Tanpa Kategori tidak mencukupi. Tersedia: 0, Diminta: 1"
+                ]
+            }
+        }
+    ],
+    "controllerRoundtrips": [
+        {
+            "scenario": "no existing setting",
+            "payload": {
+                "enabled": true,
+                "type": "all",
+                "content_type": "item",
+                "stockable_ids": []
+            },
+            "storeResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings updated successfully",
+                "data": {
+                    "user_id": "owner-1",
+                    "enabled": true,
+                    "type": "all",
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "details": []
+                }
+            },
+            "getResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings retrieved successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "all",
+                    "content_type": null,
+                    "enabled": true,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": []
+                }
+            }
+        },
+        {
+            "scenario": "category disabled",
+            "payload": {
+                "enabled": false,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "storeResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings updated successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "category",
+                    "enabled": false,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0459-72b7-855f-f25f655caa4c",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "category-1",
+                            "stockable_type": "category",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "category-1",
+                                "user_id": "owner-1",
+                                "name": "Makanan"
+                            }
+                        }
+                    ]
+                }
+            },
+            "getResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings retrieved successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "category",
+                    "enabled": false,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0459-72b7-855f-f25f655caa4c",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "category-1",
+                            "stockable_type": "category",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "category-1",
+                                "user_id": "owner-1",
+                                "name": "Makanan"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "scenario": "item unchanged",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "menu-1"
+                ]
+            },
+            "storeResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings updated successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "item",
+                    "enabled": true,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0462-719b-8df3-92dd1ee2e1cd",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "menu-1",
+                            "stockable_type": "menu",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "menu-1",
+                                "user_id": "owner-1",
+                                "name": "Produk Satu",
+                                "category_id": "category-1",
+                                "has_variants": false,
+                                "is_accessible": false,
+                                "owner": {
+                                    "id": "owner-1",
+                                    "name": "QC Fixture Owner",
+                                    "stock_setting": {
+                                        "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                                        "user_id": "owner-1",
+                                        "type": "hybrid",
+                                        "content_type": "item",
+                                        "enabled": true,
+                                        "created_at": "2026-10-08T19:37:10.000000Z",
+                                        "updated_at": "2026-10-08T19:37:10.000000Z",
+                                        "details": [
+                                            {
+                                                "id": "01a11d05-0462-719b-8df3-92dd1ee2e1cd",
+                                                "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                                                "stockable_id": "menu-1",
+                                                "stockable_type": "menu",
+                                                "created_at": "2026-10-08T19:37:10.000000Z",
+                                                "updated_at": "2026-10-08T19:37:10.000000Z"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "getResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings retrieved successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "item",
+                    "enabled": true,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0462-719b-8df3-92dd1ee2e1cd",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "menu-1",
+                            "stockable_type": "menu",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "menu-1",
+                                "user_id": "owner-1",
+                                "name": "Produk Satu",
+                                "category_id": "category-1",
+                                "has_variants": false,
+                                "is_accessible": false
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "scenario": "category unchanged",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "storeResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings updated successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "category",
+                    "enabled": true,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0472-7335-a50f-4c223567ab0a",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "category-1",
+                            "stockable_type": "category",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "category-1",
+                                "user_id": "owner-1",
+                                "name": "Makanan"
+                            }
+                        }
+                    ]
+                }
+            },
+            "getResponse": {
+                "success": true,
+                "status": 200,
+                "code": "SUCCESS",
+                "message": "Stock settings retrieved successfully",
+                "data": {
+                    "id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                    "user_id": "owner-1",
+                    "type": "hybrid",
+                    "content_type": "category",
+                    "enabled": true,
+                    "created_at": "2026-10-08T19:37:10.000000Z",
+                    "updated_at": "2026-10-08T19:37:10.000000Z",
+                    "details": [
+                        {
+                            "id": "01a11d05-0472-7335-a50f-4c223567ab0a",
+                            "stock_setting_id": "01a11d05-043c-7059-ac67-ceb6669008e6",
+                            "stockable_id": "category-1",
+                            "stockable_type": "category",
+                            "created_at": "2026-10-08T19:37:10.000000Z",
+                            "updated_at": "2026-10-08T19:37:10.000000Z",
+                            "stockable": {
+                                "id": "category-1",
+                                "user_id": "owner-1",
+                                "name": "Makanan"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "queryCount": 117,
+    "queries": [
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.31
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.11
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.12
+        },
+        {
+            "query": "select * from \"store_shifts\" where \"store_shifts\".\"store_id\" = ? and \"store_shifts\".\"store_id\" is not null and \"status\" = ? order by \"created_at\" desc limit 1",
+            "bindings": [
+                "qc-store",
+                "open"
+            ],
+            "time": 0.12
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null and (\"user_id\" = ?) limit 1",
+            "bindings": [
+                "owner-1",
+                "owner-1"
+            ],
+            "time": 0.09
+        },
+        {
+            "query": "insert into \"stock_settings\" (\"user_id\", \"enabled\", \"type\", \"id\", \"updated_at\", \"created_at\") values (?, ?, ?, ?, ?, ?)",
+            "bindings": [
+                "owner-1",
+                true,
+                "all",
+                "01a11d05-043c-7059-ac67-ceb6669008e6",
+                "2026-10-09 02:37:10",
+                "2026-10-09 02:37:10"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "delete from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"categories\" where \"id\" = ? and \"user_id\" = ?) as \"exists\"",
+            "bindings": [
+                "category-1",
+                "owner-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null and (\"user_id\" = ?) limit 1",
+            "bindings": [
+                "owner-1",
+                "owner-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "update \"stock_settings\" set \"type\" = ?, \"content_type\" = ?, \"enabled\" = ?, \"updated_at\" = ? where \"id\" = ?",
+            "bindings": [
+                "hybrid",
+                "category",
+                false,
+                "2026-10-09 02:37:10",
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "delete from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "insert into \"stock_setting_details\" (\"stockable_id\", \"stockable_type\", \"stock_setting_id\", \"id\", \"updated_at\", \"created_at\") values (?, ?, ?, ?, ?, ?)",
+            "bindings": [
+                "category-1",
+                "category",
+                "01a11d05-043c-7059-ac67-ceb6669008e6",
+                "01a11d05-0459-72b7-855f-f25f655caa4c",
+                "2026-10-09 02:37:10",
+                "2026-10-09 02:37:10"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select * from \"categories\" where \"categories\".\"id\" in (?)",
+            "bindings": [
+                "category-1"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"categories\" where \"categories\".\"id\" in (?)",
+            "bindings": [
+                "category-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.1
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select exists(select * from \"menus\" where \"id\" = ? and \"user_id\" = ?) as \"exists\"",
+            "bindings": [
+                "menu-1",
+                "owner-1"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null and (\"user_id\" = ?) limit 1",
+            "bindings": [
+                "owner-1",
+                "owner-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "update \"stock_settings\" set \"content_type\" = ?, \"enabled\" = ?, \"updated_at\" = ? where \"id\" = ?",
+            "bindings": [
+                "item",
+                true,
+                "2026-10-09 02:37:10",
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "delete from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "insert into \"stock_setting_details\" (\"stockable_id\", \"stockable_type\", \"stock_setting_id\", \"id\", \"updated_at\", \"created_at\") values (?, ?, ?, ?, ?, ?)",
+            "bindings": [
+                "menu-1",
+                "menu",
+                "01a11d05-043c-7059-ac67-ceb6669008e6",
+                "01a11d05-0462-719b-8df3-92dd1ee2e1cd",
+                "2026-10-09 02:37:10",
+                "2026-10-09 02:37:10"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" in (?)",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"menu_entries\" where \"menu_entries\".\"menu_id\" = ? and \"menu_entries\".\"menu_id\" is not null and \"variant_name\" is not null) as \"exists\"",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"menu_entries\" where \"menu_entries\".\"menu_id\" = ? and \"menu_entries\".\"menu_id\" is not null and \"variant_name\" is not null) as \"exists\"",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.07
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.08
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" in (?)",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"menu_entries\" where \"menu_entries\".\"menu_id\" = ? and \"menu_entries\".\"menu_id\" is not null and \"variant_name\" is not null) as \"exists\"",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"menu_entries\" where \"menu_entries\".\"menu_id\" = ? and \"menu_entries\".\"menu_id\" is not null and \"variant_name\" is not null) as \"exists\"",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select exists(select * from \"categories\" where \"id\" = ? and \"user_id\" = ?) as \"exists\"",
+            "bindings": [
+                "category-1",
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null and (\"user_id\" = ?) limit 1",
+            "bindings": [
+                "owner-1",
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "update \"stock_settings\" set \"content_type\" = ?, \"updated_at\" = ? where \"id\" = ?",
+            "bindings": [
+                "category",
+                "2026-10-09 02:37:10",
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "delete from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "insert into \"stock_setting_details\" (\"stockable_id\", \"stockable_type\", \"stock_setting_id\", \"id\", \"updated_at\", \"created_at\") values (?, ?, ?, ?, ?, ?)",
+            "bindings": [
+                "category-1",
+                "category",
+                "01a11d05-043c-7059-ac67-ceb6669008e6",
+                "01a11d05-0472-7335-a50f-4c223567ab0a",
+                "2026-10-09 02:37:10",
+                "2026-10-09 02:37:10"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"categories\" where \"categories\".\"id\" in (?)",
+            "bindings": [
+                "category-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" in (?)",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"categories\" where \"categories\".\"id\" in (?)",
+            "bindings": [
+                "category-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-1"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-1",
+                "qc-store"
+            ],
+            "time": 0.05
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.06
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.1
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-2"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-2",
+                "qc-store"
+            ],
+            "time": 0.04
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"users\" where \"users\".\"id\" = ? limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.02
+        },
+        {
+            "query": "select * from \"stock_settings\" where \"stock_settings\".\"user_id\" = ? and \"stock_settings\".\"user_id\" is not null limit 1",
+            "bindings": [
+                "owner-1"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_setting_details\" where \"stock_setting_details\".\"stock_setting_id\" = ? and \"stock_setting_details\".\"stock_setting_id\" is not null",
+            "bindings": [
+                "01a11d05-043c-7059-ac67-ceb6669008e6"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"menus\" where \"menus\".\"id\" = ? limit 1",
+            "bindings": [
+                "menu-no-category"
+            ],
+            "time": 0.03
+        },
+        {
+            "query": "select * from \"stock_entry_details\" where \"stock_entry_details\".\"menu_id\" = ? and \"stock_entry_details\".\"menu_id\" is not null and exists (select * from \"stock_entries\" where \"stock_entry_details\".\"stock_entry_id\" = \"stock_entries\".\"id\" and \"store_id\" = ?)",
+            "bindings": [
+                "menu-no-category",
+                "qc-store"
+            ],
+            "time": 0.03
+        }
+    ],
+    "transactionLevel": 0,
+    "expectation": "UI production copy: all products are stock-limited except selected product/category IDs; enabled=false disables stock limiting.",
+    "limitations": "Production controller/request/resource persistence only in ephemeral memory fixture; real Menu accessor, StockService zero inventory query and TransactionRequest::after. CartService and Cart::load adapt an already-loaded model graph. No HTTP middleware/auth, bundle flow, transaction creation, real store or application database write.",
+    "executionMode": "PROPOSAL_ONLY_NOT_APPLIED",
+    "actuallyLoadedMenu": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-stock-contract-2026-10-09\\proposal\\Menu.candidate.txt",
+    "candidateMenuHash": "7fd642072d507a1796f0ad42ad390a1984267097bb54d718e5165ac17563613e",
+    "originalRunnerHash": "3915031eb1beb83c833a5f5d0fb28c1c944e776d7a74690d6ac3d7f27b1aa965"
+}

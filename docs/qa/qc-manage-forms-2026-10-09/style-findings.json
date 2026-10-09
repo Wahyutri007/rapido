@@ -1,0 +1,101 @@
+{
+  "finding": "QC-MANAGE-FORMS-001",
+  "severity": "P3",
+  "findings": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "line": 1,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Sort these imports."
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "line": 1,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Sort these imports."
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "line": 1,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Sort these imports."
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "line": 1,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Some imports or exports are not organized."
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "line": 1,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Some imports or exports are not organized."
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "line": 14,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Sort the imported names."
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "line": 14,
+      "category": "assist/source/organizeImports",
+      "severity": "P3",
+      "message": "Sort the imported names."
+    }
+  ],
+  "proposal": "organize-imports.patch",
+  "proposalVerification": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "originalSha256": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "proposalSha256": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "originalSha256": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "proposalSha256": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "originalSha256": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "proposalSha256": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "originalSha256": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "proposalSha256": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "originalSha256": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "proposalSha256": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "originalSha256": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "proposalSha256": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "executableStatementsAndImportBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "originalSha256": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174",
+      "proposalSha256": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "executableStatementsAndImportBindingsUnchanged": true
+    }
+  ],
+  "appliedToApplication": false
+}

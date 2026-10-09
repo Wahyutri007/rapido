@@ -1,0 +1,15 @@
+{
+  "scope": "Page access only; hook behavior task with no UI/frame parity claim",
+  "result": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "No nodeId was provided. Listing the top-level pages of the document. Call get_metadata again with one of the page ids below (or any node id underneath) to get the XML metadata for that subtree.\n\nTop-level pages of the document:\n- 0:1: Page 1"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

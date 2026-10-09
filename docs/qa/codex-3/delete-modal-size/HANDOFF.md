@@ -1,0 +1,34 @@
+# SD3-008 DeleteConfirmModal - READY_FOR_QA_QC
+
+Codex-3, 9 Oktober 2026 (Asia/Jakarta). Kelanjutan atas instruksi pengguna; SD3-008 adalah label batch developer, bukan tiket PM baru. Source yang berubah hanya [DeleteConfirmModal.tsx](../../../../components/common/DeleteConfirmModal.tsx), SHA-256 `dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818`. Publikasi/integrasi tetap melalui PM; laporan ini sinyal workspace, bukan bukti percakapan QA/QC eksternal menerima pesan langsung.
+
+Dialog konfirmasi hapus kini membatasi ilustrasi ke 176 px dan lebar content, lalu mengikuti lebar window aktif melalui `useWindowDimensions`. Margin 16 px setiap sisi dan `maxWidth: 380` dipertahankan. Tombol Batal/Hapus tetap berdampingan dengan props, callback, loading, copy, style dan hierarchy lainnya sesuai baseline. Tidak memperluas perubahan ke token legacy atau primitive modal/button.
+
+Baseline browser memakai source `d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0`: **72 lolos/43 gagal** dari 115 assertion, tanpa error runtime/console atau HTTP API. Semua kegagalan terkait geometri. Ilustrasi default memiliki ukuran intrinsik 708x490; pada Role320 modal 288x742 berada di y=-51 dan kedua tombol y=618 dengan tinggi48, terpotong di bawah viewport640. Final modal 288x428/y106, gambar238x176, kedua tombol y461/tinggi48 dan terlihat utuh. [Screenshot sebelum](baseline/role-320.png) dan [sesudah](final/role-320.png) memakai data contoh, bukan tangkapan HP pengguna.
+
+| Pemeriksaan developer final | Hasil |
+| --- | --- |
+| RN-web browser, 13 varian + resize | **115 lolos/0 gagal** |
+| Replay lifecycle tiga dialog produksi | **156 lolos/0 gagal** |
+| Total eksekusi developer, termasuk cakupan berulang | **271 lolos/0 gagal** |
+| Runtime/console/React/act errors, HTTP API nyata | **0** |
+| ESLint satu source, tanpa suppression/cache | **0 error/0 warning** |
+| Biome check / diff whitespace | **Exit 0** |
+| TypeScript satu root + dependency closure/deklarasi proyek | **0 diagnostic** |
+| AST seluruh source selain empat perubahan geometri | **Identik** |
+
+[Hasil browser](final/browser-results.json) mengukur dialog, kedua tombol dan gambar pada viewport320/360/390/768. Konteks awal memiliki window320/screen360; tiga resize pada modal terbuka tidak mengganti props. Batal menutup tanpa delete; Hapus memakai callback konfirmasi. Tiga domain Role/Karyawan/Member memakai dialog, hooks, factory, QueryClient/Axios produksi dengan transport browser lokal: cancel tidak mengirim DELETE, konfirmasi mengirim satu request fixture dan close sukses mengakui sekali. Loading menonaktifkan kedua tombol dan klik DOM tidak memanggil callback. Legacy `isOpen`, `openState`, message fallback, React-node description, teks panjang serta custom label/image sebagai kontrak publik juga teruji. Custom props tersebut tidak ditemukan pada caller aktual, sehingga kasus tambahan tidak disebut eksekusi layar yang ada. [Screenshot teks panjang](final/long-320.png) ditinjau; semua aksi terlihat.
+
+[Replay lifecycle](delete-lifecycle/results.json) memakai 16 modul produksi dan seluruh 156 kasus SD3-006 tanpa perubahan skenario/assertion. Runner disalin ke output ini, hanya menambah adapter host `useWindowDimensions`360/800 seperti SD3-007. Risiko pending/target baru/unmount/double confirm/error retry/cache invalidation tetap teruji dengan Axios fixture; tidak mengirim HTTP atau membatalkan request produksi yang telah terkirim. [Quality](quality-results.json) menyimpan lint/Biome/diff/tipe dan pembandingan AST. Inventaris [63 caller/63 pemakaian](callers.json) mengaudit prop/hash, bukan menjalankan seluruh layar: 49openState,14isOpen,29isLoading,22onClose; semua gambar default dan deskripsi string/template string. Drift caller bila sesi lain berubah saat pengujian tercatat eksplisit pada manifest.
+
+Review internal terdelegasi pada [packet reviewer](../../codex-3-internal-review/delete-modal-2026-10-09/REPORT.md) melaporkan **53 pemeriksaan mandiri lolos, 0 gagal/error runtime**, terpisah dari 271 eksekusi developer. Audit reviewer menyatakan source hanya berubah pada empat bagian geometri dan 63 caller masih cocok; renderer memeriksa controlled/legacy, loading, urutan close, callback async, fallbacks/custom image serta resize/cleanup. Status **INTERNAL_QA_REVIEW_PASS** tidak menggantikan keputusan QA/QC eksternal atau gate PM. Source SuccessModal tetap `f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495`; [review internal SD3-007](../../codex-3-internal-review/success-modal-2026-10-09/REPORT.md) memiliki 45 pemeriksaan tambahan lulus sebelum dependency DeleteConfirmModal ini berubah. **QC-STOCK-UI-001 tetap OPEN menunggu recheck eksternal.**
+
+Paket SD3-006 dan SD3-007 dibekukan dengan hash dependency sebelumnya; tidak meretrofit hasil/manifest historis. Replay156 pada packet ini mencatat kedua modal shared saat ini. Gunakan [manifest](verification.json) terbaru beserta supplement pada [handoff induk](../HANDOFF.md) untuk review dependency baru. Source tiga dialog domain dan editor yang telah QC PASS tidak berubah.
+
+QA/QC diminta mencocokkan source/hash, menilai delta geometri kedua tombol dan initial/resize, kemudian menerbitkan keputusan per hash. Native, SSR, keyboard, pembesaran font/accessibility, root auth/full router, semua63 layar, Figma parity, backend/data/persistensi dan seluruh aplikasi belum disertifikasi. Akses callable Figma tidak tersedia. Semua transport browser/renderer adalah fixture lokal terisolasi, bukan transaksi data pengguna. Tidak restart Metro8088, server/HP/ADB, mengganti dependency/config/cache native, menjalankan full-project TS, commit/push/merge atau memodifikasi source sesi lain.
+
+## Replay dan Execution Profile & Operator Tips
+
+Jalankan dari root aplikasi dengan Node `D:/laragon/bin/node.exe`. Tool Playwright/Edge dan renderer existing dipakai read-only. `browser.cjs` membaca source saat ini serta menggunakan Metro8088 yang sudah berjalan; `--baseline` hanya memilih output, **tidak** mengganti source. Jangan menimpa output frozen; reviewer menyalin runner/fixture ke folder sendiri. Fixture `.expo/codex-3-delete-modal-entry.jsx` sama dengan snapshot [entry](preview-entry.fixture.jsx). `replay-delete.cjs` menulis hanya folder replay ini; untuk pengulangan gunakan salinan dengan lokasi berbeda. `quality.cjs` tipe terfokus; `verify.cjs` read-only mencocokkan manifest, opsi `--finalize` menolak manifest yang sudah ada. `prepare.cjs` hanya untuk capture awal dan jangan dijalankan ulang. Metro existing tidak dimulai/dihentikan oleh runner.
+
+Effort **Medium** untuk respons window, ukuran image RN-web dan kontrak shared. Batch baseline -> satu source -> browser/regresi/quality -> internal review -> QA/QC eksternal -> gate PM. Pertahankan dua tombol `flex-1` dan semua hasil historis; kelulusan internal tidak menutup temuan QC eksternal. Semua proses browser/test Codex-3 selesai setelah hasil final tersimpan.

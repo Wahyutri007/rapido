@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "root": "app\\(no-layout)\\manage\\payroll\\_layout.tsx",
+  "sourceFiles": 1041,
+  "diagnostics": [],
+  "checkedAt": "2026-10-08T20:28:38.705Z",
+  "scope": "Payroll layout root, project declarations and imported dependency closure; not the full application route tree."
+}

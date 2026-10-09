@@ -1,0 +1,53 @@
+{
+  "code": "QC-S8-20261009-PASS-DELTA",
+  "status": "PASS_DELTA_FOR_PM_REVIEW",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "headContext": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "scope": "Only the five-file Senior 8 memoization/subscription/balance lifecycle delta; source diff versus acba0d9. No blanket feature/production/main approval.",
+  "files": [
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba"
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c"
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "15fb7a72a386f860e6d0926fe1a356fd6b4acaa2b994c279b171942ef0675e8d"
+    },
+    {
+      "file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+      "sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d"
+    }
+  ],
+  "qa": {
+    "rerunDeveloperScenarios": 48,
+    "independentProductionStoreAssertions": 24,
+    "total": 72,
+    "failed": 0,
+    "runtimeErrors": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 7
+  },
+  "sourceStable": true,
+  "jsxUnchanged": true,
+  "openLegacyIssues": [
+    "QC-S8-LEGACY-001 filtered zero summary fallback",
+    "QC-S8-LEGACY-002 period filter unused",
+    "Existing UI rule violations and mock fallbacks outside delta"
+  ],
+  "pendingIntegrationGates": [
+    "PM coordinated final TypeScript/lint snapshot",
+    "Full application/native/Figma/backend feature checks as applicable"
+  ],
+  "delivery": "Workspace REPORT.md and SESSION_COORDINATION.md; no claim that other-session recipient has read it."
+}

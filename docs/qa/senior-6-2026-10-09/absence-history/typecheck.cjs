@@ -1,0 +1,13 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),ts=require('typescript');
+const roots=['app/(absence)/history/index.tsx','app/(absence)/history/detail.tsx','app/(absence)/history/_layout.tsx','app/(absence)/_layout.tsx','app/(absence)/home.tsx'];
+const configPath=ts.findConfigFile(process.cwd(),ts.sys.fileExists,'tsconfig.json');
+const config=ts.readConfigFile(configPath,ts.sys.readFile);
+const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,process.cwd());
+const program=ts.createProgram([...roots,...parsed.fileNames.filter(file=>file.endsWith('.d.ts'))],{...parsed.options,noEmit:true,incremental:false,tsBuildInfoFile:undefined});
+const diagnostics=ts.getPreEmitDiagnostics(program);
+const fingerprint={};
+for(const file of program.getSourceFiles())if(!file.fileName.includes('/node_modules/')&&!file.fileName.includes('\\node_modules\\'))fingerprint[path.relative(process.cwd(),file.fileName)]=crypto.createHash('sha256').update(fs.readFileSync(file.fileName)).digest('hex');
+const result={status:diagnostics.length?'FAIL':'PASS',roots,sourceFiles:program.getSourceFiles().length,fingerprint,diagnostics:diagnostics.map(d=>({file:d.file&&path.relative(process.cwd(),d.file.fileName),message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),limitations:'Five route/home/layout roots with real imported dependencies and project declarations/configuration, not project-wide/native/backend verification.'};
+fs.writeFileSync(path.join(__dirname,'typecheck-results.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({status:result.status,sourceFiles:result.sourceFiles,diagnostics:result.diagnostics}));
+process.exitCode=diagnostics.length?1:0;

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "passed": 20,
+  "checks": [
+    "Cold deep links anchor the Payroll list",
+    "All six existing routes remain registered",
+    "index: only the focused header accepts pointer input",
+    "index: empty stack has a reachable fallback without pushing another entry",
+    "index: existing history is preserved by back",
+    "detail: only the focused header accepts pointer input",
+    "detail: empty stack has a reachable fallback without pushing another entry",
+    "detail: existing history is preserved by back",
+    "modify: only the focused header accepts pointer input",
+    "modify: empty stack has a reachable fallback without pushing another entry",
+    "modify: existing history is preserved by back",
+    "payment: only the focused header accepts pointer input",
+    "payment: empty stack has a reachable fallback without pushing another entry",
+    "payment: existing history is preserved by back",
+    "history: only the focused header accepts pointer input",
+    "history: empty stack has a reachable fallback without pushing another entry",
+    "history: existing history is preserved by back",
+    "slip: only the focused header accepts pointer input",
+    "slip: empty stack has a reachable fallback without pushing another entry",
+    "slip: existing history is preserved by back"
+  ],
+  "source": "app/(no-layout)/manage/payroll/_layout.tsx",
+  "sha256": "7044c595a766905e29045fcf4758b7f9056704a8a744fd22b23d86c8426f445b",
+  "scope": "Actual Payroll layout and callbacks executed with router/Header/JSStack doubles; not browser/native runtime.",
+  "checkedAt": "2026-10-08T20:28:14.784Z"
+}

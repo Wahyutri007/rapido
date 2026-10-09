@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-09",
+  "ticket": "ACCOUNT-FORM-001",
+  "status": "READY_FOR_QA",
+  "source": {
+    "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+    "sha256": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17"
+  },
+  "baseline": {
+    "passed": 15,
+    "failed": 23
+  },
+  "checks": {
+    "passed": 38,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "quality": "ESLint/Biome/diff exit 0; root screen/dependency TypeScript 0 diagnostic"
+  },
+  "existingFormJSXUnchangedExceptSubmitAndDisabled": true,
+  "dependencies": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "sha256": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17"
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "file": "schema/accounting/account.ts",
+      "sha256": "399cd4a99ba6b376d5524b7a113f19205cb0c37577efa5ae7966abbb729ffe3f"
+    }
+  ],
+  "runtime": [
+    {
+      "name": "react-hook-form",
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\react-hook-form\\dist\\index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    },
+    {
+      "name": "@hookform/resolvers/zod",
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@hookform\\resolvers\\zod\\dist\\zod.js",
+      "sha256": "73abe8d2ac3220ccb1e39d8fbc22ace3f0b0b3ccb3a3d8fba762f47a50e2624e"
+    },
+    {
+      "name": "zod",
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\zod\\index.cjs",
+      "sha256": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459"
+    },
+    {
+      "name": "react",
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\.expo\\senior7-test-tools\\node_modules\\react\\index.js",
+      "sha256": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e"
+    },
+    {
+      "name": "react-test-renderer",
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\.expo\\senior7-test-tools\\node_modules\\react-test-renderer\\index.js",
+      "sha256": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7"
+    }
+  ],
+  "sharedHarnesses": [
+    {
+      "file": "account-detail/check.cjs",
+      "sha256": "163cef54e47fcf66bdfaf16ff006195f5166395aef246bce06d7fe84731ec1cf"
+    },
+    {
+      "file": "account-detail/quality.cjs",
+      "sha256": "a51723b56043093cbd2d94046f4713896b01559a280bb5157f8c7c78d9c1c788"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "HANDOFF.md",
+      "sha256": "3f28131cb499a092439b5bda2d7cb94a5cd39d1087153f84592c8b71ecddf317"
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "302193e052789971fef9e533c45b061b947a3f8a124135cadb25e65c08cc565b"
+    },
+    {
+      "file": "check.cjs",
+      "sha256": "6b981a396684ffab9eb0a215bf405bf53ef27d6327547d25ec36c1a1287054ea"
+    },
+    {
+      "file": "final.json",
+      "sha256": "28323c851d909176212c3d9ad72812888f39922d7c3cdf56d5a819f93b196dbd"
+    },
+    {
+      "file": "manifest.cjs",
+      "sha256": "b00e8c0cc6df741ad3e77b2bca3c984e23356457399c3d0544679605dc3cb68b"
+    },
+    {
+      "file": "modify.before.tsx.txt",
+      "sha256": "ca80f9d79a10e416cb3c3326389ffe7193845d00552c946f9f838c5536d51248"
+    },
+    {
+      "file": "quality-initial.json",
+      "sha256": "b21fcfa3906126cb66cf68bef15e7a88d25f2cf015598acf0fab79c1fbe31ed9"
+    },
+    {
+      "file": "quality-second.json",
+      "sha256": "b9f4b4f2bfaa3d41442d853d3d2cdafcd6eab19081828e9730575b22a3c0c049"
+    },
+    {
+      "file": "quality.cjs",
+      "sha256": "7b6deba912ec54581447d7bb7e0985e10b07d9be146aab65790a20c6b50b1654"
+    },
+    {
+      "file": "quality.json",
+      "sha256": "1dc2529f0246c2f93e2be1ebb22481ff44b4de5773fdf7849d4261fa29c06068"
+    }
+  ],
+  "limits": "Production screen/RHF/Zod/Zustand/useAlertModal; host Form fields/modal/router adapters, no native/browser/API."
+}

@@ -1,0 +1,13 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{spawnSync}=require('node:child_process');
+assert.ok(!fs.existsSync(path.join(__dirname,'verification.json')),'Packet frozen');
+const json=name=>JSON.parse(fs.readFileSync(path.join(__dirname,name),'utf8'));
+const quality=json('quality-results.json');
+const suffix=Date.now();
+fs.copyFileSync(path.join(__dirname,'typecheck-results.json'),path.join(__dirname,`interim/pre-types-refresh-${suffix}.json`));
+fs.copyFileSync(path.join(__dirname,'quality-results.json'),path.join(__dirname,`interim/pre-quality-refresh-${suffix}.json`));
+const index=quality.checks.findIndex(c=>c.name.startsWith('TypeScript'));assert.ok(index>=0);
+const result=spawnSync(process.execPath,[path.join(__dirname,'typecheck.cjs')],{encoding:'utf8',windowsHide:true,timeout:180000});
+quality.checks[index]={...quality.checks[index],exitCode:result.status,stdout:result.stdout,stderr:result.stderr,error:result.error?.message};
+quality.typeRefreshReason='Generated .expo/types/router.d.ts changed after final quality; only TypeScript rerun. Actual compiler-read auto-generated declaration preserved, ordinary project inputs must remain stable. Other three checks retained on identical touched-source hashes.';
+fs.writeFileSync(path.join(__dirname,'quality-results.json'),JSON.stringify(quality,null,2)+'\n');
+console.log(result.stdout+result.stderr);assert.equal(result.status,0);assert.ok(!result.error);

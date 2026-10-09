@@ -1,0 +1,108 @@
+{
+  "status": "FAIL",
+  "passed": 1,
+  "failed": 17,
+  "checks": [
+    {
+      "name": "Cold direct child anchors the existing Target list",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'index'\n"
+    },
+    {
+      "name": "List, edit/add and detail remain registered",
+      "status": "PASS"
+    },
+    {
+      "name": "index: actual Header back returns through existing history",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "index: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "index: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "index: background header does not intercept input",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "modify: actual Header back returns through existing history",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "modify: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "modify: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "modify: background header does not intercept input",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "detail: actual Header back returns through existing history",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "detail: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "TypeError: Cannot read properties of undefined (reading 'props')"
+    },
+    {
+      "name": "detail: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "detail: background header does not intercept input",
+      "status": "FAIL",
+      "error": "TypeError: header(...).type is not a function"
+    },
+    {
+      "name": "Add title uses its own empty route params despite another global ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'Tambah Target'\n"
+    },
+    {
+      "name": "Edit title uses its own selected ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'Edit Target'\n"
+    },
+    {
+      "name": "Add title stays correct with a background global ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'Tambah Target'\n"
+    },
+    {
+      "name": "Edit title stays correct while global route has no ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'Edit Target'\n"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "app/(no-layout)/manage/sales-target/_layout.tsx",
+      "sha256": "55e364d381dd2fc5c828569c616f74920f0ef1ceadc087316398061159aa45cc"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+    }
+  ],
+  "scope": "Actual Target layout and shared Header callbacks; router/focus/JSStack/RN presentation adapters. Not full browser/native stack certification.",
+  "checkedAt": "2026-10-09T02:56:41.142Z"
+}

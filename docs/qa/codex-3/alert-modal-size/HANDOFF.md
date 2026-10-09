@@ -1,0 +1,39 @@
+# SD3-009 AlertModal - READY_FOR_QA_QC
+
+Codex-3, 9 Oktober 2026 (Asia/Jakarta). Kelanjutan atas instruksi pengguna; SD3-009 label batch developer, bukan tiket PM baru. Source hanya [AlertModal.tsx](../../../../components/common/AlertModal.tsx), SHA-256 `76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e`. Sinyal melalui workspace untuk QA/QC/PM, bukan bukti percakapan eksternal menerima langsung; gate integrasi/publikasi tetap PM.
+
+Dialog mengikuti lebar window aktif melalui `useWindowDimensions`, mempertahankan width-minus32 serta maximum510px dari primitive existing. Image opsional kini eksplisit128px/content width sesuai `h-32 w-full` dan tetap `cover`. Margin16, radius/padding/header/body/footer/copy/props/callback/children tetap. Private type `AlertModal` berganti menjadi `AlertModalProps` untuk menghilangkan warning `no-redeclare`; tidak export type baru atau mengganti function. AST seluruh source identik setelah normalisasi empat bagian geometri dan alias privat; emittedJS setelah rename/format identik versi geometri-only.
+
+Baseline source `da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7` menghasilkan **108 lolos/6 gagal**, runtime/console/HTTP API0. Gagal hanya geometri: konteks initialwindow320/screen360 membuat dialog328px/x=-4; gambar kategori700x272 mengabaikan intent128/content width; resize768/390 pada dialog terbuka tidak memperbarui lebar. Aset kategori adalah satu-satunya override image actual. Finalinitialwidth288/margin16; image kategori128px/content width; resize tetap menyesuaikan tanpa props berubah. [Baseline](baseline/browser-results.json) dan [final](final/browser-results.json) mempertahankan seluruh nama kasus/assertion yang sama.
+
+| Pemeriksaan final | Hasil |
+| --- | --- |
+| Browser produksi RN-web, 19 skenario + resize | **114 lolos/0 gagal** |
+| Lifecycle tiga dialog produksi, replay156 yang sama | **156 lolos/0 gagal** |
+| Total developer termasuk cakupan berulang | **270 eksekusi lolos** |
+| Runtime/console/React/act error, HTTP API nyata | **0** |
+| ESLint satu source tanpa cache/suppression | **0 error/0 warning** |
+| Biome check / diff whitespace | **Exit0** |
+| TypeScript satu root + imported closure/deklarasi proyek | **0 diagnostic** |
+| AST terfokus / emittedJS alias privat | **PASS** |
+| Reviewer internal:60 kontrak renderer +4 type-only proof | **64 lolos/0 gagal** |
+
+Browser memakai modal/button/Text/font/provider produksi, viewport320/360/390/768 dan tiga resize dialog terbuka. Varian dua tombol, confirm-only, cancel-only, no-footer, fallback/default close, loading cancel tetap aktif, React-node message, children slot, teks panjang, kategori dan aset orderType tambahan sebagai kontrak publik diperiksa. Dialog tidak memiliki max380 seperti Success/Delete; bound510 existing benar-benar diukur. [Screenshot contoh pesan Bantuan](final/support-320.png) dan [modal bergambar](final/category-320.png) ditinjau. Pesan/children langsung adalah fixture parent, bukan eksekusi SupportFormScreen/OpenStoreButton/StoreSalesOverview atau sertifikasi seluruh flow layar tersebut.
+
+Tiga kasus domain menjalankan RoleDeleteDialog, WorkerDeleteDialog dan MemberDeleteDialog asli dengan hooks/factory/Common/QueryClient/Axios produksi serta transport browser lokal: DELETE pertama gagal, pesan error muncul; Kembali menutup error tanpa acknowledgement, konfirmasi ulang berhasil dan close sukses mengakui sekali. [Replay156](delete-lifecycle/results.json) mencatat16modul produksi dan hash tiga shared modal saat ini. Runner salinan SD3-006 memakai tambahan host useWindowDimensions360/800 yang sama dengan SD3-007/008, tidak mengubah skenario/assertion/harness historis. Transport API nyata0, request produksi yang telah dikirim tidak dibatalkan oleh delta ini.
+
+[Quality](quality-results.json) menyimpan lint/Biome/diff/tipe/source AST dan proof type alias tanpa runtime change. [Inventaris caller](callers.json) mencatat **71file/78pemakaian**, bukan eksekusi semua layar. Reviewer menemukan image aktual hanya category/modify, satu children ikon pada OpenStoreButton, satu ReactNode message StoreSalesOverview, enam caller meniadakan kedua tombol dan dua caller logout memakai loading. Kontrak default close menjalankan setterfalse; custom onClose diteruskan tanpa auto-close, onConfirm fallbackonClose, hanya confirm disabled saat loading, cancel tetap aktif, children tetap di antara header/message. Semuanya dipertahankan, termasuk dismissal backdrop existing.
+
+[Review internal final](../../codex-3-internal-review/alert-modal-final-2026-10-09/REPORT.md) memakai sourcefinal76b6:60renderer kontrak +4proof alias/emit=64PASS, runtime/error/warning0. Reviewer mencocokkan80source/asset dan19artefak; ini review internal terdelegasi, **bukan keputusan QC eksternal**. Proof emittedJS byte-identik geometri-only ditinjau. Renderer memakai host/primitive/dimension adapters; tidak dianggap hasil layout/native. Source/caller/hash drift bila ada dicatat pada manifest, bukan otomatis diklaim diuji pada hash baru.
+
+Histori dipertahankan di [interim](interim/): geometry-onlya1d80665 menghasilkan114browser/156lifecyclePASS tetapi qualitymaxwarnings0 gagal pada satu warning private type/function existing; [review a1d8](../../codex-3-internal-review/alert-modal-2026-10-09/REPORT.md) tetap snapshot sebelum qualityfinal. Tahap3323 type-renamed di interim/type-renamed/ lulus runtime/lint/AST/tipe, memerlukan formatting signature. Final76b6 lint/Biome/diff/type/AST/emitPASS dan suite114/156 benar-benar diulang pada hash formatted. Angka interim/reviewpreformat tidak ditambahkan ke total final270/64.
+
+SuccessModalF90, DeleteConfirmModalDABC, tiga dialog domain dan source Bantuan yang telah QC PASS tidak berubah. Paket SD3-006/007/008 lama tetap frozen dengan Alert dependency sebelumnya; tidak meretrofit hasil/manifest. Main handoff/manifest overlays menunjuk SD3-009 untuk replay156 dan seluruh shared modal terbaru. QC-SUPPORT source-only tetap keputusan dua hash sebelumnya; tidak meluluskan shared dependency baru ini. **QC-STOCK-UI-001 masih OPEN menunggu recheck eksternal**, tidak ditutup karena review internal Alert. QA/QC diminta keputusan per hash baru, lalu PM final gate.
+
+Tidak ada sertifikasi native/SSR/keyboard/accessibility/root auth/full-router/71layar/Figma/backend/data/persistensi atau full app. Figma callable tidak tersedia. Browser/context fresh dan transport lokal terisolasi; tidak transaksi pengguna. Tidak restart Metro8088/HP/ADB/server/backend, dependency/config/cache Android, full-project TS, source sesi lain, Git branch/index/commit/push/merge atau PDFhistoris. Semua proses browser/test Codex-3 selesai saat final tersimpan.
+
+## Replay dan Execution Profile & Operator Tips
+
+Jalankan dari root aplikasi memakai Node `D:/laragon/bin/node.exe`. Playwright/Edge dan renderer existing dipakai read-only. Browser memakai Metro8088 existing dan fixture [.expo snapshot](preview-entry.fixture.jsx); runner tidak memulai/menghentikan server. `browser.cjs --baseline` hanya memilih lokasi output, tidak mengganti source. Salin runner/fixture ke output reviewer sendiri sebelum replay; jangan menimpa packet frozen. `replay-delete.cjs` menulis foldernya sendiri, `quality.cjs` tipe terfokus, `verify.cjs` mencocokkan fingerprint read-only. `--finalize` menolak manifestexisting. `prepare.cjs`, archive-interim.cjs dan archive-format.cjs adalah capture awal sekali, jangan dijalankan ulang.
+
+Effort **Medium** untuk window/image dan kontrak shared. Batch source/fingerprint -> runtime/bounds/quality -> review internal -> QA/QC eksternal -> PM. Pertahankan h128/cover, maximumprimitive510, cancel-during-loading dan customclose; jangan menerapkan ulang h176/max380/cancel-disabled dari modal lain. Gunakan hashfinal/supplement terbaru sambil menjaga bukti histori.

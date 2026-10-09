@@ -1,0 +1,7 @@
+[
+  {
+    "file": "context/AuthContext.tsx",
+    "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "actual": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d"
+  }
+]

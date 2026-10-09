@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09",
+  "kind": "QC progress-report artifacts; current saved snapshot, not new module approval",
+  "files": {
+    "Laporan-Progres-Rapido-2026-10-09.pdf": {
+      "bytes": 102950,
+      "sha256": "9ae0e9114402bff025f49e0523a68e9f645a24eacf0af15b3aa72a5479d87d98"
+    },
+    "Laporan-Progres-Rapido-2026-10-09.html": {
+      "bytes": 23109,
+      "sha256": "b87afa1fb722277e3f84dcd1d4de9973a92906b475f8974a8e93948e7a905edc"
+    },
+    "Daftar-Pekerjaan-Rapido-2026-10-09.csv": {
+      "bytes": 6853,
+      "sha256": "07e6633266ad61503947c402a84fd727457c63cdbbbd65b38be02528d83d5a24"
+    },
+    "status-snapshot.json": {
+      "bytes": 21856,
+      "sha256": "4f3abad218770f51ca97bcc2a7a16b0d85b9e674f8ba47a7d470b45a958ae2e1"
+    },
+    "pdf-validation.json": {
+      "bytes": 1303,
+      "sha256": "2a4b1877334d81ea3ab691b5acdcedde28bbccc113fdbb45fa01018f78a6f344"
+    }
+  }
+}

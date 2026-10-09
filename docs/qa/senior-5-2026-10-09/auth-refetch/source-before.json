@@ -1,0 +1,21 @@
+{
+  "owner": "Senior5",
+  "ticket": "SD5-005",
+  "qcDecision": {
+    "signal": "QC-LOGIN-20261009-CHANGES-REQUESTED",
+    "sha256": "21b1780a4b84037df21302a2c70d238329e1a1aea465859b304fa691c6624155"
+  },
+  "hashes": {
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "lib/storage.web.ts": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44"
+  }
+}

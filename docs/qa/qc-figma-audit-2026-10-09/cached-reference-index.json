@@ -1,0 +1,197 @@
+{
+  "createdAt": "2026-10-09T03:08:46.636Z",
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "captures": [
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-metadata-0-1-9daf97f412ba.xml",
+      "sha256": "9daf97f412ba14ca46b4ead885b0ca69e1ba4836388051015d4a0e0f29c7fca1",
+      "nodeId": "0:1",
+      "name": "figma.get_metadata",
+      "kind": "metadata",
+      "recordedAt": "2026-10-08T20:13:46.032Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 917535,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-metadata-0-1-9daf97f412ba.xml"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-design-context-1-4897-adc4bf6782a5.txt",
+      "sha256": "adc4bf6782a5edb8505b63cdc8327fbe7232cf009623af05ff73b8fb24fde889",
+      "nodeId": "1:4897",
+      "name": "figma.get_design_context",
+      "kind": "design-context",
+      "recordedAt": "2026-10-08T09:18:21.605Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 49686,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-design-context-1-4897-adc4bf6782a5.txt"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-design-context-1-4897-383e85e9752b.txt",
+      "sha256": "383e85e9752ba1176645532cb7d43bff03794e7de3b09ec708c0e4cbd58381ac",
+      "nodeId": "1:4897",
+      "name": "figma.get_design_context",
+      "kind": "design-context",
+      "recordedAt": "2026-10-08T09:18:21.605Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 83,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-design-context-1-4897-383e85e9752b.txt"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-screenshot-1-4897-4cf678f6ac26.png",
+      "sha256": "4cf678f6ac26392b672c2225dea9d8fc95df684ae0b76a8fd826137b5d46d188",
+      "nodeId": "1:4897",
+      "name": "figma.get_design_context",
+      "kind": "screenshot",
+      "recordedAt": "2026-10-08T09:18:21.605Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 53035,
+      "limits": "Cached Figma screenshot for the approved file key; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-screenshot-1-4897-4cf678f6ac26.png"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-design-context-1-12401-b9975f16b403.txt",
+      "sha256": "b9975f16b40387ce95afaad420e9edbfb99216933384956642d5cfc07d7caf68",
+      "nodeId": "1:12401",
+      "name": "figma.get_design_context",
+      "kind": "design-context",
+      "recordedAt": "2026-10-09T00:41:17.299Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 24826,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-design-context-1-12401-b9975f16b403.txt"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-design-context-1-12401-383e85e9752b.txt",
+      "sha256": "383e85e9752ba1176645532cb7d43bff03794e7de3b09ec708c0e4cbd58381ac",
+      "nodeId": "1:12401",
+      "name": "figma.get_design_context",
+      "kind": "design-context",
+      "recordedAt": "2026-10-09T02:48:46.910Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 83,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-design-context-1-12401-383e85e9752b.txt"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-screenshot-1-12401-81a23bde2be1.png",
+      "sha256": "81a23bde2be1cb36f9445ffd5b677581bf73d672179c86632cc7ccc425e24acb",
+      "nodeId": "1:12401",
+      "name": "figma.get_design_context",
+      "kind": "screenshot",
+      "recordedAt": "2026-10-09T02:48:46.910Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 49101,
+      "limits": "Cached Figma screenshot for the approved file key; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-screenshot-1-12401-81a23bde2be1.png"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-design-context-1-12401-9aa3b5c263f1.txt",
+      "sha256": "9aa3b5c263f18ab490111a6a46a689008f0175d33cd8c1cf026129c2472b7726",
+      "nodeId": "1:12401",
+      "name": "figma.get_design_context",
+      "kind": "design-context",
+      "recordedAt": "2026-10-09T02:48:46.910Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 24826,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-design-context-1-12401-9aa3b5c263f1.txt"
+    },
+    {
+      "file": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-metadata-1-12401-1661031865c0.xml",
+      "sha256": "1661031865c006a540c3dccda3ba785896663a4a50b6eb5cc54f112db7b52d53",
+      "nodeId": "1:12401",
+      "name": "figma.get_metadata",
+      "kind": "metadata",
+      "recordedAt": "2026-10-09T02:50:04.973Z",
+      "sourceSession": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "bytes": 7550,
+      "limits": "Cached Figma response for approved file key from a Rapido workspace session; not a live reread.",
+      "originalCacheFile": "D:/Rapido-QC-temp/figma-audit-2026-10-09/cached-metadata-1-12401-1661031865c0.xml"
+    }
+  ],
+  "diagnostics": [
+    {
+      "session": "rollout-2026-10-08T16-03-07-01a11ac0-87fb-70b1-b41c-0a89ac58d9bb.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {
+        "figma.get_metadata": 13,
+        "figma.whoami": 3,
+        "figma.get_design_context": 5,
+        "figma.download_assets": 1
+      }
+    },
+    {
+      "session": "rollout-2026-10-09T09-49-07-01a11e90-7ac3-7802-aae0-d4ce8afd7d68.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-08T16-08-23-01a11ac5-5a7c-7b50-866b-1f84ceb1f68e.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-08T23-13-58-01a11c4a-fcef-7360-8407-7552a64301a3.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-08T23-43-49-01a11c66-4ed9-74d3-bba9-1bf6619a8906.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-08T15-28-12-01a11aa0-9088-7100-a016-77c313c43009.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T03-41-07-01a11d3f-907b-7763-ae8c-b07b2a0ce747.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T07-57-54-01a11aaf-e34f-7681-b33b-e35552baa45b_01a11e2a-a9f1-7df0-b0b3-27d4f229549d.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T09-03-32-01a11e66-bf42-73a1-9f4c-f1690560e7f8.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T08-18-37-01a11e3d-a05d-7c13-92ef-02da67021dd6.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-08T15-44-57-01a11aaf-e34f-7681-b33b-e35552baa45b.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T07-09-58-01a11dfe-c637-7933-af7a-6c4af8a14188.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T03-40-58-01a11d3f-6b89-72a0-a900-f56b592c3393.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T07-25-02-01a11e0c-9130-71a1-a055-19dc87849b29.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    },
+    {
+      "session": "rollout-2026-10-09T03-57-24-01a11d4e-78e2-7860-a21f-a7830348058d.jsonl",
+      "workspaceMatched": true,
+      "toolNames": {}
+    }
+  ],
+  "limits": "Only Figma responses for the approved Rapido file, copied without alteration from workspace-matched sessions. No credential/profile/private unrelated conversation copied. Page XML is partially truncated. Not a live reread."
+}

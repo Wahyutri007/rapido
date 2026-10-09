@@ -1,0 +1,15 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const read = (file) => JSON.parse(fs.readFileSync(path.join(__dirname, file), 'utf8'));
+const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const replay = read('verification.json');
+const integration = read('production-hooks-results.json');
+const trackedAfter = Object.fromEntries(Object.keys(replay.sourceBefore).map((file) => [file, hash(file)]));
+const trackedStable = Object.entries(replay.sourceBefore).every(([file, expected]) => trackedAfter[file] === expected);
+const loadedSourceMatches = Object.entries(integration.sourceFingerprints).map(([file, expected]) => ({ file, tested: expected, current: hash(file), passed: hash(file) === expected }));
+if (replay.status !== 'PASS_FOCUSED_REPLAY' || !trackedStable || integration.failed || integration.errors.length || !loadedSourceMatches.every((item) => item.passed)) throw new Error('Recheck evidence/source changed or tests failed');
+const files = ['components/feature/manage/roles/RoleModifyScreen.tsx', 'components/feature/manage/workers/WorkerModifyScreen.tsx'];
+const decision = { signal: 'QC-ROLE-WORKER-20261009-PASS-DELTA', date: '2026-10-09', timezone: 'Asia/Jakarta', createdAt: new Date().toISOString(), status: 'PASS_DELTA', reviewedSourceHashes: Object.fromEntries(files.map((file) => [file, trackedAfter[file]])), trackedAfter, trackedStableThroughoutReview: trackedStable, productionLoadedSourceMatchesFinal: loadedSourceMatches, quality: replay.quality, checks: { developerReplay: replay.checks.passed, qcProductionQueryMutationIntegration: integration.passed, totalExecutions: replay.checks.passed + integration.passed, runtimeErrors: replay.checks.runtimeErrors + integration.errors.length, realHTTPRequests: integration.realHTTPRequests, note: 'Execution count includes overlapping regression coverage.' }, publication: 'QC_APPROVED_TWO_EDITOR_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED', findings: [], limits: ['Native/presentation/form control/route params/auth/photo fetch adapters', 'Axios custom transport; production hooks/factory/common/error mapper/usePostRequest/QueryClient execute but no live HTTP/backend/auth interceptors', 'No browser/native/root/auth/SSR/keyboard/accessibility/Figma/full app certification', 'Requests already sent are not cancelled; cache invalidation follows production contract', 'Developer focused typecheck reviewed, not rerun/global gate'], unrelatedOpenFinding: 'QC-JOURNAL-001 is a separate package; no closure by this decision', report: 'REPORT.md' };
+fs.writeFileSync(path.join(__dirname, 'DECISION.json'), `${JSON.stringify(decision, null, 2)}\n`);
+console.log(JSON.stringify({ signal: decision.signal, total: decision.checks.totalExecutions, errors: decision.checks.runtimeErrors, trackedStable, productionSourcesMatch: loadedSourceMatches.every((item) => item.passed), loadedSourceFiles: loadedSourceMatches.length }));

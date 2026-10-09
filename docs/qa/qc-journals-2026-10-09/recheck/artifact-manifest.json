@@ -1,0 +1,29 @@
+{
+  "createdAt": "2026-10-08T19:23:50.472Z",
+  "files": {
+    "adjusting-modify.before.tsx.txt": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "check.cjs": "2d8bb210dba8b15bcd8cf239154ba118ca645461ab7cdcf7046f23d4d46d1598",
+    "DECISION.json": "277bce867532a4be9d2e2f1633a2c38b623f9252a1e85855f67cf6fd2219e91f",
+    "developer-quality.cjs": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+    "developer-regression.cjs": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+    "developer-validation.cjs": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+    "general-modify.before.tsx.txt": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "independent-results.json": "0520e1cdc870ed90c61a7ea28b020dfcafb95ec203636b7a52df31c4f34df8f3",
+    "independent.cjs": "9101f786cf402701e8d5e42cc5137e05586814fe327fb10d2b518ffab004ee98",
+    "lifecycle.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lifecycle.out.txt": "e9e49c08fd8ef60d388cd952e322ce4b7f78da3defa1e39fc2aacbbfe6bb0e49",
+    "qc-cases.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "qc-cases.out.txt": "8b82ab1183f80f9c28ad61d2e43bb992a4f2fe71a2aa230d78328b30b4ebb583",
+    "quality-results.json": "2d3bb8f67534554729e9c73712b7903ed8ec4cd95daea7f4a512aa524d331b34",
+    "quality.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "quality.out.txt": "c103e680a13ba14a5cad9f0754d4d10e920b403e862d6b8916241038edaaf971",
+    "regression-results.json": "6f3bfa1e2bc13e79336274680d12680e7f5275252c84e4766661eeb8230847d7",
+    "REPORT.md": "9903fda2433ec82a948e5d983991c2f5c2d491547aafa0c6f9353f269151105e",
+    "results.json": "52cf255245a26081bdfc1a41b719eef68745347379839236a0db54904150a067",
+    "source-before.json": "c002eeb2dcb1b7be80e66d4f900b8721cbac062c0d5c362f21aafc7ebaf1e922",
+    "validation.err.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation.out.txt": "e54f09df7b6f780abae0b56eb6121947aabd5cffcce11bb107bacd43c354c766",
+    "verification-incomplete-tracker.json": "877c9ba8f0f67900f69e68dfc98f8c42837ad3ecb21e82183ebfec57417ea190",
+    "verification.json": "f6440bfb3d4973fed64b868a20ff35999d0761e40b259a08ea8c42c55c49addc"
+  }
+}

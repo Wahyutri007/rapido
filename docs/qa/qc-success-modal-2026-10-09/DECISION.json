@@ -1,0 +1,285 @@
+{
+  "owner": "QC",
+  "ticket": "SD3-007",
+  "signal": "QC-SUCCESS-20261009-CHANGES-REQUESTED",
+  "status": "CHANGES_REQUESTED",
+  "completedAt": "2026-10-09T00:40:22.327Z",
+  "scope": "SuccessModal source recheck, QC-STOCK-UI-001 portrait closure, additional landscape/rotation checks and copy-only proposal. Does not approve latest live Stock/configuration.",
+  "reviewedSourceHashes": {
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+  },
+  "approvedSourceHashes": {},
+  "applicationSourceChangedByQC": false,
+  "exercisedContractHashes": {
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+  },
+  "closedFindings": [
+    {
+      "id": "QC-STOCK-UI-001",
+      "severity": "P2",
+      "status": "CLOSED_BY_RECHECK",
+      "reviewedSourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "scope": "Original portrait320x640 reproduction on identical historical Stock caller contract",
+      "evidence": [
+        "stock-final/browser-results.json:36PASS",
+        "modal-browser-results.json:51PASS"
+      ],
+      "historicalDecision": "../qc-stock-ui-2026-10-09/DECISION.json",
+      "historicalDecisionEdited": false
+    }
+  ],
+  "newOpenFindings": [
+    {
+      "id": "QC-SUCCESS-001",
+      "severity": "P2",
+      "status": "OPEN",
+      "file": "components/common/SuccessModal.tsx",
+      "location": "ModalContent height constraint and scrollable header/body; footer remains outside unconstrained content",
+      "title": "Modal sukses dengan pesan panjang memotong tombol pada viewport mendatar",
+      "reviewedSourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "rootCause": "Width adapts to viewport but height is unconstrained; footer is clipped outside the viewport",
+      "failedAssertionCount": 9,
+      "distinctDefectCount": 1,
+      "failedAssertions": [
+        "long-640x360: whole modal fits viewport",
+        "long-640x360: action fully inside viewport",
+        "long-640x360: visible action target at least44px",
+        "long-844x390: whole modal fits viewport",
+        "long-844x390: action fully inside viewport",
+        "long-844x390: visible action target at least44px",
+        "long-live-rotate-640x360: whole modal fits viewport",
+        "long-live-rotate-640x360: action fully inside viewport",
+        "long-live-rotate-640x360: visible action target at least44px"
+      ],
+      "measurements": [
+        {
+          "label": "long-640x360",
+          "viewport": {
+            "width": 640,
+            "height": 360
+          },
+          "modal": {
+            "x": 130,
+            "y": -68.375,
+            "width": 380,
+            "height": 496.75
+          },
+          "action": {
+            "x": 155,
+            "y": 355.375,
+            "width": 330,
+            "height": 48
+          },
+          "visibleHeight": 4.625
+        },
+        {
+          "label": "long-844x390",
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "modal": {
+            "x": 231.974853515625,
+            "y": -53.407867431640625,
+            "width": 380.05029296875,
+            "height": 496.81573486328125
+          },
+          "action": {
+            "x": 257,
+            "y": 370.375,
+            "width": 330,
+            "height": 48
+          },
+          "visibleHeight": 19.625
+        },
+        {
+          "label": "long-live-rotate-640x360",
+          "viewport": {
+            "width": 640,
+            "height": 360
+          },
+          "modal": {
+            "x": 130,
+            "y": -68.375,
+            "width": 380,
+            "height": 496.75
+          },
+          "action": {
+            "x": 155,
+            "y": 355.375,
+            "width": 330,
+            "height": 48
+          },
+          "visibleHeight": 4.625
+        }
+      ],
+      "reproduction": "REPORT.md",
+      "evidence": [
+        "orientation-current/results.json",
+        "orientation-current/long-640x360.png",
+        "orientation-current/long-844x390.png",
+        "orientation-current/long-live-rotate-640x360.png"
+      ],
+      "requiredCorrection": "Limit height to available viewport, make message/header reachable by scrolling, retain visible footer and existing public callbacks",
+      "owner": "SD3-007 / Codex-3"
+    }
+  ],
+  "unchangedRelatedGates": [
+    {
+      "id": "QC-STOCK-UI-002",
+      "severity": "P3",
+      "status": "OPEN_PENDING_INDEPENDENT_RECHECK",
+      "owner": "Senior 6",
+      "note": "New Stock handoff submitted separately; not assessed here"
+    },
+    {
+      "id": "QC-STOCK-001",
+      "status": "DEFERRED",
+      "note": "Backend will be replaced per user direction; not a modal UI gate"
+    },
+    {
+      "signal": "QC-INCOME-20261009-CHANGES-REQUESTED",
+      "status": "CHANGES_REQUESTED",
+      "note": "Three findings outside this module remain independent"
+    },
+    {
+      "signal": "QC-AUTH-20261009-PASS-RECHECK",
+      "status": "PASS_RECHECK",
+      "note": "Auth closure remains independent"
+    }
+  ],
+  "assertions": {
+    "current": {
+      "stockBrowser": {
+        "passed": 36,
+        "failed": 0
+      },
+      "sharedBrowser": {
+        "passed": 51,
+        "failed": 0
+      },
+      "lifecycle": {
+        "passed": 156,
+        "failed": 0
+      },
+      "orientation": {
+        "passed": 12,
+        "failed": 9
+      }
+    },
+    "totalCurrentPassed": 255,
+    "totalCurrentFailed": 9,
+    "proposal": {
+      "pass": true,
+      "stock": 36,
+      "shared": 51,
+      "lifecycle": 156,
+      "orientation": 27,
+      "totalPassed": 270,
+      "totalFailed": 0
+    },
+    "totalProposalPassed": 270,
+    "totalProposalFailed": 0,
+    "includesOverlappingCoverage": true,
+    "initialProposal21CountedAgain": false,
+    "notProjectCompletionPercentage": true
+  },
+  "quality": {
+    "status": "CODE_AND_EVIDENCE_PASS",
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "proposalEslintErrors": 0,
+    "proposalEslintWarnings": 0,
+    "biomeExit": 0,
+    "proposalBiomeExit": 0,
+    "proposalBiomeOutputUnchanged": true,
+    "diffExit": 0,
+    "focusedTypecheck": {
+      "rerunByQC": true,
+      "roots": [
+        "components/common/SuccessModal.tsx",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-success-modal-2026-10-09\\proposal\\SuccessModal.tsx"
+      ],
+      "diagnostics": 0,
+      "importedSourceCount": 19,
+      "fullProjectCheck": false
+    },
+    "currentPublicContractPreserved": true,
+    "proposalPublicContractPreserved": true
+  },
+  "integrity": {
+    "initialContractFingerprintMatches": 25,
+    "currentSourceOrInputMatches": 39,
+    "exactReviewedStockFixtureMatches": 1,
+    "trackedReviewedInputMatches": 40,
+    "historicalArtifactMatches": 211,
+    "initialSnapshotPreserved": true,
+    "mutableConfigurationExcluded": [
+      {
+        "file": "metro.config.js",
+        "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+        "observed": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+        "owner": "Senior 7",
+        "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+        "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+        "certified": false,
+        "finalObserved": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+      },
+      {
+        "file": "scripts/preserve-nativewind-cache.cjs",
+        "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+        "observed": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+        "owner": "Senior 7",
+        "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+        "actual": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+        "certified": false,
+        "finalObserved": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956"
+      }
+    ],
+    "liveStockApproved": false,
+    "androidCacheUnchanged": true,
+    "allFixtureCopiesReversible": true
+  },
+  "proposal": {
+    "applied": false,
+    "sourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "candidate": "proposal/SuccessModal.tsx",
+    "candidateHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "patch": "proposal/success-modal-height.patch",
+    "patchHash": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2",
+    "applyCheckExit": 0,
+    "expectedAppliedHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "verification": "270PASS/0FAIL on review copies; final application source and native behavior still require recheck"
+  },
+  "publication": {
+    "qcApproval": false,
+    "owner": "Projek Manager",
+    "requiredBeforePublication": "Owner correction on application source -> QA/native scroll/orientation review -> QC exact-source recheck -> PM integration/publication",
+    "gitPushPerformedByQC": false
+  },
+  "limitations": [
+    "Browser RN Web only; no physical-phone orientation/scroll certification",
+    "No keyboard/font-scaling/arbitrary virtual-list/full accessibility certification",
+    "No full router/auth/backend/persistence approval",
+    "No full-project TypeScript check",
+    "Figma tools unavailable to this QC session; no parity claim",
+    "88-caller historical inventory is static evidence; only representative actual callers executed",
+    "Latest Stock source and Senior 7 configuration excluded; separate handoffs",
+    "Latest Alert/DeleteConfirm tested as dependencies; no overall delta approval for those modules"
+  ]
+}

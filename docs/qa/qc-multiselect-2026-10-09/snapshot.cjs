@@ -1,0 +1,18 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const root = path.resolve(__dirname, "../../..");
+const manifestFile = "docs/qa/senior-7-2026-10-09/multi-select/verification.json";
+const manifest = JSON.parse(fs.readFileSync(path.join(root, manifestFile), "utf8"));
+const normalize = file => file.replaceAll("\\", "/");
+const hash = file => crypto.createHash("sha256").update(fs.readFileSync(path.join(root, file))).digest("hex");
+const declared = [manifest.source, manifest.baselineSource, ...manifest.callerSources, ...manifest.dependencies, ...manifest.evidence];
+for (const entry of declared) assert.equal(hash(entry.file), entry.sha256, `handoff hash ${entry.file}`);
+const additions = [manifestFile, "components/common/SearchBar.tsx", "lib/manage/sales-target.ts", "schema/manage/sales-target.ts", "constants/data/manage/sales-target.ts", "node_modules/@hookform/resolvers/zod/dist/zod.js"];
+const fingerprints = Object.fromEntries([...new Set([...declared.map(entry => normalize(entry.file)), ...additions])].map(file => [file, hash(file)]));
+const phase = process.argv[2] || "before";
+const result = { recordedAt: new Date().toISOString(), status: "PASS", phase, fingerprints };
+if (phase === "after") assert.deepEqual(fingerprints, JSON.parse(fs.readFileSync(path.join(__dirname, "snapshot-before.json"), "utf8")).fingerprints, "QC inputs unchanged");
+fs.writeFileSync(path.join(__dirname, `snapshot-${phase}.json`), JSON.stringify(result, null, 2) + "\n");
+console.log(JSON.stringify({ phase, status: result.status, fingerprints: Object.keys(fingerprints).length }));

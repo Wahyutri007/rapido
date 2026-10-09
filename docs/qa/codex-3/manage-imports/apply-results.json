@@ -1,0 +1,81 @@
+{
+  "owner": "Codex-3",
+  "finding": "QC-MANAGE-FORMS-001",
+  "patch": "docs/qa/qc-manage-forms-2026-10-09/organize-imports.patch",
+  "patchSha256": "03222369ff63b2adc87622dc09eb7a12e326ef7b5f52c9079b23f75e122fd30c",
+  "before": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "expected": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "actual": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609"
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "expected": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "actual": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05"
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "expected": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "actual": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae"
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "expected": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "actual": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b"
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "expected": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "actual": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103"
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "expected": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "actual": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e"
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "expected": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174",
+      "actual": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+    }
+  ],
+  "after": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "expected": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "actual": "6d0f8d0e96c210d04fda98a5f2910d662c920cb8e246ae37e848ce993914d86c"
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "expected": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "actual": "54e95d95e1a50642b03e10f82814f8da84bef1b446c7975c7dfea758d0f864ea"
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "expected": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "actual": "c14333b91414cd76e07525fbfa91e3c0c95cab27369a701a5896d61fba5e3a3b"
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "expected": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "actual": "8f9163ad130822bbe796b8928e4fa32e09d9c0cf515edff63122a89a53daece8"
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "expected": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "actual": "b822b29b3417ace8b6e53dd92f8a9fc76c3daafc3adbe94a173594ceb0b7e44a"
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "expected": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "actual": "0da4a308ba8642db6883f3fab6d13a322e5b9f83a7bea9139caa18204b52986d"
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "expected": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "actual": "33b9170eec97cb4fff32bc2dc6f3e26e8785b217f9592eb02de64b3030379321"
+    }
+  ],
+  "allProposalHashesMatch": false
+}

@@ -1,0 +1,399 @@
+{
+  "passed": 49,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "search matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 16,
+          "y": 88,
+          "w": 358,
+          "h": 48,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          16,
+          88,
+          358,
+          48
+        ]
+      }
+    },
+    {
+      "name": "store matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 16,
+          "y": 152,
+          "w": 172,
+          "h": 48,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          16,
+          152,
+          172,
+          48
+        ]
+      }
+    },
+    {
+      "name": "status matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 202,
+          "y": 152,
+          "w": 172,
+          "h": 48,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          202,
+          152,
+          172,
+          48
+        ]
+      }
+    },
+    {
+      "name": "card matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 16,
+          "y": 216,
+          "w": 357,
+          "h": 754,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          16,
+          216,
+          357,
+          754
+        ]
+      }
+    },
+    {
+      "name": "tier matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 16,
+          "y": 216,
+          "w": 357,
+          "h": 50,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(46, 120, 249, 0.1)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          16,
+          216,
+          357,
+          50
+        ]
+      }
+    },
+    {
+      "name": "food matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 28,
+          "y": 282,
+          "w": 333,
+          "h": 388,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          28,
+          282,
+          333,
+          388
+        ]
+      }
+    },
+    {
+      "name": "drink matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 28,
+          "y": 686,
+          "w": 333,
+          "h": 268,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          28,
+          686,
+          333,
+          268
+        ]
+      }
+    },
+    {
+      "name": "bar matches Figma geometry",
+      "pass": true,
+      "detail": {
+        "actual": {
+          "x": 0,
+          "y": 1254,
+          "w": 390,
+          "h": 93,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "lineHeight": "24px"
+        },
+        "expected": [
+          0,
+          1254,
+          390,
+          93
+        ]
+      }
+    },
+    {
+      "name": "category is Figma neutral black",
+      "pass": true
+    },
+    {
+      "name": "zero is Figma red",
+      "pass": true
+    },
+    {
+      "name": "low stock is Figma muted",
+      "pass": true
+    },
+    {
+      "name": "table header uses Figma blue tint",
+      "pass": true
+    },
+    {
+      "name": "tab label is 12px regular Inter",
+      "pass": true
+    },
+    {
+      "name": "back exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "search exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "chevron-down exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "home exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "report exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "catalog exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "inventory exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "manage exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "divider exact exported asset/geometry",
+      "pass": true
+    },
+    {
+      "name": "filter assets retain exact Figma dimensions",
+      "pass": true
+    },
+    {
+      "name": "/back.svg matches its Figma slot",
+      "pass": true,
+      "detail": {
+        "actual": [
+          16,
+          32
+        ],
+        "expected": [
+          16,
+          32
+        ]
+      }
+    },
+    {
+      "name": "/search.svg matches its Figma slot",
+      "pass": true,
+      "detail": {
+        "actual": [
+          32,
+          103
+        ],
+        "expected": [
+          32,
+          103
+        ]
+      }
+    },
+    {
+      "name": "/closing-stock/store.svg matches its Figma slot",
+      "pass": true,
+      "detail": {
+        "actual": [
+          28,
+          168
+        ],
+        "expected": [
+          28,
+          168
+        ]
+      }
+    },
+    {
+      "name": "/closing-stock/status.svg matches its Figma slot",
+      "pass": true,
+      "detail": {
+        "actual": [
+          214,
+          168.5
+        ],
+        "expected": [
+          214,
+          168.5
+        ]
+      }
+    },
+    {
+      "name": "search field does not add extra inner padding",
+      "pass": true
+    },
+    {
+      "name": "actual Inventory data restored outside comparison mode",
+      "pass": true
+    },
+    {
+      "name": "search still accepts typing/SKU",
+      "pass": true
+    },
+    {
+      "name": "empty state still works",
+      "pass": true
+    },
+    {
+      "name": "reset restores actual rows",
+      "pass": true
+    },
+    {
+      "name": "status picker still filters low stock",
+      "pass": true
+    },
+    {
+      "name": "store picker search/membership still works",
+      "pass": true
+    },
+    {
+      "name": "store balance remains honestly unknown",
+      "pass": true
+    },
+    {
+      "name": "live updates remain visible",
+      "pass": true
+    },
+    {
+      "name": "narrow-320 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow-320 final row clears tab bar",
+      "pass": true
+    },
+    {
+      "name": "narrow-320 divider fills its container without scaling",
+      "pass": true
+    },
+    {
+      "name": "landscape-844 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "landscape-844 final row clears tab bar",
+      "pass": true
+    },
+    {
+      "name": "landscape-844 divider fills its container without scaling",
+      "pass": true
+    },
+    {
+      "name": "tablet-768 has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "tablet-768 final row clears tab bar",
+      "pass": true
+    },
+    {
+      "name": "tablet-768 divider fills its container without scaling",
+      "pass": true
+    },
+    {
+      "name": "tab tap still dispatches navigation",
+      "pass": true
+    },
+    {
+      "name": "header tap still dispatches back",
+      "pass": true
+    },
+    {
+      "name": "runtime exceptions absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "console errors absent",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "scope": "Production feature/Header/BottomTab/shared controls/store; router/navigation transport adapters. Figma example rows isolated in test page; actual existing data used for interaction regression."
+}

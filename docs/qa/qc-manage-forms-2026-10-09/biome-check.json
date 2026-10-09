@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "changed": 0,
+    "unchanged": 10,
+    "matches": 0,
+    "duration": 184738600,
+    "errors": 7,
+    "warnings": 0,
+    "infos": 0,
+    "skipped": 0,
+    "suggestedFixesSkipped": 0,
+    "diagnosticsNotPrinted": 0,
+    "scannerDuration": 27770600
+  },
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "Sort these imports.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "app/(no-layout)/manage/order-type/modify.tsx",
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 90
+        }
+      },
+      "advices": []
+    },
+    {
+      "severity": "error",
+      "message": "Sort these imports.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "app/(no-layout)/manage/payment-method/modify.tsx",
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 90
+        }
+      },
+      "advices": []
+    },
+    {
+      "severity": "error",
+      "message": "Sort these imports.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "app/(no-layout)/manage/tax/modify.tsx",
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 3,
+          "column": 90
+        }
+      },
+      "advices": []
+    },
+    {
+      "severity": "error",
+      "message": "Some imports or exports are not organized.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 15,
+          "column": 71
+        }
+      },
+      "advices": [
+        {
+          "start": {
+            "line": 15,
+            "column": 1
+          },
+          "end": {
+            "line": 15,
+            "column": 71
+          },
+          "text": "Sort these imports."
+        },
+        {
+          "start": {
+            "line": 1,
+            "column": 1
+          },
+          "end": {
+            "line": 14,
+            "column": 84
+          },
+          "text": "Safe fix: Organize imports and exports (Biome)"
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "Some imports or exports are not organized.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+        "start": {
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "line": 18,
+          "column": 37
+        }
+      },
+      "advices": [
+        {
+          "start": {
+            "line": 15,
+            "column": 1
+          },
+          "end": {
+            "line": 18,
+            "column": 37
+          },
+          "text": "Sort these imports."
+        },
+        {
+          "start": {
+            "line": 1,
+            "column": 1
+          },
+          "end": {
+            "line": 14,
+            "column": 62
+          },
+          "text": "Safe fix: Organize imports and exports (Biome)"
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "Sort the imported names.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+        "start": {
+          "line": 14,
+          "column": 1
+        },
+        "end": {
+          "line": 17,
+          "column": 41
+        }
+      },
+      "advices": []
+    },
+    {
+      "severity": "error",
+      "message": "Sort the imported names.",
+      "category": "assist/source/organizeImports",
+      "location": {
+        "path": "components/feature/manage/settings/TaxModifyScreen.tsx",
+        "start": {
+          "line": 14,
+          "column": 1
+        },
+        "end": {
+          "line": 14,
+          "column": 65
+        }
+      },
+      "advices": []
+    }
+  ],
+  "command": "check"
+}

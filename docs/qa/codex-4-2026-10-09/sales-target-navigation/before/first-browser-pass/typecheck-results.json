@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "roots": [
+    "app\\(no-layout)\\manage\\sales-target\\_layout.tsx",
+    "app\\(no-layout)\\manage\\sales-target\\index.tsx",
+    "app\\(no-layout)\\manage\\sales-target\\detail.tsx",
+    "app\\(no-layout)\\manage\\sales-target\\modify.tsx"
+  ],
+  "sourceFiles": 1310,
+  "diagnostics": [],
+  "checkedAt": "2026-10-09T03:01:10.238Z",
+  "scope": "Target route roots, project declarations and imported dependency closure; not the full application route tree."
+}

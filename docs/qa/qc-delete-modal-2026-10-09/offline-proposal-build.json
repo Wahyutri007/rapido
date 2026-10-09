@@ -1,0 +1,21 @@
+{
+  "mode": "proposal",
+  "createdAt": "2026-10-09T01:40:46.538Z",
+  "entry": "docs\\qa\\qc-delete-modal-2026-10-09\\offline-proposal-entry.jsx",
+  "entryHash": "fc8d91b26f913fd106b525b7a9f8a7f8b78e8471c187e91147669e0474c84862",
+  "output": ".expo\\qc-delete-offline\\proposal\\entry.bundle.js",
+  "bundleHash": "f9853f65a139b703c227c0f10d78b3342b64cbf8364d7e4d6d8181e3381b6b8f",
+  "bytes": 5291687,
+  "assets": 23,
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "fd438ce4942c51266827b3173bd5aabc721f16676c9b5a03ffba3fac8f90f1bf"
+  },
+  "limitations": "Isolated Metro API/RNWeb with real Babel presets and fixed current stylesheet supplied by fixture. No root Metro/NativeWind-plugin pipeline, native, HP, or full application startup approval."
+}

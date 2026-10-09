@@ -1,0 +1,376 @@
+{
+  "owner": "Codex-3",
+  "finding": "QC-JOURNAL-001",
+  "status": "READY_FOR_QC_RECHECK",
+  "createdAt": "2026-10-08T19:18:46.749Z",
+  "approval": "Developer correction/replay only; P2 remains OPEN until QC recheck, publication belongs to PM",
+  "results": {
+    "baseline": {
+      "passed": 37,
+      "failed": 4
+    },
+    "validation": {
+      "passed": 187,
+      "failed": 0
+    },
+    "lifecycle": {
+      "passed": 55,
+      "failed": 0
+    },
+    "qcCasesDeveloperReplay": {
+      "passed": 41,
+      "failed": 0
+    },
+    "assertionExecutions": 283,
+    "runtimeErrors": 0,
+    "typeDiagnostics": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExitCode": 0,
+    "formatExitCode": 0,
+    "diffExitCode": 0
+  },
+  "changedSource": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d"
+  },
+  "readOnlyContractFingerprint": {
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "schema/accounting/general-journal.ts": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+    "schema/accounting/adjusting-journal.ts": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb"
+  },
+  "artifactFingerprint": {
+    "docs/qa/codex-3/journal-badge/HANDOFF.md": "42e5da245e7c624bedf6f58e22ce65546015c5b990c2e92a21a4d51d78e3fa17",
+    "docs/qa/codex-3/journal-badge/validation.cjs": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+    "docs/qa/codex-3/journal-badge/regression.cjs": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+    "docs/qa/codex-3/journal-badge/qc-replay.cjs": "2c99fdeb062e7149f51155a3f3340cb5be247e995a695acf01bc514efca5e010",
+    "docs/qa/codex-3/journal-badge/quality.cjs": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+    "docs/qa/codex-3/journal-badge/typecheck.cjs": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+    "docs/qa/codex-3/journal-badge/verify.cjs": "64e97df8b51e82771672e2ad186304576b87f973f7eae1e1716f6904920c864e",
+    "docs/qa/codex-3/journal-badge/general-modify.before.tsx.txt": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+    "docs/qa/codex-3/journal-badge/adjusting-modify.before.tsx.txt": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+    "docs/qa/codex-3/journal-badge/baseline.json": "3591b3852c5669f192e63b365afeda9bf74ac57c1a3266e264f43c7d4f189447",
+    "docs/qa/codex-3/journal-badge/results.json": "52cf255245a26081bdfc1a41b719eef68745347379839236a0db54904150a067",
+    "docs/qa/codex-3/journal-badge/regression-results.json": "6f3bfa1e2bc13e79336274680d12680e7f5275252c84e4766661eeb8230847d7",
+    "docs/qa/codex-3/journal-badge/independent-results.json": "dc4980389a479f8478b3b42f4815f13da67ae28fd5f975d6d6d6df4d94b72e86",
+    "docs/qa/codex-3/journal-badge/quality-results.json": "4c85136aab71bdc3d310b7eb49f6d5e41319088a38724f6f786f43b581b62a53",
+    "docs/qa/codex-3/journal-badge/typecheck-results.json": "fb0cb7d4650b7e2189a76514f952dd3ba34b4982edbc1e5957067839ee4fe100"
+  },
+  "testedSourceMatches": [
+    {
+      "suite": "validation",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "lib/utils/index.ts",
+      "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "schema/accounting/general-journal.ts",
+      "expected": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "actual": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "schema/accounting/adjusting-journal.ts",
+      "expected": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "actual": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "validation",
+      "file": "lib/accounting/journal-validation.ts",
+      "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "expected": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "actual": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "lib/accounting/journal-validation.ts",
+      "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "lib/utils/index.ts",
+      "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "schema/accounting/general-journal.ts",
+      "expected": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "actual": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "passed": true
+    },
+    {
+      "suite": "qcCasesDeveloperReplay",
+      "file": "schema/accounting/adjusting-journal.ts",
+      "expected": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "actual": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "lib/accounting/journal-validation.ts",
+      "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "passed": true
+    }
+  ],
+  "baselineSnapshotMatches": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "snapshot": "docs/qa/codex-3/journal-badge/general-modify.before.tsx.txt",
+      "expected": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+      "actual": "c6339ed98cfcdbf2cb5133bfb89124156cb447b3de503716cd1d7293a3f1b0f2",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "snapshot": "docs/qa/codex-3/journal-badge/adjusting-modify.before.tsx.txt",
+      "expected": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+      "actual": "41bca9283d2199da8ba133fb33946d6a4ebd6de914d6a4050613c11f4e32a07c",
+      "passed": true
+    }
+  ],
+  "proposalMatches": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "passed": true
+    }
+  ],
+  "astComparisons": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "comparison": "Entire AST unchanged except initializer isBalanced",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "comparison": "Entire AST unchanged except initializer isBalanced",
+      "passed": true
+    }
+  ],
+  "copiedRunnerMatches": [
+    {
+      "file": "docs/qa/codex-3/journal-badge/validation.cjs",
+      "origin": "docs/qa/codex-3/journal-validation/check.cjs",
+      "sha256": "523f74b20cdc845017b3a13ecd34de622ec7222383ff14815d4ce213aeba3938",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-badge/regression.cjs",
+      "origin": "docs/qa/codex-3/journal-validation/regression.cjs",
+      "sha256": "34f63d07424033021a077b33ab5c96c1ecee3bbc01e15c3e8d5f1b3db10ac607",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-badge/quality.cjs",
+      "origin": "docs/qa/codex-3/journal-validation/quality.cjs",
+      "sha256": "95a47b4920ae167034fc2d1f9a008add634a90252f31bceef3626b9a1e806620",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/journal-badge/typecheck.cjs",
+      "origin": "docs/qa/codex-3/journal-validation/typecheck.cjs",
+      "sha256": "bf8e21f6e3918ba4d38036f6b6b2d19f376d1bd8f12b903bcd8edb973961bf05",
+      "passed": true
+    }
+  ],
+  "replayProvenance": {
+    "origin": "docs/qa/qc-journals-2026-10-09/independent.cjs",
+    "sha256": "9101f786cf402701e8d5e42cc5137e05586814fe327fb10d2b518ffab004ee98",
+    "metadataOnlyChange": true
+  },
+  "unchangedContractMatches": [
+    {
+      "file": "lib/accounting/journal-validation.ts",
+      "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "file": "lib/utils/index.ts",
+      "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "passed": true
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "file": "schema/accounting/general-journal.ts",
+      "expected": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "actual": "f6120d45cf9a138bf6cf86cca147d6e97676deaf53dd800495ab50c1aa5b572d",
+      "passed": true
+    },
+    {
+      "file": "schema/accounting/adjusting-journal.ts",
+      "expected": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "actual": "f9e5e9d3c1379b8d1996b778be27b742db53e30ea37dcb09511be6eb1ca7b8eb",
+      "passed": true
+    }
+  ],
+  "qcEvidence": {
+    "docs/qa/qc-journals-2026-10-09/REPORT.md": "27052ac243726b8cfd48d6ab4c040b76b57177e7b34940cebe8b42f700d058b4",
+    "docs/qa/qc-journals-2026-10-09/DECISION.json": "0d59bd6e34fc4db4e06cd4a1d1ef58871e486ed25af5a6262e4ff27d94de267c",
+    "docs/qa/qc-journals-2026-10-09/balanced-badge.patch": "903346ae5b3a1e6d8898e9dae40200e965e6d70cca7a52744313638124dfa0b1",
+    "docs/qa/qc-journals-2026-10-09/proposal-verification.json": "0ef33d1703c1434727eda5904ed8f23f01592687c9fbeceed75b9d093c0ae650"
+  },
+  "limitations": [
+    "Developer replay includes overlapping assertions; not new independent QA/QC approval",
+    "Route/store/schema and production numeric declarations with UI/native/router/calendar adapters",
+    "No API/persistence/ledger posting/browser/native/Figma/full-project certification",
+    "Store ID Senior8 patch is dependency only; validator/schema/helper/payload/JSX unchanged"
+  ]
+}

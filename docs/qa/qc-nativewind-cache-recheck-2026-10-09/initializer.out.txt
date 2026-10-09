@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "count": 10,
+  "checks": [
+    "installed initializer reproduces Android cache truncation",
+    "guarded installed initializer preserves Android CSS and flags",
+    "guard returns full Metro config",
+    "initializer creates missing platform files",
+    "filesystem implementation restored after configuration",
+    "second config preserves all populated native platform caches",
+    "compiler nonempty synchronous write is allowed",
+    "unrelated web writes are not intercepted",
+    "filesystem implementation restored after initializer failure",
+    "writes outside initialization retain original semantics"
+  ],
+  "dependencyVersion": "0.2.7"
+}

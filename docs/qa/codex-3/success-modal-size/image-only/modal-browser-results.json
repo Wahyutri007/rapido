@@ -1,0 +1,757 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-007",
+  "mode": "current-production-source",
+  "passed": 47,
+  "failed": 1,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "checks": [
+    {
+      "name": "closed initial modal does not display a dialog",
+      "passed": true
+    },
+    {
+      "name": "direct-320: modal fits viewport",
+      "passed": false,
+      "detail": {
+        "x": -4,
+        "y": 140.125,
+        "width": 328,
+        "height": 359.75
+      }
+    },
+    {
+      "name": "direct-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 21,
+        "y": 426.875,
+        "width": 278,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "direct-360: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 242.125,
+        "width": 328,
+        "height": 359.75
+      }
+    },
+    {
+      "name": "direct-360: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 528.875,
+        "width": 278,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-360: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "direct-390: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 242.125,
+        "width": 358,
+        "height": 359.75
+      }
+    },
+    {
+      "name": "direct-390: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 528.875,
+        "width": 308,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-390: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "direct-768: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 194,
+        "y": 332.125,
+        "width": 380,
+        "height": 359.75
+      }
+    },
+    {
+      "name": "direct-768: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 219,
+        "y": 618.875,
+        "width": 330,
+        "height": 48
+      }
+    },
+    {
+      "name": "direct-768: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "role-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 128.75,
+        "width": 288,
+        "height": 382.5
+      }
+    },
+    {
+      "name": "role-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 438.25,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "role-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "role-320: domain request stays in fixture",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/contents/roles/fixture-modal"
+      }
+    },
+    {
+      "name": "worker-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 128.625,
+        "width": 288,
+        "height": 382.75
+      }
+    },
+    {
+      "name": "worker-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 438.375,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "worker-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "worker-320: domain request stays in fixture",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/contents/workers/fixture-modal"
+      }
+    },
+    {
+      "name": "member-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 140.125,
+        "width": 288,
+        "height": 359.75
+      }
+    },
+    {
+      "name": "member-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 426.875,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "member-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "member-320: domain request stays in fixture",
+      "passed": true,
+      "detail": {
+        "method": "delete",
+        "url": "/customers/data/fixture-modal"
+      }
+    },
+    {
+      "name": "legacy-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      }
+    },
+    {
+      "name": "legacy-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "legacy-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "message-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 128.625,
+        "width": 288,
+        "height": 382.75
+      }
+    },
+    {
+      "name": "message-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 438.375,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "message fallback visible",
+      "passed": true
+    },
+    {
+      "name": "message-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "node-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 116,
+        "width": 288,
+        "height": 408
+      }
+    },
+    {
+      "name": "node-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 451,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "React-node description visible",
+      "passed": true
+    },
+    {
+      "name": "node-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "custom-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      }
+    },
+    {
+      "name": "custom-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "custom-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "no-close-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      }
+    },
+    {
+      "name": "no-close-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "no-close-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "long-320: modal fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 16,
+        "y": 37.375,
+        "width": 288,
+        "height": 565.25
+      }
+    },
+    {
+      "name": "long-320: action is fully visible and tappable",
+      "passed": true,
+      "detail": {
+        "x": 41,
+        "y": 529.625,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "long-320: production action closes and notifies once",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no unexpected console errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no HTTP API attempts",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "measurements": [
+    {
+      "label": "direct-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": -4,
+        "y": 140.125,
+        "width": 328,
+        "height": 359.75
+      },
+      "action": {
+        "x": 21,
+        "y": 426.875,
+        "width": 278,
+        "height": 48
+      },
+      "image": {
+        "x": 21,
+        "y": 165.125,
+        "width": 278,
+        "height": 176
+      }
+    },
+    {
+      "label": "direct-360",
+      "viewport": {
+        "width": 360,
+        "height": 844
+      },
+      "screen": {
+        "width": 360,
+        "height": 844
+      },
+      "modal": {
+        "x": 16,
+        "y": 242.125,
+        "width": 328,
+        "height": 359.75
+      },
+      "action": {
+        "x": 41,
+        "y": 528.875,
+        "width": 278,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 267.125,
+        "width": 278,
+        "height": 176
+      }
+    },
+    {
+      "label": "direct-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": {
+        "width": 390,
+        "height": 844
+      },
+      "modal": {
+        "x": 16,
+        "y": 242.125,
+        "width": 358,
+        "height": 359.75
+      },
+      "action": {
+        "x": 41,
+        "y": 528.875,
+        "width": 308,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 267.125,
+        "width": 308,
+        "height": 176
+      }
+    },
+    {
+      "label": "direct-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": {
+        "width": 768,
+        "height": 1024
+      },
+      "modal": {
+        "x": 194,
+        "y": 332.125,
+        "width": 380,
+        "height": 359.75
+      },
+      "action": {
+        "x": 219,
+        "y": 618.875,
+        "width": 330,
+        "height": 48
+      },
+      "image": {
+        "x": 219,
+        "y": 357.125,
+        "width": 330,
+        "height": 176
+      }
+    },
+    {
+      "label": "role-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 128.75,
+        "width": 288,
+        "height": 382.5
+      },
+      "action": {
+        "x": 41,
+        "y": 438.25,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 153.75,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "worker-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 128.625,
+        "width": 288,
+        "height": 382.75
+      },
+      "action": {
+        "x": 41,
+        "y": 438.375,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 153.625,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "member-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 140.125,
+        "width": 288,
+        "height": 359.75
+      },
+      "action": {
+        "x": 41,
+        "y": 426.875,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 165.125,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "legacy-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      },
+      "action": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 142.25,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "message-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 128.625,
+        "width": 288,
+        "height": 382.75
+      },
+      "action": {
+        "x": 41,
+        "y": 438.375,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 153.625,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "node-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 116,
+        "width": 288,
+        "height": 408
+      },
+      "action": {
+        "x": 41,
+        "y": 451,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 141,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "custom-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      },
+      "action": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 142.25,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "no-close-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 117.25,
+        "width": 288,
+        "height": 405.5
+      },
+      "action": {
+        "x": 41,
+        "y": 449.75,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 142.25,
+        "width": 238,
+        "height": 176
+      }
+    },
+    {
+      "label": "long-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "screen": {
+        "width": 320,
+        "height": 640
+      },
+      "modal": {
+        "x": 16,
+        "y": 37.375,
+        "width": 288,
+        "height": 565.25
+      },
+      "action": {
+        "x": 41,
+        "y": 529.625,
+        "width": 238,
+        "height": 48
+      },
+      "image": {
+        "x": 41,
+        "y": 62.375,
+        "width": 238,
+        "height": 176
+      }
+    }
+  ],
+  "sourceHash": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f",
+  "fixtureHash": "433b03e940b506a349fd5bd6f197497d1bb0ebde448c883c3501dfefa611cc3c",
+  "limits": "Real RN-web/provider/font/button/modal and three delete-dialog domains with browser-local Axios transport; standalone fixture, no native/root auth/full router/backend/Figma claim"
+}

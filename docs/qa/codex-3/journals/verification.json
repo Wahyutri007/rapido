@@ -1,0 +1,169 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-002",
+  "status": "READY_FOR_QA",
+  "createdAt": "2026-10-08T18:05:17.695Z",
+  "approval": "Developer evidence only; QA/QC and PM publication gates pending",
+  "results": {
+    "baseline": {
+      "passed": 23,
+      "failed": 32
+    },
+    "lifecycle": {
+      "passed": 55,
+      "failed": 0,
+      "runtimeErrors": 0
+    },
+    "date": {
+      "passed": 33,
+      "failed": 0
+    },
+    "totalBehaviorChecks": 88,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "formatExitCode": 0,
+    "diffExitCode": 0,
+    "typeDiagnosticCount": 0
+  },
+  "changedSource": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+    "components/feature/accounting/general-journal/JournalFormNotFound.tsx": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+    "lib/accounting/journal-date.ts": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71"
+  },
+  "readOnlyDependencyFingerprint": {
+    "store/accountingStore.ts": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509",
+    "types/ui/accounting/journal.ts": "a16278a683b2f344ed07ba2e3293293998f52a81f8ea68dee8223e724242ae44",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/common/AnimatedWrapper.tsx": "b579878f55e6806fc782b2fde16dfb71ce673a6211737349d609836ade3cce14",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f"
+  },
+  "artifactFingerprint": {
+    "docs/qa/codex-3/journals/HANDOFF.md": "9d23380dde4dc7e1d965fc7c81a4178c5e17b476f4f4b49d69f60c8d42ed933c",
+    "docs/qa/codex-3/journals/lifecycle.cjs": "efd4b17b687a982ebabdff8d56281f327b1033d09a3aedfff0d2f08cb8d5f8e1",
+    "docs/qa/codex-3/journals/baseline.json": "3e81ee1cc4ab694266efb22424341aa0f76fd1348452fd635acacdfb74a04679",
+    "docs/qa/codex-3/journals/results.json": "dd52db26e257fe17430829541119ae028d95833130faa7a43a56c4f36a6a771e",
+    "docs/qa/codex-3/journals/date.cjs": "6c3fc7085ab0c5ff0a3b260c9468db57783a5e23ecbc7356d4b30e6191ceecd1",
+    "docs/qa/codex-3/journals/date-results.json": "772ce3dd3415f559d2fdf580858795ef74cf7c0a5614a13489a7ca0ca11081f7",
+    "docs/qa/codex-3/journals/quality.cjs": "e21f9c727dbfda08d169f3bc97464bd68fc5e1f0e818921449532ada42fa4150",
+    "docs/qa/codex-3/journals/quality-results.json": "980cace6ade847c1afa8749c5fc8c93f019978aba9467af1665e646160b3ac7f",
+    "docs/qa/codex-3/journals/typecheck.cjs": "af9bb4c25af8f28fc17c1c29f6ef9b366842ab3629592b97d9dbc4df0ba08dcb",
+    "docs/qa/codex-3/journals/typecheck-results.json": "c95a33ebb7393e129edae6a08ee563419a4e0bfbe44322432aca6efec86f11dc",
+    "docs/qa/codex-3/journals/verify.cjs": "42227b29baea222c0f1b84431be23978fab2878c507738d20d31f7c724cf6e2d"
+  },
+  "testedSourceMatches": [
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "actual": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "actual": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "store/accountingStore.ts",
+      "expected": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509",
+      "actual": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "expected": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "actual": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "suite": "date",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "date",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "expected": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "actual": "b194aee59ec2f76e6e4bc57eede58262b2ff17c2f90c3138e9d5fdbfaf8437f5",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "expected": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "actual": "1e1c7a5aac7c88f9660a182c497cdf3fb6de081de205fe39cac55da1e5f38223",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "components/feature/accounting/general-journal/JournalFormNotFound.tsx",
+      "expected": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "actual": "d2d92b5e1d6a0a13e61a3843ed38540d2b0dca0a48443a4399b5775c3616254d",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "lib/accounting/journal-date.ts",
+      "expected": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "actual": "c7f754c14c2bfa54fcb49b727bc098ffe8c51de341106cb48a5066e3cab26f71",
+      "passed": true
+    }
+  ],
+  "commands": [
+    "node docs/qa/codex-3/journals/lifecycle.cjs",
+    "node docs/qa/codex-3/journals/date.cjs",
+    "node docs/qa/codex-3/journals/quality.cjs",
+    "node docs/qa/codex-3/journals/typecheck.cjs",
+    "node docs/qa/codex-3/journals/verify.cjs"
+  ],
+  "tooling": {
+    "react": "19.2.3",
+    "renderer": "19.2.3",
+    "typescript": "6.0.3",
+    "zustand": "5.0.8"
+  },
+  "limitations": [
+    "Native/UI/router/picker and numeric formatting adapters in lifecycle suite; actual production route and Zustand subscriptions",
+    "No browser, full Expo Router/auth/root, SSR, native, animation, accessibility or Figma parity proof",
+    "Fixture Zustand state, no API/persistence/automatic ledger posting",
+    "Inherited raw-input/manual validation, fixture create date and unavailable web picker preserved",
+    "Date helper checks calendar seed; save date validation remains existing nonempty check",
+    "Same-editor submit guard does not make Date.now journal IDs globally unique",
+    "Focused TypeScript closure only, not full-project or PM integration gate"
+  ]
+}

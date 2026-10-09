@@ -1,0 +1,131 @@
+{
+  "suite": "lifecycle",
+  "status": "PASS",
+  "passed": 28,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "starts closed without writing value",
+      "pass": true
+    },
+    {
+      "name": "open follows committed selection",
+      "pass": true
+    },
+    {
+      "name": "equivalent arrays preserve pending selection",
+      "pass": true
+    },
+    {
+      "name": "draft does not emit",
+      "pass": true
+    },
+    {
+      "name": "external replacement wins while open",
+      "pass": true
+    },
+    {
+      "name": "save cannot restore selection before external replacement",
+      "pass": true
+    },
+    {
+      "name": "save closes sheet",
+      "pass": true
+    },
+    {
+      "name": "external empty reset clears open draft",
+      "pass": true
+    },
+    {
+      "name": "empty reset saves empty",
+      "pass": true
+    },
+    {
+      "name": "cancel emits nothing",
+      "pass": true
+    },
+    {
+      "name": "reopen discards unsaved draft",
+      "pass": true
+    },
+    {
+      "name": "search includes description",
+      "pass": true
+    },
+    {
+      "name": "select all filtered preserves hidden draft",
+      "pass": true
+    },
+    {
+      "name": "deselect filtered preserves hidden selections",
+      "pass": true
+    },
+    {
+      "name": "select all with no matches is harmless",
+      "pass": true
+    },
+    {
+      "name": "backdrop close clears search on reopen",
+      "pass": true
+    },
+    {
+      "name": "backdrop cancel preserves committed IDs",
+      "pass": true
+    },
+    {
+      "name": "batched double toggle is reversible",
+      "pass": true
+    },
+    {
+      "name": "batched individual then all emits each ID once",
+      "pass": true
+    },
+    {
+      "name": "filtered toggle-all sees preceding pending toggle",
+      "pass": true
+    },
+    {
+      "name": "batched double select-all returns empty selection",
+      "pass": true
+    },
+    {
+      "name": "batched double select-all emits empty",
+      "pass": true
+    },
+    {
+      "name": "pill removal is immediate and preserves remaining IDs",
+      "pass": true
+    },
+    {
+      "name": "unloaded committed IDs are preserved",
+      "pass": true
+    },
+    {
+      "name": "separator-containing IDs do not collide",
+      "pass": true
+    },
+    {
+      "name": "temporarily empty options keep value and order",
+      "pass": true
+    },
+    {
+      "name": "no unexpected runtime or act errors",
+      "pass": true
+    },
+    {
+      "name": "production inputs stable during test",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "scope": "StrictMode React production MultiSelect; integration also uses installed RHF Controller/useForm. Native/UI/SearchBar adapters, no native/browser/route/API certification."
+}

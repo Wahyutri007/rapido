@@ -1,0 +1,26 @@
+[
+  {
+    "file": "metro.config.js",
+    "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+  },
+  {
+    "file": "babel.config.js",
+    "sha256": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9"
+  },
+  {
+    "file": "tailwind.config.js",
+    "sha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  {
+    "file": "global.css",
+    "sha256": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f"
+  },
+  {
+    "file": "node_modules/react-native-css-interop/.cache/android.js",
+    "sha256": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+  },
+  {
+    "file": "node_modules/react-native-css-interop/.cache/web.css",
+    "sha256": "e48b786fdc113fab0ac974469bae7ef594dc2dbd84fe73674c028fe732f00ad1"
+  }
+]

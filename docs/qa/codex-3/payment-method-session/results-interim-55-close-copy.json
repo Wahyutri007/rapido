@@ -1,0 +1,659 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-013",
+  "passed": 55,
+  "failed": 0,
+  "runtimeErrors": [],
+  "checks": [
+    {
+      "name": "store starts empty without fixture seeds",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "schema: valid all fields",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "schema: trim-only name rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: unknown type rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: unknown admin enum rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: unknown bank rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: negative fee rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: Infinity fee rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: NaN fee rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: percentage over100 rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: percentage100 accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "schema: zero fee accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "schema: nominal over100 accepted",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "schema: empty account rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "schema: empty owner rejected",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "store independently rejects invalid create",
+      "passed": true,
+      "actual": [
+        null,
+        0
+      ],
+      "expected": [
+        null,
+        0
+      ]
+    },
+    {
+      "name": "stable distinct IDs generated without fixtures",
+      "passed": true,
+      "actual": [
+        "payment-method-1",
+        "payment-method-2"
+      ],
+      "expected": [
+        "payment-method-1",
+        "payment-method-2"
+      ]
+    },
+    {
+      "name": "store normalizes text and preserves account leading zeros",
+      "passed": true,
+      "actual": {
+        "name": "Transfer A",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik A",
+        "id": "payment-method-1"
+      },
+      "expected": {
+        "name": "Transfer A",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik A",
+        "id": "payment-method-1"
+      }
+    },
+    {
+      "name": "missing update/remove return false",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "invalid update cannot overwrite existing data",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "list uses payment records instead of order types",
+      "passed": true,
+      "actual": [
+        "Transfer A",
+        "Transfer B"
+      ],
+      "expected": [
+        "Transfer A",
+        "Transfer B"
+      ]
+    },
+    {
+      "name": "search includes account owner",
+      "passed": true,
+      "actual": [
+        "payment-method-1"
+      ],
+      "expected": [
+        "payment-method-1"
+      ]
+    },
+    {
+      "name": "search has genuine empty results",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "initial list empty with correct copy",
+      "passed": true,
+      "actual": [
+        0,
+        "Belum ada metode pembayaran. Tambahkan metode pertama Anda."
+      ],
+      "expected": [
+        0,
+        "Belum ada metode pembayaran. Tambahkan metode pertama Anda."
+      ]
+    },
+    {
+      "name": "add button goes to own create route",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/modify"
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/modify"
+        }
+      }
+    },
+    {
+      "name": "create fee default is visibly zero and matches form",
+      "passed": true,
+      "actual": [
+        "0",
+        0
+      ],
+      "expected": [
+        "0",
+        0
+      ]
+    },
+    {
+      "name": "RHF invalid create stores no record/no success",
+      "passed": true,
+      "actual": [
+        0,
+        false
+      ],
+      "expected": [
+        0,
+        false
+      ]
+    },
+    {
+      "name": "actual Form input/picker events preserve user-entered fields and decimal",
+      "passed": true,
+      "actual": {
+        "name": "Transfer Toko",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko"
+      },
+      "expected": {
+        "name": "Transfer Toko",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko"
+      }
+    },
+    {
+      "name": "actual RHF/Zod duplicate create stores one full record",
+      "passed": true,
+      "actual": [
+        {
+          "name": "Transfer Toko",
+          "type": "bank_transfer",
+          "adminType": "percentage",
+          "value": 1.5,
+          "bank": "bca",
+          "accountNumber": "00123456",
+          "accountName": "Pemilik Toko",
+          "id": "payment-method-1"
+        }
+      ],
+      "expected": [
+        {
+          "name": "Transfer Toko",
+          "type": "bank_transfer",
+          "adminType": "percentage",
+          "value": 1.5,
+          "bank": "bca",
+          "accountNumber": "00123456",
+          "accountName": "Pemilik Toko",
+          "id": "payment-method-1"
+        }
+      ]
+    },
+    {
+      "name": "successful create shows success feedback",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "create acknowledgement returns to list once",
+      "passed": true,
+      "actual": [
+        {
+          "action": "replace",
+          "target": "/manage/payment-method"
+        }
+      ],
+      "expected": [
+        {
+          "action": "replace",
+          "target": "/manage/payment-method"
+        }
+      ]
+    },
+    {
+      "name": "session-ID edit prefill retains all fields",
+      "passed": true,
+      "actual": {
+        "name": "Transfer Toko",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko"
+      },
+      "expected": {
+        "name": "Transfer Toko",
+        "type": "bank_transfer",
+        "adminType": "percentage",
+        "value": 1.5,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko"
+      }
+    },
+    {
+      "name": "same-ID source update never overwrites mounted draft",
+      "passed": true,
+      "actual": "Draft Edit",
+      "expected": "Draft Edit"
+    },
+    {
+      "name": "actual edit updates same stable ID/all fields",
+      "passed": true,
+      "actual": {
+        "name": "Draft Edit",
+        "type": "bank_transfer",
+        "adminType": "nominal",
+        "value": 5000,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko",
+        "id": "payment-method-1"
+      },
+      "expected": {
+        "name": "Draft Edit",
+        "type": "bank_transfer",
+        "adminType": "nominal",
+        "value": 5000,
+        "bank": "bca",
+        "accountNumber": "00123456",
+        "accountName": "Pemilik Toko",
+        "id": "payment-method-1"
+      }
+    },
+    {
+      "name": "real fee input does not strip minus to positive",
+      "passed": true,
+      "actual": [
+        -1,
+        5000,
+        false
+      ],
+      "expected": [
+        -1,
+        5000,
+        false
+      ]
+    },
+    {
+      "name": "real fee input preserves decimal magnitude",
+      "passed": true,
+      "actual": 1.5,
+      "expected": 1.5
+    },
+    {
+      "name": "empty numeric input is invalid instead of free fee",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "edit->create resets form identity",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "same create route retains draft",
+      "passed": true,
+      "actual": "Create Draft",
+      "expected": "Create Draft"
+    },
+    {
+      "name": "missing-ID edit has fallback without form",
+      "passed": true,
+      "actual": [
+        0,
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "explicit empty-ID edit remains missing",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "array parameter uses first stable ID",
+      "passed": true,
+      "actual": "Draft Edit",
+      "expected": "Draft Edit"
+    },
+    {
+      "name": "cached RHF submission after unmount creates no record",
+      "passed": true,
+      "actual": [
+        "Draft Edit"
+      ],
+      "expected": [
+        "Draft Edit"
+      ]
+    },
+    {
+      "name": "shared Detail action targets read-only own route",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/detail",
+          "params": {
+            "id": "payment-method-1"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/detail",
+          "params": {
+            "id": "payment-method-1"
+          }
+        }
+      }
+    },
+    {
+      "name": "detail has no editable form inputs",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "detail displays all saved metadata",
+      "passed": true,
+      "actual": [
+        [
+          "Jenis Pembayaran",
+          "Transfer Bank"
+        ],
+        [
+          "Tipe Biaya Admin",
+          "Nominal"
+        ],
+        [
+          "Nilai Biaya Admin",
+          "Rp 5.000,00"
+        ],
+        [
+          "Nama Bank",
+          "BCA"
+        ],
+        [
+          "Nomor Rekening",
+          "00123456"
+        ],
+        [
+          "Nama Pemilik Rekening",
+          "Pemilik Toko"
+        ]
+      ],
+      "expected": [
+        [
+          "Jenis Pembayaran",
+          "Transfer Bank"
+        ],
+        [
+          "Tipe Biaya Admin",
+          "Nominal"
+        ],
+        [
+          "Nilai Biaya Admin",
+          "Rp 5.000,00"
+        ],
+        [
+          "Nama Bank",
+          "BCA"
+        ],
+        [
+          "Nomor Rekening",
+          "00123456"
+        ],
+        [
+          "Nama Pemilik Rekening",
+          "Pemilik Toko"
+        ]
+      ]
+    },
+    {
+      "name": "detail Edit targets stable-ID form route",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/modify",
+          "params": {
+            "id": "payment-method-1"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/payment-method/modify",
+          "params": {
+            "id": "payment-method-1"
+          }
+        }
+      }
+    },
+    {
+      "name": "missing detail has fallback without action footer",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "same-ID reopen rejects old close/delete/edit callbacks",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        4
+      ],
+      "expected": [
+        true,
+        false,
+        4
+      ]
+    },
+    {
+      "name": "cancelled deletion leaves record and no fake success",
+      "passed": true,
+      "actual": [
+        1,
+        false
+      ],
+      "expected": [
+        1,
+        false
+      ]
+    },
+    {
+      "name": "actual list delete removes record once before success",
+      "passed": true,
+      "actual": [
+        0,
+        false,
+        true
+      ],
+      "expected": [
+        0,
+        false,
+        true
+      ]
+    },
+    {
+      "name": "delete acknowledgement stays closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "deleted IDs are not reused",
+      "passed": true,
+      "actual": "payment-method-2",
+      "expected": "payment-method-2"
+    },
+    {
+      "name": "detail deletion retains success with missing-data fallback",
+      "passed": true,
+      "actual": [
+        0,
+        true,
+        0
+      ],
+      "expected": [
+        0,
+        true,
+        0
+      ]
+    },
+    {
+      "name": "detail delete acknowledgement returns to list once",
+      "passed": true,
+      "actual": [
+        {
+          "action": "replace",
+          "target": "/manage/payment-method"
+        }
+      ],
+      "expected": [
+        {
+          "action": "replace",
+          "target": "/manage/payment-method"
+        }
+      ]
+    }
+  ],
+  "productionModuleHashes": {
+    "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+    "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74",
+    "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+    "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/custom/ItemActionSheet.tsx": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "constants/data/other/bank-types.ts": "e278fa746c65d292cd811b3148a31c987a2a8f493fb71838e92f65eac1ed154a",
+    "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+    "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394"
+  },
+  "productionModules": 20,
+  "limits": "Production three session routes/list/form/detail/delete/store/schema/RHF/Zod/shared Form/controller/input logic/ManageListActions/ItemActionSheet/modal logic under StrictMode. Native/presentation/picker/FlatList/router/DetailRow are host adapters. No backend, transaction application, disk persistence, browser/native/keyboard geometry/full root/Figma certification."
+}

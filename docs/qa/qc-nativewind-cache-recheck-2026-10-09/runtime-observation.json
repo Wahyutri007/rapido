@@ -1,0 +1,26 @@
+{
+  "capturedAt": "2026-10-09T00:50:37.378Z",
+  "readOnly": true,
+  "ports": [
+    {
+      "LocalPort": 8088,
+      "OwningProcess": 9200
+    },
+    {
+      "LocalPort": 8001,
+      "OwningProcess": 24116
+    }
+  ],
+  "observation": "After QC only; no HP foreground/current-app claim",
+  "qcStartedOrRestartedProcesses": false,
+  "androidCache": {
+    "file": "node_modules/react-native-css-interop/.cache/android.js",
+    "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "bytes": 193003,
+    "hasClassDarkFlag": true,
+    "after": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "unchanged": true
+  },
+  "rootMetroActuallyRequired": false,
+  "nativeRerun": false
+}

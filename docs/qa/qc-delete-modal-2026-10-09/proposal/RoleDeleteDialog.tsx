@@ -1,0 +1,100 @@
+import { useEffect, useRef } from "react";
+import { useRoleDeleteRequest } from "@/api/hooks/roles";
+import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import DeleteConfirmModal from "./DeleteConfirmModal";
+import SuccessModal from "@/components/common/SuccessModal";
+import { roleName } from "@/lib/manage/roles";
+import type { State } from "@/types";
+import type { RoleData } from "@/types/api/role";
+
+type RoleDeleteDialogProps = {
+	role: RoleData | null;
+	openState: State<boolean>;
+	onDeleted?: () => void;
+};
+
+export default function RoleDeleteDialog(props: RoleDeleteDialogProps) {
+	return <RoleDeleteContent key={props.role?.id ?? ""} {...props} />;
+}
+
+function RoleDeleteContent({
+	role,
+	openState,
+	onDeleted,
+}: RoleDeleteDialogProps) {
+	const request = useRoleDeleteRequest(undefined, role?.id);
+	const success = useAlertModal();
+	const error = useAlertModal();
+	const mounted = useRef(false);
+	const pending = useRef(false);
+	const deleted = useRef(false);
+	const acknowledged = useRef(false);
+	const isOpen = openState[0];
+	const visible = useRef(isOpen);
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
+	useEffect(() => {
+		visible.current = isOpen;
+	}, [isOpen]);
+	async function remove() {
+		if (
+			!mounted.current ||
+			!visible.current ||
+			pending.current ||
+			deleted.current ||
+			!role?.id ||
+			request.isLoading
+		)
+			return;
+		pending.current = true;
+		try {
+			const [, failed] = await request.call();
+			if (!mounted.current) return;
+			if (failed) {
+				error.open();
+				return;
+			}
+			deleted.current = true;
+			openState[1](false);
+			success.open();
+		} catch {
+			if (mounted.current) error.open();
+		} finally {
+			pending.current = false;
+		}
+	}
+	return (
+		<>
+			<DeleteConfirmModal
+				openState={openState}
+				itemName={role ? roleName(role) : "Role"}
+				description="Role akan dihapus dan tidak dapat digunakan lagi. Pastikan akun karyawan tetap memiliki akses yang dibutuhkan."
+				onConfirm={remove}
+				isLoading={request.isLoading}
+			/>
+			<SuccessModal
+				openState={success.openState}
+				title="Role berhasil dihapus"
+				description="Role sudah dihapus dari daftar hak akses."
+				onClose={() => {
+					if (!mounted.current || !deleted.current || acknowledged.current)
+						return;
+					acknowledged.current = true;
+					success.close();
+					onDeleted?.();
+				}}
+			/>
+			<AlertModal
+				openState={error.openState}
+				title="Role gagal dihapus"
+				message="Role belum dihapus. Silakan periksa koneksi dan coba kembali."
+				hideCancelButton
+				confirmText="Kembali"
+			/>
+		</>
+	);
+}

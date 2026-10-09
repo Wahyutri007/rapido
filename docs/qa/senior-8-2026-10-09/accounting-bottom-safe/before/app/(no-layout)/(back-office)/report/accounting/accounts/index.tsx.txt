@@ -1,0 +1,229 @@
+import Feather from "@expo/vector-icons/Feather";
+import { router } from "expo-router";
+import { useMemo, useState } from "react";
+import {
+	KeyboardAvoidingView,
+	Platform,
+	Pressable,
+	ScrollView,
+	View,
+} from "react-native";
+import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
+import SearchBar from "@/components/common/SearchBar";
+import SuccessModal from "@/components/common/SuccessModal";
+import Text from "@/components/common/Text";
+import {
+	AccountActionSheet,
+	AccountBalanceCard,
+	AccountBalanceSummary,
+	AccountFilterActionSheet,
+} from "@/components/feature/accounting/accounts";
+import { Button, ButtonText } from "@/components/ui/button";
+import { Colors } from "@/constants/Colors";
+import { useAccountingStore } from "@/store/accountingStore";
+import type { Account } from "@/types/ui/accounting/account";
+
+export default function AccountingAccountsIndexScreen() {
+	const accounts = useAccountingStore((state) => state.accounts);
+	const updateBalance = useAccountingStore((state) => state.updateBalance);
+	const resetBalance = useAccountingStore((state) => state.resetBalance);
+	const deleteAccount = useAccountingStore((state) => state.deleteAccount);
+	const getTotals = useAccountingStore((state) => state.getTotals);
+
+	const [searchQuery, setSearchQuery] = useState("");
+	const [selectedClassification, setSelectedClassification] = useState<
+		string | null
+	>(null);
+
+	// Action sheet state
+	const [selectedAccount, setSelectedAccount] = useState<Account | null>(null);
+	const [isActionSheetOpen, setIsActionSheetOpen] = useState(false);
+	const [isFilterSheetOpen, setIsFilterSheetOpen] = useState(false);
+
+	// Modals
+	const deleteModal = useAlertModal();
+	const saveSuccessModal = useAlertModal();
+	const resetConfirmModal = useAlertModal();
+
+	const totals = getTotals();
+
+	// Filtered accounts
+	const filteredAccounts = useMemo(() => {
+		return accounts.filter((acc) => {
+			const matchesSearch =
+				acc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				acc.code.toLowerCase().includes(searchQuery.toLowerCase());
+			const matchesClassification = selectedClassification
+				? acc.classification === selectedClassification
+				: true;
+			return matchesSearch && matchesClassification;
+		});
+	}, [accounts, searchQuery, selectedClassification]);
+
+	const handleOpenActionMenu = (account: Account) => {
+		setSelectedAccount(account);
+		setIsActionSheetOpen(true);
+	};
+
+	const handleCloseActionMenu = () => {
+		setIsActionSheetOpen(false);
+	};
+
+	const handleResetBalance = (account: Account) => {
+		setSelectedAccount(account);
+		resetConfirmModal.open();
+	};
+
+	const confirmResetBalance = () => {
+		if (selectedAccount) {
+			resetBalance(selectedAccount.id);
+		}
+		resetConfirmModal.close();
+	};
+
+	const handleDeleteAccount = (account: Account) => {
+		setSelectedAccount(account);
+		deleteModal.open();
+	};
+
+	const confirmDeleteAccount = () => {
+		if (selectedAccount) {
+			deleteAccount(selectedAccount.id);
+		}
+		deleteModal.close();
+	};
+
+	const handleViewDetail = (account: Account) => {
+		router.push(`/report/accounting/accounts/detail?id=${account.id}`);
+	};
+
+	const handleEditAccount = (account: Account) => {
+		router.push(`/report/accounting/accounts/modify?id=${account.id}`);
+	};
+
+	const handleSaveBalances = () => {
+		saveSuccessModal.open();
+	};
+
+	return (
+		<KeyboardAvoidingView
+			behavior={Platform.OS === "ios" ? "padding" : undefined}
+			className="flex-1 bg-gray-50"
+		>
+			<ScrollView
+				contentContainerStyle={{ padding: 16, paddingBottom: 100, gap: 16 }}
+				showsVerticalScrollIndicator={false}
+			>
+				{/* Search Bar with Filter */}
+				<SearchBar
+					search={searchQuery}
+					setSearch={setSearchQuery}
+					placeholder="Cari akun..."
+					withFilter
+					onFilterPress={() => setIsFilterSheetOpen(true)}
+					filterActive={Boolean(selectedClassification)}
+					variant="light"
+				/>
+
+				{/* List of Accounts */}
+				<View className="gap-3.5">
+					{filteredAccounts.map((account) => (
+						<AccountBalanceCard
+							key={account.id}
+							account={account}
+							onMenuPress={handleOpenActionMenu}
+							onBalanceChange={updateBalance}
+						/>
+					))}
+
+					{filteredAccounts.length === 0 && (
+						<View className="items-center justify-center py-10">
+							<Text className="text-sm text-zinc-400">
+								Tidak ada akun yang ditemukan
+							</Text>
+						</View>
+					)}
+				</View>
+
+				{/* + Tambah Akun Button */}
+				<Pressable
+					onPress={() => router.push("/report/accounting/accounts/modify")}
+					className="flex-row items-center justify-center rounded-2xl border border-dashed border-primary-500 bg-blue-50/50 py-3.5"
+				>
+					<Feather name="plus" size={18} color={Colors.primary} />
+					<Text w="semibold" className="ml-2 text-sm text-primary-500">
+						Tambah Akun
+					</Text>
+				</Pressable>
+
+				{/* Ringkasan Total Card */}
+				<AccountBalanceSummary
+					totalDebit={totals.totalDebit}
+					totalCredit={totals.totalCredit}
+					difference={totals.difference}
+				/>
+			</ScrollView>
+
+			{/* Sticky Bottom Simpan Button */}
+			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+				<Button
+					onPress={handleSaveBalances}
+					size="xl"
+					className="h-12 w-full rounded-2xl bg-primary-500"
+				>
+					<ButtonText className="font-semibold text-base text-white">
+						Simpan
+					</ButtonText>
+				</Button>
+			</View>
+
+			{/* Action Sheet */}
+			<AccountActionSheet
+				account={selectedAccount}
+				isOpen={isActionSheetOpen}
+				onClose={handleCloseActionMenu}
+				onFillBalance={handleEditAccount}
+				onResetBalance={handleResetBalance}
+				onViewDetail={handleViewDetail}
+				onEditAccount={handleEditAccount}
+				onDeleteAccount={handleDeleteAccount}
+			/>
+
+			{/* Filter Action Sheet */}
+			<AccountFilterActionSheet
+				isOpen={isFilterSheetOpen}
+				onClose={() => setIsFilterSheetOpen(false)}
+				selectedClassification={selectedClassification}
+				onSelectClassification={setSelectedClassification}
+			/>
+
+			{/* Delete Confirmation Modal */}
+			<DeleteConfirmModal
+				openState={deleteModal.openState}
+				onConfirm={confirmDeleteAccount}
+				title={`Hapus Akun ${selectedAccount?.name || ""}?`}
+				description="Akun akan dihapus secara permanen dari daftar saldo awal akun."
+			/>
+
+			{/* Reset Balance Confirmation Modal */}
+			<AlertModal
+				openState={resetConfirmModal.openState}
+				onConfirm={confirmResetBalance}
+				title={`Reset Saldo ${selectedAccount?.name || ""}?`}
+				message="Saldo debit dan kredit untuk akun ini akan direset menjadi Rp0."
+				confirmText="Ya, Reset"
+				cancelText="Batal"
+			/>
+
+			{/* Save Success Modal */}
+			<SuccessModal
+				openState={saveSuccessModal.openState}
+				onClose={saveSuccessModal.close}
+				title="Saldo Berhasil Disimpan!"
+				description="Saldo awal akun berhasil diperbarui dan disimpan."
+				buttonText="Tutup"
+			/>
+		</KeyboardAvoidingView>
+	);
+}

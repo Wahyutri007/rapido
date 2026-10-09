@@ -1,0 +1,300 @@
+{
+  "createdAt": "2026-10-09T03:29:05.863Z",
+  "records": [
+    {
+      "frameId": "1:4792",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-hub.png",
+        "file": "references/visual/1-4792-reference.png",
+        "sha256": "143edd6848b2c9be365f0432d7235ee6a25e910b5ae2c4883edca4b742babc27",
+        "width": 390,
+        "height": 1004
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/hub.png",
+        "file": "references/visual/1-4792-historical-implementation.png",
+        "sha256": "f5eb33eb0c51e8be1967c7ca0d0fa2a583ae0d022c033519680fa3a43c9abc2a",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:12487",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-summary-material.png",
+        "file": "references/visual/1-12487-reference.png",
+        "sha256": "e4aa7fd850a5097df4f1708a55baaf2aa002f1f8681820eeae3a38e168c69fc6",
+        "width": 124,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/summary-material.png",
+        "file": "references/visual/1-12487-historical-implementation.png",
+        "sha256": "7700d0e7cecb02ce2e1444c2258481308021ed9ae4763c5d750983ad59fc21aa",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:12956",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-summary-product.png",
+        "file": "references/visual/1-12956-reference.png",
+        "sha256": "b0493fc192f5c6b109a85cbff271a2542c6209e3636ead82c7d9cbe0bfd2dfc2",
+        "width": 133,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/summary-product.png",
+        "file": "references/visual/1-12956-historical-implementation.png",
+        "sha256": "82e5e1b067a3dc39b56757e93cd55d007da6ccc7669a2aff1b200fa8c5309994",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:12059",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-transfer-list.png",
+        "file": "references/visual/1-12059-reference.png",
+        "sha256": "432f944403ac0662d9fadfc0278052b4604e5080c0be19e5f81e71a9dcfc5b38",
+        "width": 344,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/transfer-list.png",
+        "file": "references/visual/1-12059-historical-implementation.png",
+        "sha256": "005617da10ed724c4694d1c8bf5015c740b5521489284af93d5924df82ec682d",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:11949",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-transfer-form.png",
+        "file": "references/visual/1-11949-reference.png",
+        "sha256": "5ec6793bbdb112a3cb3a8af15b933f74190e69911238a3153f5dc82aafc02067",
+        "width": 368,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/transfer-filled-form.png",
+        "file": "references/visual/1-11949-historical-implementation.png",
+        "sha256": "e115d48b5deb0eaa8b59962707afaf5d95201a139ac5872e49db371b0dd49891",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:12312",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-transfer-detail.png",
+        "file": "references/visual/1-12312-reference.png",
+        "sha256": "2885c235064b0513a41b47b6f4c2056890d95f83da910b69a6c6e6941592c426",
+        "width": 390,
+        "height": 850
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/transfer-created-detail.png",
+        "file": "references/visual/1-12312-historical-implementation.png",
+        "sha256": "b51125991f6a3082f8eeb80a63fa19e785331c9ac0c8b0c4620c00aeaae2997f",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:13404",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-adjustment-list.png",
+        "file": "references/visual/1-13404-reference.png",
+        "sha256": "6e21c56b6beb78a6f88e2403d964511340a4325b40c149f1542d84d742307a43",
+        "width": 390,
+        "height": 994
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/adjustment-list.png",
+        "file": "references/visual/1-13404-historical-implementation.png",
+        "sha256": "39f185f158fc92512ea116069130cdc066ceba2d25699a4a006184b7294e486a",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:13851",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-adjustment-form.png",
+        "file": "references/visual/1-13851-reference.png",
+        "sha256": "6806870717da789d7dc07e698ccfdbca57a886d667bc8d630b15b0c81430efaa",
+        "width": 370,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/adjustment-filled-form.png",
+        "file": "references/visual/1-13851-historical-implementation.png",
+        "sha256": "a1f72e5b0aa5086cadb25795a31b88b1f05eeff7c3932932ab58677e5e1ec4f0",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:13605",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-adjustment-detail.png",
+        "file": "references/visual/1-13605-reference.png",
+        "sha256": "226451fbce512b0c55fe7784ef6d35c262d34b0ce8f07fb5ae45841adbf8854b",
+        "width": 359,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/adjustment-detail.png",
+        "file": "references/visual/1-13605-historical-implementation.png",
+        "sha256": "3254f4e7fa6531925ddcf4968209426793166a0026d43ec7e92935634d231247",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:14945",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-purchase-list.png",
+        "file": "references/visual/1-14945-reference.png",
+        "sha256": "fcd56dd517cfdd927ca859892edfcfd526f87d9a6ff57c086998e9d335a7d2e6",
+        "width": 390,
+        "height": 967
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/purchase-list.png",
+        "file": "references/visual/1-14945-historical-implementation.png",
+        "sha256": "ad5099cd434d54d1038551f4f60f8c0128c1c7221fe7c557b174166b6cd6c04b",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:14543",
+      "reference": {
+        "source": "docs/figma/inventory/inventory-purchase-form.png",
+        "file": "references/visual/1-14543-reference.png",
+        "sha256": "7e03624f8854c52e37620fc55e5715498808dd1c6771276f1068c5988cb8760e",
+        "width": 321,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/inventory/purchase-empty-form.png",
+        "file": "references/visual/1-14543-historical-implementation.png",
+        "sha256": "76dfe3be3769cc643db107b71fa145d5a80109101dba216c7000876ce1b9cd63",
+        "width": 390,
+        "height": 1004
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:19624",
+      "reference": {
+        "source": "docs/previews/support/faq-figma.png",
+        "file": "references/visual/1-19624-reference.png",
+        "sha256": "12bd2dc2ba59d6d90001cd8471ad60857e52f6506957a3b68213fee9828ccfd7",
+        "width": 390,
+        "height": 922
+      },
+      "implementation": {
+        "source": "docs/previews/support/faq.png",
+        "file": "references/visual/1-19624-historical-implementation.png",
+        "sha256": "9143cd1dc061804f8d1f42d1d4a63fc8356a455fc5f31777b50b6c34a226cec2",
+        "width": 390,
+        "height": 922
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:19565",
+      "reference": {
+        "source": "docs/previews/support/feature-request-figma.png",
+        "file": "references/visual/1-19565-reference.png",
+        "sha256": "9b09d489247c38842636976da85f719edecd234df03eccb3a4246bf1b9ef774b",
+        "width": 390,
+        "height": 966
+      },
+      "implementation": {
+        "source": "docs/previews/support/feature-request.png",
+        "file": "references/visual/1-19565-historical-implementation.png",
+        "sha256": "d26c12192bba4d67f1be3fc99487bf32cdeafd5a60469cb0a75aa919211d54c3",
+        "width": 390,
+        "height": 966
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:19672",
+      "reference": {
+        "source": "docs/previews/support/feedback-figma.png",
+        "file": "references/visual/1-19672-reference.png",
+        "sha256": "35ca4986419fd6165cbd3d68d8ddfaad8bad3f0517d9c2598e7d33bfe3e7b970",
+        "width": 364,
+        "height": 1024
+      },
+      "implementation": {
+        "source": "docs/previews/support/feedback.png",
+        "file": "references/visual/1-19672-historical-implementation.png",
+        "sha256": "baaa3cae1bd323be3df25c9cedc040af7da8700651a9e787e5262ae7be1a9953",
+        "width": 390,
+        "height": 1100
+      },
+      "implementationProvenance": "Historical preview; source hashes at capture are not certified by this audit."
+    },
+    {
+      "frameId": "1:4897",
+      "reference": {
+        "source": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-screenshot-1-4897-4cf678f6ac26.png",
+        "file": "references/visual/1-4897-reference.png",
+        "sha256": "4cf678f6ac26392b672c2225dea9d8fc95df684ae0b76a8fd826137b5d46d188",
+        "width": 227,
+        "height": 1024
+      },
+      "implementation": null,
+      "implementationProvenance": "No current application capture in this audit."
+    },
+    {
+      "frameId": "1:12401",
+      "reference": {
+        "source": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/docs/qa/qc-figma-audit-2026-10-09/references/cached/cached-screenshot-1-12401-81a23bde2be1.png",
+        "file": "references/visual/1-12401-reference.png",
+        "sha256": "81a23bde2be1cb36f9445ffd5b677581bf73d672179c86632cc7ccc425e24acb",
+        "width": 297,
+        "height": 1024
+      },
+      "implementation": null,
+      "implementationProvenance": "No current application capture in this audit."
+    },
+    {
+      "frameId": "1:12401",
+      "ownerInterim": true,
+      "reference": {
+        "source": "docs/qa/senior-5-2026-10-09/closing-stock-figma/reference-390x1347.png",
+        "file": "references/visual/1-12401-owner-reference.png",
+        "sha256": "4930e174de4e2ddf3b9d5b0acc8479471f25e37bade86ac80987b5927c5f8d73",
+        "width": 390,
+        "height": 1347
+      },
+      "implementation": {
+        "source": "docs/qa/senior-5-2026-10-09/closing-stock-figma/phone-390.png",
+        "file": "references/visual/1-12401-owner-interim.png",
+        "sha256": "239b881efc25ee67b18de4a9577c40dcae5cd9d4967ba0b4249487b67262fe15",
+        "width": 390,
+        "height": 844
+      },
+      "implementationProvenance": "Senior5 interim browser fixture snapshot, copied read-only before final handoff. Not independent current QC execution or final PASS."
+    }
+  ]
+}

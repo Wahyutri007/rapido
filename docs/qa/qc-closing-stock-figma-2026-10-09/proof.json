@@ -1,0 +1,82 @@
+{
+  "createdAt": "2026-10-09T04:46:34.089Z",
+  "scope": "Current tested-source/reference/artifact binding, not native/full application certification.",
+  "ownedSourceAssets": {
+    "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "8d66263f18b26eb12c2afd72139c2f83c5febf741592dee084ec043f29079f5e",
+    "app/(back-office)/inventory/_layout.tsx": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+    "app/(back-office)/_layout.tsx": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/custom/BottomTab.tsx": "4bf76a34267565c30484c7d58996aea83e878454a9d47bee6fd13e3b9ff9d3cb",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+    "assets/images/figma/back-office/home.svg": "01950a87d0c77d3786b4c466826f0d14e7ecf128aaf8c83103db826bcd6ff970",
+    "assets/images/figma/back-office/report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "assets/images/figma/back-office/catalog.svg": "ead314ccb6d12bc7d1be5ecc3898a63b4d50aa5c5ae008f9735f0fabf71ebc68",
+    "assets/images/figma/back-office/inventory.svg": "eec32d9810b9bb365bceda431a47acb2c345fcefbee58b08b6c00ea54d10279e",
+    "assets/images/figma/back-office/manage.svg": "2874a27983252c24db92f55212ffb6f4c4326f8aa3ca074e6f0ecc9bf929dabd",
+    "assets/images/figma/back-office/chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+    "assets/images/figma/back-office/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "assets/images/figma/back-office/divider.svg": "cfc07e1e025349dcb250715322b81d72f0b7edc5e504073f5c6ec62dc99d3aa3",
+    "assets/images/figma/back-office/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "assets/images/inventory/closing-stock/store.svg": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255",
+    "assets/images/inventory/closing-stock/status.svg": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88"
+  },
+  "ownedCount": 20,
+  "runtimeInputs": 2927,
+  "typeSourceClosure": 80,
+  "protectedFrozenArtifacts": 358,
+  "ownedDrift": [],
+  "runtimeDrift": [],
+  "typeDrift": [],
+  "parentDrift": [],
+  "guardObservations": [
+    {
+      "file": "metro.config.js",
+      "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "currentSha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "matches": true
+    },
+    {
+      "file": "babel.config.js",
+      "sha256": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "currentSha256": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "matches": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "sha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "currentSha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "matches": true
+    },
+    {
+      "file": "global.css",
+      "sha256": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "currentSha256": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "matches": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/android.js",
+      "sha256": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb",
+      "currentSha256": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb",
+      "matches": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/web.css",
+      "sha256": "e48b786fdc113fab0ac974469bae7ef594dc2dbd84fe73674c028fe732f00ad1",
+      "currentSha256": "f70257118535252a64a8c0993e48f02984f5d023a8773edaa7267eb2ace1b5fb",
+      "matches": false
+    }
+  ],
+  "guardChangeInterpretation": "Shared generated web.css changed during parallel runtime activity, consistent with Codex4 Metro regeneration coordination. QC fixtures served their own freshly generated, hash-bound CSS; the changed global cache is not a compiled runtime input. Root configs and Android cache remain unchanged. Full app/runtime CSS integration is a separate QA gate.",
+  "bundle": {
+    "file": "D:\\Rapido-QC-temp\\closing-stock-figma-2026-10-09\\entry.bundle.js",
+    "sha256": "6c6a8b0b62d7c1f7c0481c280f4313ff62061c9af31172225155f46dadc43dd1",
+    "bytes": 9391861
+  },
+  "css": {
+    "file": "replay/generated-web-style.css",
+    "sha256": "0184ef11f3e6c583eff054711b5446932ec696bffa16c9536b2105a4abed6c04"
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"extends": "../tsconfig.json",
+	"include": [
+		"../app/(no-layout)/manage/printer/modify.tsx",
+		"../app/(no-layout)/manage/pos-settings/rounding.tsx",
+		"../expo-env.d.ts",
+		"../nativewind-env.d.ts",
+		"types/**/*.ts"
+	]
+}

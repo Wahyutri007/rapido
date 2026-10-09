@@ -1,0 +1,476 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T19:15:45.641Z",
+  "passed": 34,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "role: production query hydrates A",
+      "passed": true,
+      "actual": "Role A",
+      "expected": "Role A"
+    },
+    {
+      "name": "role: production detail and permission paths requested",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: production mutation uses PUT and captured A path",
+      "passed": true,
+      "actual": [
+        "put",
+        "/contents/roles/a"
+      ],
+      "expected": [
+        "put",
+        "/contents/roles/a"
+      ]
+    },
+    {
+      "name": "role: production RHF/Zod trims and deduplicates payload",
+      "passed": true,
+      "actual": {
+        "name": "Role A draft",
+        "permissions": [
+          "cashier"
+        ]
+      },
+      "expected": {
+        "name": "Role A draft",
+        "permissions": [
+          "cashier"
+        ]
+      }
+    },
+    {
+      "name": "role: production request marks current save loading",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: late real factory success cannot open B modal",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: invalidation/refetch cannot replace B draft",
+      "passed": true,
+      "actual": "B draft retained",
+      "expected": "B draft retained"
+    },
+    {
+      "name": "role: B editor remains unlocked after old request",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: real factory invalidates original detail and worker caches",
+      "passed": true,
+      "actual": [
+        [
+          "roles"
+        ],
+        [
+          "roles",
+          "a"
+        ],
+        [
+          "workers"
+        ]
+      ],
+      "expected": [
+        [
+          "roles"
+        ],
+        [
+          "roles",
+          "a"
+        ],
+        [
+          "workers"
+        ]
+      ]
+    },
+    {
+      "name": "role: B request uses new entity path",
+      "passed": true,
+      "actual": "/contents/roles/b",
+      "expected": "/contents/roles/b"
+    },
+    {
+      "name": "role: real Axios error mapper attaches name error",
+      "passed": true,
+      "actual": "Fixture name error",
+      "expected": "Fixture name error"
+    },
+    {
+      "name": "role: indexed permission error aggregates through real mapper",
+      "passed": true,
+      "actual": "Fixture permission error",
+      "expected": "Fixture permission error"
+    },
+    {
+      "name": "role: rejected real request unlocks retry",
+      "passed": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "role: same-event retry produces one transport mutation",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "role: successful current request opens modal and locks",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "worker: production detail query hydrates A",
+      "passed": true,
+      "actual": "Worker A",
+      "expected": "Worker A"
+    },
+    {
+      "name": "worker: role/store prerequisites use production queries",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: same-event photo preparation fetches only once",
+      "passed": true,
+      "actual": [
+        "fixture://face-a",
+        "fixture://face-b",
+        "fixture://id-b"
+      ],
+      "expected": [
+        "fixture://face-a"
+      ]
+    },
+    {
+      "name": "worker: preparation has not reached transport",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: late preparation starts no production mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: late preparation leaves B draft/modal",
+      "passed": true,
+      "actual": [
+        "Worker B draft",
+        false
+      ],
+      "expected": [
+        "Worker B draft",
+        false
+      ]
+    },
+    {
+      "name": "worker: real update uses POST entity path",
+      "passed": true,
+      "actual": [
+        "post",
+        "/contents/workers/b"
+      ],
+      "expected": [
+        "post",
+        "/contents/workers/b"
+      ]
+    },
+    {
+      "name": "worker: real update retains multipart PUT override",
+      "passed": true,
+      "actual": "PUT",
+      "expected": "PUT"
+    },
+    {
+      "name": "worker: real update contains both prepared files",
+      "passed": true,
+      "actual": [
+        {
+          "name": "face-b.png",
+          "size": 5,
+          "type": "image/png"
+        },
+        {
+          "name": "id-b.png",
+          "size": 5,
+          "type": "image/png"
+        }
+      ],
+      "expected": [
+        {
+          "name": "face-b.png",
+          "size": 5,
+          "type": "image/png"
+        },
+        {
+          "name": "id-b.png",
+          "size": 5,
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "worker: real update carries assigned role/store",
+      "passed": true,
+      "actual": [
+        "role-a",
+        "store-a"
+      ],
+      "expected": [
+        "role-a",
+        "store-a"
+      ]
+    },
+    {
+      "name": "worker: real update excludes account passwords",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: request configured as multipart",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: late update cannot change new create draft",
+      "passed": true,
+      "actual": "New create draft",
+      "expected": "New create draft"
+    },
+    {
+      "name": "worker: late update leaves new create lock/modal",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: production update invalidates original worker cache",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: production create sends one POST",
+      "passed": true,
+      "actual": [
+        1,
+        "post",
+        "/contents/workers"
+      ],
+      "expected": [
+        1,
+        "post",
+        "/contents/workers"
+      ]
+    },
+    {
+      "name": "worker: create multipart sends confirmation and excludes override",
+      "passed": true,
+      "actual": [
+        "password123",
+        "password123",
+        false
+      ],
+      "expected": [
+        "password123",
+        "password123",
+        false
+      ]
+    },
+    {
+      "name": "worker: current create success locks editor",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "no unexpected React/runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "sourceFingerprints": {
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "app/(no-layout)/(back-office)/manage/roles/modify.tsx": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "schema/add/role.ts": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+    "app/(no-layout)/manage/workers/modify.tsx": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+    "api/hooks/stores.ts": "09e773358b1846009525f56efcf3d5693385193eb9613e740ec32f2d379b39dc",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "schema/add/worker.ts": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a"
+  },
+  "getCalls": [
+    "/contents/roles/a",
+    "/reference-data/permissions",
+    "/contents/roles/b",
+    "/contents/roles/b",
+    "/contents/roles/b",
+    "/contents/roles/b",
+    "/contents/workers/a",
+    "/contents/roles",
+    "/stores",
+    "/contents/workers/b"
+  ],
+  "mutationCalls": [
+    {
+      "method": "put",
+      "url": "/contents/roles/a",
+      "payload": {
+        "name": "Role A draft",
+        "permissions": [
+          "cashier"
+        ]
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "put",
+      "url": "/contents/roles/b",
+      "payload": {
+        "name": "B draft retained",
+        "permissions": [
+          "cashier"
+        ]
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "put",
+      "url": "/contents/roles/b",
+      "payload": {
+        "name": "B draft retained",
+        "permissions": [
+          "cashier"
+        ]
+      },
+      "contentType": "application/json"
+    },
+    {
+      "method": "post",
+      "url": "/contents/workers/b",
+      "payload": {
+        "name": "Worker B draft",
+        "email": "b@example.com",
+        "phone": "081234567890",
+        "role_id": "role-a",
+        "store_id": "store-a",
+        "address": "Address b",
+        "date_of_birth": "1998-06-01",
+        "_method": "PUT",
+        "face_scan": {
+          "name": "face-b.png",
+          "size": 5,
+          "type": "image/png"
+        },
+        "id_scan": {
+          "name": "id-b.png",
+          "size": 5,
+          "type": "image/png"
+        }
+      },
+      "contentType": "multipart/form-data"
+    },
+    {
+      "method": "post",
+      "url": "/contents/workers",
+      "payload": {
+        "name": "New worker",
+        "email": "new@example.com",
+        "phone": "08123",
+        "role_id": "role-a",
+        "store_id": "store-a",
+        "address": "",
+        "date_of_birth": "",
+        "password": "password123",
+        "password_confirmation": "password123"
+      },
+      "contentType": "multipart/form-data"
+    }
+  ],
+  "invalidations": [
+    [
+      "roles"
+    ],
+    [
+      "roles",
+      "a"
+    ],
+    [
+      "workers"
+    ],
+    [
+      "roles"
+    ],
+    [
+      "roles",
+      "b"
+    ],
+    [
+      "workers"
+    ],
+    [
+      "workers"
+    ],
+    [
+      "workers",
+      "b"
+    ],
+    [
+      "workers"
+    ]
+  ],
+  "realHTTPRequests": 0,
+  "scope": "Production routes/editors/RHF/Zod/QueryClient/hooks/factory/common/error mapping/usePostRequest/workerFormData; Axios adapter and native/UI/auth/fetch/navigation fixture. No real backend/browser/device."
+}

@@ -1,0 +1,3 @@
+Error: exported SVG filter assets load
+    at check (C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:5:131)
+    at C:\Users\Wahyu\Downloads\rapido-dev\rapido-dev\docs\qa\senior-5-2026-10-09\closing-stock\check-browser.cjs:25:1

@@ -1,0 +1,169 @@
+{
+  "owner": "Software Developer Senior / Codex-3",
+  "ticket": "SD3-014",
+  "status": "FAILED",
+  "sourceHashes": {
+    "app/(no-layout)/manage/integrations/_layout.tsx": "62809b63780709483a5ec737badb9bd3847fe63173aef44b6adec5808dcbafa1",
+    "app/(no-layout)/manage/integrations/index.tsx": "b66ee1b807851e7d47ea454685571fbfd18941b8e684e60e772fae492dd6ee37",
+    "app/(no-layout)/manage/integrations/modify.tsx": "2bb12092b119edcee002958c9342345114cef69a2e3b2c1d6ca439eb53555646",
+    "app/(no-layout)/manage/integrations/detail.tsx": "c7ed4330d905adfa3f8b2a9510a62b0463a5d5bc91b94f203c1886eac2cdec6b",
+    "components/feature/manage/integrations/IntegrationListScreen.tsx": "6f9b07b9499a3c9cfdd1f99b3dac6cfb48ed7dcc758ed7c6abfd6eb7f8acb4d9",
+    "components/feature/manage/integrations/IntegrationModifyScreen.tsx": "42835046717e3a24b3d54489590e7da71edd823d78436cd6c9900e4914a37363",
+    "components/feature/manage/integrations/IntegrationDetailScreen.tsx": "13bcc95cb1ed63d356d1d3e87b1b444f7f0b7064ac06b52b9fe1a25573570a57",
+    "components/feature/manage/integrations/IntegrationDeleteDialog.tsx": "36dc779d7c67e01bb748fd041793928c9a25d68bf22227a79603894ffd94d15d",
+    "schema/manage/integration.ts": "4161e3bd540d8cdfcf39cbd973db937a77e1391704ca4bffd2fcbdf8e518c44b",
+    "store/manageIntegrationStore.ts": "5468a6ea302afb2b79cf4d8a56b92d7ed9240c96854a148809bf6d195ced6ca2",
+    "types/ui/manage/integration.ts": "80e40b25a237a5f565fa410db4449069a5e161d878bd6b5464c96a53924f6fd2",
+    "app/(back-office)/manage.tsx": "69cd0e9f28d7e316b908b03dbc00627235ddbadab6fcca08327a13aa798e14ed",
+    "app/(no-layout)/manage/_layout.tsx": "356813832574d3329b74a39dc6e6b630c802fa2cc2f2036ad66095e2b4d2f47f"
+  },
+  "sourceDrift": [],
+  "lint": {
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "app/(back-office)/manage.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/_layout.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/integrations/_layout.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/integrations/detail.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/integrations/index.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "app/(no-layout)/manage/integrations/modify.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/integrations/IntegrationDeleteDialog.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/integrations/IntegrationListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/integrations/IntegrationModifyScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "schema/manage/integration.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "store/manageIntegrationStore.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "types/ui/manage/integration.ts",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "stdout": "Checked 13 files in 74ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "whitespace": [],
+  "diagnostics": [
+    {
+      "code": 2345,
+      "file": "app/(no-layout)/manage/integrations/modify.tsx",
+      "line": 16,
+      "message": "Argument of type '\"/manage/integrations\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \"/\" | `/?${string}` | `/#${string}` | \"/../api/hooks/otp\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \"/../.expo/qc-success-role-dialog\" | ... 2025 more ... | { ...; }'."
+    },
+    {
+      "code": 2345,
+      "file": "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+      "line": 83,
+      "message": "Argument of type '\"/manage/integrations\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \"/\" | `/?${string}` | `/#${string}` | \"/../api/hooks/otp\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \"/../.expo/qc-success-role-dialog\" | ... 2025 more ... | { ...; }'."
+    },
+    {
+      "code": 2345,
+      "file": "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+      "line": 90,
+      "message": "Argument of type '\"/manage/integrations\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \"/\" | `/?${string}` | `/#${string}` | \"/../api/hooks/otp\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \"/../.expo/qc-success-role-dialog\" | ... 2025 more ... | { ...; }'."
+    },
+    {
+      "code": 2345,
+      "file": "components/feature/manage/integrations/IntegrationModifyScreen.tsx",
+      "line": 158,
+      "message": "Argument of type '\"/manage/integrations\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \"/\" | `/?${string}` | `/#${string}` | \"/../api/hooks/otp\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \"/../.expo/qc-success-role-dialog\" | ... 2025 more ... | { ...; }'."
+    }
+  ],
+  "focusedTypecheck": {
+    "roots": [
+      "app/(no-layout)/manage/integrations/_layout.tsx",
+      "app/(no-layout)/manage/integrations/index.tsx",
+      "app/(no-layout)/manage/integrations/modify.tsx",
+      "app/(no-layout)/manage/integrations/detail.tsx",
+      "components/feature/manage/integrations/IntegrationListScreen.tsx",
+      "components/feature/manage/integrations/IntegrationModifyScreen.tsx",
+      "components/feature/manage/integrations/IntegrationDetailScreen.tsx",
+      "components/feature/manage/integrations/IntegrationDeleteDialog.tsx",
+      "schema/manage/integration.ts",
+      "store/manageIntegrationStore.ts",
+      "types/ui/manage/integration.ts",
+      "app/(back-office)/manage.tsx",
+      "app/(no-layout)/manage/_layout.tsx"
+    ],
+    "config": "tsconfig.json",
+    "configHash": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "declarationRoots": [
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+      "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+    ],
+    "programSourceFiles": 1314,
+    "scope": "Actual tsconfig and 13 source roots/import/declaration closure, not full-project TypeScript"
+  }
+}

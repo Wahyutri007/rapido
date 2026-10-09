@@ -1,0 +1,863 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T20:17:16.017Z",
+  "status": "PASS_PROPOSAL_AND_FINGERPRINTS",
+  "currentApplicationDecision": "CHANGES_REQUESTED",
+  "sourceLint": {
+    "run": {
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/income/modify.tsx",
+        "app/(no-layout)/manage/income/detail.tsx",
+        "components/feature/manage/income/IncomeForm.tsx",
+        "components/feature/accounting/CashEntryForm.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "sourceBiome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "app/(no-layout)/manage/income/modify.tsx",
+      "app/(no-layout)/manage/income/detail.tsx",
+      "components/feature/manage/income/IncomeForm.tsx",
+      "components/feature/accounting/CashEntryForm.tsx"
+    ],
+    "exitCode": 0
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--check",
+      "--",
+      "app/(no-layout)/manage/income/modify.tsx",
+      "app/(no-layout)/manage/income/detail.tsx",
+      "components/feature/manage/income/IncomeForm.tsx",
+      "components/feature/accounting/CashEntryForm.tsx"
+    ],
+    "exitCode": 0
+  },
+  "candidateLint": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\manage\\income\\detail.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\feature\\accounting\\CashEntryForm.tsx",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ],
+  "candidateBiome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-income-2026-10-09\\proposal\\detail.tsx",
+      "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-income-2026-10-09\\proposal\\CashEntryForm.tsx"
+    ],
+    "exitCode": 0
+  },
+  "jsxMatches": [
+    {
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "normalizedBindings": {
+        "DetailBottomActions": [
+          "onDelete"
+        ],
+        "DeleteConfirmModal": [
+          "onClose",
+          "onConfirm"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "file": "components/feature/accounting/CashEntryForm.tsx",
+      "normalizedBindings": {
+        "BottomActionButton": [
+          "onPress"
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "patch": {
+    "file": "income-lifecycle.patch",
+    "sha256": "7ca7345581c1df22e73695011c5345625f9d47cd97fa1af5e603678f0cce0013",
+    "applied": false,
+    "applyCheck": {
+      "executable": "git",
+      "args": [
+        "-c",
+        "core.autocrlf=false",
+        "apply",
+        "--check",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-income-2026-10-09\\income-lifecycle.patch"
+      ],
+      "exitCode": 0
+    }
+  },
+  "trackedSourceStable": [
+    {
+      "file": "app/(no-layout)/manage/income/modify.tsx",
+      "expected": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "actual": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/income/IncomeForm.tsx",
+      "expected": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "actual": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "passed": true
+    },
+    {
+      "file": "components/feature/accounting/CashEntryForm.tsx",
+      "expected": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7",
+      "actual": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7",
+      "passed": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "expected": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "actual": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "expected": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "actual": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/expenses.ts",
+      "expected": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "actual": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/expense-date.ts",
+      "expected": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "actual": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "passed": true
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "file": "schema/manage/expense.ts",
+      "expected": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "actual": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "passed": true
+    },
+    {
+      "file": "schema/accounting/cash-entry.ts",
+      "expected": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "actual": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "passed": true
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "expected": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "actual": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "expected": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "actual": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "expected": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "actual": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "expected": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "actual": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "passed": true
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "expected": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "actual": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/incomes.ts",
+      "expected": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "actual": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "passed": true
+    },
+    {
+      "file": "schema/manage/income.ts",
+      "expected": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "actual": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "expected": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+      "actual": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+      "passed": true
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": ".expo/income-model-check.cjs",
+      "expected": "c67815ab17c3b14641e6e6ac0a81146baa129e4223b87b5526936b3378b0c26d",
+      "actual": "c67815ab17c3b14641e6e6ac0a81146baa129e4223b87b5526936b3378b0c26d",
+      "passed": true
+    },
+    {
+      "file": "docs/previews/income/README.md",
+      "expected": "6ca2e4d459dedd5e552ef96177c47200f6cb1a7d716243c8d693f7b852d7f9c6",
+      "actual": "6ca2e4d459dedd5e552ef96177c47200f6cb1a7d716243c8d693f7b852d7f9c6",
+      "passed": true
+    },
+    {
+      "file": "docs/previews/income/model-results.json",
+      "expected": "f93f5893838a168700987b9979ec3d831d015406a4b484a04e2bbf3f3891c939",
+      "actual": "f93f5893838a168700987b9979ec3d831d015406a4b484a04e2bbf3f3891c939",
+      "passed": true
+    },
+    {
+      "file": "docs/previews/income/results.json",
+      "expected": "827a5b7acbdebfef3cd3358688ad69f3ca26fb69981414435f4994dee9be952b",
+      "actual": "827a5b7acbdebfef3cd3358688ad69f3ca26fb69981414435f4994dee9be952b",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "actual": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "expected": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "actual": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "passed": true
+    },
+    {
+      "file": "node_modules/zod/index.cjs",
+      "expected": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+      "actual": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+      "passed": true
+    }
+  ],
+  "runtimeMatches": [
+    {
+      "suite": "current",
+      "file": "app/(no-layout)/manage/income/modify.tsx",
+      "expected": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "actual": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "components/feature/manage/income/IncomeForm.tsx",
+      "expected": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "actual": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "components/feature/accounting/CashEntryForm.tsx",
+      "expected": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7",
+      "actual": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/expenses.ts",
+      "expected": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "actual": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/incomes.ts",
+      "expected": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "actual": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "lib/manage/expenses.ts",
+      "expected": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "actual": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "lib/manage/expense-date.ts",
+      "expected": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "actual": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "schema/manage/expense.ts",
+      "expected": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "actual": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "schema/accounting/cash-entry.ts",
+      "expected": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "actual": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/accounts.ts",
+      "expected": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "actual": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "expected": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "actual": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/closing-journal.ts",
+      "expected": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "actual": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/general-journal.ts",
+      "expected": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "actual": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "constants/data/accounting/general-ledger.ts",
+      "expected": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "actual": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "lib/manage/incomes.ts",
+      "expected": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "actual": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "schema/manage/income.ts",
+      "expected": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "actual": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "expected": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+      "actual": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "suite": "current",
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "app/(no-layout)/manage/income/modify.tsx",
+      "expected": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "actual": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "components/feature/manage/income/IncomeForm.tsx",
+      "expected": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "actual": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "components/feature/accounting/CashEntryForm.tsx",
+      "expected": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50",
+      "actual": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/expenses.ts",
+      "expected": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "actual": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/incomes.ts",
+      "expected": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "actual": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "lib/manage/expenses.ts",
+      "expected": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "actual": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "lib/manage/expense-date.ts",
+      "expected": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "actual": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "schema/manage/expense.ts",
+      "expected": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "actual": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "schema/accounting/cash-entry.ts",
+      "expected": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "actual": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/accounts.ts",
+      "expected": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "actual": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "expected": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "actual": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/closing-journal.ts",
+      "expected": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "actual": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/general-journal.ts",
+      "expected": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "actual": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "constants/data/accounting/general-ledger.ts",
+      "expected": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "actual": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "lib/manage/incomes.ts",
+      "expected": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "actual": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "schema/manage/income.ts",
+      "expected": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "actual": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "expected": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+      "actual": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-income",
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "app/(no-layout)/manage/income/modify.tsx",
+      "expected": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "actual": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "components/feature/manage/income/IncomeForm.tsx",
+      "expected": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "actual": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "components/feature/accounting/CashEntryForm.tsx",
+      "expected": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50",
+      "actual": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/expenses.ts",
+      "expected": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "actual": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/incomes.ts",
+      "expected": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "actual": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "lib/manage/expenses.ts",
+      "expected": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "actual": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "lib/manage/expense-date.ts",
+      "expected": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "actual": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "lib/accounting/date.ts",
+      "expected": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "actual": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "schema/manage/expense.ts",
+      "expected": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "actual": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "schema/accounting/cash-entry.ts",
+      "expected": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "actual": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "store/accountingStore.ts",
+      "expected": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "actual": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/accounts.ts",
+      "expected": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "actual": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "expected": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "actual": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/closing-journal.ts",
+      "expected": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "actual": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/general-journal.ts",
+      "expected": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "actual": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "constants/data/accounting/general-ledger.ts",
+      "expected": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "actual": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "lib/manage/incomes.ts",
+      "expected": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "actual": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "schema/manage/income.ts",
+      "expected": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "actual": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "expected": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+      "actual": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "suite": "candidate-expense",
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    }
+  ],
+  "reviewedSourceHashes": {
+    "app/(no-layout)/manage/income/modify.tsx": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+    "app/(no-layout)/manage/income/detail.tsx": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+    "components/feature/manage/income/IncomeForm.tsx": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+    "components/feature/accounting/CashEntryForm.tsx": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7"
+  },
+  "proposalSourceHashes": {
+    "app/(no-layout)/manage/income/detail.tsx": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+    "components/feature/accounting/CashEntryForm.tsx": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50"
+  },
+  "counts": {
+    "current": {
+      "passed": 24,
+      "failed": 12,
+      "errors": 0
+    },
+    "candidate": {
+      "passed": 36,
+      "failed": 0,
+      "errors": 0
+    },
+    "candidateExpense": {
+      "passed": 6,
+      "failed": 0,
+      "errors": 0
+    },
+    "replayedModel": 43
+  }
+}

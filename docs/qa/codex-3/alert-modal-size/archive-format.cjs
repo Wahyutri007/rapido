@@ -1,0 +1,10 @@
+const fs = require("node:fs"), path = require("node:path"), assert = require("node:assert/strict"), crypto = require("node:crypto");
+const hash = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+const source = "components/common/AlertModal.tsx", destination = path.join(__dirname, "interim/type-renamed");
+assert(!fs.existsSync(destination), "Keep pre-format evidence");
+assert.equal(hash(source), "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95");
+fs.mkdirSync(destination);
+for (const file of ["final", "delete-lifecycle", "quality-results.json", "quality.cjs"]) fs.cpSync(path.join(__dirname, file), path.join(destination, file), { recursive: true });
+fs.copyFileSync(source, path.join(destination, "AlertModal.tsx.txt"));
+fs.writeFileSync(path.join(destination, "README.md"), "Private type renamed, source3323ecad: browser114/lifecycle156/lint/AST/type/runtime-erasure PASS. Biome requests only multiline function signature. Final source formats that signature; this stage remains historical.\n");
+console.log("Archived pre-format source/checks");

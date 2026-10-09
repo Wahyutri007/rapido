@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Preserve archived evidence bytes and the hashes in frozen manifests.
+docs/qa/** -text
+docs/figma/** -text
+docs/previews/** -text

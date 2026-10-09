@@ -1,0 +1,1482 @@
+{
+  "createdAt": "2026-10-09T00:07:53.414Z",
+  "hashes": {
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "assets/images/illustrations/index.ts": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+    "assets/images/illustrations/action-success.png": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/MultiSelect.tsx": "0afa7aa7faa366fed7bbac063db6aec695a76f1b4aba72193454ec10ad6fbdc1",
+    "hooks/useSearch.ts": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "node_modules/react-native-css-interop/.cache/android.js": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "node_modules/react-native-css-interop/.cache/web.css": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+    "docs/qa/codex-3/success-modal-size/verification.json": "a68399be63aef1f7abc11f9e0f4f58291df544ed8af3b93fff16b09c281caf04",
+    "docs/qa/codex-3/alert-modal-size/verification.json": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+    "docs/qa/qc-stock-ui-2026-10-09/DECISION.json": "c1483d8b5c8577c0a8f502b74656106463d55651bf9f338a7b3e976b68e5234c"
+  },
+  "handoffMatches": [
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "passed": true
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+      "expected": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+      "actual": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+      "passed": true
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "passed": true
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "passed": true
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "passed": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.web.tsx",
+      "expected": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "actual": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    }
+  ],
+  "oldContractChanges": [
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "historicalHash": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "currentHash": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "matchesLatestHandoff": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "historicalHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "currentHash": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "matchesLatestHandoff": true
+    }
+  ],
+  "historicalMatches": [
+    {
+      "file": "docs/qa/codex-3/success-modal-size/callers.json",
+      "expected": "df6b07d634a7288f1115906d84345b356afa52043350fbfa17e2731c9f90863e",
+      "actual": "df6b07d634a7288f1115906d84345b356afa52043350fbfa17e2731c9f90863e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/custom-320.png",
+      "expected": "533d9087cfe43b2006326198779a1174b1b106437ca359fc796018cc87cdf0fd",
+      "actual": "533d9087cfe43b2006326198779a1174b1b106437ca359fc796018cc87cdf0fd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/delete-lifecycle/results.json",
+      "expected": "9750114ecb184b8b1a02951a5e5959c8e4b4cf59cafac7719a453e6673a5afc2",
+      "actual": "9750114ecb184b8b1a02951a5e5959c8e4b4cf59cafac7719a453e6673a5afc2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/direct-320.png",
+      "expected": "023ec33e95cb7ec0a761220566583290404c741e026b368b27d02a2f9c8ad1f6",
+      "actual": "023ec33e95cb7ec0a761220566583290404c741e026b368b27d02a2f9c8ad1f6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/direct-360.png",
+      "expected": "c7a7a779f7041ad771434e1e858998dae676f1914d39a484cfb3931c4537f6f7",
+      "actual": "c7a7a779f7041ad771434e1e858998dae676f1914d39a484cfb3931c4537f6f7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/direct-390.png",
+      "expected": "2a873cfdb4cf1809335dafd0e755cf828b43b3c10dd976490cb38b5170968199",
+      "actual": "2a873cfdb4cf1809335dafd0e755cf828b43b3c10dd976490cb38b5170968199",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/direct-768.png",
+      "expected": "5fef85be9e99e1499a234c6e3c7a28e0d03aad9053eafd55309c8309cdab68f5",
+      "actual": "5fef85be9e99e1499a234c6e3c7a28e0d03aad9053eafd55309c8309cdab68f5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/HANDOFF.md",
+      "expected": "e07b20483fca9d10285c540d53fdef3d692d506a46b9d933179b2bebe9acffe7",
+      "actual": "e07b20483fca9d10285c540d53fdef3d692d506a46b9d933179b2bebe9acffe7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/custom-320.png",
+      "expected": "0901902d8f903b572a755ae018457d4ab2cca77d0eeaced92d6eeeaa29090f9c",
+      "actual": "0901902d8f903b572a755ae018457d4ab2cca77d0eeaced92d6eeeaa29090f9c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/direct-320.png",
+      "expected": "5222bf940a90bcbe24cba74f5d3653fa96e0718f63e808773bde06e3a41bfde5",
+      "actual": "5222bf940a90bcbe24cba74f5d3653fa96e0718f63e808773bde06e3a41bfde5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/direct-360.png",
+      "expected": "96fe5ff11612b9e03e809f2fb8d5e112a1137781dbd76cb9624b96ca101a755a",
+      "actual": "96fe5ff11612b9e03e809f2fb8d5e112a1137781dbd76cb9624b96ca101a755a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/direct-390.png",
+      "expected": "7f37183d136c1bc11402a6de264714eb1e6f412d253e8e750badbeff49c7833a",
+      "actual": "7f37183d136c1bc11402a6de264714eb1e6f412d253e8e750badbeff49c7833a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/direct-768.png",
+      "expected": "d94d444ac37e7117ddf003200573d4869106a09b1b7fc0a97515acd02d262794",
+      "actual": "d94d444ac37e7117ddf003200573d4869106a09b1b7fc0a97515acd02d262794",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/legacy-320.png",
+      "expected": "6f9fb00dfbdfa7247a97eac4a1836316be628edd63c726b4d174d0ccec3fcb4e",
+      "actual": "6f9fb00dfbdfa7247a97eac4a1836316be628edd63c726b4d174d0ccec3fcb4e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/long-320.png",
+      "expected": "6b0b5cd49cbfc598acd23fc5b38d15730d4ad89210a562efe5b39d3fc7a17b94",
+      "actual": "6b0b5cd49cbfc598acd23fc5b38d15730d4ad89210a562efe5b39d3fc7a17b94",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/member-320.png",
+      "expected": "1d4984dfa5adb62a0ffd76046d987fc1b70ce1ad4485fbd96623b46dd82c2e01",
+      "actual": "1d4984dfa5adb62a0ffd76046d987fc1b70ce1ad4485fbd96623b46dd82c2e01",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/message-320.png",
+      "expected": "46f4f6ffa2f910b8634bdeeb1b398619e91d00f243008601ef914f414bd80a7d",
+      "actual": "46f4f6ffa2f910b8634bdeeb1b398619e91d00f243008601ef914f414bd80a7d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/modal-browser-results.json",
+      "expected": "63bb55f506596e1099d44b21f8944cd5095b25c14e312df8a2deb1a0cebe2697",
+      "actual": "63bb55f506596e1099d44b21f8944cd5095b25c14e312df8a2deb1a0cebe2697",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/no-close-320.png",
+      "expected": "d2440e816877e1b9f9c8a477213d60ace8e5edef802dfc04ca9b7f2ec621d5fa",
+      "actual": "d2440e816877e1b9f9c8a477213d60ace8e5edef802dfc04ca9b7f2ec621d5fa",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/node-320.png",
+      "expected": "24397e5385cbbe652333bb8d51af321dd3f1c40a126168015ef7642519a2fc9a",
+      "actual": "24397e5385cbbe652333bb8d51af321dd3f1c40a126168015ef7642519a2fc9a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/role-320.png",
+      "expected": "e4563ecf2a75b33d7a9dc8218c73191f3713c77399601064b1dfefb86684314e",
+      "actual": "e4563ecf2a75b33d7a9dc8218c73191f3713c77399601064b1dfefb86684314e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/browser-results.json",
+      "expected": "cb7a33773b31795796b5ae47e84d6505154cd7657c3d438cc7a773855b590adb",
+      "actual": "cb7a33773b31795796b5ae47e84d6505154cd7657c3d438cc7a773855b590adb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/category-320.png",
+      "expected": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "actual": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/empty-320.png",
+      "expected": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "actual": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/list-error-320.png",
+      "expected": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "actual": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/list-loading-320.png",
+      "expected": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "actual": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/main-320.png",
+      "expected": "a410228af4623b7751bbcdb4eb591c8a494099acc458ac03e1fd0e8b8e68e1ef",
+      "actual": "a410228af4623b7751bbcdb4eb591c8a494099acc458ac03e1fd0e8b8e68e1ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/main-360.png",
+      "expected": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "actual": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/main-390.png",
+      "expected": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "actual": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/picker-320.png",
+      "expected": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "actual": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/picker-360.png",
+      "expected": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "actual": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/picker-390.png",
+      "expected": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "actual": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/picker-768.png",
+      "expected": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "actual": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/save-error-320.png",
+      "expected": "886561407da84bfc290886ee663221ed341293d90fb08fe19df7ae8c4bb1a0c7",
+      "actual": "886561407da84bfc290886ee663221ed341293d90fb08fe19df7ae8c4bb1a0c7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/settings-error-320.png",
+      "expected": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "actual": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/settings-loading-320.png",
+      "expected": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "actual": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/success-dom.json",
+      "expected": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "actual": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/success-resize-320.png",
+      "expected": "79b4582ffa6eaecc7a740361a05365ea56909f402ee09b3f36a290f1492b3a42",
+      "actual": "79b4582ffa6eaecc7a740361a05365ea56909f402ee09b3f36a290f1492b3a42",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/stock-final/web-before.css",
+      "expected": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "actual": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/SuccessModal.tsx.txt",
+      "expected": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f",
+      "actual": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/image-only/worker-320.png",
+      "expected": "1edc0a9a69ee8f44bfa055f6651caf59a5781059e127bae7ce27782177807537",
+      "actual": "1edc0a9a69ee8f44bfa055f6651caf59a5781059e127bae7ce27782177807537",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/inputs-before.json",
+      "expected": "716140e3a555d1dc86d19c01628ed1952a4ec12d6b4c6e5f4152f67c862a1f0b",
+      "actual": "716140e3a555d1dc86d19c01628ed1952a4ec12d6b4c6e5f4152f67c862a1f0b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/legacy-320.png",
+      "expected": "dc075151b402350d5cdb30c9af77349bc3fd627dee2f2a10bdf46e0abd4f9826",
+      "actual": "dc075151b402350d5cdb30c9af77349bc3fd627dee2f2a10bdf46e0abd4f9826",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/long-320.png",
+      "expected": "4137f3ed508d27210abd7bbbc56055946500f3a822844e2a2a336c20a67ef1e5",
+      "actual": "4137f3ed508d27210abd7bbbc56055946500f3a822844e2a2a336c20a67ef1e5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/member-320.png",
+      "expected": "2e88458a03b91c0983430cc96ffbae02f0cfc476cfc60a36f323731a03a38ab9",
+      "actual": "2e88458a03b91c0983430cc96ffbae02f0cfc476cfc60a36f323731a03a38ab9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/message-320.png",
+      "expected": "e60b70787f0d5b526d01435270ea0668ab79ff00a404eb0c063c2ab069e561cd",
+      "actual": "e60b70787f0d5b526d01435270ea0668ab79ff00a404eb0c063c2ab069e561cd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/modal-browser-results.json",
+      "expected": "3124ce201f8661836a778766c767dfa4465a0bf7e4d2208f0b9ca870cdcfed90",
+      "actual": "3124ce201f8661836a778766c767dfa4465a0bf7e4d2208f0b9ca870cdcfed90",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/modal-browser.cjs",
+      "expected": "0f1bdbedba603374de3e5d018e2472bfbf1be7cf119e350f21dab9b5823d5642",
+      "actual": "0f1bdbedba603374de3e5d018e2472bfbf1be7cf119e350f21dab9b5823d5642",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/modal-entry.fixture.jsx",
+      "expected": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "actual": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/no-close-320.png",
+      "expected": "e8a81e4c16732471c646bc29c8cde247c64286ac58ede403fd62341c832b3c7a",
+      "actual": "e8a81e4c16732471c646bc29c8cde247c64286ac58ede403fd62341c832b3c7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/node-320.png",
+      "expected": "125b425e6bb0486565bc41a90a4add18762b45bc88965ef4981f45a9e9afb97f",
+      "actual": "125b425e6bb0486565bc41a90a4add18762b45bc88965ef4981f45a9e9afb97f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/prepare.cjs",
+      "expected": "993be95943501411ae3ac435c238155dbbf8df7c819e2cef9ebe972cad2df0dd",
+      "actual": "993be95943501411ae3ac435c238155dbbf8df7c819e2cef9ebe972cad2df0dd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/quality-results.json",
+      "expected": "7c3b2aab89741c9de994013a8f74bd63e83bc1c5d0db3fc6c86c351ff7815f74",
+      "actual": "7c3b2aab89741c9de994013a8f74bd63e83bc1c5d0db3fc6c86c351ff7815f74",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/quality.cjs",
+      "expected": "9b25349123bd3cf950a11a23f1f248abb963485aacd9e2729c2d76ab71652ed9",
+      "actual": "9b25349123bd3cf950a11a23f1f248abb963485aacd9e2729c2d76ab71652ed9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/replay-delete.cjs",
+      "expected": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "actual": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/role-320.png",
+      "expected": "92973a3e1d654336cb9e22718c2129f987dbc8547b46924852bc56e36d3bda3b",
+      "actual": "92973a3e1d654336cb9e22718c2129f987dbc8547b46924852bc56e36d3bda3b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/browser-results.json",
+      "expected": "72b7db86b04a259002a7a6ad5396d83ed0875a6719e69f3d6ff2107492b9ab36",
+      "actual": "72b7db86b04a259002a7a6ad5396d83ed0875a6719e69f3d6ff2107492b9ab36",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/category-320.png",
+      "expected": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "actual": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/empty-320.png",
+      "expected": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "actual": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/list-error-320.png",
+      "expected": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "actual": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/list-loading-320.png",
+      "expected": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "actual": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/main-320.png",
+      "expected": "a410228af4623b7751bbcdb4eb591c8a494099acc458ac03e1fd0e8b8e68e1ef",
+      "actual": "a410228af4623b7751bbcdb4eb591c8a494099acc458ac03e1fd0e8b8e68e1ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/main-360.png",
+      "expected": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "actual": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/main-390.png",
+      "expected": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "actual": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/picker-320.png",
+      "expected": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "actual": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/picker-360.png",
+      "expected": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "actual": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/picker-390.png",
+      "expected": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "actual": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/picker-768.png",
+      "expected": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "actual": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/save-error-320.png",
+      "expected": "7cae2411045dc94a1c01a4ea59d93fbf7cd42edcbd714585515ae38dea279d74",
+      "actual": "7cae2411045dc94a1c01a4ea59d93fbf7cd42edcbd714585515ae38dea279d74",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/settings-error-320.png",
+      "expected": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "actual": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/settings-loading-320.png",
+      "expected": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "actual": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/success-dom.json",
+      "expected": "5329e1f7adfac3f6de7ec911d40ca255bf06fd2afdb427f0c946b8237ac9b84d",
+      "actual": "5329e1f7adfac3f6de7ec911d40ca255bf06fd2afdb427f0c946b8237ac9b84d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/success-resize-320.png",
+      "expected": "0a5e3f0e41489bab4db733e022e30eb4fb36ba6cfac5f0e0ecf6d63c57525778",
+      "actual": "0a5e3f0e41489bab4db733e022e30eb4fb36ba6cfac5f0e0ecf6d63c57525778",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-baseline/web-before.css",
+      "expected": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "actual": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-browser.cjs",
+      "expected": "7b84ae6642c65a77e831a0859d2a5b6c371ffb8d7418cf90e72c86e97d25a872",
+      "actual": "7b84ae6642c65a77e831a0859d2a5b6c371ffb8d7418cf90e72c86e97d25a872",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-entry.fixture.jsx",
+      "expected": "b1a9111246deb5c09512f4ca88a412249e3ed3b0795256b80074e143c9b3f636",
+      "actual": "b1a9111246deb5c09512f4ca88a412249e3ed3b0795256b80074e143c9b3f636",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/browser-results.json",
+      "expected": "61836636f03b63b708788d7aae7afa584bf48b278c928117a695eb05ac6f7c08",
+      "actual": "61836636f03b63b708788d7aae7afa584bf48b278c928117a695eb05ac6f7c08",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/category-320.png",
+      "expected": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "actual": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/empty-320.png",
+      "expected": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "actual": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/list-error-320.png",
+      "expected": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "actual": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/list-loading-320.png",
+      "expected": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "actual": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/main-320.png",
+      "expected": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "actual": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/main-360.png",
+      "expected": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "actual": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/main-390.png",
+      "expected": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "actual": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/picker-320.png",
+      "expected": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "actual": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/picker-360.png",
+      "expected": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "actual": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/picker-390.png",
+      "expected": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "actual": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/picker-768.png",
+      "expected": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "actual": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/save-error-320.png",
+      "expected": "430e09175a46f5cb34ac08cf65108dc9f7d9d81c4c7d697fa6b5a917b6088525",
+      "actual": "430e09175a46f5cb34ac08cf65108dc9f7d9d81c4c7d697fa6b5a917b6088525",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/settings-error-320.png",
+      "expected": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "actual": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/settings-loading-320.png",
+      "expected": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "actual": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/success-dom.json",
+      "expected": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "actual": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/success-resize-320.png",
+      "expected": "d9e5791c0b41485dd7f431ee348f04f5437c5ab977b69b601f0f5f19d81b3497",
+      "actual": "d9e5791c0b41485dd7f431ee348f04f5437c5ab977b69b601f0f5f19d81b3497",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/stock-final/web-before.css",
+      "expected": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "actual": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/SuccessModal.before.tsx.txt",
+      "expected": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "actual": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/verify.cjs",
+      "expected": "49ae34c22db21880988255cac6821ef359a265d1d07f6e3c708de52ac1a80246",
+      "actual": "49ae34c22db21880988255cac6821ef359a265d1d07f6e3c708de52ac1a80246",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-size/worker-320.png",
+      "expected": "bedbeb4886bb787f1b4c4b79aab04b3b7b2f36883fe86cb064afe03849171bd3",
+      "actual": "bedbeb4886bb787f1b4c4b79aab04b3b7b2f36883fe86cb064afe03849171bd3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/AlertModal.before.tsx.txt",
+      "expected": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "actual": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/archive-format.cjs",
+      "expected": "1209d06d14f57020dd24673fc427ace37a320bca5bbfcb10ceefb83ae0545ebe",
+      "actual": "1209d06d14f57020dd24673fc427ace37a320bca5bbfcb10ceefb83ae0545ebe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/archive-interim.cjs",
+      "expected": "2be4a01c7359612352b3b47d00b51689fb7a7907a0a927981df59052f1989a2d",
+      "actual": "2be4a01c7359612352b3b47d00b51689fb7a7907a0a927981df59052f1989a2d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/browser-results.json",
+      "expected": "27da3a1bf0468240b99b79ec08947d4384b5195822000086e3ab198d296c020f",
+      "actual": "27da3a1bf0468240b99b79ec08947d4384b5195822000086e3ab198d296c020f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/cancel-only-320.png",
+      "expected": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "actual": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/category-320.png",
+      "expected": "844db7d554e0670b238bce0a239254b4de354268133efc78c5b94d336e805a92",
+      "actual": "844db7d554e0670b238bce0a239254b4de354268133efc78c5b94d336e805a92",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/children-320.png",
+      "expected": "4163409a94578d3d3746f14a92b48556d7b4184fc84909c7b2793d4ddec340b5",
+      "actual": "4163409a94578d3d3746f14a92b48556d7b4184fc84909c7b2793d4ddec340b5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/confirm-only-320.png",
+      "expected": "1a0fa7ca1f096a79b3472e3bba1e926ff7d5b8f23d8b5a3ba03318e783b778f5",
+      "actual": "1a0fa7ca1f096a79b3472e3bba1e926ff7d5b8f23d8b5a3ba03318e783b778f5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/default-close-320.png",
+      "expected": "a45cdf5f04224e6f080c045c084466f0fcb566363d7d5161e1d2a3659ab5918d",
+      "actual": "a45cdf5f04224e6f080c045c084466f0fcb566363d7d5161e1d2a3659ab5918d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-320.png",
+      "expected": "3f5cdf9a98a91be3846e7860bbdc3d899cbbc808b9bbbfa06f5725d311c01f45",
+      "actual": "3f5cdf9a98a91be3846e7860bbdc3d899cbbc808b9bbbfa06f5725d311c01f45",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-360.png",
+      "expected": "4b5c363969eb1887b661ac4c20d49836adf23a826ffa126189af1c083d7827bb",
+      "actual": "4b5c363969eb1887b661ac4c20d49836adf23a826ffa126189af1c083d7827bb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-390.png",
+      "expected": "f0f26a88f3bff4064c327b43697c9b55074feea31a5fd92b1f56ec19afe4b4ec",
+      "actual": "f0f26a88f3bff4064c327b43697c9b55074feea31a5fd92b1f56ec19afe4b4ec",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/direct-768.png",
+      "expected": "632be407af74bac2e9b10f62e7f7301e36b967124f68b5737a2c7ba7677f10c4",
+      "actual": "632be407af74bac2e9b10f62e7f7301e36b967124f68b5737a2c7ba7677f10c4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/fallback-320.png",
+      "expected": "c096fc8515187cd188753173652f55ed985ff204d5c84ca8b5ebb53f0ca603d8",
+      "actual": "c096fc8515187cd188753173652f55ed985ff204d5c84ca8b5ebb53f0ca603d8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/loading-320.png",
+      "expected": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "actual": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/long-320.png",
+      "expected": "9768124c5a8f9fab983bafb00989826eeaadee25269b865a0952815053a855b4",
+      "actual": "9768124c5a8f9fab983bafb00989826eeaadee25269b865a0952815053a855b4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/member-320.png",
+      "expected": "20f0c5fc44b818cfe06c7302f3f2782dc590b1ed425db869bf0ea521f4acfe3f",
+      "actual": "20f0c5fc44b818cfe06c7302f3f2782dc590b1ed425db869bf0ea521f4acfe3f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/no-footer-320.png",
+      "expected": "2f4099dc1cc63c1f4e97267deaf136b661c81f102adf7a032b052eb24372eb78",
+      "actual": "2f4099dc1cc63c1f4e97267deaf136b661c81f102adf7a032b052eb24372eb78",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/node-320.png",
+      "expected": "fcc6caad2c72ab910afe4224eedbe3b116d85cad43396e8ac984e94fcd3dd0a2",
+      "actual": "fcc6caad2c72ab910afe4224eedbe3b116d85cad43396e8ac984e94fcd3dd0a2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/order-type-320.png",
+      "expected": "df0988de02a5abf1731bc2b9d126aaa0500e1314f01a7e86eb9b6cf12ca7c9ac",
+      "actual": "df0988de02a5abf1731bc2b9d126aaa0500e1314f01a7e86eb9b6cf12ca7c9ac",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/role-320.png",
+      "expected": "681af73fcf1d3ffa3f3533c0aa9d38a58aaa3d56811fe6b76d6d7b2365005942",
+      "actual": "681af73fcf1d3ffa3f3533c0aa9d38a58aaa3d56811fe6b76d6d7b2365005942",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/support-320.png",
+      "expected": "b1b0539f334f5c5694873fb31840726dffcebec1295a975b209ac241b63ca967",
+      "actual": "b1b0539f334f5c5694873fb31840726dffcebec1295a975b209ac241b63ca967",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/baseline/worker-320.png",
+      "expected": "fa8c2bccfe169523dcb97b21eeb49a8aa389207dd535b5bbc67f1f340bec280f",
+      "actual": "fa8c2bccfe169523dcb97b21eeb49a8aa389207dd535b5bbc67f1f340bec280f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/browser.cjs",
+      "expected": "6ee54b35ffa4c15861569ad26e09b87c2256bde48e1e6e6f823383c1790a03b9",
+      "actual": "6ee54b35ffa4c15861569ad26e09b87c2256bde48e1e6e6f823383c1790a03b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/callers.json",
+      "expected": "375676edcc5303d5002b8e6beb66a2554c67301f65787dd165f20fc5e9ad1c7f",
+      "actual": "375676edcc5303d5002b8e6beb66a2554c67301f65787dd165f20fc5e9ad1c7f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/delete-lifecycle/results.json",
+      "expected": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "actual": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/browser-results.json",
+      "expected": "20bd9cc78e55ee09e2bf14b832f4cda47b02ef3421a89a3c3b98dcb8de788dc9",
+      "actual": "20bd9cc78e55ee09e2bf14b832f4cda47b02ef3421a89a3c3b98dcb8de788dc9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/cancel-only-320.png",
+      "expected": "51dd3dac27ba130b4c8162d33fa29b0ea4a8901bae1e1ef8baba5c0cc0fc35ff",
+      "actual": "51dd3dac27ba130b4c8162d33fa29b0ea4a8901bae1e1ef8baba5c0cc0fc35ff",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/category-320.png",
+      "expected": "a0d7f945bafcc523a6c727b274dd773ceb082efe3659dbbb2d0a66c45f95fdb8",
+      "actual": "a0d7f945bafcc523a6c727b274dd773ceb082efe3659dbbb2d0a66c45f95fdb8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/children-320.png",
+      "expected": "bc82068db6b1d869b894d493669e4b6a8c9a95586d9d7579a6bed603fce80c75",
+      "actual": "bc82068db6b1d869b894d493669e4b6a8c9a95586d9d7579a6bed603fce80c75",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/confirm-only-320.png",
+      "expected": "062056e85e3d008a3761963ef61a30a307d22dec8651c228af5da260591f3f13",
+      "actual": "062056e85e3d008a3761963ef61a30a307d22dec8651c228af5da260591f3f13",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/default-close-320.png",
+      "expected": "c312e7b0ff98a0a77f39e70fe6c95e40dd74bbf6b42a3a7d95c2529a7bd5f50a",
+      "actual": "c312e7b0ff98a0a77f39e70fe6c95e40dd74bbf6b42a3a7d95c2529a7bd5f50a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-320.png",
+      "expected": "ad69a91861b79cd56787e7784e6dcf31b3445620017858eb4f75fba4710426c0",
+      "actual": "ad69a91861b79cd56787e7784e6dcf31b3445620017858eb4f75fba4710426c0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-360.png",
+      "expected": "90e899f96ebe72f91d44f037a2c13da0a9c5760db5d06803b46c57925e957726",
+      "actual": "90e899f96ebe72f91d44f037a2c13da0a9c5760db5d06803b46c57925e957726",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-390.png",
+      "expected": "180835b6ae45d23adcfb032bb13f68f710aa3f60559455496fcbe7aae52fe8f6",
+      "actual": "180835b6ae45d23adcfb032bb13f68f710aa3f60559455496fcbe7aae52fe8f6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/direct-768.png",
+      "expected": "c2c098ccde6790e33d12500aaa4cb1bee6e2dba64888e38f8b6fd840e1c956b5",
+      "actual": "c2c098ccde6790e33d12500aaa4cb1bee6e2dba64888e38f8b6fd840e1c956b5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/fallback-320.png",
+      "expected": "ff6a65b7282963a68794f3bedf3fa3d42c6356ed12d3e289ebf382a4860623d5",
+      "actual": "ff6a65b7282963a68794f3bedf3fa3d42c6356ed12d3e289ebf382a4860623d5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/loading-320.png",
+      "expected": "e9cb7c39c240d134bea4b5116fb6449a1ddecb7776f0c1b72f5c461fdf8ebf93",
+      "actual": "e9cb7c39c240d134bea4b5116fb6449a1ddecb7776f0c1b72f5c461fdf8ebf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/long-320.png",
+      "expected": "2b6414fbc3b1a31681576f4c3497ac90dee2c6da1899267e9801a7f72fa37a88",
+      "actual": "2b6414fbc3b1a31681576f4c3497ac90dee2c6da1899267e9801a7f72fa37a88",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/member-320.png",
+      "expected": "fd1e3b7c3f190f905a3cb3fe0a259d3ab8bf2476faca8079adfe685ec9802509",
+      "actual": "fd1e3b7c3f190f905a3cb3fe0a259d3ab8bf2476faca8079adfe685ec9802509",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/no-footer-320.png",
+      "expected": "4dbc8ef948c0708a7ab9d6c1640d11d2fd8584b51b8173d8f674616d4b412755",
+      "actual": "4dbc8ef948c0708a7ab9d6c1640d11d2fd8584b51b8173d8f674616d4b412755",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/node-320.png",
+      "expected": "2b7f6a173568c246e25610c6f0fd281c947dc6ded519e067d1b193444b5ae9f4",
+      "actual": "2b7f6a173568c246e25610c6f0fd281c947dc6ded519e067d1b193444b5ae9f4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/order-type-320.png",
+      "expected": "260216dc8ed417f16daf75ed9c6cbc6d606008eb9ad4aed8fb5f3c44bceeffa2",
+      "actual": "260216dc8ed417f16daf75ed9c6cbc6d606008eb9ad4aed8fb5f3c44bceeffa2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/role-320.png",
+      "expected": "2977b692658d26bb24221068e29064b01b55dc495df7409abd825b81f67acd5c",
+      "actual": "2977b692658d26bb24221068e29064b01b55dc495df7409abd825b81f67acd5c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/support-320.png",
+      "expected": "e32b630cc708a1331bf68e9233770c2237d5d555274bdc1c39e1c5661e077862",
+      "actual": "e32b630cc708a1331bf68e9233770c2237d5d555274bdc1c39e1c5661e077862",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/final/worker-320.png",
+      "expected": "3bbb2cfa640bc311b0b5a2ac52d157ef774bbbddb2cd9c15f70a25d97c92bd00",
+      "actual": "3bbb2cfa640bc311b0b5a2ac52d157ef774bbbddb2cd9c15f70a25d97c92bd00",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+      "expected": "6fe2cb3192bd693f2a0691ab09a4be7f23d8f3b608817c8fb17a48269f2bec7e",
+      "actual": "6fe2cb3192bd693f2a0691ab09a4be7f23d8f3b608817c8fb17a48269f2bec7e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/inputs-before.json",
+      "expected": "9b3fcd9620fc760269dca154c4fd518c07e41975132330a9a50444c79d518f84",
+      "actual": "9b3fcd9620fc760269dca154c4fd518c07e41975132330a9a50444c79d518f84",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/AlertModal.tsx.txt",
+      "expected": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "actual": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/delete-lifecycle/results.json",
+      "expected": "3e5990145c448956a1067e8f820ccff9105a1d607077ff17a1fc7f6ba25d6182",
+      "actual": "3e5990145c448956a1067e8f820ccff9105a1d607077ff17a1fc7f6ba25d6182",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/browser-results.json",
+      "expected": "2ae151ea3c71b19901cd73a437e961c16375dfdbfe2626eb247552ab023eadc5",
+      "actual": "2ae151ea3c71b19901cd73a437e961c16375dfdbfe2626eb247552ab023eadc5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/cancel-only-320.png",
+      "expected": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "actual": "441a305ab7e20606a4be038835fe834a3c3d2edea2b89114fe6aa8e418a3b0d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/category-320.png",
+      "expected": "ca243215198d216052cb8d601627879a5a5b2a58ac388071db2f9941b279da2e",
+      "actual": "ca243215198d216052cb8d601627879a5a5b2a58ac388071db2f9941b279da2e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/children-320.png",
+      "expected": "dfbc685287f938cd53554cc7e1aefeee8fc02edadf925d66aea092169c361e15",
+      "actual": "dfbc685287f938cd53554cc7e1aefeee8fc02edadf925d66aea092169c361e15",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/confirm-only-320.png",
+      "expected": "ae7aa3390c78541223b951dd44297a90678f0eee20fba60d93667978217b8f7d",
+      "actual": "ae7aa3390c78541223b951dd44297a90678f0eee20fba60d93667978217b8f7d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/default-close-320.png",
+      "expected": "63ada9a18b38a07725e00888e99556aba76613dc8e9fffd35ccfbf3533727da2",
+      "actual": "63ada9a18b38a07725e00888e99556aba76613dc8e9fffd35ccfbf3533727da2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-320.png",
+      "expected": "b5a5f2c38536756b18ca2d56fc047a36b22ab3d6bd07b2f23ac951f0e78a1bee",
+      "actual": "b5a5f2c38536756b18ca2d56fc047a36b22ab3d6bd07b2f23ac951f0e78a1bee",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-360.png",
+      "expected": "3057b2a06e1ca50224410e23364c4adfdc823cac63728d9eda65d854fa6b65ef",
+      "actual": "3057b2a06e1ca50224410e23364c4adfdc823cac63728d9eda65d854fa6b65ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-390.png",
+      "expected": "ae54e92d4e966f1f9794e9fbf344808ff0f82937fb1ef6b9b0e12661774cd9c0",
+      "actual": "ae54e92d4e966f1f9794e9fbf344808ff0f82937fb1ef6b9b0e12661774cd9c0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/direct-768.png",
+      "expected": "c2358c9a1a4b0461cbbb38bc018436f9bcc5dad01fcdf961dfad161c7f5bc705",
+      "actual": "c2358c9a1a4b0461cbbb38bc018436f9bcc5dad01fcdf961dfad161c7f5bc705",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/fallback-320.png",
+      "expected": "c275b7b45aaecc8dbb708e508c55c4c644467b1f6c7d81a25b72984716af74c4",
+      "actual": "c275b7b45aaecc8dbb708e508c55c4c644467b1f6c7d81a25b72984716af74c4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/loading-320.png",
+      "expected": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "actual": "850a5c0b61861c27e9ea84add85965a6d51dc7917ce5d88cf46f39e7d9f994a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/long-320.png",
+      "expected": "8114b46e433c8f536424d993de4bfa7aa39e2888e56c64197a78f85152db5857",
+      "actual": "8114b46e433c8f536424d993de4bfa7aa39e2888e56c64197a78f85152db5857",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/member-320.png",
+      "expected": "27d87dd94f97a14224d5d2d078658a175af8976f9bf088fb96ea02a67d5b7bc2",
+      "actual": "27d87dd94f97a14224d5d2d078658a175af8976f9bf088fb96ea02a67d5b7bc2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/no-footer-320.png",
+      "expected": "4c6f4d8ea45a17e439704596971186f93338f557b968e2b7256c45271ee991c8",
+      "actual": "4c6f4d8ea45a17e439704596971186f93338f557b968e2b7256c45271ee991c8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/node-320.png",
+      "expected": "0ea4935c54fae22057c049148729d69589ab3d4828034677ccff7bb134cc1a31",
+      "actual": "0ea4935c54fae22057c049148729d69589ab3d4828034677ccff7bb134cc1a31",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/order-type-320.png",
+      "expected": "599cb2420ffb8959e2c7429b64d5ae9e727650284262eb31a81e3611da8cb38d",
+      "actual": "599cb2420ffb8959e2c7429b64d5ae9e727650284262eb31a81e3611da8cb38d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/role-320.png",
+      "expected": "bc951724441aea625b6ae9db878b47c06a9976084a3213eeb77b0d740ce779a1",
+      "actual": "bc951724441aea625b6ae9db878b47c06a9976084a3213eeb77b0d740ce779a1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/support-320.png",
+      "expected": "e386f788735389a7c52bce5e5f892d699519b1ec095fbf0cdd84d2aff5d21d8e",
+      "actual": "e386f788735389a7c52bce5e5f892d699519b1ec095fbf0cdd84d2aff5d21d8e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/final/worker-320.png",
+      "expected": "76c592e310aaabaa65ba336997ca6278bc20d5a73e00901e9baa458b3fb4e101",
+      "actual": "76c592e310aaabaa65ba336997ca6278bc20d5a73e00901e9baa458b3fb4e101",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/quality-results.json",
+      "expected": "3ce6808418af94079d474b5e4f8268d535d1c01461c65075af25cf8a6663d8ac",
+      "actual": "3ce6808418af94079d474b5e4f8268d535d1c01461c65075af25cf8a6663d8ac",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/quality.cjs",
+      "expected": "00f2c7778543aac2203287ef4b47297a4a140fca12281c05b015ec5530b15f42",
+      "actual": "00f2c7778543aac2203287ef4b47297a4a140fca12281c05b015ec5530b15f42",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/README.md",
+      "expected": "19ab2e89b50ef48696dc4aeccc74068f9f6b2056322705214d0fd31bbf20942a",
+      "actual": "19ab2e89b50ef48696dc4aeccc74068f9f6b2056322705214d0fd31bbf20942a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/AlertModal.tsx.txt",
+      "expected": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+      "actual": "3323ecad7976ed6f88c76d353f8cd392c70541fbc820721cd696f09ac2be7a95",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/replay-notes.json",
+      "expected": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "actual": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/delete-lifecycle/results.json",
+      "expected": "7f82b4b0f41c76c3ea64c35790188e6268907103252ab3dbb594a9868f653ed3",
+      "actual": "7f82b4b0f41c76c3ea64c35790188e6268907103252ab3dbb594a9868f653ed3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/browser-results.json",
+      "expected": "e6dfdacb6e0cb31dda2a48d06ae37fb360afe09c89424607ea86a05969bdf37b",
+      "actual": "e6dfdacb6e0cb31dda2a48d06ae37fb360afe09c89424607ea86a05969bdf37b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/cancel-only-320.png",
+      "expected": "e77492452583bf470d53597d13f189ca70d918a3cc43b88923ad91dc8ac9d15f",
+      "actual": "e77492452583bf470d53597d13f189ca70d918a3cc43b88923ad91dc8ac9d15f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/category-320.png",
+      "expected": "1fefcca08c1c756c30f1492f216014d62787631fe63c8afae6efa9280a9f47d3",
+      "actual": "1fefcca08c1c756c30f1492f216014d62787631fe63c8afae6efa9280a9f47d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/children-320.png",
+      "expected": "807791f593c282be0d82310e770fd7d4786bf0c6784ecea20c0712622d8d69e9",
+      "actual": "807791f593c282be0d82310e770fd7d4786bf0c6784ecea20c0712622d8d69e9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/confirm-only-320.png",
+      "expected": "2962462de3b6d894de33e31f795ca4b953da53283b94afd106093649e3d9c06e",
+      "actual": "2962462de3b6d894de33e31f795ca4b953da53283b94afd106093649e3d9c06e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/default-close-320.png",
+      "expected": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "actual": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-320.png",
+      "expected": "bd13e2f6d138b5c43dda1f5abdee829613ca12e63e530dd35abb9164a4550e03",
+      "actual": "bd13e2f6d138b5c43dda1f5abdee829613ca12e63e530dd35abb9164a4550e03",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-360.png",
+      "expected": "826da49b14e62aa74a91a5c382b8383cf2f299a025c1221dfa4927aacbac7c55",
+      "actual": "826da49b14e62aa74a91a5c382b8383cf2f299a025c1221dfa4927aacbac7c55",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-390.png",
+      "expected": "da47cc26a192442016b20b09cc8085552dce606037f5f4857b17ae30f4877197",
+      "actual": "da47cc26a192442016b20b09cc8085552dce606037f5f4857b17ae30f4877197",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/direct-768.png",
+      "expected": "a62b664a451ec333e63fc1360b97ebfb7c99f9d860b9927c034445f4d712644e",
+      "actual": "a62b664a451ec333e63fc1360b97ebfb7c99f9d860b9927c034445f4d712644e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/fallback-320.png",
+      "expected": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "actual": "c24b10215292af9f614783685bde61e53675980d975a4b0a3926d5c3a9f264c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/loading-320.png",
+      "expected": "737830bf9c958c9525e87f0f7e69ef6171a28b9abfc47979c5b3669c77cd6876",
+      "actual": "737830bf9c958c9525e87f0f7e69ef6171a28b9abfc47979c5b3669c77cd6876",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/long-320.png",
+      "expected": "2a8a3759364652578ddbe684f3e5ed9572d8f4c93dfba2bc44bd906e2674a0dc",
+      "actual": "2a8a3759364652578ddbe684f3e5ed9572d8f4c93dfba2bc44bd906e2674a0dc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/member-320.png",
+      "expected": "9d6231a1005ca2d1fa76ffe512c8cf0f9aca8539b17f35d135f940f37e2906c2",
+      "actual": "9d6231a1005ca2d1fa76ffe512c8cf0f9aca8539b17f35d135f940f37e2906c2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/no-footer-320.png",
+      "expected": "65c82dbaed633f4951f945f78fe9be262405a26f7597783e3aac23a9f1f1658f",
+      "actual": "65c82dbaed633f4951f945f78fe9be262405a26f7597783e3aac23a9f1f1658f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/node-320.png",
+      "expected": "1b4017e5d84b249a8cef8ad634a593de9d35a86ea6cf794e9c3f6dd7a267b657",
+      "actual": "1b4017e5d84b249a8cef8ad634a593de9d35a86ea6cf794e9c3f6dd7a267b657",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/order-type-320.png",
+      "expected": "4ebf7fa92479fe4d6b97307c2e7214025bb5683857130bff01a0d7ae220a9dda",
+      "actual": "4ebf7fa92479fe4d6b97307c2e7214025bb5683857130bff01a0d7ae220a9dda",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/role-320.png",
+      "expected": "956aff3840b3858d40fd8784d604f4cfb9592a7c7f3d0755015cda9eee72e0e0",
+      "actual": "956aff3840b3858d40fd8784d604f4cfb9592a7c7f3d0755015cda9eee72e0e0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/support-320.png",
+      "expected": "dbf2b9bf922a1e3c22378f745391f0998325d4d2ef063b23881fd6e22df0eb2c",
+      "actual": "dbf2b9bf922a1e3c22378f745391f0998325d4d2ef063b23881fd6e22df0eb2c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/final/worker-320.png",
+      "expected": "f93e59f6422ad18f3833bbb09ec6095cb138f7961aca208664396c6e4f64fcd6",
+      "actual": "f93e59f6422ad18f3833bbb09ec6095cb138f7961aca208664396c6e4f64fcd6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/quality-results.json",
+      "expected": "940f6d5db55fb641c6d2404ae175216e01cdede2ecd909b9a656615397245def",
+      "actual": "940f6d5db55fb641c6d2404ae175216e01cdede2ecd909b9a656615397245def",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/quality.cjs",
+      "expected": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "actual": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/interim/type-renamed/README.md",
+      "expected": "b101ec7f190629d768204367bace36329a3261de05b451fabf2ca7e0fa01e7d3",
+      "actual": "b101ec7f190629d768204367bace36329a3261de05b451fabf2ca7e0fa01e7d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/prepare.cjs",
+      "expected": "2a9a51bf42229c3df17bea3f6f093a51380ad88315618665da6ccdc94213cacd",
+      "actual": "2a9a51bf42229c3df17bea3f6f093a51380ad88315618665da6ccdc94213cacd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/preview-entry.fixture.jsx",
+      "expected": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a",
+      "actual": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/quality-results.json",
+      "expected": "81040d640c7178cabf4a406102921ace12e6c6a3a39bb8b5a6c95727c7d6c37a",
+      "actual": "81040d640c7178cabf4a406102921ace12e6c6a3a39bb8b5a6c95727c7d6c37a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/quality.cjs",
+      "expected": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "actual": "63c3c6d61c0f301a6acc32a1062bf404fdd502156cacc90e76b10241ebbc199a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/replay-delete.cjs",
+      "expected": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "actual": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/verify.cjs",
+      "expected": "6b933abb37960e1f23acbd34bf871fb103132c743609626ab3a63ed98465e4ef",
+      "actual": "6b933abb37960e1f23acbd34bf871fb103132c743609626ab3a63ed98465e4ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/alert-modal-size/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    }
+  ],
+  "scope": "Only SuccessModal geometry and QC-STOCK-UI-001; latest Alert/Delete are tested dependencies, not approved deltas."
+}

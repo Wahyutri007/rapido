@@ -1,0 +1,97 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-003",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-08T20:27:53.387Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sourceOrigin": "Working tree, not committed; hashes bind developer source and results",
+  "editedSources": [
+    "api/hooks/auth.ts:useLoginRequest plus React import"
+  ],
+  "executedSourceHashes": {
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549"
+  },
+  "reviewOnlyContractHashes": {
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "hooks/useProtectedRoute.ts": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "lib/storage.web.ts": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/login/HANDOFF.md": "a047f18d9b9fb6ebd041bdb6e1d35d85f88a1145f029b96d0e0582baa3aa11a3",
+    "docs/qa/senior-5-2026-10-09/login/check.cjs": "3a49961a77a6a4db80e81f4c582031196c3b4faaae953cb28340327882000a35",
+    "docs/qa/senior-5-2026-10-09/login/typecheck.cjs": "4243c96f79de721148631f4126994641e3469198dd29961ceb95ef6ac4982b8e",
+    "docs/qa/senior-5-2026-10-09/login/baseline-results.json": "30a5e7dc33c95b0db938cfaa90af429322c2d073f2530333802d52d3c194b0c8",
+    "docs/qa/senior-5-2026-10-09/login/final-results.json": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+    "docs/qa/senior-5-2026-10-09/login/typecheck-results.json": "9f43fc2e64f7fe20cb196b7dc7ab83dd04c07e14f7d6d96739088bff9d206e8b"
+  },
+  "remainingModuleASTUnchanged": true,
+  "lifecycle": {
+    "baselineRef": "acba0d92460c1af3149abc3775f09888a2943cab",
+    "baselinePassed": 56,
+    "baselineFailed": 18,
+    "baselineUnhandledRejections": 2,
+    "passed": 74,
+    "failed": 0,
+    "runtimeActErrors": 0,
+    "unhandledRejections": 0
+  },
+  "baselineLint": [
+    {
+      "file": "api/hooks/auth.ts",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "finalLint": [
+    {
+      "file": "api/hooks/auth.ts",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "biome": {
+    "exitCode": 0,
+    "output": "Checked 1 file in 33ms. No fixes applied.",
+    "files": 1
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "scope": "api/hooks/auth.ts"
+  },
+  "typecheck": {
+    "diagnosticCount": 0,
+    "scope": "Login hook and LoginScreen consumer with imported dependency closure; not a full-project check"
+  },
+  "adapters": [
+    "HTTP Common transport and React Query client",
+    "AuthProvider/updateToken deferred commit",
+    "Form presentation/inputs around production RHF Controller",
+    "native/auth background/Wrapper/Actionsheet/router"
+  ],
+  "boundaries": [
+    "No real API/storage/credentials/backend mutation",
+    "The exported logout and user-query implementations and shared usePostRequest remain unchanged",
+    "Dispatched POST is not cancelled; auth commit begun while mounted is allowed to finish after unmount",
+    "Lock is local per login instance, not global login/logout coordination",
+    "Screen and input handlers are exercised through React adapters, not browser/native devices",
+    "Browser/native/SSR/full auth guard/Figma parity/full-project checks not certified",
+    "No dependency/server/HP/branch/index/commit/push changes"
+  ],
+  "figmaAccess": {
+    "tool": "get_metadata",
+    "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+    "nodeId": "0:1",
+    "readSucceeded": true,
+    "designModified": false,
+    "visualParityClaim": false
+  }
+}

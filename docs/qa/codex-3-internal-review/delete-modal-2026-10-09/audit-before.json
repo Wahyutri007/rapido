@@ -1,0 +1,793 @@
+{
+  "status": "INTERNAL_QA_REVIEW",
+  "phase": "before-parent-edit",
+  "reviewer": "/root/audit_delete_modal",
+  "scope": "Read-only source/caller/geometry audit; artifacts only in this packet",
+  "source": {
+    "path": "components/common/DeleteConfirmModal.tsx",
+    "sha256": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0"
+  },
+  "usages": 63,
+  "files": 63,
+  "propCounts": {
+    "isOpen": 14,
+    "onClose": 22,
+    "onConfirm": 63,
+    "title": 52,
+    "description": 59,
+    "openState": 49,
+    "isLoading": 29,
+    "itemName": 15
+  },
+  "defaultImage": {
+    "path": "assets/images/illustrations/delete-confirmation.png",
+    "sha256": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+    "width": 708,
+    "height": 490
+  },
+  "findings": [
+    "Width is computed from Dimensions.get(screen) with no dimension subscription; window-vs-screen and open-modal resize need browser reproduction.",
+    "Image uses h-44/w-full className with no explicit style; default asset intrinsic dimensions are 708x490, requiring its own baseline rather than reusing SuccessModal measurements.",
+    "Footer has two flex-1 button groups; do not copy SuccessModal's single-action footer structure.",
+    "All actual descriptions are strings/template strings; no caller overrides image/message/cancelText/confirmText or spreads props.",
+    "Loading disables both buttons, while Modal onClose remains available; geometry delta should preserve existing close semantics, not introduce lifecycle changes."
+  ],
+  "recommendedDelta": [
+    "Replace Dimensions import with useWindowDimensions",
+    "Read width via useWindowDimensions at component top",
+    "Retain width-32/maxWidth380 using window width",
+    "Add Image style height176/width100% preserving contain"
+  ],
+  "limits": [
+    "No browser/Metro/backend/native/Figma or full TypeScript executed by internal reviewer",
+    "Not external QC approval",
+    "No source edits; source diff was empty before capture",
+    "No active DeleteConfirmModal implementation claim observed before parent SD3-008 scope"
+  ],
+  "callers": [
+    {
+      "file": "app/(no-layout)/(back-office)/manage/generate-barcode/detail.tsx",
+      "sha256": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+      "line": 175,
+      "props": {
+        "isOpen": "{isDeleteModalOpen}",
+        "onClose": "{() => setIsDeleteModalOpen(false)}",
+        "onConfirm": "{handleDeleteConfirm}",
+        "title": "\"Hapus Barcode\"",
+        "description": "{`Apakah Anda yakin ingin menghapus barcode untuk produk \"${product.name}\"?`}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/manage/generate-barcode/index.tsx",
+      "sha256": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+      "line": 201,
+      "props": {
+        "isOpen": "{isDeleteModalOpen}",
+        "onClose": "{() => setIsDeleteModalOpen(false)}",
+        "onConfirm": "{handleDeleteConfirm}",
+        "title": "\"Hapus Barcode\"",
+        "description": "{`Apakah Anda yakin ingin menghapus barcode untuk produk \"${selectedItem?.name}\"?`}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "sha256": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+      "line": 204,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onConfirm": "{confirmDeleteAccount}",
+        "title": "{`Hapus Akun ${selectedAccount?.name || \"\"}?`}",
+        "description": "\"Akun akan dihapus secara permanen dari daftar saldo awal akun.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+      "sha256": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+      "line": 240,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDelete}",
+        "title": "\"Hapus Jurnal Penyesuaian?\"",
+        "description": "\"Jurnal penyesuaian ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+      "sha256": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+      "line": 166,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDeleteJournal}",
+        "title": "\"Hapus Jurnal Penyesuaian?\"",
+        "description": "\"Jurnal penyesuaian ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+      "sha256": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+      "line": 220,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDelete}",
+        "title": "\"Hapus Jurnal Penutup?\"",
+        "description": "\"Jurnal penutup ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+      "sha256": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+      "line": 180,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDeleteJournal}",
+        "title": "\"Hapus Jurnal Penutup?\"",
+        "description": "\"Jurnal penutup ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/expenses/index.tsx",
+      "sha256": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+      "line": 198,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDeleteExpense}",
+        "title": "\"Hapus Laporan Pengeluaran?\"",
+        "description": "\"Apakah Anda yakin ingin menghapus laporan ini? Tindakan ini tidak dapat dibatalkan.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+      "sha256": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+      "line": 232,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDelete}",
+        "title": "\"Hapus Jurnal Umum?\"",
+        "description": "\"Jurnal umum ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+      "sha256": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+      "line": 161,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDeleteJournal}",
+        "title": "\"Hapus Jurnal Umum?\"",
+        "description": "\"Jurnal umum ini akan dihapus dan tidak dapat digunakan lagi.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+      "sha256": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+      "line": 215,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onClose": "{deleteModal.close}",
+        "onConfirm": "{confirmDeleteIncome}",
+        "title": "\"Hapus Laporan Penerimaan?\"",
+        "description": "\"Apakah Anda yakin ingin menghapus laporan ini? Tindakan ini tidak dapat dibatalkan.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/brand/detail.tsx",
+      "sha256": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+      "line": 74,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus merek ${data?.name}?`}",
+        "description": "\"Merek akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/brand/index.tsx",
+      "sha256": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+      "line": 88,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus merek ${selectedBrand?.name}?`}",
+        "description": "\"Merek akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+      "sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+      "line": 145,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus paket ${data?.name}?`}",
+        "description": "\"Paket akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/bundling/index.tsx",
+      "sha256": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+      "line": 96,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus paket ${selectedBundling?.name}?`}",
+        "description": "\"Paket akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/category/detail.tsx",
+      "sha256": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+      "line": 77,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus kategori ${data?.name}?`}",
+        "description": "\"Kategori akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/category/index.tsx",
+      "sha256": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+      "line": 93,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus kategori ${selectedCategory?.name}?`}",
+        "description": "\"Kategori akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/discount/detail.tsx",
+      "sha256": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+      "line": 163,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus diskon ${data?.name}?`}",
+        "description": "\"Diskon akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/discount/index.tsx",
+      "sha256": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+      "line": 117,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus diskon ${selectedDiscount?.name}?`}",
+        "description": "\"Diskon akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-cost/detail.tsx",
+      "sha256": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+      "line": 77,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus biaya tambahan ${data?.name}?`}",
+        "description": "\"Biaya tambahan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-cost/index.tsx",
+      "sha256": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+      "line": 99,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus biaya tambahan ${selectedExtraCost?.name}?`}",
+        "description": "\"Biaya tambahan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+      "sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+      "line": 93,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus ekstra ${data?.name}?`}",
+        "description": "\"Ekstra akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/extra-menu/index.tsx",
+      "sha256": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+      "line": 109,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus ekstra ${selectedExtraMenu?.name}?`}",
+        "description": "\"Ekstra akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/detail.tsx",
+      "sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+      "line": 144,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus menu ${data?.name}?`}",
+        "description": "\"Menu akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/menu/index.tsx",
+      "sha256": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+      "line": 117,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus menu ${selectedMenu?.name}?`}",
+        "description": "\"Menu akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/order-type/detail.tsx",
+      "sha256": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+      "line": 72,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus tipe pesanan ${data?.name}?`}",
+        "description": "\"Tipe pesanan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/order-type/index.tsx",
+      "sha256": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+      "line": 97,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus tipe pesanan ${selectedOrderType?.name}?`}",
+        "description": "\"Tipe pesanan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/payment-method/detail.tsx",
+      "sha256": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+      "line": 122,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus metode pembayaran ${data?.name}?`}",
+        "description": "\"Metode pembayaran akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/payment-method/index.tsx",
+      "sha256": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+      "line": 136,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus metode pembayaran ${selectedPaymentMethod?.name}?`}",
+        "description": "\"Metode pembayaran akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/promo/detail.tsx",
+      "sha256": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+      "line": 274,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus promo ${data?.name}?`}",
+        "description": "\"Promo akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/promo/index.tsx",
+      "sha256": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+      "line": 100,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus promo ${selectedPromo?.name}?`}",
+        "description": "\"Promo akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/tax/detail.tsx",
+      "sha256": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+      "line": 66,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus pajak ${data?.name}?`}",
+        "description": "\"Pajak akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/tax/index.tsx",
+      "sha256": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+      "line": 86,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus pajak ${selectedTax?.name}?`}",
+        "description": "\"Pajak akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/unit/detail.tsx",
+      "sha256": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+      "line": 74,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus satuan ${data?.name}?`}",
+        "description": "\"Satuan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/unit/index.tsx",
+      "sha256": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+      "line": 86,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus satuan ${selectedUnit?.name}?`}",
+        "description": "\"Satuan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/voucher/detail.tsx",
+      "sha256": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+      "line": 122,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus voucher ${data?.name}?`}",
+        "description": "\"Voucher akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/catalog/voucher/index.tsx",
+      "sha256": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+      "line": 98,
+      "props": {
+        "isLoading": "{deleteRequest.isLoading}",
+        "onConfirm": "{handleConfirmDelete}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus voucher ${selectedVoucher?.name}?`}",
+        "description": "\"Voucher akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/backup/index.tsx",
+      "sha256": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+      "line": 40,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus cadangan '${id}'?`}",
+        "description": "\"Cadangan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/expenses/detail.tsx",
+      "sha256": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+      "line": 34,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "title": "\"Hapus Pengeluaran?\"",
+        "itemName": "{expense.referenceNumber}",
+        "description": "\"Pengeluaran ini akan dihapus dari daftar dan laporan pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tremove(id);\n\t\t\t\t\tdelayedBack();\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/expenses/index.tsx",
+      "sha256": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+      "line": 195,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "title": "\"Hapus Pengeluaran?\"",
+        "itemName": "{selected?.referenceNumber}",
+        "description": "\"Pengeluaran ini akan dihapus dari daftar dan laporan pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (selected) remove(selected.id);\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tsetSelected(null);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/extra/index.tsx",
+      "sha256": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+      "line": 37,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus biaya tambahan '${name}'?`}",
+        "description": "\"Biaya tambahan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/income/detail.tsx",
+      "sha256": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+      "line": 36,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "title": "\"Hapus Penerimaan?\"",
+        "itemName": "{income.referenceNumber}",
+        "description": "\"Penerimaan manual ini akan dihapus dari daftar dan laporan pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\t\t\tif (removeManagedIncome(id)) delayedBack();\n\t\t\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/income/index.tsx",
+      "sha256": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+      "line": 215,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "title": "\"Hapus Penerimaan?\"",
+        "itemName": "{selected?.referenceNumber}",
+        "description": "\"Penerimaan ini akan dihapus dari daftar dan laporan pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (selected) removeManagedIncome(selected.id);\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tsetSelected(null);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/order-type/index.tsx",
+      "sha256": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+      "line": 38,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus tipe pesanan ${name}?`}",
+        "description": "\"Tipe pesanan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/index.tsx",
+      "sha256": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+      "line": 35,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus metode pembayaran '${name}'?`}",
+        "description": "\"Metode pembayaran akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/place/area.tsx",
+      "sha256": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+      "line": 189,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "itemName": "{selected?.name}",
+        "description": "\"Tempat akan dihapus dari daftar dan denah pratinjau area ini.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (selected) deletePlace(outletId, areaId, selected.id);\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tsetSelected(null);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/place/store.tsx",
+      "sha256": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+      "line": 166,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "itemName": "{selected?.name}",
+        "description": "{`Area beserta ${selected?.places.length ?? 0} tempat di dalamnya akan dihapus dari pratinjau toko ini.`}",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (selected) deleteArea(outletId, selected.id);\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tsetSelected(null);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/notification-detail.tsx",
+      "sha256": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+      "line": 250,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onConfirm": "{handleConfirmDelete}",
+        "title": "{`Apakah yakin ingin menghapus jadwal '${schedule.title}'?`}",
+        "description": "\"Jadwal pemberitahuan otomatis ini akan dihapus permanen.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/notifications.tsx",
+      "sha256": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+      "line": 274,
+      "props": {
+        "openState": "{deleteModal.openState}",
+        "onConfirm": "{handleConfirmDelete}",
+        "title": "{`Apakah yakin ingin menghapus jadwal '${scheduleToDelete?.title}'?`}",
+        "description": "\"Jadwal pemberitahuan otomatis ini akan dihapus permanen.\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/printer/index.tsx",
+      "sha256": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+      "line": 34,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus biaya tambahan '${name}'?`}",
+        "description": "\"Biaya tambahan akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/sales-target/detail.tsx",
+      "sha256": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+      "line": 34,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "itemName": "{target.name}",
+        "description": "\"Target ini akan dihapus dari daftar pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t\tremove(id);\n\t\t\t\t\tdelayedBack();\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/sales-target/index.tsx",
+      "sha256": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+      "line": 109,
+      "props": {
+        "isOpen": "{confirm}",
+        "onClose": "{() => setConfirm(false)}",
+        "itemName": "{selected?.name}",
+        "description": "\"Target ini akan dihapus dari daftar pratinjau.\"",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (selected) remove(selected.id);\n\t\t\t\t\tsetSelected(null);\n\t\t\t\t\tsetConfirm(false);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/index.tsx",
+      "sha256": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+      "line": 35,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus pajak '${name}'?`}",
+        "description": "\"Pajak akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/offer/discount/index.tsx",
+      "sha256": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+      "line": 33,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus diskon '${data.name}'?`}",
+        "description": "\"Diskon akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/offer/promo/index.tsx",
+      "sha256": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+      "line": 35,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus promo ${data.name}?`}",
+        "description": "\"Promo akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "app/(no-layout)/offer/voucher/index.tsx",
+      "sha256": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+      "line": 33,
+      "props": {
+        "onConfirm": "{handleDeletePress}",
+        "openState": "{deleteModal.openState}",
+        "title": "{`Apakah yakin ingin menghapus voucher '${data.name}'?`}",
+        "description": "\"Voucher akan hilang permanen jika kamu sudah mengkonfirmasi\""
+      }
+    },
+    {
+      "file": "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+      "sha256": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+      "line": 33,
+      "props": {
+        "isOpen": "{productId !== undefined}",
+        "itemName": "{`resep ${productName}`}",
+        "onClose": "{onClose}",
+        "onConfirm": "{confirm}"
+      }
+    },
+    {
+      "file": "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+      "sha256": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+      "line": 32,
+      "props": {
+        "isOpen": "{Boolean(material)}",
+        "itemName": "{material?.name}",
+        "onClose": "{onClose}",
+        "onConfirm": "{confirm}"
+      }
+    },
+    {
+      "file": "components/feature/inventory/PurchaseListScreen.tsx",
+      "sha256": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+      "line": 181,
+      "props": {
+        "isOpen": "{Boolean(deleting)}",
+        "itemName": "{deleting?.reference}",
+        "onClose": "{() => setDeleting(undefined)}",
+        "onConfirm": "{() => {\n\t\t\t\t\tif (deleting) deleteRecord(deleting.id);\n\t\t\t\t\tsetDeleting(undefined);\n\t\t\t\t}}"
+      }
+    },
+    {
+      "file": "components/feature/inventory/supplier/SupplierDeleteDialog.tsx",
+      "sha256": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+      "line": 32,
+      "props": {
+        "isOpen": "{Boolean(supplier)}",
+        "itemName": "{supplier?.name}",
+        "onClose": "{onClose}",
+        "onConfirm": "{confirm}"
+      }
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "sha256": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "line": 71,
+      "props": {
+        "openState": "{openState}",
+        "itemName": "{member?.name ?? \"Member\"}",
+        "description": "\"Data member akan dihapus dari daftar pelanggan.\"",
+        "onConfirm": "{remove}",
+        "isLoading": "{request.isLoading}"
+      }
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "sha256": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "line": 72,
+      "props": {
+        "openState": "{openState}",
+        "itemName": "{role ? roleName(role) : \"Role\"}",
+        "description": "\"Role akan dihapus dan tidak dapat digunakan lagi. Pastikan akun karyawan tetap memiliki akses yang dibutuhkan.\"",
+        "onConfirm": "{remove}",
+        "isLoading": "{request.isLoading}"
+      }
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "sha256": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "line": 71,
+      "props": {
+        "openState": "{openState}",
+        "itemName": "{worker?.name ?? \"Karyawan\"}",
+        "description": "\"Akun karyawan akan dihapus dan tidak dapat digunakan untuk login kembali.\"",
+        "onConfirm": "{remove}",
+        "isLoading": "{request.isLoading}"
+      }
+    }
+  ]
+}

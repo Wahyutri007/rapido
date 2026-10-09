@@ -1,0 +1,103 @@
+{
+  "status": "FAIL",
+  "passed": 6,
+  "failed": 12,
+  "checks": [
+    {
+      "name": "Cold direct child anchors the existing Target list",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'index'\n"
+    },
+    {
+      "name": "List, edit/add and detail remain registered",
+      "status": "PASS"
+    },
+    {
+      "name": "index: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "index: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   [\n-     'replace',\n-     '/(back-office)/manage'\n-   ]\n- ]\n"
+    },
+    {
+      "name": "index: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'auto'\n"
+    },
+    {
+      "name": "index: background header does not intercept input",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'none'\n"
+    },
+    {
+      "name": "modify: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "modify: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   [\n-     'replace',\n-     '/(no-layout)/manage/sales-target'\n-   ]\n- ]\n"
+    },
+    {
+      "name": "modify: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'auto'\n"
+    },
+    {
+      "name": "modify: background header does not intercept input",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'none'\n"
+    },
+    {
+      "name": "detail: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "detail: actual Header back replaces empty history with safe parent",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   [\n-     'replace',\n-     '/(no-layout)/manage/sales-target'\n-   ]\n- ]\n"
+    },
+    {
+      "name": "detail: active header accepts input after focus is restored",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'auto'\n"
+    },
+    {
+      "name": "detail: background header does not intercept input",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'none'\n"
+    },
+    {
+      "name": "Add title uses its own empty route params despite another global ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Edit Target'\n- 'Tambah Target'\n"
+    },
+    {
+      "name": "Edit title uses its own selected ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Add title stays correct with a background global ID",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Edit Target'\n- 'Tambah Target'\n"
+    },
+    {
+      "name": "Edit title stays correct while global route has no ID",
+      "status": "PASS"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "app/(no-layout)/manage/sales-target/_layout.tsx",
+      "sha256": "55e364d381dd2fc5c828569c616f74920f0ef1ceadc087316398061159aa45cc"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c"
+    }
+  ],
+  "scope": "Actual Target layout and shared Header callbacks; router/focus/JSStack/RN presentation adapters. Not full browser/native stack certification.",
+  "checkedAt": "2026-10-09T02:59:28.860Z"
+}

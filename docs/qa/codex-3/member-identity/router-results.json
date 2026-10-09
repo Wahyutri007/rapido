@@ -1,0 +1,178 @@
+{
+  "owner": "Codex-3",
+  "date": "2026-10-09",
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "actual route hydrates A",
+      "passed": true
+    },
+    {
+      "name": "same-ID query refetch preserves draft",
+      "passed": true
+    },
+    {
+      "name": "router setParams A to B replaces identity",
+      "passed": true
+    },
+    {
+      "name": "router setParams edit to create clears identity",
+      "passed": true
+    },
+    {
+      "name": "empty create does not clone previous member",
+      "passed": true
+    },
+    {
+      "name": "return to B after create restores B",
+      "passed": true
+    },
+    {
+      "name": "changing identity clears old success modal",
+      "passed": true
+    },
+    {
+      "name": "changing identity clears saved lock",
+      "passed": true
+    },
+    {
+      "name": "late success cannot replace new draft",
+      "passed": true
+    },
+    {
+      "name": "late success leaves new save enabled",
+      "passed": true
+    },
+    {
+      "name": "late success cannot open new modal or field error",
+      "passed": true
+    },
+    {
+      "name": "late error cannot replace new draft",
+      "passed": true
+    },
+    {
+      "name": "late error leaves new save enabled",
+      "passed": true
+    },
+    {
+      "name": "late error cannot open new modal or field error",
+      "passed": true
+    },
+    {
+      "name": "all update requests retain old identity",
+      "passed": true
+    },
+    {
+      "name": "no unexpected runtime or console errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "expectedNetworkErrors": [
+    "Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "id": "a"
+    },
+    {
+      "method": "GET",
+      "id": "a"
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "PUT",
+      "id": "b",
+      "body": {
+        "name": "Member B",
+        "phone": "08123456789",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "a"
+    },
+    {
+      "method": "PUT",
+      "id": "a",
+      "body": {
+        "name": "Server A refreshed",
+        "phone": "08123456789",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "a"
+    },
+    {
+      "method": "PUT",
+      "id": "a",
+      "body": {
+        "name": "Server A refreshed",
+        "phone": "08123456789",
+        "email": null,
+        "id_number": null,
+        "address": null,
+        "date_of_birth": null,
+        "gender": null,
+        "notes": null
+      }
+    },
+    {
+      "method": "GET",
+      "id": "b"
+    },
+    {
+      "method": "GET",
+      "id": "a"
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/member/MemberModifyScreen.tsx": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "app/(no-layout)/manage/member/modify.tsx": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "scope": "Production modify route/form and Expo Router setParams; API browser fixtures and isolated layout. Full auth/root, SSR, backend mutations, native and Figma parity untested."
+}

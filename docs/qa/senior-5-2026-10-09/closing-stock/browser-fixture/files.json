@@ -1,0 +1,13 @@
+[
+  "browser-entry.jsx",
+  "routes/(back-office)/catalog.tsx",
+  "routes/(back-office)/home.tsx",
+  "routes/(back-office)/inventory/closing-stock.tsx",
+  "routes/(back-office)/inventory/index.tsx",
+  "routes/(back-office)/inventory/summary.tsx",
+  "routes/(back-office)/inventory/_layout.tsx",
+  "routes/(back-office)/manage.tsx",
+  "routes/(back-office)/report.tsx",
+  "routes/(back-office)/_layout.tsx",
+  "routes/_layout.tsx"
+]

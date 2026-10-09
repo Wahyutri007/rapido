@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Cold direct child anchors the existing Target list",
+      "status": "PASS"
+    },
+    {
+      "name": "List, edit/add and detail remain registered",
+      "status": "PASS"
+    },
+    {
+      "name": "index: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "index: actual Header back replaces empty history with safe parent",
+      "status": "PASS"
+    },
+    {
+      "name": "index: active header accepts input after focus is restored",
+      "status": "PASS"
+    },
+    {
+      "name": "index: background header does not intercept input",
+      "status": "PASS"
+    },
+    {
+      "name": "modify: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "modify: actual Header back replaces empty history with safe parent",
+      "status": "PASS"
+    },
+    {
+      "name": "modify: active header accepts input after focus is restored",
+      "status": "PASS"
+    },
+    {
+      "name": "modify: background header does not intercept input",
+      "status": "PASS"
+    },
+    {
+      "name": "detail: actual Header back returns through existing history",
+      "status": "PASS"
+    },
+    {
+      "name": "detail: actual Header back replaces empty history with safe parent",
+      "status": "PASS"
+    },
+    {
+      "name": "detail: active header accepts input after focus is restored",
+      "status": "PASS"
+    },
+    {
+      "name": "detail: background header does not intercept input",
+      "status": "PASS"
+    },
+    {
+      "name": "Add title uses its own empty route params despite another global ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Edit title uses its own selected ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Add title stays correct with a background global ID",
+      "status": "PASS"
+    },
+    {
+      "name": "Edit title stays correct while global route has no ID",
+      "status": "PASS"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "app/(no-layout)/manage/sales-target/_layout.tsx",
+      "sha256": "8e2b5dd7052d22587f83f640a0b96ecc1e8009fffe4e9cf17bec330b9261f574"
+    },
+    {
+      "file": "components/common/Header.tsx",
+      "sha256": "dc10adb65a9ec7660a6deffbed828008bab26b535ae5c0845f00dfa42ca4179c"
+    }
+  ],
+  "scope": "Actual Target layout and shared Header callbacks; router/focus/JSStack/RN presentation adapters. Not full browser/native stack certification.",
+  "checkedAt": "2026-10-09T03:00:01.301Z"
+}

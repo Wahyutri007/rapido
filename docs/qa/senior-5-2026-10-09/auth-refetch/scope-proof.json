@@ -1,0 +1,69 @@
+{
+  "publicTypesUseAuthAndInitialStateUnchanged": true,
+  "rolePermissionHelpersSignOutAndCacheClearingUnchanged": true,
+  "updateTokenOnlyAddsRefetchThrowOnError": true,
+  "returnedProviderJsxUnchanged": true,
+  "comparison": "Exact source comparison after EOL normalization; loader/reload/bootstrap effect are the other declared deltas",
+  "contractChecks": [
+    {
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "file": "app/index.tsx",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.ts",
+      "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.web.ts",
+      "expected": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "actual": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    }
+  ]
+}

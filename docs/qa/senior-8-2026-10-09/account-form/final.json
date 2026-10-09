@@ -1,0 +1,337 @@
+{
+  "baseline": false,
+  "passed": 38,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "edit A prefill",
+      "actual": [
+        "Cash A",
+        100,
+        "Desc A",
+        "Harta Tetap"
+      ],
+      "expected": [
+        "Cash A",
+        100,
+        "Desc A",
+        "Harta Tetap"
+      ],
+      "passed": true
+    },
+    {
+      "name": "other account update preserves draft",
+      "actual": [
+        "Draft A",
+        321
+      ],
+      "expected": [
+        "Draft A",
+        321
+      ],
+      "passed": true
+    },
+    {
+      "name": "same account refetch preserves mounted draft",
+      "actual": [
+        "Draft A",
+        321
+      ],
+      "expected": [
+        "Draft A",
+        321
+      ],
+      "passed": true
+    },
+    {
+      "name": "route A to B resets draft from current B",
+      "actual": [
+        "External B",
+        "Desc B",
+        "Laba Ditahan"
+      ],
+      "expected": [
+        "External B",
+        "Desc B",
+        "Laba Ditahan"
+      ],
+      "passed": true
+    },
+    {
+      "name": "edit to create resets defaults",
+      "actual": [
+        "",
+        "11001",
+        0,
+        0,
+        ""
+      ],
+      "expected": [
+        "",
+        "11001",
+        0,
+        0,
+        ""
+      ],
+      "passed": true
+    },
+    {
+      "name": "store change preserves create draft",
+      "actual": "New draft",
+      "expected": "New draft",
+      "passed": true
+    },
+    {
+      "name": "array route selects B",
+      "actual": "External B",
+      "expected": "External B",
+      "passed": true
+    },
+    {
+      "name": "array route uses first ID",
+      "actual": "External A",
+      "expected": "External A",
+      "passed": true
+    },
+    {
+      "name": "invalid ID \"missing\" has no editable form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid ID \"\" has no editable form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid ID [\"missing\"] has no editable form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid route does not automatically go back",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "not-found offers explicit return to account list",
+      "actual": "/report/accounting/accounts",
+      "expected": "/report/accounting/accounts",
+      "passed": true
+    },
+    {
+      "name": "valid route recovers after invalid",
+      "actual": "External B",
+      "expected": "External B",
+      "passed": true
+    },
+    {
+      "name": "deleted edit target removes form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "restored account starts from fresh defaults",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "classification updates invalid subclassification",
+      "actual": "Kewajiban Jangka Pendek",
+      "expected": "Kewajiban Jangka Pendek",
+      "passed": true
+    },
+    {
+      "name": "valid subclassification draft survives store update",
+      "actual": "Kewajiban Jangka Panjang",
+      "expected": "Kewajiban Jangka Panjang",
+      "passed": true
+    },
+    {
+      "name": "schema invalid form does not add",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "invalid form does not open success",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "negative amount rejected",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "two pending valid submits create exactly one account",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "created payload preserved",
+      "actual": [
+        [
+          75,
+          0,
+          "11001"
+        ]
+      ],
+      "expected": [
+        [
+          75,
+          0,
+          "11001"
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "name": "successful save opens modal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "save disabled after success",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "repeat saved submit does not duplicate",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "finish navigates back once",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "two pending edits write once",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "edit updates correct account",
+      "actual": "Edited A",
+      "expected": "Edited A",
+      "passed": true
+    },
+    {
+      "name": "edit leaves other account unchanged",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "route change clears success modal",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "route change reenables save",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "old success callback cannot navigate new form",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "late resolver after route change cannot save previous form",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "pending submit after delete cannot resurrect account",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "pending deleted form cannot show success",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "pending create after unmount adds nothing",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "no unexpected React errors",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "sha256": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17"
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "file": "schema/accounting/account.ts",
+      "sha256": "399cd4a99ba6b376d5524b7a113f19205cb0c37577efa5ae7966abbb729ffe3f"
+    }
+  ],
+  "limits": "Production screen/RHF/Zod/Zustand/useAlertModal; host Form fields/modal/router adapters, no native/browser/API."
+}

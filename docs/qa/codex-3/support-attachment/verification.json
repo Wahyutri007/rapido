@@ -1,0 +1,173 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-005",
+  "status": "READY_FOR_QA",
+  "createdAt": "2026-10-08T19:18:46.822Z",
+  "approval": "Developer evidence, independent QA/QC review pending; publication belongs to PM",
+  "results": {
+    "initialBaseline": {
+      "passed": 93,
+      "failed": 21
+    },
+    "baseline": {
+      "passed": 90,
+      "failed": 24
+    },
+    "final": {
+      "passed": 114,
+      "failed": 0,
+      "runtimeErrors": 0
+    },
+    "typeDiagnostics": 0,
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExitCode": 0,
+    "diffExitCode": 0,
+    "jsxComparisonsPassed": true
+  },
+  "changedSource": {
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de"
+  },
+  "readOnlyContractFingerprint": {
+    "schema/support.ts": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+    "types/ui/support.ts": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+    "app/(no-layout)/manage/feedback/index.tsx": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+    "app/(no-layout)/manage/feature-request/index.tsx": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f"
+  },
+  "artifactFingerprint": {
+    "docs/qa/codex-3/support-attachment/HANDOFF.md": "d5acde50638420a88905156cc7d341e63606f091e40b12fbc5ecdd19e07d4593",
+    "docs/qa/codex-3/support-attachment/check.cjs": "f0c140e6615aabd5641c43471b7980170d919a6fc3f118146a429b17b87753c7",
+    "docs/qa/codex-3/support-attachment/check-initial.cjs": "8718bdca7e86e57bd950857d086d337f9a7c084add835ae92127d1c536b8ffce",
+    "docs/qa/codex-3/support-attachment/baseline-initial.json": "928dbcc27b35cea13bc5f349980a399b367f6ef49488cc4cf05e6a3ce3f86e3a",
+    "docs/qa/codex-3/support-attachment/baseline.json": "f6925e4f7859d7d26764e3bc4dfa8df66fb4dfa13e29517ab79b653d5e0c8c3e",
+    "docs/qa/codex-3/support-attachment/results.json": "60cddddcb0b9248096abda38e1f6e3eef3fc56f67c02fa8883419e588feae51a",
+    "docs/qa/codex-3/support-attachment/attachment.before.tsx.txt": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+    "docs/qa/codex-3/support-attachment/form.before.tsx.txt": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+    "docs/qa/codex-3/support-attachment/quality.cjs": "76db6392be14322d2252378457ec99ada6731f521a1ff9c953c8957a9e22c75b",
+    "docs/qa/codex-3/support-attachment/quality-results.json": "d99fc465976f384d3c6abc83c83f776cf307e2baade52e4a802f25727849ad42",
+    "docs/qa/codex-3/support-attachment/typecheck.cjs": "5b56746dbbaf5957dbe86016d998813e3ec8c5bb6446355e9e2a819c70c3f97f",
+    "docs/qa/codex-3/support-attachment/typecheck-results.json": "bab68bd1b692f90c51d7dba1508c91bc5c571520e90f7dcfb8c7e54b386ac4e6",
+    "docs/qa/codex-3/support-attachment/verify.cjs": "d5c7b145dde2ad4d47bb3a0a194332bca36387bd7c278161c18740721d0a114f"
+  },
+  "testedSourceMatches": [
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "expected": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "actual": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "expected": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "actual": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "schema/support.ts",
+      "expected": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "actual": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "types/ui/support.ts",
+      "expected": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "actual": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/manage/feedback/index.tsx",
+      "expected": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "actual": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "passed": true
+    },
+    {
+      "suite": "lifecycle",
+      "file": "app/(no-layout)/manage/feature-request/index.tsx",
+      "expected": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "actual": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "passed": true
+    },
+    {
+      "suite": "quality",
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "expected": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "actual": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "passed": true
+    },
+    {
+      "suite": "quality",
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "expected": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "actual": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "expected": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "actual": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "passed": true
+    },
+    {
+      "suite": "typecheck",
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "expected": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "actual": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "passed": true
+    }
+  ],
+  "baselineSnapshotMatches": [
+    {
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "snapshot": "docs/qa/codex-3/support-attachment/attachment.before.tsx.txt",
+      "expected": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+      "actual": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+      "passed": true
+    },
+    {
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "snapshot": "docs/qa/codex-3/support-attachment/form.before.tsx.txt",
+      "expected": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+      "actual": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+      "passed": true
+    }
+  ],
+  "unchangedContractMatches": [
+    {
+      "file": "schema/support.ts",
+      "expected": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "baseline": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "passed": true
+    },
+    {
+      "file": "types/ui/support.ts",
+      "expected": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "baseline": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/feedback/index.tsx",
+      "expected": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "baseline": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/feature-request/index.tsx",
+      "expected": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "baseline": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Actual support components/routes/RHF Controller/FormProvider/Zod with DocumentPicker/native/presentation/modal adapters",
+    "No native picker/browser/full navigator/root auth/SSR/Figma/HTTP/API upload/full-project typecheck",
+    "No cancellation of already open OS picker; token discards late results after removal/unmount",
+    "Historical screenshot/browser/full TS are not reruns on new component hashes; submission remains unavailable in source"
+  ]
+}

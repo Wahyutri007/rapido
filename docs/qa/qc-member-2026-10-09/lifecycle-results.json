@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-09",
+  "source": "components/feature/manage/member/MemberModifyScreen.tsx",
+  "sha256": "463424d1095dd86e16e3d431fec717e75a84a35062d0b79b53ac86b3a3501f01",
+  "checks": [
+    {
+      "name": "initial edit hydrates A",
+      "actual": "Alice",
+      "expected": "Alice",
+      "pass": true
+    },
+    {
+      "name": "refetch preserves same-ID draft",
+      "actual": "Alice draft",
+      "expected": "Alice draft",
+      "pass": true
+    },
+    {
+      "name": "changing A to B hydrates B",
+      "actual": "Bob",
+      "expected": "Bob",
+      "pass": true
+    },
+    {
+      "name": "edit to create clears old customer fields",
+      "actual": "Bob",
+      "expected": "",
+      "pass": false
+    },
+    {
+      "name": "return to B after create restores B",
+      "actual": "New customer draft",
+      "expected": "Bob",
+      "pass": false
+    },
+    {
+      "name": "successful save locks current form",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "new customer after saved customer can submit",
+      "actual": true,
+      "expected": false,
+      "pass": false
+    },
+    {
+      "name": "no unhandled runtime exception",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    }
+  ],
+  "passed": 5,
+  "failed": 3,
+  "errors": [],
+  "scope": "Actual production component, React DOM and RHF; UI/API/resolver stubs. No router/native/visual verification."
+}

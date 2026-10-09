@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-09",
+  "ticket": "ACCOUNT-ID-001",
+  "status": "READY_FOR_QA",
+  "source": {
+    "file": "store/accountingStore.ts",
+    "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+  },
+  "outsideAddAccountUnchanged": true,
+  "checks": {
+    "store": 25,
+    "integration": 39,
+    "total": 64,
+    "runtimeErrors": 0
+  },
+  "dependencies": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/detail.tsx",
+      "sha256": "f14322973a8c7b5500f1c927f0f7b1162108e1a2b25d7df4739a32a0c8dc33e8"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    }
+  ],
+  "sharedHarnesses": [
+    {
+      "file": "ledger-ids/store-check.cjs",
+      "sha256": "edfa6a7a5ad8f844bbc2bb90bce657b6451c8130744e174327f71cd0bbc18a21"
+    },
+    {
+      "file": "account-detail/check.cjs",
+      "sha256": "163cef54e47fcf66bdfaf16ff006195f5166395aef246bce06d7fe84731ec1cf"
+    },
+    {
+      "file": "account-detail/quality.cjs",
+      "sha256": "a51723b56043093cbd2d94046f4713896b01559a280bb5157f8c7c78d9c1c788"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "HANDOFF.md",
+      "sha256": "76adf1f0d768afa76f37607ded6aac0262eb73641063cf1ef023f41bd098f3e3"
+    },
+    {
+      "file": "accountingStore.before.ts.txt",
+      "sha256": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec"
+    },
+    {
+      "file": "baseline-store.json",
+      "sha256": "d78c90f8bcdc1d3125c99bae143b2da229d37b1914049f96bf879878ed260f2e"
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "e2d85c1da58f75a459a3a6a6eea94b160788b8c000248261f6ef7ad5c63d2b45"
+    },
+    {
+      "file": "final-store.json",
+      "sha256": "bb9ddcb03980e1f2f45c23095070a77813a4e139f82b6d547369c0d124f9c3e1"
+    },
+    {
+      "file": "final.json",
+      "sha256": "f23a2a6103afbafc80ca394d529051ad4868c5a8caaa68a4a097800596bcdd16"
+    },
+    {
+      "file": "integration.cjs",
+      "sha256": "d5bd48019c2e5fa3a79578e05982baa8949fabc91044abb6b08a1e8d6393ff0b"
+    },
+    {
+      "file": "manifest.cjs",
+      "sha256": "fc0c742402e2bc0ef877980df2792c4d21ff0d731954f9f4dbd8f8eca4b00c68"
+    },
+    {
+      "file": "quality.cjs",
+      "sha256": "d4d803bc64089a02067b29d73a64e643bc4bb4475306328dd5bdbcd6b3d79b04"
+    },
+    {
+      "file": "quality.json",
+      "sha256": "37bc5e3beff87c36b9d6bb6c1e079cf9abc837d477b783135f26975b7c37089c"
+    },
+    {
+      "file": "store-check.cjs",
+      "sha256": "5bcdba44894d59fb87222b3647799a828b9f094d7bd3b66304491c7fae63a951"
+    }
+  ],
+  "limits": "Isolated production store and account-detail screen with host/router/formatter adapters. IDs unique within current in-memory accounts, not distributed or permanently reserved. No migration of pre-existing duplicate IDs."
+}

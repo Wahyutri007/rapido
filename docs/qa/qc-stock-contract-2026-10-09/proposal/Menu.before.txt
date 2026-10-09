@@ -1,0 +1,257 @@
+<?php
+
+namespace App\Domain\Catalog\Models;
+
+use App\Domain\Catalog\Models\Category;
+use App\Domain\Catalog\Models\Unit;
+use App\Domain\Catalog\Models\Discounts\Discount;
+use App\Domain\Catalog\Models\Tax;
+use App\Domain\Inventory\Models\StockEntryDetail;
+use App\Domain\Order\Models\CartDetail;
+use App\Domain\User\Enums\StockSettingTypeEnum;
+use App\Domain\User\Models\StockSettings\StockSettingDetail;
+use App\Domain\User\Models\User;
+use App\Enums\DiscountValueTypeEnum;
+use App\Domain\Store\Models\Store;
+use App\Traits\HasMedia;
+use App\Traits\HasModelHelper;
+use App\Traits\IsStoreContent;
+use App\Traits\IsUserContent;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+
+class Menu extends Model
+{
+    use HasUuids, IsUserContent, HasMedia, HasModelHelper, IsStoreContent;
+
+    protected $fillable = [
+        'user_id',
+        'name',
+        'category_id',
+        'brand_id',
+        'description',
+        'sell_price',
+        'cost_price',
+        'unit_id',
+        'barcode'
+    ];
+
+    protected $appends = [
+        'has_variants',
+    ];
+
+    public static $polymorphicType = 'menu';
+
+    public static $mediaCollections = [
+        'image' => 'menus/images',
+    ];
+
+    public static $allRelations = [
+        'category',
+        'unit',
+        'entries.prices',
+        'stores',
+    ];
+
+
+    // Acessors
+    public function hasVariants(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->entries()->whereNotNull('variant_name')->exists(),
+        );
+    }
+
+    public function isStockManaged(): Attribute
+    {
+
+        $ownerStockSetting = $this->owner?->stockSetting;
+
+        if (!$ownerStockSetting) {
+            return Attribute::make(
+                get: fn() => null
+            );
+        }
+
+        if (!$ownerStockSetting || !$ownerStockSetting->enabled) {
+            $isManaged = false;
+        } elseif ($ownerStockSetting->type === StockSettingTypeEnum::ALL->value) {
+            $isManaged = true;
+        } else {
+            $isManaged = (bool) $this->stockSettingDetail;
+        }
+        return Attribute::make(
+            get: fn() => $isManaged,
+        );
+    }
+
+    public function image(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => ($media = $this->getFirstMedia(self::$mediaCollections['image']))
+            ? Storage::url($media->path)
+            : null,
+        );
+    }
+
+    public function priceAfterDiscount(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->handleRounding($this->sell_price),
+        );
+    }
+
+    public function priceBeforeTax(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->handleRounding($this->sell_price),
+        );
+    }
+
+    public function priceAfterTax(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->handleRounding($this->sell_price),
+        );
+    }
+
+    // Accessor Function
+    public function getPriceByDiscount(?Discount $discount)
+    {
+        if (!$discount) {
+            return $this->sell_price;
+        }
+
+        $isValidMenuDiscount = $discount->applicable_type === 'menu' && $discount->applicable_id === $this->id;
+        $isValidCategoryDiscount = $this->category && $discount->applicable_type === 'category' && $discount->applicable_id === $this->category->id;
+
+        if (!$isValidMenuDiscount && !$isValidCategoryDiscount) {
+            return $this->sell_price;
+        }
+
+        $price = $this->sell_price;
+
+        if ($discount->type === DiscountValueTypeEnum::PERCENTAGE->value) {
+            $price -= ($price * ($discount->value / 100));
+        } elseif ($discount->type === DiscountValueTypeEnum::FIXED->value) {
+            $price -= $discount->value;
+        }
+
+        return $price;
+    }
+
+    // Relations
+    public function prices()
+    {
+        return $this->morphMany(MenuPrices::class, 'priceable', 'priceable_type', 'priceable_id');
+    }
+
+    public function entries()
+    {
+        return $this->hasMany(MenuEntry::class);
+    }
+
+    public function variants()
+    {
+        return $this->entries()->where('name', '!=', 'DEFAULT');
+    }
+
+    public function extraMenu()
+    {
+        return $this->belongsToMany(ExtraMenu::class, 'extra_menu_menu', 'menu_id', 'extra_menu_id')->withTimestamps();
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function tax()
+    {
+        return $this->belongsTo(Tax::class);
+    }
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
+
+    public function cartDetails()
+    {
+        return $this->morphMany(CartDetail::class, 'orderable', 'orderable_type', 'orderable_id');
+    }
+
+    public function bundlingDetails()
+    {
+        return $this->hasMany(BundlingDetail::class);
+    }
+
+    public function discounts()
+    {
+        return $this->morphMany(Discount::class, 'applicable', 'applicable_type', 'applicable_id');
+    }
+
+    public function stock()
+    {
+        return $this->hasOne(MenuEntry::class);
+    }
+
+    public function stockSettingDetail()
+    {
+        return $this->morphOne(StockSettingDetail::class, 'stockable');
+    }
+
+    public function stockEntryDetails()
+    {
+        return $this->hasMany(StockEntryDetail::class);
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'favorite_menus', 'menu_id', 'user_id')->withTimestamps();
+    }
+
+    // Scopes
+    public function scopeToUser($query, User|null $user)
+    {
+        if (!$user) {
+            $user = auth()->user();
+        }
+
+        if ($user->team_id) {
+            return $query->whereHas('stores', function ($q) use ($user) {
+                $q->where('store_id', $user->team_id);
+            });
+        }
+
+        return $query;
+    }
+
+    // Helper Function
+    private function handleRounding($amount)
+    {
+        return $amount;
+    }
+
+    public function getActiveDiscountsQuery()
+    {
+        return $this->discounts()
+            ->where('start_period', '<=', now())
+            ->where('end_period', '>=', now())
+            ->where(function ($query) {
+                $query->whereNull('start_time')
+                    ->orWhere('start_time', '<=', now()->format('H:i:s'));
+            })
+            ->where(function ($query) {
+                $query->whereNull('end_time')
+                    ->orWhere('end_time', '>=', now()->format('H:i:s'));
+            });
+    }
+}

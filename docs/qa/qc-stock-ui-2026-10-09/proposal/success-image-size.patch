@@ -1,0 +1,11 @@
+diff --git a/components/common/SuccessModal.tsx b/components/common/SuccessModal.tsx
+--- a/components/common/SuccessModal.tsx
++++ b/components/common/SuccessModal.tsx
+@@ -93,6 +93,7 @@ export default function SuccessModal(props: SuccessModalProps) {
+ 						<View className="w-full items-center justify-center overflow-hidden">
+ 							<Image
+ 								source={image}
++								style={{ height: 176, width: "100%" }}
+ 								className="h-44 w-full"
+ 								resizeMode="contain"
+ 							/>

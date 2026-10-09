@@ -1,0 +1,44 @@
+const fs = require('node:fs'), path = require('node:path'), assert = require('node:assert/strict');
+const initial = path.join(__dirname, 'orientation-proposal/results.json');
+if (fs.existsSync(initial) && !fs.existsSync(path.join(__dirname, 'orientation-proposal/initial-results.json'))) fs.copyFileSync(initial, path.join(__dirname, 'orientation-proposal/initial-results.json'));
+if (!fs.existsSync(path.join(__dirname, 'proposal/initial-modal-entry.fixture.jsx'))) fs.copyFileSync('.expo/qc-success-proposal-entry.jsx', path.join(__dirname, 'proposal/initial-modal-entry.fixture.jsx'));
+let entry = fs.readFileSync(path.join(__dirname, 'proposal/initial-modal-entry.fixture.jsx'), 'utf8');
+for (const [name, directory] of [['Role', 'roles'], ['Worker', 'workers'], ['Member', 'member']]) {
+  const source = 'components/feature/manage/' + directory + '/' + name + 'DeleteDialog.tsx';
+  const original = fs.readFileSync(source, 'utf8');
+  const copied = original.replace('@/components/common/SuccessModal', './qc-success-modal-candidate');
+  assert.notEqual(copied, original);
+  assert.equal(copied.replace('./qc-success-modal-candidate', '@/components/common/SuccessModal'), original);
+  const target = '.expo/qc-success-' + name.toLowerCase() + '-dialog.tsx';
+  fs.writeFileSync(target, copied);
+  fs.copyFileSync(target, path.join(__dirname, 'proposal/' + name + 'DeleteDialog.fixture.tsx.txt'));
+  const needle = 'import ' + name + 'DeleteDialog from "../' + source.replaceAll('\\', '/').replace('.tsx', '') + '";';
+  assert.equal(entry.split(needle).length, 2);
+  entry = entry.replace(needle, 'import ' + name + 'DeleteDialog from "./qc-success-' + name.toLowerCase() + '-dialog";');
+}
+fs.writeFileSync('.expo/qc-success-proposal-entry.jsx', entry);
+fs.writeFileSync(path.join(__dirname, 'proposal/modal-entry.fixture.jsx'), entry);
+const modal = fs.readFileSync(path.join(__dirname, 'modal-browser.cjs'), 'utf8').replaceAll('qc-success-modal-entry', 'qc-success-proposal-entry').replace('mode: "current-production-source"', 'mode: "PROPOSAL_ONLY_NOT_APPLIED"').replace('hash("components/common/SuccessModal.tsx")', 'hash(".expo/qc-success-modal-candidate.tsx")');
+fs.writeFileSync(path.join(__dirname, 'proposal/modal-browser.cjs'), modal);
+fs.copyFileSync(path.join(__dirname, 'web.css'), path.join(__dirname, 'proposal/web.css'));
+const stock = fs.readFileSync(path.join(__dirname, 'stock-browser.cjs'), 'utf8').replaceAll('qc-success-stock-entry', 'qc-success-stock-proposal-entry').replace("const candidate=process.argv.includes('--candidate');", 'const candidate=true;');
+fs.writeFileSync(path.join(__dirname, 'proposal/stock-browser.cjs'), stock);
+fs.mkdirSync(path.join(__dirname, 'proposal/stock-final'), { recursive: true });
+fs.copyFileSync(path.join(__dirname, 'stock-final/web-before.css'), path.join(__dirname, 'proposal/stock-final/web-before.css'));
+fs.mkdirSync(path.join(__dirname, 'proposal/delete-lifecycle'), { recursive: true });
+let lifecycle = fs.readFileSync(path.join(__dirname, 'delete-lifecycle/check.cjs'), 'utf8');
+lifecycle = lifecycle.replace('mode: baseline ? "before-snapshots" : "current-source"', 'mode: baseline ? "before-snapshots" : "PROPOSAL_ONLY_NOT_APPLIED"');
+const readAnchor = 'fs.readFileSync(absolute, "utf8")';
+assert.equal(lifecycle.split(readAnchor).length, 2);
+lifecycle = lifecycle.replace(readAnchor, 'fs.readFileSync(absolute === path.resolve("components/common/SuccessModal.tsx") ? path.resolve("docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.tsx") : absolute, "utf8")');
+const hashAnchor = 'hash(absolute)';
+assert.equal(lifecycle.split(hashAnchor).length, 2);
+lifecycle = lifecycle.replace(hashAnchor, 'hash(absolute === path.resolve("components/common/SuccessModal.tsx") ? path.resolve("docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.tsx") : absolute)');
+const nativeAnchor = 'if (name === "react-native")';
+assert.ok(lifecycle.includes(nativeAnchor));
+// Existing adapter exports are inspected below; add the new host without changing scenarios.
+const exportAnchor = 'presentation(["View", "Image", "Pressable"])';
+assert.equal(lifecycle.split(exportAnchor).length, 2);
+lifecycle = lifecycle.replace(exportAnchor, 'presentation(["View", "Image", "Pressable", "ScrollView"])');
+fs.writeFileSync(path.join(__dirname, 'proposal/delete-lifecycle/check.cjs'), lifecycle);
+console.log('Proposal fixtures redirect only SuccessModal imports/loader; application sources untouched.');

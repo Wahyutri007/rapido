@@ -1,0 +1,431 @@
+{
+  "baseline": true,
+  "passed": 19,
+  "failed": 11,
+  "checks": [
+    {
+      "name": "valid B displays its name",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "valid B nominal uses its own credit",
+      "actual": "Rp30",
+      "expected": "Rp30",
+      "passed": true
+    },
+    {
+      "name": "summary retains whole-account totals contract",
+      "actual": [
+        "Rp100",
+        "Rp30",
+        "Rp70"
+      ],
+      "expected": [
+        "Rp100",
+        "Rp30",
+        "Rp70"
+      ],
+      "passed": true
+    },
+    {
+      "name": "unknown route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "missing route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "empty route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "whitespace route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "empty array route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "unknown array route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "empty first route renders only not-found",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "array B selects B",
+      "actual": "Cash A",
+      "expected": "Bank B",
+      "passed": false
+    },
+    {
+      "name": "multiple parameter follows first-value convention",
+      "actual": "Cash A",
+      "expected": "Bank B",
+      "passed": false
+    },
+    {
+      "name": "valid route recovers A",
+      "actual": "Cash A",
+      "expected": "Cash A",
+      "passed": true
+    },
+    {
+      "name": "other account update refreshes global summary",
+      "actual": [
+        "Rp200",
+        "Rp30",
+        "Rp170"
+      ],
+      "expected": [
+        "Rp200",
+        "Rp30",
+        "Rp170"
+      ],
+      "passed": true
+    },
+    {
+      "name": "other account update keeps selected account",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "selected account update refreshes nominal",
+      "actual": "Rp200",
+      "expected": "Rp200",
+      "passed": true
+    },
+    {
+      "name": "balanced totals update summary",
+      "actual": [
+        "Rp200",
+        "Rp200",
+        "Rp0"
+      ],
+      "expected": [
+        "Rp200",
+        "Rp200",
+        "Rp0"
+      ],
+      "passed": true
+    },
+    {
+      "name": "balanced badge is visible",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "reset selected account updates nominal",
+      "actual": "Rp0",
+      "expected": "Rp0",
+      "passed": true
+    },
+    {
+      "name": "reset selected account updates summary",
+      "actual": [
+        "Rp200",
+        "Rp0",
+        "Rp200"
+      ],
+      "expected": [
+        "Rp200",
+        "Rp0",
+        "Rp200"
+      ],
+      "passed": true
+    },
+    {
+      "name": "metadata changes refresh detail",
+      "actual": [
+        "Updated B",
+        "USD"
+      ],
+      "expected": [
+        "Updated B",
+        "USD"
+      ],
+      "passed": true
+    },
+    {
+      "name": "reordering preserves selected account",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "delete selected account shows no substitute",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp0",
+          "Rp100"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "restore collection recovers selected account",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "delete another account preserves selection",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "delete another account refreshes global totals",
+      "actual": [
+        "Rp0",
+        "Rp30",
+        "Rp30"
+      ],
+      "expected": [
+        "Rp0",
+        "Rp30",
+        "Rp30"
+      ],
+      "passed": true
+    },
+    {
+      "name": "empty collection shows not-found",
+      "actual": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": true
+    },
+    {
+      "name": "collection arrives after mount",
+      "actual": "Bank B",
+      "expected": "Bank B",
+      "passed": true
+    },
+    {
+      "name": "data arrival without ID does not pick first",
+      "actual": {
+        "missing": false,
+        "rows": 6,
+        "summary": [
+          "Rp100",
+          "Rp30",
+          "Rp70"
+        ],
+        "accountNames": [
+          "Cash A"
+        ]
+      },
+      "expected": {
+        "missing": true,
+        "rows": 0,
+        "summary": [],
+        "accountNames": []
+      },
+      "passed": false
+    },
+    {
+      "name": "no unexpected React errors",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/detail.tsx",
+      "sha256": "faaca289c75b2c3002a121bca8d5272706b3840ffce5bb2c9e9b56c51a7d0e47"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    }
+  ],
+  "limits": "Full screen and Zustand StrictMode, route/host/formatter adapters; no router/native/API/Figma verification."
+}

@@ -1,0 +1,153 @@
+{
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "profile": "D:/Codex-5",
+  "ticket": "SD5-008",
+  "status": "READY_FOR_QA",
+  "independentApproval": false,
+  "createdUTC": "2026-10-09T00:37:08.128Z",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "branch": "main",
+  "sourceOrigin": "Current working tree; no Git mutations by this developer",
+  "editedSources": {
+    "hooks/useRegistrationForm.ts": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c"
+  },
+  "executedSourceHashes": {
+    "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+    "hooks/useRegistrationForm.ts": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "readOnlyContracts": {
+    "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/feature/register/wizard/InformationScreen.tsx": "87d8dd2b1c47144054812fd7648a79b692905d584cc7d51eebe71c1baaf590bf",
+    "components/feature/register/wizard/BankInformationScreen.tsx": "cf6bdbbe7b90eeeb5a9cf42f9892b900223c85c83c0fb9041a16821ff4f1f54d",
+    "components/feature/register/wizard/PasswordInformationScreen.tsx": "241a63442728117caccfac2b9f001ae513a8c8aa6086c36c25c89a5932f0c36b",
+    "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+    "app/(no-layout)/terms-and-condition.tsx": "02c5feca1c00bf6b946cb1d21ded7098ef14ef74e210624dcbb86e466881889e",
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+    "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07"
+  },
+  "runtimeLibraryHashes": {
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "node_modules/@hookform/resolvers/zod/dist/zod.js": "73abe8d2ac3220ccb1e39d8fbc22ace3f0b0b3ccb3a3d8fba762f47a50e2624e",
+    "node_modules/zod/index.cjs": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+    "node_modules/zustand/index.js": "544c29c7aa257a566dbc6f3e94dd4a9f11c9ae8ac4b3c39b235a9900810934d8",
+    "node_modules/react/jsx-runtime.js": "b392951a77d0a2e6a6bd017e49d768481ae5b63c4109c6c31f622cf7b2433edc",
+    ".expo/senior7-test-tools/node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    ".expo/senior7-test-tools/node_modules/react/cjs/react.development.js": "1919eb95d51bdaed6c771bcd506d65a11639142032e44d0e9212e5c745be1b65",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/index.js": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+    ".expo/senior7-test-tools/node_modules/react-test-renderer/cjs/react-test-renderer.development.js": "747ea6897c0e4077df71c44b0debf487c6cbdd8e61e8528c83100176eb01a08b"
+  },
+  "artifactHashes": {
+    "docs/qa/senior-5-2026-10-09/registration-form/HANDOFF.md": "575cb729cac67bf71921b234d560689c77e0e8b044df537ab20b9358c6d342c9",
+    "docs/qa/senior-5-2026-10-09/registration-form/baseline-results.json": "49a54a64cfccf411a2f624f3ecc83e87d8d475514a8890bfa1fb9ca73cbb346d",
+    "docs/qa/senior-5-2026-10-09/registration-form/before/useRegistrationForm.ts.txt": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+    "docs/qa/senior-5-2026-10-09/registration-form/check.cjs": "e347bd86eb3f16aac8a24c4d828b9cfc9905126121631be08cfc3628786c9bd5",
+    "docs/qa/senior-5-2026-10-09/registration-form/eslint-baseline.json": "ba93dac66410a84d5233ef3a1384cbee6520d1b99a23af0270badff04a2e6297",
+    "docs/qa/senior-5-2026-10-09/registration-form/eslint-final.json": "6d5e948702ecc3ecfd1a6c99cebdd393a5ae772423405ca0c3768f417e870868",
+    "docs/qa/senior-5-2026-10-09/registration-form/figma-access.json": "2ada0212f12ad102d47ed45b939f98e9c43aff95120a0327e16244d32ec62dca",
+    "docs/qa/senior-5-2026-10-09/registration-form/final-results.json": "6f37caf9fd10ab5fef69f0fe9d9de0276a88fd5decdde2a663818c5001e4825d",
+    "docs/qa/senior-5-2026-10-09/registration-form/historical-packets-check.json": "b0e2e4a7406d90681d82c42c1062b39e97665746641f9f0462e90332092dba2f",
+    "docs/qa/senior-5-2026-10-09/registration-form/quality-results.json": "2e3c2cee679517ed47e2282428e17542fe22c5a7f6a87c134a999c1beaa1be76",
+    "docs/qa/senior-5-2026-10-09/registration-form/scope-proof.json": "e6d3ca8cce9f600351554ba832a8331b9eb129b74f02a5649df5c45d7b9ee941",
+    "docs/qa/senior-5-2026-10-09/registration-form/source-before.json": "bbc31346a7ca41c6c2bdc5523df10b72e23adcdce513e021d4456f00999f6453",
+    "docs/qa/senior-5-2026-10-09/registration-form/typecheck-results.json": "950ad2500ba68d27fde90aa05518813a8c133b5ba79611d22f190d2483b0f5d0",
+    "docs/qa/senior-5-2026-10-09/registration-form/typecheck.cjs": "d7ce04ebd0fd489fb1ee59e688f0abab86af2dd0fbf7d7837b98d59abfc4d5b2"
+  },
+  "scopeProof": {
+    "publicHookContractUnchanged": {
+      "parameters": 0,
+      "returnedKeys": [
+        "personalInfoForm",
+        "bankInfoForm",
+        "passwordInfoForm",
+        "indexState"
+      ],
+      "resolvers": [
+        "zodResolver(personalInfoSchema)",
+        "zodResolver(bankInfoSchema)",
+        "zodResolver(passwordInfoSchema)"
+      ],
+      "modes": [
+        "\"onChange\""
+      ]
+    },
+    "readOnlyContracts": {
+      "store/registration.ts": "1a526e0890e7fcf24ec493661f2141b567a3a3b080dcd5132755621a8084f2e0",
+      "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+      "hooks/useParamJson.ts": "1e5813dcc7ca57025dbd1bb9c3ea74728d396e3928d4ab459b034e550b6345fe",
+      "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "components/feature/register/wizard/InformationScreen.tsx": "87d8dd2b1c47144054812fd7648a79b692905d584cc7d51eebe71c1baaf590bf",
+      "components/feature/register/wizard/BankInformationScreen.tsx": "cf6bdbbe7b90eeeb5a9cf42f9892b900223c85c83c0fb9041a16821ff4f1f54d",
+      "components/feature/register/wizard/PasswordInformationScreen.tsx": "241a63442728117caccfac2b9f001ae513a8c8aa6086c36c25c89a5932f0c36b",
+      "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+      "app/(no-layout)/terms-and-condition.tsx": "02c5feca1c00bf6b946cb1d21ded7098ef14ef74e210624dcbb86e466881889e",
+      "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+      "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+      "app/(onboarding)/otp.tsx": "93bc98c42e0a031e6e4f8547945640771436421ea2ea832868941a9daa852c5e",
+      "api/hooks/otp.ts": "90f8dd8ae73ba51c0455a0954000510d09b80abc4540114fb8a4bc02f25bce07"
+    },
+    "intentionalBehaviorChanges": [
+      "One-time validated seed/default initialization; password/confirmation restored",
+      "Earliest incomplete initial step; no automatic success stage",
+      "Store consent canonical; URL/old seed cannot grant acceptance",
+      "Live true/false consent synchronization via subscription with teardown",
+      "Mounted seed changes/resetStore do not replace typed input or manual index"
+    ],
+    "dependencyOverlay": {
+      "priorPackage": "SD5-006 registration-start",
+      "priorHookHash": "30302ead774fa521c2a4c413d1d47a4958e9c5b87591331cbd9c6828817a8c70",
+      "currentHookHash": "1ec99821cccb41a6d0c86372f083227445e7bbe1f44b30edefd0ab7c1ce4918c",
+      "priorPacketPreserved": true,
+      "currentCombinedWizardApproval": false
+    },
+    "noRouteApiSchemaStoreUiChanges": true
+  },
+  "assertions": {
+    "baseline": {
+      "passed": 24,
+      "failed": 36
+    },
+    "final": {
+      "passed": 60,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "unhandledRejections": 0
+    }
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "suppressed": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "focusedTypecheckDiagnostics": 0
+  },
+  "preservedHistoricalArtifacts": 33,
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "boundaries": [
+    "Hook/Form/RHF/Zod/store/parser production with fixture parent and native/router/presentation adapters",
+    "Wizard/Terms screens not rendered; typecheck includes Wizard imported closure only",
+    "Seed restoration on mount; live TNC only, no autosave/new disk persistence",
+    "Store consent canonical; URL grants no acceptance",
+    "Initial step completeness is not OTP verification/account creation; no backend endpoints implemented",
+    "API/schema/store/caller JSX/screens/primitives preserved",
+    "SD5-006 hook contract changed; prior manifest is historical, current combined review needs SD5-008",
+    "Browser/native keyboard/scroll/full routing/Figma parity/terms content not certified",
+    "No API/backend/storage/dummy/dependency/server/Metro/HP/Git publication work"
+  ]
+}

@@ -1,0 +1,32 @@
+
+Detail Pemasok
+
+Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang
+Grup pemasok untuk mengelola item berdasarkan kategori.
+Informasi Pemasok
+
+Nama Pemasok
+Pemasok Distribusi Bahan Baku dan Perlengkapan Usaha dengan Nama Panjang
+
+Alamat
+Jalan Pemasok Distribusi Bahan Baku nomor 123, Kompleks Perdagangan dan Perlengkapan Usaha, Pekanbaru, Riau
+
+No. Telepon
++62 812-3456-7890
+
+Email
+kontakpembeliandistribusibahanbakudankebutuhanusaha@contohpemasok.co.id
+
+Provinsi
+Riau
+
+Kota
+Pekanbaru
+
+Kecamatan
+Rumbai Selatan
+
+Kode Pos
+25252
+Edit
+Hapus

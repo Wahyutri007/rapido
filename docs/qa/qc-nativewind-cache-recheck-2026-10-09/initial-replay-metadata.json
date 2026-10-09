@@ -1,0 +1,45 @@
+{
+  "owner": "QC",
+  "status": "PASS",
+  "runs": [
+    [
+      "initializer",
+      [
+        "scripts/verify-nativewind-cache.cjs",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-nativewind-cache-recheck-2026-10-09\\initializer-results.json"
+      ]
+    ],
+    [
+      "guard",
+      [
+        "docs/qa/qc-nativewind-cache-recheck-2026-10-09/guard-boundaries.cjs"
+      ]
+    ],
+    [
+      "queue-boundaries",
+      [
+        "docs/qa/qc-nativewind-cache-recheck-2026-10-09/queue-boundaries.cjs"
+      ]
+    ],
+    [
+      "queue-stress",
+      [
+        "scripts/verify-metro-cache.cjs"
+      ]
+    ]
+  ],
+  "passed": 41,
+  "failed": 0,
+  "stress": {
+    "reads": 3000,
+    "writes": 200,
+    "maximumOpenRequests": 64,
+    "errorQueueRecovered": true,
+    "clearDelegated": true
+  },
+  "additionalQueueOperations": 258,
+  "countsExcludeQueueOperationTotals": true,
+  "isolated": true,
+  "rootMetroRequired": false,
+  "unexpectedRuntimeErrors": 0
+}

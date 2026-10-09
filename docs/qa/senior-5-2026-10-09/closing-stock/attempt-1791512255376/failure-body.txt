@@ -1,0 +1,61 @@
+Fixture Beranda
+
+Stok Akhir
+
+Semua Toko
+
+Semua Status
+
+Produk
+Stok Akhir
+Makanan
+Nasgor - Pedas
+NSG/PDS/01
+100 Pcs
+Nasgor - Biasa
+NSG/BSA/01
+100 Pcs
+Nasi Goreng Spesial
+NSG/SPC/01
+100 Pcs
+Ayam Bakar Taliwang
+AYM/BKR/01
+100 Pcs
+Mie Goreng
+MIE/GRG/01
+100 Pcs
+Chicken Katsu
+CKN/KTS/01
+100 Pcs
+Ayam Geprek
+AYM/GPK/01
+100 Pcs
+Minuman
+Teh Es
+TEH/01
+8 Pcs
+Bahan Baku
+Cabe
+CAB/01
+100 Kg
+Minyak Goreng
+BBK-MNY-001
+120 Liter
+Ayam Fillet
+BBK-AYM-001
+98 Kg
+Bahan Kering
+Tepung Terigu
+BBK-TPG-001
+18 Kg
+Gula Pasir
+BBK-GLA-001
+160 Kg
+
+Beranda
+Laporan
+
+Katalog
+Inventory
+
+Kelola

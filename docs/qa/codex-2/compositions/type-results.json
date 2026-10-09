@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-09T01:01:25.636Z",
+  "typescript": "6.0.3",
+  "diagnostics": 0,
+  "roots": [
+    "components/feature/inventory/composition/CompositionUi.tsx",
+    "components/feature/inventory/composition/CompositionListScreen.tsx",
+    "components/feature/inventory/composition/CompositionFormScreen.tsx",
+    "components/feature/inventory/composition/CompositionDetailScreen.tsx",
+    "components/feature/inventory/composition/CompositionSimulation.tsx",
+    "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+    "types/ui/inventory/composition.ts",
+    "schema/inventory/composition.ts",
+    "constants/data/inventory-compositions.ts",
+    "lib/inventory/composition.ts",
+    "store/inventoryCompositionStore.ts",
+    "store/inventoryMaterialStore.ts",
+    "app/(no-layout)/inventory/compositions/_layout.tsx",
+    "app/(no-layout)/inventory/compositions/index.tsx",
+    "app/(no-layout)/inventory/compositions/modify.tsx",
+    "app/(no-layout)/inventory/compositions/detail.tsx",
+    "app/(no-layout)/inventory/_layout.tsx",
+    "app/(back-office)/inventory/index.tsx",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+  ],
+  "scope": "18 changed production files, ambient declarations and imported dependency closure; not a project-wide gate"
+}

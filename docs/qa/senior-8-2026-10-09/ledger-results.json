@@ -1,0 +1,20 @@
+{
+	"kind": "production hook prefix in React DOM with fixture external store",
+	"file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+	"checks": [
+		"initial account and entries",
+		"switch route account",
+		"unknown route retains first-account fallback",
+		"entry collection update rerenders without route or account change",
+		"search matches reference case-insensitively",
+		"store update preserves search and recalculates filtered totals",
+		"type filter combines with search",
+		"clearing search preserves debit filter",
+		"clearing type restores all entries",
+		"account metadata updates after external store change",
+		"removed account entry collection clears list",
+		"empty account collection does not crash totals",
+		"accounts arriving after empty state restore detail"
+	],
+	"runtimeErrors": []
+}

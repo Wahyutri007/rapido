@@ -1,0 +1,756 @@
+{
+  "createdAt": "2026-10-09T02:35:54.437Z",
+  "passed": 10,
+  "failed": 9,
+  "checks": [
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "sourceHash": "d439975ccc898e9b6894f53189be5d61079ffacff0c1cc791327de8e6d7c54e4",
+        "beforeHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+        "sourceHash": "89f8947beb49ff63526c6c684ee3d8a90c184ba4882a33f55c581d83581eac9e",
+        "beforeHash": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "sourceHash": "3793e50928bbda2e4cbcceb9e5e4051a914b36683eb0648568350f1b9738acd6",
+        "beforeHash": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {
+            "className": "\"flex-row items-center gap-3\""
+          }
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "sourceHash": "ffa92dabb0da42b18b1b842f5af40e17c901e5a0e052a0dfe4948437e6578da0",
+        "beforeHash": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "sourceHash": "846f1a8353b2ced2884d2d5dfbbe6f04535ca2cbb57ccd6b946c5dd29068acf4",
+        "beforeHash": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "sourceHash": "3922889b284bacddf2d3d5ded857e1d8b7910023a4600399e32aaea14c1ab471",
+        "beforeHash": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {
+            "className": "\"flex-row items-center gap-3\""
+          }
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "sourceHash": "1615d3f577c27beab2a6935790a077f1b331188c9a9321f36c85012548080fb3",
+        "beforeHash": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "sourceHash": "6d27c7ff407fe16e268b58ebe09a3f6fe2f9a29052cf3614e601a4e4c49b4c3e",
+        "beforeHash": "641e445d92588d6f6be91451636c05fb0f18c10f6492988bb6c8c70ea288a768",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "sourceHash": "cbf034894331b654dbce325df34dd8d9f5d1f18cabb589db148c4f212b1ddc8a",
+        "beforeHash": "98297f84ae4661aa01d1bce5e1ad9f92ab2853ced3376906e6865f1b09b346bb",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "sourceHash": "3486908d48c53328d625a2ff559356370f8d7bf30a3dc20fef656c39c8148186",
+        "beforeHash": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {
+            "className": "\"flex-row items-center gap-3\""
+          }
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "sourceHash": "f768645fe0881834386ab8a41ba5a172735e82f8bc2294542b25ac12b1c4051f",
+        "beforeHash": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "sourceHash": "c96496c04ff5f8a1b053c7eb9d6bc2e65d63497c6aac50e2810ef0909a3fa7a2",
+        "beforeHash": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "sourceHash": "9fd103b6c6af39c9f31f87af9d28ba791f936ce2c611fc07037c729a997e6316",
+        "beforeHash": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+      "passed": false,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "sourceHash": "8555826fd5281a47296e2a5bd5af9ee89ceb7c5c4941f27710a523808d5cd11e",
+        "beforeHash": "d8eb69bc0b7750a68b8106e74a191c1f621d11393df7b4f67ab89e77098a066d",
+        "inverseAST": false,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+      "passed": true,
+      "detail": {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+        "sourceHash": "e5048c17160c041d4a09ba5d0c4ffb11b2f039bae48b464d8eb5ab17ac02497f",
+        "beforeHash": "5ae67e1e95c8fa82243a158b5f309145f48e73c9a4f65b36cc23b70477d7d0ce",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {}
+        ],
+        "insetParents": [
+          "ScrollView"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: components/common/Wrapper.tsx",
+      "passed": true,
+      "detail": {
+        "file": "components/common/Wrapper.tsx",
+        "sourceHash": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+        "beforeHash": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [],
+        "insetParents": [
+          "wrapper-spacer",
+          "wrapper-spacer"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: components/common/AnimatedWrapper.tsx",
+      "passed": true,
+      "detail": {
+        "file": "components/common/AnimatedWrapper.tsx",
+        "sourceHash": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f",
+        "beforeHash": "b579878f55e6806fc782b2fde16dfb71ce673a6211737349d609836ade3cce14",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [],
+        "insetParents": [
+          "wrapper-spacer",
+          "wrapper-spacer"
+        ],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "whole-file imports/handlers/props preserved except declared footer/clearance: components/feature/reports/ReportActionButton.tsx",
+      "passed": true,
+      "detail": {
+        "file": "components/feature/reports/ReportActionButton.tsx",
+        "sourceHash": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f",
+        "beforeHash": "e63203fe1111173a35b3763f4b608e78bd167b252dde18b630b7265d56b532bc",
+        "inverseAST": true,
+        "importsPreservedExceptExplicitAddition": true,
+        "footerOptions": [
+          {
+            "bottomPadding": "{24}",
+            "topPadding": "{8}",
+            "className": "{containerClassName}"
+          }
+        ],
+        "insetParents": [],
+        "topologyValid": true
+      }
+    },
+    {
+      "name": "no raw fixed footer remains in Accounting audit",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "details": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+      "sourceHash": "d439975ccc898e9b6894f53189be5d61079ffacff0c1cc791327de8e6d7c54e4",
+      "beforeHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+      "sourceHash": "89f8947beb49ff63526c6c684ee3d8a90c184ba4882a33f55c581d83581eac9e",
+      "beforeHash": "e9c3885ddd992bddfadd1f4efcf68c6974c4f4e226d4082cdf9b366d01408f17",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+      "sourceHash": "3793e50928bbda2e4cbcceb9e5e4051a914b36683eb0648568350f1b9738acd6",
+      "beforeHash": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {
+          "className": "\"flex-row items-center gap-3\""
+        }
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+      "sourceHash": "ffa92dabb0da42b18b1b842f5af40e17c901e5a0e052a0dfe4948437e6578da0",
+      "beforeHash": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+      "sourceHash": "846f1a8353b2ced2884d2d5dfbbe6f04535ca2cbb57ccd6b946c5dd29068acf4",
+      "beforeHash": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+      "sourceHash": "3922889b284bacddf2d3d5ded857e1d8b7910023a4600399e32aaea14c1ab471",
+      "beforeHash": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {
+          "className": "\"flex-row items-center gap-3\""
+        }
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+      "sourceHash": "1615d3f577c27beab2a6935790a077f1b331188c9a9321f36c85012548080fb3",
+      "beforeHash": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+      "sourceHash": "6d27c7ff407fe16e268b58ebe09a3f6fe2f9a29052cf3614e601a4e4c49b4c3e",
+      "beforeHash": "641e445d92588d6f6be91451636c05fb0f18c10f6492988bb6c8c70ea288a768",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+      "sourceHash": "cbf034894331b654dbce325df34dd8d9f5d1f18cabb589db148c4f212b1ddc8a",
+      "beforeHash": "98297f84ae4661aa01d1bce5e1ad9f92ab2853ced3376906e6865f1b09b346bb",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+      "sourceHash": "3486908d48c53328d625a2ff559356370f8d7bf30a3dc20fef656c39c8148186",
+      "beforeHash": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {
+          "className": "\"flex-row items-center gap-3\""
+        }
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+      "sourceHash": "f768645fe0881834386ab8a41ba5a172735e82f8bc2294542b25ac12b1c4051f",
+      "beforeHash": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+      "sourceHash": "c96496c04ff5f8a1b053c7eb9d6bc2e65d63497c6aac50e2810ef0909a3fa7a2",
+      "beforeHash": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+      "sourceHash": "9fd103b6c6af39c9f31f87af9d28ba791f936ce2c611fc07037c729a997e6316",
+      "beforeHash": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+      "sourceHash": "8555826fd5281a47296e2a5bd5af9ee89ceb7c5c4941f27710a523808d5cd11e",
+      "beforeHash": "d8eb69bc0b7750a68b8106e74a191c1f621d11393df7b4f67ab89e77098a066d",
+      "inverseAST": false,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+      "sourceHash": "e5048c17160c041d4a09ba5d0c4ffb11b2f039bae48b464d8eb5ab17ac02497f",
+      "beforeHash": "5ae67e1e95c8fa82243a158b5f309145f48e73c9a4f65b36cc23b70477d7d0ce",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {}
+      ],
+      "insetParents": [
+        "ScrollView"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "components/common/Wrapper.tsx",
+      "sourceHash": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+      "beforeHash": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [],
+      "insetParents": [
+        "wrapper-spacer",
+        "wrapper-spacer"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "components/common/AnimatedWrapper.tsx",
+      "sourceHash": "62cc00b4eb2389c0acc7e007d679ce4f1ead08837ffc65bcdcaeb9401149a93f",
+      "beforeHash": "b579878f55e6806fc782b2fde16dfb71ce673a6211737349d609836ade3cce14",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [],
+      "insetParents": [
+        "wrapper-spacer",
+        "wrapper-spacer"
+      ],
+      "topologyValid": true
+    },
+    {
+      "file": "components/feature/reports/ReportActionButton.tsx",
+      "sourceHash": "762167dc24ed6a041ddd5e881bba6b410dddccc4357712e00f700b3f780bb52f",
+      "beforeHash": "e63203fe1111173a35b3763f4b608e78bd167b252dde18b630b7265d56b532bc",
+      "inverseAST": true,
+      "importsPreservedExceptExplicitAddition": true,
+      "footerOptions": [
+        {
+          "bottomPadding": "{24}",
+          "topPadding": "{8}",
+          "className": "{containerClassName}"
+        }
+      ],
+      "insetParents": [],
+      "topologyValid": true
+    }
+  ],
+  "reportCallers": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/transaction.tsx",
+      "sha256": "26ad5a710b6063be45856500c911b4cc0a017877f4d53e446115233142cf50ac",
+      "uses": [
+        {
+          "line": 177,
+          "props": {
+            "isOpen": "{showReportActions}",
+            "onOpenChange": "{setShowReportActions}",
+            "sheetTitle": "\"Aksi Riwayat Transaksi\"",
+            "actions": "{[\n\t\t\t\t\t{ key: \"download\", label: \"Unduh Riwayat (PDF)\" },\n\t\t\t\t\t{ key: \"export\", label: \"Ekspor ke CSV / Excel\" },\n\t\t\t\t\t{ key: \"share\", label: \"Bagikan Riwayat\" },\n\t\t\t\t\t{ key: \"print\", label: \"Cetak Riwayat\" },\n\t\t\t\t]}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/summary.tsx",
+      "sha256": "8a1f4b7ae1ae90368f64ee705df113319182ff0b7fd9a46d523cdb0dafacb0b0",
+      "uses": [
+        {
+          "line": 42,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/sales.tsx",
+      "sha256": "11029b6700859563856257cc9eaac0f85c095fc4a21afa6e466a89420e2b3c61",
+      "uses": [
+        {
+          "line": 62,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/purchase-supplier.tsx",
+      "sha256": "fb45b75e437163018e93c35b7ddfac032d3dd014150ab50e772d34a487c87f81",
+      "uses": [
+        {
+          "line": 42,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/product-stock.tsx",
+      "sha256": "efdb586a8b222a3a792255f6cfd02252f76944aae3f809dd889be06431dc7384",
+      "uses": [
+        {
+          "line": 42,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/operational-team.tsx",
+      "sha256": "af7f648bf432fade6efdaa397d7be3b793f3278b2af455528b5be3cb26d0813f",
+      "uses": [
+        {
+          "line": 42,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/customers-promos.tsx",
+      "sha256": "3951ab41e774e95d9ec1e33dc681269cfa8bb95a6932506dc88aa371d6e024c2",
+      "uses": [
+        {
+          "line": 45,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/cash.tsx",
+      "sha256": "7817ea98f4d9e300244fbd58f6209d0f1d1a0b029bf58621f17e6f592d3cb7ea",
+      "uses": [
+        {
+          "line": 42,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/profit-loss.tsx",
+      "sha256": "1371e4cbe7629d6f24f0df883f0af35d8a2a66b4c20ba2c4c8d445f9645acb95",
+      "uses": [
+        {
+          "line": 83,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/capital-changes.tsx",
+      "sha256": "f624e77e5c5a2ab1eea39c59e3c585daef24775004666bf5f450c408fb2685bc",
+      "uses": [
+        {
+          "line": 31,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/balance-sheet.tsx",
+      "sha256": "97152e0914e3f8d15e040cfad6f7e64711c7656bcda9c5d209443366f839147a",
+      "uses": [
+        {
+          "line": 55,
+          "props": {
+            "isOpen": "{showActions}",
+            "onOpenChange": "{setShowActions}"
+          }
+        }
+      ],
+      "hasBottomBar": true,
+      "hasActionButton": false,
+      "limits": "Static inventory; this screen was not executed."
+    }
+  ],
+  "reportUsageCount": 11,
+  "notes": [
+    "Developer migrator also inserted BottomActionInset inside the General Journal account-picker ScrollView; five main manual ScrollViews plus one picker, not six main forms. It adds an empty inset without changing handlers; native picker spacing remains a QA check.",
+    "Report consumers and other Wrapper consumers have dependency deltas. This review does not approve their entire screens or revalidate legacy financial lifecycle defects."
+  ],
+  "limits": "Independent AST keeps every existing import and all source structure, inverses only approved footer tags/import and empty-inset/fragment delta. New BottomActionBar is measured in browser. Static caller inventory is not runtime coverage."
+}

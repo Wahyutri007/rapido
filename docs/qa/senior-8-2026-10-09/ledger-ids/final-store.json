@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "baseline": false,
+  "kind": "Production Zustand store with isolated fixtures and fixed Date.now; no app data or API mutation",
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "first insertion preserves existing ID format",
+      "passed": true,
+      "actual": "le-1234",
+      "expected": "le-1234"
+    },
+    {
+      "name": "returned ID belongs to inserted record",
+      "passed": true,
+      "actual": "le-1234",
+      "expected": "le-1234"
+    },
+    {
+      "name": "same millisecond receives distinct IDs",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "same-account append retains both payloads",
+      "passed": true,
+      "actual": [
+        20,
+        10
+      ],
+      "expected": [
+        20,
+        10
+      ]
+    },
+    {
+      "name": "second collision uses suffix",
+      "passed": true,
+      "actual": "le-1234-1",
+      "expected": "le-1234-1"
+    },
+    {
+      "name": "cross-account collision also receives unique ID",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "other account array reference preserved",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "cross-account insertion uses next suffix",
+      "passed": true,
+      "actual": "le-1234-2",
+      "expected": "le-1234-2"
+    },
+    {
+      "name": "getter returns each account collection",
+      "passed": true,
+      "actual": [
+        30
+      ],
+      "expected": [
+        30
+      ]
+    },
+    {
+      "name": "all other collections/actions preserve references",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "existing suffix gaps are handled",
+      "passed": true,
+      "actual": "le-1234-2",
+      "expected": "le-1234-2"
+    },
+    {
+      "name": "occupied suffix is skipped",
+      "passed": true,
+      "actual": "le-1234-4",
+      "expected": "le-1234-4"
+    },
+    {
+      "name": "seed records are retained unchanged",
+      "passed": true,
+      "actual": [
+        "le-1234",
+        "le-1234-1",
+        "le-1234-3"
+      ],
+      "expected": [
+        "le-1234",
+        "le-1234-1",
+        "le-1234-3"
+      ]
+    },
+    {
+      "name": "new millisecond keeps unsuffixed format",
+      "passed": true,
+      "actual": "le-5000",
+      "expected": "le-5000"
+    },
+    {
+      "name": "clock moving backward does not reuse an existing ID",
+      "passed": true,
+      "actual": "le-1234-5",
+      "expected": "le-1234-5"
+    },
+    {
+      "name": "input object is not mutated",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "all input fields preserved",
+      "passed": true,
+      "actual": {
+        "accountId": "a",
+        "date": "2026-10-09",
+        "referenceNumber": "REF",
+        "title": "Test",
+        "description": "Fixture",
+        "type": "debit",
+        "amount": 99
+      },
+      "expected": {
+        "accountId": "a",
+        "date": "2026-10-09",
+        "referenceNumber": "REF",
+        "title": "Test",
+        "description": "Fixture",
+        "type": "debit",
+        "amount": 99
+      }
+    },
+    {
+      "name": "burst of 50 returns 50 unique IDs",
+      "passed": true,
+      "actual": 50,
+      "expected": 50
+    },
+    {
+      "name": "burst preserves every record",
+      "passed": true,
+      "actual": 50,
+      "expected": 50
+    },
+    {
+      "name": "burst stores exactly the returned IDs",
+      "passed": true,
+      "actual": [
+        "le-77",
+        "le-77-1",
+        "le-77-10",
+        "le-77-11",
+        "le-77-12",
+        "le-77-13",
+        "le-77-14",
+        "le-77-15",
+        "le-77-16",
+        "le-77-17",
+        "le-77-18",
+        "le-77-19",
+        "le-77-2",
+        "le-77-20",
+        "le-77-21",
+        "le-77-22",
+        "le-77-23",
+        "le-77-24",
+        "le-77-25",
+        "le-77-26",
+        "le-77-27",
+        "le-77-28",
+        "le-77-29",
+        "le-77-3",
+        "le-77-30",
+        "le-77-31",
+        "le-77-32",
+        "le-77-33",
+        "le-77-34",
+        "le-77-35",
+        "le-77-36",
+        "le-77-37",
+        "le-77-38",
+        "le-77-39",
+        "le-77-4",
+        "le-77-40",
+        "le-77-41",
+        "le-77-42",
+        "le-77-43",
+        "le-77-44",
+        "le-77-45",
+        "le-77-46",
+        "le-77-47",
+        "le-77-48",
+        "le-77-49",
+        "le-77-5",
+        "le-77-6",
+        "le-77-7",
+        "le-77-8",
+        "le-77-9"
+      ],
+      "expected": [
+        "le-77",
+        "le-77-1",
+        "le-77-10",
+        "le-77-11",
+        "le-77-12",
+        "le-77-13",
+        "le-77-14",
+        "le-77-15",
+        "le-77-16",
+        "le-77-17",
+        "le-77-18",
+        "le-77-19",
+        "le-77-2",
+        "le-77-20",
+        "le-77-21",
+        "le-77-22",
+        "le-77-23",
+        "le-77-24",
+        "le-77-25",
+        "le-77-26",
+        "le-77-27",
+        "le-77-28",
+        "le-77-29",
+        "le-77-3",
+        "le-77-30",
+        "le-77-31",
+        "le-77-32",
+        "le-77-33",
+        "le-77-34",
+        "le-77-35",
+        "le-77-36",
+        "le-77-37",
+        "le-77-38",
+        "le-77-39",
+        "le-77-4",
+        "le-77-40",
+        "le-77-41",
+        "le-77-42",
+        "le-77-43",
+        "le-77-44",
+        "le-77-45",
+        "le-77-46",
+        "le-77-47",
+        "le-77-48",
+        "le-77-49",
+        "le-77-5",
+        "le-77-6",
+        "le-77-7",
+        "le-77-8",
+        "le-77-9"
+      ]
+    },
+    {
+      "name": "reentrant subscriber allocates distinct ID",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reentrant return IDs each match their account",
+      "passed": true,
+      "actual": [
+        "le-88",
+        "le-88-1"
+      ],
+      "expected": [
+        "le-88",
+        "le-88-1"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    }
+  ]
+}

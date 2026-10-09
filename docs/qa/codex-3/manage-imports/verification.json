@@ -1,0 +1,206 @@
+{
+  "owner": "Codex-3",
+  "finding": "QC-MANAGE-FORMS-001",
+  "status": "READY_FOR_QC_RECHECK",
+  "createdAt": "2026-10-08T18:29:31.338Z",
+  "sourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+    "app/(no-layout)/manage/tax/modify.tsx": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528"
+  },
+  "testedSourceMatches": [
+    {
+      "file": "app/(no-layout)/manage/extra/modify.tsx",
+      "expected": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "actual": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "expected": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "actual": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "expected": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "actual": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "expected": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "actual": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "expected": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "actual": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "expected": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "actual": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "expected": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "actual": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "expected": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "actual": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/ManageFormNotFound.tsx",
+      "expected": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "actual": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/ManagePreviewForm.tsx",
+      "expected": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "actual": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "passed": true
+    }
+  ],
+  "rawSourceMatchesQCProposal": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "expected": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "actual": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "expected": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "actual": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "expected": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "actual": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "expected": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "actual": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "expected": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "actual": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "expected": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "actual": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "expected": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "actual": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "passed": true
+    }
+  ],
+  "bodyAndBindingEquivalence": [
+    {
+      "file": "app/(no-layout)/manage/order-type/modify.tsx",
+      "originalSha256": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "sourceSha256": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "qcProposalSha256": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+      "originalSha256": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "sourceSha256": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "qcProposalSha256": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "app/(no-layout)/manage/tax/modify.tsx",
+      "originalSha256": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "sourceSha256": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "qcProposalSha256": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+      "originalSha256": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "sourceSha256": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "qcProposalSha256": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+      "originalSha256": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "sourceSha256": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "qcProposalSha256": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+      "originalSha256": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "sourceSha256": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "qcProposalSha256": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    },
+    {
+      "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+      "originalSha256": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174",
+      "sourceSha256": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "qcProposalSha256": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+      "normalizedLFMatchesQCProposal": true,
+      "bodyUnchanged": true,
+      "importBindingsUnchanged": true
+    }
+  ],
+  "artifacts": {
+    "docs/qa/codex-3/manage-imports/HANDOFF.md": "f2a491567c7aace5bface9523af30e4ba27e3bb9f5ee4a556e40debe052c64ea",
+    "docs/qa/codex-3/manage-imports/apply.cjs": "4de04cd11aab673eed2f20461e96be5a0095fe14ee130aec2485931cffa7a9f5",
+    "docs/qa/codex-3/manage-imports/apply-results.json": "1ebc8fa7e3de26177a2bbdad58db86840dafb61bf85e5eba6e3a7c7bb0d75f9d",
+    "docs/qa/codex-3/manage-imports/check.cjs": "cbe624f1937de8c48b62328d1b8be441d0583e5cc288eb7395cc06bdfb114469",
+    "docs/qa/codex-3/manage-imports/results.json": "f1a6789f979a85c57c13bddb12012ddd8155b18414d38dfe1561e8f362495454"
+  },
+  "reviewerProposal": {
+    "file": "docs/qa/qc-manage-forms-2026-10-09/organize-imports.patch",
+    "sha256": "03222369ff63b2adc87622dc09eb7a12e326ef7b5f52c9079b23f75e122fd30c"
+  },
+  "limitations": [
+    "Import ordering and LF only, no browser/native rerun",
+    "QC92 browser checks cover the pre-style snapshot",
+    "Runtime/cache HP configuration belongs to Senior7; not reviewed by this supplement",
+    "Reviewer decides P3 closure and PM publication; developer has not closed or approved finding"
+  ]
+}

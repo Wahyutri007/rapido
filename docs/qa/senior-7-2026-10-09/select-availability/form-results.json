@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "real FormSelect maps initial RHF value to label",
+      "pass": true
+    },
+    {
+      "name": "pending selection does not change RHF field",
+      "pass": true
+    },
+    {
+      "name": "pending selection does not mark RHF field dirty",
+      "pass": true
+    },
+    {
+      "name": "disabled confirmation preserves RHF value",
+      "pass": true
+    },
+    {
+      "name": "disabled confirmation does not request validation",
+      "pass": true
+    },
+    {
+      "name": "reenabled confirmation updates RHF field",
+      "pass": true
+    },
+    {
+      "name": "RHF echo updates trigger",
+      "pass": true
+    },
+    {
+      "name": "FormSelect marks committed field dirty",
+      "pass": true
+    },
+    {
+      "name": "FormSelect runs actual RHF validation",
+      "pass": true
+    },
+    {
+      "name": "RHF reset restores trigger label",
+      "pass": true
+    },
+    {
+      "name": "RHF reset clears dirty and validation error",
+      "pass": true
+    },
+    {
+      "name": "removed pending item cannot reach RHF payload",
+      "pass": true
+    },
+    {
+      "name": "removed pending item leaves form pristine",
+      "pass": true
+    },
+    {
+      "name": "restored eligible item can commit pending draft",
+      "pass": true
+    },
+    {
+      "name": "reset during open sheet replaces draft",
+      "pass": true
+    },
+    {
+      "name": "disabled external option cannot be recommitted",
+      "pass": true
+    },
+    {
+      "name": "legacy label-valued form still resolves option",
+      "pass": true
+    },
+    {
+      "name": "cancel preserves legacy label-valued field",
+      "pass": true
+    },
+    {
+      "name": "confirm normalizes legacy label to option value",
+      "pass": true
+    },
+    {
+      "name": "immediate disabled picker preserves actual RHF field",
+      "pass": true
+    },
+    {
+      "name": "immediate enabled picker commits and echoes through FormSelect",
+      "pass": true
+    },
+    {
+      "name": "empty RHF reset clears trigger",
+      "pass": true
+    },
+    {
+      "name": "unrelated form field remains untouched",
+      "pass": true
+    },
+    {
+      "name": "unmount leaves no timer",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "pass": true
+    },
+    {
+      "name": "production sources stable during integration",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "components/common/SingleSelect.tsx",
+      "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "scope": "Production Form/FormField/FormItem/FormSelect + SingleSelect + actual react-hook-form; host adapters for RN/UI, no complete screen/router/native."
+}

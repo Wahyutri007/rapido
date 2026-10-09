@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "passed": 18,
+  "checks": [
+    "Kelola opens production Target Penjualan list with one active header",
+    "Trimmed search selects one target without changing its record",
+    "List opens detail with correct target ID and product totals",
+    "Detail opens edit form with correct title, ID and original draft",
+    "Saving preview edit updates same target then header returns to its detail",
+    "Detail back restores list search and saved target once",
+    "Add after editing has empty ID, correct title and fresh draft",
+    "Second target opens category detail and prefill without first ID leaking",
+    "Direct detail reload preserves target ID then exits through list to Kelola",
+    "Direct edit reload retains edit title, ID and prefill",
+    "Direct add has empty draft and a working list fallback",
+    "Unknown ID on detail is guarded with a reachable header back",
+    "Unknown ID on modify is guarded with a reachable header back",
+    "Browser back and forward preserve target identity and usable headers",
+    "List and form actions stay clickable at 320x844",
+    "List and form actions stay clickable at 844x390",
+    "Unauthenticated direct target route redirects to login without feature access",
+    "Latest SearchBar handles no-result and clear on the real list"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "error": "Error: locator.waitFor: Error: strict mode violation: getByText('Nasi Goreng', { exact: true }).filter({ visible: true }) resolved to 2 elements:\n    1) <div dir=\"auto\" class=\"css-146c3p1 mr-1 text-foreground text-xs\">Nasi Goreng</div> aka getByTestId('sales-target-bulk').getByText('Nasi Goreng')\n    2) <div dir=\"auto\" class=\"css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-1iln25a text-foreground text-foreground text-sm\">Nasi Goreng</div> aka getByTestId('sales-target-row-1').getByText('Nasi Goreng')\n\nCall log:\n\u001b[2m  - waiting for getByText('Nasi Goreng', { exact: true }).filter({ visible: true }) to be visible\u001b[22m\n",
+  "url": "http://127.0.0.1:8097/manage/sales-target/modify?id=target-demo-1",
+  "body": "\nEdit Target\nNama Target\n*\nPeriode Target\nTanggal Mulai\n*\nTanggal Akhir\n*\nToko\n*\nWarung Jul Panam\n\nTipe Target\n*\nPer Produk\n\nPilih Beberapa Produk\nPilih toko terlebih dahulu. Nilai pada pilihan yang tetap dipilih akan dipertahankan.\n1 dipilih\n\nNasi Goreng\n\n\nTarget per Produk\nAtur kuantitas dan nilai yang ingin dicapai.\nProduk 1\nHapus\nNama Barang\n*\nNasi Goreng\n\nKuantitas\n*\nNilai Target (Rp)\n*\nTambah Produk\nTotal Nilai Target\nRp 70.000\nSimpan Target",
+  "checkedAt": "2026-10-09T04:33:11.677Z"
+}

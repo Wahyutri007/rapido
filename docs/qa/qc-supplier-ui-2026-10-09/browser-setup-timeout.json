@@ -1,0 +1,14 @@
+{
+  "executionMode": "APPLICATION_SOURCES",
+  "scope": "Supplier UI with actual feature/routes/layout/JSStack/store/RHF/Zod and browser-local sample state",
+  "checks": [],
+  "passed": 0,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [],
+  "blockedRequests": [],
+  "exception": "page.waitForFunction: Timeout 12000ms exceeded.",
+  "metrics": [],
+  "limitations": "Backend deferred. No native/Figma/global root auth/all shared callers/API persistence/accessibility/OS keyboard certification."
+}

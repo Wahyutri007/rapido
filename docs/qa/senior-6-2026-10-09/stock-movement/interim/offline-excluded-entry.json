@@ -1,0 +1,14 @@
+{
+  "message": "Failed to get the SHA-1 for: C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\.expo\\senior6-stock-movement-offline-entry.jsx.\n      Potential causes:\n        1) The file is not watched. Ensure it is under the configured `projectRoot` or `watchFolders`.\n        2) Check `blockList` in your metro.config.js and make sure it isn't excluding the file path.\n        3) The file may have been deleted since it was resolved - try refreshing your app.\n        4) Otherwise, this is a bug in Metro or the configured resolver - please report it.",
+  "stack": "Error: Failed to get the SHA-1 for: C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\.expo\\senior6-stock-movement-offline-entry.jsx.\n      Potential causes:\n        1) The file is not watched. Ensure it is under the configured `projectRoot` or `watchFolders`.\n        2) Check `blockList` in your metro.config.js and make sure it isn't excluding the file path.\n        3) The file may have been deleted since it was resolved - try refreshing your app.\n        4) Otherwise, this is a bug in Metro or the configured resolver - please report it.\n    at DependencyGraph.getOrComputeSha1 (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\metro\\src\\node-haste\\DependencyGraph.js:202:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Transformer.transformFile (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\metro\\src\\DeltaBundler\\Transformer.js:102:22)",
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b"
+  }
+}

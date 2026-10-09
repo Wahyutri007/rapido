@@ -1,0 +1,37 @@
+Stok Akhir
+Semua Toko
+Status Stok
+Produk
+Stok Akhir
+Makanan
+Pizza politan
+Size L
+20 Pcs
+Pizza politan
+Size M
+15 Pcs
+Teh Es
+200 Cup
+Sushi
+2 Pcs
+Salad Yumme
+0 Pcs
+Mie Goreng Dumai
+0 Pcs
+Roti Sosis Jumbo
+0 Pcs
+Minuman
+Teh Sisri
+Size L
+20 Pcs
+Pop Ice
+15 Pcs
+Teh Es
+200 Cup
+Roti Sosis Jumbo
+0 Pcs
+Beranda
+Laporan
+Katalog
+Inventory
+Kelola

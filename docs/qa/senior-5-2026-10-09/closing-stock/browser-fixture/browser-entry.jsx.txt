@@ -1,0 +1,13 @@
+import "@/components/icons";
+import { registerRootComponent } from "expo";
+import { ExpoRoot } from "expo-router";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useInventoryMaterialStore } from "@/store/inventoryMaterialStore";
+// Test page injects a snapshot of the generated production web stylesheet.
+// Avoid another shared NativeWind CSS build; application global.css is unchanged.
+globalThis.__sd5InventoryMaterials = useInventoryMaterialStore;
+const context = require.context("./routes", true, /\.tsx$/);
+function Preview() {
+	return <GestureHandlerRootView style={{flex:1}}><ExpoRoot context={context} /></GestureHandlerRootView>;
+}
+registerRootComponent(Preview);

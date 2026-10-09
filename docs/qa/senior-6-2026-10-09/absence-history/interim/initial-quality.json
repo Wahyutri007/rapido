@@ -1,0 +1,98 @@
+{
+  "before": {
+    "lib/absence-history.ts": "eb599fe8205c5d5e6d38bc81aaa70ec3e1e82bb9e159892c33eb292cb46c8850",
+    "components/feature/absence/history/HistoryDetailScreen.tsx": "978d1eed685853593fcf65833c40945ac0af2499fb2cd10d07e766a9cd622c9c",
+    "components/feature/absence/history/HistoryListScreen.tsx": "f54f2c593bfce54b824951b588514b905439b814d272fd636761bb0331cb82eb",
+    "components/feature/absence/history/HistoryNotice.tsx": "d8dc3efd76df452cef8506e4c3ef9d554c44444a1489fe8785816344cde7d49e",
+    "app/(absence)/history/detail.tsx": "1fd21133176efa2fe30c09794aecbc42bdc9f988136836f677639ebab1d8f84d",
+    "app/(absence)/history/index.tsx": "c0af470534769bace4e21247a5fd3d0da58dd8c0c518483160524137f9a63b89",
+    "app/(absence)/history/_layout.tsx": "e805889d7224f6ac62b0872135447864519681e05f4970a8276eb263d70be003",
+    "app/(absence)/home.tsx": "943b8f4bc0cb36d09ae17ba54722342621b938918611934d02462ef726b47f64",
+    "app/(absence)/_layout.tsx": "7122e23e4db75b33dd4a7a040bcfcb8e9dd4cd90655fafac72c3437512f65739"
+  },
+  "after": {
+    "lib/absence-history.ts": "eb599fe8205c5d5e6d38bc81aaa70ec3e1e82bb9e159892c33eb292cb46c8850",
+    "components/feature/absence/history/HistoryDetailScreen.tsx": "978d1eed685853593fcf65833c40945ac0af2499fb2cd10d07e766a9cd622c9c",
+    "components/feature/absence/history/HistoryListScreen.tsx": "f54f2c593bfce54b824951b588514b905439b814d272fd636761bb0331cb82eb",
+    "components/feature/absence/history/HistoryNotice.tsx": "d8dc3efd76df452cef8506e4c3ef9d554c44444a1489fe8785816344cde7d49e",
+    "app/(absence)/history/detail.tsx": "1fd21133176efa2fe30c09794aecbc42bdc9f988136836f677639ebab1d8f84d",
+    "app/(absence)/history/index.tsx": "c0af470534769bace4e21247a5fd3d0da58dd8c0c518483160524137f9a63b89",
+    "app/(absence)/history/_layout.tsx": "e805889d7224f6ac62b0872135447864519681e05f4970a8276eb263d70be003",
+    "app/(absence)/home.tsx": "943b8f4bc0cb36d09ae17ba54722342621b938918611934d02462ef726b47f64",
+    "app/(absence)/_layout.tsx": "7122e23e4db75b33dd4a7a040bcfcb8e9dd4cd90655fafac72c3437512f65739"
+  },
+  "checks": [
+    {
+      "name": "ESLint all nine touched sources",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "lib/absence-history.ts",
+        "components/feature/absence/history/HistoryDetailScreen.tsx",
+        "components/feature/absence/history/HistoryListScreen.tsx",
+        "components/feature/absence/history/HistoryNotice.tsx",
+        "app/(absence)/history/detail.tsx",
+        "app/(absence)/history/index.tsx",
+        "app/(absence)/history/_layout.tsx",
+        "app/(absence)/home.tsx",
+        "app/(absence)/_layout.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json",
+        "--output-file",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\absence-history\\eslint.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Biome seven new sources",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "lib/absence-history.ts",
+        "components/feature/absence/history/HistoryDetailScreen.tsx",
+        "components/feature/absence/history/HistoryListScreen.tsx",
+        "components/feature/absence/history/HistoryNotice.tsx",
+        "app/(absence)/history/detail.tsx",
+        "app/(absence)/history/index.tsx",
+        "app/(absence)/history/_layout.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 7 files in 90ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "name": "TypeScript five route/home/layout roots and dependency closure",
+      "args": [
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\absence-history\\typecheck.cjs"
+      ],
+      "exitCode": 1,
+      "stdout": "{\"status\":\"FAIL\",\"sourceFiles\":1297,\"diagnostics\":[{\"file\":\"app\\\\(absence)\\\\history\\\\_layout.tsx\",\"message\":\"Argument of type '\\\"/(absence)/home\\\" | \\\"/(absence)/history\\\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \\\"/\\\" | `/?${string}` | `/#${string}` | \\\"/../api/hooks/otp\\\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \\\"/../.expo/qc-success-role-dialog\\\" | ... 1992 more ... | { ...; }'.\\n  Type '\\\"/(absence)/history\\\"' is not assignable to type 'RelativePathString | ExternalPathString | \\\"/\\\" | `/?${string}` | `/#${string}` | \\\"/../api/hooks/otp\\\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \\\"/../.expo/qc-success-role-dialog\\\" | ... 1992 more ... | { ...; }'. Did you mean '\\\"/(absence)/history/index\\\"'?\"},{\"file\":\"app\\\\(absence)\\\\home.tsx\",\"message\":\"Argument of type '\\\"/(absence)/history\\\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \\\"/\\\" | `/?${string}` | `/#${string}` | \\\"/../api/hooks/otp\\\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \\\"/../.expo/qc-success-role-dialog\\\" | ... 1992 more ... | { ...; }'.\"},{\"file\":\"components\\\\feature\\\\absence\\\\history\\\\HistoryDetailScreen.tsx\",\"message\":\"Argument of type '\\\"/(absence)/history\\\"' is not assignable to parameter of type 'RelativePathString | ExternalPathString | \\\"/\\\" | `/?${string}` | `/#${string}` | \\\"/../api/hooks/otp\\\" | `/../api/hooks/otp?${string}` | `/../api/hooks/otp#${string}` | \\\"/../.expo/qc-success-role-dialog\\\" | ... 1992 more ... | { ...; }'.\"}]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "Scoped whitespace",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "lib/absence-history.ts",
+        "components/feature/absence/history/HistoryDetailScreen.tsx",
+        "components/feature/absence/history/HistoryListScreen.tsx",
+        "components/feature/absence/history/HistoryNotice.tsx",
+        "app/(absence)/history/detail.tsx",
+        "app/(absence)/history/index.tsx",
+        "app/(absence)/history/_layout.tsx",
+        "app/(absence)/home.tsx",
+        "app/(absence)/_layout.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(absence)/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(absence)/home.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "limitations": "Strict formatting of seven new files; shared home/parent preserved byte-for-byte except exact handler/registration deltas proved in model checks. Lint covers all nine and TypeScript both shared roots."
+}

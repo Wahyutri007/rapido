@@ -1,0 +1,1458 @@
+{
+  "owner": "Codex-3",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "head": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "appVersions": {
+    "@expo/html-elements": "0.4.2",
+    "@expo/vector-icons": "^15.0.2",
+    "@gluestack-ui/core": "^3.0.0",
+    "@gluestack-ui/utils": "^3.0.0",
+    "@gluestack/ui-next-adapter": "^3.0.0",
+    "@hookform/resolvers": "^5.0.1",
+    "@legendapp/motion": "^2.4.0",
+    "@react-aria/checkbox": "3.16.1",
+    "@react-aria/dialog": "^3.5.30",
+    "@react-aria/focus": "3.21.1",
+    "@react-aria/interactions": "3.25.5",
+    "@react-aria/label": "3.7.21",
+    "@react-aria/menu": "3.19.2",
+    "@react-aria/overlays": "3.29.1",
+    "@react-aria/radio": "3.12.1",
+    "@react-aria/selection": "3.25.1",
+    "@react-aria/switch": "3.7.7",
+    "@react-aria/utils": "3.30.1",
+    "@react-native-community/datetimepicker": "9.1.0",
+    "@react-native-masked-view/masked-view": "0.3.2",
+    "@tanstack/react-query": "^5.85.6",
+    "axios": "^1.11.0",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "expo": "~57.0.27",
+    "expo-asset": "~57.0.19",
+    "expo-blur": "~57.0.3",
+    "expo-build-properties": "~57.0.22",
+    "expo-camera": "~57.0.6",
+    "expo-constants": "~57.0.21",
+    "expo-dev-client": "~57.0.19",
+    "expo-document-picker": "~57.0.3",
+    "expo-file-system": "~57.0.7",
+    "expo-font": "~57.0.4",
+    "expo-haptics": "~57.0.3",
+    "expo-image": "~57.0.5",
+    "expo-linear-gradient": "~57.0.2",
+    "expo-linking": "~57.0.12",
+    "expo-location": "~57.0.20",
+    "expo-router": "~57.0.25",
+    "expo-secure-store": "~57.0.4",
+    "expo-splash-screen": "~57.0.9",
+    "expo-status-bar": "~57.0.1",
+    "expo-symbols": "~57.0.3",
+    "expo-system-ui": "~57.0.4",
+    "expo-web-browser": "~57.0.3",
+    "lucide-react-native": "^0.510.0",
+    "nativewind": "^4.2.3",
+    "query-string": "^7.1.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.56.2",
+    "react-native": "0.86.3",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-css-interop": "^0.2.7",
+    "react-native-gesture-handler": "~2.32.0",
+    "react-native-maps": "1.27.2",
+    "react-native-markdown-display": "^7.0.2",
+    "react-native-otp-entry": "^1.8.4",
+    "react-native-pager-view": "8.0.2",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-tab-view": "^4.3.3",
+    "react-native-web": "^0.21.2",
+    "react-native-webview": "13.16.1",
+    "react-native-worklets": "0.10.1",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "3.4.17",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.4"
+  },
+  "commands": {
+    "lint": "node node_modules/eslint/bin/eslint.js components/feature/manage/settings app/(no-layout)/manage/{extra,order-type,payment-method,tax}/modify.tsx --max-warnings 0 (explicit paths, not shell brace expansion)",
+    "format": "node node_modules/@biomejs/biome/bin/biome format components/feature/manage/settings [four modify paths]",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "browser": "node docs/qa/codex-3/manage-forms/check.cjs (own Metro 8097 --lan --max-workers 1 --no-dev; PLAYWRIGHT_MODULE configurable)"
+  },
+  "typecheck": {
+    "exitCode": 0,
+    "note": "Developer check completed on shared workspace. Other sessions were still editing; not a final integration snapshot. Started before learning of parallel typecheck; no additional global run."
+  },
+  "lint": {
+    "beforeErrors": 4,
+    "beforeWarnings": 27,
+    "afterErrors": 0,
+    "afterWarnings": 0,
+    "exitCode": 0,
+    "sourceHashes": {
+      "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+    }
+  },
+  "format": {
+    "exitCode": 0,
+    "files": 10
+  },
+  "groups": {
+    "support": {
+      "source": {
+        "app/(no-layout)/manage/faq/_layout.tsx": "52cc0d2d426acc7074b1120c16cbef2e42a515f7cb8d634c686b55c8298d72ff",
+        "app/(no-layout)/manage/faq/index.tsx": "1c0789f6a370f7d4553437740771e64a1acc294bd5fc710ae9e69a07b04a5f07",
+        "app/(no-layout)/manage/feature-request/_layout.tsx": "90036887b16ad0bbe0c0dc66a1e02313820ba86aa144e51f6be55ff7c963575c",
+        "app/(no-layout)/manage/feature-request/index.tsx": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+        "app/(no-layout)/manage/feedback/_layout.tsx": "f3fcbf617d37c1b54113c585d1dc834b679773efd061c5884ecf75f3277fa6fe",
+        "app/(no-layout)/manage/feedback/index.tsx": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+        "components/feature/support/FaqCard.tsx": "7eaca3d56aecdbfa939d699f9d7a0b36e81f5d7bc55c03ed98339c7fb989e8cd",
+        "components/feature/support/SupportAttachmentInput.tsx": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+        "components/feature/support/SupportFormScreen.tsx": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+        "components/feature/support/SupportHero.tsx": "15cbd12f94b65f5ecc7f903da2bd843871ccb3654b14851103dd08c758b583c3"
+      },
+      "artifacts": [
+        {
+          "file": "docs/previews/support/faq-figma.png",
+          "sha256": "12bd2dc2ba59d6d90001cd8471ad60857e52f6506957a3b68213fee9828ccfd7"
+        },
+        {
+          "file": "docs/previews/support/faq.png",
+          "sha256": "9143cd1dc061804f8d1f42d1d4a63fc8356a455fc5f31777b50b6c34a226cec2"
+        },
+        {
+          "file": "docs/previews/support/feature-request-figma.png",
+          "sha256": "9b09d489247c38842636976da85f719edecd234df03eccb3a4246bf1b9ef774b"
+        },
+        {
+          "file": "docs/previews/support/feature-request.png",
+          "sha256": "d26c12192bba4d67f1be3fc99487bf32cdeafd5a60469cb0a75aa919211d54c3"
+        },
+        {
+          "file": "docs/previews/support/feedback-figma.png",
+          "sha256": "35ca4986419fd6165cbd3d68d8ddfaad8bad3f0517d9c2598e7d33bfe3e7b970"
+        },
+        {
+          "file": "docs/previews/support/feedback.png",
+          "sha256": "baaa3cae1bd323be3df25c9cedc040af7da8700651a9e787e5262ae7be1a9953"
+        },
+        {
+          "file": "docs/previews/support/interactions.json",
+          "sha256": "82e5a190f15f224f580db3369f94e0ab5e7b19c907705042f666328f4d391f21"
+        }
+      ],
+      "note": "Current source/artefact inventory only. Historical tests did not save complete source hashes; this manifest does not retrospectively bind them or represent an independent rerun."
+    },
+    "roles": {
+      "source": {
+        "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+        "app/(no-layout)/(back-office)/manage/roles/_layout.tsx": "5b41a8846c6bc310de35923d930bd7fcde371b9701c4db2fb82916fff214d81e",
+        "app/(no-layout)/(back-office)/manage/roles/detail.tsx": "725ab58db1d1072dc005e8b899a4e17c99b2cc2b1b6ee26ab75258970c238a3b",
+        "app/(no-layout)/(back-office)/manage/roles/index.tsx": "48a03fdca160af36cd573219256fd55ede0af016b8dc17b78d71a3d8e355d39e",
+        "app/(no-layout)/(back-office)/manage/roles/modify.tsx": "0d3939f023bad8ea7a1d1daa4825ff5265af31a8b516bb51ca1b93be5b56e468",
+        "components/feature/manage/roles/RoleDeleteDialog.tsx": "1f07b5ca96cf1e89d825b19a36932d3cbe0cde2f3f29c4c5804a0a983438c8c0",
+        "components/feature/manage/roles/RoleDetailScreen.tsx": "1a3b993214194b9ddff74ad47f2e320be1132bea483c2160576ccdf3f827a851",
+        "components/feature/manage/roles/RoleListScreen.tsx": "426b20d5e66c816d1ec2a64f69f8780a6e0257432aa13135be6b29b6345cfe68",
+        "components/feature/manage/roles/RoleModifyScreen.tsx": "42fa743b0be6e54df5f5179f4445b1dec96c54b0f82aa72fbf9f2284ee69b268",
+        "components/feature/manage/roles/RolePermissionEditor.tsx": "1ae61d08ffab2ae76c7da980d1cf53cacfda3dae8e59c4d7ebd71a1ab13f1b9b",
+        "components/feature/manage/roles/RoleQueryError.tsx": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+        "components/feature/manage/roles/RoleWorkers.tsx": "329fd2161234d75c2df32fef8e703b465a1d61a82d5499841e9668fe8faff64b",
+        "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+        "schema/add/role.ts": "412d8edd0d893b86d5361c5824268101bbe66d2c206e927c78210242bb5da82b",
+        "types/api/role.ts": "152a629be4797722ca7eba24d42937666c1f748edc1d8d3030d65503c2f0dcf1"
+      },
+      "artifacts": [
+        {
+          "file": "docs/previews/roles/api-results.json",
+          "sha256": "979b7ad5190b9778442d54371d98ed16586adb6a3543efe08a3553fa963001ee"
+        },
+        {
+          "file": "docs/previews/roles/create.png",
+          "sha256": "e16f9a39326068c2ddb0419ce2a6a0c9d71436b6942b28eaf2b07a52628e2cec"
+        },
+        {
+          "file": "docs/previews/roles/detail.png",
+          "sha256": "96a66730cfd13b70a64513d58afc371fdad7079ef1dc0438787a5f8f47dc0424"
+        },
+        {
+          "file": "docs/previews/roles/list.png",
+          "sha256": "d2d76c56e086af0ec3627a1ece949d809d59454f6912b15ba88887278110aa6b"
+        },
+        {
+          "file": "docs/previews/roles/narrow.png",
+          "sha256": "0ac7e9212f9a0989c242acf76b955a34d77b48ecfe2a08b153adf3afbb8dcff3"
+        },
+        {
+          "file": "docs/previews/roles/permissions.png",
+          "sha256": "5263d8c6316e378c83c2253feb842c0e9f91fba912c8de890ef1fa6f20369a0b"
+        },
+        {
+          "file": "docs/previews/roles/results.json",
+          "sha256": "d04eb7b64f1a6148677b3ad451af34128c41a5a5d21383974825704752ab8ec1"
+        },
+        {
+          "file": "docs/previews/roles/routing-results.json",
+          "sha256": "1463234db8d5f6ea937691ebed864399c60c359617ad516db1200ef4b05f7552"
+        },
+        {
+          "file": "docs/previews/roles/validation.png",
+          "sha256": "6b8a501895ce0314a07834b3580838de44ec9dba820b933a1febb5225c2c97ca"
+        }
+      ],
+      "note": "Current source/artefact inventory only. Historical tests did not save complete source hashes; this manifest does not retrospectively bind them or represent an independent rerun."
+    },
+    "workers": {
+      "source": {
+        "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+        "app/(no-layout)/manage/workers/_layout.tsx": "fa3408b04afeb45b2c1c25a0858d4b405c1a21ee175fde7948a8ea56b72a8da3",
+        "app/(no-layout)/manage/workers/detail.tsx": "b75a8abad632ad86d2c5beb47d28f64ffc81ee594cbfd2eb57038af03cf0ebaa",
+        "app/(no-layout)/manage/workers/index.tsx": "8ea897b0169ce4d675c11137ccc3a22ac84ee0265224b16ad2401daf9c05e66d",
+        "app/(no-layout)/manage/workers/modify.tsx": "5832efda62cd0b48d201544ec29b488e27ba6c3715f2967212aedeec01abfaf9",
+        "components/feature/manage/workers/WorkerAvatar.tsx": "3c139b0a13825afd7149db379ddbfe645d58a37510aad4f34717a91c25510697",
+        "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1d9bec3111c964666c14385c39077cf021a302700b8cca041f3780d789dbddee",
+        "components/feature/manage/workers/WorkerDetailScreen.tsx": "7fb9fa3ca423674a070fdc4c75168b8ceadaec2de07a0c08cdfa26ebb3749b6b",
+        "components/feature/manage/workers/WorkerListScreen.tsx": "7219730a1e3ecead9431bad0d1a4ebeba6295c6e793b6ecb74f87839823bda3b",
+        "components/feature/manage/workers/WorkerModifyScreen.tsx": "2b419fb436e4e776563dfcafd9094992f91960c980ac05f043a50144781c54ce",
+        "components/feature/manage/workers/WorkerQueryError.tsx": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+        "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+        "schema/add/worker.ts": "01234d7cdbd8aa2f5c8d8d748039ec60a0e9d7f22fd2bba687acebf5d8e0da9a",
+        "types/api/worker.ts": "4f5732d96b838b6df3c5e47ff4d4086529551dc066393bef6770b757e586650e"
+      },
+      "artifacts": [
+        {
+          "file": "docs/previews/workers/api-results.json",
+          "sha256": "595032f0bb90366b513d15db6980c8590da24e098ec13c3681a12422a6c7d91d"
+        },
+        {
+          "file": "docs/previews/workers/create.png",
+          "sha256": "03171f7d2b5b5931ea2e1c10084fb094952292d201d2a2d7a09224eac7ce8373"
+        },
+        {
+          "file": "docs/previews/workers/detail.png",
+          "sha256": "a16b48466f7890952b52833df5551cfac343a36cbceb20708e2a98ccdff089a7"
+        },
+        {
+          "file": "docs/previews/workers/list.png",
+          "sha256": "d097bfaa23ce63cbd8055094a24566e2b904c5ca73064928049a76238b922e9d"
+        },
+        {
+          "file": "docs/previews/workers/narrow.png",
+          "sha256": "90867db86e67b61ca245ebad097ed3d5b3f92ce0054ea35f8699d97bcb5e8c0a"
+        },
+        {
+          "file": "docs/previews/workers/README.md",
+          "sha256": "501644192cbf0b04ca04c4524f763394e14c5052a70a161f9255a3cb51b44541"
+        },
+        {
+          "file": "docs/previews/workers/results.json",
+          "sha256": "092bc3b563d9414841df3fd0b78b6923c7f420e708f577996bde38d623be76f8"
+        },
+        {
+          "file": "docs/previews/workers/role-accounts.png",
+          "sha256": "cfb2820909fded26e7fa5fe564b14343c7409c83ae0029e32d7c9f0ac7ed52d8"
+        },
+        {
+          "file": "docs/previews/workers/routing-results.json",
+          "sha256": "4f8ed5f21f0203315e13abee845fb57fe4eb9115ac9c1ef01612456a2a4978c9"
+        },
+        {
+          "file": "docs/previews/workers/uploads.png",
+          "sha256": "5a605d478c714f6a4bc9a9b7c24a604a49991614bb3ba0ad6c8bec630d9136b6"
+        }
+      ],
+      "note": "Current source/artefact inventory only. Historical tests did not save complete source hashes; this manifest does not retrospectively bind them or represent an independent rerun."
+    },
+    "member": {
+      "source": {
+        "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+        "app/(no-layout)/manage/member/_layout.tsx": "d60b9c96e8d8eb3a762c496dfd66a7f016153ecd25c477a8fe7239a8f45c031d",
+        "app/(no-layout)/manage/member/detail.tsx": "89fdd909c9eae69c8900491bf72d7540191e2313f354dc7133224ed35466d879",
+        "app/(no-layout)/manage/member/index.tsx": "f79aedbbed0258a09b8073ed652b8563c31c19c1a4cbd169fa901256df0b1cfa",
+        "app/(no-layout)/manage/member/modify.tsx": "aa87815a639497ed49f4c2761ab61f59106faec0efb7f08a8bb3177944fa8e7d",
+        "components/feature/manage/member/MemberDeleteDialog.tsx": "f84babbee22b9ed9cd5f31d70818d07f604e5129d3f7127a2320f088f10c1dcf",
+        "components/feature/manage/member/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+        "components/feature/manage/member/MemberIcon.tsx": "f10289dac596e3e2e4da170f05a2f9d39769e203995da521c542a996471b96d2",
+        "components/feature/manage/member/MemberListScreen.tsx": "761303fbae2f85c440d10aafb90fb7857ca808103ee486a9a34c12df24ba85c3",
+        "components/feature/manage/member/MemberModifyScreen.tsx": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+        "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+        "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+        "schema/add/customer.ts": "f0940eed057a71801888fbaa358125002260783fc2333a8bf83175327126d231",
+        "types/api/customer.ts": "26552f68293d3421f87864ea84fc91a4a3f33952ca7e0dd5c6f4753776d3d1d4"
+      },
+      "artifacts": [
+        {
+          "file": "docs/previews/member/api-results.json",
+          "sha256": "3000e5de6cc245623fd36e2feeb1fcd068ff0f6cce966f48b0a276327c02272b"
+        },
+        {
+          "file": "docs/previews/member/app-route.png",
+          "sha256": "5b8041a8f572a2db9f599a3423866d569119251fa9cc25e8029205e622cf325f"
+        },
+        {
+          "file": "docs/previews/member/create.png",
+          "sha256": "16c6922e566b60f799271b4be9523d25d2ad312eb8e12bcd428c762150ad6fb1"
+        },
+        {
+          "file": "docs/previews/member/detail.png",
+          "sha256": "4b5fc5478a0cca430a5f685fb4d5be8f61b71c1ca9817787ff5fb2abea12f9a3"
+        },
+        {
+          "file": "docs/previews/member/form-complete.png",
+          "sha256": "04f325a9a5e7de5dfe7643517d111f522f9f22a6deb06a17b15f55a811a0a521"
+        },
+        {
+          "file": "docs/previews/member/form-notes.png",
+          "sha256": "f5dac63105d3162d9e0d793a4f1dfe358a6534ab361a0d41bcd506a79af2d7dc"
+        },
+        {
+          "file": "docs/previews/member/list.png",
+          "sha256": "84d821b95bb67bdaeb5f999b3fa464ddb55acf3ec95b41a8b8cefb3f17183e71"
+        },
+        {
+          "file": "docs/previews/member/narrow.png",
+          "sha256": "8b63416c28e1d26aa5439dcc8b9751925270802ef60a037491af643ca7e8c512"
+        },
+        {
+          "file": "docs/previews/member/README.md",
+          "sha256": "349e9a72c69e6c4cdf748b83e59c3371973634c799c79d37b95d100766d75862"
+        },
+        {
+          "file": "docs/previews/member/results.json",
+          "sha256": "df33f5ef593c27221d4cfde8da382c1648b0aa57a60d3413cdaac9b6a791c7de"
+        },
+        {
+          "file": "docs/previews/member/routing-results.json",
+          "sha256": "6eb75562f24404c466dbd842e73a530ad24196b795e31c03ce15e1471276384b"
+        },
+        {
+          "file": "docs/previews/member/validation.png",
+          "sha256": "dabb13b9aa2a8debbc8264cba0d04902ec2c9e23de9d1bad65067e94491dd020"
+        }
+      ],
+      "note": "Current source/artefact inventory only. Historical tests did not save complete source hashes; this manifest does not retrospectively bind them or represent an independent rerun."
+    }
+  },
+  "backend": {
+    "root": "C:\\Users\\Wahyu\\Downloads\\rapido-backend-dev\\rapido-backend-dev",
+    "sourceHashes": {
+      "app/Domain/Auth/Requests/RoleRequest.php": "b53de61a9e912d93e5c427e601e1b76aeb51a9a60db9d268ead168b4b7208a6d",
+      "app/Enums/PermissionEnum.php": "5232a43fc73df3be8422e158521090a5795ff090ed4658e6d8e7f0aaa15f7497",
+      "app/Domain/User/Policies/UserPolicy.php": "52e8445438b74f86bef0f6dbc3a043b38b429ae8b96d5edcd075822b0cfb3899",
+      "app/Domain/Store/Controllers/StoreWorkerController.php": "c3c1a30bb37705d67c8f5f06b83886cd1bcbb961f75add815232a1733c6f7a56",
+      "app/Domain/Store/Resources/WorkerResource.php": "f73477c6a6108f008a15045343d263d12e5569aa0d7a92198491bbd101280b5c"
+    },
+    "note": "Current backend source inventory; historical API results were not rerun here."
+  },
+  "status": "Member editor lifecycle QC PASS-DELTA; manage forms QC PASS-DELTA (QC-MANAGE-FORMS-001 CLOSED); QC-JOURNAL-001 CLOSED / Jurnal QC PASS-DELTA. Publication remains PM-gated. SD3-004 Role/Worker editor QC PASS-DELTA. SD3-005 Bantuan QC PASS-DELTA. SD3-006 delete dialogs READY_FOR_QA. SD3-007 shared modal size READY_FOR_QC_RECHECK (QC-STOCK-UI-001 still OPEN). SD3-008 shared delete modal size READY_FOR_QA_QC with internal review; external QC/PM pending. SD3-009 shared AlertModal size READY_FOR_QA_QC with internal review; external QC/PM pending. SD3-010 detail identity READY_FOR_QA_QC; 75 developer assertions and 195 independent internal checks PASS, external QC/PM pending. SD3-011 list actions READY_FOR_QA_QC; 165 developer checks PASS and independent internal QA; external QC/PM pending. QC-STOCK-UI-001 portrait CLOSED_BY_RECHECK; QC-SUCCESS-001 landscape OPEN / SuccessModal CHANGES_REQUESTED at F90, older statuses historical.",
+  "newEvidence": {
+    "manage-forms/check.cjs": "1d497366092c80c73e96f211af4dd914637feefbf4a7a5f1ff359310ce464fb3",
+    "manage-forms/extra-320.png": "f202b15f0310188ac40b837fd29202e338122fb8611658e9bb145acf20152def",
+    "manage-forms/order-type-320.png": "66fb3b9d920735a0c18e7be70089bbba14fd4441e947022a944f29e2b3a1157f",
+    "manage-forms/payment-method-320.png": "743d41852fa84da6dbea82276a7e233321ca5ceb5339ede7f25163969c6085db",
+    "manage-forms/preview-entry.fixture.jsx": "fbb55d2ebc1cf4fdccc78afe21674b0da4293a357e36081907b6aabfcf834395",
+    "manage-forms/results.json": "53ccf548b0bbb41c01c5abb5b6e6902a0fbcfe70acd741f6eca2af0c9b258c0f",
+    "manage-forms/tax-320.png": "fe82940557e7dafd14206519b04fd4faf935f0ce80fd01253b08700027f1a016",
+    "member-identity/check.cjs": "0432ee3370be7efb5258fbc78906a333c5eabb0197337e5c83327d8e02a42086",
+    "member-identity/member-after-identity-change.png": "bd78d87e81a442cf51f0483958be555e2bb8e920493aa576972a7778da40467a",
+    "member-identity/results.json": "7cd89b35d9f08bfe11c659de7a6b49b992ba589dd996110867186d2ecbb9db6b",
+    "member-identity/router-results.json": "e38fee3247c5196c755690bd36fcecaff10ef32e7372ff83f698a154d7f07ed6",
+    "member-identity/router.cjs": "979777dc5442143190d696690c455ef9047ee2b43250caf750a48868c0176434",
+    "member-identity/typecheck-results.json": "06c55b1a4b809a158dce8227693d448150f822aed909c0aafe15726a0b146cab",
+    "member-identity/typecheck.cjs": "bb962e9d911e55af831290d8bb4a7ae8088b45b16e5675cacd9dd13177cc63f8"
+  },
+  "manageForms": {
+    "passed": 54,
+    "sourceHashes": {
+      "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+      "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+      "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+      "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+      "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+      "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+      "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+      "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+      "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+      "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+    },
+    "scope": "Four production modify routes with isolated Expo Router and list fixtures"
+  },
+  "memberRepair": {
+    "issues": [
+      "QC-MEMBER-001",
+      "QC-MEMBER-002"
+    ],
+    "source": "components/feature/manage/member/MemberModifyScreen.tsx",
+    "sourceSha256": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+    "lifecyclePassed": 40,
+    "routerPassed": 16,
+    "expected422NetworkLogs": 1,
+    "lint": {
+      "command": "node node_modules/eslint/bin/eslint.js components/feature/manage/member/MemberModifyScreen.tsx --max-warnings 0 --no-cache",
+      "exitCode": 0
+    },
+    "format": {
+      "command": "node node_modules/@biomejs/biome/bin/biome check components/feature/manage/member/MemberModifyScreen.tsx",
+      "exitCode": 0
+    },
+    "typecheck": {
+      "owner": "Codex-3",
+      "scope": "MemberModifyScreen and imported dependency closure using project compiler options/declarations; not another full-project typecheck",
+      "diagnostics": [],
+      "sourceSha256": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "exitCode": 0
+    }
+  },
+  "currentSupplements": {
+    "date": "2026-10-08T20:16:04.547Z",
+    "historicalInventoryNote": "Older source/artifact fingerprints retain original snapshots. Current manage, journal, Role/Worker and support editor fingerprints are in supplements; historical tests are not retroactively attributed to new source. SD3-012 SuccessModal7508 and SD3-013 payment-method session flow supersede old shared dependency/preview source hashes; frozen old manifests remain historical.",
+    "memberQC": {
+      "decision": "QC-MEMBER-20261009-PASS-DELTA",
+      "closedFindings": [
+        "QC-MEMBER-001",
+        "QC-MEMBER-002"
+      ],
+      "source": "components/feature/manage/member/MemberModifyScreen.tsx",
+      "sha256": "48ad7ce18952d7751735ea1334108fa79d3f12288ac169b0fa0f7595ae725822",
+      "report": "docs/qa/qc-member-2026-10-09/recheck/REPORT.md",
+      "reportSha256": "10e6e94fb3db9d9bbb16c7b73b7d4a5511e994072c5eff8aae3792ba49bba80e",
+      "reportedAssertionExecutions": 98,
+      "scope": "Editor lifecycle delta only; QC result, not a developer rerun or full Member approval"
+    },
+    "journals": {
+      "file": "docs/qa/codex-3/journal-validation/verification.json",
+      "status": "HISTORICAL_BEFORE_QC_CHANGES_REQUESTED",
+      "sha256": "e6d13bdf3188a130698d3917a6e60f3b0f0d40166338e73b4310c2398b08dc01",
+      "supersededBy": "docs/qa/codex-3/journal-badge/verification.json"
+    },
+    "manageImports": {
+      "file": "docs/qa/codex-3/manage-imports/verification.json",
+      "status": "READY_FOR_QC_RECHECK",
+      "sha256": "92c084ae5ff23d7d43d859d53200f4f77ef0ec474ad8918d1c0381f3f0e4b7e3"
+    },
+    "roleWorkerIdentity": {
+      "file": "docs/qa/codex-3/role-worker-identity/verification.json",
+      "status": "READY_FOR_QA",
+      "sha256": "43363c704409d0faba8df53a00672498dd9ae2ba56750f19fdf743ad83f8aa68",
+      "scope": "Two editors, 106 combined lifecycle/payload assertions; developer evidence awaiting QA/QC"
+    },
+    "manageFormsQC": {
+      "decision": "QC-MANAGE-FORMS-20261009-PASS-DELTA",
+      "status": "PASS_DELTA",
+      "closedFindings": [
+        "QC-MANAGE-FORMS-001"
+      ],
+      "decisionFile": "docs/qa/qc-manage-forms-2026-10-09/recheck/DECISION.json",
+      "decisionSha256": "1ce88684e96f13730b478c3fee80ec46a653872de050add7a4c6b850beb17cb2",
+      "report": "docs/qa/qc-manage-forms-2026-10-09/recheck/REPORT.md",
+      "reportSha256": "d8d4bda9c45b4d62bedaa5e4cd018802f47ab321a1d84bf79977656fb9ce803b",
+      "reviewedSourceHashes": {
+        "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+        "app/(no-layout)/manage/order-type/modify.tsx": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+        "app/(no-layout)/manage/payment-method/modify.tsx": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+        "app/(no-layout)/manage/tax/modify.tsx": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+        "components/feature/manage/settings/ExtraModifyScreen.tsx": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+        "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+        "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+        "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+        "components/feature/manage/settings/TaxModifyScreen.tsx": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885"
+      },
+      "currentSourceMatches": [
+        {
+          "file": "app/(no-layout)/manage/extra/modify.tsx",
+          "expected": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+          "actual": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+          "passed": true
+        },
+        {
+          "file": "app/(no-layout)/manage/order-type/modify.tsx",
+          "expected": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+          "actual": "211ff261cd4327e9cc61db512f67a00ce735046c237d63b08a9699b74d974130",
+          "passed": true
+        },
+        {
+          "file": "app/(no-layout)/manage/payment-method/modify.tsx",
+          "expected": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+          "actual": "b374cbd92855d4de55f7613f7ed092777d562b80fc357a60837f0569ba549a0a",
+          "passed": true
+        },
+        {
+          "file": "app/(no-layout)/manage/tax/modify.tsx",
+          "expected": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+          "actual": "06b66361050bdaefc337f231acfc8b4db22061751defe20318451426fcdaabdd",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/ExtraModifyScreen.tsx",
+          "expected": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+          "actual": "7361bd9dddb7838f5a8978f681ca5e20f17c667d75e7316eca91504b2deaa2a4",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/ManageFormNotFound.tsx",
+          "expected": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+          "actual": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/ManagePreviewForm.tsx",
+          "expected": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+          "actual": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/OrderTypeModifyScreen.tsx",
+          "expected": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+          "actual": "4e2767f5ce6ec883518a081ace52751dcb71a769b7789359f003a8bf6b43e13f",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/PaymentMethodModifyScreen.tsx",
+          "expected": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+          "actual": "d4ca2dd3b8fe7563f100b5742ced6055e27732b0095b132318d5b45b5b587a41",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/settings/TaxModifyScreen.tsx",
+          "expected": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+          "actual": "82650f01a3a99064d6271be283b07aedfd1d74566892f6c887201ac5dda62885",
+          "passed": true
+        }
+      ],
+      "priorBrowserChecks": {
+        "passed": 92,
+        "rerunThisBatch": false,
+        "reason": "Exact QC proposal; non-import AST and import bindings unchanged. Original results remain historical."
+      },
+      "scope": "QC approval of ten-source preview form delta; no API/native/full-app approval or developer rerun",
+      "paymentMethodSourceUpdate": {
+        "ticket": "SD3-013",
+        "manifest": "docs/qa/codex-3/payment-method-session/verification.json",
+        "manifestSha256": "cd67854cb3a65405ce537a86cc954db3630cdca02addf0b9a5b567e23e795557",
+        "sourceHashes": {
+          "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+          "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+          "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+          "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+          "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+          "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+          "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+          "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+          "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+          "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+        },
+        "scope": "PaymentMethod now user-entered session CRUD; previous preview/editor QC approval applies only to historical exact hashes. Extra/OrderType/Tax previews unchanged. No API/persistence/transaction approval."
+      }
+    },
+    "supportAttachment": {
+      "file": "docs/qa/codex-3/support-attachment/verification.json",
+      "status": "READY_FOR_QA",
+      "sha256": "6c96d71d3e5eaafe238b2a192affc87454b40b3fd2ebbd399afc6d33f45b3294",
+      "scope": "Two support components, 114 developer assertions, native/API/browser not verified"
+    },
+    "journalBadge": {
+      "file": "docs/qa/codex-3/journal-badge/verification.json",
+      "status": "READY_FOR_QC_RECHECK",
+      "sha256": "147c01d9ac5d29ce66d8e38ed9e25e99fc418bcd1555dd7a80540d3909273c1e",
+      "finding": "QC-JOURNAL-001",
+      "scope": "Two predicates, 283 developer assertion executions including replay/overlap; QC closure pending"
+    },
+    "journalQC": {
+      "decision": "QC-JOURNALS-20261009-CHANGES-REQUESTED",
+      "status": "CHANGES_REQUESTED",
+      "finding": {
+        "id": "QC-JOURNAL-001",
+        "severity": "P2",
+        "status": "OPEN",
+        "category": "MISLEADING_BALANCED_BADGE_FOR_NEGATIVE_OR_NAN_ROW",
+        "affectedSources": [
+          "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx"
+        ],
+        "failures": [
+          "general: NaN row must not show balanced badge",
+          "general: negative typed through production parser must not show balanced badge",
+          "adjusting: NaN row must not show balanced badge",
+          "adjusting: negative typed through production parser must not show balanced badge"
+        ],
+        "dataWritesFromInvalidCases": 0,
+        "patch": "balanced-badge.patch",
+        "appliedToApplication": false
+      },
+      "decisionFile": "docs/qa/qc-journals-2026-10-09/DECISION.json",
+      "decisionSha256": "0d59bd6e34fc4db4e06cd4a1d1ef58871e486ed25af5a6262e4ff27d94de267c",
+      "report": "docs/qa/qc-journals-2026-10-09/REPORT.md",
+      "reportSha256": "27052ac243726b8cfd48d6ab4c040b76b57177e7b34940cebe8b42f700d058b4",
+      "developerCorrectionStatus": "READY_FOR_QC_RECHECK",
+      "note": "QC decision covers pre-correction hashes; developer has not closed finding"
+    },
+    "roleWorkerQC": {
+      "decision": "QC-ROLE-WORKER-20261009-PASS-DELTA",
+      "status": "PASS_DELTA",
+      "decisionFile": "docs/qa/qc-role-worker-2026-10-09/DECISION.json",
+      "decisionSha256": "205e0e630ecbb05c49719d4d37baa8fe2c54f8c3356fabf833d43f95aa683f30",
+      "report": "docs/qa/qc-role-worker-2026-10-09/REPORT.md",
+      "reportSha256": "81b83da2165836d14363f295790d508c0ea3101bfa4fa7ccd2517787d0c3610c",
+      "reviewedSourceHashes": {
+        "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+        "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+      },
+      "currentSourceMatches": [
+        {
+          "file": "components/feature/manage/roles/RoleModifyScreen.tsx",
+          "expected": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+          "actual": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+          "passed": true
+        },
+        {
+          "file": "components/feature/manage/workers/WorkerModifyScreen.tsx",
+          "expected": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+          "actual": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8",
+          "passed": true
+        }
+      ],
+      "reportedChecks": {
+        "developerReplay": 106,
+        "qcProductionQueryMutationIntegration": 34,
+        "totalExecutions": 140,
+        "runtimeErrors": 0,
+        "realHTTPRequests": 0,
+        "note": "Execution count includes overlapping regression coverage."
+      },
+      "findings": [],
+      "publication": "QC_APPROVED_TWO_EDITOR_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+      "scope": "QC result on the listed hashes, not a developer rerun or full-app/native/API approval"
+    },
+    "journalBadgeQC": {
+      "decision": "QC-JOURNALS-20261009-PASS-DELTA",
+      "status": "PASS_DELTA",
+      "decisionFile": "docs/qa/qc-journals-2026-10-09/recheck/DECISION.json",
+      "decisionSha256": "277bce867532a4be9d2e2f1633a2c38b623f9252a1e85855f67cf6fd2219e91f",
+      "report": "docs/qa/qc-journals-2026-10-09/recheck/REPORT.md",
+      "reportSha256": "9903fda2433ec82a948e5d983991c2f5c2d491547aafa0c6f9353f269151105e",
+      "reviewedSourceHashes": {
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+        "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca"
+      },
+      "currentSourceMatches": [
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "expected": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+          "actual": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+          "passed": true
+        },
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+          "expected": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+          "actual": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+          "passed": true
+        },
+        {
+          "file": "lib/accounting/journal-validation.ts",
+          "expected": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+          "actual": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca",
+          "passed": true
+        }
+      ],
+      "reportedChecks": {
+        "validation": 187,
+        "lifecycle": 55,
+        "qcCases": 41,
+        "failed": 0,
+        "totalExecutions": 283,
+        "runtimeErrors": 0,
+        "note": "Execution count includes overlapping regression coverage; current source, no proposal flag."
+      },
+      "findings": {
+        "id": "QC-JOURNAL-001",
+        "severity": "P2",
+        "status": "CLOSED"
+      },
+      "publication": "QC_APPROVED_JOURNAL_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+      "scope": "QC result on the listed hashes, not a developer rerun or full-app/native/API approval"
+    },
+    "supportQC": {
+      "decision": "QC-SUPPORT-20261009-PASS-DELTA",
+      "status": "PASS_DELTA",
+      "decisionFile": "docs/qa/qc-support-2026-10-09/DECISION.json",
+      "decisionSha256": "00d668634303adfe93c689026b5507fba156ee548b310f67f71e33abe4668fd2",
+      "report": "docs/qa/qc-support-2026-10-09/REPORT.md",
+      "reportSha256": "d048ecf0ab72159efe4644487838e00da78c9c11015517e13c2515effdea8189",
+      "reviewedSourceHashes": {
+        "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+        "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de"
+      },
+      "currentSourceMatches": [
+        {
+          "file": "components/feature/support/SupportAttachmentInput.tsx",
+          "expected": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+          "actual": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+          "passed": true
+        },
+        {
+          "file": "components/feature/support/SupportFormScreen.tsx",
+          "expected": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+          "actual": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+          "passed": true
+        }
+      ],
+      "reportedChecks": {
+        "replay": {
+          "passed": 114,
+          "failed": 0,
+          "runtimeErrors": 0
+        },
+        "independent": {
+          "passed": 61,
+          "failed": 0,
+          "runtimeErrors": 0
+        },
+        "totalPassed": 175,
+        "totalFailed": 0
+      },
+      "findings": [],
+      "publication": {
+        "approval": false,
+        "owner": "PM"
+      },
+      "scope": "QC result on the listed hashes, not a developer rerun or full-app/native/API approval"
+    },
+    "deleteLifecycle": {
+      "ticket": "SD3-006",
+      "status": "READY_FOR_QA",
+      "handoff": "docs/qa/codex-3/delete-lifecycle/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/delete-lifecycle/verification.json",
+      "manifestSha256": "9c0941e1849dbe1d61a0607fc4e252cda92e733ba1c17623d36c18b7df8fd653",
+      "sourceHashes": {
+        "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+      },
+      "checks": {
+        "baseline": {
+          "passed": 66,
+          "failed": 90,
+          "runtimeErrors": 0
+        },
+        "final": {
+          "passed": 156,
+          "failed": 0,
+          "runtimeErrors": 0
+        },
+        "quality": "PASS",
+        "focusedTypeDiagnostics": 0
+      },
+      "limits": [
+        "React test renderer/RN/button/modal/Text/vector-icon/image host presentation",
+        "Axios adapter promise outcomes; API client/auth interceptor excluded; no HTTP",
+        "Standalone parent state/QueryClient provider; no actual navigator/list/detail screen",
+        "No HTTP/backend DELETE, native/browser/router/list/detail/root auth/Figma/full-app gate",
+        "Local instance lock; already-dispatched DELETE is not cancelled; cross-remount/per-device idempotency is backend scope"
+      ],
+      "sharedDependencyUpdate": {
+        "sources": {
+          "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+          "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+          "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+        },
+        "evidence": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+        "originalPackets": "SD3-006/007/008 frozen; prior Alert dependency hashes retained as history",
+        "status": "READY_FOR_QA_QC"
+      },
+      "detailCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+          "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+          "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+        },
+        "evidence": "docs/qa/codex-3/detail-identity/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three detail caller identity boundaries only; earlier modal caller inventories remain frozen history"
+      },
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "sharedSuccessModalSize": {
+      "ticket": "SD3-007",
+      "status": "READY_FOR_QC_RECHECK",
+      "handoff": "docs/qa/codex-3/success-modal-size/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/success-modal-size/verification.json",
+      "manifestSha256": "a68399be63aef1f7abc11f9e0f4f58291df544ed8af3b93fff16b09c281caf04",
+      "finding": {
+        "id": "QC-STOCK-UI-001",
+        "severity": "P2",
+        "status": "OPEN_PENDING_QC_RECHECK"
+      },
+      "sourceHashes": {
+        "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+        "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+      },
+      "checks": {
+        "stockBrowser": 36,
+        "modalBrowser": 51,
+        "lifecycleReplay": 156,
+        "totalFinalExecutions": 243,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS"
+      },
+      "limits": [
+        "One shared component source change; no source caller/backend/HTTP/native/root auth/SSR/Figma/full-app approval",
+        "Old SD3-006 evidence remains historical with prior shared dependency; latest replay lives here",
+        "PM final gate and QC recheck still required; P2 not developer-closed"
+      ],
+      "sharedDependencyUpdate": {
+        "sources": {
+          "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+          "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+          "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+        },
+        "evidence": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+        "originalPackets": "SD3-006/007/008 frozen; prior Alert dependency hashes retained as history",
+        "status": "READY_FOR_QA_QC"
+      },
+      "internalReview": {
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "manifest": "docs/qa/codex-3-internal-review/success-modal-2026-10-09/verification.json",
+        "manifestSha256": "c1ddc61ee54ec7a20d2a8b5b657f02588c22d6deffc2f1018f851a5dc1f109a3",
+        "independentAssertions": 45,
+        "externalFindingStatus": "OPEN_PENDING_EXTERNAL_QC_RECHECK"
+      },
+      "detailCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+          "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+          "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+        },
+        "evidence": "docs/qa/codex-3/detail-identity/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three detail caller identity boundaries only; earlier modal caller inventories remain frozen history"
+      },
+      "listCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+          "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+          "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+          "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+        },
+        "evidence": "docs/qa/codex-3/list-actions/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three list selection lifetimes and new helper; previous modal caller inventories remain frozen history"
+      },
+      "externalQcReview": {
+        "signal": "QC-SUCCESS-20261009-CHANGES-REQUESTED",
+        "status": "CHANGES_REQUESTED",
+        "decision": "docs/qa/qc-success-modal-2026-10-09/DECISION.json",
+        "decisionSha256": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+        "reviewedSourceHashes": {
+          "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+        },
+        "closedFindings": [
+          {
+            "id": "QC-STOCK-UI-001",
+            "severity": "P2",
+            "status": "CLOSED_BY_RECHECK",
+            "reviewedSourceHash": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+            "scope": "Original portrait320x640 reproduction on identical historical Stock caller contract",
+            "evidence": [
+              "stock-final/browser-results.json:36PASS",
+              "modal-browser-results.json:51PASS"
+            ],
+            "historicalDecision": "../qc-stock-ui-2026-10-09/DECISION.json",
+            "historicalDecisionEdited": false
+          }
+        ],
+        "newOpenFindings": [
+          {
+            "id": "QC-SUCCESS-001",
+            "severity": "P2",
+            "status": "OPEN",
+            "title": "Modal sukses dengan pesan panjang memotong tombol pada viewport mendatar"
+          }
+        ]
+      },
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "sharedDeleteModalSize": {
+      "ticket": "SD3-008",
+      "status": "READY_FOR_QA_QC",
+      "handoff": "docs/qa/codex-3/delete-modal-size/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/delete-modal-size/verification.json",
+      "manifestSha256": "67b78276bf166358fc37d364b34a33ca321af22c3053baceeedc68ab8fbe7a15",
+      "sourceHashes": {
+        "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+        "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+      },
+      "checks": {
+        "browser": 115,
+        "lifecycleReplay": 156,
+        "totalDeveloperExecutions": 271,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS"
+      },
+      "internalReview": {
+        "kind": "Internal delegated review; does not replace external QA/QC decision",
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "independentAssertions": 53,
+        "manifest": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/verification.json",
+        "manifestSha256": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12"
+      },
+      "limits": [
+        "One shared delete-confirmation source changed; public handlers/props/copy/two-button JSX preserved",
+        "Older SD3-006/007 packets remain frozen historical snapshots with prior DeleteConfirmModal dependency; latest156 replay is here",
+        "Internal review is separate from external QA/QC and PM publication approval",
+        "No native/SSR/keyboard/font-accessibility/full-router/root-auth/63-screen/Figma/backend/full-app certification; browser transport is a local fixture"
+      ],
+      "sharedDependencyUpdate": {
+        "sources": {
+          "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+          "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+          "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495"
+        },
+        "evidence": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+        "originalPackets": "SD3-006/007/008 frozen; prior Alert dependency hashes retained as history",
+        "status": "READY_FOR_QA_QC"
+      },
+      "detailCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+          "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+          "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+        },
+        "evidence": "docs/qa/codex-3/detail-identity/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three detail caller identity boundaries only; earlier modal caller inventories remain frozen history"
+      },
+      "listCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+          "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+          "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+          "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+        },
+        "evidence": "docs/qa/codex-3/list-actions/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three list selection lifetimes and new helper; previous modal caller inventories remain frozen history"
+      },
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "sharedAlertModalSize": {
+      "ticket": "SD3-009",
+      "status": "READY_FOR_QA_QC",
+      "handoff": "docs/qa/codex-3/alert-modal-size/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/alert-modal-size/verification.json",
+      "manifestSha256": "6e777c2443e3924738ac9d4a9197349447528fb16032f9ccaccf1175e6b6d9f7",
+      "sourceHashes": {
+        "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+        "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+      },
+      "checks": {
+        "browser": 114,
+        "lifecycleReplay": 156,
+        "totalDeveloperExecutions": 270,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS"
+      },
+      "internalReview": {
+        "kind": "Internal delegated review, not an external QC decision",
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "independentAssertions": 64,
+        "manifest": "docs/qa/codex-3-internal-review/alert-modal-final-2026-10-09/verification.json",
+        "manifestSha256": "0db1c679dac8683bcafaf1fd24691187002145eb439d1122539ac22b834e27ec"
+      },
+      "limits": [
+        "One AlertModal source changed;128px/cover, implicit510px primitive maximum, callbacks/children/hidden footer/cancel-during-loading preserved",
+        "SD3-006/007/008 packets remain frozen historical snapshots with prior Alert dependency; latest156 replay is here",
+        "Internal review does not replace external QA/QC and PM publication approval; QC-STOCK-UI-001 remains separately OPEN",
+        "No native/SSR/keyboard/accessibility/full-router/root-auth/71-screen/Figma/backend/full-app certification; browser transport and parent messages/children are isolated fixtures"
+      ],
+      "callerDriftFollowup": {
+        "source": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "capturedHash": "eccfb325dd942c4551f15efa8a5ad032c63bfd41e79c409bffb38097b40bf667",
+        "alertJsxUnchanged": true,
+        "evidence": "docs/qa/codex-3/alert-modal-caller-drift-2026-10-09/results.json",
+        "evidenceSha256": "9e8362bd54bc335bbcb36ea62dc85bd135a98384927f27b71e73f66aac85b31f",
+        "scope": "Static AlertModal JSX props/callback expressions only; no execution or approval of accounts screen/helper/store/lifecycle changes owned by Senior8"
+      },
+      "detailCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+          "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+          "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+        },
+        "evidence": "docs/qa/codex-3/detail-identity/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three detail caller identity boundaries only; earlier modal caller inventories remain frozen history"
+      },
+      "listCallerUpdate": {
+        "sourceHashes": {
+          "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+          "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+          "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+          "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+        },
+        "evidence": "docs/qa/codex-3/list-actions/HANDOFF.md",
+        "status": "READY_FOR_QA_QC",
+        "scope": "Own three list selection lifetimes and new helper; previous modal caller inventories remain frozen history"
+      },
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "detailIdentity": {
+      "ticket": "SD3-010",
+      "status": "READY_FOR_QA_QC",
+      "handoff": "docs/qa/codex-3/detail-identity/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/detail-identity/verification.json",
+      "manifestSha256": "dffd6542b4311938a099e6bd67691c69fd682d88eb6c8ff122c2ccd997fde26a",
+      "sourceHashes": {
+        "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+        "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+        "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+      },
+      "checks": {
+        "developerAssertions": 75,
+        "productionModules": 24,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS"
+      },
+      "internalReview": {
+        "kind": "Independent delegated parent-state/AST/contract review, not external QC",
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "independentAssertions": 195,
+        "stateAssertions": 156,
+        "staticAssertions": 39,
+        "manifest": "docs/qa/codex-3-internal-review/detail-identity-2026-10-09/verification.json",
+        "manifestSha256": "d14097f78331ee4a3bc93c214e6f571dc620c75666316a044e5a8386525ce825",
+        "externalQcApproval": false
+      },
+      "limits": [
+        "Three detail sources only; original full body/public params/imports/JSX/copy/query/endpoint/route/error/loading preserved",
+        "Developer executes production delete mutation through local Axios; GET/presentation/router/RoleWorkers/avatar adapters; reviewer isolates parent with query/child-dialog adapters",
+        "No native/browser/full-router/root-auth/Figma/backend/full-project approval; no transport abort claim",
+        "SD3-006/007/008/009 and accepted editor QC packets remain historical; new detail caller hashes belong to this overlay",
+        "Internal QA review does not replace external QC or PM publication approval"
+      ],
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "listActions": {
+      "ticket": "SD3-011",
+      "status": "READY_FOR_QA_QC",
+      "handoff": "docs/qa/codex-3/list-actions/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/list-actions/verification.json",
+      "manifestSha256": "ae621768f6deb7a92303d30492d55ff767de29eda80432a148e5a794d89c465b",
+      "sourceHashes": {
+        "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+        "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+        "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+        "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+      },
+      "checks": {
+        "developerAssertions": 165,
+        "productionModules": 26,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS"
+      },
+      "internalReview": {
+        "kind": "Independent production list/sheet/delete mutation fixture review, root sealed completed executions; not external QC",
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "independentAssertions": 277,
+        "stateAndIntegration": 258,
+        "staticFingerprints": 19,
+        "manifest": "docs/qa/codex-3-internal-review/list-actions-2026-10-09/verification.json",
+        "manifestSha256": "27958b4c0522783163a9a82764269f1192ae3a52ddfb3cc8044b580b400c28f0",
+        "externalQcApproval": false
+      },
+      "limits": [
+        "Three list sources plus one owned manage helper; list/card/search/loading/error/refresh/empty/add CTA AST preserved except selection event",
+        "Production DELETE through local Axios/QueryClient; GET/presentation/FlatList/router/native adapters, list has no onDeleted callback",
+        "Confirmation/sheet retires on missing canonical/loading/error; retained child owns already-dispatched request/notice, no transport abort claim",
+        "SD3-006 through SD3-010 and accepted editor QC packets remain frozen history; new list caller hashes belong to this overlay",
+        "External QC-SUCCESS-001 landscape finding remains OPEN for shared SuccessModalF90; list review is not shared geometry approval",
+        "No browser/native/full-router/root-auth/Figma/backend/full-project/publication approval"
+      ],
+      "currentDependencyUpdate": {
+        "ticket": "SD3-012",
+        "sourceHashes": {
+          "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+        },
+        "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+        "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+        "currentSourceReplay": {
+          "currentDeveloperAssertions": 321,
+          "deleteLifecycleAssertions": 156,
+          "listAssertions": 165,
+          "failures": 0,
+          "runtimeErrors": 0,
+          "lintErrors": 0,
+          "lintWarnings": 0,
+          "focusedTypeDiagnostics": 0,
+          "quality": "PASS",
+          "contractUnchangedOutsideHeightScroll": true,
+          "exactReviewedProposal": true,
+          "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+        },
+        "scope": "Current SuccessModal7508 dependency; previous F90 packet assertions remain historical, current renderer evidence321 executions with overlapping coverage; external QC-SUCCESS-001 OPEN pending actual application/native recheck"
+      }
+    },
+    "sharedSuccessModalHeight": {
+      "ticket": "SD3-012",
+      "status": "READY_FOR_QC_RECHECK",
+      "handoff": "docs/qa/codex-3/success-modal-height/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/success-modal-height/verification.json",
+      "manifestSha256": "a64659247a9665d5df43ad6963fc32fff75a3793f153381b31403062ad8e6fce",
+      "sourceHashes": {
+        "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+      },
+      "checks": {
+        "currentDeveloperAssertions": 321,
+        "deleteLifecycleAssertions": 156,
+        "listAssertions": 165,
+        "failures": 0,
+        "runtimeErrors": 0,
+        "lintErrors": 0,
+        "lintWarnings": 0,
+        "focusedTypeDiagnostics": 0,
+        "quality": "PASS",
+        "contractUnchangedOutsideHeightScroll": true,
+        "exactReviewedProposal": true,
+        "coverageNote": "Current-source renderer executions with overlapping lifecycle coverage; not geometry/native certification"
+      },
+      "internalReview": {
+        "status": "HISTORICAL_PROPOSAL_EVIDENCE_VALID_WITH_LIMITS",
+        "manifest": "docs/qa/codex-3-internal-review/success-height-2026-10-09/verification.json",
+        "manifestSha256": "3e0608f143f3f4e218f2cbb76981eb20c7abd9f82ade3f787c914f198db936c7",
+        "report": "docs/qa/codex-3-internal-review/success-height-2026-10-09/REPORT.md",
+        "newRuntimeExecutions": 0,
+        "historicalQcArtifactsVerified": 139,
+        "externalQcApproval": false
+      },
+      "externalQcApproval": false,
+      "publicationOwner": "PM",
+      "limits": [
+        "Applied exact reviewed height/scroll proposal only; public props/callbacks/copy unchanged",
+        "Shared caller replay via native/router/presentation/GET adapters, DELETE uses local Axios/QueryClient fixture without HTTP",
+        "Own baseline browser setup timed out with zero assertions; no current final browser run or generated CSS/native certification",
+        "Historical QC270 proposal proof explicitly separate from current developer321 renderer executions",
+        "QC-SUCCESS-001 remains OPEN; no QA/QC external or PM publication approval",
+        "Previous F90 source/manifests frozen history, only mutable parent overlay updated",
+        "No API/dependency/server/Metro/HP/ADB/rootconfig/globalTS/Git publication changes"
+      ]
+    },
+    "paymentMethodSession": {
+      "ticket": "SD3-013",
+      "status": "READY_FOR_QA_QC",
+      "handoff": "docs/qa/codex-3/payment-method-session/HANDOFF.md",
+      "manifest": "docs/qa/codex-3/payment-method-session/verification.json",
+      "manifestSha256": "cd67854cb3a65405ce537a86cc954db3630cdca02addf0b9a5b567e23e795557",
+      "sourceHashes": {
+        "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+        "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+        "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+        "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+        "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+        "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+        "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+        "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+        "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+        "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+      },
+      "checks": {
+        "passed": 58,
+        "failed": 0,
+        "runtimeErrors": 0,
+        "productionModules": 20,
+        "lintErrors": 0,
+        "lintWarnings": 0,
+        "typeDiagnostics": 0
+      },
+      "internalReview": {
+        "status": "INTERNAL_QA_REVIEW_PASS",
+        "report": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/REPORT.md",
+        "manifest": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/verification.json",
+        "externalQcApproval": false,
+        "checks": {
+          "passed": 50,
+          "failed": 0,
+          "rendererPassed": 47,
+          "replayedPriorAssertions": 45,
+          "newErrorActionChecks": 2,
+          "labelProofChecks": 3,
+          "runtimeErrors": 0,
+          "runtimeWarnings": 0
+        },
+        "sourceHashes": {
+          "app/(no-layout)/manage/payment-method/index.tsx": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9",
+          "app/(no-layout)/manage/payment-method/modify.tsx": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab",
+          "app/(no-layout)/manage/payment-method/detail.tsx": "13a3aa5f3489d949b95699b486d026bf093573d806c88a3c4c1f3465cc7dcad3",
+          "app/(no-layout)/manage/payment-method/_layout.tsx": "8cb77b3cb0d1d1d4beed922020c6ce43976bf998abc37e669196ea4a0e545ef5",
+          "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e",
+          "components/feature/manage/settings/PaymentMethodListScreen.tsx": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e",
+          "components/feature/manage/settings/PaymentMethodDetailScreen.tsx": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394",
+          "components/feature/manage/settings/PaymentMethodDeleteDialog.tsx": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc",
+          "store/managePaymentMethodStore.ts": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871",
+          "schema/manage/payment-method.ts": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+        },
+        "artifacts": [
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/check.cjs",
+            "sha256": "28a6cfff75c909f61efc99b4b30407eeeca52001d7c876a335106256b762ce6a"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/finalize.cjs",
+            "sha256": "a9fc61db6ee5cfb24c32d7f08011500097e83e61f4ff0f318e7516dc126e7856"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/form.before.tsx.txt",
+            "sha256": "ae4011c260e7fcde0087fa7f5adf9bc1812356096535664ee39c3d1dd2185ff4"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/form.final.tsx.txt",
+            "sha256": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/preparation.json",
+            "sha256": "c78f64c1cee93b35d372f2c0ca41e00c4e7ec069d69dc61cc4f8c249d9e3e5e0"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/prepare.cjs",
+            "sha256": "f1b72fed495d2b4c0d03aa2f04a847897e3190b37c134b35529f62b53455ddc0"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/previous-review-manifest.json",
+            "sha256": "8c17b74441cbabeb64a9d989fceea9c584aebc840aadc654e88031371d00fa9a"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/proof.cjs",
+            "sha256": "775f3b40d1d73b5d9ce0976fa57d23651aa40ab3136c22e94739ff2a8b664ec3"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/proof.json",
+            "sha256": "69f8efafa21a7265cb84dd21392aed6ccda1a49b87ef3e2c7c5415b34c83f88f"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/README.md",
+            "sha256": "b5026dbc6f3804a20882d2ae1aa66bb67106a907f7dd760362ab4cdd276e9975"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/REPORT.md",
+            "sha256": "96a6f110726bec81391ded354c057e7c5c664dcdd64b01226fc9a6ae5dfd0ac3"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/app__(no-layout)__manage__payment-method__index.tsx.txt",
+            "sha256": "7859c6527caa55e1214d53416e019a545c2afb21ec71a6ad5e86783066c8acb9"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/app__(no-layout)__manage__payment-method__modify.tsx.txt",
+            "sha256": "ae862ff9f0bd6373ad4cc44984c38b069c47e1f6bfc859622c3b55b18fef7bab"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__AlertModal.tsx.txt",
+            "sha256": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__DeleteConfirmModal.tsx.txt",
+            "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__Form.tsx.txt",
+            "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__common__SuccessModal.tsx.txt",
+            "sha256": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__ManageListActions.tsx.txt",
+            "sha256": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__ManageFormNotFound.tsx.txt",
+            "sha256": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodDeleteDialog.tsx.txt",
+            "sha256": "d8aadcda1f1b93731e7f03fe6985207935074510f52b43dbef370aa5724ebbcc"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodDetailScreen.tsx.txt",
+            "sha256": "6296854e2d0027f51fba06f27cc4f63b1890b1ce90e369f31376b3c8153b8394"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodListScreen.tsx.txt",
+            "sha256": "ae4768c21d9d6c1d4bb1833cdd87a7f04406754699149913e101f2c38dcbc34e"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/components__feature__manage__settings__PaymentMethodModifyScreen.tsx.txt",
+            "sha256": "0451db3bf9f4f29f4f2f4c67814fa788edb4cb56a983824848443a0da1d40d4e"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/constants__data__other__bank-types.ts.txt",
+            "sha256": "e278fa746c65d292cd811b3148a31c987a2a8f493fb71838e92f65eac1ed154a"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/hooks__useAlertModal.ts.txt",
+            "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/schema__manage__payment-method.ts.txt",
+            "sha256": "222b352adb4c7f020368d4db2f4c0d76c1dbc444626477d20a3719e5636e8c74"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results-sources/store__managePaymentMethodStore.ts.txt",
+            "sha256": "10a1fc4d36cf0a63bf198a9516ed045c75d3f35254029fa353c9d0c5e9771871"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/results.json",
+            "sha256": "a1ef6b9c5a193189d42942c7f04746633e8dadf1f8bc2d5f6ae520bc583fdb90"
+          },
+          {
+            "file": "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09/verification.json",
+            "sha256": "ee255d9e41868e43847902a95a9e58d667f30eba822d8c49ea80521e96613fb6"
+          }
+        ]
+      },
+      "externalQcApproval": false,
+      "publicationOwner": "PM",
+      "limits": "Production three session routes/list/form/detail/delete/store/schema/RHF/Zod/shared Form/controller/input logic/ManageListActions/ItemActionSheet/modal logic under StrictMode. Native/presentation/picker/FlatList/router/DetailRow are host adapters. No backend, transaction application, disk persistence, browser/native/keyboard geometry/full root/Figma certification."
+    }
+  },
+  "currentStatus": "SD3-012 applied height correction READY_FOR_QC_RECHECK; QC-SUCCESS-001 remains OPEN. SD3-013 payment-method UI/session CRUD READY_FOR_QA_QC. QA/QC/PM external approval pending."
+}

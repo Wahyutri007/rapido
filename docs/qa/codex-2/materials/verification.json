@@ -1,0 +1,202 @@
+{
+    "generatedAt":  "2026-10-08T20:33:04.7958528Z",
+    "status":  "READY_FOR_QA: developer evidence, not QA/QC/PM approval",
+    "runtimeVersions":  {
+                            "expo":  "57.0.27",
+                            "expo-router":  "57.0.25",
+                            "react":  "19.2.3",
+                            "react-native":  "0.86.3",
+                            "typescript":  "6.0.3"
+                        },
+    "checks":  {
+                   "model":  {
+                                 "generatedAt":  "2026-10-08T20:26:39.856Z",
+                                 "assertions":  67,
+                                 "failures":  0,
+                                 "scope":  "Production material/schema/store/helpers and inventory integration, with in-memory session fixtures"
+                             },
+                   "browser":  {
+                                   "generatedAt":  "2026-10-08T20:31:23.848Z",
+                                   "passed":  true,
+                                   "pageErrors":  [
+
+                                                  ],
+                                   "viewports":  [
+                                                     "390x1004",
+                                                     "320x812"
+                                                 ],
+                                   "scope":  "Actual feature components, route layouts and shared controls; authentication/backend bypassed"
+                               },
+                   "focusedTypeScript":  {
+                                             "generatedAt":  "2026-10-08T20:32:25.538Z",
+                                             "typescript":  "6.0.3",
+                                             "diagnostics":  0,
+                                             "roots":  [
+                                                           "components/feature/inventory/material/MaterialUi.tsx",
+                                                           "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+                                                           "components/feature/inventory/material/MaterialListScreen.tsx",
+                                                           "components/feature/inventory/material/MaterialDetailScreen.tsx",
+                                                           "components/feature/inventory/material/MaterialExpiryInput.tsx",
+                                                           "components/feature/inventory/material/MaterialFormScreen.tsx",
+                                                           "components/feature/inventory/PurchaseFormScreen.tsx",
+                                                           "components/feature/inventory/StockOperationForm.tsx",
+                                                           "app/(no-layout)/inventory/materials/_layout.tsx",
+                                                           "app/(no-layout)/inventory/materials/index.tsx",
+                                                           "app/(no-layout)/inventory/materials/modify.tsx",
+                                                           "app/(no-layout)/inventory/materials/detail.tsx",
+                                                           "app/(no-layout)/inventory/_layout.tsx",
+                                                           "app/(back-office)/inventory/index.tsx",
+                                                           "types/ui/inventory/material.ts",
+                                                           "constants/data/inventory-materials.ts",
+                                                           "schema/inventory/material.ts",
+                                                           "schema/inventory.ts",
+                                                           "store/inventoryMaterialStore.ts",
+                                                           "lib/inventory.ts",
+                                                           "lib/inventory-material.ts",
+                                                           "lib/inventory/material-date.ts",
+                                                           "expo-env.d.ts",
+                                                           "nativewind-env.d.ts"
+                                                       ],
+                                             "scope":  "22 changed production files, ambient declarations and their imported dependency closure; not a project-wide gate"
+                                         },
+                   "eslint":  {
+                                  "exitCode":  0,
+                                  "errors":  0,
+                                  "warnings":  0,
+                                  "productionFiles":  22
+                              },
+                   "biome":  {
+                                 "exitCode":  0,
+                                 "qaScripts":  4,
+                                 "productionFiles":  22
+                             },
+                   "trackedInventoryDiff":  {
+                                                "exitCode":  0,
+                                                "scope":  "Inventory source and documentation"
+                                            }
+               },
+    "cleanup":  {
+                    "previewRootPresent":  false,
+                    "temporaryPreviewFilesRemoved":  31,
+                    "ownedServersStopped":  true
+                },
+    "limits":  [
+                   "Session-only material data; no API/persistence or posted ledger",
+                   "Authentication/backend bypassed in browser",
+                   "Static summary analytics",
+                   "No captured list reference or full Materials Figma context/screenshots",
+                   "Native layout, keyboard and Android date picker unverified",
+                   "Focused TypeScript only; full integration gate deferred to PM"
+               ],
+    "sourceSha256":  {
+                         "value":  [
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialUi.tsx",
+                                           "sha256":  "0be66ceaba12dab9cd2a932e7647a4fbd2c10b9846c2b96f861a74441464fd6c"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+                                           "sha256":  "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialListScreen.tsx",
+                                           "sha256":  "8e9343c861c718fd3a296332bc92b3d8a1f2da8c0ca9539bdc4ac9945f88c11e"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialDetailScreen.tsx",
+                                           "sha256":  "4742ab80d724b7c39fb95f76518192573dc58f16eefb51969a398af0230ccbd7"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialExpiryInput.tsx",
+                                           "sha256":  "f0a7fc7f6bfe39647d2dbf26c9dc80e0b778f54503133c000626ad859bc28177"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/material/MaterialFormScreen.tsx",
+                                           "sha256":  "85a838e38300c7d4f56042053d2c104e03d3cc2e6171c35363f6db4f2323997b"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/PurchaseFormScreen.tsx",
+                                           "sha256":  "a05a1ee5dbee2c9503bfbb96bbd15378d15a35f352d64d52f72a36cb891a0699"
+                                       },
+                                       {
+                                           "path":  "components/feature/inventory/StockOperationForm.tsx",
+                                           "sha256":  "f518fc758a2ab3b85559a81e156bcdd1afac03c2e0b7eae3a62ef8ebf34705a8"
+                                       },
+                                       {
+                                           "path":  "app/(no-layout)/inventory/materials/_layout.tsx",
+                                           "sha256":  "9f83a3b0a52a581418934f5250a386adf3f0ae8c2f68a5b3a6c8ebfcc923ab94"
+                                       },
+                                       {
+                                           "path":  "app/(no-layout)/inventory/materials/index.tsx",
+                                           "sha256":  "3cf9ca4b5b52a709cae7ac6069976ac3cada494544fae7c09bb1caa52547011a"
+                                       },
+                                       {
+                                           "path":  "app/(no-layout)/inventory/materials/modify.tsx",
+                                           "sha256":  "9de31965479b64ff10e6384d521177ae0c5d70cdcbc2241f6be391eec1e3a7a1"
+                                       },
+                                       {
+                                           "path":  "app/(no-layout)/inventory/materials/detail.tsx",
+                                           "sha256":  "e5be6a69d87f9b5131f0c507ca2a7cd87f509b34032588ca5ece8346cd58f2e7"
+                                       },
+                                       {
+                                           "path":  "app/(no-layout)/inventory/_layout.tsx",
+                                           "sha256":  "b14dcb226a4f246fb384b8f6d7b7f86e347c0d86911bf70de209804e22d08fe2"
+                                       },
+                                       {
+                                           "path":  "app/(back-office)/inventory/index.tsx",
+                                           "sha256":  "88b6655dc4ae0d005a8802222536f86125ba0ea0600dc7caf6ef02019b1353c8"
+                                       },
+                                       {
+                                           "path":  "types/ui/inventory/material.ts",
+                                           "sha256":  "f781e865b36188ad7fb3debc898ae3aa0257841812a8c9d28ad65bcc708a4669"
+                                       },
+                                       {
+                                           "path":  "constants/data/inventory-materials.ts",
+                                           "sha256":  "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08"
+                                       },
+                                       {
+                                           "path":  "schema/inventory/material.ts",
+                                           "sha256":  "64da566f0aef9c04a9b1aca1d3bbfe4185ea7c34e432edc032f003126a83f687"
+                                       },
+                                       {
+                                           "path":  "schema/inventory.ts",
+                                           "sha256":  "368b4cc2e94eb5fc121184e644da85ea5ce422ee5e16cfca2a38923379ae481b"
+                                       },
+                                       {
+                                           "path":  "store/inventoryMaterialStore.ts",
+                                           "sha256":  "91315b9b9916230deca30e8f56505d071660b42f4c2c18f50d1ff34ace56ba8f"
+                                       },
+                                       {
+                                           "path":  "lib/inventory.ts",
+                                           "sha256":  "5edc2c03673a307387fefb151ba375966b165c8200c79cda00cd95ed1e145d6f"
+                                       },
+                                       {
+                                           "path":  "lib/inventory-material.ts",
+                                           "sha256":  "06bf405b5e51a127888b4453bf709be85e63ff376f39df946b80308d719599ee"
+                                       },
+                                       {
+                                           "path":  "lib/inventory/material-date.ts",
+                                           "sha256":  "bbd2e2cae04944ccda7f42d7a1edfaaa388b768afd2e679143860c45f51e9e4d"
+                                       }
+                                   ],
+                         "Count":  22
+                     },
+    "scriptSha256":  [
+                         {
+                             "path":  "docs/qa/codex-2/materials/check-model.cjs",
+                             "sha256":  "15ead145fd3c0b96924155522ecc3f422d51139a8c8a001bd447c9fe4b1dfab9"
+                         },
+                         {
+                             "path":  "docs/qa/codex-2/materials/check-browser.cjs",
+                             "sha256":  "384bed9094f13150905ff911a79e00bf1f23efffafe7db61e5d9a5c8c813b6be"
+                         },
+                         {
+                             "path":  "docs/qa/codex-2/materials/check-types.cjs",
+                             "sha256":  "bd6110758e430e1fb7bfa1dfe1810ac9fabc196735061e48bceafed28c0a8af8"
+                         },
+                         {
+                             "path":  "docs/qa/codex-2/materials/setup-preview.cjs",
+                             "sha256":  "f04251b073be2aa8da06d3c000e5f318afa605d5455f3c7ecf6d16e0e402cf93"
+                         }
+                     ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "QC-NATIVEWIND-CACHE-20261009-CHANGES-REQUESTED",
+  "recordedAt": "2026-10-08T18:41:26.345Z",
+  "status": "CHANGES_REQUESTED",
+  "approvedForPublication": false,
+  "reviewComplete": true,
+  "behavior": {
+    "status": "PASS_DELTA",
+    "cacheConfigChecks": 41,
+    "routeChecks": 10,
+    "totalCurrentChecks": 51,
+    "unexpectedRuntimeErrors": 0
+  },
+  "gates": {
+    "eslint": "PASS_4_FILES_0_ERROR_WARNING",
+    "scopedDiffCheck": "PASS",
+    "biome": "FAIL_4_ERROR_1_WARNING_1_INFO",
+    "fingerprints": "PASS_17_STABLE"
+  },
+  "findings": [
+    {
+      "id": "QC-STARTUP-CACHE-001",
+      "severity": "P3",
+      "status": "OPEN",
+      "blocksStartupPackageApproval": true,
+      "reason": "3 formatter errors and noUnsafeFinally in source/harness gate"
+    },
+    {
+      "id": "QC-HP-WARNING-001",
+      "severity": "P3",
+      "status": "OPEN",
+      "scope": "routing",
+      "reason": "3 stale Screen registrations produce native warning",
+      "patch": "routing-warning.patch",
+      "applied": false
+    },
+    {
+      "id": "QC-HP-WARNING-002",
+      "severity": "P3",
+      "status": "OPEN",
+      "scope": "dependency integration",
+      "reason": "InteractionManager deprecation; installed router stack source accesses API, exact banner stack unconfirmed"
+    }
+  ],
+  "styleProposal": {
+    "patch": "startup-style.patch",
+    "applied": false,
+    "biomeErrors": 0,
+    "biomeWarnings": 1,
+    "biomeInfos": 1,
+    "initializerChecks": 10,
+    "successful": true
+  },
+  "sourceFiles": {
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "scripts/verify-nativewind-cache.cjs": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274",
+    "scripts/verify-metro-cache.cjs": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f"
+  },
+  "activeAndroidCache": {
+    "bytes": 193003,
+    "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "hasClassDarkFlag": true
+  },
+  "nativeEvidence": "developer two cold launches reviewed; QC screenshot/ADB observation only, no independent restart/navigation",
+  "warningBannerExactTextConfirmed": false,
+  "handoff": "workspace SESSION_COORDINATION; developer corrections then QC recheck, PM integration/publication gate",
+  "appSourceEdited": false,
+  "nativeRuntimeRestarted": false,
+  "gitPublished": false
+}

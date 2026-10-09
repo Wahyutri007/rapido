@@ -1,0 +1,41 @@
+{
+  "automaticJsxRuntime": true,
+  "scenarioScope": "Production registration sheet+hook with real Form, independent fixture parent; not full Wizard/OTP screen",
+  "initialHarnessAborts": [
+    {
+      "kind": "Adapter",
+      "reason": "Classic JSX transform assumed React import in existing component; final uses automatic JSX runtime"
+    },
+    {
+      "kind": "Existing source defect",
+      "reason": "Malformed422 mapFormErrors rejection aborted first runner; final immediately observes and records UI action rejection"
+    },
+    {
+      "kind": "Observation adapter",
+      "reason": "FormInput does not set field ID; use placeholder. Stale callback closes sheet so button may be absent; optional observation allows assertion failure"
+    }
+  ],
+  "baselineUiActionRejections": [
+    "TypeError: value.join is not a function",
+    "TypeError: value.join is not a function"
+  ],
+  "finalUiActionRejections": [],
+  "earlyRejectionObservation": "Rejected UI callback Promises are recorded separately and fail an assertion; immediate handler avoids unhandled noise and permits all baseline cases to complete",
+  "runtimeAdapters": [
+    "RN/native presentation host primitives",
+    "router push and parent visibility",
+    "Axios in-memory adapter"
+  ],
+  "actualLibraries": [
+    "RHF/Controller/useWatch and Zod resolver",
+    "TanStack QueryClient",
+    "Axios/AxiosError",
+    "Zustand OTP store"
+  ],
+  "fixtureQueryOptions": {
+    "retry": false,
+    "staleTime": "Infinity",
+    "gcTime": "Infinity"
+  },
+  "fullWizardAndOtpVerificationCovered": false
+}

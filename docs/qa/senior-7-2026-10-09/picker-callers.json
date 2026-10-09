@@ -1,0 +1,194 @@
+[
+  {
+    "file": "components/feature/reports/FilterRow.tsx",
+    "line": 64,
+    "component": "SingleSelect",
+    "props": "className=\"flex-1 border-border-muted\"\n\t\t\t\tsize=\"md\"\n\t\t\t\titems={storeItems}\n\t\t\t\tvalue={selectedStore}\n\t\t\t\tonValueChange={handleStoreChange}\n\t\t\t\tplaceholder=\"Semua Toko\"\n\t\t\t\tlabel=\"Pilih Toko\"\n\t\t\t\tleftIcon={<StoreIcon size={tw(3.5)} color={Colors.zinc[400]} />}"
+  },
+  {
+    "file": "components/feature/reports/FilterRow.tsx",
+    "line": 75,
+    "component": "SingleSelect",
+    "props": "className=\"flex-1 border-border-muted\"\n\t\t\t\tsize=\"md\"\n\t\t\t\titems={periodItems}\n\t\t\t\tvalue={selectedPeriod}\n\t\t\t\tonValueChange={handlePeriodChange}\n\t\t\t\tplaceholder=\"Hari Ini\"\n\t\t\t\tlabel=\"Pilih Periode\"\n\t\t\t\tleftIcon={<CalendarIcon size={tw(4)} color={Colors.zinc[400]} />}"
+  },
+  {
+    "file": "app/(no-layout)/manage/expenses/index.tsx",
+    "line": 53,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Sumber Dana\"\n\t\t\t\t\t\t\t\titems={[\n\t\t\t\t\t\t\t\t\t{ label: \"Semua sumber dana\", value: \"\" },\n\t\t\t\t\t\t\t\t\t...EXPENSE_FUNDING_SOURCES,\n\t\t\t\t\t\t\t\t]}\n\t\t\t\t\t\t\t\tvalue={funding}\n\t\t\t\t\t\t\t\tonValueChange={setFunding}"
+  },
+  {
+    "file": "app/(no-layout)/manage/expenses/index.tsx",
+    "line": 64,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Toko\"\n\t\t\t\t\t\t\t\titems={[{ label: \"Semua toko\", value: \"\" }, ...EXPENSE_STORES]}\n\t\t\t\t\t\t\t\tvalue={store}\n\t\t\t\t\t\t\t\tonValueChange={setStore}"
+  },
+  {
+    "file": "components/feature/inventory/supplier/SupplierListScreen.tsx",
+    "line": 53,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Pemasok\"\n\t\t\t\t\t\t\tvalue={filter}\n\t\t\t\t\t\t\tonValueChange={setFilter}\n\t\t\t\t\t\t\titems={[\n\t\t\t\t\t\t\t\t{ label: \"Semua Pemasok\", value: \"all\" },\n\t\t\t\t\t\t\t\t{ label: \"Supplier Aktif\", value: \"active\" },\n\t\t\t\t\t\t\t\t{ label: \"Supplier Utama\", value: \"primary\" },\n\t\t\t\t\t\t\t]}"
+  },
+  {
+    "file": "components/feature/inventory/supplier/SupplierFormScreen.tsx",
+    "line": 157,
+    "component": "SingleSelect",
+    "props": "searchable\n\t\t\t\t\t\t\t\t\t\t\t\tlabel={input.label}\n\t\t\t\t\t\t\t\t\t\t\t\tplaceholder={input.placeholder}\n\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\titems={regionOptions(input.name)}\n\t\t\t\t\t\t\t\t\t\t\t\tdisabled={\n\t\t\t\t\t\t\t\t\t\t\t\t\t(input.name === \"city\" && !province) ||\n\t\t\t\t\t\t\t\t\t\t\t\t\t(input.name === \"district\" && !city)\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={(value) => {\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (value === field.value) return;\n\t\t\t\t\t\t\t\t\t\t\t\t\tfield.onChange(value);\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (input.name === \"province\")\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tform.setValue(\"city\", \"\", { shouldValidate: true });\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (input.name !== \"district\")\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tform.setValue(\"district\", \"\", {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tshouldValidate: true,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t});\n\t\t\t\t\t\t\t\t\t\t\t\t}}"
+  },
+  {
+    "file": "app/(no-layout)/manage/pos-settings/rounding.tsx",
+    "line": 238,
+    "component": "SingleSelect",
+    "props": "items={MULTIPLE_OPTIONS}\n\t\t\t\t\t\t\t\t\tvalue={multiple}\n\t\t\t\t\t\t\t\t\tonValueChange={(value) =>\n\t\t\t\t\t\t\t\t\t\tsetDraft((previous) => ({ ...previous, multiple: value }))\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih Kelipatan Pembulatan\"\n\t\t\t\t\t\t\t\t\tlabel=\"Kelipatan Pembulatan\"\n\t\t\t\t\t\t\t\t\tvariant=\"rounded\""
+  },
+  {
+    "file": "components/feature/inventory/StockOperationList.tsx",
+    "line": 192,
+    "component": "SingleSelect",
+    "props": "items={[\n\t\t\t\t\t\t\t\t{ label: \"Semua Toko\", value: \"all\" },\n\t\t\t\t\t\t\t\t...INVENTORY_STORES.map((name) => ({\n\t\t\t\t\t\t\t\t\tlabel: name,\n\t\t\t\t\t\t\t\t\tvalue: name,\n\t\t\t\t\t\t\t\t})),\n\t\t\t\t\t\t\t]}\n\t\t\t\t\t\t\tvalue={store}\n\t\t\t\t\t\t\tonValueChange={setStore}\n\t\t\t\t\t\t\tlabel=\"Filter Toko\""
+  },
+  {
+    "file": "components/feature/inventory/StockOperationForm.tsx",
+    "line": 168,
+    "component": "SingleSelect",
+    "props": "items={STOCK_KIND_OPTIONS}\n\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\tonValueChange={(value) => {\n\t\t\t\t\t\t\t\t\t\t\t\tfield.onChange(value);\n\t\t\t\t\t\t\t\t\t\t\t\treplace([]);\n\t\t\t\t\t\t\t\t\t\t\t\tform.clearErrors(\"lines\");\n\t\t\t\t\t\t\t\t\t\t\t}}"
+  },
+  {
+    "file": "components/feature/inventory/StockOperationForm.tsx",
+    "line": 279,
+    "component": "SingleSelect",
+    "props": "items={availableItems.map((item) => ({\n\t\t\t\t\t\t\t\t\t\tlabel: item.name,\n\t\t\t\t\t\t\t\t\t\tvalue: item.id,\n\t\t\t\t\t\t\t\t\t}))}\n\t\t\t\t\t\t\t\t\tplaceholder={`${isTransfer ? \"Tambah\" : \"Pilih\"} ${kind === \"product\" ? \"Produk\" : \"Bahan Baku\"}`}\n\t\t\t\t\t\t\t\t\tlabel=\"Pilih Stok\"\n\t\t\t\t\t\t\t\t\tsearchable\n\t\t\t\t\t\t\t\t\tvariant=\"ghost\"\n\t\t\t\t\t\t\t\t\tleftIcon={<InventoryIcon name=\"plus\" />}\n\t\t\t\t\t\t\t\t\tonValueChange={(id) => {\n\t\t\t\t\t\t\t\t\t\tconst item = getInventoryItem(id);\n\t\t\t\t\t\t\t\t\t\tappend({ itemId: item.id, stock: item.stock, quantity: 0 });\n\t\t\t\t\t\t\t\t\t\tform.clearErrors(\"lines\");\n\t\t\t\t\t\t\t\t\t}}"
+  },
+  {
+    "file": "app/(no-layout)/manage/pos-settings/notification-modify.tsx",
+    "line": 191,
+    "component": "SingleSelect",
+    "props": "items={storeOptions}\n\t\t\t\t\t\tvalue={outlet}\n\t\t\t\t\t\tonValueChange={setOutlet}\n\t\t\t\t\t\tplaceholder=\"Pilih toko untuk ditambahkan\"\n\t\t\t\t\t\tlabel=\"Outlet / Toko\"\n\t\t\t\t\t\tvariant=\"rounded\""
+  },
+  {
+    "file": "app/(no-layout)/manage/pos-settings/notification-modify.tsx",
+    "line": 277,
+    "component": "SingleSelect",
+    "props": "items={FREQUENCY_OPTIONS}\n\t\t\t\t\t\t\tvalue={frequency}\n\t\t\t\t\t\t\tonValueChange={setFrequency}\n\t\t\t\t\t\t\tplaceholder=\"Pilih frekuensi\"\n\t\t\t\t\t\t\tlabel=\"Frekuensi\"\n\t\t\t\t\t\t\tvariant=\"rounded\""
+  },
+  {
+    "file": "components/feature/inventory/PurchaseListScreen.tsx",
+    "line": 54,
+    "component": "SingleSelect",
+    "props": "items={[\n\t\t\t\t\t\t\t\t{ label: \"Semua Toko\", value: \"all\" },\n\t\t\t\t\t\t\t\t...INVENTORY_STORES.map((name) => ({\n\t\t\t\t\t\t\t\t\tlabel: name,\n\t\t\t\t\t\t\t\t\tvalue: name,\n\t\t\t\t\t\t\t\t})),\n\t\t\t\t\t\t\t]}\n\t\t\t\t\t\t\tvalue={store}\n\t\t\t\t\t\t\tonValueChange={setStore}\n\t\t\t\t\t\t\tlabel=\"Filter Toko\""
+  },
+  {
+    "file": "components/feature/inventory/PurchaseFormScreen.tsx",
+    "line": 218,
+    "component": "SingleSelect",
+    "props": "items={STOCK_KIND_OPTIONS}\n\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\tonValueChange={(value) => {\n\t\t\t\t\t\t\t\t\t\t\t\tfield.onChange(value);\n\t\t\t\t\t\t\t\t\t\t\t\treplace([]);\n\t\t\t\t\t\t\t\t\t\t\t\tform.clearErrors(\"lines\");\n\t\t\t\t\t\t\t\t\t\t\t}}"
+  },
+  {
+    "file": "components/feature/inventory/PurchaseFormScreen.tsx",
+    "line": 303,
+    "component": "SingleSelect",
+    "props": "variant=\"ghost\"\n\t\t\t\t\t\t\t\t\tsearchable\n\t\t\t\t\t\t\t\t\tplaceholder={`Tambah ${kind === \"product\" ? \"Produk\" : \"Bahan Baku\"}`}\n\t\t\t\t\t\t\t\t\tlabel=\"Pilih Item Pembelian\"\n\t\t\t\t\t\t\t\t\tleftIcon={<InventoryIcon name=\"plus\" />}\n\t\t\t\t\t\t\t\t\titems={availableItems.map((item) => ({\n\t\t\t\t\t\t\t\t\t\tlabel: item.name,\n\t\t\t\t\t\t\t\t\t\tvalue: item.id,\n\t\t\t\t\t\t\t\t\t}))}\n\t\t\t\t\t\t\t\t\tonValueChange={(id) => {\n\t\t\t\t\t\t\t\t\t\tappend({ itemId: id, quantity: 0, price: 0 });\n\t\t\t\t\t\t\t\t\t\tform.clearErrors(\"lines\");\n\t\t\t\t\t\t\t\t\t}}"
+  },
+  {
+    "file": "app/(no-layout)/catalog/payment-method/modify.tsx",
+    "line": 233,
+    "component": "SingleSelect",
+    "props": "items={paymentMethodItems}\n\t\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tconst currentName = form.getValues(\"name\");\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tconst prevDefault = namePlaceholder;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tfield.onChange(val);\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (!currentName || currentName === prevDefault) {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlet newDefault = \"Tunai\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (val === PaymentMethodType.QRIS) newDefault = \"QRIS\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse if (val === PaymentMethodType.BANK_TRANSFER) newDefault = \"Transfer Bank\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse if (val === PaymentMethodType.CREDIT_CARD) newDefault = \"Kartu Kredit\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse if (val === PaymentMethodType.DEBIT_CARD) newDefault = \"Kartu Debit\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\telse if (val === PaymentMethodType.OTHER) newDefault = \"Lainnya\";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tform.setValue(\"name\", newDefault);\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih jenis pembayaran\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tlabel=\"Jenis Pembayaran\""
+  },
+  {
+    "file": "app/(no-layout)/catalog/payment-method/modify.tsx",
+    "line": 287,
+    "component": "SingleSelect",
+    "props": "items={bankItems}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={field.onChange}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih bank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Bank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tsearchable={true}"
+  },
+  {
+    "file": "app/(no-layout)/manage/income/index.tsx",
+    "line": 58,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Sumber Dana\"\n\t\t\t\t\t\t\t\titems={[\n\t\t\t\t\t\t\t\t\t{ label: \"Semua sumber dana\", value: \"\" },\n\t\t\t\t\t\t\t\t\t...INCOME_FUNDING_SOURCES,\n\t\t\t\t\t\t\t\t]}\n\t\t\t\t\t\t\t\tvalue={funding}\n\t\t\t\t\t\t\t\tonValueChange={setFunding}"
+  },
+  {
+    "file": "app/(no-layout)/manage/income/index.tsx",
+    "line": 69,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Toko\"\n\t\t\t\t\t\t\t\titems={[{ label: \"Semua toko\", value: \"\" }, ...INCOME_STORES]}\n\t\t\t\t\t\t\t\tvalue={store}\n\t\t\t\t\t\t\t\tonValueChange={setStore}"
+  },
+  {
+    "file": "app/(no-layout)/manage/income/index.tsx",
+    "line": 77,
+    "component": "SingleSelect",
+    "props": "label=\"Filter Jenis Penerimaan\"\n\t\t\t\t\t\titems={[\n\t\t\t\t\t\t\t{ label: \"Semua penerimaan\", value: \"\" },\n\t\t\t\t\t\t\t{ label: \"Manual\", value: \"manual\" },\n\t\t\t\t\t\t\t{ label: \"Penjualan\", value: \"invoice\" },\n\t\t\t\t\t\t]}\n\t\t\t\t\t\tvalue={type}\n\t\t\t\t\t\tonValueChange={setType}"
+  },
+  {
+    "file": "app/(no-layout)/catalog/menu/modify.tsx",
+    "line": 529,
+    "component": "SingleSelect",
+    "props": "className=\"bg-white\"\n\t\t\t\t\t\t\t\t\t\titems={\n\t\t\t\t\t\t\t\t\t\t\tstoresQuery.data?.map((store) => ({\n\t\t\t\t\t\t\t\t\t\t\t\tlabel: store.name,\n\t\t\t\t\t\t\t\t\t\t\t\tvalue: store.id,\n\t\t\t\t\t\t\t\t\t\t\t})) ?? [{ label: \"Outlet Utama\", value: \"default-store\" }]\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\tvalue={form.watch(\"store_id\") || \"\"}\n\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => form.setValue(\"store_id\", val)}\n\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih toko untuk ditambahkan\"\n\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Toko\""
+  },
+  {
+    "file": "app/(no-layout)/catalog/menu/modify.tsx",
+    "line": 611,
+    "component": "SingleSelect",
+    "props": "className=\"bg-white\"\n\t\t\t\t\t\t\t\t\t\t\titems={\n\t\t\t\t\t\t\t\t\t\t\t\tcategoriesQuery.data?.map((cat) => ({\n\t\t\t\t\t\t\t\t\t\t\t\t\tlabel: cat.name,\n\t\t\t\t\t\t\t\t\t\t\t\t\tvalue: cat.id,\n\t\t\t\t\t\t\t\t\t\t\t\t})) ?? [{ label: \"Makanan\", value: \"default-cat\" }]\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\tvalue={form.watch(\"category_id\") || \"\"}\n\t\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => form.setValue(\"category_id\", val)}\n\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih Kategori\"\n\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Kategori\""
+  },
+  {
+    "file": "app/(no-layout)/catalog/menu/modify.tsx",
+    "line": 631,
+    "component": "SingleSelect",
+    "props": "className=\"bg-white\"\n\t\t\t\t\t\t\t\t\t\t\titems={\n\t\t\t\t\t\t\t\t\t\t\t\tbrandsQuery.data?.map((b) => ({\n\t\t\t\t\t\t\t\t\t\t\t\t\tlabel: b.name,\n\t\t\t\t\t\t\t\t\t\t\t\t\tvalue: b.id,\n\t\t\t\t\t\t\t\t\t\t\t\t})) ?? [{ label: \"Pizza Hut\", value: \"default-brand\" }]\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\tvalue={form.watch(\"brand_id\") || \"\"}\n\t\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => form.setValue(\"brand_id\", val)}\n\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih Merk\"\n\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Merk\""
+  },
+  {
+    "file": "app/(no-layout)/catalog/menu/modify.tsx",
+    "line": 743,
+    "component": "SingleSelect",
+    "props": "className=\"bg-white\"\n\t\t\t\t\t\t\t\t\t\t\titems={\n\t\t\t\t\t\t\t\t\t\t\t\tunitsQuery.data?.map((u) => ({\n\t\t\t\t\t\t\t\t\t\t\t\t\tlabel: u.name,\n\t\t\t\t\t\t\t\t\t\t\t\t\tvalue: u.id,\n\t\t\t\t\t\t\t\t\t\t\t\t})) ?? [\n\t\t\t\t\t\t\t\t\t\t\t\t\t{ label: \"Pcs\", value: \"pcs\" },\n\t\t\t\t\t\t\t\t\t\t\t\t\t{ label: \"Porsi\", value: \"porsi\" },\n\t\t\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\tvalue={form.watch(\"unit_id\") || \"\"}\n\t\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => form.setValue(\"unit_id\", val)}\n\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih Satuan\"\n\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Satuan\""
+  },
+  {
+    "file": "components/common/Form.tsx",
+    "line": 406,
+    "component": "SingleSelect",
+    "props": "items={data}\n\t\t\tvalue={selectedItem?.value ?? formValue}\n\t\t\tonValueChange={(value) =>\n\t\t\t\tform.setValue(name, value, {\n\t\t\t\t\tshouldValidate: true,\n\t\t\t\t\tshouldDirty: true,\n\t\t\t\t})\n\t\t\t}\n\t\t\tplaceholder={placeholder}\n\t\t\tlabel={label ?? placeholder}\n\t\t\tsearchable={searchable}\n\t\t\tsearchPlaceholder={searchPlaceholder}\n\t\t\tleftIcon={leftIcon}\n\t\t\trenderItemIcon={renderItemIcon}\n\t\t\tdisabled={disabled}\n\t\t\tsize={size}\n\t\t\tvariant={variant}\n\t\t\tclassName={className}\n\t\t\tshowConfirmButton={showConfirmButton}\n\t\t\tconfirmText={confirmText}\n\t\t\tdismissOnSelect={dismissOnSelect}"
+  },
+  {
+    "file": "components/common/SearchBar.tsx",
+    "line": 168,
+    "component": "SortActionSheet",
+    "props": "isOpen={isSortOpen}\n\t\t\t\t\tonClose={() => setIsSortOpen(false)}\n\t\t\t\t\tvalue={sortBy}\n\t\t\t\t\tonChange={onSortChange}"
+  },
+  {
+    "file": "app/(no-layout)/catalog/bundling/modify.tsx",
+    "line": 549,
+    "component": "SingleSelect",
+    "props": "items={availableMenus.map((m) => ({\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel: m.name,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue: m.id,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}))}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={(val) => {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tfield.onChange(val);\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tconst menuObj = availableMenus.find(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(m) => m.id === val,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (menuObj?.variants?.[0]) {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tform.setValue(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t`details.${index}.variant_name`,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmenuObj.variants[0],\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t);\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih item menu\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Menu\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvariant=\"outline\""
+  },
+  {
+    "file": "app/(no-layout)/catalog/bundling/modify.tsx",
+    "line": 587,
+    "component": "SingleSelect",
+    "props": "items={variantOptions}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={field.onChange}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tplaceholder=\"Pilih varian\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tlabel=\"Pilih Varian\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvariant=\"outline\""
+  },
+  {
+    "file": "app/(no-layout)/(back-office)/manage/generate-barcode/modify.tsx",
+    "line": 299,
+    "component": "SingleSelect",
+    "props": "size=\"xl\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tvariant=\"outline\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\titems={SIZE_OPTIONS}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue={field.value}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tonValueChange={field.onChange}"
+  },
+  {
+    "file": "components/feature/manage/place/PlaceLayout.tsx",
+    "line": 170,
+    "component": "SingleSelect",
+    "props": "items={places.map((place) => ({\n\t\t\t\t\t\t\tvalue: place.id,\n\t\t\t\t\t\t\tlabel: place.name,\n\t\t\t\t\t\t}))}\n\t\t\t\t\t\tvalue={selectedId}\n\t\t\t\t\t\tonValueChange={setSelected}\n\t\t\t\t\t\tlabel=\"Pilih tempat untuk dipindahkan\""
+  },
+  {
+    "file": "components/feature/manage/payroll/PayrollList.tsx",
+    "line": 54,
+    "component": "SingleSelect",
+    "props": "label=\"Periode Gaji\"\n\t\t\t\t\t\t\tvalue={period}\n\t\t\t\t\t\t\tonValueChange={setPeriod}\n\t\t\t\t\t\t\titems={periods.map((value) => ({\n\t\t\t\t\t\t\t\tvalue,\n\t\t\t\t\t\t\t\tlabel: payrollPeriodLabel(value),\n\t\t\t\t\t\t\t}))}\n\t\t\t\t\t\t\tplaceholder=\"Pilih periode\""
+  },
+  {
+    "file": "components/feature/manage/payroll/PayrollList.tsx",
+    "line": 66,
+    "component": "SingleSelect",
+    "props": "label=\"Status Pembayaran\"\n\t\t\t\t\t\t\tvalue={status}\n\t\t\t\t\t\t\tonValueChange={setStatus}\n\t\t\t\t\t\t\titems={[...PAYROLL_STATUSES]}"
+  }
+]

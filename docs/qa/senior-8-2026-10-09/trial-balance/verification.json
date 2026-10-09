@@ -1,0 +1,88 @@
+{
+  "ticket": "TRIAL-BALANCE-001",
+  "owner": "Software Developer Senior 8",
+  "status": "READY_FOR_QA",
+  "developerChecks": 46,
+  "files": [
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/trial-balance.tsx",
+      "sha256": "66827db2e71d03c392e41baf33a7b78e6bb23a14067f7fd54d9e263f6187b0c8"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/index.tsx",
+      "sha256": "411120899e0dab633ca0a123bd9637149ac7913851833bf195d7c68d47fb01be"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/_layout.tsx",
+      "sha256": "c43448c76be5103c69a7a45cf93fa1f76e91ad17c4de166cebd1edcdc1e82467"
+    },
+    {
+      "file": "components/feature/accounting/trial-balance/TrialBalanceScreen.tsx",
+      "sha256": "6e60e39f0159992d14def71cdfc5a14742a1ee93deba7cab80f239994e3517ae"
+    },
+    {
+      "file": "lib/accounting/trial-balance.ts",
+      "sha256": "5f6e7049951f20cd266cd7022070aa84d0f5ed43dcc8933eb21f6f61fcb54a4e"
+    },
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/HANDOFF.md",
+      "sha256": "2c7a7c039cf530fa950127d9a161f74b3f80d94dbd44546d67e23e689ae42a83"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/check.cjs",
+      "sha256": "6ad18f5b6c45a8e2f191a4ba92e4f6f7b2759438351c183af5c74099aebe867e"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/results.json",
+      "sha256": "b1499c20994623d9756a9ebd3ef1edf9c76d6fe01bfd2d7ba7ad839e7f1ba5d9"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/quality.cjs",
+      "sha256": "4c6e44172db045eadda69e1b39b9dc9911322c54981061ddcb8752bb9e6badcd"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/quality.json",
+      "sha256": "498a0f955c2924acc263868388cbee58faab81e2dbda403a5072a3ad85214443"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/cases.cjs",
+      "sha256": "1756a5c7b662307da10f6484761d0f7a84c69746f8231c6b4b6bb05eb57112ae"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/trial-balance/manifest.cjs",
+      "sha256": "8be70ccccbc4d946f28bca47b7d5087aef3c4753f4ac89bc0b66d466ad6d792c"
+    }
+  ]
+}

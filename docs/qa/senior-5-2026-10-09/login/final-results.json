@@ -1,0 +1,315 @@
+{
+  "ticket": "SD5-003",
+  "baseline": false,
+  "baselineRef": null,
+  "sources": {
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549"
+  },
+  "checks": [
+    {
+      "name": "login starts idle",
+      "passed": true
+    },
+    {
+      "name": "empty RHF form does not submit HTTP",
+      "passed": true
+    },
+    {
+      "name": "empty email has schema error",
+      "passed": true
+    },
+    {
+      "name": "invalid values do not submit HTTP",
+      "passed": true
+    },
+    {
+      "name": "invalid email retains schema validation",
+      "passed": true
+    },
+    {
+      "name": "short password retains schema validation",
+      "passed": true
+    },
+    {
+      "name": "two rapid valid button presses create one login request",
+      "passed": true
+    },
+    {
+      "name": "transport uses existing login endpoint",
+      "passed": true
+    },
+    {
+      "name": "transport preserves submitted payload",
+      "passed": true
+    },
+    {
+      "name": "pending request disables Masuk",
+      "passed": true
+    },
+    {
+      "name": "failed attempt restores button",
+      "passed": true
+    },
+    {
+      "name": "failed attempt preserves email",
+      "passed": true
+    },
+    {
+      "name": "failed attempt preserves password",
+      "passed": true
+    },
+    {
+      "name": "retained callback also prevents concurrent POSTs",
+      "passed": true
+    },
+    {
+      "name": "rerender cannot bypass pending login lock",
+      "passed": true
+    },
+    {
+      "name": "successful transport updates auth once",
+      "passed": true
+    },
+    {
+      "name": "loading remains active while auth commit is pending",
+      "passed": true
+    },
+    {
+      "name": "call remains pending until auth commit finishes",
+      "passed": true
+    },
+    {
+      "name": "button remains disabled while auth commit is pending",
+      "passed": true
+    },
+    {
+      "name": "pending auth commit prevents a second login request",
+      "passed": true
+    },
+    {
+      "name": "success preserves response tuple",
+      "passed": true
+    },
+    {
+      "name": "loading ends after auth commit",
+      "passed": true
+    },
+    {
+      "name": "error 0: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 0: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 0: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 0: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 1: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 1: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 1: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 1: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 2: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 2: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 2: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 2: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 3: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 3: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 3: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 3: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 4: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 4: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 4: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 4: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 5: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 5: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 5: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 5: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 6: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 6: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 6: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 6: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "error 7: backend message retained",
+      "passed": true
+    },
+    {
+      "name": "error 7: response tuple retained",
+      "passed": true
+    },
+    {
+      "name": "error 7: loading released for retry",
+      "passed": true
+    },
+    {
+      "name": "error 7: retry dispatches once",
+      "passed": true
+    },
+    {
+      "name": "successful response after unmount does not begin auth commit",
+      "passed": true
+    },
+    {
+      "name": "retained submit after unmount does not dispatch HTTP",
+      "passed": true
+    },
+    {
+      "name": "retained submit after unmount does not write errors",
+      "passed": true
+    },
+    {
+      "name": "failed response after unmount does not mutate old form",
+      "passed": true
+    },
+    {
+      "name": "old screen response cannot commit alongside new login",
+      "passed": true
+    },
+    {
+      "name": "new screen keeps independent request pending",
+      "passed": true
+    },
+    {
+      "name": "current screen commits its own token once",
+      "passed": true
+    },
+    {
+      "name": "auth commit failure is shown on form",
+      "passed": true
+    },
+    {
+      "name": "auth commit failure releases loading",
+      "passed": true
+    },
+    {
+      "name": "auth commit failure has no unhandled rejection",
+      "passed": true
+    },
+    {
+      "name": "auth commit failure allows retry",
+      "passed": true
+    },
+    {
+      "name": "unexpected transport exception has generic form error",
+      "passed": true
+    },
+    {
+      "name": "unexpected transport exception releases loading",
+      "passed": true
+    },
+    {
+      "name": "auth commit begun before unmount may finish without writing old form",
+      "passed": true
+    },
+    {
+      "name": "auth commit rejection after unmount is still handled",
+      "passed": true
+    },
+    {
+      "name": "StrictMode effect replay keeps login active and locked",
+      "passed": true
+    },
+    {
+      "name": "StrictMode keeps loading until auth commit",
+      "passed": true
+    },
+    {
+      "name": "StrictMode produces one token commit",
+      "passed": true
+    },
+    {
+      "name": "production screen retains forgot-password route",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "unhandledRejections": [],
+  "passed": 74,
+  "failed": 0
+}

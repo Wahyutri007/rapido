@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-09",
+  "status": "READY_FOR_QA",
+  "ticket": "LEDGER-IDENTITY-001",
+  "source": {
+    "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+    "sha256": "90dbec1ccbd82505225f96f92eb3aeaccc837fa693434da9eb4bd06bb4986ef4"
+  },
+  "baseline": {
+    "sha256": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f",
+    "passed": 39,
+    "failed": 12
+  },
+  "verification": {
+    "assertions": 51,
+    "failures": 0,
+    "runtimeErrors": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "typeDiagnostics": 0,
+    "importsAndEverythingFromRawEntriesUnchanged": true
+  },
+  "dependencies": [
+    {
+      "file": "store/accountingStore.ts",
+      "sha256": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec"
+    },
+    {
+      "file": "constants/data/accounting/accounts.ts",
+      "sha256": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7"
+    },
+    {
+      "file": "constants/data/accounting/adjusting-journal.ts",
+      "sha256": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e"
+    },
+    {
+      "file": "constants/data/accounting/closing-journal.ts",
+      "sha256": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0"
+    },
+    {
+      "file": "constants/data/accounting/expenses.ts",
+      "sha256": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32"
+    },
+    {
+      "file": "constants/data/accounting/general-journal.ts",
+      "sha256": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce"
+    },
+    {
+      "file": "constants/data/accounting/general-ledger.ts",
+      "sha256": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d"
+    },
+    {
+      "file": "constants/data/accounting/incomes.ts",
+      "sha256": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f"
+    },
+    {
+      "file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+      "sha256": "90dbec1ccbd82505225f96f92eb3aeaccc837fa693434da9eb4bd06bb4986ef4"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "file": "lib/accounting/ledger-filter.ts",
+      "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+    },
+    {
+      "file": "lib/accounting/date.ts",
+      "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+    }
+  ],
+  "historicalHarness": {
+    "file": "docs/qa/senior-8-2026-10-09/ledger-filters/check.cjs",
+    "sha256": "03b9f38fa49cb935dee5be35d0e848e457f780659d66292e6572704b8bdf1d00"
+  },
+  "artifacts": [
+    {
+      "file": "HANDOFF.md",
+      "sha256": "809d44f1a265ce3546996bad83fecfa4efba37805d728700b490fdeb45588516"
+    },
+    {
+      "file": "baseline-all.json",
+      "sha256": "563b7a0518d34c2d0203934ea0d6a55579511877b4e2f61c536e9dd40689d015"
+    },
+    {
+      "file": "check.cjs",
+      "sha256": "670a3f7a1b06968f9ddb086a179ad0e0b146fcf9859280158cce8ddbe1c33ed9"
+    },
+    {
+      "file": "detail.before.tsx.txt",
+      "sha256": "f841115249a9ae1bcd3391b4fb9996539d452fa345ee6fcab26ac25f01db705f"
+    },
+    {
+      "file": "final-all.json",
+      "sha256": "176aeba175d91db94d074b1c7e87888d7a10e01166e29ac266bd361aac05431f"
+    },
+    {
+      "file": "lint.json",
+      "sha256": "1f365b71e10a68bf006b242a2ce7c36c465757de9902e98636529e8eb7c3d5a4"
+    },
+    {
+      "file": "manifest.cjs",
+      "sha256": "57baf93ba077bf16dddf9f7472f12f9afc6b086befcdfe51724ee9e0010aa8b8"
+    },
+    {
+      "file": "typecheck.cjs",
+      "sha256": "b9a06836583208e08732be1a80874b1a8731b1ff8a0b60e1e440a7a856d192e9"
+    },
+    {
+      "file": "typecheck.json",
+      "sha256": "953da53e2bd3f17351165c77cff9413210337705b517515cd9de6e870e0a21ba"
+    }
+  ],
+  "limits": "React StrictMode + production screen/Zustand, host adapters and fixture route parameters. No native/router/browser/API/Figma approval. Store ID patch retains separate gate."
+}

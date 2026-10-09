@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "roots": [
+    "app/(no-layout)/manage/income/modify.tsx",
+    "app/(no-layout)/manage/income/detail.tsx",
+    "app/(no-layout)/manage/expenses/modify.tsx"
+  ],
+  "sourceFiles": 1219,
+  "diagnostics": [],
+  "checkedAt": "2026-10-09T02:31:55.133Z",
+  "scope": "Income modify/detail and Expense modify route roots and imported dependencies, not full application TypeScript."
+}

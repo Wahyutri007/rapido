@@ -1,0 +1,64 @@
+{
+  "ticket": "CASHIER-HISTORY-001",
+  "owner": "Software Developer Senior 8",
+  "status": "READY_FOR_QA",
+  "developerChecks": 50,
+  "files": [
+    {
+      "file": "app/(cashier)/report/history.tsx",
+      "sha256": "d23bf584fd41881efc9a7c69bb2621612e0881e753d2a692fbcfc702dbdd9292"
+    },
+    {
+      "file": "app/(cashier)/report/history-detail.tsx",
+      "sha256": "3b469e65b32d97959cc4b8c146eaefa124ab31d6fb6a53e2bddbee7e36deca9f"
+    },
+    {
+      "file": "app/(cashier)/report/_layout.tsx",
+      "sha256": "95026046bd278468d7009b7c88831229e26b6407d83eb770ccd3ab0e1a578548"
+    },
+    {
+      "file": "components/feature/cashier/history/HistoryScreen.tsx",
+      "sha256": "6a67420b130b76284a25a8d5840b12bbfe71362b7c13358957dc146f1e3e5d2e"
+    },
+    {
+      "file": "components/feature/cashier/history/HistoryDetailScreen.tsx",
+      "sha256": "dc89e6e196e6e49490b1754b880ba9c3667cfc51f1ee745c605761ea7f20bac3"
+    },
+    {
+      "file": "lib/cashier/transaction-history.ts",
+      "sha256": "bf5d0ceeac6c94e233c7a874a22e03195dd27b97517ef3520e3b2f7f3581b839"
+    },
+    {
+      "file": "components/feature/reports/transaction/mockData.ts",
+      "sha256": "860fa6a89abb942386a6f94d9f92be1cdffb7b094c4af257a92c8f2abdd20a74"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/HANDOFF.md",
+      "sha256": "b68786387c7202fc03b53b185366774c5d551c5e4465065fcef4017ad6a89365"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/check.cjs",
+      "sha256": "c698f9ecb2da8e97fc46b5b9737266832cbf2aec592f34978760bef3ee62c1d2"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/results.json",
+      "sha256": "fd306951b6a296220b1e52e33f0ff742e01b746f69daf5b228ef8a2a3fe4dc85"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/quality.cjs",
+      "sha256": "510800445ac91a3031a6ba50ff24e42b6b58ebe2ac121fd9a4a01600d987becb"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/quality.json",
+      "sha256": "7316867253019c9ac03b118956708aafbedcb3fc4ff952578b302dbb3611463a"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/initial-quality.json",
+      "sha256": "de01bbc8cd43334fbb5f754e319a1918aee0da83ba49887b94ce1ca9d9b81bfb"
+    },
+    {
+      "file": "docs/qa/senior-8-2026-10-09/cashier-history/manifest.cjs",
+      "sha256": "6a727cdaca763d2a6d66bc560a981f68f1c58ca25dabcdd74e9ba4d37f18f3f4"
+    }
+  ]
+}

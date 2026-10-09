@@ -1,0 +1,180 @@
+{
+  "owner": "QC",
+  "scope": "Independent QC setParams, scalar draft, modal/error reset and array-ID cases on four production routes with isolated Expo Router and list fixtures",
+  "sdk": 57,
+  "passed": 38,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "extra: initial snapshot uses record 1",
+      "passed": true
+    },
+    {
+      "name": "extra: same-ID params preserve every text/numeric draft",
+      "passed": true
+    },
+    {
+      "name": "extra: preview result states changes are unsaved",
+      "passed": true
+    },
+    {
+      "name": "extra: setParams edit to create resets every draft field",
+      "passed": true
+    },
+    {
+      "name": "extra: identity change disposes previous result modal",
+      "passed": true
+    },
+    {
+      "name": "extra: array parameter uses first supplied ID",
+      "passed": true
+    },
+    {
+      "name": "extra: identity change clears previous required-field errors",
+      "passed": true
+    },
+    {
+      "name": "extra: empty setParams ID blocks form and action",
+      "passed": true
+    },
+    {
+      "name": "extra: valid ID recovers from not-found state",
+      "passed": true
+    },
+    {
+      "name": "order-type: initial snapshot uses record 1",
+      "passed": true
+    },
+    {
+      "name": "order-type: same-ID params preserve every text/numeric draft",
+      "passed": true
+    },
+    {
+      "name": "order-type: preview result states changes are unsaved",
+      "passed": true
+    },
+    {
+      "name": "order-type: setParams edit to create resets every draft field",
+      "passed": true
+    },
+    {
+      "name": "order-type: identity change disposes previous result modal",
+      "passed": true
+    },
+    {
+      "name": "order-type: array parameter uses first supplied ID",
+      "passed": true
+    },
+    {
+      "name": "order-type: identity change clears previous required-field errors",
+      "passed": true
+    },
+    {
+      "name": "order-type: empty setParams ID blocks form and action",
+      "passed": true
+    },
+    {
+      "name": "order-type: valid ID recovers from not-found state",
+      "passed": true
+    },
+    {
+      "name": "payment-method: initial snapshot uses record 1",
+      "passed": true
+    },
+    {
+      "name": "payment-method: same-ID params preserve every text/numeric draft",
+      "passed": true
+    },
+    {
+      "name": "payment-method: preview result states changes are unsaved",
+      "passed": true
+    },
+    {
+      "name": "payment-method: setParams edit to create resets every draft field",
+      "passed": true
+    },
+    {
+      "name": "payment-method: identity change disposes previous result modal",
+      "passed": true
+    },
+    {
+      "name": "payment-method: array parameter uses first supplied ID",
+      "passed": true
+    },
+    {
+      "name": "payment-method: identity change clears previous required-field errors",
+      "passed": true
+    },
+    {
+      "name": "payment-method: empty setParams ID blocks form and action",
+      "passed": true
+    },
+    {
+      "name": "payment-method: valid ID recovers from not-found state",
+      "passed": true
+    },
+    {
+      "name": "tax: initial snapshot uses record 1",
+      "passed": true
+    },
+    {
+      "name": "tax: same-ID params preserve every text/numeric draft",
+      "passed": true
+    },
+    {
+      "name": "tax: preview result states changes are unsaved",
+      "passed": true
+    },
+    {
+      "name": "tax: setParams edit to create resets every draft field",
+      "passed": true
+    },
+    {
+      "name": "tax: identity change disposes previous result modal",
+      "passed": true
+    },
+    {
+      "name": "tax: array parameter uses first supplied ID",
+      "passed": true
+    },
+    {
+      "name": "tax: identity change clears previous required-field errors",
+      "passed": true
+    },
+    {
+      "name": "tax: empty setParams ID blocks form and action",
+      "passed": true
+    },
+    {
+      "name": "tax: valid ID recovers from not-found state",
+      "passed": true
+    },
+    {
+      "name": "Preview does not write to an API",
+      "passed": true
+    },
+    {
+      "name": "No runtime exceptions or console errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "sourceHashes": {
+    "app/(no-layout)/manage/extra/modify.tsx": "dc9b1dcf29ad8f3b6e113cd355759a9abea39a0128cf50126a688807b1f79442",
+    "app/(no-layout)/manage/order-type/modify.tsx": "32c6badd5d385ac7ead0ef250c20dfb0e7c6a3234b70e453160f93bb43102609",
+    "app/(no-layout)/manage/payment-method/modify.tsx": "f593fbca05023cd8a4e204043ed2043c32e3094d28c3d3eb3abb14f03d000f05",
+    "app/(no-layout)/manage/tax/modify.tsx": "3adf5a36e11cbae5eb934a099d6a82df6847b09209ecaaec0a19ad9f77cb8bae",
+    "components/feature/manage/settings/ExtraModifyScreen.tsx": "ebb04fd27d5c1e896f3190173da1d2df43ca3e44a53b67bd727d18af7a32a26b",
+    "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+    "components/feature/manage/settings/ManagePreviewForm.tsx": "f62c759f876f30af0a8eb3b7dca20e8d339cf73e5ce0bc19a9e8d9050c30f528",
+    "components/feature/manage/settings/OrderTypeModifyScreen.tsx": "e0d0197e1d4545dfa89f678c24f4049436a5eab2412719b121d64d8be2a2f103",
+    "components/feature/manage/settings/PaymentMethodModifyScreen.tsx": "311959d40501e197be83a21289b05dd54aea734a6f8d8731ed0a2a1ab45fe12e",
+    "components/feature/manage/settings/TaxModifyScreen.tsx": "53040c0b9de7bc15fca456433c447ca899dff24ea07b2809fadd61d874f9d174"
+  },
+  "limitations": [
+    "No full application auth/root navigation or SSR response tested",
+    "No API integration/persistence in these four existing fixture forms",
+    "No native device or full Figma screenshot comparison"
+  ]
+}

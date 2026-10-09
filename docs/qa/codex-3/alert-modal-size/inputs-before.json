@@ -1,0 +1,28 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-009",
+  "source": "components/common/AlertModal.tsx",
+  "sourceHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "files": {
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "assets/images/alerts/index.ts": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+    "assets/images/alerts/category.jpg": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+    "assets/images/alerts/order-type.jpg": "4abcca4ec7de6c694a65484fe419d1c0fa14b295379e1885f34c6e003b0f40b0",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "node_modules/react-native-css-interop/.cache/android.js": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "node_modules/react-native-css-interop/.cache/web.css": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+    ".expo/codex-3-alert-modal-entry.jsx": "0118875141b0cedfa62f0f39d8c1045c4b9033aaa8a7b354a06ea3030ef94a2a"
+  },
+  "inventoryAdaptation": "Same TS import/JSX inventory from frozen SD3-007, component name changed"
+}

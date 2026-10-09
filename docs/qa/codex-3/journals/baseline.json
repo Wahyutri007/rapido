@@ -1,0 +1,373 @@
+{
+  "owner": "Codex-3",
+  "date": "2026-10-09",
+  "scope": "Actual production routes and Zustand store/subscription plus native/UI/picker adapters. No Metro/browser/native device/API/persistence/automatic ledger posting.",
+  "passed": 23,
+  "failed": 32,
+  "checks": [
+    {
+      "name": "general: initial edit prefilled",
+      "passed": true,
+      "actual": "REF-A",
+      "expected": "REF-A"
+    },
+    {
+      "name": "general: date picker starts on record date",
+      "passed": false,
+      "actual": [
+        2025,
+        10,
+        8
+      ],
+      "expected": [
+        2026,
+        6,
+        30
+      ]
+    },
+    {
+      "name": "general: refresh keeps reference draft",
+      "passed": false,
+      "actual": "REF-A",
+      "expected": "DRAFT-A"
+    },
+    {
+      "name": "general: refresh keeps description draft",
+      "passed": false,
+      "actual": "external a",
+      "expected": "Draft description"
+    },
+    {
+      "name": "general: refresh keeps amount draft",
+      "passed": false,
+      "actual": "Rp1.000",
+      "expected": "Rp1.500"
+    },
+    {
+      "name": "general: third draft line added",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "general: unrelated save keeps added lines",
+      "passed": false,
+      "actual": 4,
+      "expected": 6
+    },
+    {
+      "name": "general: changing identity replaces old draft",
+      "passed": true,
+      "actual": "REF-B",
+      "expected": "REF-B"
+    },
+    {
+      "name": "general: changing identity replaces line count",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "general: edit to create restores create defaults",
+      "passed": false,
+      "actual": "REF-B",
+      "expected": "11001"
+    },
+    {
+      "name": "general: returning to B after create restores B",
+      "passed": true,
+      "actual": "REF-B",
+      "expected": "REF-B"
+    },
+    {
+      "name": "general: unbalanced save leaves stored record",
+      "passed": true,
+      "actual": 1000,
+      "expected": 1000
+    },
+    {
+      "name": "general: unbalanced save opens validation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "general: balanced edit updates correct ID",
+      "passed": true,
+      "actual": 1500,
+      "expected": 1500
+    },
+    {
+      "name": "general: balanced edit preserves original line IDs",
+      "passed": true,
+      "actual": [
+        "a-d",
+        "a-c"
+      ],
+      "expected": [
+        "a-d",
+        "a-c"
+      ]
+    },
+    {
+      "name": "general: saved editor locks submit",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "general: new identity clears saved lock",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "general: new identity clears success modal",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "general: closing success navigates back",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "general: two same-event submissions create one record",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "general: later repeated submission creates no extra record",
+      "passed": false,
+      "actual": 3,
+      "expected": 1
+    },
+    {
+      "name": "general: deleted edit blocks editor",
+      "passed": false,
+      "actual": 6,
+      "expected": 0
+    },
+    {
+      "name": "general: unknown ID hides editable inputs",
+      "passed": false,
+      "actual": 6,
+      "expected": 0
+    },
+    {
+      "name": "general: unknown ID hides save action",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "general: missing ID returns to matching list",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "general: supplied empty ID cannot create",
+      "passed": false,
+      "actual": 6,
+      "expected": 0
+    },
+    {
+      "name": "general: repeated ID parameter uses first ID",
+      "passed": false,
+      "actual": "11001",
+      "expected": "REF-B"
+    },
+    {
+      "name": "adjusting: initial edit prefilled",
+      "passed": true,
+      "actual": "REF-A",
+      "expected": "REF-A"
+    },
+    {
+      "name": "adjusting: date picker starts on record date",
+      "passed": false,
+      "actual": [
+        2025,
+        10,
+        8
+      ],
+      "expected": [
+        2026,
+        6,
+        30
+      ]
+    },
+    {
+      "name": "adjusting: refresh keeps reference draft",
+      "passed": false,
+      "actual": "REF-A",
+      "expected": "DRAFT-A"
+    },
+    {
+      "name": "adjusting: refresh keeps description draft",
+      "passed": false,
+      "actual": "external a",
+      "expected": "Draft description"
+    },
+    {
+      "name": "adjusting: refresh keeps amount draft",
+      "passed": false,
+      "actual": "Rp1.000",
+      "expected": "Rp1.500"
+    },
+    {
+      "name": "adjusting: third draft line added",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "adjusting: unrelated save keeps added lines",
+      "passed": false,
+      "actual": 2,
+      "expected": 3
+    },
+    {
+      "name": "adjusting: changing identity replaces old draft",
+      "passed": true,
+      "actual": "REF-B",
+      "expected": "REF-B"
+    },
+    {
+      "name": "adjusting: changing identity replaces line count",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "adjusting: edit to create restores create defaults",
+      "passed": false,
+      "actual": "REF-B",
+      "expected": "AJP-0626-005"
+    },
+    {
+      "name": "adjusting: returning to B after create restores B",
+      "passed": true,
+      "actual": "REF-B",
+      "expected": "REF-B"
+    },
+    {
+      "name": "adjusting: unbalanced save leaves stored record",
+      "passed": true,
+      "actual": 1000,
+      "expected": 1000
+    },
+    {
+      "name": "adjusting: unbalanced save opens validation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "adjusting: balanced edit updates correct ID",
+      "passed": true,
+      "actual": 1500,
+      "expected": 1500
+    },
+    {
+      "name": "adjusting: balanced edit preserves original line IDs",
+      "passed": true,
+      "actual": [
+        "a-d",
+        "a-c"
+      ],
+      "expected": [
+        "a-d",
+        "a-c"
+      ]
+    },
+    {
+      "name": "adjusting: saved editor locks submit",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "adjusting: new identity clears saved lock",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "adjusting: new identity clears success modal",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "adjusting: closing success navigates back",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: two same-event submissions create one record",
+      "passed": false,
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: later repeated submission creates no extra record",
+      "passed": false,
+      "actual": 3,
+      "expected": 1
+    },
+    {
+      "name": "adjusting: deleted edit blocks editor",
+      "passed": false,
+      "actual": 4,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: unknown ID hides editable inputs",
+      "passed": false,
+      "actual": 4,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: unknown ID hides save action",
+      "passed": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "adjusting: missing ID returns to matching list",
+      "passed": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "adjusting: supplied empty ID cannot create",
+      "passed": false,
+      "actual": 4,
+      "expected": 0
+    },
+    {
+      "name": "adjusting: repeated ID parameter uses first ID",
+      "passed": false,
+      "actual": "AJP-0626-005",
+      "expected": "REF-B"
+    },
+    {
+      "name": "No unexpected React runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "b7506a8e865cd354aa47344f4f01fa8e631cf8df94411232a65c80a2bf1c5eea",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "5bec018eea2f382001f5d4c2fb5f792d6b753e479d16ff3cc03efa56c33cc63a",
+    "store/accountingStore.ts": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "output": "D:\\Codex-6\\tmp\\rapido-sd6-digital-orders\\entry.bundle.js",
+  "bytes": 12172192,
+  "assets": 54,
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "node_modules/react-native-css-interop/.cache/android.js": "f287f3e4124c80f203dd66dc1652b6fcdd7fc96033763b35b2b6a3cc092895fb"
+  },
+  "limitations": "One-shot isolated Metro API build; no root Metro config/NativeWind plugin, own transform cache, stylesheet supplied by own Tailwind output."
+}

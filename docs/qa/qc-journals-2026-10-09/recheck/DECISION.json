@@ -1,0 +1,116 @@
+{
+  "signal": "QC-JOURNALS-20261009-PASS-DELTA",
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "createdAt": "2026-10-08T19:22:02.604Z",
+  "status": "PASS_DELTA",
+  "finding": {
+    "id": "QC-JOURNAL-001",
+    "severity": "P2",
+    "status": "CLOSED"
+  },
+  "reviewedSourceHashes": {
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx": "2d9373eb79548d4b4aa1b64c1cabe4164bcbad852c774110862f62338c074771",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx": "8e0d6a99c876cd4a40aae5c03762419e24404e014a4d27f9b91e2a81e148b32d",
+    "lib/accounting/journal-validation.ts": "8ca27116734714fe2e37cf50ebdfd16cf4fc957f4d75f024ca52c6c4405ca8ca"
+  },
+  "stableThroughoutReview": true,
+  "quality": {
+    "owner": "Codex-3",
+    "lint": {
+      "command": [
+        "node",
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "files": [
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        },
+        {
+          "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        },
+        {
+          "file": "lib/accounting/journal-validation.ts",
+          "errorCount": 0,
+          "warningCount": 0,
+          "messages": []
+        }
+      ]
+    },
+    "format": {
+      "command": [
+        "node",
+        "node_modules/@biomejs/biome/bin/biome",
+        "format",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 3 files in 10ms. No fixes applied.",
+      "stderr": ""
+    },
+    "biome": {
+      "command": [
+        "node",
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "lib/accounting/journal-validation.ts"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 3 files in 22ms. No fixes applied.",
+      "stderr": ""
+    },
+    "diff": {
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "renderComparisons": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "comparison": "Editor JSX identical to SD3-003 saved baseline",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "comparison": "Editor JSX identical to SD3-003 saved baseline",
+        "passed": true
+      }
+    ]
+  },
+  "checks": {
+    "validation": 187,
+    "lifecycle": 55,
+    "qcCases": 41,
+    "failed": 0,
+    "totalExecutions": 283,
+    "runtimeErrors": 0,
+    "note": "Execution count includes overlapping regression coverage; current source, no proposal flag."
+  },
+  "publication": "QC_APPROVED_JOURNAL_DELTA_PM_FINAL_INTEGRATION_GATE_REQUIRED",
+  "report": "REPORT.md",
+  "limitations": [
+    "RN/UI/modal/router/calendar adapters",
+    "No API/persistence/posting/browser/native/root auth/Figma/full-app certification",
+    "ID-store patch separate approval, developer typecheck reviewed only"
+  ]
+}

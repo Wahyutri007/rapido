@@ -1,0 +1,802 @@
+{
+    "backendBefore": {
+        "app/Domain/User/Requests/RoundingSettingRequest.php": "a1eceb3f8ba5942a056989b477f348bdac0034cdd85477c777d3278b9a92bee5",
+        "app/Domain/Order/Services/CartPricingService.php": "7fed3ba9e304a30f81a33d4dab5a49cb7cdbcbd39e0a87e4481d29c9949eb04f",
+        "app/Domain/Order/Models/Cart.php": "920030cbffdff4379c30294b2f1e286b5308ed88d51bc72ef679172c6960888f"
+    },
+    "backendAfter": {
+        "app/Domain/User/Requests/RoundingSettingRequest.php": "a1eceb3f8ba5942a056989b477f348bdac0034cdd85477c777d3278b9a92bee5",
+        "app/Domain/Order/Services/CartPricingService.php": "7fed3ba9e304a30f81a33d4dab5a49cb7cdbcbd39e0a87e4481d29c9949eb04f",
+        "app/Domain/Order/Models/Cart.php": "920030cbffdff4379c30294b2f1e286b5308ed88d51bc72ef679172c6960888f"
+    },
+    "stable": true,
+    "payloadSha256": "3906cac56bea1cd669540394e7172e71f7652152c169c916d51104af813a0323",
+    "cases": [
+        {
+            "scenario": "default before API data",
+            "payload": {
+                "enabled": true,
+                "method": "nearest",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 100,
+            "roundedTotal": 15000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -1,
+                "total": 15001,
+                "rounded_total": 15000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "disabled and exponent zero",
+            "payload": {
+                "enabled": false,
+                "method": "down",
+                "decimal_places": 0
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1,
+            "roundedTotal": 15001,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 0,
+                "total": 15001,
+                "rounded_total": 15001
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 0 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 0
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1,
+            "roundedTotal": 15001,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 0,
+                "total": 15001,
+                "rounded_total": 15001
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 1 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 10,
+            "roundedTotal": 15010,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 9,
+                "total": 15001,
+                "rounded_total": 15010
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 2 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 100,
+            "roundedTotal": 15100,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 99,
+                "total": 15001,
+                "rounded_total": 15100
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 3 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 999,
+                "total": 15001,
+                "rounded_total": 16000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 4 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 4
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 10000,
+            "roundedTotal": 20000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 4999,
+                "total": 15001,
+                "rounded_total": 20000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 5 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 5
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 100000,
+            "roundedTotal": 100000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 84999,
+                "total": 15001,
+                "rounded_total": 100000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 6 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 6
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1000000,
+            "roundedTotal": 1000000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 984999,
+                "total": 15001,
+                "rounded_total": 1000000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 7 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 7
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 10000000,
+            "roundedTotal": 10000000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 9984999,
+                "total": 15001,
+                "rounded_total": 10000000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 8 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 8
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 100000000,
+            "roundedTotal": 100000000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 99984999,
+                "total": 15001,
+                "rounded_total": 100000000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 9 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 9
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1000000000,
+            "roundedTotal": 1000000000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 999984999,
+                "total": 15001,
+                "rounded_total": 1000000000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "backend exponent 10 roundtrip",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 10
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 10000000000,
+            "roundedTotal": 10000000000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 9999984999,
+                "total": 15001,
+                "rounded_total": 10000000000
+            },
+            "expected": null,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Puluhan (Rp10)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 10,
+            "roundedTotal": 15010,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 9,
+                "total": 15001,
+                "rounded_total": 15010
+            },
+            "expected": 15010,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Ratusan (Rp100)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 100,
+            "roundedTotal": 15100,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 99,
+                "total": 15001,
+                "rounded_total": 15100
+            },
+            "expected": 15100,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "selected UI Ribuan (Rp1.000)",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15001,
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "serviceResult": {
+                "subtotal": 15001,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 999,
+                "total": 15001,
+                "rounded_total": 16000
+            },
+            "expected": 16000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Puluhan (Rp10) / up",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 10,
+            "roundedTotal": 15060,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 5,
+                "total": 15055,
+                "rounded_total": 15060
+            },
+            "expected": 15060,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ratusan (Rp100) / up",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 100,
+            "roundedTotal": 15100,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 45,
+                "total": 15055,
+                "rounded_total": 15100
+            },
+            "expected": 15100,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ribuan (Rp1.000) / up",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 945,
+                "total": 15055,
+                "rounded_total": 16000
+            },
+            "expected": 16000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Puluhan (Rp10) / down",
+            "payload": {
+                "enabled": true,
+                "method": "down",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 10,
+            "roundedTotal": 15050,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -5,
+                "total": 15055,
+                "rounded_total": 15050
+            },
+            "expected": 15050,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ratusan (Rp100) / down",
+            "payload": {
+                "enabled": true,
+                "method": "down",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 100,
+            "roundedTotal": 15000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -55,
+                "total": 15055,
+                "rounded_total": 15000
+            },
+            "expected": 15000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ribuan (Rp1.000) / down",
+            "payload": {
+                "enabled": true,
+                "method": "down",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 1000,
+            "roundedTotal": 15000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -55,
+                "total": 15055,
+                "rounded_total": 15000
+            },
+            "expected": 15000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Puluhan (Rp10) / nearest",
+            "payload": {
+                "enabled": true,
+                "method": "nearest",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 10,
+            "roundedTotal": 15060,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 5,
+                "total": 15055,
+                "rounded_total": 15060
+            },
+            "expected": 15060,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ratusan (Rp100) / nearest",
+            "payload": {
+                "enabled": true,
+                "method": "nearest",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 100,
+            "roundedTotal": 15100,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 45,
+                "total": 15055,
+                "rounded_total": 15100
+            },
+            "expected": 15100,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC Ribuan (Rp1.000) / nearest",
+            "payload": {
+                "enabled": true,
+                "method": "nearest",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 1000,
+            "roundedTotal": 15000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -55,
+                "total": 15055,
+                "rounded_total": 15000
+            },
+            "expected": 15000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC recover invalid exponent",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 1
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 10,
+            "roundedTotal": 15060,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 5,
+                "total": 15055,
+                "rounded_total": 15060
+            },
+            "expected": 15060,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC draft survives invalid refetch",
+            "payload": {
+                "enabled": true,
+                "method": "down",
+                "decimal_places": 2
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 100,
+            "roundedTotal": 15000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": -55,
+                "total": 15055,
+                "rounded_total": 15000
+            },
+            "expected": 15000,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC disable retains draft",
+            "payload": {
+                "enabled": false,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 1000,
+            "roundedTotal": 15055,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 0,
+                "total": 15055,
+                "rounded_total": 15055
+            },
+            "expected": 15055,
+            "expectedMatches": true
+        },
+        {
+            "scenario": "QC enable retains draft",
+            "payload": {
+                "enabled": true,
+                "method": "up",
+                "decimal_places": 3
+            },
+            "valid": true,
+            "errors": [],
+            "total": 15055,
+            "factor": 1000,
+            "roundedTotal": 16000,
+            "serviceResult": {
+                "subtotal": 15055,
+                "promo_amount": 0,
+                "discount_amount": 0,
+                "custom_discount_amount": 0,
+                "tax_amount": 0,
+                "extra_cost_amount": 0,
+                "voucher_amount": 0,
+                "rounding_amount": 945,
+                "total": 15055,
+                "rounded_total": 16000
+            },
+            "expected": 16000,
+            "expectedMatches": true
+        }
+    ],
+    "passed": true,
+    "databaseQueryCount": 0,
+    "scope": "Actual Laravel Request validator and CartPricingService::calculate with production Cart and preloaded in-memory related fixtures. Discounts/taxes/promos/vouchers absent. No HTTP/database mutation or full checkout certification."
+}

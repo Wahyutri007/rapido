@@ -1,0 +1,42 @@
+const fs = require("node:fs"), path = require("node:path"), crypto = require("node:crypto");
+const hash = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+const read = (name) => JSON.parse(fs.readFileSync(path.join(__dirname, name), "utf8"));
+const assert = (ok, message) => { if (!ok) throw Error(message); };
+const manifestPath = path.join(__dirname, "verification.json");
+if (!process.argv.includes("--finalize")) {
+	const manifest = read("verification.json");
+	for (const [file, expected] of Object.entries(manifest.sourceHashes)) assert(hash(file) === expected, `Source drift: ${file}`);
+	for (const [file, expected] of Object.entries(manifest.contractHashes)) assert(hash(file) === expected, `Contract drift: ${file}`);
+	for (const [file, expected] of Object.entries(manifest.runtimeInputHashes)) assert(hash(file) === expected, `Runtime input drift: ${file}`);
+	for (const artifact of manifest.artifacts) assert(hash(path.join(__dirname, artifact.file)) === artifact.sha256, `Artifact drift: ${artifact.file}`);
+	for (const artifact of manifest.internalReview.artifacts) assert(hash(artifact.file) === artifact.sha256, `Reviewer artifact drift: ${artifact.file}`);
+	console.log(JSON.stringify({ status: "MATCH", sources: Object.keys(manifest.sourceHashes).length, contracts: Object.keys(manifest.contractHashes).length, artifacts: manifest.artifacts.length })); process.exit(0);
+}
+assert(!fs.existsSync(manifestPath), "Frozen manifest exists; do not overwrite");
+const quality = read("quality-results.json"), runtime = read("results.json"), before = read("inputs-before.json");
+const baselineFiles = ["index.before.tsx.txt", "modify.before.tsx.txt", "form.before.tsx.txt", "schema.before.ts.txt"];
+Object.entries(before.sourceHashes).forEach(([file, expected], index) => assert(hash(path.join(__dirname, baselineFiles[index])) === expected, `Baseline snapshot drift: ${file}`));
+assert(hash(path.join(__dirname, "layout.before.tsx.txt")) === before.contractHashes["app/(no-layout)/manage/payment-method/_layout.tsx"], "Layout baseline drift");
+assert(quality.status === "PASS" && quality.diagnostics.length === 0, "Quality must pass");
+assert(runtime.passed === 58 && runtime.failed === 0 && runtime.runtimeErrors.length === 0, "Final renderer must pass");
+for (const [file, expected] of Object.entries(quality.sourceHashes)) assert(hash(file) === expected, `Final quality source drift: ${file}`);
+for (const [file, expected] of Object.entries(runtime.productionModuleHashes)) assert(hash(file) === expected, `Loaded production drift: ${file}`);
+const contractHashes = Object.fromEntries(Object.entries(before.contractHashes).filter(([file]) => !quality.sourceHashes[file]).map(([file]) => [file, hash(file)]));
+const allowedDependency = "components/common/SuccessModal.tsx";
+const inputDrift = Object.entries(contractHashes).filter(([file, value]) => before.contractHashes[file] !== value).map(([file, actual]) => ({ file, before: before.contractHashes[file], actual }));
+assert(inputDrift.every((item) => item.file === allowedDependency && item.actual === "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"), "Unexpected read-only input drift");
+for (const [file, value] of Object.entries(runtime.productionModuleHashes)) if (!quality.sourceHashes[file]) contractHashes[file] = value;
+const runtimeInputs = ["node_modules/typescript/package.json", "node_modules/react-hook-form/package.json", "node_modules/@hookform/resolvers/package.json", "node_modules/zod/package.json", "node_modules/zustand/package.json", ".expo/senior7-test-tools/node_modules/react/package.json", ".expo/senior7-test-tools/node_modules/react-test-renderer/package.json"];
+const reviewRoot = "docs/qa/codex-3-internal-review/payment-method-session-close-copy-2026-10-09";
+const review = JSON.parse(fs.readFileSync(path.join(reviewRoot, "verification.json"), "utf8"));
+assert(review.status === "INTERNAL_QA_REVIEW_PASS" && review.externalQcApproval === false, "Independent internal review must pass without external approval");
+for (const [file, expected] of Object.entries(quality.sourceHashes)) assert(review.sourceHashes[file] === expected, `Reviewer source mismatch: ${file}`);
+const reviewArtifacts = review.artifacts.map((item) => {
+	const file = path.join(reviewRoot, item.path).replaceAll("\\", "/");
+	assert(hash(file) === item.sha256, `Frozen reviewer artifact mismatch: ${file}`);
+	return { file, sha256: item.sha256 };
+});
+reviewArtifacts.push({ file: `${reviewRoot}/verification.json`, sha256: hash(path.join(reviewRoot, "verification.json")) });
+const artifacts = fs.readdirSync(__dirname).filter((file) => file !== "verification.json" && fs.statSync(path.join(__dirname, file)).isFile()).sort().map((file) => ({ file, sha256: hash(path.join(__dirname, file)) }));
+const result = { owner: "Software Developer Senior / Codex-3", ticket: "SD3-013", status: "READY_FOR_QA_QC", externalQcApproval: false, publishApproved: false, sourceHashes: quality.sourceHashes, baselineSourceHashes: before.sourceHashes, contractHashes, runtimeInputHashes: Object.fromEntries(runtimeInputs.map((file) => [file, hash(file)])), sourceInputDrift: inputDrift, internalReview: { status: review.status, report: `${reviewRoot}/REPORT.md`, manifest: `${reviewRoot}/verification.json`, externalQcApproval: false, checks: review.checks, sourceHashes: review.sourceHashes, artifacts: reviewArtifacts }, checks: { passed: runtime.passed, failed: 0, runtimeErrors: 0, productionModules: runtime.productionModules, lintErrors: 0, lintWarnings: 0, typeDiagnostics: 0 }, artifacts, limits: runtime.limits };
+fs.writeFileSync(manifestPath, JSON.stringify(result, null, 2) + "\n"); console.log(JSON.stringify({ status: result.status, sources: Object.keys(result.sourceHashes).length, contracts: Object.keys(contractHashes).length, artifacts: artifacts.length, inputDrift }));

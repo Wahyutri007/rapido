@@ -1,0 +1,360 @@
+{
+  "sourceHashes": {
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+    "node_modules/react/cjs/react.development.js": "1919eb95d51bdaed6c771bcd506d65a11639142032e44d0e9212e5c745be1b65",
+    "api/hooks/categories.ts": "0aebb4d2f0524b261033df269e73e8e33c6974fbea69f3ca1b0833af0cccb468",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "node_modules/@tanstack/react-query/build/modern/index.cjs": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+    "node_modules/@tanstack/query-core/build/modern/index.cjs": "3704990a63f6e23ebc1939b0a7bb45b6e45b95bbc61d7adc1df984fcfe5d3e74",
+    "node_modules/@tanstack/query-core/build/modern/retryer.cjs": "7874339b7c66419034216dbbfcdfabc4a82dc2e44b1e5a3c9f5824568cf3bb7a",
+    "node_modules/@tanstack/query-core/build/modern/focusManager.cjs": "d2ea5ba3126b3c6273932fbd8898d2913aafbffb727b65fec9dab09ecda940e4",
+    "node_modules/@tanstack/query-core/build/modern/subscribable.cjs": "6f2eac2989b1a44b1418e22d6da8f4bdc2dfb59137526d00e73da06f053f5f7d",
+    "node_modules/@tanstack/query-core/build/modern/utils.cjs": "9d96d134c77e3cffaaa936db75a5d7940edb38434119d0ae1575abed5bdc5e34",
+    "node_modules/@tanstack/query-core/build/modern/onlineManager.cjs": "a952c4158d3b6fb6d6095e9585bedce4ed531a2890a1513f25e85c94aaa883b4",
+    "node_modules/@tanstack/query-core/build/modern/thenable.cjs": "6f762fe8f97f36e6051591877da2c8756ad66c8213435f8d906ae9dbabbfd304",
+    "node_modules/@tanstack/query-core/build/modern/queryCache.cjs": "de9dd4a3efd0fc2aab3865ffa4385f9af027372b4a5c0374078581cd11fe9a7c",
+    "node_modules/@tanstack/query-core/build/modern/query.cjs": "45c28936ecdb4ac1dd271384308621fefad764732991cf1482f2aa42f7c2c95f",
+    "node_modules/@tanstack/query-core/build/modern/notifyManager.cjs": "12808e9dbb9e063152db60f773641c11fedb07d1db193c692b067a021accb11e",
+    "node_modules/@tanstack/query-core/build/modern/removable.cjs": "d80a0045f4d909fb2dfea63720e6f8b4edbd13f56d908ffb841defea6afb5019",
+    "node_modules/@tanstack/query-core/build/modern/queryClient.cjs": "24038096747b4968409fade0ff39a53f443bdbe21c125934a5fd05a1780cdcb3",
+    "node_modules/@tanstack/query-core/build/modern/mutationCache.cjs": "61e5aa52a9650b1d2185b74a6c12816e476c3eed29282126483f043a3ed15d85",
+    "node_modules/@tanstack/query-core/build/modern/mutation.cjs": "851bed3a2358b0c6b7f990c1ba31a7a6ab110e60eafab7e491cd76c2576f4813",
+    "node_modules/@tanstack/query-core/build/modern/infiniteQueryBehavior.cjs": "41e79c138d4c804db188c3d67341ca9d1ee01cd4eba7cf207b359c78d12720d9",
+    "node_modules/@tanstack/query-core/build/modern/queryObserver.cjs": "741ec3f6c5c73dfad06b4a25351b8a5635ddb8512e547056c762bd2a84832643",
+    "node_modules/@tanstack/query-core/build/modern/queriesObserver.cjs": "7c32f5b0aad7ff4cd4ba689c03430e35fc92ea7eb7ea2ff89b24d2fa8ffbf917",
+    "node_modules/@tanstack/query-core/build/modern/infiniteQueryObserver.cjs": "aeb71a736ddac88353aa2d2be465936ee38666e1a6d03f49b07c8caa32e20057",
+    "node_modules/@tanstack/query-core/build/modern/mutationObserver.cjs": "79777398a4740ddfc66e5c78533446082605bf659d67aa228eff200f165f45ab",
+    "node_modules/@tanstack/query-core/build/modern/hydration.cjs": "e82187ca3d8c7c7f93afe3fb5df9832dc6d4c026b9d8ee8d371ed7f86db809ec",
+    "node_modules/@tanstack/query-core/build/modern/streamedQuery.cjs": "b4948929875d83beb8643ca720276986c33d55452c69edc30484d37074aa1140",
+    "node_modules/@tanstack/query-core/build/modern/types.cjs": "81dae1f9532e8a2d93235a1ec5a2514ad1be39fa4aac7ccd9b61b15d7a63e804",
+    "node_modules/@tanstack/react-query/build/modern/types.cjs": "4f4c2128985cbb2aa94ad06f4948954d564da545f2de5a6e44d0e8c9948d95ed",
+    "node_modules/@tanstack/react-query/build/modern/useQueries.cjs": "e92105d2f8960897c5c5a0fe2392566e201cb20c809273f0a70574a9a099744a",
+    "node_modules/@tanstack/react-query/build/modern/QueryClientProvider.cjs": "c1550029850fcc2fa09b0091be163d1d61cdfc99cdc6ca86cf6b71276404a800",
+    "node_modules/react/cjs/react-jsx-runtime.development.js": "dd50fd0db2fba44e0eee66243a45c81cfa3774cf41e4e6c0c080a601815c694d",
+    "node_modules/@tanstack/react-query/build/modern/IsRestoringProvider.cjs": "24e22c59d7943363b8b1980a70953f2aaec8bb7409e4b1e1280345c4effb7fa4",
+    "node_modules/@tanstack/react-query/build/modern/QueryErrorResetBoundary.cjs": "d5f0cd242dbd286c7373fd66641fbfe15893fa9a4cc12c5801e00d02f9242cca",
+    "node_modules/@tanstack/react-query/build/modern/errorBoundaryUtils.cjs": "71ade27a2c0161b8c7ac93225d567be11a67fa8a2b2716dc7a623a2982759d09",
+    "node_modules/@tanstack/react-query/build/modern/suspense.cjs": "1e7829cc0b5a655bc69fbb6f288e8650b6a750c5a65b448e1b08c9619fbc6c4a",
+    "node_modules/@tanstack/react-query/build/modern/useQuery.cjs": "fca044b1f76742a460cbb4a2f06db861b60bb19fea10c88f26d3abaa2faf929e",
+    "node_modules/@tanstack/react-query/build/modern/useBaseQuery.cjs": "2459c65d30c6864e1c4ed98a08096cb151d6c44b0d0a9502145f29918db62f0a",
+    "node_modules/@tanstack/react-query/build/modern/useSuspenseQuery.cjs": "71e3094eab2a7152c5511cd2a8d32dba9302b9731d17f1e98e6434c8a0d7cc63",
+    "node_modules/@tanstack/react-query/build/modern/useSuspenseInfiniteQuery.cjs": "9578d9a5b4e18a84c1ee7fc196d9a5b9eec730bac23c519a82d4b28d7472c10c",
+    "node_modules/@tanstack/react-query/build/modern/useSuspenseQueries.cjs": "2d6352c876c2d0822ace2fa93a0dffdaa786c14b12c9cc60f77ce428f6458dbe",
+    "node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.cjs": "6b0b9989b98ad7787da7eb9fed30d11d9f55a929765bea3f481de10545220cc4",
+    "node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.cjs": "8a644e0cd01b49d3e9081c6eda013404febefec43399dd5076b2152fcc78836c",
+    "node_modules/@tanstack/react-query/build/modern/queryOptions.cjs": "e222c9a8e483e85f28b91babbfc97f16dde4c5e3c618d045b25723fa91214d92",
+    "node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.cjs": "b6ce4e40d0cd8b548e621c1f6a5fe183df1fe73254a3a6949a3a7ff896693c62",
+    "node_modules/@tanstack/react-query/build/modern/HydrationBoundary.cjs": "934ffa9d2800016470f6133eeeeb5089aca9322b0885d5444ce16dc4ecd6aa0d",
+    "node_modules/@tanstack/react-query/build/modern/useIsFetching.cjs": "32517a3801e3146c2ba8cb4748ed5219cbe41feb809c724c2345a987654e76c8",
+    "node_modules/@tanstack/react-query/build/modern/useMutationState.cjs": "271d76335b97207fbbc922791033657950a11655b4b37f060a3845c589f8f09e",
+    "node_modules/@tanstack/react-query/build/modern/useMutation.cjs": "5fb6c84f8b25d868f410088cf94a767a0803076c04a06e386d508526d8e63c90",
+    "node_modules/@tanstack/react-query/build/modern/mutationOptions.cjs": "60b54e519e870ef2092cb9a9a184605f8ef1a1e4b176435389ee7b56128e7e4e",
+    "node_modules/@tanstack/react-query/build/modern/useInfiniteQuery.cjs": "523732dde8b36aa727078dcaf80ff8f8ae559d1bf19dd450101512e663eef397",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "constants/Others.ts": "13375fbdd752b8c17b38062540a2ea18a7b3bb25657cbd69ee182a50b075d1cd",
+    "node_modules/axios/dist/browser/axios.cjs": "dcbd71ac419518951bbfd20240f6011cccf6990a83af716131e64bf9e5d270c3",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "api/hooks/menus.ts": "2373ecbaedcb4c3f0b07c937bbac93a68c3dc4fc4ac3ab47ea770fcc211ffcb8",
+    "api/hooks/settings.ts": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+    "node_modules/react-dom/cjs/react-dom.development.js": "e85d6e1f6187c46c9969a8a03b4288167f1fd233ce7e4e56ba8aad555348db6c",
+    "node_modules/react-dom/cjs/react-dom-client.development.js": "c5da0593f349c7f4de33318879716d1e35ff007bb1de47f731684e75a469e5e1",
+    "node_modules/scheduler/cjs/scheduler.development.js": "646eb671c8585382baff16daf92fe16a4cdd10dcf1a363c58b2ae1f6bf3a2b8d"
+  },
+  "checks": [
+    {
+      "name": "initial production settings request blocks save until response",
+      "passed": true
+    },
+    {
+      "name": "production category hook loads real category endpoint and labels",
+      "passed": true
+    },
+    {
+      "name": "category picker pair survives production settings refetch and invalidates after save",
+      "passed": true
+    },
+    {
+      "name": "cancel does not post uncommitted category selection",
+      "passed": true
+    },
+    {
+      "name": "clearing category exclusions sends all and empty IDs via Axios",
+      "passed": true
+    },
+    {
+      "name": "failed production mutation retains category draft after unrelated server change",
+      "passed": true
+    },
+    {
+      "name": "empty production menu query has no mock rows and keeps saved menu ID",
+      "passed": true
+    },
+    {
+      "name": "production menu query failure retries and displays real records",
+      "passed": true
+    },
+    {
+      "name": "production category query retry keeps category endpoint and kind",
+      "passed": true
+    },
+    {
+      "name": "initial production settings error blocks save until retry succeeds",
+      "passed": true
+    },
+    {
+      "name": "disabled category draft reaches production mutation without losing IDs",
+      "passed": true
+    },
+    {
+      "name": "successful backend null settings response permits default creation",
+      "passed": true
+    }
+  ],
+  "runtimeConsoleErrors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "categories",
+      "path": "/api/contents/categories"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "category",
+        "stockable_ids": [
+          "category-1",
+          "category-2"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "category",
+        "stockable_ids": [
+          "category-1",
+          "category-2"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "all",
+        "content_type": "category",
+        "stockable_ids": []
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "categories",
+      "path": "/api/contents/categories"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "category",
+        "stockable_ids": [
+          "category-1",
+          "category-2"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "item",
+        "stockable_ids": [
+          "menu-1"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "categories",
+      "path": "/api/contents/categories"
+    },
+    {
+      "method": "GET",
+      "domain": "categories",
+      "path": "/api/contents/categories"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "categories",
+      "path": "/api/contents/categories"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": false,
+        "type": "hybrid",
+        "content_type": "category",
+        "stockable_ids": [
+          "category-1"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "method": "GET",
+      "domain": "menus",
+      "path": "/api/contents/menus"
+    },
+    {
+      "method": "POST",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "all",
+        "content_type": "item",
+        "stockable_ids": []
+      }
+    },
+    {
+      "method": "GET",
+      "domain": "settings",
+      "path": "/api/settings/stock-settings"
+    }
+  ],
+  "limitations": "Production React/React Query/Axios/API hooks, intercepted HTTP, host UI/storage/router adapters; no Metro/native/full auth/live backend"
+}

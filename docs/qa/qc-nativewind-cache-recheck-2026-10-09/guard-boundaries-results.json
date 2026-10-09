@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "count": 16,
+  "checks": [
+    "initializer result retains identity",
+    "only exact populated native path is protected",
+    "normalized relative native path is protected",
+    "nonempty Buffer compiler output is written",
+    "nonempty writes preserve write options",
+    "zero byte Buffer is delegated under string-only contract",
+    "existing empty native file remains writable",
+    "missing native file is created without swallowing ENOENT",
+    "non-ENOENT stat errors propagate with fs restored",
+    "delegated write failures propagate with fs restored",
+    "nested initialization restores outer guard then original fs",
+    "nested exception restores outer guard and propagates identity",
+    "guard ends synchronously before returned Promise work",
+    "async compiler writes remain unaffected",
+    "later synchronous compiler empty writes remain unaffected",
+    "original filesystem functions restored after all checks"
+  ],
+  "cache": "isolated mkdtemp; active node_modules cache untouched"
+}

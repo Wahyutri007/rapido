@@ -1,0 +1,126 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-011",
+  "status": "PASS",
+  "sourceHashes": {
+    "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+    "components/feature/manage/roles/RoleListScreen.tsx": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+    "components/feature/manage/workers/WorkerListScreen.tsx": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+    "components/feature/manage/member/MemberListScreen.tsx": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3"
+  },
+  "lint": {
+    "exitCode": 0,
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "components/feature/manage/ManageListActions.tsx",
+      "components/feature/manage/roles/RoleListScreen.tsx",
+      "components/feature/manage/workers/WorkerListScreen.tsx",
+      "components/feature/manage/member/MemberListScreen.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "stderr": "",
+    "files": [
+      {
+        "file": "components/feature/manage/ManageListActions.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/member/MemberListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/roles/RoleListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerListScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/feature/manage/ManageListActions.tsx",
+      "components/feature/manage/roles/RoleListScreen.tsx",
+      "components/feature/manage/workers/WorkerListScreen.tsx",
+      "components/feature/manage/member/MemberListScreen.tsx"
+    ],
+    "stdout": "Checked 4 files in 21ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "layoutChecks": [
+    {
+      "file": "components/feature/manage/roles/RoleListScreen.tsx",
+      "passed": true,
+      "scope": "Wrapper list/search/loading/error/refresh/empty/cards and bottom add action AST identical except row selection event handler"
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerListScreen.tsx",
+      "passed": true,
+      "scope": "Wrapper list/search/loading/error/refresh/empty/cards and bottom add action AST identical except row selection event handler"
+    },
+    {
+      "file": "components/feature/manage/member/MemberListScreen.tsx",
+      "passed": true,
+      "scope": "Wrapper list/search/loading/error/refresh/empty/cards and bottom add action AST identical except row selection event handler"
+    }
+  ],
+  "whitespaceChecks": [
+    {
+      "file": "components/feature/manage/ManageListActions.tsx",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleListScreen.tsx",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerListScreen.tsx",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberListScreen.tsx",
+      "passed": true
+    }
+  ],
+  "diagnostics": [],
+  "focusedTypecheck": {
+    "roots": [
+      "components/feature/manage/ManageListActions.tsx",
+      "components/feature/manage/roles/RoleListScreen.tsx",
+      "components/feature/manage/workers/WorkerListScreen.tsx",
+      "components/feature/manage/member/MemberListScreen.tsx"
+    ],
+    "config": "tsconfig.json",
+    "declarationRoots": [
+      "expo-env.d.ts",
+      "global.d.ts",
+      "nativewind-env.d.ts",
+      ".expo/types/router.d.ts"
+    ],
+    "programSourceFiles": 1113,
+    "scope": "Actual tsconfig options/declarations and four source import closures; not full-project TypeScript"
+  }
+}

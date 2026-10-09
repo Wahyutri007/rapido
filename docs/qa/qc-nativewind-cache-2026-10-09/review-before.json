@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-08T18:28:52.082Z",
+  "status": "PASS",
+  "phase": "before",
+  "fingerprints": {
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "scripts/verify-nativewind-cache.cjs": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274",
+    "scripts/verify-metro-cache.cjs": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f",
+    "node_modules/react-native-css-interop/dist/metro/index.js": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a",
+    "docs/qa/senior-7-2026-10-09/startup/baseline.json": "8a79e1d91624a408e63910e81f313a573f97e34fb5023c6c860974fa2b6c8ed3",
+    "docs/qa/senior-7-2026-10-09/startup/cache-results.json": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae",
+    "docs/qa/senior-7-2026-10-09/startup/cache-queue-results.json": "19955d01c5e1e9069fdba3b566bda4378de4ff476b35c1b9b6cb6419b374dec5",
+    "docs/qa/senior-7-2026-10-09/startup/multi-process-results.json": "2b1e273257f146aa2408d212c2014559558d01fa822df3a4528440fe9113721c",
+    "docs/qa/senior-7-2026-10-09/startup/second-config-results.json": "216994cf814f86cf7509947ebabb5ba4d50ac2a49ca98681d66148c9fd467138",
+    "docs/qa/senior-7-2026-10-09/startup/native-results.json": "3cc655d11c15efcf12b5b312b9db76e75e7c2401d058109d909e31957443715a",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "node_modules/nativewind/dist/metro/index.js": "7bf29d6bbf0bd6a4a51c5ccf55da5cd5d48753e741f48012f03f73e9243f5ae1",
+    "node_modules/expo-router/build/useScreens.js": "fe94c51fb0d6091e3467cde1401d437f9b8c94b2fe2172e5768cf46774a81498",
+    "app/(no-layout)/_layout.tsx": "e23611f5f3666d076e731aabe88d73165ec74f81d9e084de6f27b5e7feee46ef",
+    "app/(no-layout)/catalog/_layout.tsx": "1eaaf0089dfe37a70e443016ed7a31acc5bfedc3b090a6608b9803e4dc1b43fc",
+    "app/(no-layout)/(cashier)/catalog/_layout.tsx": "2a7268551f11a43c069945501c35a1a82eeeb2f6c0832866cea3b557d3e14c07"
+  },
+  "currentAndroidCache": {
+    "bytes": 193003,
+    "sha256": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "hasClassDarkFlag": true
+  }
+}

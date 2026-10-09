@@ -1,0 +1,769 @@
+{
+  "status": "INTERNAL_QA_REVIEW_PASS",
+  "externalQcApproval": false,
+  "target": "components/common/AlertModal.tsx",
+  "reviewedSourceHash": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+  "baselineSourceHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "pass": 60,
+  "fail": 0,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Reviewed source matches final hash supplied by parent",
+      "passed": true,
+      "actual": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "expected": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443"
+    },
+    {
+      "name": "One baseline Dimensions import",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "One final useWindowDimensions import",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "One final dimension hook declaration",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Window width minus32 remains without new explicit maximum",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "One image explicit height128/content width",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Whole AST is identical after reversing only four geometry deltas",
+      "passed": true,
+      "actual": "import type React from \"react\";\nimport { Image, type ImageSourcePropType, View, } from \"react-native\";\nimport Text from \"@/components/common/Text\";\nimport { Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, } from \"@/components/ui/modal\";\nimport type { State } from \"@/types\";\nimport { Button, ButtonGroup, ButtonText, type ButtonVariantProps, } from \"../ui/button\";\ntype AlertModal = {\n    openState: State<boolean>;\n    onClose?: () => void;\n    onConfirm?: () => void;\n    image?: ImageSourcePropType;\n    title?: string;\n    message?: string | React.ReactNode;\n    cancelText?: string;\n    confirmText?: string;\n    hideCancelButton?: boolean;\n    hideConfirmButton?: boolean;\n    confirmAction?: ButtonVariantProps[\"action\"];\n    isLoading?: boolean;\n};\nexport { useAlertModal } from \"@/hooks/useAlertModal\";\nexport default function AlertModal(props: React.PropsWithChildren<AlertModal>) {\n    const { openState, image, message, title, onClose = () => setIsOpen(false), onConfirm, cancelText = \"Tidak, batal\", confirmText = \"Iya, lanjut\", hideCancelButton = false, hideConfirmButton = false, confirmAction = \"primary\", isLoading = false, children, } = props;\n    const [isOpen, setIsOpen] = openState;\n    return (<Modal isOpen={isOpen} onClose={onClose}>\n\t\t\t<ModalBackdrop />\n\t\t\t<ModalContent className=\"rounded-[20px] p-5 shadow-main\" style={{ width: Dimensions.get(\"screen\").width - 32 }}>\n\t\t\t\t<ModalHeader className=\"flex-col items-center gap-5\">\n\t\t\t\t\t{image && (<View className=\"w-full overflow-hidden rounded-2xl\">\n\t\t\t\t\t\t\t<Image source={image} className=\"h-32 w-full\" resizeMode=\"cover\"/>\n\t\t\t\t\t\t</View>)}\n\t\t\t\t\t{title && (<Text className=\"w-full text-center text-[20px] text-gray-900\" w=\"semibold\">\n\t\t\t\t\t\t\t{title.trim()}\n\t\t\t\t\t\t</Text>)}\n\t\t\t\t</ModalHeader>\n\n\t\t\t\t{children}\n\n\t\t\t\t{message && (<ModalBody className=\"mx-0 mb-0 mt-4\">\n\t\t\t\t\t\t{typeof message === \"string\" ? (<Text className=\"text-center text-muted\">{message}</Text>) : (message)}\n\t\t\t\t\t</ModalBody>)}\n\t\t\t\t{(!hideCancelButton || !hideConfirmButton) && (<ModalFooter className=\"mt-4 gap-4\">\n\t\t\t\t\t\t{!hideCancelButton && (<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button size=\"xl\" onPress={onClose} variant=\"outline\">\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{cancelText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>)}\n\t\t\t\t\t\t{!hideConfirmButton && (<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button size=\"xl\" onPress={onConfirm ? onConfirm : onClose} action={confirmAction} disabled={isLoading}>\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{confirmText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>)}\n\t\t\t\t\t</ModalFooter>)}\n\t\t\t</ModalContent>\n\t\t</Modal>);\n}\nexport { default as DeleteConfirmModal } from \"./DeleteConfirmModal\";\nexport { default as SuccessModal } from \"./SuccessModal\";\n",
+      "expected": "import type React from \"react\";\nimport { Image, type ImageSourcePropType, View, } from \"react-native\";\nimport Text from \"@/components/common/Text\";\nimport { Modal, ModalBackdrop, ModalBody, ModalContent, ModalFooter, ModalHeader, } from \"@/components/ui/modal\";\nimport type { State } from \"@/types\";\nimport { Button, ButtonGroup, ButtonText, type ButtonVariantProps, } from \"../ui/button\";\ntype AlertModal = {\n    openState: State<boolean>;\n    onClose?: () => void;\n    onConfirm?: () => void;\n    image?: ImageSourcePropType;\n    title?: string;\n    message?: string | React.ReactNode;\n    cancelText?: string;\n    confirmText?: string;\n    hideCancelButton?: boolean;\n    hideConfirmButton?: boolean;\n    confirmAction?: ButtonVariantProps[\"action\"];\n    isLoading?: boolean;\n};\nexport { useAlertModal } from \"@/hooks/useAlertModal\";\nexport default function AlertModal(props: React.PropsWithChildren<AlertModal>) {\n    const { openState, image, message, title, onClose = () => setIsOpen(false), onConfirm, cancelText = \"Tidak, batal\", confirmText = \"Iya, lanjut\", hideCancelButton = false, hideConfirmButton = false, confirmAction = \"primary\", isLoading = false, children, } = props;\n    const [isOpen, setIsOpen] = openState;\n    return (<Modal isOpen={isOpen} onClose={onClose}>\n\t\t\t<ModalBackdrop />\n\t\t\t<ModalContent className=\"rounded-[20px] p-5 shadow-main\" style={{ width: Dimensions.get(\"screen\").width - 32 }}>\n\t\t\t\t<ModalHeader className=\"flex-col items-center gap-5\">\n\t\t\t\t\t{image && (<View className=\"w-full overflow-hidden rounded-2xl\">\n\t\t\t\t\t\t\t<Image source={image} className=\"h-32 w-full\" resizeMode=\"cover\"/>\n\t\t\t\t\t\t</View>)}\n\t\t\t\t\t{title && (<Text className=\"w-full text-center text-[20px] text-gray-900\" w=\"semibold\">\n\t\t\t\t\t\t\t{title.trim()}\n\t\t\t\t\t\t</Text>)}\n\t\t\t\t</ModalHeader>\n\n\t\t\t\t{children}\n\n\t\t\t\t{message && (<ModalBody className=\"mx-0 mb-0 mt-4\">\n\t\t\t\t\t\t{typeof message === \"string\" ? (<Text className=\"text-center text-muted\">{message}</Text>) : (message)}\n\t\t\t\t\t</ModalBody>)}\n\t\t\t\t{(!hideCancelButton || !hideConfirmButton) && (<ModalFooter className=\"mt-4 gap-4\">\n\t\t\t\t\t\t{!hideCancelButton && (<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button size=\"xl\" onPress={onClose} variant=\"outline\">\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{cancelText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>)}\n\t\t\t\t\t\t{!hideConfirmButton && (<ButtonGroup className=\"flex-1\">\n\t\t\t\t\t\t\t\t<Button size=\"xl\" onPress={onConfirm ? onConfirm : onClose} action={confirmAction} disabled={isLoading}>\n\t\t\t\t\t\t\t\t\t<ButtonText size=\"sm\">{confirmText}</ButtonText>\n\t\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t\t</ButtonGroup>)}\n\t\t\t\t\t</ModalFooter>)}\n\t\t\t</ModalContent>\n\t\t</Modal>);\n}\nexport { default as DeleteConfirmModal } from \"./DeleteConfirmModal\";\nexport { default as SuccessModal } from \"./SuccessModal\";\n"
+    },
+    {
+      "name": "Default openState renders an open modal",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "No image/title/message/children are invented",
+      "passed": true,
+      "actual": [
+        0,
+        [],
+        0
+      ],
+      "expected": [
+        0,
+        [],
+        0
+      ]
+    },
+    {
+      "name": "Default action labels remain unchanged",
+      "passed": true,
+      "actual": [
+        "Tidak, batal",
+        "Iya, lanjut"
+      ],
+      "expected": [
+        "Tidak, batal",
+        "Iya, lanjut"
+      ]
+    },
+    {
+      "name": "Default cancel outline and confirm primary remain",
+      "passed": true,
+      "actual": [
+        [
+          "outline",
+          null
+        ],
+        [
+          null,
+          "primary"
+        ]
+      ],
+      "expected": [
+        [
+          "outline",
+          null
+        ],
+        [
+          null,
+          "primary"
+        ]
+      ]
+    },
+    {
+      "name": "Footer preserves gap16 and two flex groups",
+      "passed": true,
+      "actual": [
+        "mt-4 gap-4",
+        [
+          "flex-1",
+          "flex-1"
+        ]
+      ],
+      "expected": [
+        "mt-4 gap-4",
+        [
+          "flex-1",
+          "flex-1"
+        ]
+      ]
+    },
+    {
+      "name": "Default confirm disabled flag is false",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Initial window320 yields width288 with no explicit maximum",
+      "passed": true,
+      "actual": {
+        "width": 288
+      },
+      "expected": {
+        "width": 288
+      }
+    },
+    {
+      "name": "StrictMode keeps one active window listener",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Same open instance follows window change without prop change",
+      "passed": true,
+      "actual": [
+        {
+          "width": 358
+        },
+        true
+      ],
+      "expected": [
+        {
+          "width": 358
+        },
+        true
+      ]
+    },
+    {
+      "name": "Tablet width retains Alert geometry, no explicit380 maximum",
+      "passed": true,
+      "actual": {
+        "width": 736
+      },
+      "expected": {
+        "width": 736
+      }
+    },
+    {
+      "name": "Resizing back to320 restores width288",
+      "passed": true,
+      "actual": {
+        "width": 288
+      },
+      "expected": {
+        "width": 288
+      }
+    },
+    {
+      "name": "Default cancel calls state setter false once and hides modal",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false,
+        0
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Confirm without callback falls back to default close",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Default modal dismissal calls setter false",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Custom cancel invokes callback directly without implicit state update",
+      "passed": true,
+      "actual": [
+        [
+          "close",
+          "close",
+          "close"
+        ],
+        [],
+        true
+      ],
+      "expected": [
+        [
+          "close"
+        ],
+        [],
+        true
+      ]
+    },
+    {
+      "name": "Missing confirm callback falls back to custom close",
+      "passed": true,
+      "actual": [
+        [
+          "close",
+          "close",
+          "close"
+        ],
+        []
+      ],
+      "expected": [
+        [
+          "close",
+          "close"
+        ],
+        []
+      ]
+    },
+    {
+      "name": "Modal dismissal forwards custom close as given",
+      "passed": true,
+      "actual": [
+        [
+          "close",
+          "close",
+          "close"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "close",
+          "close",
+          "close"
+        ],
+        true
+      ]
+    },
+    {
+      "name": "Explicit confirm invokes only its callback and stays open",
+      "passed": true,
+      "actual": [
+        [
+          "confirm"
+        ],
+        [],
+        true
+      ],
+      "expected": [
+        [
+          "confirm"
+        ],
+        [],
+        true
+      ]
+    },
+    {
+      "name": "Loading disables confirm while preserving enabled cancel",
+      "passed": true,
+      "actual": [
+        false,
+        true
+      ],
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "Disabled host confirm dispatches no callback",
+      "passed": true,
+      "actual": [
+        "close",
+        "confirm"
+      ],
+      "expected": []
+    },
+    {
+      "name": "Loading cancel still invokes custom close",
+      "passed": true,
+      "actual": [
+        "close",
+        "confirm"
+      ],
+      "expected": [
+        "close"
+      ]
+    },
+    {
+      "name": "Busy-to-idle transition enables confirm",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Enabled confirm dispatches normally after loading",
+      "passed": true,
+      "actual": [
+        "close",
+        "confirm"
+      ],
+      "expected": [
+        "close",
+        "confirm"
+      ]
+    },
+    {
+      "name": "Loading default cancel still hides through controlled setter",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Cancel-hidden renders only confirm in one group",
+      "passed": true,
+      "actual": [
+        [
+          "Iya, lanjut"
+        ],
+        1,
+        1
+      ],
+      "expected": [
+        [
+          "Iya, lanjut"
+        ],
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Sole confirm retains default close fallback",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Confirm-hidden renders only cancel in one group",
+      "passed": true,
+      "actual": [
+        [
+          "Tidak, batal"
+        ],
+        1,
+        1
+      ],
+      "expected": [
+        [
+          "Tidak, batal"
+        ],
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Sole cancel still closes",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Both actions hidden suppresses entire footer",
+      "passed": true,
+      "actual": [
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "No-footer modal keeps dismissal callback",
+      "passed": true,
+      "actual": [
+        [
+          false
+        ],
+        false
+      ],
+      "expected": [
+        [
+          false
+        ],
+        false
+      ]
+    },
+    {
+      "name": "Title trimming/message/labels remain supported",
+      "passed": true,
+      "actual": [
+        [
+          "Judul khusus",
+          "Pesan khusus"
+        ],
+        [
+          "Kembali",
+          "Mengerti"
+        ]
+      ],
+      "expected": [
+        [
+          "Judul khusus",
+          "Pesan khusus"
+        ],
+        [
+          "Kembali",
+          "Mengerti"
+        ]
+      ]
+    },
+    {
+      "name": "Custom confirm action is forwarded",
+      "passed": true,
+      "actual": "negative",
+      "expected": "negative"
+    },
+    {
+      "name": "Optional image source retains class/cover and height128",
+      "passed": true,
+      "actual": [
+        "fixture-category",
+        "h-32 w-full",
+        "cover",
+        {
+          "height": 128,
+          "width": "100%"
+        }
+      ],
+      "expected": [
+        "fixture-category",
+        "h-32 w-full",
+        "cover",
+        {
+          "height": 128,
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "name": "Image wrapper layout/corners/overflow remain unchanged",
+      "passed": true,
+      "actual": [
+        "w-full overflow-hidden rounded-2xl"
+      ],
+      "expected": [
+        "w-full overflow-hidden rounded-2xl"
+      ]
+    },
+    {
+      "name": "Existing container/header/body classes remain unchanged",
+      "passed": true,
+      "actual": [
+        "rounded-[20px] p-5 shadow-main",
+        "flex-col items-center gap-5",
+        "mx-0 mb-0 mt-4"
+      ],
+      "expected": [
+        "rounded-[20px] p-5 shadow-main",
+        "flex-col items-center gap-5",
+        "mx-0 mb-0 mt-4"
+      ]
+    },
+    {
+      "name": "ReactNode message renders unchanged, not converted to string",
+      "passed": true,
+      "actual": [
+        1,
+        "sales",
+        [
+          "Overview"
+        ]
+      ],
+      "expected": [
+        1,
+        "sales",
+        [
+          "Overview"
+        ]
+      ]
+    },
+    {
+      "name": "Children remain distinct from message with original ordering",
+      "passed": true,
+      "actual": [
+        "ModalHeader",
+        "WarningChild",
+        "ModalBody",
+        "ModalFooter"
+      ],
+      "expected": [
+        "ModalHeader",
+        "WarningChild",
+        "ModalBody",
+        "ModalFooter"
+      ]
+    },
+    {
+      "name": "ReactNode child retains supplied identity/content",
+      "passed": true,
+      "actual": [
+        true,
+        "warning"
+      ],
+      "expected": [
+        true,
+        "warning"
+      ]
+    },
+    {
+      "name": "Explicit falsy image/title/message retains suppression",
+      "passed": true,
+      "actual": [
+        0,
+        [],
+        0
+      ],
+      "expected": [
+        0,
+        [],
+        0
+      ]
+    },
+    {
+      "name": "Public custom image preserves source shape and intended geometry",
+      "passed": true,
+      "actual": [
+        {
+          "uri": "fixture://custom"
+        },
+        {
+          "height": 128,
+          "width": "100%"
+        },
+        "cover"
+      ],
+      "expected": [
+        {
+          "uri": "fixture://custom"
+        },
+        {
+          "height": 128,
+          "width": "100%"
+        },
+        "cover"
+      ]
+    },
+    {
+      "name": "Truthy whitespace title trims to empty content as before",
+      "passed": true,
+      "actual": [
+        ""
+      ],
+      "expected": [
+        ""
+      ]
+    },
+    {
+      "name": "Promise callback return is passed through unchanged",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Component does not infer loading or closing from promise",
+      "passed": true,
+      "actual": [
+        true,
+        false,
+        []
+      ],
+      "expected": [
+        true,
+        false,
+        []
+      ]
+    },
+    {
+      "name": "Controlled false openState keeps modal children hidden",
+      "passed": true,
+      "actual": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ]
+    },
+    {
+      "name": "Opening after hidden resize uses current width",
+      "passed": true,
+      "actual": [
+        true,
+        {
+          "width": 358
+        }
+      ],
+      "expected": [
+        true,
+        {
+          "width": 358
+        }
+      ]
+    },
+    {
+      "name": "Public useAlertModal re-export remains production hook",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Sibling re-export references are untouched",
+      "passed": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "Unmount removes dimension subscription",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Dimension events after unmount retain no listeners",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Runtime/React/act errors absent",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Runtime warnings absent except suppressed renderer deprecation",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "Source did not change while tests ran",
+      "passed": true,
+      "actual": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+      "expected": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443"
+    },
+    {
+      "name": "Read-only sibling/primitive/hook hashes still match",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "productionHashes": {
+    "components/common/AlertModal.tsx": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+  },
+  "callerHashChecks": {
+    "count": 71,
+    "usageCount": 78,
+    "drift": [],
+    "driftNotAutomaticSourceFailure": true
+  },
+  "companionDrift": [],
+  "fixture": "Actual AlertModal and useAlertModal with React StrictMode; RN/dimension/Modal/Button/Text host adapters and inert unused sibling re-export adapters",
+  "limitations": [
+    "Renderer contract/geometry props review only; not pixel/native/SSR/HP/browser certification",
+    "Image/category data are fixtures; image asset byte/dimensions tracked in audit",
+    "Disabled interaction simulated by host honoring Button disabled; actual browser Button behavior belongs to parent",
+    "No execution of all71 callers; no HTTP/API/backend/persist/dependency/server/fullTS/Git mutations",
+    "Internal review cannot close external QC findings or approve PM publication"
+  ]
+}

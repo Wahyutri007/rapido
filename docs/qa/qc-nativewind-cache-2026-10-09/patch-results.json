@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "actualBiomeExitCode": 1,
+  "actualErrors": 4,
+  "proposedBiomeExitCode": 0,
+  "proposedErrors": 0,
+  "productionMetroASTUnchanged": true,
+  "cacheQueueHarnessASTUnchanged": true,
+  "productionGuardFileUnchanged": true,
+  "initializerHarnessChange": "cleanup target safety guard moved after mkdtemp, before try/finally; successful-path assertions unchanged",
+  "patchApplyChecks": 2,
+  "routeCandidateESLintErrors": 0,
+  "appliedToAppSource": false
+}

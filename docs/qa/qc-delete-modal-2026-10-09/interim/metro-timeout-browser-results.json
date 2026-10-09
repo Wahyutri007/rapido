@@ -1,0 +1,16 @@
+{
+  "owner": "QC",
+  "ticket": "SD3-008",
+  "mode": "final-production-source",
+  "passed": 0,
+  "failed": 0,
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "exception": "locator.waitFor: Timeout 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('preview-ready') to be visible\u001b[22m\n",
+  "checks": [],
+  "measurements": [],
+  "sourceHash": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+  "fixtureHash": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+  "limits": "RN-web/production providers/font/modal/button and three delete-dialog domains; isolated fixture with browser-local Axios transport, no native/root auth/full router/backend/Figma claim"
+}

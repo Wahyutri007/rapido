@@ -1,0 +1,28 @@
+# SD3-011 tindakan daftar Role, Karyawan dan Member
+
+Pemilik: **Software Developer Senior / Codex-3**, profil `D:/Codex-3`, 9 Oktober 2026. Status **READY_FOR_QA_QC**; keputusan QA/QC eksternal dan publikasi tetap melalui PM.
+
+Saat menu tindakan A dibuka lalu daftar diperbarui, menu dan konfirmasi hapus memakai object snapshot lama. Jika A hilang dari hasil query, tindakan A tetap tersedia. Callback menu A yang tertunda juga dapat menutup menu B, membuka konfirmasi hapus B atau menavigasi A. [Audit awal independen](../../codex-3-internal-review/next-module-audit-2026-10-09/REPORT.md) mereproduksi 60 assertion: 18 lulus/42 gagal, runtime 0, pada tiga List dan ItemActionSheet produksi dengan adapter query/child dialog/presentation/router.
+
+Ketiga List kini mengambil object pilihan dari query penuh berdasarkan ID, sehingga rename ditampilkan segera dan pencarian tidak membatalkan pilihan yang masih ada. Setiap pembukaan menu, termasuk ID yang sama, mendapat generation baru. Shared feature [ManageListActions.tsx](../../../../components/feature/manage/ManageListActions.tsx) memisahkan state konfirmasi per generation dan memasang private ActionSession hanya selama menu aktif. Layout-effect cleanup menonaktifkan callback menu yang ditutup/diganti/unmount; satu claim mencegah aksi ganda. Urutan ItemActionSheet yang memanggil close lalu action secara sinkron tetap bekerja.
+
+Target yang tidak dapat ditemukan, loading atau error menutup menu/konfirmasi dan meretire generation. Pemulihan query atau kemunculan kembali ID tidak membuka menu secara otomatis; pengguna membuka pilihan lagi. Snapshot fallback hanya menjaga lifetime dialog request/notice yang sudah aktif. Child dialog domain tetap mounted ketika cache menghapus A, sehingga request yang sudah dikirim dan notifikasi suksesnya dapat selesai dan diakui. Memilih B atau membuka A lagi mengganti generation dan membuang callback/notice lama. Transport yang telah dikirim tidak dibatalkan.
+
+| Source | SHA-256 final |
+| --- | --- |
+| [ManageListActions.tsx](../../../../components/feature/manage/ManageListActions.tsx) | `b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102` |
+| [RoleListScreen.tsx](../../../../components/feature/manage/roles/RoleListScreen.tsx) | `2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b` |
+| [WorkerListScreen.tsx](../../../../components/feature/manage/workers/WorkerListScreen.tsx) | `2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f` |
+| [MemberListScreen.tsx](../../../../components/feature/manage/member/MemberListScreen.tsx) | `58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3` |
+
+Quality empat source **PASS**: ESLint tanpa cache/max-warnings 0, Biome penuh tanpa diagnostic, scoped diff/new-file whitespace bersih. TypeScript memakai empat root, declaration dan import closure dari tsconfig aktual: 0 diagnostic. AST Wrapper/search/list/card/loading/error/refresh/empty state dan tombol tambah identik selain handler pembukaan pilihan. Layout, copy, endpoint, search, query hook dan route tetap.
+
+[Regresi developer](results.json): baseline **81 lulus/84 gagal** -> final **165/165 lulus**, runtime/React/act 0, 26 module produksi pada final dan 25 pada baseline. Nama 165 assertion identik. Cases mencakup normal close-then-action, duplicate/cancel/reopen A/pindah B, callback lama, rename/removal/reappear, loading/error recovery, background refetch, pencarian yang menyembunyikan baris, own DELETE success setelah query removal, respons lama sukses/network, retry dan unmount. List tidak memiliki onDeleted: acknowledgement dibuktikan penutupan notice tanpa request/navigasi tambahan. Helper baseline untuk notice yang tidak muncul dibuat toleran agar seluruh suite mencatat kegagalan dan selesai; hasil final lengkap adalah baseline yang dibandingkan.
+
+[Review internal terpisah](../../codex-3-internal-review/list-actions-2026-10-09/REPORT.md): **277/277 lulus**, terdiri dari 199 primary (180 state/integration +19 kontrak) dan 78 supplemental. Runtime/React/act/warning 0. Baseline independen untuk 180 state checks: 96 lulus/84 gagal. Supplemental awal 74/4 diarsipkan karena filter B juga cocok dengan member/label role; wrapper final hanya memperbaiki teks filter fixture dan output, source tidak berubah. Root menyegel report/manifest sesudah reviewer menyelesaikan executions; status INTERNAL_QA_REVIEW_PASS tetap bukan keputusan QC eksternal.
+
+Suite developer dan reviewer menjalankan source List/helper/ItemActionSheet/domain dialog/shared modal/mutation/factory/Common serta QueryClient/Axios dengan transport DELETE lokal. GET query dan presentation/native/router adalah adapter. Shared SuccessModal F90 memiliki temuan eksternal terpisah [QC-SUCCESS-001](../../qc-success-modal-2026-10-09/REPORT.md) yang OPEN untuk landscape; QC-STOCK-UI-001 portrait telah CLOSED_BY_RECHECK. Perubahan List ini tidak menilai atau menutup temuan geometri tersebut.
+
+Tidak ada browser/native/HP/Metro/server/backend/HTTP nyata/full router/root auth/Figma/dependency install/global TypeScript atau Git publikasi pada delta ini. Callable Figma tidak tersedia. Source detail SD3-010, editor yang telah QC PASS, shared modal, route/API hook/ItemActionSheet tidak diedit. Paket terdahulu frozen; inventaris caller lama tetap snapshot historis dan overlay baru mencatat hash List saat ini.
+
+Execution Profile & Operator Tips: Medium. Hash match -> replay ke output baru -> QA perilaku -> QC kontrak delta -> PM. Uji close-before-action dan own success setelah invalidasi query; jangan menimpa artefak frozen atau mengambil scope sesi lain.

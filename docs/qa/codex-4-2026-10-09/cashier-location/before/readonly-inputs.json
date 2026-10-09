@@ -1,0 +1,38 @@
+﻿[
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\store\\placeStore.ts",
+        "Hash":  "4C753CFF1A300B963E80459A465C5E3FEC07022188033EF352C8D156B7493892"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\types\\ui\\manage\\place.ts",
+        "Hash":  "912FD74AA526CEF6985B2D3FC38CD5F16ED8E7FED0ED235456BD5CD07502A0CE"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\constants\\data\\manage\\place.ts",
+        "Hash":  "D4D6F424CA53144DC6EC4ABB5EA72C779655323B4CBBEE623627AC71B9552CB0"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\Header.tsx",
+        "Hash":  "54E84230DB6A194B44FEAAD9D60A90F0BF98802F9BFF115E6FC53AB50F248171"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\Wrapper.tsx",
+        "Hash":  "E7917179CA0DF4FE312E50BCEC99F2921231072B17D5B42D4EAE358A4844D8A4"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\SingleSelect.tsx",
+        "Hash":  "C10D47B804517E209E3D39D8FF0363520CFF89F5263BB836A7D22CF47219559F"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\SearchBar.tsx",
+        "Hash":  "67C376FAAC424964A725776EC1C2B398A09C476D675111970154D58C542A17C0"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\CatalogItemCard.tsx",
+        "Hash":  "F02DF09A07510184944C181B70CC225B9C4E1249BB3BB253F74B4EC290801425"
+    },
+    {
+        "Path":  "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\custom\\DetailRow.tsx",
+        "Hash":  "BECDBBAD964E1FDD8CF2D69E73F09896EC0CB26329D2EC36BC5F53AA8F8C1351"
+    }
+]

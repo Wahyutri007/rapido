@@ -1,0 +1,71 @@
+[
+    {
+        "id":  "1:29776",
+        "name":  "Tambah pesanan pembelian",
+        "width":  390,
+        "height":  1252,
+        "sections":  [
+                         "Back Office"
+                     ],
+        "texts":  [
+                      "Informasi Pesanan",
+                      "Lengkapi detail dari pesanan ini",
+                      "Toko *",
+                      "Pilih satu atau lebih toko yang termasuk di kategori ini",
+                      "Nama Bahan Baku *",
+                      "Kode bahan",
+                      "Satuan *",
+                      "Stok Awal",
+                      "Stok Minimum",
+                      "Harga Beli Rata-Rata *",
+                      "Tanggal Expire",
+                      "Catatan"
+                  ]
+    },
+    {
+        "id":  "1:31002",
+        "name":  "Detail Bahan Baku",
+        "width":  390,
+        "height":  945,
+        "sections":  [
+                         "Back Office"
+                     ],
+        "texts":  [
+                      "Tepung Terigu",
+                      "BBK-TPG-001",
+                      "Bahan Kering",
+                      "Status Stok:",
+                      "Menipis",
+                      "Stok Tersedia",
+                      "18 Pcs",
+                      "Nilai Stok",
+                      "Rp 540.000",
+                      "Stok Minimum",
+                      "245 Pcs",
+                      "Rata2 Pemakaian",
+                      "7 Pcs/hari",
+                      "Perkiraan Habis",
+                      "2 hari",
+                      "Stok per Lokasi",
+                      "Gudang Utama",
+                      "4 Pcs",
+                      "Gudang Cabang",
+                      "2 Pcs",
+                      "Freezer",
+                      "12 Pcs",
+                      "Riwayat Mutasi Terakhir",
+                      "Pembelian masuk",
+                      "PO/A001/2603/002",
+                      "+50 Pcs",
+                      "Pemakaian Otomatis",
+                      "INV/A001/2603/004",
+                      "-8 Pcs",
+                      "Transfer Stok",
+                      "TF/A001/2603/001",
+                      "-10 Pcs",
+                      "Penyesuaian Stok",
+                      "PS/A001/2603/001",
+                      "+2 Pcs"
+                  ]
+    }
+]

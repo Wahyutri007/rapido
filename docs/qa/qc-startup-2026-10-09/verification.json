@@ -1,0 +1,38 @@
+{
+  "signal": "QC-STARTUP-20261009-PASS",
+  "date": "2026-10-09",
+  "scope": "Startup theme configuration fix only",
+  "source": {
+    "path": "tailwind.config.js",
+    "sha256": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "change": "darkMode: media -> class"
+  },
+  "generatedFlags": {
+    "androidObservedAfterBundle": "class dark",
+    "web": "class dark"
+  },
+  "checks": {
+    "scopedEslint": "pass, exit 0",
+    "scopedDiffCheck": "pass, exit 0",
+    "web": "8/8 passed",
+    "native": "Android bundle and Persediaan screen observed"
+  },
+  "runtime": {
+    "metroPort": 8088,
+    "metroPid": 28952,
+    "backendPort": 8001,
+    "backendPid": 24116,
+    "logs": ".expo/qc-startup-2026-10-09/",
+    "leftRunning": true
+  },
+  "evidence": [
+    "REPORT.md",
+    "native-results.json",
+    "web-results.json",
+    "web-check.cjs",
+    "web-login-390.png",
+    "web-login-1280.png",
+    "web-onboarding.png"
+  ],
+  "publication": "No commit or push; Project Manager owns integration gate and publication."
+}

@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "app/(no-layout)/_layout.tsx has no registration warning",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx preserves every direct child",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx retains transition options",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/_layout.tsx has unique registered names",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx has no registration warning",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx preserves every direct child",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx retains transition options",
+      "pass": true
+    },
+    {
+      "name": "app/(no-layout)/(cashier)/catalog/_layout.tsx has unique registered names",
+      "pass": true
+    },
+    {
+      "name": "search header belongs to cashier catalog",
+      "pass": true
+    },
+    {
+      "name": "index header remains Katalog",
+      "pass": true
+    },
+    {
+      "name": "detail header remains Detail Pesanan",
+      "pass": true
+    },
+    {
+      "name": "terms header preserved",
+      "pass": true
+    },
+    {
+      "name": "root hides cashier parent header",
+      "pass": true
+    },
+    {
+      "name": "cashier hides catalog parent header",
+      "pass": true
+    },
+    {
+      "name": "root hides back office catalog header",
+      "pass": true
+    },
+    {
+      "name": "back office menu retains child registration",
+      "pass": true
+    },
+    {
+      "name": "legacy registrations removed only at wrong parent",
+      "pass": true
+    },
+    {
+      "name": "search screen file still exists",
+      "pass": true
+    },
+    {
+      "name": "catalog menu child still exists",
+      "pass": true
+    },
+    {
+      "name": "inputs stable during verification",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "app/(no-layout)/_layout.tsx",
+      "sha256": "66399da5e6d829598386b1b9fc7fb4508146c771f640fcf081e79e5f1896f9f0"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/catalog/_layout.tsx",
+      "sha256": "1f55b4214222f8b59a6c1c605ac138c801fde76c4756d5b39f9eebe07da620a9"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/_layout.tsx",
+      "sha256": "45ae8a2d80cbff408157a15e07cfea2b75feb863952447472d87831e96fd7f5e"
+    },
+    {
+      "file": "app/(no-layout)/catalog/_layout.tsx",
+      "sha256": "1eaaf0089dfe37a70e443016ed7a31acc5bfedc3b090a6608b9803e4dc1b43fc"
+    }
+  ],
+  "sorter": {
+    "file": "node_modules/expo-router/build/useScreens.js",
+    "sha256": "fe94c51fb0d6091e3467cde1401d437f9b8c94b2fe2172e5768cf46774a81498"
+  },
+  "scope": "Production layout functions and installed expo-router sorter + filesystem; JSStack/Header adapters; not native navigation"
+}

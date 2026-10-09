@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-10-09T01:33:37.809Z",
+  "passed": false,
+  "assertions": 30,
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at main (C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\codex-2\\bill-payments\\check-browser.cjs:257:10)",
+  "pageErrors": []
+}

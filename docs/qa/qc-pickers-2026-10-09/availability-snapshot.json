@@ -1,0 +1,27 @@
+{
+  "before": {
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "docs/qa/senior-7-2026-10-09/select-availability/availability.cjs": "5ccde200666e75d60ba4f094e619b6633e3a8accfe95d3896ea3a7155c5a6915",
+    "docs/qa/senior-7-2026-10-09/select-availability/form-integration.cjs": "71552db91e330d56c3fd3c0be77ed13655e8e593e8de30c33b2a42273c39b112",
+    "docs/qa/senior-7-2026-10-09/select-availability/typecheck.cjs": "0af9c69fc72347d2ea061755399ac0ffa1f2d5040f71e707e86a670e22b75bd1",
+    "docs/qa/senior-7-2026-10-09/shared-picker-lifecycle.cjs": "b7aa4dead3510b52e8ea7f20a084c2c8360ae6b5693714d784da4092ba2fb6e5",
+    "docs/qa/senior-7-2026-10-09/barcode-lifecycle.cjs": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768",
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8"
+  },
+  "after": {
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "node_modules/react-hook-form/dist/index.cjs.js": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+    "docs/qa/senior-7-2026-10-09/select-availability/availability.cjs": "5ccde200666e75d60ba4f094e619b6633e3a8accfe95d3896ea3a7155c5a6915",
+    "docs/qa/senior-7-2026-10-09/select-availability/form-integration.cjs": "71552db91e330d56c3fd3c0be77ed13655e8e593e8de30c33b2a42273c39b112",
+    "docs/qa/senior-7-2026-10-09/select-availability/typecheck.cjs": "0af9c69fc72347d2ea061755399ac0ffa1f2d5040f71e707e86a670e22b75bd1",
+    "docs/qa/senior-7-2026-10-09/shared-picker-lifecycle.cjs": "b7aa4dead3510b52e8ea7f20a084c2c8360ae6b5693714d784da4092ba2fb6e5",
+    "docs/qa/senior-7-2026-10-09/barcode-lifecycle.cjs": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768",
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8"
+  },
+  "stable": true
+}

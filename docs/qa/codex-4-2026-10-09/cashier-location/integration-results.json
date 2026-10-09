@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "passed": 3,
+  "checks": [
+    "Cashier tabs delta contains only the location header option",
+    "Cashier no-layout delta contains only location child registration",
+    "Nine selected read-only contracts unchanged since scope snapshot"
+  ],
+  "checkedAt": "2026-10-09T02:14:38.185Z",
+  "scope": "Exact scoped integration deltas and selected read-only contracts; other concurrent source files excluded."
+}

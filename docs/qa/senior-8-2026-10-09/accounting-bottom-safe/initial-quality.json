@@ -1,0 +1,232 @@
+{
+  "sources": [
+    "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+    "components/common/Wrapper.tsx",
+    "components/common/AnimatedWrapper.tsx",
+    "components/feature/reports/ReportActionButton.tsx",
+    "components/common/BottomActionBar.tsx"
+  ],
+  "lint": {
+    "baseline": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 170) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 175) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\closing-journal\\modify.tsx:730:27\n  728 | \t\t\t\t\t<View className=\"w-full px-2 pt-2\">\n  729 | \t\t\t\t\t\t{PERIOD_OPTIONS.map((p) => {\n> 730 | \t\t\t\t\t\t\tconst isSelected = form.watch(\"period\") === p;\n      | \t\t\t\t\t\t\t                   ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  731 | \t\t\t\t\t\t\treturn (\n  732 | \t\t\t\t\t\t\t\t<Pressable\n  733 | \t\t\t\t\t\t\t\t\tkey={p}"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Controller' is defined but never used."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Expense' is defined but never used."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:91:29\n  89 |\n  90 | \t// Auto-fill account code when account name changes\n> 91 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  92 | \tuseEffect(() => {\n  93 | \t\tconst matched = EXPENSE_ACCOUNTS.find(\n  94 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\incomes\\modify.tsx:90:29\n  88 |\n  89 | \t// Auto-fill account code when account name changes\n> 90 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  91 | \tuseEffect(() => {\n  92 | \t\tconst matched = INCOME_ACCOUNTS.find(\n  93 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      }
+    ],
+    "final": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 171) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 176) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\closing-journal\\modify.tsx:731:27\n  729 | \t\t\t\t\t<View className=\"w-full px-2 pt-2\">\n  730 | \t\t\t\t\t\t{PERIOD_OPTIONS.map((p) => {\n> 731 | \t\t\t\t\t\t\tconst isSelected = form.watch(\"period\") === p;\n      | \t\t\t\t\t\t\t                   ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  732 | \t\t\t\t\t\t\treturn (\n  733 | \t\t\t\t\t\t\t\t<Pressable\n  734 | \t\t\t\t\t\t\t\t\tkey={p}"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Controller' is defined but never used."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "message": "'Expense' is defined but never used."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:94:29\n  92 |\n  93 | \t// Auto-fill account code when account name changes\n> 94 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  95 | \tuseEffect(() => {\n  96 | \t\tconst matched = EXPENSE_ACCOUNTS.find(\n  97 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\incomes\\modify.tsx:93:29\n  91 |\n  92 | \t// Auto-fill account code when account name changes\n> 93 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  94 | \tuseEffect(() => {\n  95 | \t\tconst matched = INCOME_ACCOUNTS.find(\n  96 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      }
+    ],
+    "introduced": [
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 171) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "severity": 1,
+        "message": "The 'lines' logical expression could make the dependencies of useMemo Hook (at line 176) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook."
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\closing-journal\\modify.tsx:731:27\n  729 | \t\t\t\t\t<View className=\"w-full px-2 pt-2\">\n  730 | \t\t\t\t\t\t{PERIOD_OPTIONS.map((p) => {\n> 731 | \t\t\t\t\t\t\tconst isSelected = form.watch(\"period\") === p;\n      | \t\t\t\t\t\t\t                   ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  732 | \t\t\t\t\t\t\treturn (\n  733 | \t\t\t\t\t\t\t\t<Pressable\n  734 | \t\t\t\t\t\t\t\t\tkey={p}"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:94:29\n  92 |\n  93 | \t// Auto-fill account code when account name changes\n> 94 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  95 | \tuseEffect(() => {\n  96 | \t\tconst matched = EXPENSE_ACCOUNTS.find(\n  97 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "rule": "react-hooks/incompatible-library",
+        "severity": 1,
+        "message": "Compilation Skipped: Use of incompatible library\n\nThis API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.\n\nC:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\app\\(no-layout)\\(back-office)\\report\\accounting\\incomes\\modify.tsx:93:29\n  91 |\n  92 | \t// Auto-fill account code when account name changes\n> 93 | \tconst watchedAccountName = form.watch(\"accountName\");\n     | \t                           ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.\n  94 | \tuseEffect(() => {\n  95 | \t\tconst matched = INCOME_ACCOUNTS.find(\n  96 | \t\t\t(acc) => acc.value === watchedAccountName,"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+        "components/common/Wrapper.tsx",
+        "components/common/AnimatedWrapper.tsx",
+        "components/feature/reports/ReportActionButton.tsx",
+        "components/common/BottomActionBar.tsx"
+      ],
+      "status": 0,
+      "stdout": "Checked 19 files in 139ms. No fixes applied.\nFound 3 warnings.\n",
+      "stderr": "app\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:5:8 lint/correctness/noUnusedImports  FIXABLE  ━━━━━━━━━━\n\n  ! These imports are unused.\n  \n    3 │ import * as DateTimePicker from \"@react-native-community/datetimepicker\";\n    4 │ import { router, useLocalSearchParams } from \"expo-router\";\n  > 5 │ import React, { useEffect, useState } from \"react\";\n      │        ^^^^^\n    6 │ import { Controller, useForm } from \"react-hook-form\";\n    7 │ import {\n  \n  i Unused imports might be the result of an incomplete refactoring.\n  \n  i Unsafe fix: Remove the unused imports.\n  \n    5 │ import·React,·{·useEffect,·useState·}·from·\"react\";\n      │        -------                                     \n\napp\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:6:10 lint/correctness/noUnusedImports  FIXABLE  ━━━━━━━━━━\n\n  ! Several of these imports are unused.\n  \n    4 │ import { router, useLocalSearchParams } from \"expo-router\";\n    5 │ import React, { useEffect, useState } from \"react\";\n  > 6 │ import { Controller, useForm } from \"react-hook-form\";\n      │          ^^^^^^^^^^\n    7 │ import {\n    8 │ \tKeyboardAvoidingView,\n  \n  i Unused imports might be the result of an incomplete refactoring.\n  \n  i Unsafe fix: Remove the unused imports.\n  \n    6 │ import·{·Controller,·useForm·}·from·\"react-hook-form\";\n      │          ------------                                 \n\napp\\(no-layout)\\(back-office)\\report\\accounting\\expenses\\modify.tsx:43:13 lint/correctness/noUnusedImports  FIXABLE  ━━━━━━━━━━\n\n  ! This import is unused.\n  \n    41 │ import { type ExpenseSchema, expenseSchema } from \"@/schema/accounting/expense\";\n    42 │ import { useAccountingStore } from \"@/store/accountingStore\";\n  > 43 │ import type { Expense } from \"@/types/ui/accounting/expense\";\n       │             ^^^^^^^^^^^\n    44 │ \n    45 │ const MONTH_NAMES = [\n  \n  i Unused imports might be the result of an incomplete refactoring.\n  \n  i Unsafe fix: Remove the unused imports.\n  \n     41  41 │   import { type ExpenseSchema, expenseSchema } from \"@/schema/accounting/expense\";\n     42  42 │   import { useAccountingStore } from \"@/store/accountingStore\";\n     43     │ - import·type·{·Expense·}·from·\"@/types/ui/accounting/expense\";\n     44  43 │   \n     45  44 │   const MONTH_NAMES = [\n  \n\n"
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+        "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+        "components/common/Wrapper.tsx",
+        "components/common/AnimatedWrapper.tsx",
+        "components/feature/reports/ReportActionButton.tsx",
+        "components/common/BottomActionBar.tsx"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'components/common/AnimatedWrapper.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'components/common/Wrapper.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'components/feature/reports/ReportActionButton.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/accounts/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/closing-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/expenses/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/general-journal/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/modify.tsx",
+    "app/(no-layout)/(back-office)/report/accounting/incomes/receipt.tsx",
+    "components/common/Wrapper.tsx",
+    "components/common/AnimatedWrapper.tsx",
+    "components/feature/reports/ReportActionButton.tsx",
+    "components/common/BottomActionBar.tsx",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

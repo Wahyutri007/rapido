@@ -1,0 +1,24 @@
+{
+	"kind": "production memo hooks in React DOM with API fixtures",
+	"checks": [
+		"menu resolves relations and prices",
+		"reference query refetch updates every relation",
+		"switch menu ID updates prices and missing relations",
+		"missing backend preserves existing fixture fallback",
+		"unresolved relation fallbacks unchanged",
+		"embedded extra relations have priority",
+		"extra query refetch resolves both relation directions",
+		"switch extra ID excludes old links",
+		"missing menu query yields empty linked list",
+		"bundling resolves outlet prices and item names",
+		"bundling refetch updates outlet price icon and item",
+		"switch bundle ID preserves query store and price fallbacks",
+		"missing bundle preserves existing first-fixture fallback"
+	],
+	"runtimeErrors": [],
+	"files": {
+		"bundling": "app/(no-layout)/catalog/bundling/detail.tsx",
+		"extra": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+		"menu": "app/(no-layout)/catalog/menu/detail.tsx"
+	}
+}

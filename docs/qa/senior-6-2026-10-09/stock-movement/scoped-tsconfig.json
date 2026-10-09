@@ -1,0 +1,11 @@
+{
+	"extends": "../tsconfig.json",
+	"include": [
+		"../app/(no-layout)/inventory/stock-movement/*.tsx",
+		"../app/(no-layout)/inventory/_layout.tsx",
+		"../app/(back-office)/inventory/index.tsx",
+		"../expo-env.d.ts",
+		"../nativewind-env.d.ts",
+		"types/**/*.ts"
+	]
+}

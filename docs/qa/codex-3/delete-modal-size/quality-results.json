@@ -1,0 +1,38 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-008",
+  "sourceHash": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+  "baselineHash": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+  "lint": {
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "filePath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\components\\common\\DeleteConfirmModal.tsx",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+      }
+    ]
+  },
+  "biome": {
+    "exitCode": 0,
+    "stdout": "Checked 1 file in 24ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "contractUnchanged": true,
+  "contractComparison": "Full AST unchanged except RN dimension import, width hook declaration, ModalContent width expression and one Image style; public props/callbacks/copy/remaining JSX intact",
+  "diagnostics": [],
+  "typeScope": "One shared modal root + imported dependency closure and actual project options/declarations; caller AST inventory, not all screens/full-project type gate",
+  "status": "PASS"
+}

@@ -1,0 +1,101 @@
+{
+  "ticket": "SD5-009",
+  "developer": "Software Developer Senior 5 / Codex-5",
+  "status": "READY_FOR_QA",
+  "ownedSourceHashes": {
+    "lib/inventory-closing-stock.ts": "093ed466a2d8bfe73a52839d973766318aedf3b603e86f19d5f0a3374cae3fee",
+    "components/feature/inventory/closing-stock/ClosingStockScreen.tsx": "36b0e45c59fa77f7ed7c41a60d2b08c3ef1fc36a5cba42062d07460345a9fe4f",
+    "app/(back-office)/inventory/closing-stock.tsx": "4f03af99dd9206197ee8c654554180483853a665b224ba80680108053ea8ce00",
+    "assets/images/inventory/closing-stock/store.svg": "6c3d9ae4527437e6a4ed8b1d8e51a3ae2936687619fa1cf58bace78b7f5b2255",
+    "assets/images/inventory/closing-stock/status.svg": "43ec6f67b519c7fbb6cc3b1d863359febbfbca9e1321fa9bc79b0e931af2ff88"
+  },
+  "sharedIntegrationSnapshotHashes": {
+    "app/(back-office)/inventory/index.tsx": "4b40d82a56e87b586efe7909f43a537af82a818f974fe58abff17d321cdbaf75",
+    "app/(back-office)/inventory/_layout.tsx": "1be5b0450504ebda95edbd5d21a7d5b2c3cbc3e6b19f64eed78343ea83150094"
+  },
+  "sharedIntegrationScope": "Only closing-stock href and header registration/fallback. Billing/movement/material/composition changes belong to their owners; shared snapshots are not approval of entire files.",
+  "readOnlyDependencies": {
+    "constants/data/inventory.ts": {
+      "before": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d",
+      "after": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d"
+    },
+    "constants/data/inventory-materials.ts": {
+      "before": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08",
+      "after": "230a2020a4d2336a449d52977dc402854ccb32c036f2824bedfaca1eb5369c08"
+    },
+    "store/inventoryMaterialStore.ts": {
+      "before": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30",
+      "after": "c6d7e84223c4f2e3d87c7f3a5264cbe572610c8e27dc56ef460cf03738a04a30"
+    },
+    "lib/inventory.ts": {
+      "before": "5edc2c03673a307387fefb151ba375966b165c8200c79cda00cd95ed1e145d6f",
+      "after": "5edc2c03673a307387fefb151ba375966b165c8200c79cda00cd95ed1e145d6f"
+    },
+    "types/ui/inventory.ts": {
+      "before": "fcba64e12d5653514c60e049253236ca71e619a59796371a01a557cb5869a7c0",
+      "after": "fcba64e12d5653514c60e049253236ca71e619a59796371a01a557cb5869a7c0"
+    },
+    "types/ui/inventory/material.ts": {
+      "before": "f781e865b36188ad7fb3debc898ae3aa0257841812a8c9d28ad65bcc708a4669",
+      "after": "f781e865b36188ad7fb3debc898ae3aa0257841812a8c9d28ad65bcc708a4669"
+    },
+    "components/common/SingleSelect.tsx": {
+      "before": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+      "after": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+    },
+    "components/common/SearchBar.tsx": {
+      "before": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+      "after": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0"
+    },
+    "components/common/Card.tsx": {
+      "before": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+      "after": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a"
+    },
+    "components/common/Wrapper.tsx": {
+      "before": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+      "after": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8"
+    },
+    "components/common/Header.tsx": {
+      "before": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+      "after": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+    },
+    "app/(back-office)/_layout.tsx": {
+      "before": "af73d6103de0470de5a781c76ebf4f9e97b6acaa198a616705256b35e0cdbd98",
+      "after": "af73d6103de0470de5a781c76ebf4f9e97b6acaa198a616705256b35e0cdbd98"
+    },
+    "components/custom/BottomTab.tsx": {
+      "before": "bf8c30fb96847d8bd9e45209965cd70bf334442fd0c651bfa23348e15eef73af",
+      "after": "bf8c30fb96847d8bd9e45209965cd70bf334442fd0c651bfa23348e15eef73af"
+    }
+  },
+  "concurrentDependencyDrift": [
+    "components/common/Wrapper.tsx"
+  ],
+  "checks": {
+    "model": 41,
+    "browser": 30,
+    "colorCascadeSupplement": 2,
+    "eslint": {
+      "exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "stderr": ""
+    },
+    "biome": 0,
+    "typeDiagnostics": 0,
+    "diff": 0,
+    "headerCallbackSupplement": 4
+  },
+  "runtime": {
+    "serverOperations": "None by Senior5. Codex4 recovered shared servers during this work, final test uses its existing Metro.",
+    "browser": "Production feature/routes/shared UI on a test ExpoRoot context with production Tailwind CLI stylesheet injected; authentication/API bypassed and material writes confined to the test page.",
+    "offlineBuild": "Diagnostic fallback only, not final passing runtime. Native bridge/default config problems retained as harness failures; final runtime uses configured Expo CLI."
+  },
+  "limitations": [
+    "Existing Inventory session data, not persisted backend balances. No new application dummy seed or backend endpoint.",
+    "Per-store balances and product store memberships unavailable. Never allocate aggregate quantities by membership or warehouse names.",
+    "Transactions do not post current balances. This report is a current catalog snapshot, not a historical ledger.",
+    "Android/keyboard/font scaling/full auth routing and pixel parity require QA. Existing shared header/search/select/tab chrome differs from Figma."
+  ],
+  "verifiedAt": "2026-10-09T02:26:22.474Z"
+}

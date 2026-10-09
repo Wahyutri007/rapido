@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-10-09T01:04:24.966Z",
+  "drift": [
+    {
+      "file": "node_modules/react-native-css-interop/.cache/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b"
+    }
+  ],
+  "noApplicationEdits": true
+}

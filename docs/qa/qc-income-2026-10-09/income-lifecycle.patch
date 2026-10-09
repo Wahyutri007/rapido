@@ -1,0 +1,131 @@
+diff --git a/app/(no-layout)/manage/income/detail.tsx b/app/(no-layout)/manage/income/detail.tsx
+index 826aaa7..4c47b4f 100644
+--- a/app/(no-layout)/manage/income/detail.tsx
++++ b/app/(no-layout)/manage/income/detail.tsx
+@@ -12,10 +12,38 @@ import { useAccountingStore } from "@/store/accountingStore";
+ 
+ export default function IncomeDetailScreen() {
+ 	const { id } = useLocalSearchParams<{ id: string }>();
++	return <IncomeDetailEditor key={id} id={id} />;
++}
++
++function IncomeDetailEditor({ id }: { id: string }) {
+ 	const income = useAccountingStore((state) =>
+ 		state.incomes.find((item) => item.id === id),
+ 	);
+ 	const [confirm, setConfirm] = React.useState(false);
++	const mounted = React.useRef(true);
++	const confirmationActive = React.useRef(false);
++	React.useEffect(() => {
++		mounted.current = true;
++		return () => {
++			mounted.current = false;
++			confirmationActive.current = false;
++		};
++	}, []);
++	function openConfirmation() {
++		if (!mounted.current || income?.type !== "manual") return;
++		confirmationActive.current = true;
++		setConfirm(true);
++	}
++	function closeConfirmation() {
++		confirmationActive.current = false;
++		if (mounted.current) setConfirm(false);
++	}
++	function confirmDeletion() {
++		if (!mounted.current || !confirmationActive.current) return;
++		confirmationActive.current = false;
++		setConfirm(false);
++		if (removeManagedIncome(id)) delayedBack();
++	}
+ 	if (!income)
+ 		return (
+ 			<Wrapper contentContainerStyle={{ padding: 16 }}>
+@@ -31,18 +59,15 @@ export default function IncomeDetailScreen() {
+ 						editText="Edit"
+ 						deleteText="Hapus"
+ 						onEdit={() => router.push(route("/manage/income/modify", { id }))}
+-						onDelete={() => setConfirm(true)}
++						onDelete={openConfirmation}
+ 					/>
+ 					<DeleteConfirmModal
+ 						isOpen={confirm}
+-						onClose={() => setConfirm(false)}
++						onClose={closeConfirmation}
+ 						title="Hapus Penerimaan?"
+ 						itemName={income.referenceNumber}
+ 						description="Penerimaan manual ini akan dihapus dari daftar dan laporan pratinjau."
+-						onConfirm={() => {
+-							setConfirm(false);
+-							if (removeManagedIncome(id)) delayedBack();
+-						}}
++						onConfirm={confirmDeletion}
+ 					/>
+ 				</>
+ 			)}
+diff --git a/components/feature/accounting/CashEntryForm.tsx b/components/feature/accounting/CashEntryForm.tsx
+index 7347785..6615ba5 100644
+--- a/components/feature/accounting/CashEntryForm.tsx
++++ b/components/feature/accounting/CashEntryForm.tsx
+@@ -50,12 +50,20 @@ export default function CashEntryForm({
+ 		: INCOME_FUNDING_SOURCES;
+ 	const stores = isExpense ? EXPENSE_STORES : INCOME_STORES;
+ 	const save = isExpense ? saveManagedExpense : saveManagedIncome;
+-	const [savedId, setSavedId] = React.useState(id);
++	const savedId = React.useRef(id);
++	const mounted = React.useRef(true);
++	const pending = React.useRef(false);
+ 	const [success, setSuccess] = React.useState(false);
+ 	const form = useForm<CashEntryValues>({
+ 		resolver: zodResolver(isExpense ? manageExpenseSchema : manageIncomeSchema),
+ 		defaultValues: initialValues,
+ 	});
++	React.useEffect(() => {
++		mounted.current = true;
++		return () => {
++			mounted.current = false;
++		};
++	}, []);
+ 	const accountName = useWatch({ control: form.control, name: "accountName" });
+ 	const amount = useWatch({ control: form.control, name: "amount" });
+ 	const selectedStore = useWatch({ control: form.control, name: "store" });
+@@ -74,8 +82,9 @@ export default function CashEntryForm({
+ 		);
+ 	}, [accountName, accounts, form]);
+ 	const submit = (values: CashEntryValues) => {
++		if (!mounted.current) return;
+ 		form.clearErrors("root");
+-		const result = save(values, savedId);
++		const result = save(values, savedId.current);
+ 		if ("error" in result) {
+ 			if (result.error === "duplicate")
+ 				form.setError("referenceNumber", {
+@@ -93,9 +102,18 @@ export default function CashEntryForm({
+ 				});
+ 			return;
+ 		}
+-		setSavedId(result.id);
++		savedId.current = result.id;
+ 		setSuccess(true);
+ 	};
++	async function handleSubmit() {
++		if (!mounted.current || pending.current) return;
++		pending.current = true;
++		try {
++			await form.handleSubmit(submit)();
++		} finally {
++			pending.current = false;
++		}
++	}
+ 	return (
+ 		<>
+ 			<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>
+@@ -272,7 +290,7 @@ export default function CashEntryForm({
+ 					</Form>
+ 				</Card>
+ 			</Wrapper>
+-			<BottomActionButton onPress={form.handleSubmit(submit)}>
++			<BottomActionButton onPress={handleSubmit}>
+ 				Simpan {noun}
+ 			</BottomActionButton>
+ 			<SuccessModal

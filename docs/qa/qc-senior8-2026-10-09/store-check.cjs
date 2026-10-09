@@ -1,0 +1,118 @@
+// Independent QC: complete production Ledger + Accounts/Card components and
+// production Zustand store in an isolated Node process. Native/UI host stubs.
+// Run: node docs/qa/qc-senior8-2026-10-09/store-check.cjs
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const ts = require('typescript');
+const React = require(path.resolve('.expo/senior7-test-tools/node_modules/react'));
+require('react'); require.cache[require.resolve('react')].exports = React;
+const {act, create} = require(path.resolve('.expo/senior7-test-tools/node_modules/react-test-renderer'));
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+let currentId = 'qc-a';
+const cache = new Map(), checks = [], errors = [], observations = [];
+const originalError = console.error;
+console.error = (...args) => {
+  if (String(args[0]).includes('react-test-renderer is deprecated')) return;
+  errors.push(args.map(String).join(' ')); originalError(...args);
+};
+const hostExports = names => Object.fromEntries(names.map(name=>[name,name]));
+function load(file) {
+  const absolute = path.resolve(file);
+  if (cache.has(absolute)) return cache.get(absolute).exports;
+  const source = fs.readFileSync(absolute, 'utf8');
+  const module = {exports:{}}; cache.set(absolute, module);
+  const output = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText;
+  function requireModule(name) {
+    if (name === 'react') return React;
+    if (name === 'react/jsx-runtime') return require(path.resolve('.expo/senior7-test-tools/node_modules/react/jsx-runtime'));
+    if (name === 'react-native') return {...hostExports(['View','TextInput','Pressable','ScrollView','KeyboardAvoidingView']),Platform:{OS:'web'}};
+    if (name === 'expo-router') return {useLocalSearchParams:()=>({id:currentId}),router:{push() {}}};
+    if (name.startsWith('@expo/vector-icons')) return 'Icon';
+    if (name === '@/components/icons') return {WalletIcon:'WalletIcon'};
+    if (name === '@/components/common/AlertModal') return {__esModule:true,default:'AlertModal',useAlertModal:()=>{
+      const state = React.useState(false);
+      return {openState:state,open:()=>state[1](true),close:()=>state[1](false)};
+    }};
+    if (name === '@/components/feature/accounting/general-ledger') return hostExports(['LedgerDetailHeaderCard','LedgerDetailSummaryCard','LedgerEntryCard','LedgerPeriodActionSheet','LedgerTypeActionSheet']);
+    if (name === '@/components/feature/accounting/accounts') return {...hostExports(['AccountActionSheet','AccountBalanceSummary','AccountFilterActionSheet']),AccountBalanceCard:load('components/feature/accounting/accounts/AccountBalanceCard.tsx').default};
+    if (name === '@/components/ui/button') return hostExports(['Button','ButtonText']);
+    if (name.startsWith('@/components/')) return name.split('/').at(-1);
+    if (name.startsWith('@/')) return load(name.slice(2)+'.ts');
+    return require(name);
+  }
+  vm.runInNewContext(output, {exports:module.exports,module,require:requireModule,console,Date,setTimeout,clearTimeout}, {filename:absolute});
+  return module.exports;
+}
+const check = (name, actual, expected) => checks.push({name,passed:JSON.stringify(actual)===JSON.stringify(expected),actual,expected});
+const store = load('store/accountingStore.ts').useAccountingStore;
+const Ledger = load('app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx').default;
+const Accounts = load('app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx').default;
+const entry = (id,type,amount,date='2026-10-09') => ({id,accountId:'qc-a',referenceNumber:id,date,title:id,description:'QC fixture',type,amount});
+const ledgerAccount = {id:'qc-a',code:'101',name:'QC Cash',classification:'Aset',subClassification:'Cash',currency:'IDR',balance:80,totalDebit:100,totalCredit:20};
+const saldoAccount = {id:'qc-a',code:'101',name:'QC Cash',classification:'Aset',subClassification:'Cash',currency:'IDR',debit:100,credit:20};
+let renderer;
+const mount = async Component => {await act(async()=>{renderer=create(React.createElement(Component));});};
+const unmount = async()=>{await act(async()=>renderer.unmount());};
+(async()=>{
+  store.setState({ledgerAccounts:[ledgerAccount],ledgerEntries:{'qc-a':[entry('INV-QC-1','debit',100,'2020-01-01')]},accounts:[saldoAccount]});
+  await mount(Ledger);
+  const rows = ()=>renderer.root.findAllByType('LedgerEntryCard').map(node=>node.props.entry.id);
+  const summary = ()=>renderer.root.findByType('LedgerDetailSummaryCard').props;
+  check('complete ledger renders production store entry',rows(),['INV-QC-1']);
+  const stableGetter = store.getState().getAccountLedgerEntries;
+  let addedId;
+  await act(async()=>{addedId=store.getState().addLedgerEntry(entry('ignored','credit',30));});
+  check('production addLedgerEntry rerenders ledger without parent/route update',rows(),[addedId,'INV-QC-1']);
+  check('getter identity remains stable while subscription updates',store.getState().getAccountLedgerEntries===stableGetter,true);
+  check('production credit entry updates summary',summary().totalCredit,30);
+  await act(async()=>renderer.root.findByType('TextInput').props.onChangeText('INV-QC-1'));
+  check('search selects production entry',rows(),['INV-QC-1']);
+  await act(async()=>store.getState().addLedgerEntry(entry('ignored','credit',50)));
+  check('production store update preserves search draft',renderer.root.findByType('TextInput').props.value,'INV-QC-1');
+  check('production store update preserves filtered list',rows(),['INV-QC-1']);
+  await act(async()=>renderer.root.findByType('TextInput').props.onChangeText('QC-NO-MATCH'));
+  observations.push({id:'QC-S8-LEGACY-001',existing:true,kind:'Filtered-empty summary fallback',actual:{rows:rows().length,totalDebit:summary().totalDebit,totalCredit:summary().totalCredit},description:'No matches but summary uses account totals; unchanged pre-existing fallback, excluded from delta approval.'});
+  await act(async()=>renderer.root.findByType('TextInput').props.onChangeText(''));
+  const allDates = rows();
+  await act(async()=>renderer.root.findByType('LedgerPeriodActionSheet').props.onSelectPeriod('month'));
+  check('existing period control updates selected value',renderer.root.findByType('LedgerPeriodActionSheet').props.selectedPeriod,'month');
+  observations.push({id:'QC-S8-LEGACY-002',existing:true,kind:'Period not applied',actual:{before:allDates,after:rows(),outOfPeriodEntryStillPresent:rows().includes('INV-QC-1'),oldEntryDate:'2020-01-01'},description:'Selecting month still includes a 2020 entry; selectedPeriod is not used by filtering; no period correctness approval.'});
+  await act(async()=>store.setState({ledgerAccounts:[]}));
+  check('empty production account store renders recoverable state',renderer.root.findAllByType('LedgerDetailSummaryCard').length,0);
+  check('empty account state contains correct message',JSON.stringify(renderer.toJSON()).includes('Akun tidak ditemukan'),true);
+  await act(async()=>store.setState({ledgerAccounts:[ledgerAccount]}));
+  check('restoring production account store renders ledger again',renderer.root.findAllByType('LedgerDetailSummaryCard').length,1);
+  await unmount();
+  store.setState({accounts:[saldoAccount]});
+  await mount(Accounts);
+  const inputs = ()=>renderer.root.findAllByType('TextInput');
+  const totals = ()=>renderer.root.findByType('AccountBalanceSummary').props;
+  check('complete accounts page hydrates debit/credit',[inputs()[0].props.value,inputs()[1].props.value],['100','20']);
+  await act(async()=>inputs()[0].props.onChangeText('0012'));
+  check('debit updates real updateBalance store action',store.getState().accounts[0].debit,12);
+  check('store echo retains debit draft text',inputs()[0].props.value,'0012');
+  check('production parent summary reflects changed debit',totals().totalDebit,12);
+  await act(async()=>inputs()[1].props.onChangeText('0042'));
+  check('credit update preserves debit in production store',[store.getState().accounts[0].debit,store.getState().accounts[0].credit],[12,42]);
+  await act(async()=>store.getState().updateAccount('qc-a',{name:'QC Renamed'}));
+  check('production metadata refresh retains both drafts',[inputs()[0].props.value,inputs()[1].props.value],['0012','0042']);
+  const menu = renderer.root.findAllByType('Pressable').find(node=>node.props.hitSlop===8);
+  await act(async()=>menu.props.onPress());
+  check('account menu opens with production account identity',renderer.root.findByType('AccountActionSheet').props.account.id,'qc-a');
+  await act(async()=>renderer.root.findByType('AccountActionSheet').props.onResetBalance(store.getState().accounts[0]));
+  check('reset opens parent confirmation',renderer.root.findByType('AlertModal').props.openState[0],true);
+  check('reset does not mutate before confirmation',store.getState().accounts[0].debit,12);
+  await act(async()=>renderer.root.findByType('AlertModal').props.onConfirm());
+  check('confirmed parent reset calls real resetBalance',[store.getState().accounts[0].debit,store.getState().accounts[0].credit],[0,0]);
+  check('confirmed production reset clears rendered input drafts',[inputs()[0].props.value,inputs()[1].props.value],['','']);
+  check('reset refreshes production summary',[totals().totalDebit,totals().totalCredit],[0,0]);
+  await unmount();
+  check('no unexpected React runtime errors',errors,[]);
+  const files = [...cache.keys()].map(absolute=>({file:path.relative(process.cwd(),absolute).replaceAll('\\','/'),sha256:crypto.createHash('sha256').update(fs.readFileSync(absolute)).digest('hex')}));
+  const result={date:'2026-10-09',timezone:'Asia/Jakarta',kind:'Independent QC: complete production Accounts/Card and Ledger components, production Zustand store, native/UI host stubs; in-memory fixture only, no API/native/geometry test.',passed:checks.filter(c=>c.passed).length,failed:checks.filter(c=>!c.passed).length,checks,errors,observations,files};
+  fs.writeFileSync(path.join(__dirname,'store-results.json'),JSON.stringify(result,null,2)+'\n');
+  console.log(JSON.stringify({passed:result.passed,failed:result.failed,failures:checks.filter(c=>!c.passed),observations}));
+  process.exitCode=result.failed?1:0;
+})().catch(error=>{console.error(error);process.exitCode=2;});

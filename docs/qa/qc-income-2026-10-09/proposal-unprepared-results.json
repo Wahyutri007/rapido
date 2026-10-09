@@ -1,0 +1,2212 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T20:12:16.167Z",
+  "tested": "PROPOSAL_ONLY_NOT_APPLIED",
+  "scope": "Actual income routes/wrapper/CashEntryForm/shared Form/DeleteConfirmModal/RHF/Zod/Zustand/local helpers; native/UI/router/success modal adapters and controlled resolver timing; no API/persist/device",
+  "passed": 24,
+  "failed": 12,
+  "errors": [],
+  "checks": [
+    {
+      "name": "edit A: original values prefill",
+      "actual": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "Pengeluaran tanggal 31 Januari"
+      },
+      "expected": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "Pengeluaran tanggal 31 Januari"
+      },
+      "passed": true
+    },
+    {
+      "name": "edit A: unrelated store update preserves draft",
+      "actual": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "QC unsaved description"
+      },
+      "expected": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "QC unsaved description"
+      },
+      "passed": true
+    },
+    {
+      "name": "edit A: same ID refetch preserves draft",
+      "actual": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "QC unsaved description"
+      },
+      "expected": {
+        "accountName": "Pendapatan Operasional",
+        "accountCode": "41001",
+        "referenceNumber": "KM/A002/2603/001",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-19",
+        "amount": 10000,
+        "description": "QC unsaved description"
+      },
+      "passed": true
+    },
+    {
+      "name": "A to B: route key resets all fields to B",
+      "actual": {
+        "accountName": "Kas Kecil",
+        "accountCode": "110001",
+        "referenceNumber": "KM/A001/2603/002",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-20",
+        "amount": 10000,
+        "description": "Penerimaan kas operasional"
+      },
+      "expected": {
+        "accountName": "Kas Kecil",
+        "accountCode": "110001",
+        "referenceNumber": "KM/A001/2603/002",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-20",
+        "amount": 10000,
+        "description": "Penerimaan kas operasional"
+      },
+      "passed": true
+    },
+    {
+      "name": "B to create: fresh defaults",
+      "actual": {
+        "accountName": "",
+        "accountCode": "",
+        "referenceNumber": "",
+        "fundingSource": "",
+        "store": "",
+        "date": "",
+        "amount": 0,
+        "description": ""
+      },
+      "expected": {
+        "accountName": "",
+        "accountCode": "",
+        "referenceNumber": "",
+        "fundingSource": "",
+        "store": "",
+        "date": "",
+        "amount": 0,
+        "description": ""
+      },
+      "passed": true
+    },
+    {
+      "name": "create invalid: required/schema errors shown",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "create invalid: no success or record",
+      "actual": [
+        false,
+        3
+      ],
+      "expected": [
+        false,
+        3
+      ],
+      "passed": true
+    },
+    {
+      "name": "missing-id: blocked edit renders no form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "missing-id: blocked edit shows accurate placeholder",
+      "actual": "Penerimaan tidak ditemukan.",
+      "expected": "Penerimaan tidak ditemukan.",
+      "passed": true
+    },
+    {
+      "name": "inc-2: blocked edit renders no form",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "inc-2: blocked edit shows accurate placeholder",
+      "actual": "Penerimaan penjualan hanya dapat dilihat melalui detail.",
+      "expected": "Penerimaan penjualan hanya dapat dilihat melalui detail.",
+      "passed": true
+    },
+    {
+      "name": "create valid: adds one manual record",
+      "actual": [
+        true,
+        "manual",
+        4
+      ],
+      "expected": [
+        true,
+        "manual",
+        4
+      ],
+      "passed": true
+    },
+    {
+      "name": "create valid: success opens",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "repeat save after render: updates first ID",
+      "actual": [
+        1,
+        "QC saved update"
+      ],
+      "expected": [
+        1,
+        "QC saved update"
+      ],
+      "passed": true
+    },
+    {
+      "name": "same-event double submit: one new record",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "same-event double submit: successful create has no duplicate error",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "create to B: old cached submit cannot mutate incomes",
+      "actual": [
+        {
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "referenceNumber": "QC-LATE-CREATE",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-10-09",
+          "amount": 10000,
+          "description": "QC local draft",
+          "type": "manual",
+          "createdBy": "Pratinjau lokal",
+          "time": "03.12 WIB",
+          "id": "inc-1791490335984"
+        },
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "create to B: new form draft remains intact",
+      "actual": {
+        "accountName": "Kas Kecil",
+        "accountCode": "110001",
+        "referenceNumber": "KM/A001/2603/002",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-20",
+        "amount": 10000,
+        "description": "Penerimaan kas operasional"
+      },
+      "expected": {
+        "accountName": "Kas Kecil",
+        "accountCode": "110001",
+        "referenceNumber": "KM/A001/2603/002",
+        "fundingSource": "Kas",
+        "store": "Sushiro",
+        "date": "2026-03-20",
+        "amount": 10000,
+        "description": "Penerimaan kas operasional"
+      },
+      "passed": true
+    },
+    {
+      "name": "create to B: old submit cannot open new success",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "A to B: old cached submit cannot edit A after unmount",
+      "actual": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "QC OLD A MUST NOT SAVE",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "async validation: old pending create cannot mutate after mode switch",
+      "actual": [
+        {
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "referenceNumber": "QC-AWAIT-UNMOUNT",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-10-09",
+          "amount": 10000,
+          "description": "QC local draft",
+          "type": "manual",
+          "createdBy": "Pratinjau lokal",
+          "time": "03.12 WIB",
+          "id": "inc-1791490336110"
+        },
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "async validation: B success remains closed",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "disposed page: cached create callback cannot write store",
+      "actual": [
+        {
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "referenceNumber": "QC-AFTER-UNMOUNT",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-10-09",
+          "amount": 10000,
+          "description": "QC local draft",
+          "type": "manual",
+          "createdBy": "Pratinjau lokal",
+          "time": "03.12 WIB",
+          "id": "inc-1791490336143"
+        },
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "invoice detail: no edit/delete actions or modal",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "manual detail: real delete modal opens",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "cancel: modal closes and every record remains",
+      "actual": [
+        false,
+        3,
+        0
+      ],
+      "expected": [
+        false,
+        3,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "confirmed delete: removes only manual A, navigates once",
+      "actual": [
+        false,
+        true,
+        true,
+        1
+      ],
+      "expected": [
+        false,
+        true,
+        true,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "delete A to B: confirmation must reset closed",
+      "actual": true,
+      "expected": false,
+      "passed": false
+    },
+    {
+      "name": "delete A to B: target data matches B",
+      "actual": "KM/A001/2603/002",
+      "expected": "KM/A001/2603/002",
+      "passed": true
+    },
+    {
+      "name": "delete A to B: stale confirm cannot delete old target",
+      "actual": [
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "delete A to B: stale confirm cannot navigate away from B",
+      "actual": 1,
+      "expected": 0,
+      "passed": false
+    },
+    {
+      "name": "cancel then queued confirm: dismissed dialog cannot delete",
+      "actual": [
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "cancel then queued confirm: dismissed dialog cannot navigate",
+      "actual": 1,
+      "expected": 0,
+      "passed": false
+    },
+    {
+      "name": "disposed detail: old confirmation cannot mutate records",
+      "actual": [
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "disposed detail: old confirmation cannot navigate",
+      "actual": 1,
+      "expected": 0,
+      "passed": false
+    },
+    {
+      "name": "same-event delete: model removes once and navigates once",
+      "actual": [
+        2,
+        1
+      ],
+      "expected": [
+        2,
+        1
+      ],
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "app/(no-layout)/manage/income/modify.tsx": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+    "components/feature/manage/income/IncomeForm.tsx": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+    "components/feature/accounting/CashEntryForm.tsx": "891fbb76544f5e4b84d6dccc4c4f52d8478b4ed34eb533b3d6ed3ce4fe32ccf7",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "constants/data/accounting/expenses.ts": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+    "constants/data/accounting/incomes.ts": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+    "lib/manage/expenses.ts": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+    "lib/manage/expense-date.ts": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "schema/manage/expense.ts": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+    "schema/accounting/cash-entry.ts": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+    "store/accountingStore.ts": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec",
+    "constants/data/accounting/accounts.ts": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "constants/data/accounting/closing-journal.ts": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/general-ledger.ts": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+    "lib/manage/incomes.ts": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+    "schema/manage/income.ts": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+    "app/(no-layout)/manage/income/detail.tsx": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+    "components/common/DeleteConfirmModal.tsx": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+  },
+  "loadedModules": [
+    "constants/Colors.ts",
+    "constants/Fonts.ts",
+    "components/common/Form.tsx",
+    "constants/data/accounting/expenses.ts",
+    "constants/data/accounting/incomes.ts",
+    "lib/accounting/date.ts",
+    "lib/manage/expense-date.ts",
+    "schema/accounting/cash-entry.ts",
+    "schema/manage/expense.ts",
+    "constants/data/accounting/accounts.ts",
+    "constants/data/accounting/adjusting-journal.ts",
+    "constants/data/accounting/closing-journal.ts",
+    "constants/data/accounting/general-journal.ts",
+    "constants/data/accounting/general-ledger.ts",
+    "store/accountingStore.ts",
+    "lib/manage/expenses.ts",
+    "schema/manage/income.ts",
+    "lib/manage/incomes.ts",
+    "components/feature/accounting/CashEntryForm.tsx",
+    "components/feature/manage/income/IncomeForm.tsx",
+    "app/(no-layout)/manage/income/modify.tsx",
+    "hooks/useAlertModal.ts",
+    "components/common/DeleteConfirmModal.tsx",
+    "app/(no-layout)/manage/income/detail.tsx"
+  ]
+}

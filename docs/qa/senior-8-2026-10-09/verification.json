@@ -1,0 +1,132 @@
+{
+	"date": "2026-10-09",
+	"timezone": "Asia/Jakarta",
+	"status": "READY_FOR_QA",
+	"head": "acba0d92460c1af3149abc3775f09888a2943cab",
+	"files": [
+		{
+			"file": "app/(no-layout)/catalog/bundling/detail.tsx",
+			"sha256": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+			"errors": 0,
+			"warnings": 3,
+			"messages": [
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 14,
+					"message": "'Card' is defined but never used."
+				},
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 46,
+					"message": "'orderTypesQuery' is assigned a value but never used."
+				},
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 75,
+					"message": "'_' is assigned a value but never used."
+				}
+			]
+		},
+		{
+			"file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+			"sha256": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+			"errors": 0,
+			"warnings": 1,
+			"messages": [
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 52,
+					"message": "'_' is assigned a value but never used."
+				}
+			]
+		},
+		{
+			"file": "app/(no-layout)/catalog/menu/detail.tsx",
+			"sha256": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+			"errors": 0,
+			"warnings": 3,
+			"messages": [
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 1,
+					"message": "'Feather' is defined but never used."
+				},
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 23,
+					"message": "'Colors' is defined but never used."
+				},
+				{
+					"rule": "@typescript-eslint/no-unused-vars",
+					"severity": 1,
+					"line": 64,
+					"message": "'_' is assigned a value but never used."
+				}
+			]
+		},
+		{
+			"file": "app/(no-layout)/(back-office)/report/accounting/general-ledger/detail.tsx",
+			"sha256": "15fb7a72a386f860e6d0926fe1a356fd6b4acaa2b994c279b171942ef0675e8d",
+			"errors": 0,
+			"warnings": 0,
+			"messages": []
+		},
+		{
+			"file": "components/feature/accounting/accounts/AccountBalanceCard.tsx",
+			"sha256": "d266eb2cbb0f3e8048ce62b6e7f42a3b9a8fe12e88e185fe94f73e07a81b913d",
+			"errors": 0,
+			"warnings": 0,
+			"messages": []
+		}
+	],
+	"harnesses": [
+		{
+			"file": "balance-regression.cjs",
+			"sha256": "7b19210dc1ba993a50605ceb354938b27ab29d490a57d1d5f06a88412c54b27b"
+		},
+		{
+			"file": "browser.cjs",
+			"sha256": "a87887c11ad0d5494e26e87f85a3f1958500724a388c3f873b75a2681fb5cc4e"
+		},
+		{
+			"file": "catalog-regression.cjs",
+			"sha256": "1168fa0d8b4e1efa5beb9d5d69c48831e60177cd51451c6983cbb35ee56b0a56"
+		},
+		{
+			"file": "ledger-regression.cjs",
+			"sha256": "1950d1619dbddc27e1a76ff1fd666751ddc5cab2a45103aa40e8f87aaf3d268e"
+		},
+		{
+			"file": "typecheck-focused.cjs",
+			"sha256": "60d9efe9256ec8231ed07873c21eca28c5abe8bcb0688611e98a1c133686f2f6"
+		}
+	],
+	"typecheck": {
+		"full": {
+			"command": "node node_modules/typescript/bin/tsc --noEmit --pretty false",
+			"exitCode": 0,
+			"scope": "Started after catalog edits, before ledger edits; final cross-ticket snapshot awaits coordinated PM gate"
+		},
+		"finalFocused": {
+			"command": "node docs/qa/senior-8-2026-10-09/typecheck-focused.cjs",
+			"exitCode": 0,
+			"diagnostics": 0,
+			"scope": "Ledger and AccountBalanceCard roots plus declarations/dependency closure; typecheck-focused.json"
+		}
+	},
+	"checks": {
+		"catalog": 13,
+		"ledger": 13,
+		"balance": 22,
+		"total": 48,
+		"runtimeErrors": 0,
+		"diffWhitespace": "passed for five source files"
+	},
+	"limits": "Production hook harnesses with API/store/prop fixtures; no full application, native, backend or Figma verification"
+}

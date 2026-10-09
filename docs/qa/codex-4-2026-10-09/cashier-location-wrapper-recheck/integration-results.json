@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "passed": 3,
+  "checks": [
+    "Cashier tabs delta contains only the location header option",
+    "Cashier no-layout delta contains only location child registration",
+    "Eight original read-only contracts unchanged; Wrapper overlay753ae recorded; ten owned sources unchanged"
+  ],
+  "overlay": {
+    "file": "components/common/Wrapper.tsx",
+    "oldSha256": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "newSha256": "753ae276e8204d1345ffb95cadc78b383a5295e3fb78693a56c07369a2a040a8",
+    "ownerScope": "Concurrent shared safe-area footer change, not edited or approved by Codex-4"
+  },
+  "checkedAt": "2026-10-09T02:27:00.948Z",
+  "scope": "Exact scoped integration deltas and selected read-only contracts; other concurrent source files excluded."
+}

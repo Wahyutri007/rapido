@@ -1,0 +1,6 @@
+{
+  "app/(no-layout)/manage/pos-settings/index.tsx": "8f723725c5e11d27f34af6c22b271b3c54749df5da5b8f411ccaa211c9824bff",
+  "app/(no-layout)/manage/pos-settings/_layout.tsx": "de75163871f139fdc5ca96c15946c743d20b188b3ef2dc6c1f441bccc8ebf22c",
+  "components/feature/manage/ManageListActions.tsx": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+  "components/feature/manage/settings/ManageFormNotFound.tsx": "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c"
+}

@@ -1,0 +1,9 @@
+{
+  "initialMetadata": "initial-replay-metadata.json",
+  "issue": "First replay recorded argument lists rather than exit-code result objects; all child commands/assertions passed",
+  "correction": "Changed own reporter property to runs:results and repeated41 on unchanged source",
+  "counting": "Final41 only; no duplicate totals or developer totals added",
+  "applicationDefect": false,
+  "applicationSourceEdited": false,
+  "adapters": "Three new harness-failure cases use memory filesystem/initializer; actual CSS initializer execution counted separately10"
+}

@@ -1,0 +1,82 @@
+{
+  "passed": 17,
+  "failed": 0,
+  "results": [
+    {
+      "name": "components/common/Header.tsx handleBackPress behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SearchBar.tsx handleSortClick behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx handleOpen behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx handleClose behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx handleSelectOption behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx handleSave behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/common/SingleSelect.tsx filteredItems behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx BottomTabPadding behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx handlePress behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx handlePressIn behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "components/custom/BottomTab.tsx handlePressOut behavior AST unchanged",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /inventory/closing-stock",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /inventory",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /home",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /report",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /catalog",
+      "pass": true
+    },
+    {
+      "name": "appearance isolation for /manage",
+      "pass": true
+    }
+  ],
+  "sourceHashes": {
+    "app/(back-office)/_layout.tsx": "497a764ac1a13b952d55b3e799195a239beee8541ff6a424725989b7ef1c0fad",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/custom/BottomTab.tsx": "1fc4c55b830aef78419d6b16417efc02b3024b33d817edffecaf04fceec7bcc7"
+  },
+  "scope": "Behavior callback AST guards and actual BO layout execution with JSX/router adapters. Not full default consumer/browser/native certification."
+}

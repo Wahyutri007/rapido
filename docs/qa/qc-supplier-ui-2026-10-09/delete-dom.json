@@ -1,0 +1,19 @@
+{
+  "content": null,
+  "images": [
+    {
+      "tag": "IMG",
+      "rect": {
+        "x": -194,
+        "y": -27.75,
+        "width": 708,
+        "height": 490,
+        "top": -27.75,
+        "right": 514,
+        "bottom": 462.25,
+        "left": -194
+      },
+      "style": null
+    }
+  ]
+}

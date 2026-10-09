@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const ts = require('typescript');
+const crypto = require('node:crypto');
+const config = ts.readConfigFile('tsconfig.json', ts.sys.readFile);
+const parsed = ts.parseJsonConfigFileContent(config.config, ts.sys, process.cwd());
+const source = 'components/feature/manage/member/MemberModifyScreen.tsx';
+const roots = [source, ...parsed.fileNames.filter(name=>name.endsWith('.d.ts'))];
+const program = ts.createProgram(roots, {...parsed.options, noEmit:true});
+const diagnostics = ts.getPreEmitDiagnostics(program);
+const result={owner:'Codex-3',scope:'MemberModifyScreen and imported dependency closure using project compiler options/declarations; not another full-project typecheck',diagnostics:diagnostics.map(d=>({file:d.file?.fileName,line:d.file&&d.start!==undefined?d.file.getLineAndCharacterOfPosition(d.start).line+1:undefined,message:ts.flattenDiagnosticMessageText(d.messageText,'\n')})),sourceSha256:crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex'),exitCode:diagnostics.length?1:0};
+fs.writeFileSync(path.resolve('docs/qa/codex-3/member-identity/typecheck-results.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({diagnosticCount:diagnostics.length,exitCode:result.exitCode}));
+process.exitCode=result.exitCode;

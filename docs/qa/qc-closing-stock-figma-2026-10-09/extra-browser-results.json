@@ -1,0 +1,1382 @@
+{
+  "scope": "Independent XML-derived geometry, 359/360 boundary, five44px nav targets, long text and zero/unknown status on production RNWeb. Fixture/router transport adapters; not native or full router.",
+  "passed": 50,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "geometry derived from Figma XML 1:12485",
+      "pass": true,
+      "detail": {
+        "key": "search",
+        "expected": [
+          16,
+          88,
+          358,
+          48
+        ],
+        "actual": [
+          16,
+          88,
+          358,
+          48
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12403",
+      "pass": true,
+      "detail": {
+        "key": "store",
+        "expected": [
+          16,
+          152,
+          172,
+          48
+        ],
+        "actual": [
+          16,
+          152,
+          172,
+          48
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12412",
+      "pass": true,
+      "detail": {
+        "key": "status",
+        "expected": [
+          202,
+          152,
+          172,
+          48
+        ],
+        "actual": [
+          202,
+          152,
+          172,
+          48
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12422",
+      "pass": true,
+      "detail": {
+        "key": "card",
+        "expected": [
+          16,
+          216,
+          357,
+          754
+        ],
+        "actual": [
+          16,
+          216,
+          357,
+          754
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12423",
+      "pass": true,
+      "detail": {
+        "key": "tier",
+        "expected": [
+          16,
+          216,
+          357,
+          50
+        ],
+        "actual": [
+          16,
+          216,
+          357,
+          50
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12427",
+      "pass": true,
+      "detail": {
+        "key": "food",
+        "expected": [
+          28,
+          282,
+          333,
+          388
+        ],
+        "actual": [
+          28,
+          282,
+          333,
+          388
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12463",
+      "pass": true,
+      "detail": {
+        "key": "drink",
+        "expected": [
+          28,
+          686,
+          333,
+          268
+        ],
+        "actual": [
+          28,
+          686,
+          333,
+          268
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12486",
+      "pass": true,
+      "detail": {
+        "key": "bar",
+        "expected": [
+          0,
+          1254,
+          390,
+          93
+        ],
+        "actual": [
+          0,
+          1254,
+          390,
+          93
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "geometry derived from Figma XML 1:12421",
+      "pass": true,
+      "detail": {
+        "key": "header",
+        "expected": [
+          0,
+          0,
+          390,
+          72
+        ],
+        "actual": [
+          0,
+          0,
+          390,
+          72
+        ],
+        "difference": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "320 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 51.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "320 gap boundary is correct",
+      "pass": true,
+      "detail": "8px"
+    },
+    {
+      "name": "320 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 51.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "320 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "320 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 276,
+        "lastBottom": 292,
+        "barTop": 387,
+        "inside": true
+      }
+    },
+    {
+      "name": "359 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "359 gap boundary is correct",
+      "pass": true,
+      "detail": "8px"
+    },
+    {
+      "name": "359 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "359 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "359 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 436,
+        "lastBottom": 452,
+        "barTop": 547,
+        "inside": true
+      }
+    },
+    {
+      "name": "360 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "360 gap boundary is correct",
+      "pass": true,
+      "detail": "14px"
+    },
+    {
+      "name": "360 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "360 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "360 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 436,
+        "lastBottom": 452,
+        "barTop": 547,
+        "inside": true
+      }
+    },
+    {
+      "name": "390 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "390 gap boundary is correct",
+      "pass": true,
+      "detail": "14px"
+    },
+    {
+      "name": "390 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "390 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 640,
+        "lastBottom": 656,
+        "barTop": 751,
+        "inside": true
+      }
+    },
+    {
+      "name": "414 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 65.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "414 gap boundary is correct",
+      "pass": true,
+      "detail": "14px"
+    },
+    {
+      "name": "414 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 65.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "414 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "414 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 532,
+        "lastBottom": 548,
+        "barTop": 643,
+        "inside": true
+      }
+    },
+    {
+      "name": "844 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 151.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "844 gap boundary is correct",
+      "pass": true,
+      "detail": "14px"
+    },
+    {
+      "name": "844 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 151.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "844 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "844 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 186,
+        "lastBottom": 202,
+        "barTop": 297,
+        "inside": true
+      }
+    },
+    {
+      "name": "768 all five nav labels fit",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "768 gap boundary is correct",
+      "pass": true,
+      "detail": "14px"
+    },
+    {
+      "name": "768 five nav targets are at least44px and reachable",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ]
+    },
+    {
+      "name": "768 no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "768 last row clears actual bar bounds",
+      "pass": true,
+      "detail": {
+        "lastTop": 820,
+        "lastBottom": 836,
+        "barTop": 931,
+        "inside": true
+      }
+    },
+    {
+      "name": "zero stock follows Habis picker",
+      "pass": true
+    },
+    {
+      "name": "store unknown status is distinct from zero",
+      "pass": true
+    },
+    {
+      "name": "long name/SKU retains readable quantity without horizontal overflow",
+      "pass": true,
+      "detail": {
+        "overflow": false,
+        "rowWidth": 239,
+        "quantityWidth": 29.515625,
+        "quantityInRow": true
+      }
+    },
+    {
+      "name": "runtime exceptions absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "console errors absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "unknown external requests absent",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "matrix": [
+    {
+      "width": 320,
+      "height": 480,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 51.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 51.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "8px",
+      "overflow": false
+    },
+    {
+      "width": 359,
+      "height": 640,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 59,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "8px",
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 54.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 54.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "14px",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 60.390625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 60.40625,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "14px",
+      "overflow": false
+    },
+    {
+      "width": 414,
+      "height": 736,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 65.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 65.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "14px",
+      "overflow": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 151.1875,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 151.203125,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "14px",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "labels": [
+        {
+          "label": "Beranda",
+          "width": 45.21875,
+          "naturalWidth": 45.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Laporan",
+          "width": 44.21875,
+          "naturalWidth": 44.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Katalog",
+          "width": 41.21875,
+          "naturalWidth": 41.21875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Inventory",
+          "width": 50.46875,
+          "naturalWidth": 50.46875,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        },
+        {
+          "label": "Kelola",
+          "width": 32.65625,
+          "naturalWidth": 32.65625,
+          "targetWidth": 136,
+          "targetHeight": 48,
+          "centerReachable": true
+        }
+      ],
+      "columnGap": "14px",
+      "overflow": false
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": []
+}

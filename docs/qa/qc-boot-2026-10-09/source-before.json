@@ -1,0 +1,117 @@
+{
+  "createdAt": "2026-10-08T20:28:32.884Z",
+  "handoffMatches": [
+    {
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "file": "context/AuthContext.tsx",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "file": "hooks/useNavigateAuthenticated.ts",
+      "expected": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "actual": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "passed": true
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "passed": true
+    },
+    {
+      "file": "app/index.tsx",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "file": "components/custom/SplashScreenView.tsx",
+      "expected": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "actual": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.ts",
+      "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.web.ts",
+      "expected": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "actual": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/HANDOFF.md",
+      "expected": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+      "actual": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/check.cjs",
+      "expected": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+      "actual": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/typecheck.cjs",
+      "expected": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+      "actual": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/baseline-results.json",
+      "expected": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+      "actual": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/final-results.json",
+      "expected": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "actual": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/typecheck-results.json",
+      "expected": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6",
+      "actual": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6",
+      "passed": true
+    }
+  ],
+  "hashes": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "context/AuthContext.tsx": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "hooks/useNavigateAuthenticated.ts": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+    "hooks/useProtectedRoute.ts": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+    "components/custom/SplashScreenView.tsx": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "lib/storage.ts": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+    "lib/storage.web.ts": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+    "docs/qa/senior-5-2026-10-09/boot/HANDOFF.md": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+    "docs/qa/senior-5-2026-10-09/boot/check.cjs": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+    "docs/qa/senior-5-2026-10-09/boot/typecheck.cjs": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+    "docs/qa/senior-5-2026-10-09/boot/baseline-results.json": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+    "docs/qa/senior-5-2026-10-09/boot/final-results.json": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+    "docs/qa/senior-5-2026-10-09/boot/typecheck-results.json": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/hooks/misc.ts": "c20582b3ffe52a616d713aa7864ac9f92c7f2ea1003fd8b7d85685bc095e47fa",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "docs/qa/senior-5-2026-10-09/boot/verification.json": "1acc36e283d23b3a8946f33a1ca2537d197c023c6e462422c9766de90465b168"
+  }
+}

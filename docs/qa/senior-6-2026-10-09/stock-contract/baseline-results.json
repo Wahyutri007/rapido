@@ -1,0 +1,164 @@
+{
+  "source": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\stock-contract\\stock-limit.baseline.txt",
+  "sourceHash": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+  "checks": [
+    {
+      "name": "category roundtrip preserves content type and IDs",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "category identity survives IDs shared with menu records",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n    stockable_ids: [\n      'shared-id'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "item roundtrip preserves menu IDs",
+      "passed": true
+    },
+    {
+      "name": "disabled category config preserves exclusions",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: false,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "late settings populate untouched category selection",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "edited switch survives category response change",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: false,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "category picker commits only category IDs and protects pair from item refetch",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Minuman', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "open item picker keeps item identity when settings change to categories",
+      "passed": true
+    },
+    {
+      "name": "open category picker keeps category identity when settings change to items",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Minuman', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "category cancel accepts latest untouched server selection",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Minuman', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "item cancel leaves committed IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "clearing category exclusions sends all mode with empty array",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Makanan', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "category search and picker draft survive list and settings refetch",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Minuman', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "picker reopens with committed selection and empty search",
+      "passed": true
+    },
+    {
+      "name": "loading menu list displays loading without sample IDs",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "empty menu list displays empty state without samples",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "failed menu list offers retry without samples",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "empty category list never shows menu rows",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "category list error retries correct endpoint",
+      "passed": false,
+      "error": "locator.waitFor: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Daftar kategori belum dapat dimuat.', { exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "name": "category list loading uses category state",
+      "passed": false,
+      "error": "locator.waitFor: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Memuat kategori...', { exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "name": "actual menu labels contain no invented stock quantities",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n2 !== 0\n"
+    },
+    {
+      "name": "category labels and counts reflect category contract",
+      "passed": false,
+      "error": "locator.waitFor: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('1 kategori dikecualikan', { exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "name": "failed save keeps committed category pair",
+      "passed": false,
+      "error": "locator.click: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByText('Minuman', { exact: true })\u001b[22m\n"
+    },
+    {
+      "name": "pending settings prevent destructive default save",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "failed initial settings prevent save and offer retry",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "successful missing settings allow all default",
+      "passed": true
+    },
+    {
+      "name": "all mode ignores stale exclusion details",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n+   stockable_ids: [\n+     'category-1'\n+   ],\n+   type: 'hybrid'\n-   stockable_ids: [],\n-   type: 'all'\n  }\n"
+    },
+    {
+      "name": "legacy missing content type infers category from relation type",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    },
+    {
+      "name": "legacy missing content type defaults menu to item",
+      "passed": true
+    },
+    {
+      "name": "category mode enables category query and suspends menu query",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- true\n"
+    },
+    {
+      "name": "search with no matches displays clear message",
+      "passed": false,
+      "error": "locator.waitFor: Timeout 1000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Kategori tidak ditemukan.', { exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "name": "clearing data from catalog never drops existing IDs on save",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   content_type: 'item',\n-   content_type: 'category',\n    enabled: true,\n    stockable_ids: [\n      'category-1'\n    ],\n    type: 'hybrid'\n"
+    }
+  ],
+  "runtimeConsoleErrors": [],
+  "passed": 6,
+  "failed": 26,
+  "limitations": "Actual screen/React DOM; UI/query/router adapters, not browser/native/backend certification"
+}

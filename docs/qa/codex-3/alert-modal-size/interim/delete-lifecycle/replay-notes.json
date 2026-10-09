@@ -1,0 +1,9 @@
+{
+  "owner": "Codex-3",
+  "originalRunnerSha256": "afd8786234688411ca458a85f3d4c7df08ff30891c33778201cac64402eeab67",
+  "adaptedRunnerSha256": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+  "adaptation": "Only add host useWindowDimensions static 360/800; test scenarios/assertions unchanged; native resize tested separately in RN-web browser",
+  "exitCode": 0,
+  "stdout": "{\"passed\":156,\"failed\":0,\"runtimeErrors\":0,\"productionModules\":16,\"controlFallbacks\":0}\n",
+  "stderr": ""
+}

@@ -1,0 +1,66 @@
+{
+  "owner": "Codex-3",
+  "status": "PASS",
+  "lint": {
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "components/feature/support/SupportAttachmentInput.tsx",
+      "components/feature/support/SupportFormScreen.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "stderr": "",
+    "files": [
+      {
+        "file": "components/feature/support/SupportAttachmentInput.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      },
+      {
+        "file": "components/feature/support/SupportFormScreen.tsx",
+        "errors": 0,
+        "warnings": 0,
+        "messages": []
+      }
+    ]
+  },
+  "biome": {
+    "command": [
+      "node",
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/feature/support/SupportAttachmentInput.tsx",
+      "components/feature/support/SupportFormScreen.tsx"
+    ],
+    "exitCode": 0,
+    "stdout": "Checked 2 files in 21ms. No fixes applied.",
+    "stderr": ""
+  },
+  "diff": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "renderChecks": [
+    {
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "comparison": "Returned JSX identical except remove-button event binding and deferred form submit binding",
+      "passed": true
+    },
+    {
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "comparison": "Returned JSX identical except remove-button event binding and deferred form submit binding",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de"
+  }
+}

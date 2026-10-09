@@ -1,0 +1,338 @@
+{
+  "passed": 42,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "only unpaid",
+      "passed": true,
+      "actual": [
+        "4",
+        "5"
+      ],
+      "expected": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "processing status",
+      "passed": true,
+      "actual": [
+        "5"
+      ],
+      "expected": [
+        "5"
+      ]
+    },
+    {
+      "name": "finished status",
+      "passed": true,
+      "actual": [
+        "4"
+      ],
+      "expected": [
+        "4"
+      ]
+    },
+    {
+      "name": "case/trim search",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "invoice is not a unique ID",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "recordID search",
+      "passed": true,
+      "actual": "5",
+      "expected": "5"
+    },
+    {
+      "name": "no match empty",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "empty source",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "exact record identity",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "reject invalid/paid ID undefined",
+      "passed": true
+    },
+    {
+      "name": "reject invalid/paid ID \"\"",
+      "passed": true
+    },
+    {
+      "name": "reject invalid/paid ID \"unknown\"",
+      "passed": true
+    },
+    {
+      "name": "reject invalid/paid ID \"INV12345\"",
+      "passed": true
+    },
+    {
+      "name": "reject invalid/paid ID \"1\"",
+      "passed": true
+    },
+    {
+      "name": "reject invalid/paid ID [\"4\"]",
+      "passed": true
+    },
+    {
+      "name": "duplicateID fails closed",
+      "passed": true
+    },
+    {
+      "name": "paid duplicate cannot be hidden by unpaid filter",
+      "passed": true
+    },
+    {
+      "name": "UTC explicit",
+      "passed": true,
+      "actual": "2023-10-01 12:00",
+      "expected": "2023-10-01 12:00"
+    },
+    {
+      "name": "invalid date",
+      "passed": true,
+      "actual": "Tidak tersedia",
+      "expected": "Tidak tersedia"
+    },
+    {
+      "name": "source immutable",
+      "passed": true,
+      "actual": "[{\"id\":\"1\",\"statuses\":{\"isFinished\":false,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"2\",\"statuses\":{\"isFinished\":false,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"3\",\"statuses\":{\"isFinished\":true,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"tax\":17300,\"other\":0,\"total\":150000,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"4\",\"statuses\":{\"isPaid\":false,\"isFinished\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"5\",\"statuses\":{\"isPaid\":false,\"isFinished\":false},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]}]",
+      "expected": "[{\"id\":\"1\",\"statuses\":{\"isFinished\":false,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"2\",\"statuses\":{\"isFinished\":false,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"3\",\"statuses\":{\"isFinished\":true,\"isPaid\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"tax\":17300,\"other\":0,\"total\":150000,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"4\",\"statuses\":{\"isPaid\":false,\"isFinished\":true},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]},{\"id\":\"5\",\"statuses\":{\"isPaid\":false,\"isFinished\":false},\"transactionId\":\"INV12345\",\"date\":\"2023-10-01T12:00:00.000Z\",\"table\":\"1\",\"customer\":\"Chelsea\",\"orderType\":\"Dine In\",\"subtotal\":173000,\"total\":150000,\"tax\":17300,\"other\":0,\"paymentMethod\":{\"id\":\"1\",\"name\":\"Transfer Bank\",\"type\":\"bank_transfer\",\"adminType\":\"percentage\",\"value\":1,\"bank\":\"BCA\",\"accountNumber\":\"1234567890\",\"accountName\":\"John Doe\"},\"orders\":[{\"id\":\"1\",\"menu\":{\"id\":\"1\",\"name\":\"Valala Hotdog\",\"sell_price\":45000,\"is_empty\":false,\"popular\":true,\"discount\":{\"type\":\"percentage\",\"value\":10,\"price\":40000},\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"3\"},\"amount\":1,\"variants\":[{\"id\":\"1\",\"name\":\"Sosis\",\"price\":1000},{\"id\":\"2\",\"name\":\"Keju\",\"price\":2000}]},{\"id\":\"2\",\"menu\":{\"id\":\"2\",\"name\":\"Chicken Club Sandwich\",\"sell_price\":50000,\"is_empty\":false,\"created_at\":\"2022-01-01T00:00:00.000Z\",\"category_id\":\"2\"},\"amount\":2,\"variants\":[]}]}]"
+    },
+    {
+      "name": "list two unpaid rows",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "picker updates list",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "route uses exact recordID",
+      "passed": true,
+      "actual": [
+        "push",
+        {
+          "pathname": "/(cashier)/biling/detail",
+          "params": {
+            "id": "5"
+          }
+        }
+      ],
+      "expected": [
+        "push",
+        {
+          "pathname": "/(cashier)/biling/detail",
+          "params": {
+            "id": "5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "search shows empty",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "empty copy rendered",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reset count",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "reset search",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "reset status",
+      "passed": true,
+      "actual": "all",
+      "expected": "all"
+    },
+    {
+      "name": "finished bill detail",
+      "passed": true,
+      "actual": "Selesai",
+      "expected": "Selesai"
+    },
+    {
+      "name": "preserves inconsistent source total",
+      "passed": true,
+      "actual": "Rp 150.000",
+      "expected": "Rp 150.000"
+    },
+    {
+      "name": "preserves source subtotal",
+      "passed": true,
+      "actual": "Rp 173.000",
+      "expected": "Rp 173.000"
+    },
+    {
+      "name": "actual order item name and amount",
+      "passed": true,
+      "actual": "1 item",
+      "expected": "1 item"
+    },
+    {
+      "name": "no payment action",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "ID change updates detail",
+      "passed": true,
+      "actual": "Diproses",
+      "expected": "Diproses"
+    },
+    {
+      "name": "paid record not a pending bill",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "missing return path",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/biling"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/biling"
+      ]
+    },
+    {
+      "name": "direct-link anchor",
+      "passed": true,
+      "actual": "index",
+      "expected": "index"
+    },
+    {
+      "name": "registers nested screens",
+      "passed": true,
+      "actual": [
+        "index",
+        "detail"
+      ],
+      "expected": [
+        "index",
+        "detail"
+      ]
+    },
+    {
+      "name": "empty-stack fallback",
+      "passed": true,
+      "actual": [
+        "replace",
+        "/(cashier)/biling"
+      ],
+      "expected": [
+        "replace",
+        "/(cashier)/biling"
+      ]
+    },
+    {
+      "name": "history back",
+      "passed": true,
+      "actual": [
+        "back"
+      ],
+      "expected": [
+        "back"
+      ]
+    },
+    {
+      "name": "inactive header pointer disabled",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "no runtime errors",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "file": "lib/cashier/bills.ts",
+      "sha256": "54838d4a97338bc65c7886d6a65681d394b6c5447141a5140761dcfff9415457"
+    },
+    {
+      "file": "constants/data/transaction/transaction.ts",
+      "sha256": "db10e63e3066491a34f0122a0d7b531d51c8297c938faa3a49239f5ca4a24d4e"
+    },
+    {
+      "file": "constants/data/cart.ts",
+      "sha256": "2e747f3d214dcddcf13ff04d5991f6bb94d9341f22872069a062d35321fe672f"
+    },
+    {
+      "file": "constants/data/menu.ts",
+      "sha256": "64ada92db5299f71efa241c36007abaa867fbbc839869be61b2f3ebc6a3adf19"
+    },
+    {
+      "file": "constants/data/variant.ts",
+      "sha256": "d0bde49ee7db71db0361d276daa56bdc959860a6b23a6e02b72ac63e7a3a7ce1"
+    },
+    {
+      "file": "constants/data/manage/payment-method.ts",
+      "sha256": "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d"
+    },
+    {
+      "file": "app/(cashier)/biling/index.tsx",
+      "sha256": "40abd7ec4391d2afd86fa6da505fe125309db54048f1e6c5513e5c27799a72fc"
+    },
+    {
+      "file": "components/feature/cashier/bills/BillsScreen.tsx",
+      "sha256": "e3932e2df2e27eba7a412ae3b0a08811ce6354c7931b7f13d0a660b7f6590e8b"
+    },
+    {
+      "file": "app/(cashier)/biling/detail.tsx",
+      "sha256": "743f9f0c75f65c338a346d93212f5e7a3ce212478fc54b21c60cbec03a54289f"
+    },
+    {
+      "file": "app/(cashier)/biling/_layout.tsx",
+      "sha256": "a8894a88b7f9f289076476081d29fd2ea7a89bd251422e15f3632f66b0ee0061"
+    }
+  ],
+  "limits": "Actual production data constants/helper/screens/layout; native/UI/router/image adapters. No device, full router or backend execution."
+}

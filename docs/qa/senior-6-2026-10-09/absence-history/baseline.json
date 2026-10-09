@@ -1,0 +1,8 @@
+{
+  "app/(absence)/home.tsx": "74a79c937f8bd99c69b5559401d18f5455f79f4ae57c53c8522889238e3cf4e5",
+  "app/(absence)/_layout.tsx": "f61105c490ca67e02adaa1eae89364a0253effe16c9eafc2b51953dfdb078aea",
+  "store/useAbsenceStore.ts": "830772595c33ade8a35924fd08d1894887637e850251944e81253b530aeba568",
+  "lib/manage/absence.ts": "7457001261c802eed40e229379d2ca9853864217f44a5aff605c646f7b8bede8",
+  "types/ui/manage/absence.ts": "8c2506f39e44ff35d231f161bc14e7b8cce4113f182f9aa4dc940fd5c44bdb9a",
+  "components/feature/manage/absence/AbsenceCommon.tsx": "783fe1a68b72e1e54b925e684f3c034ba1eaf769693684244909ff7367b6a41a"
+}

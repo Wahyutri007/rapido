@@ -1,0 +1,10 @@
+{
+  "status": "NEW_FINAL_ALIAS_REVIEW_PREPARED",
+  "previousPacket": "docs/qa/codex-3-internal-review/alert-modal-2026-10-09",
+  "previousSourceHash": "a1d806655c404507a9c624f9c98d3b8b68216331bbf37eb16ca1b26e29265443",
+  "baselineSourceHash": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+  "copiedContractAssertions": 60,
+  "previousManifestSha256": "0093ab23014904f82886f37e16fe227ebaab25d7d0e58def13b5df8956b5f582",
+  "oldArtifactsVerified": 9,
+  "adaptation": "Same60case contract suite; normalize only one private type declaration+PropsWithChildren annotation for whole AST; emittedJS proof separate"
+}

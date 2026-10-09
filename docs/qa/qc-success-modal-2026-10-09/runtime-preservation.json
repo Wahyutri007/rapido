@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-10-09T00:40:22.327Z",
+  "readOnly": true,
+  "ports": [
+    {
+      "LocalPort": 8088,
+      "OwningProcess": 9200
+    },
+    {
+      "LocalPort": 8001,
+      "OwningProcess": 24116
+    }
+  ],
+  "qcRestartedOrStopped": false,
+  "androidCache": {
+    "path": "node_modules/react-native-css-interop/.cache/android.js",
+    "before": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "after": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "unchanged": true
+  },
+  "externalOwnerContext": [
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "observed": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "owner": "Senior 7",
+      "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+      "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "certified": false,
+      "finalObserved": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "observed": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "owner": "Senior 7",
+      "disposition": "External owner edit; excluded from modal source approval, not reverted or certified",
+      "actual": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956",
+      "certified": false,
+      "finalObserved": "6c499b8f751f28be7b6178c8e04b77fdca7fc552f3b7ef6459c818ade830c956"
+    }
+  ],
+  "liveStock": {
+    "file": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+    "finalObserved": "0b61bef95fe023f1aa685560151c716c4c58faed9164509cd70546262878cc9d",
+    "approved": false,
+    "owner": "Senior 6",
+    "testedContract": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666"
+  }
+}

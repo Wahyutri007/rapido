@@ -1,0 +1,582 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-008",
+  "status": "READY_FOR_QA_QC",
+  "capturedAt": "2026-10-08T20:53:51.285Z",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "sourceHashes": {
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb"
+  },
+  "contractHashes": {
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8"
+  },
+  "baseline": {
+    "sourceHash": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+    "passed": 72,
+    "failed": 43,
+    "runtimeErrors": 0
+  },
+  "checks": {
+    "browser": 115,
+    "lifecycleReplay": 156,
+    "totalDeveloperExecutions": 271,
+    "failures": 0,
+    "runtimeErrors": 0,
+    "focusedTypeDiagnostics": 0,
+    "quality": "PASS"
+  },
+  "internalReview": {
+    "kind": "Internal delegated review; does not replace external QA/QC decision",
+    "status": "INTERNAL_QA_REVIEW_PASS",
+    "independentAssertions": 53,
+    "manifest": "docs/qa/codex-3-internal-review/delete-modal-2026-10-09/verification.json",
+    "manifestSha256": "e371ddfeb67bdb3b269b96b0124e8301f3751172df9354072d2eae3dda894d12"
+  },
+  "callerReview": {
+    "files": 63,
+    "usages": 63,
+    "matches": [
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/detail.tsx",
+        "expected": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+        "actual": "2f8b69b5af2ab0327af6c7c5fdf2acfb0b88fcd11554ee190379292a158f0570",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/manage/generate-barcode/index.tsx",
+        "expected": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+        "actual": "e0fde9809795c34725816fe28ce351673edbf0b08318eabb812a578bd5af67b4",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/accounts/index.tsx",
+        "expected": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+        "actual": "75ace53b4eff1cbc49309f905006c7842c0328000936ee8608a5ccb7a9cabf97",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/detail.tsx",
+        "expected": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "actual": "ec8489b6d158dd73fce2641aefdf5e0ca21eb034ff105c24d38f7fff88af0f21",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/adjusting-journal/index.tsx",
+        "expected": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "actual": "6d8166465d51bc173a160389c6448ca64742e63358824d116c5964a50ec6b57c",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/detail.tsx",
+        "expected": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "actual": "b72650a522bae4ad70e8198bd629d1cefbeb40816bdc12035d942232ac6fd2f7",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/closing-journal/index.tsx",
+        "expected": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "actual": "7201b9ac02b065f7e68aeff020d11168ada357e9b0cb77f681c3cce6071dfece",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/expenses/index.tsx",
+        "expected": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+        "actual": "1079b10f69e143708f8e4e02642bf61d00b646377c2690e3e6d958947fbc98a7",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/detail.tsx",
+        "expected": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "actual": "958e71098fb440190928b03476f02740d3c208f18603aeef64eecf6a44fbd558",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/general-journal/index.tsx",
+        "expected": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "actual": "15657bf5c1e31e99dbf1e907ea073235121552869ea98e758a1dbb995044efe1",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/(back-office)/report/accounting/incomes/index.tsx",
+        "expected": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "actual": "e85f94495e417d4bbcce0662cfa030a73618ee2ca81f734ddcd81f51e3a94665",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/detail.tsx",
+        "expected": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+        "actual": "04f4e0b6e879dea5347ceaa09900493a5287b113f7bc1ea54c92614f96c9d4ac",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/brand/index.tsx",
+        "expected": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+        "actual": "ad368cdb5ac5000bca5adde64b727a0d6b2eed32a64b0c25d43dc01f41970cf5",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/detail.tsx",
+        "expected": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+        "actual": "8a096294ea510c9554f54e1d0d702ed8deebb21a5787871d8f0a0ef0903f74ba",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/bundling/index.tsx",
+        "expected": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+        "actual": "de6e367914f5addf77f5496ed0845e5eb9d00ccbe112749bcc96a0d3392262a6",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/detail.tsx",
+        "expected": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+        "actual": "9e1b8d3a2468c1b8ea2c93b1d9115b8f3315389659287886a99d12e2ee1e933b",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/category/index.tsx",
+        "expected": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+        "actual": "d195723822065b11b30203d551f05db1c245917d7c587a8611773ec5c2f72261",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/detail.tsx",
+        "expected": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+        "actual": "19a047cc250da8799298611300e6d194ae8f2ec9c9ae978e8301ad3c56d84ab6",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/discount/index.tsx",
+        "expected": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+        "actual": "23b54c89920850bc882100381edeb1f3847db64e76e4625aae13a541bc1bb2c5",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/detail.tsx",
+        "expected": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+        "actual": "c995aeb62eaf07ab0735304ea66e62cb2a6aa49fbfbfc4dca0d20727f8ec3870",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-cost/index.tsx",
+        "expected": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+        "actual": "cb7516eee4ac1e8ed54350520bf713ceabb1ed601452f23ebb8a043abbd64151",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/detail.tsx",
+        "expected": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+        "actual": "f4ff2163a44fed38368d307d212474132a01253279cd9f49f45c79f90471782c",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/extra-menu/index.tsx",
+        "expected": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+        "actual": "d47bf4daf0938852c056d0b23612b44cf1173bb4caf78bf2b720860ddcd00dc4",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/detail.tsx",
+        "expected": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+        "actual": "f2c375da6dc98139fa111814a9bee11a5144a67cfe1e0b8bc7e19e3ca6ecdc77",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/menu/index.tsx",
+        "expected": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+        "actual": "f626df2b3a35d41ce1f03de773d3de21a7374f79b07b5bd4fa552c55a8ffdd09",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/detail.tsx",
+        "expected": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+        "actual": "76d1496432e16b1090538e3fb212201233eabfe789b771a0462759522fb5f90e",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/order-type/index.tsx",
+        "expected": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+        "actual": "a87dc6dd1034415753d75837a1d781f0d91162ec3518f9c9c15a27163b192b94",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/detail.tsx",
+        "expected": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+        "actual": "956e2b0ff18c3ef72c83312d384ae55ec81fa3bfec30fcb4168aa2ef3e46ed4d",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/payment-method/index.tsx",
+        "expected": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+        "actual": "54b485ec1a85d02ad8bb280da8de1aac0ebfbc7a4c29d20c7f0dc5e1774d3fc4",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/detail.tsx",
+        "expected": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+        "actual": "29c7bfc207ab4ee4a2f49d55cf592a275aea641bc6e0075520caad5998797b19",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/promo/index.tsx",
+        "expected": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+        "actual": "d58dd796d88ea5a748f45a8375556373f633e3f8148a5eb7feb45c117445e82f",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/detail.tsx",
+        "expected": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+        "actual": "b28ca83157a953ccef981abc38f8434427d97383dfa6a8caa35cf8016a38bbd5",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/tax/index.tsx",
+        "expected": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+        "actual": "9981d7e5b70fc529d6bf99ebde92acba7183ae15cd0d07a1052d2f6cc891c8e2",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/detail.tsx",
+        "expected": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+        "actual": "22328d139d88e175e18088d8846e78c31cba47892213f15cf12a1a4d0eec13a6",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/unit/index.tsx",
+        "expected": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+        "actual": "ec8faa6f44b0e2b8f73d17902f5763f2e30025c22ab77102dc6f3634a1e5bae7",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/detail.tsx",
+        "expected": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+        "actual": "c0ace62247ab8d551ec21ed202c7d68b0e47fc0b3b1003175d43d75cfc8dea8a",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/catalog/voucher/index.tsx",
+        "expected": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+        "actual": "80c63db6ee67bda55a6cb8e9a9974a1f90f725ab60f2614128f8c4c88b377c69",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/backup/index.tsx",
+        "expected": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+        "actual": "7473b4fe50f41c4fc6627d683a53b71cbead19b2e70d9ad96d4bde5cc565fe5b",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/detail.tsx",
+        "expected": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+        "actual": "95a3cea75d1c42fe7e50670797cfe2504abb50fbe794e8b836be5927595317fc",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/expenses/index.tsx",
+        "expected": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+        "actual": "7719e3615aa15f6136391361f3a50dd2e9dbab160e5a20e6dbe5518d3f409ba7",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/extra/index.tsx",
+        "expected": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+        "actual": "50cbd8755e39920ab8e253267def9fcb3201a533a1ae3595bfccc3b04d8a8203",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/income/detail.tsx",
+        "expected": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+        "actual": "ac2cd8fef13b500819c82ef010b2a7156dc1fe33e75dbe817a84a58fc2e273a1",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/income/index.tsx",
+        "expected": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+        "actual": "adebe594f09848e8c23cc6458fda9031a3a8f7e1abc8fa49285d5d9856d6d9a0",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/order-type/index.tsx",
+        "expected": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+        "actual": "25c26ea22e8ae3ee905f226eff4c7c135ba8ef7e454318b3a0ac92ced621f38c",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/payment-method/index.tsx",
+        "expected": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+        "actual": "a712c34faaef20db82f150d88b7a58c5ab87ed55a2b459962c1cfc3c228237fe",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/place/area.tsx",
+        "expected": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+        "actual": "c4ceac91fef9ef47a714e3d3fa0c8b477232923200d3c4329d4afdb4dacb9f52",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/place/store.tsx",
+        "expected": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+        "actual": "bf44372e5ff29bc35f4e54b117a34ac2d676a1d446e6bdce68ef05a0cdc36031",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notification-detail.tsx",
+        "expected": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+        "actual": "c7ad9985db0dcfbc2b824338a49aa467643f7494b77cb53594b46841cfee0358",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/pos-settings/notifications.tsx",
+        "expected": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+        "actual": "01244dd88e0807b8c62856725542e21f397f77d1858ef22dd77e9b7d3498f583",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/printer/index.tsx",
+        "expected": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+        "actual": "3ffa0e8450b92c522de7d27062462833ab2338714c3aa2592324b57d76f0ae4e",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/detail.tsx",
+        "expected": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+        "actual": "bc79a5582ca0752891b436aafdddc96b6afd767ab74d20305db684ff617c3145",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/sales-target/index.tsx",
+        "expected": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+        "actual": "c1cecc2370ce6827b97c1f08250b05b8ac245372cf45a9e39145dc873adc6df1",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/manage/tax/index.tsx",
+        "expected": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+        "actual": "1cb7d0785242bd666a7199fea4af1f20dec97151e1da3d860b48a6e8391918f7",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/offer/discount/index.tsx",
+        "expected": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+        "actual": "9a9d9c7b17f8c64f2b3a2afa9c6a8bc3d9a977a5eab448860c32479368127c4c",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/offer/promo/index.tsx",
+        "expected": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+        "actual": "28988e7b7b29129ef104b462e2a7ec5ad410c368e6a09fc8d3a853077070b696",
+        "passed": true
+      },
+      {
+        "file": "app/(no-layout)/offer/voucher/index.tsx",
+        "expected": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+        "actual": "7bc7798daa76215b0ed5abdd4312426ee9e045e7c9a453c26b1ce2729981467b",
+        "passed": true
+      },
+      {
+        "file": "components/feature/inventory/composition/CompositionDeleteDialog.tsx",
+        "expected": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+        "actual": "0ac48c299b7e593832545cb9232a1346ae944c22ef029b7482436f118859a83d",
+        "passed": true
+      },
+      {
+        "file": "components/feature/inventory/material/MaterialDeleteDialog.tsx",
+        "expected": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+        "actual": "a88eca1bd6b3d35b9b66f959e47cfb242c820fdfb44096c370667809a6f0df3a",
+        "passed": true
+      },
+      {
+        "file": "components/feature/inventory/PurchaseListScreen.tsx",
+        "expected": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+        "actual": "9703e56b0426154ff7a03f649159dde23502278b3683013876cf6c8afce93d97",
+        "passed": true
+      },
+      {
+        "file": "components/feature/inventory/supplier/SupplierDeleteDialog.tsx",
+        "expected": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+        "actual": "580a30d0899db9c6190bae4310a5bff224a009c78e735635a200266cb96329e8",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+        "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+        "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+        "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "passed": true
+      }
+    ],
+    "changedDuringReview": [],
+    "scope": "Static usage/props snapshot; representative browser cases, not all63 screens"
+  },
+  "inputMatches": [
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "passed": true
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "passed": true
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "passed": true
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "passed": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.web.tsx",
+      "expected": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "actual": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "tsconfig.json",
+      "expected": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "actual": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "passed": true
+    },
+    {
+      "file": "babel.config.js",
+      "expected": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "actual": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/android.js",
+      "expected": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+      "actual": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-native-css-interop/.cache/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": ".expo/codex-3-delete-modal-entry.jsx",
+      "expected": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "actual": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "passed": true
+    }
+  ],
+  "fixtureHashes": {
+    ".expo/codex-3-delete-modal-entry.jsx": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3"
+  },
+  "artifactFingerprints": {
+    "baseline/browser-results.json": "b37f86ab414b944ab5efd234b2d4cac07205597a0f33c4d33bd380f986af6c4c",
+    "baseline/custom-320.png": "57bf8efdbec1f9912a6af3cd220b503566bcdd137c4e1d92c219eb3eb4feb31f",
+    "baseline/direct-320.png": "0b5bc4ff393fe9ce612af2443fa4bb93925baadce4f8af117b9db2a355da003e",
+    "baseline/direct-360.png": "33328f99000e6c1faa573c41a371ec4fb6809e04b29e910a22d6e56b6ee60943",
+    "baseline/direct-390.png": "3ae89fa645fa954548bebc53c5cecf57507182ef206b6a86a05f3a3030d41954",
+    "baseline/direct-768.png": "3a192d73705e1dabf56b3c61cb9661f6bb854445c06157cf5eb3bb7259df8f89",
+    "baseline/legacy-320.png": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+    "baseline/loading-320.png": "334e58627eff5d6330a5955d2be95f177c069a002c24da49e5f1d13182defbbf",
+    "baseline/long-320.png": "3503af5e9c3c86744b66bd8e5257adeef92b247d58a50db03ea5dbd9e03b60d0",
+    "baseline/member-320.png": "c9c4e4a0266edd384f0bdb1d519cbe7ebd22d0b2374f8b8190a93600d8dc4c20",
+    "baseline/message-320.png": "f0f915c91e3ac96aaf85764d3be9c5f02b14d09b58cfa78fe21009b348c2967d",
+    "baseline/node-320.png": "b3e0b5dbb49372d48c50e0c06506bdad2cbb096d92a473f723e0f6b5c9cf4e9b",
+    "baseline/role-320.png": "c982d40fb6c67f9a42656f25a994848a2431be704aae88013c2c380f1eae3b9a",
+    "baseline/worker-320.png": "352248b1b137029c6d447427d305d68635f4da7a735ce86d05b7b29e5327c646",
+    "browser.cjs": "71af2d53971d1e2ca69b0776a75bbf4edc6d058bb8ba3e4d82778f0f9371bd19",
+    "callers.json": "38008b0d3af8f277e397a2e58e3b4cc43a1f0b2ae91e9b696c2bdb3fdfaaf990",
+    "delete-lifecycle/check.cjs": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+    "delete-lifecycle/replay-notes.json": "f27e47c66b4e36326f46064247e34ff2af06a42f4f14369fd795df5e90cadb1b",
+    "delete-lifecycle/results.json": "4d64ddf558ea33930f9371525b1cbcc78fd0290cabcda6421b69947a3fefa1c5",
+    "DeleteConfirmModal.before.tsx.txt": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+    "final/browser-results.json": "85bcc15f1432ed963dc76737697bb6861073c9cccfe3f6fe74d1b054c9f6303d",
+    "final/custom-320.png": "b363ba1f0268fa8ae8d4ab1e59ff32ff1301729d0b62fa3880d6234fd99224b7",
+    "final/direct-320.png": "81318705063ed4e6003006d0bd0f27eb84bcb1bf5a61e2231d9ff6424877da87",
+    "final/direct-360.png": "8ed3abbd7bcc4dea2c6a6f4235d8cdded0929556a250fafd1e539319ff9191f0",
+    "final/direct-390.png": "1a6f7202b2d9327160e0f50f37bff12962e1e504263e3da217cfc943a51cd613",
+    "final/direct-768.png": "742a8343b403757feed6ffa8c2fa40e903a43fab9b432dcfdb5f1ede0d3b8aba",
+    "final/legacy-320.png": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+    "final/loading-320.png": "f2c9c93ed47f92f8a4ff836d1c5af07103b993549016b6c059c30419831d0b2d",
+    "final/long-320.png": "15516e2a236f258beb86240f754a171356463922c754e9bf57810af9b1c92dfa",
+    "final/member-320.png": "ed181bfad9c5cd5e3645878660c52fc48271961ebf7b2e1d350084589c7c2421",
+    "final/message-320.png": "7e1a29338fc621c66aaa21ea435225dbd61d27e737ab7375970683b34b808b13",
+    "final/node-320.png": "aa6988b05d89b8823df1ec88770c574cc0037e1f75c771020e4c5c9a52578f09",
+    "final/role-320.png": "41abb7e9fe4c1a741f84c78b848947035130e7f794788738af0ca0ac23c105f9",
+    "final/worker-320.png": "7a578ffefb52f9f825dde9c3d1c7cdec1094847138a621c25a8e3135dfcb62a4",
+    "HANDOFF.md": "db78e53137e205346d1c86f078e83f3f2fe86a2d725a2466752d5e0449bff219",
+    "inputs-before.json": "202e92c6e8fc15f4daef44186df39b355b18efb7d1b8cb71aa69dd9cb7d39337",
+    "prepare.cjs": "728080cee8a58249338aa13ab387e5dbc9db68ca57c15a44d2d2b23b74818a34",
+    "preview-entry.fixture.jsx": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+    "quality-results.json": "2115c576d4340057708f986c7174adff3be71ad8b0b51f21c5cea4b8f430e519",
+    "quality.cjs": "a919b8776dda7b0452d58ee846685d50ea830094af96f62839f2996ad6a1a648",
+    "replay-delete.cjs": "e26d29f3eb28e10ff05d9328d87378d9e8fc2417c6f28a5a27f3b855c39e4c38",
+    "verify.cjs": "5036b9c97f8c6b115f52161f29a885ab74cbbef4c19df93cc6fa522af47589ef",
+    "web.css": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766"
+  },
+  "limits": [
+    "One shared delete-confirmation source changed; public handlers/props/copy/two-button JSX preserved",
+    "Older SD3-006/007 packets remain frozen historical snapshots with prior DeleteConfirmModal dependency; latest156 replay is here",
+    "Internal review is separate from external QA/QC and PM publication approval",
+    "No native/SSR/keyboard/font-accessibility/full-router/root-auth/63-screen/Figma/backend/full-app certification; browser transport is a local fixture"
+  ]
+}

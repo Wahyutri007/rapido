@@ -1,0 +1,52 @@
+{
+  "factoryMatchesExistingStart": {
+    "config": "{path:\"/register/start\",method:\"post\",name:\"registration\",}",
+    "types": [
+      "VerifyDataResponse",
+      "PersonalInfoSchema"
+    ]
+  },
+  "input": {
+    "digits": 4,
+    "theme": "otpInputTheme",
+    "autoFocus": false,
+    "coreCopyPreserved": [
+      "Masukkan kode Verifikasi",
+      "Kode telah dikirimkan ke email-mu!",
+      "Kode belum diterima?",
+      "Kirim ulang kode",
+      "Masuk"
+    ]
+  },
+  "intentionalUiChanges": [
+    "Wrapper scroll/keyboard container",
+    "Text semantic sizes",
+    "Resend busy/disabled/accessibility/countdown labels",
+    "Masuk disabled with incomplete input and explicit unavailable feedback",
+    "New session resets child lifetime/input/cooldown",
+    "Invalid-session single alert/back"
+  ],
+  "noOtpLogsOrSuccessNavigation": true,
+  "readOnlyContracts": {
+    "api/hooks/registration.ts": "f3566de387837008d18bf8e1f4e25c10d57911d498bb69051260cdaada4362a6",
+    "components/feature/register/wizard/PersonalInfoAction.tsx": "71800849b717e84473fb32e8ce09a621c22952d5a50127bc7d38297648586021",
+    "api/queries/registration.ts": "1852521180d7990140203925d98ee6ebf9e64eac50f2e445320b22a600b55821",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "schema/registration.ts": "3d94d4a9f9572a9f257b180a3d2b4cee221cc0fa53f42018690a84c93efaccf6",
+    "store/otp.ts": "7b407e40ea44b1094995592b1abc9740516a67bac785cdf99e03306b6a37ad36",
+    "types/api/registration.ts": "749c3350443be07ea73381ca2b3d3b4d5e0f925d34bc0c8eeac1182735520ca5",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "constants/Config.ts": "9dea44f7cec4fbf4714c3af5dfa9cc35a3e1da10ba2ad6dba0e25f4ef772917a",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "app/(onboarding)/register/wizard.tsx": "b108196e4192b9bf071c97e41364f5688822c943f23d098b31f2c05e16245099",
+    "app/(onboarding)/_layout.tsx": "80aef406fbd01cfea5041c5ad211dd79d22c12d928348772e4b0c4416de5a031",
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ticket": "SD5-007",
+  "classification": "Test harness preparation and bounded final source verification",
+  "preparation": [
+    "First baseline exited without results because manual cooldown-bypass callbacks in the old screen created extra unresolved fixture HTTP requests. The scenario now observes request count before settling those extra requests for cleanup. This was not a successful baseline run.",
+    "The next baseline reached old handleLogin but the VM lacked URLSearchParams. The host global was added; this ReferenceError belongs to the adapter, not the application. No baseline result from that aborted run is used.",
+    "Completed initial baseline was41PASS/57FAIL; initial correction98PASS. Review found finite seconds could overflow when converted to milliseconds and null success needed a retry-preservation case. Final suite105 covers both; earlier counts are not added.",
+    "After the overflow correction, Biome reported one ternary line-format diagnostic. The line was wrapped; no suppression or behavioral change. Final105 replay/quality/typecheck pin the formatted source."
+  ],
+  "finalBaseline": {"passed":44,"failed":61,"total":105,"runtimeErrors":0,"unhandledRejections":0,"rejectedUiActions":0},
+  "final": {"passed":105,"failed":0,"runtimeErrors":0,"unhandledRejections":0,"rejectedUiActions":0},
+  "observability": "Action promises receive immediate rejection observation; runtime/React/act errors are recorded. Only react-test-renderer deprecation is filtered.",
+  "limitations": "Memory HTTP/native host/router/clock adapters; not actual email delivery, browser/native keyboard/scroll or verification API. Copy runners and before snapshot to a reviewer folder before replay."
+}

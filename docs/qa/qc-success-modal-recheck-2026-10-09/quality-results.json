@@ -1,0 +1,2129 @@
+{
+  "owner": "QC",
+  "status": "PASS_RECHECK",
+  "sourceHash": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "lint": {
+    "args": [
+      "node_modules/eslint/bin/eslint.js",
+      "components/common/SuccessModal.tsx",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "components/common/SuccessModal.tsx"
+    ],
+    "exitCode": 0
+  },
+  "diffExit": 0,
+  "wholeSourceContractPreserved": true,
+  "exactPriorQcCopy": true,
+  "stableInputs": [
+    {
+      "file": "components/common/SuccessModal.tsx",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+      "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+      "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+      "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+      "passed": true
+    },
+    {
+      "file": "components/common/AlertModal.tsx",
+      "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+      "passed": true
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+      "passed": true
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "passed": true
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/roles.ts",
+      "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/workers.ts",
+      "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/customers.ts",
+      "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "tsconfig.json",
+      "expected": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "actual": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+      "passed": true
+    },
+    {
+      "file": ".expo/codex-3-success-height-entry.jsx",
+      "expected": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "actual": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "passed": true
+    },
+    {
+      "file": ".expo/codex-3-success-height-before-entry.jsx",
+      "expected": "963039c375655fac6ea9bab2e599a503b34bfd3621125faf10383606b258c69b",
+      "actual": "963039c375655fac6ea9bab2e599a503b34bfd3621125faf10383606b258c69b",
+      "passed": true
+    },
+    {
+      "file": ".expo/codex-3-success-height-before.tsx",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/DECISION.json",
+      "expected": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+      "actual": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/success-modal-height.patch",
+      "expected": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2",
+      "actual": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/roles.ts",
+      "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+      "passed": true
+    },
+    {
+      "file": "components/custom/ItemActionSheet.tsx",
+      "expected": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+      "actual": "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleListScreen.tsx",
+      "expected": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+      "actual": "2c98ea13f36631d25ad1ddeae0abfa236f83fbc478f6b3398c13e6eefe8bb31b",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/ManageListActions.tsx",
+      "expected": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+      "actual": "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+      "passed": true
+    },
+    {
+      "file": "hooks/useRefreshControl.ts",
+      "expected": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+      "actual": "7084c64f30db3804d903f4cc44f7b832a895545625ed8b6ee6f200d9a3cc7198",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/roles/RoleQueryError.tsx",
+      "expected": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+      "actual": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerListScreen.tsx",
+      "expected": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+      "actual": "2e43e8a5081848281349b300d01d1e69725f78c2faa97b71136993bf315f0e7f",
+      "passed": true
+    },
+    {
+      "file": "lib/manage/workers.ts",
+      "expected": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "actual": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/workers/WorkerQueryError.tsx",
+      "expected": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+      "actual": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberListScreen.tsx",
+      "expected": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+      "actual": "58e46561e1f03f368ea8f691c826a7b02a1648fe744ae18af9deb480c22c9dd3",
+      "passed": true
+    },
+    {
+      "file": "components/feature/manage/member/MemberQueryError.tsx",
+      "expected": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+      "actual": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f",
+      "passed": true
+    },
+    {
+      "file": "components/ui/gluestack-ui-provider/index.web.tsx",
+      "expected": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "actual": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "passed": true
+    },
+    {
+      "file": "api/axios.ts",
+      "expected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "actual": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/index.ts",
+      "expected": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "actual": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/action-success.png",
+      "expected": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "actual": "2889e23d11fe6bd5e769d3b7ee8d1ecefc131c51d67d195ba39a5882aa93fa5b",
+      "passed": true
+    },
+    {
+      "file": "assets/images/illustrations/delete-confirmation.png",
+      "expected": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "actual": "248c8b590f9eb46c2ecd28c0ec95413ec780f29d88f596cf83b62cecef6014a1",
+      "passed": true
+    },
+    {
+      "file": "assets/images/alerts/index.ts",
+      "expected": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "actual": "e43f20d1220064b0e4042ed5943779e1ae68cfbb9c7f05612b9046177a6d1776",
+      "passed": true
+    },
+    {
+      "file": "assets/images/alerts/category.jpg",
+      "expected": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "actual": "46a1dc3be76c25d0d423b4b8e1d20acdab2fcac9173e24a4132ae30097bd518b",
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Regular.ttf",
+      "expected": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "actual": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Medium.ttf",
+      "expected": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "actual": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-SemiBold.ttf",
+      "expected": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "actual": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+      "passed": true
+    },
+    {
+      "file": "assets/fonts/Inter_24pt-Bold.ttf",
+      "expected": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "actual": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+      "passed": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "actual": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "passed": true
+    },
+    {
+      "file": "babel.config.js",
+      "expected": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "actual": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "passed": true
+    }
+  ],
+  "historicalMatches": [
+    {
+      "file": "docs/qa/codex-3/success-modal-height/HANDOFF.md",
+      "expected": "73e8914834887f979e20463c34f4c30aa799cc25ba82bec3b5a9bc076461014d",
+      "actual": "73e8914834887f979e20463c34f4c30aa799cc25ba82bec3b5a9bc076461014d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/SuccessModal.before.tsx.txt",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/baseline/failure.png",
+      "expected": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "actual": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/baseline/results.json",
+      "expected": "1d60c5eba6f3f98819634bf7389bba9c958144d41b28b0b268e4e3d65e97caa7",
+      "actual": "1d60c5eba6f3f98819634bf7389bba9c958144d41b28b0b268e4e3d65e97caa7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/delete-replay/check.cjs",
+      "expected": "a7adedaad6b62cea5dda3d4bcbcb8e145235987d7b9e4718a2c41a2590d75624",
+      "actual": "a7adedaad6b62cea5dda3d4bcbcb8e145235987d7b9e4718a2c41a2590d75624",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/delete-replay/results.json",
+      "expected": "6dc6996f640e542d36a4716847e8cca18098d0c3e24ee112270b1ce1462918fe",
+      "actual": "6dc6996f640e542d36a4716847e8cca18098d0c3e24ee112270b1ce1462918fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/inputs-before.json",
+      "expected": "3a26afdc0309e2d2224b8ff141bec0a81caad6cd2324cee32a09e8b618bb812c",
+      "actual": "3a26afdc0309e2d2224b8ff141bec0a81caad6cd2324cee32a09e8b618bb812c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/list-replay/check.cjs",
+      "expected": "dc5d0827b977d975413047fb8ee4fcc13ebbaee8c2e180e7ae4035788866036b",
+      "actual": "dc5d0827b977d975413047fb8ee4fcc13ebbaee8c2e180e7ae4035788866036b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/list-replay/results.json",
+      "expected": "89c5ee9bc60db9855338168b5d99aee0dd775d349f81a82cec3c85639aa5b212",
+      "actual": "89c5ee9bc60db9855338168b5d99aee0dd775d349f81a82cec3c85639aa5b212",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/orientation-browser.cjs",
+      "expected": "871c1b82272b73bbdc289cfd3ff4881299dc8604288e5a530a0fa8f2d821966d",
+      "actual": "871c1b82272b73bbdc289cfd3ff4881299dc8604288e5a530a0fa8f2d821966d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/prepare-replay.cjs",
+      "expected": "49d48c7414fdd6f8a6b2fba656a7d097ef501a9544f568bcd802f2b80a1b9342",
+      "actual": "49d48c7414fdd6f8a6b2fba656a7d097ef501a9544f568bcd802f2b80a1b9342",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/prepare.cjs",
+      "expected": "25a37bff31324ae4de7d9b47e0621afb459771ddd1970181f9882789a8e2a6e2",
+      "actual": "25a37bff31324ae4de7d9b47e0621afb459771ddd1970181f9882789a8e2a6e2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/quality-results.json",
+      "expected": "18eaa3794f4a745bd72b1e7d71cec73bce3d90f0c36e42c6564890e92868e187",
+      "actual": "18eaa3794f4a745bd72b1e7d71cec73bce3d90f0c36e42c6564890e92868e187",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/quality.cjs",
+      "expected": "19085be1617f5b580aacd3320d949579ff2055f28f9ed3506075fec9d5a18d4a",
+      "actual": "19085be1617f5b580aacd3320d949579ff2055f28f9ed3506075fec9d5a18d4a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/shared-browser.cjs",
+      "expected": "c887a734adc3ad1ec85ba888d78337b6fc77fd880201dac5351b26d391754460",
+      "actual": "c887a734adc3ad1ec85ba888d78337b6fc77fd880201dac5351b26d391754460",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/verify.cjs",
+      "expected": "32bb9410b62d02d7defff12fc7b13d3fa33ed89f0babe0fbf09475363b4a8499",
+      "actual": "32bb9410b62d02d7defff12fc7b13d3fa33ed89f0babe0fbf09475363b4a8499",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/success-modal-height/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/biome.out.txt",
+      "expected": "e5c30fc07d09bf4c6e4bebda58977489ec426c11c066f667073812b4cad1e1af",
+      "actual": "e5c30fc07d09bf4c6e4bebda58977489ec426c11c066f667073812b4cad1e1af",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/build-patch.cjs",
+      "expected": "d49209d23c0aaec5a50e6f3ae1ff8735be49c7b8d54c04a6c690eac4e466f331",
+      "actual": "d49209d23c0aaec5a50e6f3ae1ff8735be49c7b8d54c04a6c690eac4e466f331",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/custom-320.png",
+      "expected": "55d94006c615787fae449407981ee9cec6577862c558fa974cdfc2c57b3ccc6b",
+      "actual": "55d94006c615787fae449407981ee9cec6577862c558fa974cdfc2c57b3ccc6b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/DECISION.json",
+      "expected": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+      "actual": "7a3551fdf6726c64f2076b6562c505cf35594da96c727fc8d8b718dbd12ca0f9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/delete-lifecycle/check.cjs",
+      "expected": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "actual": "0afae06999cf141eaebbcdcb8fcd881f27280176fbd23c8bfe24e381152863e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/delete-lifecycle/results.json",
+      "expected": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "actual": "61cbbe5467c4a24963cc5a0e1bea708e28f158a656c27ee54305b1f67de4066d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/direct-320.png",
+      "expected": "dbb08d34e8090bda32c2545eeb64cf43dbe1ca829be0d00a7653d4146093c0d3",
+      "actual": "dbb08d34e8090bda32c2545eeb64cf43dbe1ca829be0d00a7653d4146093c0d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/direct-360.png",
+      "expected": "52db2545d6c79229d95f5f37fac3a46bd905accdc5726c05acceccd5a149702c",
+      "actual": "52db2545d6c79229d95f5f37fac3a46bd905accdc5726c05acceccd5a149702c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/direct-390.png",
+      "expected": "1399f6e6374bebfc96e7c84e643917e6a14386c340eb5f29d561b857440f821c",
+      "actual": "1399f6e6374bebfc96e7c84e643917e6a14386c340eb5f29d561b857440f821c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/direct-768.png",
+      "expected": "f5ab66ff0027b20c4cd4417ca007cf08ee7532d32d9f8132b222de3ca45badfe",
+      "actual": "f5ab66ff0027b20c4cd4417ca007cf08ee7532d32d9f8132b222de3ca45badfe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/eslint.out.txt",
+      "expected": "23d3992e4331e01ca584c19bbced7c2943467c72e8ac40dd3881740da6fd4a4a",
+      "actual": "23d3992e4331e01ca584c19bbced7c2943467c72e8ac40dd3881740da6fd4a4a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/finalize.cjs",
+      "expected": "eda61c12563c41258ab3ee788cc37c7905a183c704eb122e2891217a2b536819",
+      "actual": "eda61c12563c41258ab3ee788cc37c7905a183c704eb122e2891217a2b536819",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/fixture-before.json",
+      "expected": "71179b4ee7f31b7a67e7fee3d9c090108d4e3b6aaca62e225394c77c54a140a3",
+      "actual": "71179b4ee7f31b7a67e7fee3d9c090108d4e3b6aaca62e225394c77c54a140a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/format-proposal.cjs",
+      "expected": "a62b17942322056bf4f7fb570e054313f0a4ca9bd53bc37565f21708b676bb0c",
+      "actual": "a62b17942322056bf4f7fb570e054313f0a4ca9bd53bc37565f21708b676bb0c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/harness-notes.json",
+      "expected": "0e209005221acdc5e30cfe25e5430d4f2e85f6f44e053a1fb1962aeb68c5ab0f",
+      "actual": "0e209005221acdc5e30cfe25e5430d4f2e85f6f44e053a1fb1962aeb68c5ab0f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/initial-proposal-biome.err.txt",
+      "expected": "cdf3fde42046c65223c34b3ce65f1548e4ce344c5d751e0c2d6fc3c0348b0624",
+      "actual": "cdf3fde42046c65223c34b3ce65f1548e4ce344c5d751e0c2d6fc3c0348b0624",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/initial-proposal-biome.out.txt",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/initial-quality-results.json",
+      "expected": "bab45d8d9b8352fdeab948b704984f9600c83a616ddd2187047ed7a6b817a72d",
+      "actual": "bab45d8d9b8352fdeab948b704984f9600c83a616ddd2187047ed7a6b817a72d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/isolate-stock-review.cjs",
+      "expected": "7477bc01f6d62a21165284e61b4cae688896b04ca2f756f13ab34211b7133a18",
+      "actual": "7477bc01f6d62a21165284e61b4cae688896b04ca2f756f13ab34211b7133a18",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/legacy-320.png",
+      "expected": "9ccce1817fd5c6c23aceac824b51b6ebb03ae38732a60a6ed45db1746d8a5a4f",
+      "actual": "9ccce1817fd5c6c23aceac824b51b6ebb03ae38732a60a6ed45db1746d8a5a4f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/long-320.png",
+      "expected": "9da3d768e3346c1f91c11ca81dac728ed9aea9af677cc4156e2f2af0e496b826",
+      "actual": "9da3d768e3346c1f91c11ca81dac728ed9aea9af677cc4156e2f2af0e496b826",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/member-320.png",
+      "expected": "15aa80410307dcf98f5fcea8e1c90206cec54b2fd784a6c6a9a93eb6375b1272",
+      "actual": "15aa80410307dcf98f5fcea8e1c90206cec54b2fd784a6c6a9a93eb6375b1272",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/message-320.png",
+      "expected": "7f16f547cf06f98490b50e721a83fb8ba136cc0a1f7c0c373def14e9863db84b",
+      "actual": "7f16f547cf06f98490b50e721a83fb8ba136cc0a1f7c0c373def14e9863db84b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/modal-browser-results.json",
+      "expected": "e0f017be6f397c17fd08e8ea751811d35ad3709e35d72bbf1d14b24de2d961a8",
+      "actual": "e0f017be6f397c17fd08e8ea751811d35ad3709e35d72bbf1d14b24de2d961a8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/modal-browser.cjs",
+      "expected": "15ecefb23c40bae1c8dc155f31d009c3e76d35a198afc71d4c71f8670138d140",
+      "actual": "15ecefb23c40bae1c8dc155f31d009c3e76d35a198afc71d4c71f8670138d140",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/modal-entry.fixture.jsx",
+      "expected": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "actual": "7a73cd7611ae935fce1392d4871e08d377e5dad0550e378de9f254678931eb46",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/no-close-320.png",
+      "expected": "318f0b8efedb76625a17dfb38d7328a600a8f101f6167c93b9de15822f88a688",
+      "actual": "318f0b8efedb76625a17dfb38d7328a600a8f101f6167c93b9de15822f88a688",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/node-320.png",
+      "expected": "9cfa371d0819aab5643e4fb9fa7fa898fc8d59d97278b86aae024ac493d82fbe",
+      "actual": "9cfa371d0819aab5643e4fb9fa7fa898fc8d59d97278b86aae024ac493d82fbe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-browser.cjs",
+      "expected": "59347d2ef39a14c9d5b8f752089e2f0553710fa22526bae08ac3450dbafb2cfc",
+      "actual": "59347d2ef39a14c9d5b8f752089e2f0553710fa22526bae08ac3450dbafb2cfc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/direct-640x360.png",
+      "expected": "aa7249d0f2b3510a3c80f4f66a66a9df4860c4356fb4d46aea0793cd0c67c567",
+      "actual": "aa7249d0f2b3510a3c80f4f66a66a9df4860c4356fb4d46aea0793cd0c67c567",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/direct-844x390.png",
+      "expected": "1967019622d798ffe04919d72cd2b5b2a118e13f9c2485841464473de0be6f91",
+      "actual": "1967019622d798ffe04919d72cd2b5b2a118e13f9c2485841464473de0be6f91",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/long-640x360.png",
+      "expected": "b7089f99216a392415c0679d538416f92e644405c5c063c52cce9d1ef098a419",
+      "actual": "b7089f99216a392415c0679d538416f92e644405c5c063c52cce9d1ef098a419",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/long-844x390.png",
+      "expected": "1fd029f0d009fa39d0cca13fcfc2903cc33127dd8a7ff79b89c259f2e4269af5",
+      "actual": "1fd029f0d009fa39d0cca13fcfc2903cc33127dd8a7ff79b89c259f2e4269af5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/long-live-rotate-640x360.png",
+      "expected": "b7089f99216a392415c0679d538416f92e644405c5c063c52cce9d1ef098a419",
+      "actual": "b7089f99216a392415c0679d538416f92e644405c5c063c52cce9d1ef098a419",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-current/results.json",
+      "expected": "22e7f17b4262ea06004986035f8585d5eaac30d42390373ddcd4b1b484b914da",
+      "actual": "22e7f17b4262ea06004986035f8585d5eaac30d42390373ddcd4b1b484b914da",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/direct-640x360.png",
+      "expected": "9d2720db1edbc8f7c847856e88d95bda334d946cbe2208e1dde8bb80064a1c56",
+      "actual": "9d2720db1edbc8f7c847856e88d95bda334d946cbe2208e1dde8bb80064a1c56",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/direct-844x390.png",
+      "expected": "fcd9f201017168c9c577cc464669ea15016d9658060071fdfad5ae863d6dbc9e",
+      "actual": "fcd9f201017168c9c577cc464669ea15016d9658060071fdfad5ae863d6dbc9e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/initial-results.json",
+      "expected": "44b7d95c199620db65aef3659ec9da6a7e4472c0625ad5ab97ee71ec71e05a2b",
+      "actual": "44b7d95c199620db65aef3659ec9da6a7e4472c0625ad5ab97ee71ec71e05a2b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/long-640x360.png",
+      "expected": "55db9dd81c80e9189b3d186366e455c6954986e59e11b50f7ddeec7d7eeee777",
+      "actual": "55db9dd81c80e9189b3d186366e455c6954986e59e11b50f7ddeec7d7eeee777",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/long-844x390.png",
+      "expected": "173c2acc128d5c30d53a7943bf3e370271a375594bf850c12f7f5fb6844b0db5",
+      "actual": "173c2acc128d5c30d53a7943bf3e370271a375594bf850c12f7f5fb6844b0db5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/long-live-rotate-640x360.png",
+      "expected": "77eae99cd7fda968d017c3c2120eb47ceb230f8ce0334deae8205fc5075a36d8",
+      "actual": "77eae99cd7fda968d017c3c2120eb47ceb230f8ce0334deae8205fc5075a36d8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/orientation-proposal/results.json",
+      "expected": "a1633914fd540fec22b8452ed850ec065fd533b6cfcb0a4dfb6b5f3cc34c06d3",
+      "actual": "a1633914fd540fec22b8452ed850ec065fd533b6cfcb0a4dfb6b5f3cc34c06d3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/prepare-proposal-regression.cjs",
+      "expected": "360e1be1a905e58e50ff378bf6a5e2af2edd695d8013961c77032c7147c85a14",
+      "actual": "360e1be1a905e58e50ff378bf6a5e2af2edd695d8013961c77032c7147c85a14",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/prepare-proposal.cjs",
+      "expected": "b12dc1020e7bb96a724c420c1fce13aba4c593087f46761b8859ee159d801f0c",
+      "actual": "b12dc1020e7bb96a724c420c1fce13aba4c593087f46761b8859ee159d801f0c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/prepare.cjs",
+      "expected": "1ad6ae8d281c9dc8c4e32975cf2352ac13b859624fb468e0e52aab4dfdb4715a",
+      "actual": "1ad6ae8d281c9dc8c4e32975cf2352ac13b859624fb468e0e52aab4dfdb4715a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal-before.json",
+      "expected": "3a0c5e8a4befbe6d26709d9a814b99c40260b0811aa351f0d87060ec0ee0bfad",
+      "actual": "3a0c5e8a4befbe6d26709d9a814b99c40260b0811aa351f0d87060ec0ee0bfad",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal-biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal-biome.out.txt",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal-eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal-eslint.out.txt",
+      "expected": "23d3992e4331e01ca584c19bbced7c2943467c72e8ac40dd3881740da6fd4a4a",
+      "actual": "23d3992e4331e01ca584c19bbced7c2943467c72e8ac40dd3881740da6fd4a4a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/custom-320.png",
+      "expected": "169ef53ac62cb0c92ae4d2197b40fd4921e2b78a68432cbba9da5891abdd0188",
+      "actual": "169ef53ac62cb0c92ae4d2197b40fd4921e2b78a68432cbba9da5891abdd0188",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/delete-lifecycle/check.cjs",
+      "expected": "b80024c44e8a95e96364fcdaca11e2dbf72f1e0994a21ac29c42c9c1cb16b494",
+      "actual": "b80024c44e8a95e96364fcdaca11e2dbf72f1e0994a21ac29c42c9c1cb16b494",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/delete-lifecycle/results.json",
+      "expected": "997bb15ff2e460c149f5bafeaa911fa995e29aef81ff3863861ce838d12dcfc2",
+      "actual": "997bb15ff2e460c149f5bafeaa911fa995e29aef81ff3863861ce838d12dcfc2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/direct-320.png",
+      "expected": "e677eaa74a697638ebf010b1b0119b7de1fdf68697bfe4e6c6e46a6e6fd89bfd",
+      "actual": "e677eaa74a697638ebf010b1b0119b7de1fdf68697bfe4e6c6e46a6e6fd89bfd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/direct-360.png",
+      "expected": "41d257de175018fd600b4a186ad98eb635a75e8a082e53bbf1eff4887fe2ba71",
+      "actual": "41d257de175018fd600b4a186ad98eb635a75e8a082e53bbf1eff4887fe2ba71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/direct-390.png",
+      "expected": "a5d38d8cc56069f757f3eb31fffec30013f2b7f17bf0c524ff2f350899d39e0a",
+      "actual": "a5d38d8cc56069f757f3eb31fffec30013f2b7f17bf0c524ff2f350899d39e0a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/direct-768.png",
+      "expected": "55e4e6edd5adbcf7e5eb1f96f3e609fe6ae54009d17e4eb9b7e55a283f660b59",
+      "actual": "55e4e6edd5adbcf7e5eb1f96f3e609fe6ae54009d17e4eb9b7e55a283f660b59",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/initial-modal-entry.fixture.jsx",
+      "expected": "70206ae1138079ae52cdb03b3b643aef308e8ad5b59630cd197ca8d857ea4d03",
+      "actual": "70206ae1138079ae52cdb03b3b643aef308e8ad5b59630cd197ca8d857ea4d03",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/legacy-320.png",
+      "expected": "710ac33917feb2979f64d3ec71b0972faa9d5e6522fdaf1db61f58ae7290bbdc",
+      "actual": "710ac33917feb2979f64d3ec71b0972faa9d5e6522fdaf1db61f58ae7290bbdc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/long-320.png",
+      "expected": "969c4f66cc1de54587dadef4b4097b67d9c18b2d75e9feecbc8cf7e68b1b20da",
+      "actual": "969c4f66cc1de54587dadef4b4097b67d9c18b2d75e9feecbc8cf7e68b1b20da",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/member-320.png",
+      "expected": "be1361c5c08c33ef70642b38f0f1acd670a50afbc2d7c9137c089dc3143ecf27",
+      "actual": "be1361c5c08c33ef70642b38f0f1acd670a50afbc2d7c9137c089dc3143ecf27",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/MemberDeleteDialog.fixture.tsx.txt",
+      "expected": "f78c39e8083eead485ca9af3cd179f8457febe95b3ff9e08b0e590f628ec0bd6",
+      "actual": "f78c39e8083eead485ca9af3cd179f8457febe95b3ff9e08b0e590f628ec0bd6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/message-320.png",
+      "expected": "6c3d58543436c3af2deeb898716eeecd4973e0f3910fdf196b1058db67135866",
+      "actual": "6c3d58543436c3af2deeb898716eeecd4973e0f3910fdf196b1058db67135866",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/modal-browser-results.json",
+      "expected": "04c1064dd19efa37e934d4fc0c6550c62d19b7009a6d968aebd6c77ddedd6ba6",
+      "actual": "04c1064dd19efa37e934d4fc0c6550c62d19b7009a6d968aebd6c77ddedd6ba6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/modal-browser.cjs",
+      "expected": "27bddc9b9b4c9cb4f23a7598bb748f7379d62c71531d5ff6bbd7a9bd960d9320",
+      "actual": "27bddc9b9b4c9cb4f23a7598bb748f7379d62c71531d5ff6bbd7a9bd960d9320",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/modal-entry.fixture.jsx",
+      "expected": "238021aeb4895d0bbcdcc2cbb84d1e43a58c2f8a71474a064e2f5660ad13edbe",
+      "actual": "238021aeb4895d0bbcdcc2cbb84d1e43a58c2f8a71474a064e2f5660ad13edbe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/no-close-320.png",
+      "expected": "1bf1519bc65358d0fd75802c58de26b45330b1d1c8ed38bd004b497df39d7b15",
+      "actual": "1bf1519bc65358d0fd75802c58de26b45330b1d1c8ed38bd004b497df39d7b15",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/node-320.png",
+      "expected": "7c51e416fe2d31239cdea8275838d5c11940ad81e85d114a0b2a074edb8acc4d",
+      "actual": "7c51e416fe2d31239cdea8275838d5c11940ad81e85d114a0b2a074edb8acc4d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/patch-check.json",
+      "expected": "9d5a483612fe90374b9c50c491e2ab4b0531dd4cc2b86b3d93602693d5224eb1",
+      "actual": "9d5a483612fe90374b9c50c491e2ab4b0531dd4cc2b86b3d93602693d5224eb1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/role-320.png",
+      "expected": "dfa681c5039a40a4e4f44bad96a7630b7edbafead45d32ed6516aae81ba9432e",
+      "actual": "dfa681c5039a40a4e4f44bad96a7630b7edbafead45d32ed6516aae81ba9432e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/RoleDeleteDialog.fixture.tsx.txt",
+      "expected": "afc6375277d335218a674920c6474cda81572e6ff471c53227b5019c36f802a3",
+      "actual": "afc6375277d335218a674920c6474cda81572e6ff471c53227b5019c36f802a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-browser.cjs",
+      "expected": "11ae1afe3bc22d07a86547b54c8523c8036c2190bf7864b5429c341e7666cee8",
+      "actual": "11ae1afe3bc22d07a86547b54c8523c8036c2190bf7864b5429c341e7666cee8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-entry.fixture.jsx",
+      "expected": "ae4f40cd323c6d662b3975478bd5eb738388ad33ee4bc8b133bb932f1a38f961",
+      "actual": "ae4f40cd323c6d662b3975478bd5eb738388ad33ee4bc8b133bb932f1a38f961",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/browser-results.json",
+      "expected": "c950d8db35a401d093c0d1ee27a929114c94e6b43af304a9d6526b1149bb6191",
+      "actual": "c950d8db35a401d093c0d1ee27a929114c94e6b43af304a9d6526b1149bb6191",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/category-320.png",
+      "expected": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "actual": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/empty-320.png",
+      "expected": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "actual": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/list-error-320.png",
+      "expected": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "actual": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/list-loading-320.png",
+      "expected": "9283e4e9ebbb952c5fd5af64fa5232e6d080d532859943047627ba82697435ef",
+      "actual": "9283e4e9ebbb952c5fd5af64fa5232e6d080d532859943047627ba82697435ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/main-320.png",
+      "expected": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "actual": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/main-360.png",
+      "expected": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "actual": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/main-390.png",
+      "expected": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "actual": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/picker-320.png",
+      "expected": "e44dd76f0b96c59b2b21218b505abb53ad0f5629fdad4b330a9609d958e8f396",
+      "actual": "e44dd76f0b96c59b2b21218b505abb53ad0f5629fdad4b330a9609d958e8f396",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/picker-360.png",
+      "expected": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "actual": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/picker-390.png",
+      "expected": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "actual": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/picker-768.png",
+      "expected": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "actual": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/save-error-320.png",
+      "expected": "a5eb2044c286258c34f048f1350b09de0332b219191de8298af9c235289c4e61",
+      "actual": "a5eb2044c286258c34f048f1350b09de0332b219191de8298af9c235289c4e61",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/settings-error-320.png",
+      "expected": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "actual": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/settings-loading-320.png",
+      "expected": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "actual": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/success-dom.json",
+      "expected": "f7c0db6a702345ff2002e2682962b852b1c7ba8665179418b7774c459f98edaa",
+      "actual": "f7c0db6a702345ff2002e2682962b852b1c7ba8665179418b7774c459f98edaa",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/success-resize-320.png",
+      "expected": "3aa48fde0b0f4b2978ab7fafa712774d35a42ee761510d882ca7e351a132cac0",
+      "actual": "3aa48fde0b0f4b2978ab7fafa712774d35a42ee761510d882ca7e351a132cac0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-final/web-before.css",
+      "expected": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "actual": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/stock-screen.fixture.tsx.txt",
+      "expected": "2a23e0cee562c15d67f12661949c5ae45d8a1a2610855238564885ebe57cef17",
+      "actual": "2a23e0cee562c15d67f12661949c5ae45d8a1a2610855238564885ebe57cef17",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/success-modal-height.patch",
+      "expected": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2",
+      "actual": "d1a6b3a8a383905489c1138421e02f1e1370e658f0a747ce9483547bd7b9e1f2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.for-patch.tsx.txt",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/SuccessModal.tsx",
+      "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/worker-320.png",
+      "expected": "787905ae5ee6e009205331bb8d55ac6556c85f801fc78459838271ee1080ee8a",
+      "actual": "787905ae5ee6e009205331bb8d55ac6556c85f801fc78459838271ee1080ee8a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/proposal/WorkerDeleteDialog.fixture.tsx.txt",
+      "expected": "6e2d21deb7aff73084381cb32fa6eb8af45a496611b556ec7f598f640312d40d",
+      "actual": "6e2d21deb7aff73084381cb32fa6eb8af45a496611b556ec7f598f640312d40d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/quality-results.json",
+      "expected": "d8e0f351a7fe0ec103ee8da1876c536ff9b78bc537e2aed0d367bd3dcefa03fe",
+      "actual": "d8e0f351a7fe0ec103ee8da1876c536ff9b78bc537e2aed0d367bd3dcefa03fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/quality.cjs",
+      "expected": "bbb0259363b6e3ae8854878d077225c79b90c5265c8640fa0b3328fe7ba01a71",
+      "actual": "bbb0259363b6e3ae8854878d077225c79b90c5265c8640fa0b3328fe7ba01a71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/REPORT.md",
+      "expected": "b5c3011a4985dd6416da36bc752e0d65d3ef9ae48d7d31d1eab9f9cbff200a7a",
+      "actual": "b5c3011a4985dd6416da36bc752e0d65d3ef9ae48d7d31d1eab9f9cbff200a7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/role-320.png",
+      "expected": "eb5ceb4ca3235438a31c45f8e6018dbca9993a1c25e385c67a63cb54482da20f",
+      "actual": "eb5ceb4ca3235438a31c45f8e6018dbca9993a1c25e385c67a63cb54482da20f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/runtime-preservation.json",
+      "expected": "5cae9823491e5c90897c9ce30cf0cb323173d6d483f3a7be3f89c29e336c4dda",
+      "actual": "5cae9823491e5c90897c9ce30cf0cb323173d6d483f3a7be3f89c29e336c4dda",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/source-before.json",
+      "expected": "9d86d02cb023811e0a11f795b62c8c8d8308c45e69dad2c52e812d6dc701d2db",
+      "actual": "9d86d02cb023811e0a11f795b62c8c8d8308c45e69dad2c52e812d6dc701d2db",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-browser.cjs",
+      "expected": "9034b9f8108e5cfd42fc21f4ee27ef9cec0b151dd00bcc0829358d19266ec85b",
+      "actual": "9034b9f8108e5cfd42fc21f4ee27ef9cec0b151dd00bcc0829358d19266ec85b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-browser.initial.cjs.txt",
+      "expected": "247ba54f3541813459ec9b2902b3a57a8740717b46fedffb154526f6f0604c7f",
+      "actual": "247ba54f3541813459ec9b2902b3a57a8740717b46fedffb154526f6f0604c7f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-entry.fixture.jsx",
+      "expected": "b1a9111246deb5c09512f4ca88a412249e3ed3b0795256b80074e143c9b3f636",
+      "actual": "b1a9111246deb5c09512f4ca88a412249e3ed3b0795256b80074e143c9b3f636",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/browser-results.json",
+      "expected": "fe8b897edf82a8f9745e5a61f3536013d5f605130f8e6c163296ef10094ceb8e",
+      "actual": "fe8b897edf82a8f9745e5a61f3536013d5f605130f8e6c163296ef10094ceb8e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/category-320.png",
+      "expected": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "actual": "29d667fc7589bb7b164e8544db690d967fa0859012d7c58b5067f60a9f3d668b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/empty-320.png",
+      "expected": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "actual": "756fe7ca05212228d3a7cbc35e5caecaf0354ffab8bc9d66f40299d5aae31238",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/list-error-320.png",
+      "expected": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "actual": "efbc90e2a1573c5d0b846cf207feab9ea817d14f642e39fbcd52bf77ba1c77d1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/list-loading-320.png",
+      "expected": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "actual": "6a40e02a95ceafd48c9146eac7aab00b55781b42171c4952f8ac2fcf806b955e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/main-320.png",
+      "expected": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "actual": "8b8e7afbd0525ca9503d2008609dc56edae81b6a445a635b79a36164414f62b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/main-360.png",
+      "expected": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "actual": "ebdd2db3498cec2b38f90fa94e535f398beffd1c5e980914431c4b869dfbed7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/main-390.png",
+      "expected": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "actual": "b3991a700a5b96c62f1cedfa29cf6caaf362eed737f2d54b8445dc3d743cf389",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/picker-320.png",
+      "expected": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "actual": "10c7df378970a3ff2f11de56a58a67175f33ca622c67c3f40ed8d6caa1380e37",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/picker-360.png",
+      "expected": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "actual": "63fba0141fecf975928d4d465f2c65d8052aad162d3fd7cbf065680d148bfc16",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/picker-390.png",
+      "expected": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "actual": "31a4dc99c5cfbc67c5eab22ac5ed55c8243af7084c6efba2e827886d1c9870b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/picker-768.png",
+      "expected": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "actual": "f515da0161195f12f73037b137993d26b1c83dfcf9de5b0f29fe0cfe6cc79db6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/save-error-320.png",
+      "expected": "a5eb2044c286258c34f048f1350b09de0332b219191de8298af9c235289c4e61",
+      "actual": "a5eb2044c286258c34f048f1350b09de0332b219191de8298af9c235289c4e61",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/settings-error-320.png",
+      "expected": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "actual": "0730769d923a722aa28cab4611428fa6cd1b02fb16f71a2d8a1394b31d8c8068",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/settings-loading-320.png",
+      "expected": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "actual": "40e5104d1f0acaad3362bd7f3f1329e4db40860261a2bcc64f8a08f15a57e2b0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/success-dom.json",
+      "expected": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "actual": "9b877a68874a9ea0bf35903f6c8fc21259bc4864885b7d94188dd4a80552be05",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/success-resize-320.png",
+      "expected": "79b4582ffa6eaecc7a740361a05365ea56909f402ee09b3f36a290f1492b3a42",
+      "actual": "79b4582ffa6eaecc7a740361a05365ea56909f402ee09b3f36a290f1492b3a42",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-final/web-before.css",
+      "expected": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "actual": "d5573e6df65d42c1bde1a8e75a0f3457563c3bc0a59c49dbe5e6beaa5fe96cb0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-initial-browser-results.json",
+      "expected": "ca897e4783127bd73de0fa85cc643c04ff57762853fce874b5e9195157d823d6",
+      "actual": "ca897e4783127bd73de0fa85cc643c04ff57762853fce874b5e9195157d823d6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-isolation.json",
+      "expected": "8455dd95fb1da04e977b0ade4dfeec7c3bbec848d213e9f07c8da64d569d4b1e",
+      "actual": "8455dd95fb1da04e977b0ade4dfeec7c3bbec848d213e9f07c8da64d569d4b1e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-reviewed-contract.tsx.txt",
+      "expected": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+      "actual": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/stock-reviewed-entry.fixture.jsx",
+      "expected": "06a8b8929d3f78b6b41f0bce5c8f953daea4305e63c941f84aac9d0096eda614",
+      "actual": "06a8b8929d3f78b6b41f0bce5c8f953daea4305e63c941f84aac9d0096eda614",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/SuccessModal.before.tsx.txt",
+      "expected": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "actual": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/SuccessModal.reviewed.tsx.txt",
+      "expected": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "actual": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/typecheck-results.json",
+      "expected": "87ff5c462c00327992be8c0b4712c5eba080273d51745e23a2ae62b521f1aef6",
+      "actual": "87ff5c462c00327992be8c0b4712c5eba080273d51745e23a2ae62b521f1aef6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/verify-artifacts.cjs",
+      "expected": "764355824abec2a289e1b7f4aac7cf025b03177df22f9d977716fa33af792e30",
+      "actual": "764355824abec2a289e1b7f4aac7cf025b03177df22f9d977716fa33af792e30",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/web.css",
+      "expected": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "actual": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-success-modal-2026-10-09/worker-320.png",
+      "expected": "55866ad134d1cfedb1951eac12e660133cd351a43a93481cd70a31fdad592cae",
+      "actual": "55866ad134d1cfedb1951eac12e660133cd351a43a93481cd70a31fdad592cae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/adapt.cjs",
+      "expected": "06d5648580b4670e1b96eca4c25ea5b5ce487d51c24e8a8fb8e2ee24e272e1c8",
+      "actual": "06d5648580b4670e1b96eca4c25ea5b5ce487d51c24e8a8fb8e2ee24e272e1c8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/archive-offline-attempt.cjs",
+      "expected": "94a710a2734aeba38983343f21823edf4a3bd6830a4289cd30ea9e23541ca9bb",
+      "actual": "94a710a2734aeba38983343f21823edf4a3bd6830a4289cd30ea9e23541ca9bb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/audit-callers.cjs",
+      "expected": "595a5de3fcb8cb975bf9c12d1078e3b5248b346e9307e2bfca6ed649cd40f447",
+      "actual": "595a5de3fcb8cb975bf9c12d1078e3b5248b346e9307e2bfca6ed649cd40f447",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/biome.out.txt",
+      "expected": "e3e05edef2a683aa450b3308847351cc2a2bd30474c64cbab94d8e90d582df13",
+      "actual": "e3e05edef2a683aa450b3308847351cc2a2bd30474c64cbab94d8e90d582df13",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/browser.cjs",
+      "expected": "4b2ab8a3d616228c52ddb2b172d2f06c30b7ff44564a5ecda7c4a00836d3540b",
+      "actual": "4b2ab8a3d616228c52ddb2b172d2f06c30b7ff44564a5ecda7c4a00836d3540b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/caller-audit.json",
+      "expected": "301397d476187c91cf61aa1a85542ea25d87d7cc24f03b2b55e379aa23c5d9b6",
+      "actual": "301397d476187c91cf61aa1a85542ea25d87d7cc24f03b2b55e379aa23c5d9b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/DECISION.json",
+      "expected": "b2694cdd67242d8de82c5de3093066c6922db9934d0df975fdc9c88fc0ed6408",
+      "actual": "b2694cdd67242d8de82c5de3093066c6922db9934d0df975fdc9c88fc0ed6408",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/delete-lifecycle/check.cjs",
+      "expected": "14964ba83b5403e6a6ac245d8c2d5195a35762c7b729a8a47b21cacf6a5e6d45",
+      "actual": "14964ba83b5403e6a6ac245d8c2d5195a35762c7b729a8a47b21cacf6a5e6d45",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/delete-lifecycle/results.json",
+      "expected": "0cf332729ba5226f412489d6d8e86ff029e6464ec6ce41cb781efd22df008aa4",
+      "actual": "0cf332729ba5226f412489d6d8e86ff029e6464ec6ce41cb781efd22df008aa4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/DeleteConfirmModal.before.tsx.txt",
+      "expected": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "actual": "d5f8562ea6e29266ee89a5f5c1d3dc60682f8b4a7a1a473b632cf8b85b6117a0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/DeleteConfirmModal.reviewed.tsx.txt",
+      "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/dependency-update.json",
+      "expected": "adb6a7429d393bfecb630f4018b498779bfad49d9dd149d8436992ca426cadfd",
+      "actual": "adb6a7429d393bfecb630f4018b498779bfad49d9dd149d8436992ca426cadfd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/diagnose-browser.cjs",
+      "expected": "a9d67f29ca47fe090813297263be4a71a3c4dae66b37cfb200fd927bb1fa1ba9",
+      "actual": "a9d67f29ca47fe090813297263be4a71a3c4dae66b37cfb200fd927bb1fa1ba9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/eslint.out.txt",
+      "expected": "ae54fcab84bb41ba25069e86b1bbcf64a99d87a707c7ee4f3e423d0b55e99f7c",
+      "actual": "ae54fcab84bb41ba25069e86b1bbcf64a99d87a707c7ee4f3e423d0b55e99f7c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/browser-results.json",
+      "expected": "044cc164aae0d0280f1516c5e48780fcb69cf2ee29f98949d69195aaa525ee21",
+      "actual": "044cc164aae0d0280f1516c5e48780fcb69cf2ee29f98949d69195aaa525ee21",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/custom-320.png",
+      "expected": "60399b35c2c27ccce5cab691eaf3df989f816e148d40b7050cdad90ae90c025a",
+      "actual": "60399b35c2c27ccce5cab691eaf3df989f816e148d40b7050cdad90ae90c025a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/direct-320.png",
+      "expected": "ebcde053bd12b126d4c82ba3d68c1e4b9940c03564546dec4bd5d521f67dd775",
+      "actual": "ebcde053bd12b126d4c82ba3d68c1e4b9940c03564546dec4bd5d521f67dd775",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/direct-360.png",
+      "expected": "df9b4b9a6d8282ff6efdcf184c0eb7d6d5ac7d7d278d5860714c3fdc2b36d564",
+      "actual": "df9b4b9a6d8282ff6efdcf184c0eb7d6d5ac7d7d278d5860714c3fdc2b36d564",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/direct-390.png",
+      "expected": "9890a144e3cdfc2efc8478b4634d182b60ce126db60095c766bff46502869d3a",
+      "actual": "9890a144e3cdfc2efc8478b4634d182b60ce126db60095c766bff46502869d3a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/direct-768.png",
+      "expected": "09fa380e49c91edb1e4d428eda90a04ca8017da740c75269beee31d687c7a451",
+      "actual": "09fa380e49c91edb1e4d428eda90a04ca8017da740c75269beee31d687c7a451",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/legacy-320.png",
+      "expected": "d591afbdb1249832ba812fe43fd219a1696a3ac67bc7e415037416b4e9278c71",
+      "actual": "d591afbdb1249832ba812fe43fd219a1696a3ac67bc7e415037416b4e9278c71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/loading-320.png",
+      "expected": "d591afbdb1249832ba812fe43fd219a1696a3ac67bc7e415037416b4e9278c71",
+      "actual": "d591afbdb1249832ba812fe43fd219a1696a3ac67bc7e415037416b4e9278c71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/long-320.png",
+      "expected": "abe83d675ca95e30b42c8eae8102cd614489056764904be8bb755c426ccd073f",
+      "actual": "abe83d675ca95e30b42c8eae8102cd614489056764904be8bb755c426ccd073f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/member-320.png",
+      "expected": "3f004f35471e91f371d53777499e93c64a5b12f240017453df280846a2388370",
+      "actual": "3f004f35471e91f371d53777499e93c64a5b12f240017453df280846a2388370",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/message-320.png",
+      "expected": "773f571f9c2a17cc1cf1814219f1d4dcd5fccd8d9e3a55a9a159f8a58d6e5092",
+      "actual": "773f571f9c2a17cc1cf1814219f1d4dcd5fccd8d9e3a55a9a159f8a58d6e5092",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/node-320.png",
+      "expected": "2b5683bd6a277bd025b6fb3d7ecf955aa8812e4e149f7d723ac79711855c57d7",
+      "actual": "2b5683bd6a277bd025b6fb3d7ecf955aa8812e4e149f7d723ac79711855c57d7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/role-320.png",
+      "expected": "fe5ef3fcc0940da362549c32a0d35d605a76d5e30b514dfb4d1ec59e8e8005e3",
+      "actual": "fe5ef3fcc0940da362549c32a0d35d605a76d5e30b514dfb4d1ec59e8e8005e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/final/worker-320.png",
+      "expected": "72f0fc2674a402e80310fd78d56a60b0fbe218adab6f5d77a26231f46535dd06",
+      "actual": "72f0fc2674a402e80310fd78d56a60b0fbe218adab6f5d77a26231f46535dd06",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/finalize.cjs",
+      "expected": "987a34fcc4543ca6fcc34ebafa1d1f5aba8404deadd6473e18c2a2c1f2d69638",
+      "actual": "987a34fcc4543ca6fcc34ebafa1d1f5aba8404deadd6473e18c2a2c1f2d69638",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/fixture-before.json",
+      "expected": "1b7bace8e55ac8cf7074ea468963373380115ba2a9079d6a4014937ffc5da3d2",
+      "actual": "1b7bace8e55ac8cf7074ea468963373380115ba2a9079d6a4014937ffc5da3d2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/lifecycle-adapter-failure.json",
+      "expected": "1280393a48e88a6a4bd108947e00e2d9188afa2c550ae09143172e6de7f4b5a9",
+      "actual": "1280393a48e88a6a4bd108947e00e2d9188afa2c550ae09143172e6de7f4b5a9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/metro-timeout-browser-results.json",
+      "expected": "fe60c3bcb0a7f9ce8389bb1036e8008e411e055655752716c707cccdff16d059",
+      "actual": "fe60c3bcb0a7f9ce8389bb1036e8008e411e055655752716c707cccdff16d059",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/metro-timeout-failure.png",
+      "expected": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "actual": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-final-browser-results.json",
+      "expected": "decc0493eb54e62a878da74cff80c9942b99f4881108e18e1fa0ebbf942b7baf",
+      "actual": "decc0493eb54e62a878da74cff80c9942b99f4881108e18e1fa0ebbf942b7baf",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-final-failure.png",
+      "expected": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "actual": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-offline-diagnostic.json",
+      "expected": "da84d3ff977aa2c84777f8cf50f1d113e031ab152dd6e278dc79675be93ea84f",
+      "actual": "da84d3ff977aa2c84777f8cf50f1d113e031ab152dd6e278dc79675be93ea84f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-offline-diagnostic.png",
+      "expected": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "actual": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-orientation-current-failure.png",
+      "expected": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "actual": "f2eed680f27c9cb989e78fe8021b93448e8b37233b458c5a31ca0079abc7bf93",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/native-resolution-orientation-current-results.json",
+      "expected": "b1e5867692e51f262389db178dfac47c7711c952cec68a02bec10a9670c2a9b7",
+      "actual": "b1e5867692e51f262389db178dfac47c7711c952cec68a02bec10a9670c2a9b7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/offline-diagnostic.json",
+      "expected": "44927ef26944f9520519ea777c7ccf880fbc761d6c61c8ade4009782be6b8a45",
+      "actual": "44927ef26944f9520519ea777c7ccf880fbc761d6c61c8ade4009782be6b8a45",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/offline-diagnostic.png",
+      "expected": "add47aac4582723dd75a5d6336e3b2737bd07c37cbef35694f1732cf2e7bdf71",
+      "actual": "add47aac4582723dd75a5d6336e3b2737bd07c37cbef35694f1732cf2e7bdf71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/offline-first-error.json",
+      "expected": "279361be3747055d6d1c4e22741821da2926ecb2dd5961edf05c82c48adc90fc",
+      "actual": "279361be3747055d6d1c4e22741821da2926ecb2dd5961edf05c82c48adc90fc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/offline-native-resolution-build.json",
+      "expected": "8e313a1eaf9ec93602e7121a31f86e48c9ff116fc1e6c63395b8d88e1ab15d66",
+      "actual": "8e313a1eaf9ec93602e7121a31f86e48c9ff116fc1e6c63395b8d88e1ab15d66",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/proposal-animation-node-320.png",
+      "expected": "635f4bc051dc7382c865f56ae194d09769ba4e88b132fe6ea2dc73242bd74533",
+      "actual": "635f4bc051dc7382c865f56ae194d09769ba4e88b132fe6ea2dc73242bd74533",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/proposal-animation-quality.json",
+      "expected": "ea35d70230038a43b281debc2b740aed4061cab8ef5488f01840b938e9a4e5ab",
+      "actual": "ea35d70230038a43b281debc2b740aed4061cab8ef5488f01840b938e9a4e5ab",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/proposal-animation-results.json",
+      "expected": "701f9c2505b5f1cadfc2526fa1b1bf8b5774126d0144b66da566b7ea5a2e4abd",
+      "actual": "701f9c2505b5f1cadfc2526fa1b1bf8b5774126d0144b66da566b7ea5a2e4abd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/interim/proposal-animation-runner.cjs",
+      "expected": "56a245ea4392ff9a0b04f071f4dc014b42a2f5613a8b9628773d319116fe45ec",
+      "actual": "56a245ea4392ff9a0b04f071f4dc014b42a2f5613a8b9628773d319116fe45ec",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/modal-entry.fixture.jsx",
+      "expected": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "actual": "3d08e2ad3fcf7986b8df0a6f489343b70bda7a2736447da250e3287a3a6fedd3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/observe.cjs",
+      "expected": "1b0385924d0496db0ff54e6837c6aee4c49a30998ca48798f06158333359de96",
+      "actual": "1b0385924d0496db0ff54e6837c6aee4c49a30998ca48798f06158333359de96",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-build.cjs",
+      "expected": "81793db9e66e35f120eb4e5b59840d1582d75146ef13c0ba6ec1fedd30d4cca5",
+      "actual": "81793db9e66e35f120eb4e5b59840d1582d75146ef13c0ba6ec1fedd30d4cca5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-current-build.json",
+      "expected": "0488225c3dcd2952673c3b47520c4057ba0e847fc761a28524511228f6c6c135",
+      "actual": "0488225c3dcd2952673c3b47520c4057ba0e847fc761a28524511228f6c6c135",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-current-entry.jsx",
+      "expected": "902e7cd720852de75d48e07ab91f906026a2f74eb7c76f88cdb99a6ceb3ca078",
+      "actual": "902e7cd720852de75d48e07ab91f906026a2f74eb7c76f88cdb99a6ceb3ca078",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-current-error.json",
+      "expected": "279361be3747055d6d1c4e22741821da2926ecb2dd5961edf05c82c48adc90fc",
+      "actual": "279361be3747055d6d1c4e22741821da2926ecb2dd5961edf05c82c48adc90fc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-proposal-build.json",
+      "expected": "adf6143305f3c59eb8b32c787d07435c8d705e72f54e1a4924ca32e9dcbad48b",
+      "actual": "adf6143305f3c59eb8b32c787d07435c8d705e72f54e1a4924ca32e9dcbad48b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-proposal-entry.jsx",
+      "expected": "fc8d91b26f913fd106b525b7a9f8a7f8b78e8471c187e91147669e0474c84862",
+      "actual": "fc8d91b26f913fd106b525b7a9f8a7f8b78e8471c187e91147669e0474c84862",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/offline-transport.cjs",
+      "expected": "ed735044ab30e8e5763225ef03d9ca5b82fe516c29d2f85726ae0110d4af22f9",
+      "actual": "ed735044ab30e8e5763225ef03d9ca5b82fe516c29d2f85726ae0110d4af22f9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/direct-640x360.png",
+      "expected": "32ef90f8dccd48ae9c2220424e21a2b4534728226b84a8c84430bfe64c4e81b1",
+      "actual": "32ef90f8dccd48ae9c2220424e21a2b4534728226b84a8c84430bfe64c4e81b1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/direct-844x390.png",
+      "expected": "38ddfdd3408f7a6e3be07d173867216e421a511645b63f5769c2bfa2005ca5c6",
+      "actual": "38ddfdd3408f7a6e3be07d173867216e421a511645b63f5769c2bfa2005ca5c6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/long-640x360.png",
+      "expected": "406ae4a6d75101cccc02866bd7e699fedf7d9488af78922d013a1ce818cfb6c5",
+      "actual": "406ae4a6d75101cccc02866bd7e699fedf7d9488af78922d013a1ce818cfb6c5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/long-844x390.png",
+      "expected": "e2c8f763e137b95b1e60971fdd59e661dcbbc020291d8b86a69aaac0fea04134",
+      "actual": "e2c8f763e137b95b1e60971fdd59e661dcbbc020291d8b86a69aaac0fea04134",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/long-live-rotate-640x360.png",
+      "expected": "2b67e5c0c04584e54206ef03196145a7518819601ffbc0abc22d88dacd30d305",
+      "actual": "2b67e5c0c04584e54206ef03196145a7518819601ffbc0abc22d88dacd30d305",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-current/results.json",
+      "expected": "c21e76bae90cdd0b037e815e94c6826498badd3f6f222f6aab50a9b46875c71a",
+      "actual": "c21e76bae90cdd0b037e815e94c6826498badd3f6f222f6aab50a9b46875c71a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/direct-640x360.png",
+      "expected": "4b6fd8cf96cfd65ed66c62fbea1b4cab2ef71e10293bdf46fa528addc1043402",
+      "actual": "4b6fd8cf96cfd65ed66c62fbea1b4cab2ef71e10293bdf46fa528addc1043402",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/direct-844x390.png",
+      "expected": "e2b82ffc75274f9537e1c4f8f0a422b870225fc09bfae9e368737b83d070d2e6",
+      "actual": "e2b82ffc75274f9537e1c4f8f0a422b870225fc09bfae9e368737b83d070d2e6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/long-640x360.png",
+      "expected": "21dd29d5d0d169ff548e534ea6e9c8634ea169b464b17f2cc760c6c681c2bf57",
+      "actual": "21dd29d5d0d169ff548e534ea6e9c8634ea169b464b17f2cc760c6c681c2bf57",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/long-844x390.png",
+      "expected": "92e193ac2f35ed0c4d572da0d86b43bf9f287ff076ddd5ec9bd0426dc6d29e73",
+      "actual": "92e193ac2f35ed0c4d572da0d86b43bf9f287ff076ddd5ec9bd0426dc6d29e73",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/long-live-rotate-640x360.png",
+      "expected": "21dd29d5d0d169ff548e534ea6e9c8634ea169b464b17f2cc760c6c681c2bf57",
+      "actual": "21dd29d5d0d169ff548e534ea6e9c8634ea169b464b17f2cc760c6c681c2bf57",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation-proposal/results.json",
+      "expected": "5418fa0339b96ac50367547c2d6f4706e08cd0c5934aa6224b60c4ed42ff7002",
+      "actual": "5418fa0339b96ac50367547c2d6f4706e08cd0c5934aa6224b60c4ed42ff7002",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/orientation.cjs",
+      "expected": "3ae76960277b51098d4c2c112c30cf0ca0a4730c237db6cec9c016f9d628ba0a",
+      "actual": "3ae76960277b51098d4c2c112c30cf0ca0a4730c237db6cec9c016f9d628ba0a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/polish-report.cjs",
+      "expected": "a4098161d7836898db258397ffb4ef124f4fb75c775df38c8d6e915c6e405986",
+      "actual": "a4098161d7836898db258397ffb4ef124f4fb75c775df38c8d6e915c6e405986",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/preparation-drift.json",
+      "expected": "bb21a005c11acfe266f15361ce58cf87c85c226f62d07e6b7f6b28f167c13e72",
+      "actual": "bb21a005c11acfe266f15361ce58cf87c85c226f62d07e6b7f6b28f167c13e72",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/prepare-proposal.cjs",
+      "expected": "0f54cd38347a79a6e0b6ab9ec84f811bb14dc13faa228968b29f2490e25fdd76",
+      "actual": "0f54cd38347a79a6e0b6ab9ec84f811bb14dc13faa228968b29f2490e25fdd76",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/prepare.cjs",
+      "expected": "b4f5cf2725c4054d62a58035282dcd439e9063858731ef55a3a3b07a5d65c7f0",
+      "actual": "b4f5cf2725c4054d62a58035282dcd439e9063858731ef55a3a3b07a5d65c7f0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal-biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal-biome.out.txt",
+      "expected": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "actual": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal-eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal-eslint.out.txt",
+      "expected": "ae54fcab84bb41ba25069e86b1bbcf64a99d87a707c7ee4f3e423d0b55e99f7c",
+      "actual": "ae54fcab84bb41ba25069e86b1bbcf64a99d87a707c7ee4f3e423d0b55e99f7c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/browser.cjs",
+      "expected": "fe83c9ef3c434e689a70aec940a0590545856ab2edabc47edec75af5bdef4940",
+      "actual": "fe83c9ef3c434e689a70aec940a0590545856ab2edabc47edec75af5bdef4940",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/delete-lifecycle/check.cjs",
+      "expected": "ea556c3bd336394860a0e3fc9e5ca74ebdf43db90dcf389ac76b714d9ca27364",
+      "actual": "ea556c3bd336394860a0e3fc9e5ca74ebdf43db90dcf389ac76b714d9ca27364",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/delete-lifecycle/results.json",
+      "expected": "4d7c0ac96afb83cb5998b36cdf68dadd6c7d217640b4775e176c4bf8c32b6eba",
+      "actual": "4d7c0ac96afb83cb5998b36cdf68dadd6c7d217640b4775e176c4bf8c32b6eba",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/delete-modal-height.patch",
+      "expected": "7f6e05ddf80ee72db32d304d62ddbd572971ed3e31e66e26df647ec0ef349912",
+      "actual": "7f6e05ddf80ee72db32d304d62ddbd572971ed3e31e66e26df647ec0ef349912",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/DeleteConfirmModal.for-patch.tsx.txt",
+      "expected": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "actual": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/DeleteConfirmModal.tsx",
+      "expected": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "actual": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/browser-results.json",
+      "expected": "aecb41c54d44423b24862867cd51d629d8bd55c52a24ece6453efe8daf1e0f9f",
+      "actual": "aecb41c54d44423b24862867cd51d629d8bd55c52a24ece6453efe8daf1e0f9f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/custom-320.png",
+      "expected": "213205ede12ef8591d31ae7868fe05a53e3236957b862396f9966b272248ea50",
+      "actual": "213205ede12ef8591d31ae7868fe05a53e3236957b862396f9966b272248ea50",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/direct-320.png",
+      "expected": "7b48b25585c348e4eb3179c9947eed1279907b9a7195bdd08f0339781e3b91d0",
+      "actual": "7b48b25585c348e4eb3179c9947eed1279907b9a7195bdd08f0339781e3b91d0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/direct-360.png",
+      "expected": "08b545112b127dd94a4b04476d73982ff666571f3bdf949554e478d23f3a1507",
+      "actual": "08b545112b127dd94a4b04476d73982ff666571f3bdf949554e478d23f3a1507",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/direct-390.png",
+      "expected": "713b38fde57ed6b02767d75207a27e7de7e104f2215b4e71e9ce38689217213e",
+      "actual": "713b38fde57ed6b02767d75207a27e7de7e104f2215b4e71e9ce38689217213e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/direct-768.png",
+      "expected": "d5c7d3b6ebffb52266f3159fe445a6158cd7bc8490a70cbed5a254bd64ca82f2",
+      "actual": "d5c7d3b6ebffb52266f3159fe445a6158cd7bc8490a70cbed5a254bd64ca82f2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/legacy-320.png",
+      "expected": "7da5743f86f5e3ce352e65a3511d9f2f32013c5a9f52cd54262c30ef5b6b454c",
+      "actual": "7da5743f86f5e3ce352e65a3511d9f2f32013c5a9f52cd54262c30ef5b6b454c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/loading-320.png",
+      "expected": "7da5743f86f5e3ce352e65a3511d9f2f32013c5a9f52cd54262c30ef5b6b454c",
+      "actual": "7da5743f86f5e3ce352e65a3511d9f2f32013c5a9f52cd54262c30ef5b6b454c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/long-320.png",
+      "expected": "ecd9f46b5f56dce74450ecfff36c452b8e01818bce6eb893b427ac02d15459f2",
+      "actual": "ecd9f46b5f56dce74450ecfff36c452b8e01818bce6eb893b427ac02d15459f2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/member-320.png",
+      "expected": "584d7ed15ae21c444b974fd8073dec2eb73999de48e30250df4c306588d014e6",
+      "actual": "584d7ed15ae21c444b974fd8073dec2eb73999de48e30250df4c306588d014e6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/message-320.png",
+      "expected": "c2f4a3e37af510c459f3fb47303c535ab5a58cd7a7a2b3a31f6b356697a5a6c2",
+      "actual": "c2f4a3e37af510c459f3fb47303c535ab5a58cd7a7a2b3a31f6b356697a5a6c2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/node-320.png",
+      "expected": "c234322064acf4633dba8605b40382a0a4ea98f7aa81ece97ccef950e9600945",
+      "actual": "c234322064acf4633dba8605b40382a0a4ea98f7aa81ece97ccef950e9600945",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/role-320.png",
+      "expected": "6ffe77c82f8b661f72feae29c69be46a6ebaff5335f2601c002164e8a40ed9ca",
+      "actual": "6ffe77c82f8b661f72feae29c69be46a6ebaff5335f2601c002164e8a40ed9ca",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/final/worker-320.png",
+      "expected": "6c50a70712c897599a72abc5964729ae0607fc597b4457583d4be336ff66432e",
+      "actual": "6c50a70712c897599a72abc5964729ae0607fc597b4457583d4be336ff66432e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/MemberDeleteDialog.fixture.tsx.txt",
+      "expected": "33cf0a2bdcd29a8276ce48c11c4d715be0966e2b3040014cb259d3de2ecf0095",
+      "actual": "33cf0a2bdcd29a8276ce48c11c4d715be0966e2b3040014cb259d3de2ecf0095",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/MemberDeleteDialog.tsx",
+      "expected": "69fda24d842dde78fe18bb56aabeef195180bfa5e23be4c8fcf6446d51d19037",
+      "actual": "69fda24d842dde78fe18bb56aabeef195180bfa5e23be4c8fcf6446d51d19037",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/modal-entry.fixture.jsx",
+      "expected": "2f8c6350de1b2a813c71d89f536ef72f09b21b991a498c34ddf2f60b0ce54f3b",
+      "actual": "2f8c6350de1b2a813c71d89f536ef72f09b21b991a498c34ddf2f60b0ce54f3b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/patch-check.json",
+      "expected": "f54924c236560bf30b2adff8f271cb1d6408882eb1b74ed49d709a0ca1c227a0",
+      "actual": "f54924c236560bf30b2adff8f271cb1d6408882eb1b74ed49d709a0ca1c227a0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/raw-candidate.tsx.txt",
+      "expected": "5d31de05a15c90836a2512ce1206a3456e3b69be3f64f8904fcab3984850564a",
+      "actual": "5d31de05a15c90836a2512ce1206a3456e3b69be3f64f8904fcab3984850564a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/RoleDeleteDialog.fixture.tsx.txt",
+      "expected": "2b9fbdde22ea5dc128284166d3a9dfa30418b7a582932e274554354672fc3e59",
+      "actual": "2b9fbdde22ea5dc128284166d3a9dfa30418b7a582932e274554354672fc3e59",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/RoleDeleteDialog.tsx",
+      "expected": "4e44a6458e27cf4cc8f9a961d9aab730c6bc3e1d585f244a68c0c702a483b589",
+      "actual": "4e44a6458e27cf4cc8f9a961d9aab730c6bc3e1d585f244a68c0c702a483b589",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/web.css",
+      "expected": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "actual": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/WorkerDeleteDialog.fixture.tsx.txt",
+      "expected": "9b876536c31c28279569c59e0ea5ec2684a128de856aad2200d26f3140edc02b",
+      "actual": "9b876536c31c28279569c59e0ea5ec2684a128de856aad2200d26f3140edc02b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/WorkerDeleteDialog.tsx",
+      "expected": "bb5e738db61655ca3ffaf2a706cc6ecd96e770d8a6b489fb33ec4a0c070e7eb1",
+      "actual": "bb5e738db61655ca3ffaf2a706cc6ecd96e770d8a6b489fb33ec4a0c070e7eb1",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/quality-results.json",
+      "expected": "a4724c5038e47ef596473c3e58650495afa0490a456e2fb23a40f266809f0645",
+      "actual": "a4724c5038e47ef596473c3e58650495afa0490a456e2fb23a40f266809f0645",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/quality.cjs",
+      "expected": "da1c0e2d9763805f0601a03f2523ccc41766f2baed7053ec186020bf0ae19059",
+      "actual": "da1c0e2d9763805f0601a03f2523ccc41766f2baed7053ec186020bf0ae19059",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/REPORT.md",
+      "expected": "badc65722e7fc20956d1485e045b408a999552c9511cdb776bbe332b1081f7c9",
+      "actual": "badc65722e7fc20956d1485e045b408a999552c9511cdb776bbe332b1081f7c9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/runtime-observation.json",
+      "expected": "348de8fb1167ef89fa89a1d4235e33c1b0175d1855ef5bdb24317718bfafe112",
+      "actual": "348de8fb1167ef89fa89a1d4235e33c1b0175d1855ef5bdb24317718bfafe112",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/settle-proposal-measurements.cjs",
+      "expected": "f9f50c10d8078ae29874b2dabf2e8e9b7578ce1320c323629db05d9dd9487e76",
+      "actual": "f9f50c10d8078ae29874b2dabf2e8e9b7578ce1320c323629db05d9dd9487e76",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/source-before.json",
+      "expected": "34318403c44a353253f59628f0495b53df2db253e4ed2eea0b0a146d8eb55f1a",
+      "actual": "34318403c44a353253f59628f0495b53df2db253e4ed2eea0b0a146d8eb55f1a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/typecheck-results.json",
+      "expected": "7cd37da85f37e1429d07ef357f3fdec3019ffb9fc68a053232d2bd7f44f7c27b",
+      "actual": "7cd37da85f37e1429d07ef357f3fdec3019ffb9fc68a053232d2bd7f44f7c27b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/verify-artifacts.cjs",
+      "expected": "dd4ea086e7dba2e2c8b598d96b9d9d150945bad911619c5433b7fead64c02a06",
+      "actual": "dd4ea086e7dba2e2c8b598d96b9d9d150945bad911619c5433b7fead64c02a06",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/web.css",
+      "expected": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "actual": "c6d30cb0377122fdb5b20dee1f1994f2cfb8bd0c9008af708b56f2a48d69070b",
+      "passed": true
+    }
+  ],
+  "reusedLifecycle": {
+    "result": "docs/qa/qc-delete-modal-2026-10-09/delete-lifecycle/results.json",
+    "resultHash": "0cf332729ba5226f412489d6d8e86ff029e6464ec6ce41cb781efd22df008aa4",
+    "passed": 156,
+    "failed": 0,
+    "modules": [
+      {
+        "file": "components/common/DeleteConfirmModal.tsx",
+        "expected": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+        "actual": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+        "passed": true
+      },
+      {
+        "file": "hooks/useAlertModal.ts",
+        "expected": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+        "actual": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+        "passed": true
+      },
+      {
+        "file": "components/common/SuccessModal.tsx",
+        "expected": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+        "actual": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+        "passed": true
+      },
+      {
+        "file": "constants/Colors.ts",
+        "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "passed": true
+      },
+      {
+        "file": "components/common/AlertModal.tsx",
+        "expected": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+        "actual": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/roles/RoleDeleteDialog.tsx",
+        "expected": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "actual": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/roles.ts",
+        "expected": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+        "actual": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+        "passed": true
+      },
+      {
+        "file": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "passed": true
+      },
+      {
+        "file": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "passed": true
+      },
+      {
+        "file": "lib/api-utils.ts",
+        "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "passed": true
+      },
+      {
+        "file": "hooks/usePostRequest.ts",
+        "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "passed": true
+      },
+      {
+        "file": "lib/manage/roles.ts",
+        "expected": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+        "actual": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/workers/WorkerDeleteDialog.tsx",
+        "expected": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "actual": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/workers.ts",
+        "expected": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+        "actual": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+        "passed": true
+      },
+      {
+        "file": "components/feature/manage/member/MemberDeleteDialog.tsx",
+        "expected": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "actual": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/customers.ts",
+        "expected": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+        "actual": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+        "passed": true
+      }
+    ],
+    "replayedNow": false,
+    "reason": "Independent QC executed this current Success7508 dependency during Delete review. All16 production modules and package/lock current fingerprints match; no affected behavior changed."
+  },
+  "fixtureMatches": {
+    "entry": true,
+    "css": true
+  },
+  "receiptsMatch": true,
+  "bundlesStable": true,
+  "newBrowser": {
+    "shared": {
+      "passed": 51,
+      "failed": 0
+    },
+    "orientation": {
+      "passed": 27,
+      "failed": 0
+    },
+    "totalPassed": 78,
+    "totalFailed": 0
+  },
+  "focusedTypecheck": {
+    "roots": [
+      "components/common/SuccessModal.tsx"
+    ],
+    "diagnostics": 0,
+    "projectSourceCount": 18,
+    "fullProjectCheck": false
+  },
+  "limits": "Height/scroll delta and named web finding only, public contract preserved. No all-modals/legacy UI tokens/Stock/physical HP/native/full app/Figma/backend approval."
+}

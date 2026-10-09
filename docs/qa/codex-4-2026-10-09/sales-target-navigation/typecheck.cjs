@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const ts = require('typescript');
+const roots = ['app/(no-layout)/manage/sales-target/_layout.tsx','app/(no-layout)/manage/sales-target/index.tsx','app/(no-layout)/manage/sales-target/detail.tsx','app/(no-layout)/manage/sales-target/modify.tsx'].map(x=>path.resolve(x));
+const configPath = ts.findConfigFile(process.cwd(), ts.sys.fileExists, 'tsconfig.json');
+const config = ts.readConfigFile(configPath, ts.sys.readFile);
+const parsed = ts.parseJsonConfigFileContent(config.config, ts.sys, process.cwd());
+const declarations = parsed.fileNames.filter(file => file.endsWith('.d.ts'));
+const program = ts.createProgram([...roots, ...declarations], { ...parsed.options, noEmit: true, incremental: false, tsBuildInfoFile: undefined });
+const diagnostics = ts.getPreEmitDiagnostics(program);
+const result = { status: diagnostics.length ? 'FAIL' : 'PASS', roots: roots.map(x=>path.relative(process.cwd(),x)), sourceFiles: program.getSourceFiles().length, diagnostics: diagnostics.map(item => ({ file: item.file ? path.relative(process.cwd(), item.file.fileName) : null, line: item.file && item.start !== undefined ? item.file.getLineAndCharacterOfPosition(item.start).line + 1 : null, message: ts.flattenDiagnosticMessageText(item.messageText, '\n') })), checkedAt: new Date().toISOString(), scope: 'Target route roots, project declarations and imported dependency closure; not the full application route tree.' };
+fs.writeFileSync(path.join(__dirname, 'typecheck-results.json'), JSON.stringify(result, null, 2));
+console.log(JSON.stringify(result, null, 2));
+process.exitCode = diagnostics.length ? 1 : 0;

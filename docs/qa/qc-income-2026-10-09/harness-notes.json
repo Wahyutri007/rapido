@@ -1,0 +1,16 @@
+{
+  "excludedArtifact": "proposal-unprepared-results.json",
+  "sha256": "794964306ea6fc747fcec6ac522c07d0c8cde96f1047f6aa0ab310ae5f59fc91",
+  "reason": "Preparasi pertama memakai path zod/lib/index.js yang tidak tersedia. Kandidat belum dibuat. Rangkaian command berikutnya tetap berjalan; --proposal pada runner awal fallback ke source asli. Hasil 24 PASS/12 FAIL tersebut merupakan source asli, bukan kegagalan kandidat.",
+  "corrections": [
+    "Path entry RHF/Zod memakai require.resolve.",
+    "Mode --proposal kini mewajibkan kedua kandidat tersedia.",
+    "Preparasi, quality, dan rerun kandidat dilakukan dengan gate berurutan."
+  ],
+  "excludedFromFinalCounts": true,
+  "finalCandidateEvidence": [
+    "proposal-results.json",
+    "expense-proposal-results.json",
+    "quality-results.json"
+  ]
+}

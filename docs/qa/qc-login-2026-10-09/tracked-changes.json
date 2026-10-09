@@ -1,0 +1,7 @@
+[
+  {
+    "file": "hooks/useProtectedRoute.ts",
+    "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+    "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  }
+]

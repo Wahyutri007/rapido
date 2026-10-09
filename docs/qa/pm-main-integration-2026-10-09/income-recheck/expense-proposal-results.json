@@ -1,0 +1,576 @@
+{
+  "owner": "QC",
+  "tested": "CURRENT_INTEGRATION_SOURCE",
+  "scope": "Six shared CashEntryForm expense-kind candidate regression checks, real RHF/schema/helper/Zustand with adapters; not approval of complete Expenses feature",
+  "passed": 6,
+  "failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "expense candidate: double press creates exactly one expense",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "expense candidate: no false duplicate validation error",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "expense candidate: income collection remains unchanged",
+      "actual": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "inc-1",
+          "referenceNumber": "KM/A002/2603/001",
+          "type": "manual",
+          "accountName": "Pendapatan Operasional",
+          "accountCode": "41001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Pengeluaran tanggal 31 Januari",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "inc-2",
+          "referenceNumber": "INV/A001/2603/001",
+          "type": "invoice",
+          "accountName": "Pendapatan Penjualan",
+          "accountCode": "41002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "itemCount": 5,
+          "description": "Transaksi penjualan kasir",
+          "receipt": {
+            "merchantName": "Tanah Abang, Jakarta Pusat, DKI Jakarta, Indonesia",
+            "merchantPhone": "+62 812 3456 7890",
+            "orderTime": "Jum, 13 Des, 2024 03:50:02",
+            "transactionNumber": "INV-001",
+            "customer": "Arianjo Einstein",
+            "cashier": "Julia Hartua",
+            "orderStatus": "Selesai",
+            "paymentStatus": "Dibayar",
+            "groups": [
+              {
+                "category": "Dine In",
+                "items": [
+                  {
+                    "name": "Valala Hotdog",
+                    "qty": 1,
+                    "price": 65000,
+                    "modifiers": [
+                      {
+                        "name": "Sosis",
+                        "qty": 1,
+                        "price": 5000
+                      },
+                      {
+                        "name": "Sourdough",
+                        "qty": 1,
+                        "price": 3000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 3,
+                    "price": 45000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 3,
+                        "price": 15000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 2,
+                    "price": 48000
+                  }
+                ]
+              },
+              {
+                "category": "Take Away",
+                "items": [
+                  {
+                    "name": "Bakso Goreng",
+                    "qty": 2,
+                    "price": 10000
+                  },
+                  {
+                    "name": "Nasi Goreng",
+                    "qty": 1,
+                    "price": 15000,
+                    "modifiers": [
+                      {
+                        "name": "Telor Dadar",
+                        "qty": 1,
+                        "price": 5000
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Aglio e Olio Spaghetti",
+                    "qty": 3,
+                    "price": 72000
+                  }
+                ]
+              }
+            ],
+            "subtotal": 173000,
+            "tax": 17300,
+            "total": 190000
+          }
+        },
+        {
+          "id": "inc-3",
+          "referenceNumber": "KM/A001/2603/002",
+          "type": "manual",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "description": "Penerimaan kas operasional",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "expense candidate: repeat save retains first ID",
+      "actual": [
+        1,
+        "QC expense second save"
+      ],
+      "expected": [
+        1,
+        "QC expense second save"
+      ],
+      "passed": true
+    },
+    {
+      "name": "expense candidate: disposed cached callback cannot write",
+      "actual": [
+        {
+          "id": "exp-1",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "09.11 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "type": "expense",
+          "description": "Pengeluaran tanggal 9",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-2",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Pengeluaran konsumsi rapat",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-3",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "type": "income",
+          "description": "Penyesuaian saldo kas kecil",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-4",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/003",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Biaya perlengkapan dapur",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "exp-1",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "09.11 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "type": "expense",
+          "description": "Pengeluaran tanggal 9",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-2",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Pengeluaran konsumsi rapat",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-3",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "type": "income",
+          "description": "Penyesuaian saldo kas kecil",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-4",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/003",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Biaya perlengkapan dapur",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "expense candidate: pending validation after unmount cannot write",
+      "actual": [
+        {
+          "id": "exp-1",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "09.11 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "type": "expense",
+          "description": "Pengeluaran tanggal 9",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-2",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Pengeluaran konsumsi rapat",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-3",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "type": "income",
+          "description": "Penyesuaian saldo kas kecil",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-4",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/003",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Biaya perlengkapan dapur",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "expected": [
+        {
+          "id": "exp-1",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "09.11 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 10000,
+          "type": "expense",
+          "description": "Pengeluaran tanggal 9",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-2",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/002",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-19",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Pengeluaran konsumsi rapat",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-3",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/001",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 15000,
+          "type": "income",
+          "description": "Penyesuaian saldo kas kecil",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        },
+        {
+          "id": "exp-4",
+          "accountName": "Kas Kecil",
+          "accountCode": "110001",
+          "referenceNumber": "KK/A001/2603/003",
+          "fundingSource": "Kas",
+          "store": "Sushiro",
+          "date": "2026-03-20",
+          "time": "11.28 WIB",
+          "createdBy": "Ari Ariani",
+          "amount": 12000,
+          "type": "expense",
+          "description": "Biaya perlengkapan dapur",
+          "categoryDescription": "Pajak yang dihitung berdasarkan persantese."
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "app/(no-layout)/manage/income/modify.tsx": "dab1cd74a6a464a0baf0b9151a8f6c1b94a5acb0584b3ab5d89504be3abe0f24",
+    "components/feature/manage/income/IncomeForm.tsx": "dd59ae110ae656c8edb93df542533f488b22c07afbd6e399028ab445e1411e3e",
+    "components/feature/accounting/CashEntryForm.tsx": "c85159482a162b3d4f443d1929b7de1fd55de3970ea2f987effc7215831f2c50",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "constants/data/accounting/expenses.ts": "c81a426c346e1ea9ead3b435dc1822645646a9c0eca80b12cb3fce21ffb9ce32",
+    "constants/data/accounting/incomes.ts": "d8b3890438361ee5be87d40ad06479f060a4dff829fca22f44b901b4962ade8f",
+    "lib/manage/expenses.ts": "247a74a60c054e762744bad270bf0119df7e880d9a1cde09a9cdc85f197fded1",
+    "lib/manage/expense-date.ts": "e01f0e03a479dee887e129a91ac3b8af4d962e181cf3daa7691f9d6546fa8052",
+    "lib/accounting/date.ts": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5",
+    "schema/manage/expense.ts": "514a84480d8fd0865d9bdd097104ece77facd0e532b4a8653da1cad9309193f2",
+    "schema/accounting/cash-entry.ts": "935588cddf74b6f5be2c976b695aeddcb1b2ecbc9b960f403eec619f8e59e14c",
+    "store/accountingStore.ts": "98c94ed67fa767dccb3a89b0dd1f72dc636287934f2bf0a45c43afcca7d3abf3",
+    "constants/data/accounting/accounts.ts": "fb43d426b22212eb6eedde1ffdafa4d6afc57743bd50515828d065a81de2cbf7",
+    "constants/data/accounting/adjusting-journal.ts": "b86bf0e4f45253b668465dcc784c1870a2829736163a84a4a5fc0e819d215c3e",
+    "constants/data/accounting/closing-journal.ts": "e7053877b43ce67d46bccbda0f35d842b875de2f0e94e6636b43dae7a59619d0",
+    "constants/data/accounting/general-journal.ts": "d188e451eea291cf9c38ee328c2b8c4a601f318bfb15af3370d65f6fb67082ce",
+    "constants/data/accounting/general-ledger.ts": "e9368c6eda22751c086b69e44cfab3f7736b59bad40389fae83abb3b7aa2230d",
+    "lib/manage/incomes.ts": "61b8310c43eb45bcb3bfd0ac703bcce3ecbcdb17d015f44733603c47a2b016fa",
+    "schema/manage/income.ts": "56625d63f2d49f5b875794a16b8c603ca9f17ccbdafe91b3b02a84fc8b4adf4b",
+    "app/(no-layout)/manage/income/detail.tsx": "a5be980c7cb61175a3d3311a7b9b4f45d752d7c7578260b6e8d94a1ad3abb201",
+    "components/common/DeleteConfirmModal.tsx": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+  }
+}

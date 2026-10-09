@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "type": "state",
+      "text": "Preview konfirmasi hapus Codex-3",
+      "ready": 1
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/.expo/qc-delete-modal-entry.bundle",
+      "bytes": 5285655,
+      "sha256": "247e6339ff68aa44281a5b52d09eef4284fe91217f2f65ac9a1c733be71c4abf"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Regular.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Regular.ttf",
+      "bytes": 342732,
+      "sha256": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Medium.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Medium.ttf",
+      "bytes": 342936,
+      "sha256": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-SemiBold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-SemiBold.ttf",
+      "bytes": 343640,
+      "sha256": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023"
+    },
+    {
+      "path": "/assets/assets/fonts/Inter_24pt-Bold.ttf",
+      "file": "assets\\fonts\\Inter_24pt-Bold.ttf",
+      "bytes": 344028,
+      "sha256": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+    }
+  ]
+}

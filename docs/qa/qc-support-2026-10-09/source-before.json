@@ -1,0 +1,154 @@
+{
+  "createdAt": "2026-10-08T19:35:35.236Z",
+  "hashes": {
+    "components/feature/support/SupportAttachmentInput.tsx": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+    "components/feature/support/SupportFormScreen.tsx": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+    "schema/support.ts": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+    "types/ui/support.ts": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+    "app/(no-layout)/manage/feedback/index.tsx": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+    "app/(no-layout)/manage/feature-request/index.tsx": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+    "docs/qa/codex-3/support-attachment/HANDOFF.md": "d5acde50638420a88905156cc7d341e63606f091e40b12fbc5ecdd19e07d4593",
+    "docs/qa/codex-3/support-attachment/check.cjs": "f0c140e6615aabd5641c43471b7980170d919a6fc3f118146a429b17b87753c7",
+    "docs/qa/codex-3/support-attachment/check-initial.cjs": "8718bdca7e86e57bd950857d086d337f9a7c084add835ae92127d1c536b8ffce",
+    "docs/qa/codex-3/support-attachment/baseline-initial.json": "928dbcc27b35cea13bc5f349980a399b367f6ef49488cc4cf05e6a3ce3f86e3a",
+    "docs/qa/codex-3/support-attachment/baseline.json": "f6925e4f7859d7d26764e3bc4dfa8df66fb4dfa13e29517ab79b653d5e0c8c3e",
+    "docs/qa/codex-3/support-attachment/results.json": "60cddddcb0b9248096abda38e1f6e3eef3fc56f67c02fa8883419e588feae51a",
+    "docs/qa/codex-3/support-attachment/attachment.before.tsx.txt": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+    "docs/qa/codex-3/support-attachment/form.before.tsx.txt": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+    "docs/qa/codex-3/support-attachment/quality.cjs": "76db6392be14322d2252378457ec99ada6731f521a1ff9c953c8957a9e22c75b",
+    "docs/qa/codex-3/support-attachment/quality-results.json": "d99fc465976f384d3c6abc83c83f776cf307e2baade52e4a802f25727849ad42",
+    "docs/qa/codex-3/support-attachment/typecheck.cjs": "5b56746dbbaf5957dbe86016d998813e3ec8c5bb6446355e9e2a819c70c3f97f",
+    "docs/qa/codex-3/support-attachment/typecheck-results.json": "bab68bd1b692f90c51d7dba1508c91bc5c571520e90f7dcfb8c7e54b386ac4e6",
+    "docs/qa/codex-3/support-attachment/verify.cjs": "d5c7b145dde2ad4d47bb3a0a194332bca36387bd7c278161c18740721d0a114f",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/feature/support/SupportHero.tsx": "15cbd12f94b65f5ecc7f903da2bd843871ccb3654b14851103dd08c758b583c3",
+    "app/(no-layout)/manage/feedback/_layout.tsx": "f3fcbf617d37c1b54113c585d1dc834b679773efd061c5884ecf75f3277fa6fe",
+    "app/(no-layout)/manage/feature-request/_layout.tsx": "90036887b16ad0bbe0c0dc66a1e02313820ba86aa144e51f6be55ff7c963575c",
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "biome.json": "3d4466cbfc04927b82dde5a4703d0fa8fbadeafeea8899f00e968add694d31ec",
+    "eslint.config.js": "3b0c823fd936f964905db962e66e92e24773b7085c0c82750a4d4f0b1808c41c",
+    "tsconfig.json": "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+    "docs/qa/codex-3/support-attachment/verification.json": "6c96d71d3e5eaafe238b2a192affc87454b40b3fd2ebbd399afc6d33f45b3294"
+  },
+  "manifestChecks": [
+    {
+      "file": "components/feature/support/SupportAttachmentInput.tsx",
+      "expected": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "actual": "f8285db03bb38e40fc229015ff21f0cbf65a7622872c0786afed06e336e8f098",
+      "passed": true
+    },
+    {
+      "file": "components/feature/support/SupportFormScreen.tsx",
+      "expected": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "actual": "9981ca3fa593ddb1940aad08ed16a53f771bae8d5e2a4a3f4c32ffe8396982de",
+      "passed": true
+    },
+    {
+      "file": "schema/support.ts",
+      "expected": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "actual": "634a0df4ee238afc021e564c2ad0c6ef18d1a8f123c064f4092671f72ca05e02",
+      "passed": true
+    },
+    {
+      "file": "types/ui/support.ts",
+      "expected": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "actual": "522c8ffc1597485858c1bd9575cfcc643475b2ef2bf681dd9780705c46a0c55d",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/feedback/index.tsx",
+      "expected": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "actual": "9097311fe32766de59954a0d4d6dae916e4e360833ee672cdbe317dff5b4ef0a",
+      "passed": true
+    },
+    {
+      "file": "app/(no-layout)/manage/feature-request/index.tsx",
+      "expected": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "actual": "e1e3ded6728b9951384a064b1a8126907ef0b3b5b246d119dd6c8a6ac3f1107f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/HANDOFF.md",
+      "expected": "d5acde50638420a88905156cc7d341e63606f091e40b12fbc5ecdd19e07d4593",
+      "actual": "d5acde50638420a88905156cc7d341e63606f091e40b12fbc5ecdd19e07d4593",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/check.cjs",
+      "expected": "f0c140e6615aabd5641c43471b7980170d919a6fc3f118146a429b17b87753c7",
+      "actual": "f0c140e6615aabd5641c43471b7980170d919a6fc3f118146a429b17b87753c7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/check-initial.cjs",
+      "expected": "8718bdca7e86e57bd950857d086d337f9a7c084add835ae92127d1c536b8ffce",
+      "actual": "8718bdca7e86e57bd950857d086d337f9a7c084add835ae92127d1c536b8ffce",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/baseline-initial.json",
+      "expected": "928dbcc27b35cea13bc5f349980a399b367f6ef49488cc4cf05e6a3ce3f86e3a",
+      "actual": "928dbcc27b35cea13bc5f349980a399b367f6ef49488cc4cf05e6a3ce3f86e3a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/baseline.json",
+      "expected": "f6925e4f7859d7d26764e3bc4dfa8df66fb4dfa13e29517ab79b653d5e0c8c3e",
+      "actual": "f6925e4f7859d7d26764e3bc4dfa8df66fb4dfa13e29517ab79b653d5e0c8c3e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/results.json",
+      "expected": "60cddddcb0b9248096abda38e1f6e3eef3fc56f67c02fa8883419e588feae51a",
+      "actual": "60cddddcb0b9248096abda38e1f6e3eef3fc56f67c02fa8883419e588feae51a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/attachment.before.tsx.txt",
+      "expected": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+      "actual": "e60fb5b618d7150c8faede3eadea82be0127b728ba6066a4d8c4fc0e0e73718c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/form.before.tsx.txt",
+      "expected": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+      "actual": "6ec268f5487a7eee4d795ae2933728dbe937a00970f8769a498b207536b55219",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/quality.cjs",
+      "expected": "76db6392be14322d2252378457ec99ada6731f521a1ff9c953c8957a9e22c75b",
+      "actual": "76db6392be14322d2252378457ec99ada6731f521a1ff9c953c8957a9e22c75b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/quality-results.json",
+      "expected": "d99fc465976f384d3c6abc83c83f776cf307e2baade52e4a802f25727849ad42",
+      "actual": "d99fc465976f384d3c6abc83c83f776cf307e2baade52e4a802f25727849ad42",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/typecheck.cjs",
+      "expected": "5b56746dbbaf5957dbe86016d998813e3ec8c5bb6446355e9e2a819c70c3f97f",
+      "actual": "5b56746dbbaf5957dbe86016d998813e3ec8c5bb6446355e9e2a819c70c3f97f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/typecheck-results.json",
+      "expected": "bab68bd1b692f90c51d7dba1508c91bc5c571520e90f7dcfb8c7e54b386ac4e6",
+      "actual": "bab68bd1b692f90c51d7dba1508c91bc5c571520e90f7dcfb8c7e54b386ac4e6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/codex-3/support-attachment/verify.cjs",
+      "expected": "d5c7b145dde2ad4d47bb3a0a194332bca36387bd7c278161c18740721d0a114f",
+      "actual": "d5c7b145dde2ad4d47bb3a0a194332bca36387bd7c278161c18740721d0a114f",
+      "passed": true
+    }
+  ]
+}

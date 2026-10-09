@@ -1,0 +1,22 @@
+{
+  "hashes": {
+    "browser.cjs": "c9133fc87840f5728d5f6d7b06ea07c8aba0fd26445c7ec8a2800376be2e0df8",
+    "footer-entry.fixture.jsx": "e03197637b612fc7938a05a54e549c641311b1719a1e25a044856679eca6a3ac",
+    "browser-results.json": "f98d7d1851d65d93f060ee99fa6b6f056e41d25ea4856357602f00ef6683af86",
+    "offline-build.json": "d83ff905a09ae760be85d3ef920ef70ea6db92367fd55323b5a3996d20bdbe30",
+    "audit.cjs": "9af9883146143499aaae1d8908fb9aeee53a27892747945210a6e1dbfc26886b",
+    "audit-results.json": "2f450a43c41af6fd78c431305242c98307fa1fd65ef631c8c6b091f097b700c0",
+    "row-side.png": "9684dc551d4580065c5f60665d893bb19feba6371aa8a8be9b98b4e54de8bf5a"
+  },
+  "bundleHash": "c3bf300bcc2cffc489c60ca13917474f74751d73272e41e1c04b9875113aba92",
+  "bundleLocation": "entry.bundle.js",
+  "initialBrowser": {
+    "passed": 110,
+    "failed": 3
+  },
+  "initialAST": {
+    "passed": 10,
+    "failed": 9
+  },
+  "limits": "Initial row fixture used flex-only Button components unlike journal Pressable h-12 source. Two 24/26px hit-height failures are fixture mismatches. One report-close assertion ran during its exit animation. AST comparator rejected formatter import reorder; final comparator verifies full import multiset. Application source unchanged."
+}

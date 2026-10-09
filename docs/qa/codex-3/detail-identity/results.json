@@ -1,0 +1,835 @@
+{
+  "owner": "Codex-3",
+  "ticket": "SD3-010",
+  "mode": "current-source",
+  "passed": 75,
+  "failed": 0,
+  "runtimeErrors": [],
+  "checks": [
+    {
+      "name": "role: initial confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: detail action opens confirmation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: same-ID refetch preserves confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "role: A->B closes inherited confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: B has fresh notices and target",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "role: returning A starts a fresh closed confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: missing ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: missing ID has no edit/delete footer",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "role: recovered valid ID starts closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: empty ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: isLoading on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: isError on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "role: success: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: success: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "role: success: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "role: network: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "role: network: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "role: network: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/contents/roles/A",
+          "/contents/roles/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "role: success notice opens before acknowledgement",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "role: completed A notice does not transfer to B",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        false,
+        0
+      ]
+    },
+    {
+      "name": "role: pending success after screen unmount does not navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "role: edit retains existing route and current ID",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/roles/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "role: same-ID refetch preserves permission search",
+      "passed": true,
+      "actual": "roles",
+      "expected": "roles"
+    },
+    {
+      "name": "role: new role clears permission search",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "role: returning role starts a fresh search",
+      "passed": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "worker: initial confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: detail action opens confirmation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: same-ID refetch preserves confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "worker: A->B closes inherited confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: B has fresh notices and target",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "worker: returning A starts a fresh closed confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: missing ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: missing ID has no edit/delete footer",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "worker: recovered valid ID starts closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: empty ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: isLoading on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: isError on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "worker: success: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: success: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "worker: success: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "worker: network: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "worker: network: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "worker: network: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/contents/workers/A",
+          "/contents/workers/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "worker: success notice opens before acknowledgement",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "worker: completed A notice does not transfer to B",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        false,
+        0
+      ]
+    },
+    {
+      "name": "worker: pending success after screen unmount does not navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "worker: edit retains existing route and current ID",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/workers/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    },
+    {
+      "name": "member: initial confirmation closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: detail action opens confirmation",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: same-ID refetch preserves confirmation",
+      "passed": true,
+      "actual": [
+        true,
+        "Updated A"
+      ],
+      "expected": [
+        true,
+        "Updated A"
+      ]
+    },
+    {
+      "name": "member: A->B closes inherited confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: B has fresh notices and target",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        "Fixture B"
+      ],
+      "expected": [
+        false,
+        false,
+        "Fixture B"
+      ]
+    },
+    {
+      "name": "member: returning A starts a fresh closed confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: missing ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: missing ID has no edit/delete footer",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "member: recovered valid ID starts closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: empty ID resets confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: isLoading on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: isLoading recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: isError on new ID keeps dialog closed",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: isError recovery does not reopen old confirmation",
+      "passed": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "member: success: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: success: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "member: success: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "member: network: pending A->B keeps B closed and idle",
+      "passed": true,
+      "actual": [
+        false,
+        false
+      ],
+      "expected": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "member: network: late A result has no B notice/back",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ],
+      "expected": [
+        false,
+        false,
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "member: network: B can delete independently and acknowledge once",
+      "passed": true,
+      "actual": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "/customers/data/A",
+          "/customers/data/B"
+        ],
+        [
+          {
+            "action": "delayedBack"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "member: success notice opens before acknowledgement",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "member: completed A notice does not transfer to B",
+      "passed": true,
+      "actual": [
+        false,
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        false,
+        0
+      ]
+    },
+    {
+      "name": "member: pending success after screen unmount does not navigate",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "member: edit retains existing route and current ID",
+      "passed": true,
+      "actual": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      },
+      "expected": {
+        "action": "push",
+        "target": {
+          "target": "/manage/member/modify",
+          "params": {
+            "id": "A"
+          }
+        }
+      }
+    }
+  ],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0"
+  },
+  "productionModuleHashes": {
+    "components/common/DeleteConfirmModal.tsx": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "components/common/SuccessModal.tsx": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "47f049ce90f45aadadd1589945e4afab0551baec16ece34940fe195522a3f5c2",
+    "api/hooks/roles.ts": "daa2a185cfec4bdfba432fd5b53f887e6e4007b2470f40c8d5494cd74a52cc66",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/roles/RoleDeleteDialog.tsx": "0e0078d0db6f29e1ad6c099a10648ca7dbb59beeaa64fe43b536d37b8ea18207",
+    "components/feature/manage/roles/RoleQueryError.tsx": "b15a66e4e02673d49b749a2c836db9babd19dd3fd00d43b7046242e7d806e071",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7ac2a60ab639388ac78f401b51a2d4f26f9d7eb0af7efc31552c32de348ebc46",
+    "api/hooks/workers.ts": "fe910c4fc889e4ab575a87f04687e8ea81b931a197847c27c7ba8a249d92ed22",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/workers/WorkerDeleteDialog.tsx": "1b0fccc994853b350ad3c78b493801e2f57a6ac3ceacd6797655b81d2c255b1a",
+    "components/feature/manage/workers/WorkerQueryError.tsx": "806977a029114ef644b9f519cc53585a6ea57e4309fb2cdebe12905e3f306ff6",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "1a3b6b16545c6a3425b320f2bd1dad9309610272f61215cf936670ef6337dfd0",
+    "api/hooks/customers.ts": "96aa4ed5819d0fb7111b6a1870d2d51c1386186f2994fe9e6484d17ca2f98fe8",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de",
+    "components/feature/manage/member/MemberDeleteDialog.tsx": "cf19fc5f12d1612099e0cc84ac855d5af6f3badd6739cfa9323e6d43f5651ecb",
+    "components/feature/manage/member/MemberQueryError.tsx": "ee8c5ae9b080533e16172008f108690b9c79f631e8280c26140d785e0847f99f"
+  },
+  "productionModules": 24,
+  "limits": "Three production detail+delete/shared-modal/useAlertModal/helper/mutation hook/factory/Common/QueryClient with local Axios; GET query states are a controlled parent adapter, presentation/router/RoleWorkers/avatar are host fixtures; not native/browser/full router/root auth/backend/Figma approval"
+}

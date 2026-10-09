@@ -1,0 +1,10 @@
+{
+  "owner": "Codex-3",
+  "scope": "Two editor roots and imported dependency closure with project compiler options/declarations; not full-project typecheck",
+  "diagnostics": [],
+  "sourceHashes": {
+    "components/feature/manage/roles/RoleModifyScreen.tsx": "2a5d4986e3b325723cf5c87f4a75a9cef25da97874aab63008f85c743e8e2fd7",
+    "components/feature/manage/workers/WorkerModifyScreen.tsx": "8473d1d8b4d52d84d6222ca301b9dd9754f059fc4776bcd389a0954890a9c1b8"
+  },
+  "exitCode": 0
+}

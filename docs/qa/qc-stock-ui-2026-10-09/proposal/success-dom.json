@@ -1,0 +1,109 @@
+{
+  "ancestors": [
+    {
+      "tag": "DIV",
+      "className": "css-146c3p1 w-full text-center text-[19px] text-gray-900 text-foreground text-base",
+      "style": "font-family: InterBold;",
+      "rect": {
+        "x": 41,
+        "y": 329.25,
+        "width": 238,
+        "height": 48
+      },
+      "overflow": "visible",
+      "height": "48px"
+    },
+    {
+      "tag": "DIV",
+      "className": "css-g5y9jx justify-between flex-col items-center gap-3",
+      "style": null,
+      "rect": {
+        "x": 41,
+        "y": 141.25,
+        "width": 238,
+        "height": 236
+      },
+      "overflow": "visible",
+      "height": "236px"
+    },
+    {
+      "tag": "DIV",
+      "className": "css-g5y9jx bg-background-0 overflow-hidden border border-outline-100 w-[80%] max-w-[510px] relative rounded-[28px] p-6 shadow-main r-105ug2t",
+      "style": "width: 288px; max-width: 380px; opacity: 1; transform: scale(1);",
+      "rect": {
+        "x": 16,
+        "y": 116.25,
+        "width": 288,
+        "height": 407.5
+      },
+      "overflow": "hidden",
+      "height": "407.5px"
+    },
+    {
+      "tag": "DIV",
+      "className": "css-g5y9jx group/modal w-full h-full justify-center items-center web:pointer-events-none r-12vffkv",
+      "style": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640
+      },
+      "overflow": "visible",
+      "height": "640px"
+    },
+    {
+      "tag": "DIV",
+      "className": "css-g5y9jx r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af r-12vffkv",
+      "style": "z-index: 9999; display: flex;",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640
+      },
+      "overflow": "visible",
+      "height": "640px"
+    },
+    {
+      "tag": "DIV",
+      "className": "css-g5y9jx r-13awgt0",
+      "style": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640
+      },
+      "overflow": "visible",
+      "height": "640px"
+    },
+    {
+      "tag": "DIV",
+      "className": "",
+      "style": null,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 640
+      },
+      "overflow": "hidden",
+      "height": "640px"
+    }
+  ],
+  "images": [
+    {
+      "tag": "IMG",
+      "className": "css-9pa8cd",
+      "style": null,
+      "rect": {
+        "x": 41,
+        "y": 141.25,
+        "width": 238,
+        "height": 176
+      },
+      "computedHeight": "176px"
+    }
+  ]
+}

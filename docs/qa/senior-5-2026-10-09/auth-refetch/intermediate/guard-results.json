@@ -1,0 +1,435 @@
+{
+  "ticket": "SD5-004",
+  "baseline": false,
+  "baselineRef": null,
+  "sources": {
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "context/AuthContext.tsx": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d"
+  },
+  "checks": [
+    {
+      "name": "policy root empty auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy root empty auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy root empty auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy root empty auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy root index auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy root index auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy root index auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy root index auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy grouped login auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy grouped login auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy grouped login auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy grouped login auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy legacy login auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy legacy login auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy legacy login auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy legacy login auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy onboarding slides auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy onboarding slides auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy onboarding slides auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy onboarding slides auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy registration wizard auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy registration wizard auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy registration wizard auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy registration wizard auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy OTP auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy OTP auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy OTP auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy OTP auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy forgot password auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy forgot password auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy forgot password auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy forgot password auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy reset password auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy reset password auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy reset password auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy reset password auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy choose store auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy choose store auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy choose store auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy choose store auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy maintenance auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy maintenance auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy maintenance auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy maintenance auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy terms auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy terms auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy terms auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy terms auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy back office auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy back office auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy back office auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy back office auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy cashier auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy cashier auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy cashier auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy cashier auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy operator auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy operator auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy operator auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy operator auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy absence auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy absence auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy absence auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy absence auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy private catalog auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy private catalog auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy private catalog auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy private catalog auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy private workers auth=false loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy private workers auth=false loading=true",
+      "passed": true
+    },
+    {
+      "name": "policy private workers auth=true loading=false",
+      "passed": true
+    },
+    {
+      "name": "policy private workers auth=true loading=true",
+      "passed": true
+    },
+    {
+      "name": "guard never redirects synchronously before next frame",
+      "passed": true
+    },
+    {
+      "name": "stable route/auth rerender preserves pending frame",
+      "passed": true
+    },
+    {
+      "name": "completed login cancels pending anonymous redirect",
+      "passed": true
+    },
+    {
+      "name": "already dequeued login callback is ignored after authentication",
+      "passed": true
+    },
+    {
+      "name": "entering public registration cancels old login frame",
+      "passed": true
+    },
+    {
+      "name": "stale private callback cannot replace chosen public page",
+      "passed": true
+    },
+    {
+      "name": "loading revalidation cancels queued redirect",
+      "passed": true
+    },
+    {
+      "name": "stale redirect cannot run while auth is loading",
+      "passed": true
+    },
+    {
+      "name": "resolved anonymous revalidation schedules fresh login",
+      "passed": true
+    },
+    {
+      "name": "sign-out on login cancels old back-office callback",
+      "passed": true
+    },
+    {
+      "name": "choosing authenticated cashier route cannot be overwritten by old public redirect",
+      "passed": true
+    },
+    {
+      "name": "obsolete authenticated redirect cannot run before new anonymous decision",
+      "passed": true
+    },
+    {
+      "name": "latest private anonymous decision navigates only to login",
+      "passed": true
+    },
+    {
+      "name": "private route change retains exactly one active frame",
+      "passed": true
+    },
+    {
+      "name": "previous private route callback is invalidated",
+      "passed": true
+    },
+    {
+      "name": "replacement private route callback navigates once",
+      "passed": true
+    },
+    {
+      "name": "unmount drains pending frame auth=false",
+      "passed": true
+    },
+    {
+      "name": "queued callback after unmount cannot navigate auth=false",
+      "passed": true
+    },
+    {
+      "name": "unmount drains pending frame auth=true",
+      "passed": true
+    },
+    {
+      "name": "queued callback after unmount cannot navigate auth=true",
+      "passed": true
+    },
+    {
+      "name": "StrictMode effect replay leaves one active frame",
+      "passed": true
+    },
+    {
+      "name": "StrictMode discarded effect callback cannot navigate",
+      "passed": true
+    },
+    {
+      "name": "StrictMode current effect redirects once",
+      "passed": true
+    },
+    {
+      "name": "actual AuthProvider bootstrap pauses guard",
+      "passed": true
+    },
+    {
+      "name": "actual AuthProvider user validation still pauses guard",
+      "passed": true
+    },
+    {
+      "name": "validated provider user remains on private route",
+      "passed": true
+    },
+    {
+      "name": "actual completed updateToken cancels anonymous frame",
+      "passed": true
+    },
+    {
+      "name": "actual provider login prevents obsolete login redirect",
+      "passed": true
+    },
+    {
+      "name": "actual provider signOut invalidates authenticated public redirect",
+      "passed": true
+    },
+    {
+      "name": "actual reloadAuth loading cancels old frame",
+      "passed": true
+    },
+    {
+      "name": "actual reloadAuth loading ignores dequeued old frame",
+      "passed": true
+    },
+    {
+      "name": "actual reloadAuth completion schedules current public redirect",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": 105,
+  "failed": 0
+}

@@ -1,0 +1,25 @@
+{
+  "source": "app/(back-office)/inventory/_layout.tsx",
+  "sourceHash": "a218d0eb98661630eab4204a9e349880e8f4e5193528d54cc68e263742e6ed32",
+  "passed": 4,
+  "failed": 0,
+  "results": [
+    {
+      "name": "cold Inventory stack falls back despite parent-tab history",
+      "pass": true
+    },
+    {
+      "name": "local Inventory history goes back without replacing route",
+      "pass": true
+    },
+    {
+      "name": "back evaluates live local state after header render",
+      "pass": true
+    },
+    {
+      "name": "Inventory hub remains a root header without back action",
+      "pass": true
+    }
+  ],
+  "scope": "Actual Inventory layout and Header callbacks with JSX/router/navigation adapters; not browser/native execution."
+}

@@ -1,0 +1,660 @@
+{
+    "connection": "sd6_contract",
+    "database": ":memory:",
+    "backendSourceHashes": {
+        "app/Domain/User/Requests/StockSettingRequest.php": "f0e8a50774cc9014eedda342411afcef9079d5186cb8dad42daf99a1b29596b9",
+        "app/Rules/ValidUserContent.php": "744e4209968270e28b304789d920a5cf47b2f58ba4cbf2be7e9870a17fcb6012",
+        "app/Domain/User/Enums/StockSettingContentEnum.php": "38a5ab47bad3673f6c8ca2d0a4e3868f7a59ebb75f0aed24adb648b02defa623",
+        "app/Domain/User/Enums/StockSettingTypeEnum.php": "76fff7b0ef7070ba9920aa214a41682341c9f0d2f7a0fb9ca9e2850a58ed6b8e",
+        "app/Domain/Catalog/Models/Menu.php": "7a57438ef6e1fcd419aea1ba192f2a6046fb42fa2a8d1e41b11de40a5624552e",
+        "app/Domain/Catalog/Models/Category.php": "61ede8b82fee2a0edc13662be81a08da9abb5f8540af4e9928356b1bdb51db79",
+        "app/Domain/User/Controllers/Settings/StockSettingController.php": "e88ccf831da08f11f4cbf5fa8c2be51adf849e6f8d1e3a20b459ed6e9c17a492",
+        "app/Domain/User/Models/StockSettings/StockSetting.php": "f83cdc40265899dd3aa80209f327a43bc4651b97e0b72ac9072360231a0f678e",
+        "app/Traits/HasResponseBuilder.php": "b26cf4b566177d34757806f60797db355259f5cb86db80291fa39be78b7a921c"
+    },
+    "payloadHash": "f7c51668f2a09a00173ee5120b4ad28dc8d9d58781f86669ca37c987d96b1403",
+    "cases": [
+        {
+            "scenario": "category unchanged",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category shared ID",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "shared-id"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "shared-id",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "item unchanged",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "menu-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "menu-1",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category disabled",
+            "payload": {
+                "enabled": false,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": false,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category late response",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category switch draft",
+            "payload": {
+                "enabled": false,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": false,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category committed draft",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1",
+                    "category-2"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    },
+                    {
+                        "stockable_id": "category-2",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "item frozen picker",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "menu-1",
+                    "menu-2"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "menu-1",
+                        "stockable_type": "menu"
+                    },
+                    {
+                        "stockable_id": "menu-2",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category frozen picker",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1",
+                    "category-2"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    },
+                    {
+                        "stockable_id": "category-2",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category cancel",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-3"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-3",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "item cancel",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "menu-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "menu-1",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category empty draft",
+            "payload": {
+                "enabled": true,
+                "type": "all",
+                "content_type": "category",
+                "stockable_ids": []
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "all"
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category searched draft",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1",
+                    "category-2"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    },
+                    {
+                        "stockable_id": "category-2",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "item empty draft",
+            "payload": {
+                "enabled": true,
+                "type": "all",
+                "content_type": "item",
+                "stockable_ids": []
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "all"
+            },
+            "errors": []
+        },
+        {
+            "scenario": "category failed mutation",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1",
+                    "category-2"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    },
+                    {
+                        "stockable_id": "category-2",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "no existing setting",
+            "payload": {
+                "enabled": true,
+                "type": "all",
+                "content_type": "item",
+                "stockable_ids": []
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "all"
+            },
+            "errors": []
+        },
+        {
+            "scenario": "all with stale details",
+            "payload": {
+                "enabled": true,
+                "type": "all",
+                "content_type": "category",
+                "stockable_ids": []
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "all"
+            },
+            "errors": []
+        },
+        {
+            "scenario": "legacy category",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "legacy item",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "menu-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "menu-1",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "empty catalog preserve existing",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": true,
+            "valid": true,
+            "passed": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "category-1",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "scenario": "reject item category-1",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "category-1"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "scenario": "reject category menu-1",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "menu-1"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "scenario": "reject item foreign-menu",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "foreign-menu"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "scenario": "reject category foreign-category",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "foreign-category"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "scenario": "reject item prod-1",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "prod-1"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "scenario": "reject category missing-category",
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "missing-category"
+                ]
+            },
+            "shouldPass": false,
+            "valid": false,
+            "passed": true,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        }
+    ],
+    "passed": true,
+    "emptySettingControllerResponse": {
+        "passed": true,
+        "response": {
+            "success": true,
+            "status": 200,
+            "code": "SUCCESS",
+            "message": "Stock settings not found",
+            "data": null
+        }
+    },
+    "validationQueriesInMemory": 28,
+    "limitations": "Production Request/ownership and controller GET without settings on isolated fixture tables; no HTTP, live database, controller store/persistence or transaction checkout."
+}

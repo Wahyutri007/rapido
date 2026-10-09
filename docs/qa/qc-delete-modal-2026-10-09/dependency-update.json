@@ -1,0 +1,8 @@
+{
+  "file": "components/common/SuccessModal.tsx",
+  "initial": "f90eec3d8d4b95ad5a5b1b6ff7cc354e9097fe5d232eef4c0d020ebb61f4e495",
+  "current": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "source": "Codex-3 SD3-012 applied previous QC copy; external recheck still required",
+  "previousQcCopy": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+  "approval": "Dependency execution only; no SuccessModal delta approved by this packet"
+}

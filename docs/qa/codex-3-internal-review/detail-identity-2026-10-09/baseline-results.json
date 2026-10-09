@@ -1,0 +1,963 @@
+{
+  "status": "BASELINE_REPRODUCTION",
+  "externalQcApproval": false,
+  "baseline": true,
+  "finishedAt": "2026-10-09T00:12:56.093Z",
+  "summary": {
+    "assertions": 156,
+    "passed": 122,
+    "failed": 34,
+    "runtimeErrors": 0,
+    "warnings": 0
+  },
+  "loadedSourceHashes": {
+    "components/feature/manage/roles/RoleDetailScreen.tsx": "1a3b993214194b9ddff74ad47f2e320be1132bea483c2160576ccdf3f827a851",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "lib/manage/roles.ts": "1761e14ad09d0834013355eb8ed1a003e3ae6996c78a614567d09ff864638dbc",
+    "components/feature/manage/workers/WorkerDetailScreen.tsx": "7fb9fa3ca423674a070fdc4c75168b8ceadaec2de07a0c08cdfa26ebb3749b6b",
+    "lib/manage/workers.ts": "1a8e110a8115a8379378d597e615e96f4b908a7f26f1feb59c23bd0155716c0b",
+    "components/feature/manage/member/MemberDetailScreen.tsx": "3a12f1364d6cc647613b90e3e17af924c51073ae8727afff8a37cc2115aa582e",
+    "lib/manage/members.ts": "9f428420861079bbf42024c1808f777afcf8fdc6fd3f094e5d04f0ced7d544de"
+  },
+  "checks": [
+    {
+      "name": "Role/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: same-id refetch keeps permission search",
+      "pass": true,
+      "actual": "Kasir",
+      "expected": "Kasir"
+    },
+    {
+      "name": "Role/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: B starts with empty search",
+      "pass": false,
+      "actual": "Kasir",
+      "expected": ""
+    },
+    {
+      "name": "Role/normal: stale A search cannot write B",
+      "pass": false,
+      "actual": "stale A",
+      "expected": ""
+    },
+    {
+      "name": "Role/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/roles/modify",
+      "expected": "/manage/roles/modify"
+    },
+    {
+      "name": "Role/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/normal: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Role/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Role/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: same-id refetch keeps permission search",
+      "pass": true,
+      "actual": "Kasir",
+      "expected": "Kasir"
+    },
+    {
+      "name": "Role/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: B starts with empty search",
+      "pass": false,
+      "actual": "Kasir",
+      "expected": ""
+    },
+    {
+      "name": "Role/StrictMode: stale A search cannot write B",
+      "pass": false,
+      "actual": "stale A",
+      "expected": ""
+    },
+    {
+      "name": "Role/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/roles/modify",
+      "expected": "/manage/roles/modify"
+    },
+    {
+      "name": "Role/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Role/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Role/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Role/StrictMode: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Role/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Role/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Role/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/workers/modify",
+      "expected": "/manage/workers/modify"
+    },
+    {
+      "name": "Worker/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/normal: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Worker/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Worker/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/workers/modify",
+      "expected": "/manage/workers/modify"
+    },
+    {
+      "name": "Worker/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Worker/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Worker/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Worker/StrictMode: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Worker/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Worker/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Worker/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/normal: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: edit route current B",
+      "pass": true,
+      "actual": "/manage/member/modify",
+      "expected": "/manage/member/modify"
+    },
+    {
+      "name": "Member/normal: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/normal: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/normal: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/normal: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/normal: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Member/normal: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/normal: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: starts closed",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: target A",
+      "pass": true,
+      "actual": "A",
+      "expected": "A"
+    },
+    {
+      "name": "Member/StrictMode: explicit open A",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: same-id refetch keeps confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: B loading shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: B loading has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: B loading starts closed",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: stale A open cannot open B",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: loaded B requires new confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: loaded target is B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: edit route current B",
+      "pass": true,
+      "actual": "/manage/member/modify",
+      "expected": "/manage/member/modify"
+    },
+    {
+      "name": "Member/StrictMode: edit id current B",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: explicit B confirmation opens",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: stale A close cannot close B",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: current B close works",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: same-id error UI shown",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: error hides detail actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: same-id error keeps local confirmation",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "Member/StrictMode: retry retains current id",
+      "pass": true,
+      "actual": "B",
+      "expected": "B"
+    },
+    {
+      "name": "Member/StrictMode: missing id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: missing id has no actions",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "Member/StrictMode: missing id closes previous confirmation",
+      "pass": false,
+      "actual": true,
+      "expected": false
+    },
+    {
+      "name": "Member/StrictMode: missing id has null target",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "Member/StrictMode: missing id retry is back",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "Member/StrictMode: empty id shows error",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    }
+  ],
+  "runtimeErrors": [],
+  "warnings": [],
+  "adapters": "Production detail body, production useAlertModal and production domain display helpers; query fixtures, child delete dialog and presentation/router hosts. Parent identity state assessed through actual callbacks and React state under normal/StrictMode. Delete IO and native geometry not exercised."
+}

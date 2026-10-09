@@ -1,0 +1,17 @@
+{
+  "status": "FAIL",
+  "passed": 5,
+  "checks": [
+    "Kelola opens production Target Penjualan list with one active header",
+    "Trimmed search selects one target without changing its record",
+    "List opens detail with correct target ID and product totals",
+    "Detail opens edit form with correct title, ID and original draft",
+    "Saving preview edit updates same target then header returns to its detail"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "error": "TimeoutError: locator.click: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Detail Target', { exact: true }).filter({ visible: true }).first().locator('..').locator('[tabindex=\"0\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <div tabindex=\"0\" class=\"css-g5y9jx r-1loqt21 r-1otgn73 absolute left-4 size-10 items-center justify-center rounded-full\">…</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    84 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"css-g5y9jx r-13awgt0\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+  "url": "http://127.0.0.1:8097/manage/sales-target/detail?id=target-demo-1",
+  "body": "\nDetail Target\n\nTarget Sushiro QA Navigasi\nTarget Penjualan\nToko\nToko Sushiro\nPeriode\n1 Okt 2026 – 31 Okt 2026\nTipe Target\nPer Produk\nTotal Nilai Target\nRp 8.000.000\n200 unit dari 2 produk\nTarget per Produk\nSalmon Sushi\n120 unit\nRp 6.000.000\nOcha\n80 unit\nRp 2.000.000\nEdit Target\nHapus Target",
+  "checkedAt": "2026-10-09T03:00:55.016Z"
+}

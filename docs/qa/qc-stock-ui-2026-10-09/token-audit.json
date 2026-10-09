@@ -1,0 +1,104 @@
+{
+  "source": "app/(no-layout)/manage/pos-settings/stock-limit.tsx",
+  "authority": "AGENTS_UI.md sections1.1/2.1/2.2/2.6; current existing UI, not attributed to SD6-002 delta",
+  "findings": [
+    {
+      "category": "fractional-spacing",
+      "line": 177,
+      "component": "Text",
+      "token": "mt-0.5"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 192,
+      "component": "View",
+      "token": "mt-3.5"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 192,
+      "component": "View",
+      "token": "p-3.5"
+    },
+    {
+      "category": "card-primitive-override",
+      "line": 229,
+      "component": "Card",
+      "token": "p-2"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 239,
+      "component": "View",
+      "token": "gap-1.5"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 267,
+      "component": "Text",
+      "token": "mt-0.5"
+    },
+    {
+      "category": "nonsemantic-color",
+      "line": 288,
+      "component": "ActionsheetDragIndicator",
+      "token": "bg-zinc-300"
+    },
+    {
+      "category": "nonsemantic-color",
+      "line": 307,
+      "component": "View",
+      "token": "bg-zinc-100"
+    },
+    {
+      "category": "search-primitive-override",
+      "line": 313,
+      "component": "SearchBar",
+      "token": "bg-white"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 357,
+      "component": "Pressable",
+      "token": "mb-2.5"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 357,
+      "component": "Pressable",
+      "token": "p-3.5"
+    },
+    {
+      "category": "nonsemantic-color",
+      "line": 357,
+      "component": "Pressable",
+      "token": "border-zinc-200"
+    },
+    {
+      "category": "nonsemantic-color",
+      "line": 365,
+      "component": "View",
+      "token": "border-zinc-300"
+    },
+    {
+      "category": "nonsemantic-color",
+      "line": 377,
+      "component": "View",
+      "token": "bg-zinc-100"
+    },
+    {
+      "category": "fractional-spacing",
+      "line": 400,
+      "component": "Text",
+      "token": "mt-0.5"
+    }
+  ],
+  "count": 15,
+  "summary": {
+    "fractional-spacing": 8,
+    "card-primitive-override": 1,
+    "nonsemantic-color": 5,
+    "search-primitive-override": 1
+  },
+  "limitations": "Static rule audit. Does not claim visual overflow from spacing/colors alone; screenshots/browser measure layout separately. Literal color props inherited and shared primitive internals are not counted here."
+}

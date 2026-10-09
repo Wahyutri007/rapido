@@ -1,0 +1,80 @@
+{
+  "sources": [
+    "app/(no-layout)/manage/export/index.tsx",
+    "app/(no-layout)/manage/export/modify.tsx",
+    "app/(no-layout)/manage/export/_layout.tsx",
+    "components/feature/manage/export/ExportDataScreen.tsx",
+    "lib/manage/export-data.ts",
+    "lib/manage/export-delivery.ts",
+    "schema/manage/export.ts"
+  ],
+  "checks": [
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/export/index.tsx",
+        "app/(no-layout)/manage/export/modify.tsx",
+        "app/(no-layout)/manage/export/_layout.tsx",
+        "components/feature/manage/export/ExportDataScreen.tsx",
+        "lib/manage/export-data.ts",
+        "lib/manage/export-delivery.ts",
+        "schema/manage/export.ts",
+        "--max-warnings",
+        "0"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/manage/export/index.tsx",
+        "app/(no-layout)/manage/export/modify.tsx",
+        "app/(no-layout)/manage/export/_layout.tsx",
+        "components/feature/manage/export/ExportDataScreen.tsx",
+        "lib/manage/export-data.ts",
+        "lib/manage/export-delivery.ts",
+        "schema/manage/export.ts"
+      ],
+      "status": 0,
+      "stdout": "Checked 7 files in 97ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "command": "git",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/export/index.tsx",
+        "app/(no-layout)/manage/export/modify.tsx",
+        "app/(no-layout)/manage/export/_layout.tsx",
+        "components/feature/manage/export/ExportDataScreen.tsx",
+        "lib/manage/export-data.ts",
+        "lib/manage/export-delivery.ts",
+        "schema/manage/export.ts"
+      ],
+      "status": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/manage/export/_layout.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/manage/export/index.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/manage/export/modify.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'schema/manage/export.ts', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "roots": [
+    "app/(no-layout)/manage/export/index.tsx",
+    "app/(no-layout)/manage/export/modify.tsx",
+    "app/(no-layout)/manage/export/_layout.tsx",
+    "components/feature/manage/export/ExportDataScreen.tsx",
+    "lib/manage/export-data.ts",
+    "lib/manage/export-delivery.ts",
+    "schema/manage/export.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnostics": []
+}

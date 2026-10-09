@@ -1,0 +1,25 @@
+{
+  "bundle": "D:\\Codex-5\\tmp\\inventory-qc-colors\\entry.bundle.js",
+  "bundleHash": "6d303cf6d55ab91d2cb53b966c25fe115d261c581271c5fa3c88f67268c8505e",
+  "bytes": 9480395,
+  "assets": "D:\\Codex-5\\tmp\\inventory-qc-colors\\assets.json",
+  "inputHashes": {
+    "components/feature/inventory/InventoryUi.tsx": "a61c9231a076d3c0eb4e5794c49a093d0f9add403e80999fe254745dfbc9f633",
+    "components/feature/inventory/StockOperationDetail.tsx": "fa34e42e343968d523ba63f8979e37d376165359f757a037182ad7f037eff5d3",
+    "components/feature/inventory/StockOperationList.tsx": "54b28fd5d26337eb5a2d31c781e5dc1a296e3b9d754e93ee0e26978998e8cc5c",
+    "components/feature/inventory/PurchaseListScreen.tsx": "678b403164d7dc6177c2a396a3d251fa003aa654933a1b83efddf6e1237d126b"
+  },
+  "before": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "after": {
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c"
+  },
+  "scope": "Own offline RNWeb build, actual Inventory UI/store/font; router transport adapter only. No application data seed changes or server/root Metro config/native certification."
+}

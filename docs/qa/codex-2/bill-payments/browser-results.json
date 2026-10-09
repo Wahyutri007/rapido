@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-10-09T01:58:11.885Z",
+  "passed": true,
+  "assertions": 70,
+  "pageErrors": [],
+  "viewports": [
+    "390x1004",
+    "320x812"
+  ],
+  "scope": "Actual payment/purchase components and production Inventory layouts; auth/backend bypassed"
+}

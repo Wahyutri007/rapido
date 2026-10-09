@@ -1,0 +1,23 @@
+{
+  "owner": "Codex-3",
+  "source": "components/common/SuccessModal.tsx",
+  "files": {
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "1e0d3195772926d05f7f26c9325f494a2e27074a26edf1441993db374e7dc666",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "node_modules/react-native-css-interop/.cache/android.js": "056c153e8c69e6815a4afef0d77c5cfc6bc38adc7ea5dd21b76bcca74f11aa6b",
+    "node_modules/react-native-css-interop/.cache/web.css": "e7992f8196ad3b8fbec25d8c5d522e546cd98abbefa9b51da7a0f39a7583c766"
+  },
+  "qcRunnerOriginal": "b2163de739d913467b0a8ad3800befb42e327247ab0dc8911e7bbd0e75567df6",
+  "qcDecision": "c1483d8b5c8577c0a8f502b74656106463d55651bf9f338a7b3e976b68e5234c",
+  "proposalHash": "501c13d445c0283aa93deff8f71bdf9f889b24b9e76afef81f4f9ea3822ce95f",
+  "runnerChanges": "Developer output location and owned fixture entry URL only; scenario/assertion body unchanged"
+}

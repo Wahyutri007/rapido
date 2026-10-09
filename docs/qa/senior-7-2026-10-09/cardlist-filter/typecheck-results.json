@@ -1,0 +1,19 @@
+{
+  "kind": "Selected roots and dependency closure using project TypeScript options",
+  "roots": [
+    "components/custom/CardList.tsx",
+    "app/(no-layout)/(back-office)/report/summary.tsx",
+    "app/(no-layout)/(back-office)/report/sales.tsx",
+    "app/(no-layout)/(back-office)/report/purchase-supplier.tsx",
+    "app/(no-layout)/(back-office)/report/product-stock.tsx",
+    "app/(no-layout)/(back-office)/report/operational-team.tsx",
+    "app/(no-layout)/(back-office)/report/customers-promos.tsx",
+    "app/(no-layout)/(back-office)/report/cash.tsx",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/expo-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/nativewind-env.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev/.expo/types/router.d.ts"
+  ],
+  "diagnosticCount": 0,
+  "diagnostics": []
+}

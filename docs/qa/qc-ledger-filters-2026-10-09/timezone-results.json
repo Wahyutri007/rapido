@@ -1,0 +1,283 @@
+{
+  "createdAt": "2026-10-08T18:50:55.385Z",
+  "status": "PASS",
+  "passed": 32,
+  "runs": [
+    {
+      "zone": "Asia/Jakarta",
+      "exitCode": 0,
+      "result": {
+        "zone": "Asia/Jakarta",
+        "passed": 8,
+        "failed": 0,
+        "checks": [
+          {
+            "name": "runtime uses expected local month at the fixed instant",
+            "actual": 10,
+            "expected": 10,
+            "passed": true
+          },
+          {
+            "name": "local month start matches",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite UTC-neighbor month is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "calendar quarter uses the local month",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite quarter at UTC boundary is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "runtime uses expected local year at the fixed instant",
+            "actual": 2027,
+            "expected": 2027,
+            "passed": true
+          },
+          {
+            "name": "full local year includes December",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "neighbor UTC year is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          }
+        ],
+        "files": [
+          {
+            "file": "lib/accounting/ledger-filter.ts",
+            "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+          },
+          {
+            "file": "lib/accounting/date.ts",
+            "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+          }
+        ]
+      }
+    },
+    {
+      "zone": "America/Los_Angeles",
+      "exitCode": 0,
+      "result": {
+        "zone": "America/Los_Angeles",
+        "passed": 8,
+        "failed": 0,
+        "checks": [
+          {
+            "name": "runtime uses expected local month at the fixed instant",
+            "actual": 9,
+            "expected": 9,
+            "passed": true
+          },
+          {
+            "name": "local month start matches",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite UTC-neighbor month is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "calendar quarter uses the local month",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite quarter at UTC boundary is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "runtime uses expected local year at the fixed instant",
+            "actual": 2026,
+            "expected": 2026,
+            "passed": true
+          },
+          {
+            "name": "full local year includes December",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "neighbor UTC year is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          }
+        ],
+        "files": [
+          {
+            "file": "lib/accounting/ledger-filter.ts",
+            "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+          },
+          {
+            "file": "lib/accounting/date.ts",
+            "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+          }
+        ]
+      }
+    },
+    {
+      "zone": "Pacific/Honolulu",
+      "exitCode": 0,
+      "result": {
+        "zone": "Pacific/Honolulu",
+        "passed": 8,
+        "failed": 0,
+        "checks": [
+          {
+            "name": "runtime uses expected local month at the fixed instant",
+            "actual": 9,
+            "expected": 9,
+            "passed": true
+          },
+          {
+            "name": "local month start matches",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite UTC-neighbor month is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "calendar quarter uses the local month",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite quarter at UTC boundary is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "runtime uses expected local year at the fixed instant",
+            "actual": 2026,
+            "expected": 2026,
+            "passed": true
+          },
+          {
+            "name": "full local year includes December",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "neighbor UTC year is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          }
+        ],
+        "files": [
+          {
+            "file": "lib/accounting/ledger-filter.ts",
+            "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+          },
+          {
+            "file": "lib/accounting/date.ts",
+            "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+          }
+        ]
+      }
+    },
+    {
+      "zone": "Pacific/Kiritimati",
+      "exitCode": 0,
+      "result": {
+        "zone": "Pacific/Kiritimati",
+        "passed": 8,
+        "failed": 0,
+        "checks": [
+          {
+            "name": "runtime uses expected local month at the fixed instant",
+            "actual": 10,
+            "expected": 10,
+            "passed": true
+          },
+          {
+            "name": "local month start matches",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite UTC-neighbor month is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "calendar quarter uses the local month",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "opposite quarter at UTC boundary is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          },
+          {
+            "name": "runtime uses expected local year at the fixed instant",
+            "actual": 2027,
+            "expected": 2027,
+            "passed": true
+          },
+          {
+            "name": "full local year includes December",
+            "actual": true,
+            "expected": true,
+            "passed": true
+          },
+          {
+            "name": "neighbor UTC year is excluded",
+            "actual": false,
+            "expected": false,
+            "passed": true
+          }
+        ],
+        "files": [
+          {
+            "file": "lib/accounting/ledger-filter.ts",
+            "sha256": "60a7676101678e0ee0fff8b808b175adeba9cd6605a4e25e2332f624bd5a8a48"
+          },
+          {
+            "file": "lib/accounting/date.ts",
+            "sha256": "a7bd337b58d1ce98aa9c8c857391625941903a0b6f67e609dd8edaf550e774a5"
+          }
+        ]
+      }
+    }
+  ]
+}

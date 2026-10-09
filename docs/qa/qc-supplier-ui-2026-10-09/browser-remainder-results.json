@@ -1,0 +1,96 @@
+{
+  "executionMode": "APPLICATION_SOURCES",
+  "scope": "Supplier UI with actual feature/routes/layout/JSStack/store/RHF/Zod and browser-local sample state",
+  "checks": [
+    {
+      "name": "edit320: all contact values are prefilled",
+      "passed": true
+    },
+    {
+      "name": "region picker320: cancel action fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 17,
+        "y": 447,
+        "width": 37.09375,
+        "height": 24
+      }
+    },
+    {
+      "name": "success320: detail action visible inside viewport",
+      "passed": false,
+      "detail": {
+        "x": 41,
+        "y": 602,
+        "width": 238,
+        "height": 48
+      }
+    },
+    {
+      "name": "success callback: detail route rendered",
+      "passed": true
+    },
+    {
+      "name": "delete320: confirm button inside viewport",
+      "passed": false,
+      "detail": {
+        "x": 166,
+        "y": 619.75,
+        "width": 113,
+        "height": 48
+      }
+    },
+    {
+      "name": "delete cancel: supplier retained",
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": 2,
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [
+    "Animated: `useNativeDriver` is not supported because the native animated module is missing. Falling back to JS-based animation. To resolve this, add `RCTAnimation` module to this app, or remove `useNativeDriver`. Make sure to run `bundle exec pod install` first. Read more about autolinking: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md"
+  ],
+  "blockedRequests": [],
+  "exception": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Hapus', exact: true }) resolved to 2 elements:\n    1) <button tabindex=\"0\" role=\"button\" type=\"button\" data-hover=\"false\" data-focus=\"false\" data-active=\"false\" data-disabled=\"false\" data-focus-visible=\"false\" class=\"css-g5y9jx r-1loqt21 r-1otgn73 group/button overflow-hidden rounded-full flex-row items-center justify-center data-[focus-visible=true]:web:outline-none data-[focus-visible=true]:web:ring-2 gap-2 data-[hover=true]:bg-primary-500 data-[active=true]:bg-primary-600 border-main-400 data-[hover=true]:border-main-300 data-[active=true]:border-main…>…</button> aka getByRole('button', { name: 'Hapus' }).first()\n    2) <button tabindex=\"0\" role=\"button\" type=\"button\" data-hover=\"true\" data-focus=\"false\" data-active=\"false\" data-disabled=\"false\" data-focus-visible=\"false\" class=\"css-g5y9jx r-1loqt21 r-1otgn73 group/button overflow-hidden flex-row items-center justify-center data-[focus-visible=true]:web:outline-none data-[focus-visible=true]:web:ring-2 gap-2 border-red-300 data-[hover=true]:bg-red-300 data-[hover=true]:border-red-200 data-[active=true]:bg-red-300 data-[active=true]:border-red-500 data-[focus-visible=…>…</button> aka getByRole('dialog').getByRole('button', { name: 'Hapus' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Hapus', exact: true })\u001b[22m\n",
+  "metrics": [
+    {
+      "name": "region-picker-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "success-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    },
+    {
+      "name": "delete-long-name-320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "page": {
+        "scrollWidth": 320,
+        "viewportWidth": 320,
+        "light": true
+      }
+    }
+  ],
+  "limitations": "Backend deferred. No native/Figma/global root auth/all shared callers/API persistence/accessibility/OS keyboard certification."
+}

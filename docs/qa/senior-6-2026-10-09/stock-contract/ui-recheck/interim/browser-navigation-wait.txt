@@ -1,0 +1,29 @@
+
+Pengaturan Batas Stok
+Aktifkan Batas Stock
+Batasi penjualan produk sesuai jumlah stock yang tersedia.
+
+Cara Kerja
+Jika diaktifkan, sistem tidak akan mengizinkan transaksi melebihi stock yang tersedia (maksimal sampai 0). Jika dinonaktifkan, transaksi tetap bisa dilakukan walaupun stock 0 atau minus.
+Baca Selengkapnya
+Penerapan
+
+Terapkan ke
+Semua Produk
+
+
+Kecuali Produk (Opsional)
+1 produk dikecualikan
+
+Simpan
+Batal
+Pilih Produk
+Selesai
+
+
+
+Kopi Susu
+Produk
+
+Produk dengan nama panjang untuk memeriksa pembungkusan teks pada layar kecil dan pilihan kategori
+Produk

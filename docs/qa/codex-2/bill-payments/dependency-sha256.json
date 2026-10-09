@@ -1,0 +1,74 @@
+[
+  {
+    "path": "components/common/Wrapper.tsx",
+    "sha256": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4"
+  },
+  {
+    "path": "components/common/Form.tsx",
+    "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318"
+  },
+  {
+    "path": "components/common/Text.tsx",
+    "sha256": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab"
+  },
+  {
+    "path": "components/common/SingleSelect.tsx",
+    "sha256": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f"
+  },
+  {
+    "path": "components/common/SuccessModal.tsx",
+    "sha256": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8"
+  },
+  {
+    "path": "components/common/DeleteConfirmModal.tsx",
+    "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+  },
+  {
+    "path": "components/common/AlertModal.tsx",
+    "sha256": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e"
+  },
+  {
+    "path": "components/custom/DetailBottomActions.tsx",
+    "sha256": "cfccb3f7080faf0a599182d268a232e2585a35aa95661443806984c15b6ec60b"
+  },
+  {
+    "path": "components/custom/JSStack.tsx",
+    "sha256": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808"
+  },
+  {
+    "path": "components/common/Header.tsx",
+    "sha256": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171"
+  },
+  {
+    "path": "components/feature/inventory/InventoryUi.tsx",
+    "sha256": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791"
+  },
+  {
+    "path": "components/feature/inventory/InventoryQuantityInput.tsx",
+    "sha256": "9772ee2d4db567389bf373eda93ea55aa680f7aaee153bd2f675985d7189a792"
+  },
+  {
+    "path": "store/inventorySupplierStore.ts",
+    "sha256": "b3f3637c4135d1ba88376c15a74da2e32f00d3b13f8014e9676424a6b26700ee"
+  },
+  {
+    "path": "constants/data/inventory.ts",
+    "sha256": "2b3c0d360ff27eb14b1b61178031a300cf4b7e2cdc181a13911cbecdd214599d"
+  },
+  {
+    "path": "lib/inventory/material-date.ts",
+    "sha256": "bbd2e2cae04944ccda7f42d7a1edfaaa388b768afd2e679143860c45f51e9e4d"
+  },
+  {
+    "path": "app/(back-office)/inventory/_layout.tsx",
+    "sha256": "3ce4812cb4c194a9693f7d221972cb3bdd0ef23ada89f0261ff133ec027896f9"
+  },
+  {
+    "path": "metro.config.js",
+    "sha256": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367"
+  },
+  {
+    "path": "babel.config.js",
+    "sha256": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9"
+  }
+]

@@ -1,0 +1,74 @@
+{
+	"date": "2026-10-09",
+	"timezone": "Asia/Jakarta",
+	"ticket": "LEDGER-ID-001",
+	"status": "READY_FOR_QA",
+	"head": "acba0d92460c1af3149abc3775f09888a2943cab",
+	"source": {
+		"file": "store/accountingStore.ts",
+		"sha256": "af13573347207d472a6df93d4ce13218fdba794efeee57a19809c276b69395ec"
+	},
+	"outsideActionUnchanged": true,
+	"checks": {
+		"store": 22,
+		"integration": 40,
+		"total": 62,
+		"reactErrors": 0,
+		"lintErrors": 0,
+		"lintWarnings": 0,
+		"typeDiagnostics": 0,
+		"biome": "passed",
+		"diff": "passed"
+	},
+	"sharedHarness": {
+		"file": "docs/qa/senior-8-2026-10-09/ledger-filters/check.cjs",
+		"sha256": "03b9f38fa49cb935dee5be35d0e848e457f780659d66292e6572704b8bdf1d00"
+	},
+	"artifacts": [
+		{
+			"file": "accountingStore.before.ts.txt",
+			"sha256": "52e27a2b7f33ced97cf2441f36d3f6b8954b2a6da1e51b8a4853b781de81e509"
+		},
+		{
+			"file": "baseline-all.json",
+			"sha256": "951eeb80fe9afe553e77ea3af044361a8f4144594d1756bc90b96c9dfccc4ef7"
+		},
+		{
+			"file": "baseline-store.json",
+			"sha256": "5a9e20f82443a78423f811c6d4d0494a0dd5e6b41fc418ba0f81854ff3f048d6"
+		},
+		{
+			"file": "final-all.json",
+			"sha256": "c41d40a26cbadd420764cd528583f24295dc47d8f341e449f0b3a789dc1c0957"
+		},
+		{
+			"file": "final-store.json",
+			"sha256": "aedb9334603b8a3bab824c55569a876ff35bc6b6f4fcf63355a91f7509d5ef89"
+		},
+		{
+			"file": "integration.cjs",
+			"sha256": "5ed8be8be40902e97f7141ea9138aee85a5db27cbe3c7a6ea2b47767b1ef9b76"
+		},
+		{
+			"file": "lint.json",
+			"sha256": "412f3301c75880dd317215c15bd044cb0c39a63a37042d510f517de053abfa7c"
+		},
+		{
+			"file": "manifest.cjs",
+			"sha256": "23fcbd70d549a830c5997a76c6eede04177ab56238e4c91cd18b851f9ff8c5d7"
+		},
+		{
+			"file": "store-check.cjs",
+			"sha256": "edfa6a7a5ad8f844bbc2bb90bce657b6451c8130744e174327f71cd0bbc18a21"
+		},
+		{
+			"file": "typecheck.cjs",
+			"sha256": "b9a06836583208e08732be1a80874b1a8731b1ff8a0b60e1e440a7a856d192e9"
+		},
+		{
+			"file": "typecheck.json",
+			"sha256": "953da53e2bd3f17351165c77cff9413210337705b517515cd9de6e870e0a21ba"
+		}
+	],
+	"limits": "Production store/screen with isolated fixtures and native host adapters; no native/API/device/Figma or independent QC approval."
+}

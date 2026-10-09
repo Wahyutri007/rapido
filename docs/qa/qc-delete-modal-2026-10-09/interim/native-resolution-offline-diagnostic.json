@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "type": "pageerror",
+      "message": "__fbBatchedBridgeConfig is not set, cannot invoke native modules"
+    },
+    {
+      "type": "state",
+      "text": "",
+      "ready": 0
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/.expo/qc-delete-modal-entry.bundle",
+      "bytes": 6613737,
+      "sha256": "6d8b5dc9dbedfbcbe440b67d26850b5897f2c7200482be9739fb2c10b7eac395"
+    }
+  ]
+}

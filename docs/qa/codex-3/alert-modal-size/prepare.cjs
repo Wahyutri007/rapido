@@ -1,0 +1,14 @@
+const fs = require("node:fs"), path = require("node:path"), crypto = require("node:crypto"), assert = require("node:assert/strict"), ts = require("typescript");
+const hash = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+const previous = "docs/qa/codex-3/success-modal-size", source = "components/common/AlertModal.tsx";
+assert.equal(hash(source), "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7");
+assert(!fs.existsSync(path.join(__dirname, "AlertModal.before.tsx.txt")), "Preserve baseline");
+fs.copyFileSync(source, path.join(__dirname, "AlertModal.before.tsx.txt"));
+const old = fs.readFileSync(`${previous}/prepare.cjs`, "utf8");
+const inventory = old.slice(old.indexOf("const entries = [];"), old.indexOf('const qc = ')).replaceAll("SuccessModal", "AlertModal");
+eval(inventory);
+fs.copyFileSync(`${previous}/web.css`, path.join(__dirname, "web.css"));
+for (const name of ["quality.cjs", "replay-delete.cjs"]) fs.writeFileSync(path.join(__dirname, name), fs.readFileSync(`${previous}/${name}`, "utf8").replaceAll("SuccessModal", "AlertModal").replaceAll("SD3-007", "SD3-009"));
+const files = ["components/common/SuccessModal.tsx", "components/common/DeleteConfirmModal.tsx", "components/ui/modal/index.tsx", "components/ui/button/index.tsx", "components/common/Text.tsx", "components/ui/gluestack-ui-provider/index.web.tsx", "hooks/useAlertModal.ts", "assets/images/alerts/index.ts", "assets/images/alerts/category.jpg", "assets/images/alerts/order-type.jpg", "tailwind.config.js", "metro.config.js", "tsconfig.json", "babel.config.js", "package.json", "package-lock.json", "node_modules/react-native-css-interop/.cache/android.js", "node_modules/react-native-css-interop/.cache/web.css", ".expo/codex-3-alert-modal-entry.jsx"];
+fs.writeFileSync(path.join(__dirname, "inputs-before.json"), JSON.stringify({ owner: "Codex-3", ticket: "SD3-009", source, sourceHash: hash(source), files: Object.fromEntries(files.map((file) => [file, hash(file)])), inventoryAdaptation: "Same TS import/JSX inventory from frozen SD3-007, component name changed" }, null, 2) + "\n");
+console.log("Captured AlertModal baseline/callers/input fingerprints");

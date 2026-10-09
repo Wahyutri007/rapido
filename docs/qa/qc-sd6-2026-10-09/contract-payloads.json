@@ -1,0 +1,34 @@
+[
+  {
+    "scenario": "backend exponent 2 roundtrip without edit",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 2
+    }
+  },
+  {
+    "scenario": "UI multiple 100",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 100
+    }
+  },
+  {
+    "scenario": "UI multiple 1000",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 1000
+    }
+  },
+  {
+    "scenario": "UI multiple 10",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 10
+    }
+  }
+]

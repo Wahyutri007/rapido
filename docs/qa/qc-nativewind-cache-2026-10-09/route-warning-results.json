@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "count": 10,
+  "checks": [
+    "production router reproduces all three legacy root warnings",
+    "current warnings do not remove valid screens",
+    "catalog menu exists under child layout",
+    "search screen exists under cashier catalog",
+    "suggested parent patch produces zero route warnings",
+    "suggested parent patch retains all routable children",
+    "suggested parent removes only three invalid declarations",
+    "suggested search header registration retains index and detail",
+    "suggested child patch produces zero route warnings",
+    "suggestion keeps Cari header in actual search layout"
+  ],
+  "finding": "QC-HP-WARNING-001",
+  "parentFile": "app/(no-layout)/_layout.tsx",
+  "childFile": "app/(no-layout)/(cashier)/catalog/_layout.tsx",
+  "warningRoutes": [
+    "menu/search",
+    "menu",
+    "catalog/menu"
+  ],
+  "actualDirectChildren": [
+    "(back-office)",
+    "(cashier)",
+    "catalog",
+    "home",
+    "inventory",
+    "maintenance",
+    "manage",
+    "offer",
+    "order",
+    "order-detail",
+    "terms-and-condition"
+  ],
+  "productionSorterFile": "node_modules/expo-router/build/useScreens.js",
+  "scope": "actual sorter + filesystem + AST; candidate only, no app source edit or native runtime rerun"
+}

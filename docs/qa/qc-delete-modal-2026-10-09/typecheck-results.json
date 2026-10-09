@@ -1,0 +1,88 @@
+{
+  "owner": "QC",
+  "roots": [
+    "components/common/DeleteConfirmModal.tsx",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-delete-modal-2026-10-09\\proposal\\DeleteConfirmModal.tsx"
+  ],
+  "scope": "Two modal roots and actual imported/declaration closure; not full application",
+  "diagnosticCount": 0,
+  "diagnostics": [],
+  "sourceHashes": [
+    {
+      "file": "assets/images/illustrations/index.ts",
+      "sha256": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4"
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+    },
+    {
+      "file": "lib/utils/dates.ts",
+      "sha256": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b"
+    },
+    {
+      "file": "lib/utils/colors.ts",
+      "sha256": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "file": "lib/utils/styles.ts",
+      "sha256": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996"
+    },
+    {
+      "file": "lib/haptics.ts",
+      "sha256": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3"
+    },
+    {
+      "file": "lib/utils/index.ts",
+      "sha256": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196"
+    },
+    {
+      "file": "components/common/Text.tsx",
+      "sha256": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab"
+    },
+    {
+      "file": "components/ui/button/index.tsx",
+      "sha256": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1"
+    },
+    {
+      "file": "components/ui/modal/index.tsx",
+      "sha256": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e"
+    },
+    {
+      "file": "types/index.ts",
+      "sha256": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63"
+    },
+    {
+      "file": "hooks/useAlertModal.ts",
+      "sha256": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+    },
+    {
+      "file": "components/common/DeleteConfirmModal.tsx",
+      "sha256": "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818"
+    },
+    {
+      "file": "docs/qa/qc-delete-modal-2026-10-09/proposal/DeleteConfirmModal.tsx",
+      "sha256": "a7a6abbe66d68e1f110a19ae0f0603f29606050fd775a8f26941d5bac0f13a23"
+    },
+    {
+      "file": "expo-env.d.ts",
+      "sha256": "6fc02634da46d3edc5a88eec9173ba6bf709726be3cba83c73ebd8e859d5c147"
+    },
+    {
+      "file": "global.d.ts",
+      "sha256": "8d0ed640091f13948172e1d7e0363565ece0e262343d4c5f376ce933f59daa5b"
+    },
+    {
+      "file": "nativewind-env.d.ts",
+      "sha256": "ba93dc3eac6e58df36919fd4905c4cf02cae566cbb7849c3e3de3451f8ac28ff"
+    },
+    {
+      "file": ".expo/types/router.d.ts",
+      "sha256": "4a28457ef3c75ace72d598187caaca12f502c2ff17d9b472f9fa2891fe7c2085"
+    }
+  ]
+}

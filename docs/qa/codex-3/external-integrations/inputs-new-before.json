@@ -1,0 +1,43 @@
+{
+    "owner":  "Software Developer Senior / Codex-3",
+    "ticket":  "SD3-014",
+    "capturedAtUtc":  "2026-10-09T01:49:58.1407108Z",
+    "newSourceBaseline":  {
+                              "app/(no-layout)/manage/integrations/_layout.tsx":  null,
+                              "app/(no-layout)/manage/integrations/index.tsx":  null,
+                              "app/(no-layout)/manage/integrations/modify.tsx":  null,
+                              "app/(no-layout)/manage/integrations/detail.tsx":  null,
+                              "components/feature/manage/integrations/IntegrationListScreen.tsx":  null,
+                              "components/feature/manage/integrations/IntegrationModifyScreen.tsx":  null,
+                              "components/feature/manage/integrations/IntegrationDetailScreen.tsx":  null,
+                              "components/feature/manage/integrations/IntegrationDeleteDialog.tsx":  null,
+                              "schema/manage/integration.ts":  null,
+                              "store/manageIntegrationStore.ts":  null,
+                              "types/ui/manage/integration.ts":  null
+                          },
+    "readOnlyContracts":  {
+                              "components/common/Form.tsx":  "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+                              "components/common/Card.tsx":  "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+                              "components/common/Text.tsx":  "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+                              "components/common/Wrapper.tsx":  "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+                              "components/common/SearchBar.tsx":  "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+                              "components/common/BottomActionButton.tsx":  "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+                              "components/common/AlertModal.tsx":  "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+                              "components/common/SuccessModal.tsx":  "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+                              "components/common/DeleteConfirmModal.tsx":  "dabc8e26e3aa79ded2127a36d2a6ee33cc6b020bdf7fff76afe93c29ad9a2818",
+                              "components/common/DataPlaceholder.tsx":  "11f552716277208846cec844383d2689beceba7f08605f11df08b2e4eefc0a61",
+                              "components/custom/ItemActionSheet.tsx":  "4c7982d57b42d70c4034186a16be0d2c027dc71a82efcce3791cc904bf58c8c2",
+                              "components/custom/CatalogItemCard.tsx":  "f02df09a07510184944c181b70cc225b9c4e1249bb3bb253f74b4ec290801425",
+                              "components/custom/DetailRow.tsx":  "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+                              "components/custom/DetailBottomActions.tsx":  "cfccb3f7080faf0a599182d268a232e2585a35aa95661443806984c15b6ec60b",
+                              "components/custom/JSStack.tsx":  "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+                              "components/common/Header.tsx":  "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+                              "components/feature/manage/ManageListActions.tsx":  "b2ddef90ff0c919bcc7c98913b106ce6575c846fed943fb8b7bf13f989522102",
+                              "components/feature/manage/settings/ManageFormNotFound.tsx":  "1f9132c1aa18ac1b59e5b75c76f2669a7be4d31b0d06b4880c99833345d6ea7c",
+                              "components/ui/input/index.tsx":  "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+                              "lib/utils/index.ts":  "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+                              "tsconfig.json":  "42ffe0a33d6db0afb01bb4fb7f0f1ede976a9388c04d43c683d67c83aca4c4e6",
+                              "package.json":  "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac"
+                          },
+    "scope":  "New user-entered session drafts only; shared hub and parent baseline managed separately by root"
+}

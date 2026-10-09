@@ -1,0 +1,158 @@
+{
+  "suite": "lifecycle",
+  "status": "FAIL",
+  "passed": 19,
+  "failed": 6,
+  "checks": [
+    {
+      "name": "starts closed without writing value",
+      "pass": true
+    },
+    {
+      "name": "open follows committed selection",
+      "pass": true
+    },
+    {
+      "name": "equivalent arrays preserve pending selection",
+      "pass": true
+    },
+    {
+      "name": "draft does not emit",
+      "pass": true
+    },
+    {
+      "name": "external replacement wins while open",
+      "pass": false,
+      "actual": [
+        "Alpha",
+        "Beta"
+      ],
+      "expected": [
+        "Gamma"
+      ]
+    },
+    {
+      "name": "save cannot restore selection before external replacement",
+      "pass": false,
+      "actual": [
+        "a",
+        "b"
+      ],
+      "expected": [
+        "c"
+      ]
+    },
+    {
+      "name": "save closes sheet",
+      "pass": true
+    },
+    {
+      "name": "external empty reset clears open draft",
+      "pass": false,
+      "actual": [
+        "Alpha",
+        "Gamma"
+      ],
+      "expected": []
+    },
+    {
+      "name": "empty reset saves empty",
+      "pass": false,
+      "actual": [
+        "c",
+        "a"
+      ],
+      "expected": []
+    },
+    {
+      "name": "cancel emits nothing",
+      "pass": true
+    },
+    {
+      "name": "reopen discards unsaved draft",
+      "pass": true
+    },
+    {
+      "name": "search includes description",
+      "pass": true
+    },
+    {
+      "name": "select all filtered preserves hidden draft",
+      "pass": true
+    },
+    {
+      "name": "deselect filtered preserves hidden selections",
+      "pass": true
+    },
+    {
+      "name": "select all with no matches is harmless",
+      "pass": true
+    },
+    {
+      "name": "backdrop close clears search on reopen",
+      "pass": true
+    },
+    {
+      "name": "backdrop cancel preserves committed IDs",
+      "pass": true
+    },
+    {
+      "name": "batched double toggle is reversible",
+      "pass": false,
+      "actual": [
+        "Alpha",
+        "Beta"
+      ],
+      "expected": [
+        "Alpha"
+      ]
+    },
+    {
+      "name": "batched individual then all emits each ID once",
+      "pass": true
+    },
+    {
+      "name": "pill removal is immediate and preserves remaining IDs",
+      "pass": true
+    },
+    {
+      "name": "unloaded committed IDs are preserved",
+      "pass": true
+    },
+    {
+      "name": "separator-containing IDs do not collide",
+      "pass": false,
+      "actual": [
+        "a::b",
+        "c"
+      ],
+      "expected": [
+        "a",
+        "b::c"
+      ]
+    },
+    {
+      "name": "temporarily empty options keep value and order",
+      "pass": true
+    },
+    {
+      "name": "no unexpected runtime or act errors",
+      "pass": true
+    },
+    {
+      "name": "production inputs stable during test",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "components/common/MultiSelect.tsx",
+      "sha256": "c6d6cb13a86e1c0a7ff178abd1e28492521171059f88c49c24785519df392f72"
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "sha256": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea"
+    }
+  ],
+  "scope": "StrictMode React production MultiSelect; integration also uses installed RHF Controller/useForm. Native/UI/SearchBar adapters, no native/browser/route/API certification."
+}

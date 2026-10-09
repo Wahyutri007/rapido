@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "owner": "Software Developer Senior 7",
+  "status": "READY_FOR_QA",
+  "files": [
+    {
+      "file": "metro.config.js",
+      "sha256": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160"
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "sha256": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed"
+    },
+    {
+      "file": "scripts/verify-nativewind-cache.cjs",
+      "sha256": "ccaec6e8e705d72a4610db3a43d6149b70b0f3169ce23d886ff2ef92cc6f8274"
+    },
+    {
+      "file": "scripts/verify-metro-cache.cjs",
+      "sha256": "65dc3f195fd2cce0826b79cdcb3cd5ed5513e4b3ecfb7aa49a2eeb1c55214d1f"
+    }
+  ],
+  "dependency": {
+    "file": "node_modules/react-native-css-interop/dist/metro/index.js",
+    "sha256": "96e413fea6134f9dc3aa9841e03d9e07e1bcf3fbb8552f0e817efe8f7527946a"
+  },
+  "dependencyVersion": "0.2.7",
+  "tests": {
+    "installedInitializerChecks": 10,
+    "existingCacheQueue": "3000 reads + 200 writes, maximum 64 concurrent",
+    "realSecondProcessConfigLoads": 2,
+    "nativeLaunches": 2,
+    "eslint": "4 changed files: exit 0, no diagnostic",
+    "diffCheck": "scoped: exit 0",
+    "typecheck": "Not run; CJS configuration change, no TypeScript application edits"
+  },
+  "evidence": [
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/baseline.json",
+      "sha256": "8a79e1d91624a408e63910e81f313a573f97e34fb5023c6c860974fa2b6c8ed3"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/cache-results.json",
+      "sha256": "be8941a5f7a83aa125dd4f416e709c4aaa10c2102397b7f76f3f6532e00f0fae"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/cache-queue-results.json",
+      "sha256": "19955d01c5e1e9069fdba3b566bda4378de4ff476b35c1b9b6cb6419b374dec5"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/multi-process-results.json",
+      "sha256": "2b1e273257f146aa2408d212c2014559558d01fa822df3a4528440fe9113721c"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/second-config-results.json",
+      "sha256": "216994cf814f86cf7509947ebabb5ba4d50ac2a49ca98681d66148c9fd467138"
+    },
+    {
+      "file": "docs/qa/senior-7-2026-10-09/startup/native-results.json",
+      "sha256": "3cc655d11c15efcf12b5b312b9db76e75e7c2401d058109d909e31957443715a"
+    }
+  ],
+  "qaApproval": false,
+  "qcApproval": false,
+  "limitation": "Synchronous initialization guard only; previews must reuse project Metro config. Does not modify dependency or suppress runtime exceptions."
+}

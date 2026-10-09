@@ -1,0 +1,68 @@
+{
+  "before": {
+    "app/(no-layout)/manage/printer/modify.tsx": "0174597063bea4d9604925c4d3e43c52160ec4c3a4ab1685c3338866578bf126",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8"
+  },
+  "after": {
+    "app/(no-layout)/manage/printer/modify.tsx": "0174597063bea4d9604925c4d3e43c52160ec4c3a4ab1685c3338866578bf126",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8"
+  },
+  "checks": [
+    {
+      "name": "ESLint",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "app/(no-layout)/manage/printer/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/rounding.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json",
+        "--output-file",
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\senior-6-2026-10-09\\printer-rounding-ui\\eslint.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Biome",
+      "args": [
+        "node_modules/@biomejs/biome/bin/biome",
+        "check",
+        "app/(no-layout)/manage/printer/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/rounding.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "Checked 2 files in 37ms. No fixes applied.\n",
+      "stderr": ""
+    },
+    {
+      "name": "TypeScript two roots",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--project",
+        ".expo/senior6-printer-pos-tsconfig.json"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Scoped whitespace",
+      "args": [
+        "diff",
+        "--check",
+        "--",
+        "app/(no-layout)/manage/printer/modify.tsx",
+        "app/(no-layout)/manage/pos-settings/rounding.tsx"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'app/(no-layout)/manage/pos-settings/rounding.tsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'app/(no-layout)/manage/printer/modify.tsx', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "limitations": "Two production roots plus TypeScript dependency closure; not global project quality or native test."
+}

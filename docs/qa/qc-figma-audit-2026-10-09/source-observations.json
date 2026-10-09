@@ -1,0 +1,47 @@
+{
+  "createdAt": "2026-10-09T03:29:06.188Z",
+  "observations": [
+    {
+      "finding": "QC-FIGMA-001",
+      "file": "components/feature/support/FaqCard.tsx",
+      "sha256": "7eaca3d56aecdbfa939d699f9d7a0b36e81f5d7bc55c03ed98339c7fb989e8cd",
+      "statement": "Screenshot Figma memakai ikon outline berbeda; kategori katalog berwarna magenta dan waiter ungu. FaqCard terkini memakai tag dan bell-concierge primary/biru serta registry ikon pengganti.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    },
+    {
+      "finding": "QC-FIGMA-002",
+      "file": "app/(no-layout)/manage/faq/index.tsx",
+      "sha256": "1c0789f6a370f7d4553437740771e64a1acc294bd5fc710ae9e69a07b04a5f07",
+      "statement": "Figma menampilkan tombol persegi bersudut kecil. Caller FAQ memakai Button size xs tanpa varian bentuk; primitive Button default rounded-full. Screenshot historis memperlihatkan bentuk pill.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    },
+    {
+      "finding": "QC-FIGMA-002",
+      "file": "components/ui/button/index.tsx",
+      "sha256": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "statement": "Figma menampilkan tombol persegi bersudut kecil. Caller FAQ memakai Button size xs tanpa varian bentuk; primitive Button default rounded-full. Screenshot historis memperlihatkan bentuk pill.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    },
+    {
+      "finding": "QC-FIGMA-003",
+      "file": "components/feature/inventory/StockOperationDetail.tsx",
+      "sha256": "957ad8bc7a2aedfc168ae14b10241af55e9f8fdc18a51495c89947c9174004df",
+      "statement": "Figma memberi warna warning/destructive/success pada tiga total. StockOperationDetail mengirim tone yang tepat, tetapi InventoryMetrics menerapkannya pada ikon/latar saja; Text untuk item.value memakai foreground tanpa tone. Screenshot historis memperlihatkan tiga angka gelap.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    },
+    {
+      "finding": "QC-FIGMA-003",
+      "file": "components/feature/inventory/InventoryUi.tsx",
+      "sha256": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791",
+      "statement": "Figma memberi warna warning/destructive/success pada tiga total. StockOperationDetail mengirim tone yang tepat, tetapi InventoryMetrics menerapkannya pada ikon/latar saja; Text untuk item.value memakai foreground tanpa tone. Screenshot historis memperlihatkan tiga angka gelap.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    },
+    {
+      "finding": "QC-FIGMA-004",
+      "file": "components/feature/inventory/InventoryUi.tsx",
+      "sha256": "689652ba1fb625f04683cf97188cc440239ba3732c991f6436e818e0f3fba791",
+      "statement": "Figma memakai ikon metadata muted/abu-abu. InventoryMetadata terkini selalu memanggil InventoryIcon tanpa tone; default tone primary. Screenshot historis memperlihatkan ikon metadata biru.",
+      "verification": "Read current source/JSX props and historical pair; no browser execution claimed."
+    }
+  ]
+}

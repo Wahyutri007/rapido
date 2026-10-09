@@ -1,0 +1,111 @@
+{
+  "suite": "integration",
+  "status": "FAIL",
+  "passed": 18,
+  "failed": 3,
+  "checks": [
+    {
+      "name": "nested sections respect initial subset",
+      "pass": true
+    },
+    {
+      "name": "subset sets isFiltered",
+      "pass": true
+    },
+    {
+      "name": "sheet draft leaves report unchanged",
+      "pass": true
+    },
+    {
+      "name": "cancel closes integrated sheet",
+      "pass": true
+    },
+    {
+      "name": "integrated reopen restores applied selection",
+      "pass": true
+    },
+    {
+      "name": "apply updates report through production hook",
+      "pass": true
+    },
+    {
+      "name": "apply closes integrated sheet",
+      "pass": true
+    },
+    {
+      "name": "empty selection hides all report sections",
+      "pass": true
+    },
+    {
+      "name": "reset immediately restores report using existing onReset contract",
+      "pass": true
+    },
+    {
+      "name": "reset clears filtered status",
+      "pass": true
+    },
+    {
+      "name": "equivalent groups and changed initial config preserve applied subset",
+      "pass": true
+    },
+    {
+      "name": "changed section identity never commits stale hidden report",
+      "pass": false,
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "changed sections select all current IDs",
+      "pass": true
+    },
+    {
+      "name": "open sheet reflects current report identity",
+      "pass": true
+    },
+    {
+      "name": "empty groups reset selection",
+      "pass": true
+    },
+    {
+      "name": "IDs containing separator cannot collide across report identities",
+      "pass": false,
+      "actual": [
+        "c"
+      ],
+      "expected": [
+        "a",
+        "b::c"
+      ]
+    },
+    {
+      "name": "collision case displays new report sections",
+      "pass": false,
+      "actual": [],
+      "expected": [
+        "a",
+        "b::c"
+      ]
+    },
+    {
+      "name": "public setter still filters sections",
+      "pass": true
+    },
+    {
+      "name": "default initial selection is all",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "pass": true
+    },
+    {
+      "name": "source stable throughout suite",
+      "pass": true
+    }
+  ],
+  "source": {
+    "file": "components/custom/CardList.tsx",
+    "sha256": "5c56d74766ed90c8f15f0829aac455675615ca8165aceb1b0bae96570d82323c"
+  },
+  "scope": "Production CardList filter sheet/hook/section renderer; React test renderer with RN/UI adapters. No full screen, API or native runtime."
+}

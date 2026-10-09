@@ -1,0 +1,153 @@
+{
+    "database": ":memory:",
+    "connection": "qc_stock_identity",
+    "passed": 6,
+    "failed": 0,
+    "checks": [
+        {
+            "name": "shared namespace item shared-a",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "shared-a"
+                ]
+            },
+            "expectedValid": true,
+            "actualValid": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "shared-a",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "name": "shared namespace category shared-a",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "shared-a"
+                ]
+            },
+            "expectedValid": false,
+            "actualValid": false,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "name": "shared namespace item shared-b",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "shared-b"
+                ]
+            },
+            "expectedValid": false,
+            "actualValid": false,
+            "validated": null,
+            "errors": {
+                "stockable_ids.0": [
+                    "Nilai stockable_ids.0 tidak valid atau tidak ditemukan."
+                ]
+            }
+        },
+        {
+            "name": "shared namespace category shared-b",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "shared-b"
+                ]
+            },
+            "expectedValid": true,
+            "actualValid": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "shared-b",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "name": "shared namespace item shared-own",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockable_ids": [
+                    "shared-own"
+                ]
+            },
+            "expectedValid": true,
+            "actualValid": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "item",
+                "stockables": [
+                    {
+                        "stockable_id": "shared-own",
+                        "stockable_type": "menu"
+                    }
+                ]
+            },
+            "errors": []
+        },
+        {
+            "name": "shared namespace category shared-own",
+            "passed": true,
+            "payload": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockable_ids": [
+                    "shared-own"
+                ]
+            },
+            "expectedValid": true,
+            "actualValid": true,
+            "validated": {
+                "enabled": true,
+                "type": "hybrid",
+                "content_type": "category",
+                "stockables": [
+                    {
+                        "stockable_id": "shared-own",
+                        "stockable_type": "category"
+                    }
+                ]
+            },
+            "errors": []
+        }
+    ],
+    "limitations": "Actual Request/ValidUserContent/ownership SQL, minimal memory tables; no HTTP/auth middleware/live DB/controller checkout."
+}

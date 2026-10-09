@@ -1,0 +1,331 @@
+{
+  "sourceHashes": {
+    "app/(no-layout)/manage/printer/modify.tsx": "ac1d96ab9f562f507d23cb6407a2234848ea5c9ebd3d590c8178e9dd6a47957e",
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "21bd675838cd5f2378271820ebb4c461c7ad2cf8387a24a9dd69f62eeb66e04f",
+    "app/(no-layout)/manage/pos-settings/stock-limit.tsx": "3a69d2f54477dfb46dc342a8820c71747899ab75cb096c28820c1693660edac4",
+    "api/hooks/settings.ts": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+    "api/hooks/menus.ts": "2373ecbaedcb4c3f0b07c937bbac93a68c3dc4fc4ac3ab47ea770fcc211ffcb8",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "api/axios.ts": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "components/common/SingleSelect.tsx": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+    "components/common/SearchBar.tsx": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+    "components/common/SuccessModal.tsx": "72b29fd049201dad355733885cf0f7f310b0983549337adbe0e653dd820f8745",
+    "components/common/AlertModal.tsx": "da667443b99bc1abedba3e3ebf62eeaa57ca032c5524d4d90e74376abbb529e7",
+    "components/common/Wrapper.tsx": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "components/common/BottomActionButton.tsx": "82bc09c494e7d75226cb345bd92dc0c9c06d4b5d191ab1c8e7e18a920b6885dd",
+    "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+    "components/ui/modal/index.tsx": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+    "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+    ".expo/senior6-ui-entry.jsx": "3de9b2c9377a33f91bf192ea06c7dd73dff4e1e6f44aea30e1ac1d243d991c43",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "components/ui/gluestack-ui-provider/index.tsx": "b32bee6c6810e5ff75dc429bcfc608c0ae5c564dd735e0f445c5c8ba77c54b73",
+    "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+    "components/common/Header.tsx": "54e84230db6a194b44feaad9d60a90f0bf98802f9bff115e6fc53ab50f248171",
+    "components/common/Card.tsx": "86e111daf60d3cc375502088e40176e296ea2b794f68a22303294cf30ee4720a",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+  },
+  "checks": [
+    {
+      "name": "rounding API prefill and sticky save",
+      "passed": true
+    },
+    {
+      "name": "real SingleSelect applies a new multiple",
+      "passed": true
+    },
+    {
+      "name": "rounding user method/multiple survive production query refetch",
+      "passed": true
+    },
+    {
+      "name": "rounding failed mutation keeps draft and shows real error modal",
+      "passed": true
+    },
+    {
+      "name": "rounding switch false reaches production mutation",
+      "passed": true
+    },
+    {
+      "name": "stock API prefill and sticky save",
+      "passed": true
+    },
+    {
+      "name": "stock real picker cancel leaves committed IDs unchanged",
+      "passed": true
+    },
+    {
+      "name": "stock typing and in-flight picker draft survive actual refetch",
+      "passed": true
+    },
+    {
+      "name": "stock clearing every exclusion sends all mode and empty IDs",
+      "passed": true
+    },
+    {
+      "name": "stock error uses real modal and retains committed draft",
+      "passed": true
+    },
+    {
+      "name": "stock 320px sheet and save fit viewport",
+      "passed": true
+    },
+    {
+      "name": "rounding reopen uses latest API state at 320px",
+      "passed": true
+    },
+    {
+      "name": "rounding actual dropdown displays and saves exponent 0 at 320px",
+      "passed": true
+    },
+    {
+      "name": "rounding actual dropdown displays and saves exponent 4 at 320px",
+      "passed": true
+    },
+    {
+      "name": "rounding actual dropdown displays and saves exponent 10 at 320px",
+      "passed": true
+    },
+    {
+      "name": "Printer actual RHF/modal create to edit to create lifecycle",
+      "passed": true
+    },
+    {
+      "name": "Printer missing ID alerts and invokes back with real screen",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "requests": [
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": true,
+        "method": "down",
+        "decimal_places": 1
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": true,
+        "method": "down",
+        "decimal_places": 1
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": false,
+        "method": "down",
+        "decimal_places": 1
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "stock",
+      "method": "GET",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "domain": "menus",
+      "method": "GET",
+      "path": "/api/contents/menus"
+    },
+    {
+      "domain": "stock",
+      "method": "POST",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "item",
+        "stockable_ids": [
+          "item-1"
+        ]
+      }
+    },
+    {
+      "domain": "stock",
+      "method": "GET",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "domain": "stock",
+      "method": "GET",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "domain": "menus",
+      "method": "GET",
+      "path": "/api/contents/menus"
+    },
+    {
+      "domain": "stock",
+      "method": "POST",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "hybrid",
+        "content_type": "item",
+        "stockable_ids": [
+          "item-1",
+          "item-2"
+        ]
+      }
+    },
+    {
+      "domain": "stock",
+      "method": "GET",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "domain": "stock",
+      "method": "POST",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "all",
+        "content_type": "item",
+        "stockable_ids": []
+      }
+    },
+    {
+      "domain": "stock",
+      "method": "GET",
+      "path": "/api/settings/stock-settings"
+    },
+    {
+      "domain": "stock",
+      "method": "POST",
+      "path": "/api/settings/stock-settings",
+      "body": {
+        "enabled": true,
+        "type": "all",
+        "content_type": "item",
+        "stockable_ids": []
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": true,
+        "method": "up",
+        "decimal_places": 0
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": true,
+        "method": "up",
+        "decimal_places": 4
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "rounding",
+      "method": "POST",
+      "path": "/api/settings/rounding-settings",
+      "body": {
+        "enabled": true,
+        "method": "up",
+        "decimal_places": 10
+      }
+    },
+    {
+      "domain": "rounding",
+      "method": "GET",
+      "path": "/api/settings/rounding-settings"
+    },
+    {
+      "domain": "printer-alert",
+      "message": "Printer tidak ditemukan"
+    }
+  ],
+  "limitations": "Actual screens, NativeWind/Gluestack, RHF, React Query and Axios; HTTP fixture interception and small test navigator. No real backend, full auth/router, native or independent QA approval."
+}

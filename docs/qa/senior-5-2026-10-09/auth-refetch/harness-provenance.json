@@ -1,0 +1,34 @@
+{
+  "originalRunner": "docs/qa/qc-login-2026-10-09/integration.cjs",
+  "originalHash": "e2af7435bd05008e455f9f4d635e125c412c73443dda8d202d4e4c0cfdc085fe",
+  "ownRunnerHash": "dfd58dfdd94eb3ab9182e4f9186f1680ecdc5646e0bf89e01877b7fd72794677",
+  "adaptations": [
+    "Provider snapshot only for --baseline; current guard in both modes",
+    "RAF Map with cancel and returned identifiers for SD5-004 current guard",
+    "Deferred/recorded memory storage reads and seed token",
+    "Full provider StrictMode option plus rerender/reload/read/signOut handles",
+    "Added bootstrap/reloadAuth/signOut/permissions/StrictMode cleanup/unmount cases",
+    "Own owner/ticket/output paths; original QC scenario body retained",
+    "Full successful retry after GET failure and reloadAuth storage rejection added before final freeze"
+  ],
+  "preparedRunnerHash": "234e4ea44c84ca73d143463ce3e5021f4b7c4f19421e49cb1165107094b4e25c",
+  "regressionCopies": {
+    "boot": {
+      "original": "docs/qa/senior-5-2026-10-09/boot/check.cjs",
+      "originalHash": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+      "copyHash": "f362fa4e1c378183d60fb61b1fe2601554c2e150404b657ff325688b352503fe",
+      "changes": [
+        "Output folder only; current dependency sources"
+      ]
+    },
+    "guard": {
+      "original": "docs/qa/senior-5-2026-10-09/guard/check.cjs",
+      "originalHash": "3e4a9738d8a4e3509ebda461a285f1d7f6c3992c129bb14d1378a98073f6fbcb",
+      "copyHash": "5f759fc5c7e8ea9cf0bbdf47506f83c6de6d9ca2777b3844d9eb3783cc8f2164",
+      "changes": [
+        "Output folder",
+        "Refetch adapter bound/stable per fixture matching actual QueryObserver"
+      ]
+    }
+  }
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "scenario": "default before API data",
+    "payload": {
+      "enabled": true,
+      "method": "nearest",
+      "decimal_places": 2
+    }
+  },
+  {
+    "scenario": "disabled and exponent zero",
+    "payload": {
+      "enabled": false,
+      "method": "down",
+      "decimal_places": 0
+    }
+  },
+  {
+    "scenario": "backend exponent 0 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 0
+    }
+  },
+  {
+    "scenario": "backend exponent 1 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 1
+    }
+  },
+  {
+    "scenario": "backend exponent 2 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 2
+    }
+  },
+  {
+    "scenario": "backend exponent 3 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 3
+    }
+  },
+  {
+    "scenario": "backend exponent 4 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 4
+    }
+  },
+  {
+    "scenario": "backend exponent 5 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 5
+    }
+  },
+  {
+    "scenario": "backend exponent 6 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 6
+    }
+  },
+  {
+    "scenario": "backend exponent 7 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 7
+    }
+  },
+  {
+    "scenario": "backend exponent 8 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 8
+    }
+  },
+  {
+    "scenario": "backend exponent 9 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 9
+    }
+  },
+  {
+    "scenario": "backend exponent 10 roundtrip",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 10
+    }
+  },
+  {
+    "scenario": "selected UI Puluhan (Rp10)",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 1
+    }
+  },
+  {
+    "scenario": "selected UI Ratusan (Rp100)",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 2
+    }
+  },
+  {
+    "scenario": "selected UI Ribuan (Rp1.000)",
+    "payload": {
+      "enabled": true,
+      "method": "up",
+      "decimal_places": 3
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "passed": 0,
+  "failed": 0,
+  "checks": [],
+  "runtimeErrors": [],
+  "consoleErrors": [],
+  "scope": "Production Inventory hub, stock screen, tab/layout, shared controls and material store; test-only ExpoRoot context bypasses authentication/API, mutations live only in this browser page."
+}
