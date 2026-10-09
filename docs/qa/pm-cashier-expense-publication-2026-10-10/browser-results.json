@@ -1,0 +1,827 @@
+{
+  "status": "PASS",
+  "passed": 23,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Published main original Save is inert negative control",
+      "status": "PASS"
+    },
+    {
+      "name": "Real five-field form has distinct names/empty defaults and current Header",
+      "status": "PASS"
+    },
+    {
+      "name": "Readonly unavailable store and multiline description replace fake picker",
+      "status": "PASS"
+    },
+    {
+      "name": "Direct keyboard typing retains raw strings and newline draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Focused field first physical Save opens honest explanation and keeps draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable Save never validates/coerces raw amount \"\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable Save never validates/coerces raw amount \"-1e3\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable Save never validates/coerces raw amount \"9007199254740992\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable Save never validates/coerces raw amount \"000001,000\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable Save never validates/coerces raw amount \"NaN\"",
+      "status": "PASS"
+    },
+    {
+      "name": "Escape closes same unsupported-save panel without altering draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Repeated Save/close shows only one panel and preserves all values",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit route remount clears local draft and retains back callback",
+      "status": "PASS"
+    },
+    {
+      "name": "Physical Save and all five visible field regions above OS48 390",
+      "status": "PASS",
+      "detail": {
+        "footer": {
+          "box": {
+            "x": 16,
+            "y": 780,
+            "width": 358,
+            "height": 48,
+            "top": 780,
+            "right": 374,
+            "bottom": 828,
+            "left": 16
+          },
+          "top": 0,
+          "bottom": 844,
+          "left": 0,
+          "right": 390,
+          "hit": true
+        },
+        "fieldCount": 5
+      }
+    },
+    {
+      "name": "Entire message and close action scroll within OS48 390",
+      "status": "PASS",
+      "detail": {
+        "box": {
+          "x": 21,
+          "y": 784,
+          "width": 348,
+          "height": 40,
+          "top": 784,
+          "right": 369,
+          "bottom": 824,
+          "left": 21
+        },
+        "top": 688,
+        "bottom": 824,
+        "left": 0,
+        "right": 390,
+        "hit": true
+      }
+    },
+    {
+      "name": "Physical Save and all five visible field regions above OS48 320",
+      "status": "PASS",
+      "detail": {
+        "footer": {
+          "box": {
+            "x": 24,
+            "y": 456,
+            "width": 272,
+            "height": 48,
+            "top": 456,
+            "right": 296,
+            "bottom": 504,
+            "left": 24
+          },
+          "top": 24,
+          "bottom": 520,
+          "left": 8,
+          "right": 312,
+          "hit": true
+        },
+        "fieldCount": 5
+      }
+    },
+    {
+      "name": "Entire message and close action scroll within OS48 320",
+      "status": "PASS",
+      "detail": {
+        "box": {
+          "x": 29,
+          "y": 460,
+          "width": 262,
+          "height": 40,
+          "top": 460,
+          "right": 291,
+          "bottom": 500,
+          "left": 29
+        },
+        "top": 320,
+        "bottom": 500,
+        "left": 8,
+        "right": 312,
+        "hit": true
+      }
+    },
+    {
+      "name": "Physical Save and all five visible field regions above OS48 240",
+      "status": "PASS",
+      "detail": {
+        "footer": {
+          "box": {
+            "x": 16,
+            "y": 208,
+            "width": 208,
+            "height": 48,
+            "top": 208,
+            "right": 224,
+            "bottom": 256,
+            "left": 16
+          },
+          "top": 24,
+          "bottom": 272,
+          "left": 0,
+          "right": 240,
+          "hit": true
+        },
+        "fieldCount": 5
+      }
+    },
+    {
+      "name": "Entire message and close action scroll within OS48 240",
+      "status": "PASS",
+      "detail": {
+        "box": {
+          "x": 21,
+          "y": 212,
+          "width": 198,
+          "height": 40,
+          "top": 212,
+          "right": 219,
+          "bottom": 252,
+          "left": 21
+        },
+        "top": 57,
+        "bottom": 252,
+        "left": 0,
+        "right": 240,
+        "hit": true
+      }
+    },
+    {
+      "name": "Physical Save and all five visible field regions above OS48 844",
+      "status": "PASS",
+      "detail": {
+        "footer": {
+          "box": {
+            "x": 64,
+            "y": 128,
+            "width": 740,
+            "height": 48,
+            "top": 128,
+            "right": 804,
+            "bottom": 176,
+            "left": 64
+          },
+          "top": 24,
+          "bottom": 192,
+          "left": 48,
+          "right": 820,
+          "hit": true
+        },
+        "fieldCount": 5
+      }
+    },
+    {
+      "name": "Entire message and close action scroll within OS48 844",
+      "status": "PASS",
+      "detail": {
+        "box": {
+          "x": 69,
+          "y": 132,
+          "width": 730,
+          "height": 40,
+          "top": 132,
+          "right": 799,
+          "bottom": 172,
+          "left": 69
+        },
+        "top": 57,
+        "bottom": 172,
+        "left": 48,
+        "right": 820,
+        "hit": true
+      }
+    },
+    {
+      "name": "Large CSS text keeps Save and scrolling explanation physical targets reachable",
+      "status": "PASS"
+    },
+    {
+      "name": "Current compiled and intake source stable, no runtime/external/persistence request",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "state": "fields390",
+      "footer": {
+        "box": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48,
+          "top": 780,
+          "right": 374,
+          "bottom": 828,
+          "left": 16
+        },
+        "top": 0,
+        "bottom": 844,
+        "left": 0,
+        "right": 390,
+        "hit": true
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 48
+      },
+      "controls": [
+        {
+          "name": "No. Referensi",
+          "box": {
+            "x": 29,
+            "y": 141,
+            "width": 332,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 141,
+            "bottom": 183
+          },
+          "physicalPoint": {
+            "x": 166,
+            "y": 21
+          }
+        },
+        {
+          "name": "Sumber Dana",
+          "box": {
+            "x": 29,
+            "y": 237,
+            "width": 332,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 237,
+            "bottom": 279
+          },
+          "physicalPoint": {
+            "x": 166,
+            "y": 21
+          }
+        },
+        {
+          "name": "Toko",
+          "box": {
+            "x": 29,
+            "y": 333,
+            "width": 332,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 333,
+            "bottom": 375
+          },
+          "physicalPoint": {
+            "x": 166,
+            "y": 21
+          }
+        },
+        {
+          "name": "Nominal",
+          "box": {
+            "x": 29,
+            "y": 429,
+            "width": 332,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 429,
+            "bottom": 471
+          },
+          "physicalPoint": {
+            "x": 166,
+            "y": 21
+          }
+        },
+        {
+          "name": "Deskripsi",
+          "box": {
+            "x": 29,
+            "y": 537,
+            "width": 332,
+            "height": 102
+          },
+          "visibleRegion": {
+            "top": 537,
+            "bottom": 639
+          },
+          "physicalPoint": {
+            "x": 166,
+            "y": 51
+          }
+        }
+      ]
+    },
+    {
+      "state": "close390",
+      "g": {
+        "box": {
+          "x": 21,
+          "y": 784,
+          "width": 348,
+          "height": 40,
+          "top": 784,
+          "right": 369,
+          "bottom": 824,
+          "left": 21
+        },
+        "top": 688,
+        "bottom": 824,
+        "left": 0,
+        "right": 390,
+        "hit": true
+      }
+    },
+    {
+      "state": "fields320",
+      "footer": {
+        "box": {
+          "x": 24,
+          "y": 456,
+          "width": 272,
+          "height": 48,
+          "top": 456,
+          "right": 296,
+          "bottom": 504,
+          "left": 24
+        },
+        "top": 24,
+        "bottom": 520,
+        "left": 8,
+        "right": 312,
+        "hit": true
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 72
+      },
+      "controls": [
+        {
+          "name": "No. Referensi",
+          "box": {
+            "x": 37,
+            "y": 76,
+            "width": 246,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 123,
+            "y": 21
+          }
+        },
+        {
+          "name": "Sumber Dana",
+          "box": {
+            "x": 37,
+            "y": 76,
+            "width": 246,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 123,
+            "y": 21
+          }
+        },
+        {
+          "name": "Toko",
+          "box": {
+            "x": 37,
+            "y": 76,
+            "width": 246,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 123,
+            "y": 21
+          }
+        },
+        {
+          "name": "Nominal",
+          "box": {
+            "x": 37,
+            "y": 137,
+            "width": 246,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 137,
+            "bottom": 179
+          },
+          "physicalPoint": {
+            "x": 123,
+            "y": 21
+          }
+        },
+        {
+          "name": "Deskripsi",
+          "box": {
+            "x": 37,
+            "y": 245,
+            "width": 246,
+            "height": 102
+          },
+          "visibleRegion": {
+            "top": 245,
+            "bottom": 347
+          },
+          "physicalPoint": {
+            "x": 123,
+            "y": 51
+          }
+        }
+      ]
+    },
+    {
+      "state": "close320",
+      "g": {
+        "box": {
+          "x": 29,
+          "y": 460,
+          "width": 262,
+          "height": 40,
+          "top": 460,
+          "right": 291,
+          "bottom": 500,
+          "left": 29
+        },
+        "top": 320,
+        "bottom": 500,
+        "left": 8,
+        "right": 312,
+        "hit": true
+      }
+    },
+    {
+      "state": "fields240",
+      "footer": {
+        "box": {
+          "x": 16,
+          "y": 208,
+          "width": 208,
+          "height": 48,
+          "top": 208,
+          "right": 224,
+          "bottom": 256,
+          "left": 16
+        },
+        "top": 24,
+        "bottom": 272,
+        "left": 0,
+        "right": 240,
+        "hit": true
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 72
+      },
+      "controls": [
+        {
+          "name": "No. Referensi",
+          "box": {
+            "x": 29,
+            "y": 76,
+            "width": 187,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 93.5,
+            "y": 21
+          }
+        },
+        {
+          "name": "Sumber Dana",
+          "box": {
+            "x": 29,
+            "y": 76,
+            "width": 187,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 93.5,
+            "y": 21
+          }
+        },
+        {
+          "name": "Toko",
+          "box": {
+            "x": 29,
+            "y": 76,
+            "width": 187,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 93.5,
+            "y": 21
+          }
+        },
+        {
+          "name": "Nominal",
+          "box": {
+            "x": 29,
+            "y": 76,
+            "width": 187,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 118
+          },
+          "physicalPoint": {
+            "x": 93.5,
+            "y": 21
+          }
+        },
+        {
+          "name": "Deskripsi",
+          "box": {
+            "x": 29,
+            "y": 76,
+            "width": 182,
+            "height": 102
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 178
+          },
+          "physicalPoint": {
+            "x": 91,
+            "y": 51
+          }
+        }
+      ]
+    },
+    {
+      "state": "close240",
+      "g": {
+        "box": {
+          "x": 21,
+          "y": 212,
+          "width": 198,
+          "height": 40,
+          "top": 212,
+          "right": 219,
+          "bottom": 252,
+          "left": 21
+        },
+        "top": 57,
+        "bottom": 252,
+        "left": 0,
+        "right": 240,
+        "hit": true
+      }
+    },
+    {
+      "state": "fields844",
+      "footer": {
+        "box": {
+          "x": 64,
+          "y": 128,
+          "width": 740,
+          "height": 48,
+          "top": 128,
+          "right": 804,
+          "bottom": 176,
+          "left": 64
+        },
+        "top": 24,
+        "bottom": 192,
+        "left": 48,
+        "right": 820,
+        "hit": true
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 72
+      },
+      "controls": [
+        {
+          "name": "No. Referensi",
+          "box": {
+            "x": 77,
+            "y": 76,
+            "width": 714,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 116
+          },
+          "physicalPoint": {
+            "x": 357,
+            "y": 20
+          }
+        },
+        {
+          "name": "Sumber Dana",
+          "box": {
+            "x": 77,
+            "y": 76,
+            "width": 714,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 116
+          },
+          "physicalPoint": {
+            "x": 357,
+            "y": 20
+          }
+        },
+        {
+          "name": "Toko",
+          "box": {
+            "x": 77,
+            "y": 76,
+            "width": 714,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 116
+          },
+          "physicalPoint": {
+            "x": 357,
+            "y": 20
+          }
+        },
+        {
+          "name": "Nominal",
+          "box": {
+            "x": 77,
+            "y": 76,
+            "width": 714,
+            "height": 42
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 116
+          },
+          "physicalPoint": {
+            "x": 357,
+            "y": 20
+          }
+        },
+        {
+          "name": "Deskripsi",
+          "box": {
+            "x": 77,
+            "y": 76,
+            "width": 714,
+            "height": 102
+          },
+          "visibleRegion": {
+            "top": 76,
+            "bottom": 116
+          },
+          "physicalPoint": {
+            "x": 357,
+            "y": 20
+          }
+        }
+      ]
+    },
+    {
+      "state": "close844",
+      "g": {
+        "box": {
+          "x": 69,
+          "y": 132,
+          "width": 730,
+          "height": 40,
+          "top": 132,
+          "right": 799,
+          "bottom": 172,
+          "left": 69
+        },
+        "top": 57,
+        "bottom": 172,
+        "left": 48,
+        "right": 820,
+        "hit": true
+      }
+    }
+  ],
+  "screenshots": [
+    "before-inert-main.png",
+    "normal390.png",
+    "sheet-390.png",
+    "form-390.png",
+    "sheet-320.png",
+    "form-320.png",
+    "sheet-240.png",
+    "form-240.png",
+    "sheet-844.png",
+    "form-844.png",
+    "large-css320.png"
+  ],
+  "assetHashes": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf": "16f92298587bab2b469bc13c0dfc6d5d171bca10bad0c9053ad16bc023bf717d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\AntDesign.ttf": "08a9d5b513cf947e22ede81e9a843bd8d7763a63444cd21484bfde7662cc6543",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Regular.ttf": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Solid.ttf": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Brands.ttf": "06f4d00923ea24697df5df0b92984175991d8bd25776a02d531bb401e393ec42",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf": "64f9fb623681f112261e9a2f97826782439f3925dea8f44a57d1e4db95ba6cfd",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf": "31f099c13f6e4ba05f1b471bf170cb5493249474222917372de3ca5cf29e6a1a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf": "bc844b5b02d3f3adabb514de4e0c0208252d3123413bd03f6287fa446acee859",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Ionicons.ttf": "fa2ab7d2557819b2bfe5009e46844efa7170cf177be7735d43aa2ac1295f1d54",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialIcons.ttf": "ef149f08bdd2ff09a4e2c8573476b7b0f3fbb15b623954ade59899e7175bedda",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\EvilIcons.ttf": "a5caeb4d395c5e32f1d5a30acb382aebc664f1badfd149319907f2215e4e3e26",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Fontisto.ttf": "94dab9f1d5b13ea0769d124a2da0d02433f3b99d6dea5a07c0446a77158100c0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Foundation.ttf": "7e1dd03dd4ce90b658052554cd7459df16716717389a552fa4c6d56a5f8933e6",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf": "61e8aba5a4e981fe22cf7c8e8bcdbea00476e75c62c37f01bf7ee33361d68428",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Octicons.ttf": "9bc4d9f5e994e774bdc3ef9a9a87da749af5f50b861473ef7d1cc3d6f8229267",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\SimpleLineIcons.ttf": "3f501ddb05c70829bbb51cfe9ca9fff57f39e060457c257b3ccf25df767f0870",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Zocial.ttf": "dd8ee403bbcbf5e58b77dca4ac03ebafa13a284a3d87d8ea9ca490435a86fa48",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+  },
+  "bundleHash": "4466f2e50ee76e776596f974bf583add0bda1f76156bb45244addef1ec39e6ae",
+  "styleHash": "63a2fbdc7e2b4c127d6ab3a3b287a14f582919402d3e0075271aaa14c9f9712a",
+  "limits": "PM fresh published-main actual local Expense preview/form/RHF/Zod/current Header/shared controls/fonts, explicit router/JSStack/Insets/haptic/remount fixture only. Physical field click uses visible portion on short viewport, no full-field-height certificate. No native keyboard/fullRouter/backend/financial validation/accounting/persistence/Figma100/publication."
+}

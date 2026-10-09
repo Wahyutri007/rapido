@@ -1,0 +1,1 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');const f=path.join(__dirname,'intake.json'),i=JSON.parse(fs.readFileSync(f));i.inputs[i.layout]=crypto.createHash('sha256').update(fs.readFileSync(i.layout)).digest('hex');fs.writeFileSync(f,JSON.stringify(i,null,2));console.log(JSON.stringify({layout:i.layout,sha256:i.inputs[i.layout]}));

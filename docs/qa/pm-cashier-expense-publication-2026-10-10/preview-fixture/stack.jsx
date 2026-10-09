@@ -1,0 +1,1 @@
+import React from'react';export function JSStack({children}){const screen=React.Children.toArray(children).find(c=>c.props.name==='expense-input');if(!screen)throw Error('Actual Expense header registration missing');return screen.props.options.header();}JSStack.Screen=()=>null;export const ScaleBackTransition={};

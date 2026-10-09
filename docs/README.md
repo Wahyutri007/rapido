@@ -693,3 +693,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Tempat Kasir — publikasi pratinjau,10 Oktober2026
 
 `/(cashier)/location` mengganti placeholder dengan pilihan outlet contoh eksplisit, daftar tempat/filter/search/reset dan retensi pilihan saat params tab dibersihkan. `/(no-layout)/(cashier)/location/detail?outletId=...&areaId=...&placeId=...` memeriksa kepemilikan ketiga ID; invalid dapat kembali ke daftar. Header di layout, navigasi tab tetap sama dan Cashier side-insets diperhitungkan. Status aktif adalah konfigurasi lokal, bukan meja kosong/terisi/reservasi atau data toko aktif/API. [Receipt QA/PM](qa/pm-cashier-location-publication-2026-10-10/REPORT.md).
+
+
+### Pengeluaran Kasir — publikasi pratinjau,10 Oktober2026
+
+`/(no-layout)/(cashier)/report/expense-input` mempertahankan lima field lokal, nama aksesibel, Deskripsi multiline dan Toko readonly belum tersedia. Simpan membuka penjelasan bahwa pengeluaran/saldo tidak berubah dan isian tidak disimpan; tutup/ESC menjaga draft, remount membersihkannya. Header berada di layout, compactKasir. Belum ada submit/validasi keuangan/API/ledger. [Receipt QA/PM](qa/pm-cashier-expense-publication-2026-10-10/REPORT.md).

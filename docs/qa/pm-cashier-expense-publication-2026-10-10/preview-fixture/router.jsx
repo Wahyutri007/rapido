@@ -1,0 +1,1 @@
+const record=(name,entry)=>globalThis.reviewEvents.push({name,...(entry===undefined?{}:{entry})});export const router={back:()=>record('back'),canGoBack:()=>true,push:entry=>record('push',entry),replace:entry=>record('replace',entry)};export const useRouter=()=>router;export const useLocalSearchParams=()=>({});export const useFocusEffect=()=>{};

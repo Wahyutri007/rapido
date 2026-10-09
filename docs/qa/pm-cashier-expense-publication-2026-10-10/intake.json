@@ -1,0 +1,20 @@
+{
+  "base": "384aa9d3d327dcb311946f34c3ac53347a419f69",
+  "inputs": {
+    "app/(no-layout)/(cashier)/report/expense-input.tsx": "23294a6886db34d381c5ae133a2c45ad136e881890acd077606c3ebde315857c",
+    "app/(no-layout)/(cashier)/report/_layout.tsx": "c6ffc312db03937e822938a8ae3aabf8eebbf3df90bce270a8bfa1a385edb60f"
+  },
+  "guards": {
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/BottomActionButton.tsx": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "components/ui/input/index.tsx": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "hooks/useAlertModal.ts": "0474bd60376fa8353b4af0c51511c9c97f6b8503d9693ae87c1870306e3e31fa"
+  },
+  "file": "app/(no-layout)/(cashier)/report/expense-input.tsx",
+  "layout": "app/(no-layout)/(cashier)/report/_layout.tsx",
+  "scope": "Exact independently accepted Expense23294a68; only existing Expense header opt-in, published primitives unchanged. Local draft preview/no financial submission."
+}

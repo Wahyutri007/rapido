@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Exact candidate app/(no-layout)/(cashier)/report/expense-input.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact candidate app/(no-layout)/(cashier)/report/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/BottomActionButton.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/actionsheet/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Form.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/input/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/button/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged hooks/useAlertModal.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Entire report layout inverse AST preserves all registrations/callbacks/imports",
+      "status": "PASS"
+    },
+    {
+      "name": "Five original form fields/order and editable placeholder labels preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Schema is string shape only, with no invented monetary or submission validation",
+      "status": "PASS"
+    },
+    {
+      "name": "Store is unavailable readonly, description multiline and five distinct accessible names",
+      "status": "PASS"
+    },
+    {
+      "name": "Original inert Save now opens only honest unavailable message with no side effects",
+      "status": "PASS"
+    },
+    {
+      "name": "All close content scrolls together using existing safe sheet and existing footer clearance",
+      "status": "PASS"
+    }
+  ]
+}

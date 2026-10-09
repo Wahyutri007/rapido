@@ -1,0 +1,15 @@
+# QC Input Pengeluaran — 10 Oktober 2026
+
+**READY_FOR_QA_SCOPED_PREVIEW_UI; independent QA pending. Financial submission remains unavailable.**
+
+Original five-field Cashier form had an inert Simpan action, no preview disclosure, fake storeA picker and a single-line description styled as multiline. Bounded repair preserves five labels, editable placeholders, existing route/header and exact raw typed strings; adds RHF/Zod typed empty string defaults, readonly unavailable Toko, semantic preview notice, actual multiline description, existing Wrapper safe footer clearance and an honest unsupported-save explanation. No account/date/entity/payment/ledger/API/store mapping or financial validation invented. This remains a local form preview, not an operational expense entry.
+
+Actual DOM found shared Gluestack Input defaults aria-label to Input Field even with accessibilityLabel; each feature field now passes explicit aria-label plus native accessibilityLabel. Five distinct accessible textbox names pass. Initial AlertModal close bottom196px exceeded192px safe boundary at844x240/OSbottom48. This feature uses existing safe-area Actionsheet with entire message and close action scrollable; shared Modal/Form/Input/Header/Button/Wrapper remain unchanged.
+
+24 actual RNWeb groups PASS,25 preservation/hash/contracts PASS;1root+4ambient/1114 imported TS files0diagnostics, ESLint/Biome/diffPASS, zero runtime/console/external errors and source drift. Original inert Save reproduced as explicit negative control. Exact local draft retained through Save/close including multiline and raw empty/negative/exponent/unsafe-size amount text; no financial success, route mutation or localStorage write. Remount clears local draft. Compact layout back and five-field/footer/safe-sheet actions tested390/320/240/844, bottom24/48 and side48/24, plus CSS large rendered labels320. Native keyboard/fontScale not simulated.
+
+Source SHA256 **23294a6886db34d381c5ae133a2c45ad136e881890acd077606c3ebde315857c**. Only this production file changed. [Comparison](perbandingan.html), [browser](browser-results.json), [contracts](contracts-results.json), [quality](quality-results.json), [DOM field labels](form-input-dom.json). Initial accessible selector and window-scroll/footer assumptions, firstrepair modal safe-area failure and old source snapshot retained. Browser launch before build completion was an own runner ordering error; rerun only after successful build. A whitespace-sensitive source assertion was corrected for Biome wrapping without production changes.
+
+Fresh Figma context29:18658 returned Starter quota; cached29:27772 is8-field Inputan Pemasukan and is not a quick-expense design. No new Figma slicing/full-design100 certification. Router/JSStack/inset/haptic/remount adapters explicit; no native HP/fullExpoRouter/backend/CRUD/financial acceptance/persistence/publication certificate. Independent QA of owned source and PM fresh candidate remain required.
+
+Execution Profile & Operator Tips: Medium. Independent QA exact source -> PM candidate -> approved expense contract/native integration. Preserve frozen historical packets and shared runtime/Git ownership.
