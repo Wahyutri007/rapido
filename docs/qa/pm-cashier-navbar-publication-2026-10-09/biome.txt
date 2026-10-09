@@ -1,0 +1,95 @@
+Checked 4 files in 49ms. No fixes applied.
+Found 6 warnings.
+
+app\(cashier)\_layout.tsx:10:20 lint/suspicious/noExplicitAny ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected any. Specify a different type.
+  
+     8 │ 	return (
+     9 │ 		<Tabs
+  > 10 │ 			tabBar={(props: any) => <BottomTab {...props} appearance="cashier" />}
+       │ 			                ^^^
+    11 │ 		>
+    12 │ 			<Tabs.Screen
+  
+  i any disables many type checking rules. Its use should be avoided.
+  
+
+app\(cashier)\_layout.tsx:40:11 lint/suspicious/noExplicitAny ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected any. Specify a different type.
+  
+    38 │ 							<Feather name="grid" size={24} color={color} />
+    39 │ 						),
+  > 40 │ 					} as any
+       │ 					     ^^^
+    41 │ 				}
+    42 │ 			/>
+  
+  i any disables many type checking rules. Its use should be avoided.
+  
+
+app\_layout.tsx:34:8 lint/correctness/noUnusedImports  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! This import is unused.
+  
+    32 │ import AuthProvider from "@/context/AuthContext";
+    33 │ import ContainerSizingProvider from "@/context/ContainerSizingContext";
+  > 34 │ import { useColorScheme } from "@/hooks/useColorScheme";
+       │        ^^^^^^^^^^^^^^^^^^
+    35 │ import useCustomRouter from "@/hooks/useCustomRouter";
+    36 │ import { useProtectedRoute } from "@/hooks/useProtectedRoute";
+  
+  i Unused imports might be the result of an incomplete refactoring.
+  
+  i Unsafe fix: Remove the unused imports.
+  
+     32  32 │   import AuthProvider from "@/context/AuthContext";
+     33  33 │   import ContainerSizingProvider from "@/context/ContainerSizingContext";
+     34     │ - import·{·useColorScheme·}·from·"@/hooks/useColorScheme";
+     35  34 │   import useCustomRouter from "@/hooks/useCustomRouter";
+     36  35 │   import { useProtectedRoute } from "@/hooks/useProtectedRoute";
+  
+
+app\_layout.tsx:60:10 lint/correctness/noUnusedVariables ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! This variable router is unused.
+  
+    58 │ 		| "log-storage";
+    59 │ 
+  > 60 │ 	const { router } = useCustomRouter();
+       │ 	        ^^^^^^
+    61 │ 
+    62 │ 	const [showActionsheet, setShowActionsheet] = React.useState(false);
+  
+  i Unused variables are often the result of typos, incomplete refactors, or other sources of bugs.
+  
+
+components\custom\BottomTab.tsx:204:27 lint/suspicious/noExplicitAny ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected any. Specify a different type.
+  
+    202 │ 					const isHidden =
+    203 │ 						options.customHref === null ||
+  > 204 │ 						(tabBarItemStyle as any)?.display === "none" ||
+        │ 						                    ^^^
+    205 │ 						(tabBarButton && tabBarButton({} as any) === null);
+    206 │ 
+  
+  i any disables many type checking rules. Its use should be avoided.
+  
+
+components\custom\BottomTab.tsx:205:43 lint/suspicious/noExplicitAny ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Unexpected any. Specify a different type.
+  
+    203 │ 						options.customHref === null ||
+    204 │ 						(tabBarItemStyle as any)?.display === "none" ||
+  > 205 │ 						(tabBarButton && tabBarButton({} as any) === null);
+        │ 						                                    ^^^
+    206 │ 
+    207 │ 					if (isHidden) return null;
+  
+  i any disables many type checking rules. Its use should be avoided.
+  
+

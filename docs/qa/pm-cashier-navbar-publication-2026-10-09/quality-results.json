@@ -1,0 +1,44 @@
+{
+  "files": [
+    "components/custom/BottomTab.tsx",
+    "app/(cashier)/_layout.tsx",
+    "app/(no-layout)/(cashier)/catalog/index.tsx",
+    "app/_layout.tsx"
+  ],
+  "checks": [
+    {
+      "name": "biome",
+      "exitCode": 0
+    },
+    {
+      "name": "eslint",
+      "exitCode": 0
+    },
+    {
+      "name": "diff",
+      "exitCode": 0
+    },
+    {
+      "name": "scoped-typescript",
+      "rootFiles": 4,
+      "ambientFiles": 4,
+      "sourceClosure": 1342,
+      "diagnostics": 0,
+      "diagnosticFiles": []
+    }
+  ],
+  "before": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+  },
+  "after": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+  },
+  "sourceStable": true,
+  "pass": true
+}

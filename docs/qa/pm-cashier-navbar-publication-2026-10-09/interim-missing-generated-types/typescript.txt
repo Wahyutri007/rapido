@@ -1,0 +1,4 @@
+[96mapp/_layout.tsx[0m:[93m6[0m:[93m8[0m - [91merror[0m[90m TS2882: [0mCannot find module or type declarations for side-effect import of '@/global.css'.
+
+[7m6[0m import "@/global.css";
+[7m [0m [91m       ~~~~~~~~~~~~~~[0m

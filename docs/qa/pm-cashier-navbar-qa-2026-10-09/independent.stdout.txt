@@ -1,0 +1,7 @@
+{
+  "result": "PASS_SCOPED",
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "rendererErrors": 0
+}

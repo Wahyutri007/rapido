@@ -1,0 +1,51 @@
+{
+  "ticket": "PM-CASHIER-NAVBAR-QA-2026-10-09",
+  "result": "PASS_SCOPED",
+  "checkedAt": "2026-10-09",
+  "peerPacketVerifier": {
+    "command": "node docs/qa/qc-cashier-visual-fix-2026-10-09/verify.cjs",
+    "inputs": 17,
+    "artifacts": 21,
+    "mismatches": 0,
+    "decision": "READY_FOR_SCOPED_REVIEW; ALL_CASHIER_VISUAL_NOT_APPROVED"
+  },
+  "independentReplay": {
+    "runner": "docs/qa/pm-cashier-navbar-qa-2026-10-09/independent.cjs",
+    "checks": { "total": 17, "passed": 17, "failed": 0 },
+    "actualComponents": ["BottomTab JSX", "Cashier _layout options", "Catalog screen JSX/effects"],
+    "adapters": ["React Native host components", "Reanimated presentation", "safe-area values", "Expo Router", "catalog fixture/menu subcomponents", "icon and haptic hosts"],
+    "adapterDiagnostics": { "expectedAsyncActWarningsFiltered": 4, "unexpectedRendererErrors": 0 },
+    "developer27ChecksRepeated": false,
+    "qualityRerun": false
+  },
+  "sourceHashes": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "54195a65ae80b1c5cc9f755e34c583c7b46434490302c3f6a73a38e5c04d17d9",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+  },
+  "cashierSvgHashes": {
+    "assets/images/cashier/navigation/home.svg": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+    "assets/images/cashier/navigation/report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "assets/images/cashier/navigation/catalog.svg": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+    "assets/images/cashier/navigation/location.svg": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+    "assets/images/cashier/navigation/bills.svg": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+  },
+  "backOfficeAssets": {
+    "filesPresentLocally": [
+      "assets/images/figma/back-office/home.svg",
+      "assets/images/figma/back-office/report.svg",
+      "assets/images/figma/back-office/catalog.svg",
+      "assets/images/figma/back-office/inventory.svg",
+      "assets/images/figma/back-office/manage.svg"
+    ],
+    "trackingOrPublicationChecked": false
+  },
+  "limits": [
+    "Style-level bounds only; no native pixel geometry claim",
+    "No HP/browser/Figma parity/full Router/backend/payment or full app certification",
+    "DevFab guard condition was tested from actual RootLayout TSX expression; RootLayout was not mounted",
+    "Async fixture act warnings are filtered and recorded; menu fixture/subcomponents are adapters",
+    "Current cashier layout fingerprint includes peer Header Tempat delta; candidate publication must retain only approved layout changes"
+  ]
+}

@@ -1,0 +1,8 @@
+﻿{
+    "reason":  "Candidate was missing generated Expo environment declarations, producing TS2882 for existing global.css side-effect import",
+    "generatedType":  "expo-env.d.ts",
+    "sourceSha256":  "6fc02634da46d3edc5a88eec9173ba6bf709726be3cba83c73ebd8e859d5c147",
+    "candidateSha256":  "6fc02634da46d3edc5a88eec9173ba6bf709726be3cba83c73ebd8e859d5c147",
+    "productionSourceChange":  false,
+    "willCommitGeneratedType":  false
+}

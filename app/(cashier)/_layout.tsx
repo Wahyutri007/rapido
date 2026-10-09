@@ -1,13 +1,14 @@
 import { Feather } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import React from "react";
 import Header from "@/components/common/Header";
 import BottomTab from "@/components/custom/BottomTab";
 import { ReportIcon, Table } from "@/components/icons";
 
 export default function CashierLayout() {
 	return (
-		<Tabs tabBar={(props: any) => <BottomTab {...props} />}>
+		<Tabs
+			tabBar={(props: any) => <BottomTab {...props} appearance="cashier" />}
+		>
 			<Tabs.Screen
 				name="home/index"
 				options={{

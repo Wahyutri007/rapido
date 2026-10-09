@@ -1,0 +1,121 @@
+{
+  "ticket": "PM-CASHIER-NAVBAR-QA-2026-10-09",
+  "result": "PASS_SCOPED",
+  "checks": [
+    {
+      "name": "Cashier layout supplies five expected labels and cashier appearance",
+      "result": "PASS"
+    },
+    {
+      "name": "Cashier narrow and landscape bounds at bottom insets 0 and 48: height and five fixed-width cells fit",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected cashier tab 0 exposes its label, selected accessibility state and matching icon",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected cashier tab 1 exposes its label, selected accessibility state and matching icon",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected cashier tab 2 exposes its label, selected accessibility state and matching icon",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected cashier tab 3 exposes its label, selected accessibility state and matching icon",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected cashier tab 4 exposes its label, selected accessibility state and matching icon",
+      "result": "PASS"
+    },
+    {
+      "name": "Hidden tabs (null customHref, display none, null custom button) are omitted",
+      "result": "PASS"
+    },
+    {
+      "name": "Default appearance keeps legacy height, old icon callbacks and no tab accessibility override",
+      "result": "PASS"
+    },
+    {
+      "name": "Back Office figma appearance keeps legacy figma height and untinted icons",
+      "result": "PASS"
+    },
+    {
+      "name": "Actual Catalog footer mounts at insets 0, 24 and 48 keep checkout route",
+      "result": "PASS"
+    },
+    {
+      "name": "Catalog initial fetch effect settles without identity-triggered repeat renders",
+      "result": "PASS"
+    },
+    {
+      "name": "RootLayout DevFab source guard requires both __DEV__ and explicit env opt-in",
+      "result": "PASS"
+    },
+    {
+      "name": "Five cashier SVGs retain expected local Figma-derived byte fingerprints",
+      "result": "PASS"
+    },
+    {
+      "name": "Existing Back Office Figma SVG import dependencies are present in this workspace",
+      "result": "PASS"
+    },
+    {
+      "name": "All four owned source hashes remain unchanged through the replay",
+      "result": "PASS"
+    },
+    {
+      "name": "React renderer reported no unexpected errors",
+      "result": "PASS"
+    }
+  ],
+  "counts": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0
+  },
+  "ownedSourceHashes": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+  },
+  "finalOwnedSourceHashes": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+  },
+  "cashierSvgHashes": {
+    "assets/images/cashier/navigation/home.svg": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+    "assets/images/cashier/navigation/report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "assets/images/cashier/navigation/catalog.svg": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+    "assets/images/cashier/navigation/location.svg": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+    "assets/images/cashier/navigation/bills.svg": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+  },
+  "actualComponents": [
+    "Cashier BottomTab JSX",
+    "Cashier _layout.tsx options",
+    "Catalog screen JSX/effects"
+  ],
+  "adapters": [
+    "React Native host components",
+    "Reanimated presentation",
+    "safe-area values",
+    "Expo Router",
+    "catalog fixture/menu subcomponents",
+    "icon and haptic hosts"
+  ],
+  "adapterDiagnostics": {
+    "expectedAsyncActWarningsFiltered": 4,
+    "unexpectedRendererErrors": 0
+  },
+  "limits": [
+    "No native pixel, device keyboard, HP/browser, full Router, backend/payment, bundle or Figma visual certification",
+    "RootLayout DevFab expression condition checked from actual TSX source; full app root mount not exercised",
+    "Back Office Figma SVGs exist locally; tracking/publication status not checked (no Git)",
+    "Current cashier _layout hash includes peer Header Tempat delta; root candidate must exclude peer delta if outside approved publication scope"
+  ]
+}

@@ -1,15 +1,9 @@
 import { Feather } from "@expo/vector-icons";
 import { router } from "expo-router";
 import React from "react";
-import {
-	Animated,
-	Pressable,
-	RefreshControl,
-	ScrollView,
-	View,
-} from "react-native";
+import { Pressable, RefreshControl, ScrollView, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Text from "@/components/common/Text";
-import { BottomTabPadding } from "@/components/custom/BottomTab";
 import { CategoryFilter } from "@/components/feature/cashier/catalog/menu/Filter";
 import MenuView from "@/components/feature/cashier/catalog/menu/MenuView";
 import MenuSearch from "@/components/feature/cashier/catalog/menu/Search";
@@ -20,6 +14,7 @@ import { formatRp, tw } from "@/lib/utils";
 import type { MenuItemProps } from "@/types/ui/add/menu";
 
 export default function MenuScreen() {
+	const insets = useSafeAreaInsets();
 	const [layout, setLayout] = React.useState<"grid" | "list">("grid");
 	const [refreshing, setRefreshing] = React.useState(false);
 
@@ -32,10 +27,6 @@ export default function MenuScreen() {
 		}, 2000);
 	}
 
-	function handleAddToCart() {
-		router.push("/cart");
-	}
-
 	const [menus, setMenus] = React.useState<MenuItemProps[] | null>(null);
 
 	const fetchData = React.useCallback(async () => {
@@ -45,7 +36,7 @@ export default function MenuScreen() {
 	React.useEffect(() => {
 		// Simulate fetching data from an API
 		fetchData();
-	}, []);
+	}, [fetchData]);
 
 	return (
 		<View className="bg-white flex-1">
@@ -107,7 +98,10 @@ export default function MenuScreen() {
 				</View>
 			</ScrollView>
 
-			<View className="flex-row px-4 py-6 rounded-t-2xl bg-white  justify-between items-center z-10">
+			<View
+				className="flex-row px-4 py-6 rounded-t-2xl bg-white justify-between items-center z-10"
+				style={{ paddingBottom: 24 + insets.bottom }}
+			>
 				<View className="flex-row items-center gap-4">
 					<View className="size-8 rounded-full bg-primary-50 items-center justify-center ">
 						<Text className="text-base text-primary" w="semibold">

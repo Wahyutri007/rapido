@@ -1,0 +1,160 @@
+{
+  "sealedAt": "2026-10-09T09:28:33.823Z",
+  "decision": "READY_FOR_SCOPED_REVIEW; ALL_CASHIER_VISUAL_NOT_APPROVED",
+  "inputs": [
+    {
+      "file": "components/custom/BottomTab.tsx",
+      "sha256": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783"
+    },
+    {
+      "file": "app/(cashier)/_layout.tsx",
+      "sha256": "54195a65ae80b1c5cc9f755e34c583c7b46434490302c3f6a73a38e5c04d17d9"
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/catalog/index.tsx",
+      "sha256": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544"
+    },
+    {
+      "file": "app/_layout.tsx",
+      "sha256": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef"
+    },
+    {
+      "file": "assets/images/cashier/navigation/home.svg",
+      "sha256": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d"
+    },
+    {
+      "file": "assets/images/cashier/navigation/report.svg",
+      "sha256": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b"
+    },
+    {
+      "file": "assets/images/cashier/navigation/catalog.svg",
+      "sha256": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a"
+    },
+    {
+      "file": "assets/images/cashier/navigation/location.svg",
+      "sha256": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a"
+    },
+    {
+      "file": "assets/images/cashier/navigation/bills.svg",
+      "sha256": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/reference.json",
+      "sha256": "829b918693736c73f1eda35b0aecffe62a23995b9086d0fa010e7988a62fecee"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/list-context.txt",
+      "sha256": "081e735b5a62d8ba22c1bbef4bae4f07bb82815fb9960cee72b9093e2ad83774"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/list-reference.png",
+      "sha256": "b46d2e7181f2b13b004e065e20e07884952ca0176972bd6e1283712fe0fe1b29"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgIconamoonHome.svg",
+      "sha256": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgChart1.svg",
+      "sha256": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgCarbonCatalog.svg",
+      "sha256": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgMaterialSymbolsTableBarOutlineRounded.svg",
+      "sha256": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a"
+    },
+    {
+      "file": "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgReceiptBill.svg",
+      "sha256": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/audit.cjs",
+      "sha256": "b1f10f0fdba7733317646f0f7708d229a8aa2c37794c0078cb9be7904bbb134b"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/audit.json",
+      "sha256": "1d00817d973a1f2114c5d51e398d269490019e6dfa8904b66c68406d7af6af6e"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/biome-initial.txt",
+      "sha256": "3f6428890f6d23de55a4962a110878ee333996dfede71c73e923711eeab9c5f0"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/biome.txt",
+      "sha256": "ea095168e818a148545ce1230078f736e163b6faf23723d3ae542d66ce27f823"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/device-observations.json",
+      "sha256": "7217f91ccf16ee8247ff60f29833a0ddfac67e4196eed68f1481d0aac1594ec8"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/diff.txt",
+      "sha256": "8795c3d677bf26e6f4333dd9859647a153c9d73baeb5be9084edab113a2658fc"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/eslint.txt",
+      "sha256": "3e84792b32dd6dd41fcda7274f7424d5898c1fa8fcc37cd60b8c8982d8713202"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/figma-access.json",
+      "sha256": "8219585ad4d412ab7c8fff4ace9d9ee0a2d273e1c9f37198795a9a734c112157"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/figma-navbar.png",
+      "sha256": "4faf7c87dff591de3896c96b3e94c4cf54ba37bf06393f54992491cd68dfdb8f"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/hp-footer-before.png",
+      "sha256": "ea7ea83e309a45a837b3154a9654a0388e76a6b5f0f805570fadea9684959a7c"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/hp-footer-inset.png",
+      "sha256": "9442a4544474824e92c3ddb72a38be519e546588468c1a80464e25a7649e2ca2"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/hp-navbar-observed.png",
+      "sha256": "ff820c31694f1627be9227eee7a84dc3f4f2c8895530faf13e8d03ef15dbce80"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/perbandingan.html",
+      "sha256": "6ca4f9fe421d59373e5eddd870ccc63436e24265dc62aea1631c6cf31b863eef"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/quality-initial-results.json",
+      "sha256": "37b6dd2ed9e24a5e544f8fac6a9361440bc184809492f789a9fc751301fa2174"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/quality-results.json",
+      "sha256": "96469f89fe610a951361927347b3fc61f53e7265e32152c9422de43e38d7fc8a"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/quality.cjs",
+      "sha256": "f080a1af2014c68ac38fbf3b852a488f73c553f321253e7d50fdcb65ca976a80"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/REPORT.md",
+      "sha256": "660e0aac7a31253a5f0d8f52fc92bd6c9431f0066a42318ed1f506719b02fdae"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/review-results.json",
+      "sha256": "127f0a29a94a36246a2e2b5e7944c8e86e76603adb70485f6f6f20561f42b03b"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/review.cjs",
+      "sha256": "f3b33aa3b1cf8154e7c693795aa76a0b5ba486fe2274bad10da2994c185fee2e"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/typescript.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "docs/qa/qc-cashier-visual-fix-2026-10-09/verify.cjs",
+      "sha256": "25ee2b51809087846e95020c17135ee71e8874ac0cb991f167f991bbff53edd3"
+    }
+  ]
+}

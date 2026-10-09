@@ -1,0 +1,81 @@
+﻿{
+    "id":  "PM-CASHIER-NAVIGATION-LAYOUT-001",
+    "decision":  "APPROVED_FOR_SCOPED_PUBLICATION",
+    "recordedAtUtc":  "2026-10-09T09:46:38Z",
+    "repository":  "https://github.com/Wahyutri007/rapido",
+    "moduleBranch":  "fix/cashier-navigation-layout",
+    "baseCommit":  "42fb6217ad53047a444f698b25d0f01ce845807f",
+    "candidate":  "D:/Rapido-QC-temp/pm-cashier-navbar-2026-10-09",
+    "problem":  "Cashier tab labels were clipped and used substitute icons; catalog footer lacked bottom inset and application DevFab could cover Checkout.",
+    "result":  "Cashier-only navbar appearance using five original Figma SVGs and explicit geometry; catalog footer inset; development tools require explicit opt-in.",
+    "productionScope":  [
+                            "components/custom/BottomTab.tsx",
+                            "app/(cashier)/_layout.tsx",
+                            "app/(no-layout)/(cashier)/catalog/index.tsx",
+                            "app/_layout.tsx",
+                            "assets/images/cashier/navigation/home.svg",
+                            "assets/images/cashier/navigation/report.svg",
+                            "assets/images/cashier/navigation/catalog.svg",
+                            "assets/images/cashier/navigation/location.svg",
+                            "assets/images/cashier/navigation/bills.svg"
+                        ],
+    "productionSha256":  {
+                             "components/custom/BottomTab.tsx":  "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+                             "app/(cashier)/_layout.tsx":  "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+                             "app/(no-layout)/(cashier)/catalog/index.tsx":  "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+                             "app/_layout.tsx":  "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef",
+                             "assets/images/cashier/navigation/home.svg":  "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+                             "assets/images/cashier/navigation/report.svg":  "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+                             "assets/images/cashier/navigation/catalog.svg":  "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+                             "assets/images/cashier/navigation/location.svg":  "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+                             "assets/images/cashier/navigation/bills.svg":  "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+                         },
+    "excludedPeerDelta":  "Cashier location/index header remains headerShown:false from published main. Current shared Header Tempat delta belongs to Codex4 and was excluded.",
+    "independentQA":  {
+                          "sharedGroupedChecksPassed":  17,
+                          "candidateGroupedChecksPassed":  17,
+                          "failed":  0,
+                          "report":  "docs/qa/pm-cashier-navbar-qa-2026-10-09/REPORT.md",
+                          "candidateReceipt":  "docs/qa/pm-cashier-navbar-qa-2026-10-09/candidate-compatibility.json",
+                          "counting":  "Compatibility is a replay of the same scoped suite, not new unique coverage."
+                      },
+    "independentQC":  {
+                          "groupedChecksPassed":  10,
+                          "failed":  0,
+                          "receipt":  "independent-qc/verification-final.json",
+                          "report":  "independent-qc/REPORT.md"
+                      },
+    "implementationEvidence":  {
+                                   "groupedChecksPassed":  27,
+                                   "meaning":  "Implementer session is named QC; its checks are treated as developer evidence for these source changes."
+                               },
+    "quality":  {
+                    "rootFiles":  4,
+                    "ambientFiles":  4,
+                    "closureFiles":  1342,
+                    "typeScriptDiagnostics":  0,
+                    "eslintErrors":  0,
+                    "eslintExistingWarnings":  18,
+                    "biomeExitCode":  0,
+                    "diffExitCode":  0,
+                    "receipt":  "quality-results.json"
+                },
+    "toolingCorrection":  "Initial TS2882 came from missing generated Expo environment declarations in the isolated worktree. Copying ignored expo-env.d.ts restored the actual tooling context without production changes; initial result preserved under interim-missing-generated-types.",
+    "reference":  {
+                      "fileKey":  "gbdKqL2EcYNenWiQXG4SRW",
+                      "nodeId":  "29:26627",
+                      "navigationSvgCount":  5,
+                      "allSvgBytesMatched":  true,
+                      "method":  "Official peer-exported Figma context/screenshot/assets reviewed by independent QC."
+                  },
+    "limits":  [
+                   "Native pixel/tint/shadow/insets, full navigator/auth and every cashier screen remain separate gates",
+                   "Cashier catalog search P2 and transaction/shift reset P2 are not approved by this patch",
+                   "Checkout/backend/payment/real inventory/transaction data not certified",
+                   "Global quality backlog was not rerun or declared closed",
+                   "18 inherited root ESLint warnings remain"
+               ],
+    "authorization":  "Standing user instruction: review QA/QC, publish passing modules to separate branches before main; latest request continues that work.",
+    "publicationSequence":  "Module branch first; verify heads and unchanged main base; non-force fast-forward to main; verify remote heads and record post-push receipt.",
+    "sharedWorkspace":  "No checkout/reset/pull/stash/staging/source edits in shared workspace; publication uses isolated candidate."
+}

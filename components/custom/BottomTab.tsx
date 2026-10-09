@@ -26,6 +26,17 @@ const FIGMA_ICONS: Record<string, ImageSource> = {
 	manage: require("@/assets/images/figma/back-office/manage.svg"),
 };
 
+// Original assets from Cashier 29:26627, shared by its five navigation tabs.
+const CASHIER_ICONS: Record<string, ImageSource> = {
+	"home/index": require("@/assets/images/cashier/navigation/home.svg"),
+	report: require("@/assets/images/cashier/navigation/report.svg"),
+	catalog: require("@/assets/images/cashier/navigation/catalog.svg"),
+	"location/index": require("@/assets/images/cashier/navigation/location.svg"),
+	biling: require("@/assets/images/cashier/navigation/bills.svg"),
+};
+
+type TabAppearance = "default" | "figma" | "cashier";
+
 export function BottomTabPadding() {
 	const insets = useSafeAreaInsets();
 	const bottomPadding = Math.max(insets.bottom, 10);
@@ -33,7 +44,7 @@ export function BottomTabPadding() {
 }
 
 type TabItemButtonProps = {
-	appearance?: "default" | "figma";
+	appearance?: TabAppearance;
 	figmaIcon?: ImageSource;
 	label: string;
 	isFocused: boolean;
@@ -55,6 +66,8 @@ function TabItemButton({
 	tabBarIcon,
 	onPress,
 }: TabItemButtonProps) {
+	const isFigma = appearance !== "default";
+	const isCashier = appearance === "cashier";
 	const scale = useSharedValue(1);
 
 	const animatedIconStyle = useAnimatedStyle(() => ({
@@ -62,7 +75,7 @@ function TabItemButton({
 	}));
 
 	React.useEffect(() => {
-		if (appearance === "figma") {
+		if (isFigma) {
 			scale.set(1);
 			return;
 		}
@@ -76,7 +89,7 @@ function TabItemButton({
 		} else {
 			scale.set(withSpring(1, { damping: 16, stiffness: 400 }));
 		}
-	}, [isFocused, scale, appearance]);
+	}, [isFocused, scale, isFigma]);
 
 	const handlePressIn = () => {
 		scale.set(withSpring(0.94, { damping: 18, stiffness: 450 }));
@@ -88,25 +101,35 @@ function TabItemButton({
 
 	return (
 		<Pressable
+			accessibilityRole={isCashier ? "tab" : undefined}
+			accessibilityLabel={isCashier ? label : undefined}
+			accessibilityState={isCashier ? { selected: isFocused } : undefined}
 			onPress={onPress}
 			onPressIn={handlePressIn}
 			onPressOut={handlePressOut}
 			className={
-				appearance === "figma"
-					? "flex-1 items-center justify-center"
-					: "flex-1 items-center justify-center py-1"
+				isCashier
+					? "items-center justify-center"
+					: isFigma
+						? "flex-1 items-center justify-center"
+						: "flex-1 items-center justify-center py-1"
 			}
+			style={isCashier ? { width: 48, flexShrink: 1 } : undefined}
 		>
 			<Animated.View
 				style={animatedIconStyle}
 				className={
-					appearance === "figma"
+					isFigma
 						? "size-6 items-center justify-center"
 						: "size-7 items-center justify-center"
 				}
 			>
-				{appearance === "figma" && figmaIcon ? (
-					<Image source={figmaIcon} style={{ width: 24, height: 24 }} />
+				{isFigma && figmaIcon ? (
+					<Image
+						source={figmaIcon}
+						style={{ width: 24, height: 24 }}
+						tintColor={isCashier ? itemColor : undefined}
+					/>
 				) : (
 					tabBarIcon?.({
 						focused: isFocused,
@@ -116,19 +139,13 @@ function TabItemButton({
 				)}
 			</Animated.View>
 			<Text
-				size={appearance === "figma" ? "small" : "body"}
+				size={isFigma ? "small" : "body"}
 				style={{
 					color: itemColor,
-					...(appearance === "figma" ? { lineHeight: 16 } : {}),
+					...(isFigma ? { lineHeight: 16 } : {}),
 				}}
-				className={appearance === "figma" ? "mt-2" : "mt-1 text-[11px]"}
-				w={
-					appearance === "figma"
-						? "regular"
-						: isFocused
-							? "semibold"
-							: "regular"
-				}
+				className={isFigma ? "mt-2" : "mt-1 text-[11px]"}
+				w={isFigma ? "regular" : isFocused ? "semibold" : "regular"}
 				numberOfLines={1}
 			>
 				{label}
@@ -138,31 +155,34 @@ function TabItemButton({
 }
 
 export default function BottomTab(
-	props: BottomTabBarProps & { appearance?: "default" | "figma" },
+	props: BottomTabBarProps & { appearance?: TabAppearance },
 ) {
 	const { state, navigation, descriptors, appearance = "default" } = props;
+	const isFigma = appearance !== "default";
+	const isCashier = appearance === "cashier";
 	const { width } = useWindowDimensions();
 	const router = useRouter();
 	const insets = useSafeAreaInsets();
-	const bottomPadding = Math.max(
-		insets.bottom,
-		appearance === "figma" ? 32 : 10,
-	);
-	const barHeight = (appearance === "figma" ? 61 : 58) + bottomPadding;
+	const bottomPadding = Math.max(insets.bottom, isFigma ? 32 : 10);
+	// Cashier: 16 top + 24 icon + 8 gap + 16 label, then the safe area.
+	const barHeight = (isCashier ? 64 : isFigma ? 61 : 58) + bottomPadding;
 
 	return (
 		<View className="absolute bottom-0 w-full" style={{ height: barHeight }}>
 			<View
 				className={
-					appearance === "figma"
-						? "size-full flex-row items-center justify-center gap-[14px] overflow-hidden rounded-t-[20px] bg-white px-4"
-						: "size-full flex-row items-center justify-between gap-2 overflow-hidden rounded-t-[20px] border border-zinc-100 bg-white px-4 shadow-main"
+					isCashier
+						? "size-full flex-row items-center justify-between overflow-hidden rounded-t-[20px] bg-white px-4"
+						: isFigma
+							? "size-full flex-row items-center justify-center gap-[14px] overflow-hidden rounded-t-[20px] bg-white px-4"
+							: "size-full flex-row items-center justify-between gap-2 overflow-hidden rounded-t-[20px] border border-zinc-100 bg-white px-4 shadow-main"
 				}
 				style={[
 					{
 						paddingBottom: bottomPadding,
-						paddingTop: appearance === "figma" ? 16 : 24,
+						paddingTop: isFigma ? 16 : 24,
 					},
+					isCashier && { boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)" },
 					appearance === "figma" && figmaStockShadows.tab,
 					appearance === "figma" && { columnGap: width < 360 ? 8 : 14 },
 				]}
@@ -191,7 +211,11 @@ export default function BottomTab(
 							? String(tabBarLabel)
 							: (title ?? route.name);
 					const isFocused = state.index === index;
-					const itemColor = isFocused ? Colors.primary : Colors.neutral;
+					const itemColor = isFocused
+						? Colors.primary
+						: isCashier
+							? "#2c2c2c"
+							: Colors.neutral;
 
 					function handlePress() {
 						haptic.selection();
@@ -205,7 +229,7 @@ export default function BottomTab(
 					return (
 						<TabItemButton
 							appearance={appearance}
-							figmaIcon={FIGMA_ICONS[route.name]}
+							figmaIcon={(isCashier ? CASHIER_ICONS : FIGMA_ICONS)[route.name]}
 							key={route.key}
 							label={label}
 							isFocused={isFocused}

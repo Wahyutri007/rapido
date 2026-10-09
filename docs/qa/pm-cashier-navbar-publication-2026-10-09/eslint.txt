@@ -1,0 +1,24 @@
+
+D:\Rapido-QC-temp\pm-cashier-navbar-2026-10-09\app\_layout.tsx
+   4:8   warning  'D:\Rapido-QC-temp\pm-cashier-navbar-2026-10-09\components\icons\index.ts' imported multiple times  import/no-duplicates
+  16:1   warning  Import in body of module; reorder to top                                                            import/first
+  17:1   warning  Import in body of module; reorder to top                                                            import/first
+  18:1   warning  Import in body of module; reorder to top                                                            import/first
+  19:1   warning  Import in body of module; reorder to top                                                            import/first
+  19:35  warning  'D:\Rapido-QC-temp\pm-cashier-navbar-2026-10-09\components\icons\index.ts' imported multiple times  import/no-duplicates
+  20:1   warning  Import in body of module; reorder to top                                                            import/first
+  29:1   warning  Import in body of module; reorder to top                                                            import/first
+  30:1   warning  Import in body of module; reorder to top                                                            import/first
+  31:1   warning  Import in body of module; reorder to top                                                            import/first
+  32:1   warning  Import in body of module; reorder to top                                                            import/first
+  33:1   warning  Import in body of module; reorder to top                                                            import/first
+  34:1   warning  Import in body of module; reorder to top                                                            import/first
+  34:10  warning  'useColorScheme' is defined but never used                                                          @typescript-eslint/no-unused-vars
+  35:1   warning  Import in body of module; reorder to top                                                            import/first
+  36:1   warning  Import in body of module; reorder to top                                                            import/first
+  37:1   warning  Import in body of module; reorder to top                                                            import/first
+  60:10  warning  'router' is assigned a value but never used                                                         @typescript-eslint/no-unused-vars
+
+✖ 18 problems (0 errors, 18 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+

@@ -12,8 +12,8 @@ import "react-native-reanimated";
 
 // Keep native splash screen visible while fonts and initial bundle load
 SplashScreen.preventAutoHideAsync().catch(() => {});
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import * as SecureStore from "@/lib/storage";
 import React from "react";
 import { View } from "react-native";
 import { EEntypo as Entypo } from "@/components/icons";
@@ -34,6 +34,7 @@ import ContainerSizingProvider from "@/context/ContainerSizingContext";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import useCustomRouter from "@/hooks/useCustomRouter";
 import { useProtectedRoute } from "@/hooks/useProtectedRoute";
+import * as SecureStore from "@/lib/storage";
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -111,12 +112,16 @@ function DevFab({
 					<ActionsheetItem
 						onPress={() => handleItemPress("trigger-boot-splash")}
 					>
-						<ActionsheetItemText>Trigger Boot Splash (Animated)</ActionsheetItemText>
+						<ActionsheetItemText>
+							Trigger Boot Splash (Animated)
+						</ActionsheetItemText>
 					</ActionsheetItem>
 					<ActionsheetItem
 						onPress={() => handleItemPress("trigger-transition-splash")}
 					>
-						<ActionsheetItemText>Trigger Mode Transition Splash</ActionsheetItemText>
+						<ActionsheetItemText>
+							Trigger Mode Transition Splash
+						</ActionsheetItemText>
 					</ActionsheetItem>
 					<ActionsheetItem onPress={() => handleItemPress("reset-store")}>
 						<ActionsheetItemText>Reset Store</ActionsheetItemText>
@@ -216,7 +221,9 @@ function AppContent() {
 			<StatusBar style="auto" />
 			<View />
 
-			{__DEV__ && <DevFab onTriggerSplash={handleTriggerSplash} />}
+			{__DEV__ && process.env.EXPO_PUBLIC_SHOW_DEV_TOOLS === "1" && (
+				<DevFab onTriggerSplash={handleTriggerSplash} />
+			)}
 
 			{devSplash.visible && (
 				<SplashScreenView
@@ -237,7 +244,7 @@ export default function RootLayout() {
 		[FONT_NAMES.bold]: require("../assets/fonts/Inter_24pt-Bold.ttf"),
 		[FONT_NAMES.medium]: require("../assets/fonts/Inter_24pt-Medium.ttf"),
 		[FONT_NAMES.semibold]: require("../assets/fonts/Inter_24pt-SemiBold.ttf"),
-		[FONT_NAMES.logo]: require('../assets/fonts/YsabeauInfant-ExtraBoldItalic.ttf')
+		[FONT_NAMES.logo]: require("../assets/fonts/YsabeauInfant-ExtraBoldItalic.ttf"),
 	});
 
 	React.useEffect(() => {

@@ -1,0 +1,64 @@
+{
+  "decision": "PASS_SCOPED",
+  "base": "42fb6217ad53047a444f698b25d0f01ce845807f",
+  "candidate": "D:\\Rapido-QC-temp\\pm-cashier-navbar-2026-10-09",
+  "checks": [
+    {
+      "name": "exact nine production paths against main base; no backend/auth/invoice delta",
+      "result": "PASS"
+    },
+    {
+      "name": "eight unchanged frozen inputs and QA compatibility fingerprint for four source files",
+      "result": "PASS"
+    },
+    {
+      "name": "five original Figma SVGs byte-exact, 24px geometry, no external script or asset reference",
+      "result": "PASS"
+    },
+    {
+      "name": "cashier layout only opts into appearance; all route/options/header callbacks preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "BottomTabPadding, hidden-route logic, label precedence and press callbacks AST unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "actual bar expressions preserve default/BO and cover cashier bottom inset 0/24/48",
+      "result": "PASS"
+    },
+    {
+      "name": "actual active/inactive tint expression and cashier-only accessibility/tint wiring",
+      "result": "PASS"
+    },
+    {
+      "name": "catalog AST unchanged after removing explicit inset/effect/unused-handler edits; checkout preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "DevFab guard exact truth table; root auth/providers/routes/callbacks AST unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "cashier spacing corresponds to supplied Figma context; immutable source after QC",
+      "result": "PASS"
+    }
+  ],
+  "sourceHashes": {
+    "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+    "app/(cashier)/_layout.tsx": "6b4830502a069134df5e1c362e2d13ae540e4ce11893d1670f94d6699d1ffe8c",
+    "app/(no-layout)/(cashier)/catalog/index.tsx": "e8b0ca2b884c6283379d3f6fbd86ce6970a23ba4d836bf662ce2c127db5ce544",
+    "app/_layout.tsx": "6b89cc5aaa6dd12845e959e0d7c871114a60a3895af2bc797c38b721124cb0ef",
+    "assets/images/cashier/navigation/home.svg": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+    "assets/images/cashier/navigation/report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "assets/images/cashier/navigation/catalog.svg": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+    "assets/images/cashier/navigation/location.svg": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+    "assets/images/cashier/navigation/bills.svg": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3"
+  },
+  "qaCompatibilityReceiptHash": "fa47793326dd59405f6aa8344418a61561cc6da8531ffdbebd65ec64740b6cd0",
+  "limits": [
+    "Source/AST and actual-expression VM checks; no native pixel or device-inset certification",
+    "QA adapter compatibility reviewed independently; no repeat of developer 27 or QA 17 replay",
+    "Quality gate belongs to root; no full TypeScript/lint/build/backend/router/payment/Figma-full approval"
+  ]
+}
