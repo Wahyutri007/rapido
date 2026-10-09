@@ -1,0 +1,172 @@
+[
+  {
+    "file": "context/AuthContext.tsx",
+    "sha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/factory.ts",
+    "sha256": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/common.ts",
+    "sha256": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "lib/api-utils.ts",
+    "sha256": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/usePostRequest.ts",
+    "sha256": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Keys.ts",
+    "sha256": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/useProtectedRoute.ts",
+    "sha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "app/(onboarding)/login.tsx",
+    "sha256": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/hooks/auth.ts",
+    "sha256": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "components/common/Form.tsx",
+    "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Colors.ts",
+    "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Fonts.ts",
+    "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "schema/onboarding/login.ts",
+    "sha256": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Keys.ts",
+    "sha256": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "context/AuthContext.tsx",
+    "sha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/useNavigateAuthenticated.ts",
+    "sha256": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/useProtectedRoute.ts",
+    "sha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Fonts.ts",
+    "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "lib/haptics.ts",
+    "sha256": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "components/custom/SplashScreenView.tsx",
+    "sha256": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "app/index.tsx",
+    "sha256": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "context/AuthContext.tsx",
+    "sha256": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/factory.ts",
+    "sha256": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/common.ts",
+    "sha256": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "lib/api-utils.ts",
+    "sha256": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/usePostRequest.ts",
+    "sha256": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Keys.ts",
+    "sha256": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "hooks/useProtectedRoute.ts",
+    "sha256": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "app/(onboarding)/login.tsx",
+    "sha256": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "api/hooks/auth.ts",
+    "sha256": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "components/common/Form.tsx",
+    "sha256": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Colors.ts",
+    "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Fonts.ts",
+    "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "schema/onboarding/login.ts",
+    "sha256": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+    "checkoutMatchesAfterEolNormalization": true
+  }
+]

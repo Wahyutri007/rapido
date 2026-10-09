@@ -1,0 +1,13 @@
+{
+  "fixtureOrigin": "New QC scenarios use the audited setup of developer SD5-005, itself copied from QC Login. Real Query/Axios/RHF/Zod and production Form/Login/AuthProvider execute with memory IO and host/route/RAF adapters.",
+  "replayIntegrity": "Root developer replay bytes identical; boot/guard developer replay differs only output folder. Previous QC Guard scenarios differ only provider load seam and descriptive result label; prior QC Boot runner only output folder.",
+  "baseline": "New scenarios deliberately reproduce 38 PASS/10 FAIL on the exact old production provider f311 with current Guard. Final current provider 48 PASS/0 FAIL; baseline failures are excluded from current totals.",
+  "guardMetadataCorrection": {
+    "evidence": "guard-integration/harness-initial-metadata-results.json",
+    "issue": "First copied runner retained the old descriptive PINNED_HANDOFF_PROVIDER label even though the provider loader already read current source603 and runtime hashes proved that.",
+    "correction": "Correct the label/prepare recipe and rerun only the 46-case suite. Final label CURRENT_GUARD_WITH_CURRENT_PROVIDER and current provider hash match.",
+    "applicationFailure": false,
+    "countedTwice": false
+  },
+  "isolation": "No native rendering, actual transport/SecureStore, application servers/device/data writes, or source edits. Historical packets remain sealed."
+}

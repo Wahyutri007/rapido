@@ -1,0 +1,91 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-004",
+  "signal": "QC-GUARD-20261009-PASS-DELTA",
+  "status": "PASS_DELTA",
+  "completedAt": "2026-10-08T21:05:41.200Z",
+  "scope": "Only the redirect frame lifetime delta in hooks/useProtectedRoute.ts on the exact reviewed hash.",
+  "approvedSourceHashes": {
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  },
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "sourceApplicationEditedByQC": false,
+  "assertions": {
+    "replay": {
+      "passed": 105,
+      "failed": 0,
+      "errors": 0
+    },
+    "independent": {
+      "passed": 46,
+      "failed": 0,
+      "runtimeErrors": 0,
+      "unhandledRejections": 0
+    },
+    "totalPassed": 151,
+    "totalFailed": 0,
+    "includesOverlappingCoverage": true
+  },
+  "findings": [],
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "routingPolicyUnchanged": true,
+    "developerPolicySemanticsMatch": true
+  },
+  "handoffFingerprints": {
+    "total": 16,
+    "initialDiskMatched": 15,
+    "isolatedProviderFixtureMatched": true
+  },
+  "trackedFiles": {
+    "diskStable": 31,
+    "pinnedProviderFixtureStable": 1
+  },
+  "productionIndependentModules": 13,
+  "providerContract": {
+    "testedHash": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+    "fixture": "fixtures/AuthContext.tsx.txt",
+    "currentWorkspaceHashAtClose": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "currentProviderApproved": false,
+    "separateOwner": "Senior5 SD5-005"
+  },
+  "focusedTypecheck": {
+    "developerEvidenceReviewed": true,
+    "rerunByQC": false,
+    "diagnosticCount": 0,
+    "scope": "useProtectedRoute root with imported dependency/declaration closure; not a full-project check",
+    "fingerprintMatches": true,
+    "currentProviderCovered": false
+  },
+  "limitations": [
+    "Current provider under SD5-005 is excluded. This is not approval of the latest combined auth snapshot.",
+    "Actual guard/provider/Login/Form/Common/Axios/Query code runs with memory transport/storage, segments/router/RAF and UI host adapters.",
+    "Fixture QueryClient uses retry:false, staleTime/gcTime:Infinity; actual root uses retry:2 and staleTime:5min and is review-only.",
+    "No full root navigator, browser, Android/iOS, native rendering/frame ordering, real SecureStore, network, SSR, or Figma parity certification.",
+    "Cleanup rejects pending/detached callbacks after cleanup; it cannot undo navigation already completed before cleanup.",
+    "Existing route predicates/public routes/index exception/targets/dependencies are preserved, including segment matching semantics.",
+    "Type evidence is the developer focused root/dependency closure with the pinned provider; reviewed, not rerun by QC, and not the current provider/full project."
+  ],
+  "separateOpenFindings": [
+    "QC-LOGIN-001 P2",
+    "QC-LOGIN-002 P3",
+    "QC-INCOME-001 P2",
+    "QC-INCOME-002 P2",
+    "QC-INCOME-003 P3"
+  ],
+  "nextAction": "QA/PM may use this single-hook decision. Recheck the final SD5-005 provider handoff and combined dependency hashes separately before auth integration/publication.",
+  "evidence": [
+    "REPORT.md",
+    "final-results.json",
+    "independent-results.json",
+    "quality-results.json",
+    "source-before.json",
+    "harness-notes.json",
+    "final-verification.json",
+    "artifact-manifest.json"
+  ]
+}

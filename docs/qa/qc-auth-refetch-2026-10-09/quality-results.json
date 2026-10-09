@@ -1,0 +1,2510 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-005",
+  "createdAt": "2026-10-08T21:16:24.212Z",
+  "status": "PASS",
+  "sourceHash": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+  "lint": {
+    "run": {
+      "executable": "D:\\laragon\\bin\\node.exe",
+      "args": [
+        "node_modules/eslint/bin/eslint.js",
+        "context/AuthContext.tsx",
+        "--no-cache",
+        "--max-warnings",
+        "0",
+        "--format",
+        "json"
+      ],
+      "exitCode": 0
+    },
+    "errors": 0,
+    "warnings": 0
+  },
+  "biome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "context/AuthContext.tsx"
+    ],
+    "exitCode": 0
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--check",
+      "--",
+      "context/AuthContext.tsx"
+    ],
+    "exitCode": 0
+  },
+  "unchangedOutsideDeclaredDelta": true,
+  "contractComparison": {
+    "baseline": {
+      "contract": {
+        "outsideProvider": [
+          "import { useQueryClient } from \"@tanstack/react-query\";",
+          "import React from \"react\";",
+          "import { createGetHook } from \"@/api/factory\";",
+          "import Keys from \"@/constants/Keys\";",
+          "import * as SecureStore from \"@/lib/storage\";",
+          "import type { UserData } from \"@/types/api/auth\";",
+          "type AuthContextType = {\n\tuser?: UserData | null;\n\tsignOut: () => Promise<void>;\n\tupdateToken: (token: string | null) => Promise<void>;\n\thasPermission: (permission: string) => boolean;\n\thasAnyPermission: (permissions: string[]) => boolean;\n\thasAllPermissions: (permissions: string[]) => boolean;\n\thasRole: (roles: string[] | string) => boolean;\n\tisLoading: boolean;\n\tisLoaded: boolean;\n\tauthenticated: boolean;\n\treloadAuth: () => Promise<boolean>;\n};",
+          "const AuthContext = React.createContext<AuthContextType | undefined>(undefined);",
+          "const useUserQuery = createGetHook<UserData>({\n\tpath: \"/user\",\n\tqueryKey: [\"user-data\"],\n});",
+          "export function useAuth() {\n\tconst context = React.useContext(AuthContext);\n\tif (!context) {\n\t\tthrow new Error(\"useAuth must be used within an AuthProvider\");\n\t}\n\treturn context;\n}"
+        ],
+        "statements": [
+          "const { children } = props;",
+          "const [token, setToken] = React.useState<string | null>(null);",
+          "const [isLoaded, setIsLoaded] = React.useState<boolean>(false);",
+          "const [isLoading, setIsLoading] = React.useState<boolean>(true);",
+          "const userQuery = useUserQuery(undefined, { enabled: !!token });",
+          "const authenticated = !!token && !!userQuery.data;",
+          "const queryClient = useQueryClient();",
+          "async function updateToken(token: string | null) {\n\t\tif (token) {\n\t\t\tawait SecureStore.setItemAsync(Keys.AUTH_TOKEN, token);\n\t\t\tsetToken(token);\n\t\t\tawait userQuery.refetch();\n\t\t} else {\n\t\t\tsetToken(null);\n\t\t\tawait SecureStore.deleteItemAsync(Keys.AUTH_TOKEN);\n\n\t\t\tqueryClient.setQueryData([\"user-data\"], null);\n\t\t\tqueryClient.removeQueries({ queryKey: [\"user-data\"] });\n\t\t\tqueryClient.clear(); // Aggressive clear to ensure state reset\n\t\t}\n\t}",
+          "async function signOut() {\n\t\tawait updateToken(null);\n\t}",
+          "const hasPermission = React.useCallback(\n\t\t(permission: string) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn userQuery.data.permissions.includes(permission);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasRole = React.useCallback(\n\t\t(role: string | string[]) => {\n\t\t\tconst roles = Array.isArray(role) ? role : [role];\n\n\t\t\tif (!userQuery.data) return false;\n\t\t\treturn roles.some((r) => userQuery.data.roles.includes(r));\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasAnyPermission = React.useCallback(\n\t\t(permissions: string[]) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn permissions.some((permission) =>\n\t\t\t\tuserQuery.data.permissions.includes(permission),\n\t\t\t);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasAllPermissions = React.useCallback(\n\t\t(permissions: string[]) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn permissions.every((permission) =>\n\t\t\t\tuserQuery.data.permissions.includes(permission),\n\t\t\t);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "return (\n\t\t<AuthContext.Provider\n\t\t\tvalue={{\n\t\t\t\tuser: userQuery.data,\n\t\t\t\tsignOut,\n\t\t\t\tupdateToken,\n\t\t\t\thasPermission,\n\t\t\t\thasAnyPermission,\n\t\t\t\thasAllPermissions,\n\t\t\t\tauthenticated,\n\t\t\t\tisLoading,\n\t\t\t\tisLoaded,\n\t\t\t\thasRole,\n\t\t\t\treloadAuth,\n\t\t\t}}\n\t\t>\n\t\t\t{children}\n\t\t</AuthContext.Provider>\n\t);"
+        ]
+      },
+      "omittedLoader": 1,
+      "omittedReload": 1,
+      "omittedBootstrap": 1,
+      "stableRefetchBinding": 0,
+      "refetchOptionRemoved": 0
+    },
+    "current": {
+      "contract": {
+        "outsideProvider": [
+          "import { useQueryClient } from \"@tanstack/react-query\";",
+          "import React from \"react\";",
+          "import { createGetHook } from \"@/api/factory\";",
+          "import Keys from \"@/constants/Keys\";",
+          "import * as SecureStore from \"@/lib/storage\";",
+          "import type { UserData } from \"@/types/api/auth\";",
+          "type AuthContextType = {\n\tuser?: UserData | null;\n\tsignOut: () => Promise<void>;\n\tupdateToken: (token: string | null) => Promise<void>;\n\thasPermission: (permission: string) => boolean;\n\thasAnyPermission: (permissions: string[]) => boolean;\n\thasAllPermissions: (permissions: string[]) => boolean;\n\thasRole: (roles: string[] | string) => boolean;\n\tisLoading: boolean;\n\tisLoaded: boolean;\n\tauthenticated: boolean;\n\treloadAuth: () => Promise<boolean>;\n};",
+          "const AuthContext = React.createContext<AuthContextType | undefined>(undefined);",
+          "const useUserQuery = createGetHook<UserData>({\n\tpath: \"/user\",\n\tqueryKey: [\"user-data\"],\n});",
+          "export function useAuth() {\n\tconst context = React.useContext(AuthContext);\n\tif (!context) {\n\t\tthrow new Error(\"useAuth must be used within an AuthProvider\");\n\t}\n\treturn context;\n}"
+        ],
+        "statements": [
+          "const { children } = props;",
+          "const [token, setToken] = React.useState<string | null>(null);",
+          "const [isLoaded, setIsLoaded] = React.useState<boolean>(false);",
+          "const [isLoading, setIsLoading] = React.useState<boolean>(true);",
+          "const userQuery = useUserQuery(undefined, { enabled: !!token });",
+          "const authenticated = !!token && !!userQuery.data;",
+          "const queryClient = useQueryClient();",
+          "async function updateToken(token: string | null) {\n\t\tif (token) {\n\t\t\tawait SecureStore.setItemAsync(Keys.AUTH_TOKEN, token);\n\t\t\tsetToken(token);\n\t\t\tawait userQuery.refetch();\n\t\t} else {\n\t\t\tsetToken(null);\n\t\t\tawait SecureStore.deleteItemAsync(Keys.AUTH_TOKEN);\n\n\t\t\tqueryClient.setQueryData([\"user-data\"], null);\n\t\t\tqueryClient.removeQueries({ queryKey: [\"user-data\"] });\n\t\t\tqueryClient.clear(); // Aggressive clear to ensure state reset\n\t\t}\n\t}",
+          "async function signOut() {\n\t\tawait updateToken(null);\n\t}",
+          "const hasPermission = React.useCallback(\n\t\t(permission: string) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn userQuery.data.permissions.includes(permission);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasRole = React.useCallback(\n\t\t(role: string | string[]) => {\n\t\t\tconst roles = Array.isArray(role) ? role : [role];\n\n\t\t\tif (!userQuery.data) return false;\n\t\t\treturn roles.some((r) => userQuery.data.roles.includes(r));\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasAnyPermission = React.useCallback(\n\t\t(permissions: string[]) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn permissions.some((permission) =>\n\t\t\t\tuserQuery.data.permissions.includes(permission),\n\t\t\t);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "const hasAllPermissions = React.useCallback(\n\t\t(permissions: string[]) => {\n\t\t\tif (!userQuery.data) return false;\n\t\t\tif (userQuery.data.roles.includes(\"owner\")) return true;\n\t\t\treturn permissions.every((permission) =>\n\t\t\t\tuserQuery.data.permissions.includes(permission),\n\t\t\t);\n\t\t},\n\t\t[userQuery.data],\n\t);",
+          "return (\n\t\t<AuthContext.Provider\n\t\t\tvalue={{\n\t\t\t\tuser: userQuery.data,\n\t\t\t\tsignOut,\n\t\t\t\tupdateToken,\n\t\t\t\thasPermission,\n\t\t\t\thasAnyPermission,\n\t\t\t\thasAllPermissions,\n\t\t\t\tauthenticated,\n\t\t\t\tisLoading,\n\t\t\t\tisLoaded,\n\t\t\t\thasRole,\n\t\t\t\treloadAuth,\n\t\t\t}}\n\t\t>\n\t\t\t{children}\n\t\t</AuthContext.Provider>\n\t);"
+        ]
+      },
+      "omittedLoader": 1,
+      "omittedReload": 1,
+      "omittedBootstrap": 1,
+      "stableRefetchBinding": 1,
+      "refetchOptionRemoved": 1
+    }
+  },
+  "trackedFilesStable": [
+    {
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "file": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    },
+    {
+      "file": "node_modules/react-hook-form/dist/index.cjs.js",
+      "expected": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "actual": "96dc0a7b8322110a57504168140afdcbb40a51e58ed604d46a69eb19a6df0eea",
+      "passed": true
+    },
+    {
+      "file": "node_modules/@tanstack/react-query/build/modern/index.cjs",
+      "expected": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+      "actual": "22574ad1d848e7e77f710272d77cbb7b39513411bd0a2fb56f75e722ea29587d",
+      "passed": true
+    },
+    {
+      "file": "node_modules/@tanstack/query-core/build/modern/index.cjs",
+      "expected": "3704990a63f6e23ebc1939b0a7bb45b6e45b95bbc61d7adc1df984fcfe5d3e74",
+      "actual": "3704990a63f6e23ebc1939b0a7bb45b6e45b95bbc61d7adc1df984fcfe5d3e74",
+      "passed": true
+    },
+    {
+      "file": "node_modules/axios/dist/node/axios.cjs",
+      "expected": "6de6f72b4ee4912fbfa9e4257b391fbcaeb7620db2cf26ecbea994b146712d82",
+      "actual": "6de6f72b4ee4912fbfa9e4257b391fbcaeb7620db2cf26ecbea994b146712d82",
+      "passed": true
+    },
+    {
+      "file": "node_modules/zod/index.cjs",
+      "expected": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+      "actual": "69025493407e0f37f24e01e363452d75ae43a89aac18eb24806706b5b534b459",
+      "passed": true
+    },
+    {
+      "file": ".expo/senior7-test-tools/node_modules/react/index.js",
+      "expected": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+      "actual": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+      "passed": true
+    },
+    {
+      "file": ".expo/senior7-test-tools/node_modules/react-test-renderer/index.js",
+      "expected": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+      "actual": "d7af438c1abda0dd5a3f490fded36a6749407c7b44f09364ede988d1d3040ff7",
+      "passed": true
+    },
+    {
+      "file": "node_modules/@tanstack/query-core/build/modern/queryObserver.cjs",
+      "expected": "741ec3f6c5c73dfad06b4a25351b8a5635ddb8512e547056c762bd2a84832643",
+      "actual": "741ec3f6c5c73dfad06b4a25351b8a5635ddb8512e547056c762bd2a84832643",
+      "passed": true
+    },
+    {
+      "file": "node_modules/@tanstack/query-core/src/queryObserver.ts",
+      "expected": "1572bd597914dff6d26c429462edec6e04d40ba949334f5f2f544181865727b1",
+      "actual": "1572bd597914dff6d26c429462edec6e04d40ba949334f5f2f544181865727b1",
+      "passed": true
+    },
+    {
+      "file": "node_modules/expo-secure-store/src/SecureStore.ts",
+      "expected": "f587cd76cc1ed16e31373e45f2450b4e4d3c43f321f172b48ae803c4f0eeb545",
+      "actual": "f587cd76cc1ed16e31373e45f2450b4e4d3c43f321f172b48ae803c4f0eeb545",
+      "passed": true
+    },
+    {
+      "file": "app/index.tsx",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.ts",
+      "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+      "passed": true
+    },
+    {
+      "file": "lib/storage.web.ts",
+      "expected": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "actual": "001b4f36e61982ffbaa7eca019c6a997d9fee068e59ae549be94571584c4f7d2",
+      "passed": true
+    },
+    {
+      "file": "package.json",
+      "expected": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "actual": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+      "passed": true
+    },
+    {
+      "file": "package-lock.json",
+      "expected": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "actual": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/AuthContext.before.tsx.txt",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/HANDOFF.md",
+      "expected": "02de6b14e573101ddc6eede464364dd1bb51f4854b6cd857948731be8fe2f66b",
+      "actual": "02de6b14e573101ddc6eede464364dd1bb51f4854b6cd857948731be8fe2f66b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/baseline-results.json",
+      "expected": "1e089e34fdec61764a4053a592dc2a8f994bf6f020b90719774a86405ced8b52",
+      "actual": "1e089e34fdec61764a4053a592dc2a8f994bf6f020b90719774a86405ced8b52",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/boot-regression/check.cjs",
+      "expected": "f362fa4e1c378183d60fb61b1fe2601554c2e150404b657ff325688b352503fe",
+      "actual": "f362fa4e1c378183d60fb61b1fe2601554c2e150404b657ff325688b352503fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/boot-regression/final-results.json",
+      "expected": "41a8b09f7612234a11a5d844f5c712f577a9b0436cedb6a3d8a90c27fb6700b4",
+      "actual": "41a8b09f7612234a11a5d844f5c712f577a9b0436cedb6a3d8a90c27fb6700b4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/check.cjs",
+      "expected": "dfd58dfdd94eb3ab9182e4f9186f1680ecdc5646e0bf89e01877b7fd72794677",
+      "actual": "dfd58dfdd94eb3ab9182e4f9186f1680ecdc5646e0bf89e01877b7fd72794677",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/final-results.json",
+      "expected": "6e5af081743584a3db1120711b4059bfcebe89cbab740219fc10443a7dc154eb",
+      "actual": "6e5af081743584a3db1120711b4059bfcebe89cbab740219fc10443a7dc154eb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/guard-regression/check.cjs",
+      "expected": "5f759fc5c7e8ea9cf0bbdf47506f83c6de6d9ca2777b3844d9eb3783cc8f2164",
+      "actual": "5f759fc5c7e8ea9cf0bbdf47506f83c6de6d9ca2777b3844d9eb3783cc8f2164",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/guard-regression/final-results.json",
+      "expected": "1ba85067127ee241236b108d9bc445a23d8acb6390db076a741aa17be7fd108b",
+      "actual": "1ba85067127ee241236b108d9bc445a23d8acb6390db076a741aa17be7fd108b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/harness-provenance.json",
+      "expected": "9fd7b5e17ed6e15fa290ef050104945b54c802157cdc4842dc1fe1ab1d6c61b9",
+      "actual": "9fd7b5e17ed6e15fa290ef050104945b54c802157cdc4842dc1fe1ab1d6c61b9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/historical-packets-check.json",
+      "expected": "0e062827a67c417b8a31d321d23f304015acf43ca72ca54f374435309f8389ef",
+      "actual": "0e062827a67c417b8a31d321d23f304015acf43ca72ca54f374435309f8389ef",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/AuthContext.tsx.txt",
+      "expected": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d",
+      "actual": "b08f1269a506a536974572e520dc58aefdae807569a9b6bc22e8a85d2619474d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/boot-results.json",
+      "expected": "393e40eaadb9241dab1be54e38ca47ba2150599ebb6579eb5ebd66719e5bca21",
+      "actual": "393e40eaadb9241dab1be54e38ca47ba2150599ebb6579eb5ebd66719e5bca21",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/eslint.json",
+      "expected": "9dde7b7c284e8f7c059f8fe96d4179a51665aa7fbce9eb05f12161eb32bd131d",
+      "actual": "9dde7b7c284e8f7c059f8fe96d4179a51665aa7fbce9eb05f12161eb32bd131d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/guard-results.json",
+      "expected": "83a111979dc7613bd2d69b794dce88ef7a115b4fe27fc40c244c393a39362ce6",
+      "actual": "83a111979dc7613bd2d69b794dce88ef7a115b4fe27fc40c244c393a39362ce6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/intermediate/integration-results.json",
+      "expected": "adf62a5d59cf64d235425291e3ae289ba7da1358c9744e86add8b5ca5048d504",
+      "actual": "adf62a5d59cf64d235425291e3ae289ba7da1358c9744e86add8b5ca5048d504",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/provider-baseline-eslint.json",
+      "expected": "13acb1c6ec63d3cf6d06fc352f229d8a4c86ed2a5457e6fde96b18b491f9d141",
+      "actual": "13acb1c6ec63d3cf6d06fc352f229d8a4c86ed2a5457e6fde96b18b491f9d141",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/provider-final-eslint.json",
+      "expected": "52870de17ea7fce1e81fbb6968ce6d1192f3580d5c667ad9ef21396e49977a0c",
+      "actual": "52870de17ea7fce1e81fbb6968ce6d1192f3580d5c667ad9ef21396e49977a0c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/quality-results.json",
+      "expected": "c69ae7e447573ff85e94a0399a276b604700681ed192af5a5e4191ab39599e7a",
+      "actual": "c69ae7e447573ff85e94a0399a276b604700681ed192af5a5e4191ab39599e7a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/scope-proof.json",
+      "expected": "67e1e6d5b9461ff4046458d6f79c37e5c239505f0be8a0fad8b3dea130c12c68",
+      "actual": "67e1e6d5b9461ff4046458d6f79c37e5c239505f0be8a0fad8b3dea130c12c68",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/source-before.json",
+      "expected": "5ecedd9512e69fc8c243752e8b8b2b3b4c9f28982ec38383e7b1081cb9a83081",
+      "actual": "5ecedd9512e69fc8c243752e8b8b2b3b4c9f28982ec38383e7b1081cb9a83081",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/typecheck-results.json",
+      "expected": "a6dd4f706b96303c781fed9f1c25ea11a0f80917915efd6bf61fd67ab55c2494",
+      "actual": "a6dd4f706b96303c781fed9f1c25ea11a0f80917915efd6bf61fd67ab55c2494",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/typecheck.cjs",
+      "expected": "0b002714f04d22a7c73819e44194b980bc9846eab22ef3c57d2d5a6bff4d642c",
+      "actual": "0b002714f04d22a7c73819e44194b980bc9846eab22ef3c57d2d5a6bff4d642c",
+      "passed": true
+    },
+    {
+      "file": "app/_layout.tsx",
+      "expected": "5f1b79e7793e77ad983f94eae5bd37775c3b719563fc97b5eeff2322e43937f5",
+      "actual": "5f1b79e7793e77ad983f94eae5bd37775c3b719563fc97b5eeff2322e43937f5",
+      "passed": true
+    },
+    {
+      "file": "hooks/useNavigateAuthenticated.ts",
+      "expected": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "actual": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "passed": true
+    },
+    {
+      "file": "components/custom/SplashScreenView.tsx",
+      "expected": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "actual": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "passed": true
+    },
+    {
+      "file": "lib/haptics.ts",
+      "expected": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "actual": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "expected": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "actual": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "expected": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "actual": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "expected": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "actual": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/auth-refetch/verification.json",
+      "expected": "6daea42370dbf56cee74960f2e0fa6c8d620288340a075cd1a86ea56eb3abe3f",
+      "actual": "6daea42370dbf56cee74960f2e0fa6c8d620288340a075cd1a86ea56eb3abe3f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent-runner.cjs",
+      "expected": "82d33214d079eee0d6978f58842c64e18ff95730c559a8f83187ba68e81d77c5",
+      "actual": "82d33214d079eee0d6978f58842c64e18ff95730c559a8f83187ba68e81d77c5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent-runner.cjs",
+      "expected": "1958c45f57fb1715332110f20c91426969b8483e7547a557a5e5f4c9e08425a5",
+      "actual": "1958c45f57fb1715332110f20c91426969b8483e7547a557a5e5f4c9e08425a5",
+      "passed": true
+    }
+  ],
+  "historicalMatches": [
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/HANDOFF.md",
+      "expected": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+      "actual": "c52f160756bc393dd6048deaf72a2b968a9d87fda226e05e3b4450ad64fda135",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/check.cjs",
+      "expected": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+      "actual": "caf768f09b0f284ca3ebc56e994ceaac135175126262a49ca3ab21f0df9a832c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/typecheck.cjs",
+      "expected": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+      "actual": "556b986604220e1c37655d2b3f361a920af52229733039b3817d16c542957f24",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/baseline-results.json",
+      "expected": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+      "actual": "490b2a838438381b1ef4698786a2e11656bfe11676c5a27d35e342780bdf3e8b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/final-results.json",
+      "expected": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "actual": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/typecheck-results.json",
+      "expected": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6",
+      "actual": "803e9af431fb19fa836eec50b61c78af02b9be92515d6684c72264e6d1733bb6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/boot/verification.json",
+      "expected": "1acc36e283d23b3a8946f33a1ca2537d197c023c6e462422c9766de90465b168",
+      "actual": "1acc36e283d23b3a8946f33a1ca2537d197c023c6e462422c9766de90465b168",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/HANDOFF.md",
+      "expected": "a047f18d9b9fb6ebd041bdb6e1d35d85f88a1145f029b96d0e0582baa3aa11a3",
+      "actual": "a047f18d9b9fb6ebd041bdb6e1d35d85f88a1145f029b96d0e0582baa3aa11a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/check.cjs",
+      "expected": "3a49961a77a6a4db80e81f4c582031196c3b4faaae953cb28340327882000a35",
+      "actual": "3a49961a77a6a4db80e81f4c582031196c3b4faaae953cb28340327882000a35",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/typecheck.cjs",
+      "expected": "4243c96f79de721148631f4126994641e3469198dd29961ceb95ef6ac4982b8e",
+      "actual": "4243c96f79de721148631f4126994641e3469198dd29961ceb95ef6ac4982b8e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/baseline-results.json",
+      "expected": "30a5e7dc33c95b0db938cfaa90af429322c2d073f2530333802d52d3c194b0c8",
+      "actual": "30a5e7dc33c95b0db938cfaa90af429322c2d073f2530333802d52d3c194b0c8",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/final-results.json",
+      "expected": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "actual": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/typecheck-results.json",
+      "expected": "9f43fc2e64f7fe20cb196b7dc7ab83dd04c07e14f7d6d96739088bff9d206e8b",
+      "actual": "9f43fc2e64f7fe20cb196b7dc7ab83dd04c07e14f7d6d96739088bff9d206e8b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/login/verification.json",
+      "expected": "9abaa75c35b15d0d250d2b634ae8e522e2af7b4428f1cba8c5a2d195b977f84a",
+      "actual": "9abaa75c35b15d0d250d2b634ae8e522e2af7b4428f1cba8c5a2d195b977f84a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/HANDOFF.md",
+      "expected": "05a55385d245e56335e7d47d617ced0536f0a707c9e6fa18d5c09fb6e3f94f78",
+      "actual": "05a55385d245e56335e7d47d617ced0536f0a707c9e6fa18d5c09fb6e3f94f78",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/check.cjs",
+      "expected": "3e4a9738d8a4e3509ebda461a285f1d7f6c3992c129bb14d1378a98073f6fbcb",
+      "actual": "3e4a9738d8a4e3509ebda461a285f1d7f6c3992c129bb14d1378a98073f6fbcb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/typecheck.cjs",
+      "expected": "77e9f1db7b3094899142a86226cbf7aa653f1651971ffe1b46b672ea7705d995",
+      "actual": "77e9f1db7b3094899142a86226cbf7aa653f1651971ffe1b46b672ea7705d995",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/baseline-results.json",
+      "expected": "d9ac6dbd5117128d8ab83c8003266653641c2488cf38bc559739a98be58158b3",
+      "actual": "d9ac6dbd5117128d8ab83c8003266653641c2488cf38bc559739a98be58158b3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/final-results.json",
+      "expected": "3ae7fc68198a188f3edda0216916b2b616a7c38ddce0b16a1e3b49e7ad3f7f59",
+      "actual": "3ae7fc68198a188f3edda0216916b2b616a7c38ddce0b16a1e3b49e7ad3f7f59",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/typecheck-results.json",
+      "expected": "fe1b640d9a07c31a3c795579a8c2a606d8b09a7c189e20f5fb72f46e0cda700f",
+      "actual": "fe1b640d9a07c31a3c795579a8c2a606d8b09a7c189e20f5fb72f46e0cda700f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/figma-access.json",
+      "expected": "08b49e5f6eb31b1786b2c848bb8e22dc7e1446c5b3e0d2e98ee222ccb8b71759",
+      "actual": "08b49e5f6eb31b1786b2c848bb8e22dc7e1446c5b3e0d2e98ee222ccb8b71759",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/senior-5-2026-10-09/guard/verification.json",
+      "expected": "2fa50ca4f2d27e676128b386402da06cd9b9c890ee07eef61475dba4f61578e3",
+      "actual": "2fa50ca4f2d27e676128b386402da06cd9b9c890ee07eef61475dba4f61578e3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/AuthContext.before.tsx.txt",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/DECISION.json",
+      "expected": "21b1780a4b84037df21302a2c70d238329e1a1aea465859b304fa691c6624155",
+      "actual": "21b1780a4b84037df21302a2c70d238329e1a1aea465859b304fa691c6624155",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/REPORT.md",
+      "expected": "fa6f392abbd07cd19ca60833791e82e9d9ae6be1f07ee14262f56bedd55c154f",
+      "actual": "fa6f392abbd07cd19ca60833791e82e9d9ae6be1f07ee14262f56bedd55c154f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/auth-refetch.patch",
+      "expected": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+      "actual": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/auth.reviewed.ts.txt",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/final-results.json",
+      "expected": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "actual": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/final-verification.json",
+      "expected": "92c3ff7f2d2693e56d3fec9c5188f256ae32cd5c6662c839184e8f79c4b4dccb",
+      "actual": "92c3ff7f2d2693e56d3fec9c5188f256ae32cd5c6662c839184e8f79c4b4dccb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/finalize.cjs",
+      "expected": "2e1e4dfb0d6638f4aadacb8396eb3d42e50ec6857944e9cf761f906d984bdea3",
+      "actual": "2e1e4dfb0d6638f4aadacb8396eb3d42e50ec6857944e9cf761f906d984bdea3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/fixtures/useProtectedRoute.ts.txt",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/harness-notes.json",
+      "expected": "f7dbfdc9fa27c898557ca13ebeb41d3fcd32a6d9672ede9bc6f2e5838387c5a7",
+      "actual": "f7dbfdc9fa27c898557ca13ebeb41d3fcd32a6d9672ede9bc6f2e5838387c5a7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/initial-integration-results.json",
+      "expected": "88a63969a40bbd7e1bff8592e3f0f8031a1bcf02aedef12359858f804d59c1b3",
+      "actual": "88a63969a40bbd7e1bff8592e3f0f8031a1bcf02aedef12359858f804d59c1b3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/integration-results.json",
+      "expected": "63bfd4ee23a3a7b4a71c28019c70d3dba6bd4accb0820b534113b94e392598b6",
+      "actual": "63bfd4ee23a3a7b4a71c28019c70d3dba6bd4accb0820b534113b94e392598b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/integration.cjs",
+      "expected": "e2af7435bd05008e455f9f4d635e125c412c73443dda8d202d4e4c0cfdc085fe",
+      "actual": "e2af7435bd05008e455f9f4d635e125c412c73443dda8d202d4e4c0cfdc085fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/prepare-proposal.cjs",
+      "expected": "11cd00da43932f4cc0d1f4398af3e5b0d26eb1d700fd4c37116c294753acc60d",
+      "actual": "11cd00da43932f4cc0d1f4398af3e5b0d26eb1d700fd4c37116c294753acc60d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/prepare.cjs",
+      "expected": "b2b528e1b94938c53f0723b436ccf1bd785ce0a29faec61f31dbade10356dd90",
+      "actual": "b2b528e1b94938c53f0723b436ccf1bd785ce0a29faec61f31dbade10356dd90",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-apply-check.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-apply-check.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-biome.err.txt",
+      "expected": "90fc1ab0eb9bf78530af678ddc98ab56fbccd9c785640f5c9695036fcfc6b51a",
+      "actual": "90fc1ab0eb9bf78530af678ddc98ab56fbccd9c785640f5c9695036fcfc6b51a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-biome.out.txt",
+      "expected": "c61cf7b0a127a3cf1a05c7b936618fa12e0548d496ba620e79a76a908d876e43",
+      "actual": "c61cf7b0a127a3cf1a05c7b936618fa12e0548d496ba620e79a76a908d876e43",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-preparation.json",
+      "expected": "78fedc5c6d3151f165c86e3442e610cf8174c7f5787f112416bb652ad7c1a126",
+      "actual": "78fedc5c6d3151f165c86e3442e610cf8174c7f5787f112416bb652ad7c1a126",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-results.json",
+      "expected": "1fdc1d980f7a6b273f93af0813c372b53418da08dc73c3149863592158b97973",
+      "actual": "1fdc1d980f7a6b273f93af0813c372b53418da08dc73c3149863592158b97973",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-typecheck-results.json",
+      "expected": "c7662c4223330bce68db5b664f0e03903a45d4a426c82a0b22243f621181b80b",
+      "actual": "c7662c4223330bce68db5b664f0e03903a45d4a426c82a0b22243f621181b80b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal/AuthContext.tsx",
+      "expected": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "actual": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/provider-baseline-biome.err.txt",
+      "expected": "0cc7e059929755a0219e7a278b097bd4becd0d448986a4e7419e746864d7dbdd",
+      "actual": "0cc7e059929755a0219e7a278b097bd4becd0d448986a4e7419e746864d7dbdd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/provider-baseline-biome.out.txt",
+      "expected": "d43cde0483872e32a0124eea3ed61d71115e1d96d68ccac57e549bad096bb904",
+      "actual": "d43cde0483872e32a0124eea3ed61d71115e1d96d68ccac57e549bad096bb904",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality-initial-results.json",
+      "expected": "85ab64b92e023046f8a3aa2399460c62b449ec1f86aece3ffbee830e05d6aec3",
+      "actual": "85ab64b92e023046f8a3aa2399460c62b449ec1f86aece3ffbee830e05d6aec3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality-results.json",
+      "expected": "ca93e059a696c87514883779a87db2a5d46fa1722d3da3bc8a7d28c18ade18e9",
+      "actual": "ca93e059a696c87514883779a87db2a5d46fa1722d3da3bc8a7d28c18ade18e9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality.cjs",
+      "expected": "b65ec1388f118cc2c6e49ec821e52161a906d167193ff14c97d10dcfdb222767",
+      "actual": "b65ec1388f118cc2c6e49ec821e52161a906d167193ff14c97d10dcfdb222767",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/replay.cjs",
+      "expected": "17b1903fb3ab3ea220040a71a87ac924825386451e25f51b3b02fd3135585964",
+      "actual": "17b1903fb3ab3ea220040a71a87ac924825386451e25f51b3b02fd3135585964",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-before.json",
+      "expected": "ed2e5fe53aacf27f64891f606c2897f9b9729c6e83b150fc273c3ee2f5d1f781",
+      "actual": "ed2e5fe53aacf27f64891f606c2897f9b9729c6e83b150fc273c3ee2f5d1f781",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-biome.out.txt",
+      "expected": "9b70b1623cb2d1d552963201c8c44458ad905099ee9cef5265bc694b59c5c475",
+      "actual": "9b70b1623cb2d1d552963201c8c44458ad905099ee9cef5265bc694b59c5c475",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-eslint.out.txt",
+      "expected": "ef9b7a5d979e94fed99033bf0e64d9cd14d411e0f9cf39d66c561792166ad2a3",
+      "actual": "ef9b7a5d979e94fed99033bf0e64d9cd14d411e0f9cf39d66c561792166ad2a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/tracked-changes.json",
+      "expected": "839f230d96c3219dd112a455a5a80f3ae4699c9372e31408d2883b324d9bc46a",
+      "actual": "839f230d96c3219dd112a455a5a80f3ae4699c9372e31408d2883b324d9bc46a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/typecheck-proposal.cjs",
+      "expected": "2ea78570016c5e8718397fe6aae86aefb2e697ab0826da6b967e11a9bbec27f3",
+      "actual": "2ea78570016c5e8718397fe6aae86aefb2e697ab0826da6b967e11a9bbec27f3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/artifact-manifest.json",
+      "expected": "fcb99fb6ee224563569f7aa576b0c2df7c9ebe8d2e4560244954065f0fed2b60",
+      "actual": "fcb99fb6ee224563569f7aa576b0c2df7c9ebe8d2e4560244954065f0fed2b60",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/AuthContext.before.tsx.txt",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/DECISION.json",
+      "expected": "21b1780a4b84037df21302a2c70d238329e1a1aea465859b304fa691c6624155",
+      "actual": "21b1780a4b84037df21302a2c70d238329e1a1aea465859b304fa691c6624155",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/REPORT.md",
+      "expected": "fa6f392abbd07cd19ca60833791e82e9d9ae6be1f07ee14262f56bedd55c154f",
+      "actual": "fa6f392abbd07cd19ca60833791e82e9d9ae6be1f07ee14262f56bedd55c154f",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/auth-refetch.patch",
+      "expected": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+      "actual": "0d014c2d84a89c9044cc5df99f2cb06e1ab96e8ce7a1264ec29e6ff40ebfe097",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/auth.reviewed.ts.txt",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/final-results.json",
+      "expected": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "actual": "12889d7dd84d4670563fc649eee6a37584a39c5ec768ed322c8a9980a422025a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/final-verification.json",
+      "expected": "92c3ff7f2d2693e56d3fec9c5188f256ae32cd5c6662c839184e8f79c4b4dccb",
+      "actual": "92c3ff7f2d2693e56d3fec9c5188f256ae32cd5c6662c839184e8f79c4b4dccb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/finalize.cjs",
+      "expected": "2e1e4dfb0d6638f4aadacb8396eb3d42e50ec6857944e9cf761f906d984bdea3",
+      "actual": "2e1e4dfb0d6638f4aadacb8396eb3d42e50ec6857944e9cf761f906d984bdea3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/fixtures/useProtectedRoute.ts.txt",
+      "expected": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "actual": "0a8913f86863af4e4f2b2e8b9d1c0002e27e165fb0290eba78c4b5e5b58244d0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/harness-notes.json",
+      "expected": "f7dbfdc9fa27c898557ca13ebeb41d3fcd32a6d9672ede9bc6f2e5838387c5a7",
+      "actual": "f7dbfdc9fa27c898557ca13ebeb41d3fcd32a6d9672ede9bc6f2e5838387c5a7",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/initial-integration-results.json",
+      "expected": "88a63969a40bbd7e1bff8592e3f0f8031a1bcf02aedef12359858f804d59c1b3",
+      "actual": "88a63969a40bbd7e1bff8592e3f0f8031a1bcf02aedef12359858f804d59c1b3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/integration-results.json",
+      "expected": "63bfd4ee23a3a7b4a71c28019c70d3dba6bd4accb0820b534113b94e392598b6",
+      "actual": "63bfd4ee23a3a7b4a71c28019c70d3dba6bd4accb0820b534113b94e392598b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/integration.cjs",
+      "expected": "e2af7435bd05008e455f9f4d635e125c412c73443dda8d202d4e4c0cfdc085fe",
+      "actual": "e2af7435bd05008e455f9f4d635e125c412c73443dda8d202d4e4c0cfdc085fe",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/prepare-proposal.cjs",
+      "expected": "11cd00da43932f4cc0d1f4398af3e5b0d26eb1d700fd4c37116c294753acc60d",
+      "actual": "11cd00da43932f4cc0d1f4398af3e5b0d26eb1d700fd4c37116c294753acc60d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/prepare.cjs",
+      "expected": "b2b528e1b94938c53f0723b436ccf1bd785ce0a29faec61f31dbade10356dd90",
+      "actual": "b2b528e1b94938c53f0723b436ccf1bd785ce0a29faec61f31dbade10356dd90",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-apply-check.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-apply-check.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-biome.err.txt",
+      "expected": "90fc1ab0eb9bf78530af678ddc98ab56fbccd9c785640f5c9695036fcfc6b51a",
+      "actual": "90fc1ab0eb9bf78530af678ddc98ab56fbccd9c785640f5c9695036fcfc6b51a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-biome.out.txt",
+      "expected": "c61cf7b0a127a3cf1a05c7b936618fa12e0548d496ba620e79a76a908d876e43",
+      "actual": "c61cf7b0a127a3cf1a05c7b936618fa12e0548d496ba620e79a76a908d876e43",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-preparation.json",
+      "expected": "78fedc5c6d3151f165c86e3442e610cf8174c7f5787f112416bb652ad7c1a126",
+      "actual": "78fedc5c6d3151f165c86e3442e610cf8174c7f5787f112416bb652ad7c1a126",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-results.json",
+      "expected": "1fdc1d980f7a6b273f93af0813c372b53418da08dc73c3149863592158b97973",
+      "actual": "1fdc1d980f7a6b273f93af0813c372b53418da08dc73c3149863592158b97973",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal-typecheck-results.json",
+      "expected": "c7662c4223330bce68db5b664f0e03903a45d4a426c82a0b22243f621181b80b",
+      "actual": "c7662c4223330bce68db5b664f0e03903a45d4a426c82a0b22243f621181b80b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/proposal/AuthContext.tsx",
+      "expected": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "actual": "f5cd57ee8a6eb4bcad41e056c8aa25ff4d8bf0a263246b1a16115b63c7c51ec0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/provider-baseline-biome.err.txt",
+      "expected": "0cc7e059929755a0219e7a278b097bd4becd0d448986a4e7419e746864d7dbdd",
+      "actual": "0cc7e059929755a0219e7a278b097bd4becd0d448986a4e7419e746864d7dbdd",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/provider-baseline-biome.out.txt",
+      "expected": "d43cde0483872e32a0124eea3ed61d71115e1d96d68ccac57e549bad096bb904",
+      "actual": "d43cde0483872e32a0124eea3ed61d71115e1d96d68ccac57e549bad096bb904",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality-initial-results.json",
+      "expected": "85ab64b92e023046f8a3aa2399460c62b449ec1f86aece3ffbee830e05d6aec3",
+      "actual": "85ab64b92e023046f8a3aa2399460c62b449ec1f86aece3ffbee830e05d6aec3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality-results.json",
+      "expected": "ca93e059a696c87514883779a87db2a5d46fa1722d3da3bc8a7d28c18ade18e9",
+      "actual": "ca93e059a696c87514883779a87db2a5d46fa1722d3da3bc8a7d28c18ade18e9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/quality.cjs",
+      "expected": "b65ec1388f118cc2c6e49ec821e52161a906d167193ff14c97d10dcfdb222767",
+      "actual": "b65ec1388f118cc2c6e49ec821e52161a906d167193ff14c97d10dcfdb222767",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/replay.cjs",
+      "expected": "17b1903fb3ab3ea220040a71a87ac924825386451e25f51b3b02fd3135585964",
+      "actual": "17b1903fb3ab3ea220040a71a87ac924825386451e25f51b3b02fd3135585964",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-before.json",
+      "expected": "ed2e5fe53aacf27f64891f606c2897f9b9729c6e83b150fc273c3ee2f5d1f781",
+      "actual": "ed2e5fe53aacf27f64891f606c2897f9b9729c6e83b150fc273c3ee2f5d1f781",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-biome.out.txt",
+      "expected": "9b70b1623cb2d1d552963201c8c44458ad905099ee9cef5265bc694b59c5c475",
+      "actual": "9b70b1623cb2d1d552963201c8c44458ad905099ee9cef5265bc694b59c5c475",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/source-eslint.out.txt",
+      "expected": "ef9b7a5d979e94fed99033bf0e64d9cd14d411e0f9cf39d66c561792166ad2a3",
+      "actual": "ef9b7a5d979e94fed99033bf0e64d9cd14d411e0f9cf39d66c561792166ad2a3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/tracked-changes.json",
+      "expected": "839f230d96c3219dd112a455a5a80f3ae4699c9372e31408d2883b324d9bc46a",
+      "actual": "839f230d96c3219dd112a455a5a80f3ae4699c9372e31408d2883b324d9bc46a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-login-2026-10-09/typecheck-proposal.cjs",
+      "expected": "2ea78570016c5e8718397fe6aae86aefb2e697ab0826da6b967e11a9bbec27f3",
+      "actual": "2ea78570016c5e8718397fe6aae86aefb2e697ab0826da6b967e11a9bbec27f3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/artifact-manifest.json",
+      "expected": "3d2ad0fbcb722cade9e6d8eadee60e1c8772b099d1a1a8ef099afc86f81cbc2b",
+      "actual": "3d2ad0fbcb722cade9e6d8eadee60e1c8772b099d1a1a8ef099afc86f81cbc2b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/DECISION.json",
+      "expected": "283ff8d3ece8b0fcb46870e417a7da444d3933877dfeaf8b28dee9e4d476a0ec",
+      "actual": "283ff8d3ece8b0fcb46870e417a7da444d3933877dfeaf8b28dee9e4d476a0ec",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/REPORT.md",
+      "expected": "216926d249e563a2f6f71b12e0eaa838b2ea9488f83cf60b8896bb24ef91c2f9",
+      "actual": "216926d249e563a2f6f71b12e0eaa838b2ea9488f83cf60b8896bb24ef91c2f9",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/biome.out.txt",
+      "expected": "f8ef864cea6b720c9abed6728973c7319a9effb231e31d65fa35c8ff0dd6e191",
+      "actual": "f8ef864cea6b720c9abed6728973c7319a9effb231e31d65fa35c8ff0dd6e191",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/eslint.out.txt",
+      "expected": "8706d171adb5ca02b07b1dfc0c524b05bbdf8b3b3c17b9dd5c3ef9973834bbca",
+      "actual": "8706d171adb5ca02b07b1dfc0c524b05bbdf8b3b3c17b9dd5c3ef9973834bbca",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/final-results.json",
+      "expected": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "actual": "f6ce786e8e64e27b720092f1d74d27d8ea86d1100f25e2e47eab220a916ecabc",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/final-verification.json",
+      "expected": "fe154a71f29252bb37fb99ee9c0ac9b5d3eef903d18921a64add54c6398874bf",
+      "actual": "fe154a71f29252bb37fb99ee9c0ac9b5d3eef903d18921a64add54c6398874bf",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/finalize.cjs",
+      "expected": "11385a2eeef6cf658a56786a3a480b776f0b537b5ad89090682ab937332aa499",
+      "actual": "11385a2eeef6cf658a56786a3a480b776f0b537b5ad89090682ab937332aa499",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/harness-initial-independent-runner.cjs",
+      "expected": "a02a027638ade4f6dfc39b2ccec3a58ceda99b52b02fee2c8b839aaae3928af0",
+      "actual": "a02a027638ade4f6dfc39b2ccec3a58ceda99b52b02fee2c8b839aaae3928af0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/harness-initial-independent.err.txt",
+      "expected": "0ef1fcd2f2d71057a8097269228bb37708ec18b223f9ef42b4aa82cb97b92ef5",
+      "actual": "0ef1fcd2f2d71057a8097269228bb37708ec18b223f9ef42b4aa82cb97b92ef5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/harness-initial-independent.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/harness-notes.json",
+      "expected": "7251c2ff132fd1326618c79d204d3b931b84fee099699321f21c45036cdb09ae",
+      "actual": "7251c2ff132fd1326618c79d204d3b931b84fee099699321f21c45036cdb09ae",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent-results.json",
+      "expected": "7d80bb39d56782010e3146363957bbaf8eee1e7ab647309b13442b9972054bcf",
+      "actual": "7d80bb39d56782010e3146363957bbaf8eee1e7ab647309b13442b9972054bcf",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent-runner.cjs",
+      "expected": "1958c45f57fb1715332110f20c91426969b8483e7547a557a5e5f4c9e08425a5",
+      "actual": "1958c45f57fb1715332110f20c91426969b8483e7547a557a5e5f4c9e08425a5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent.cjs",
+      "expected": "d9c97dc17b816e9b2c87e6c0a4374013d34a6e033280f89536dc2293ec3c3719",
+      "actual": "d9c97dc17b816e9b2c87e6c0a4374013d34a6e033280f89536dc2293ec3c3719",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/independent.out.txt",
+      "expected": "775b708ff8f090eed0adc453b4c37bc7eedda0a5db565ec1a4a686c8f3cbe76d",
+      "actual": "775b708ff8f090eed0adc453b4c37bc7eedda0a5db565ec1a4a686c8f3cbe76d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/index.reviewed.tsx.txt",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/prepare.cjs",
+      "expected": "a03c2098d23e8844056f28598f47c8c9823e3a66a2749fec1709139c8160f8b6",
+      "actual": "a03c2098d23e8844056f28598f47c8c9823e3a66a2749fec1709139c8160f8b6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/quality-results.json",
+      "expected": "1324e601d7744a1eae66413e431fb6e27a8b22d7675e7b38762e4c2dd6c16604",
+      "actual": "1324e601d7744a1eae66413e431fb6e27a8b22d7675e7b38762e4c2dd6c16604",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/quality.cjs",
+      "expected": "952c1c9a37f4779fe50dbde4bd3fbbb1e3d70294ee5e7dd0dccf8c3b8c84ff77",
+      "actual": "952c1c9a37f4779fe50dbde4bd3fbbb1e3d70294ee5e7dd0dccf8c3b8c84ff77",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/replay.cjs",
+      "expected": "926d6c90212bae52d8074741b1695daefd97902e52f84bbe4e92b1c6ab078b1e",
+      "actual": "926d6c90212bae52d8074741b1695daefd97902e52f84bbe4e92b1c6ab078b1e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-boot-2026-10-09/source-before.json",
+      "expected": "dbc9504c363b31a0d060df53ffcaf5d22072be2c4ca4d71d4cd7d589fba1547e",
+      "actual": "dbc9504c363b31a0d060df53ffcaf5d22072be2c4ca4d71d4cd7d589fba1547e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/artifact-manifest.json",
+      "expected": "9dda742b23bcff3fec4acf86cea310fe20d0592ef572f16aaad07913bfa2a50d",
+      "actual": "9dda742b23bcff3fec4acf86cea310fe20d0592ef572f16aaad07913bfa2a50d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/DECISION.json",
+      "expected": "c2d76887c8e7a52feb2ea2d80be90c0916c4c218da4f18b128886bf6db046fc5",
+      "actual": "c2d76887c8e7a52feb2ea2d80be90c0916c4c218da4f18b128886bf6db046fc5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/REPORT.md",
+      "expected": "2e2a1ee5fc2a60d82ffb1dcf6d3c870ff22026e54c3964501163dbf076e4d352",
+      "actual": "2e2a1ee5fc2a60d82ffb1dcf6d3c870ff22026e54c3964501163dbf076e4d352",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/biome.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/biome.out.txt",
+      "expected": "c09468b79a681cf7262b33a862d3dd6dddd4214940d467e089f475ab3f26ca5d",
+      "actual": "c09468b79a681cf7262b33a862d3dd6dddd4214940d467e089f475ab3f26ca5d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/diff.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/diff.out.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/eslint.err.txt",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/eslint.out.txt",
+      "expected": "c83968431c8b00149711134f5d9a8dd2f7cb82857f50f8de082ac8bcdb3a5e71",
+      "actual": "c83968431c8b00149711134f5d9a8dd2f7cb82857f50f8de082ac8bcdb3a5e71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/final-results.json",
+      "expected": "3ae7fc68198a188f3edda0216916b2b616a7c38ddce0b16a1e3b49e7ad3f7f59",
+      "actual": "3ae7fc68198a188f3edda0216916b2b616a7c38ddce0b16a1e3b49e7ad3f7f59",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/final-verification.json",
+      "expected": "f4fa76f07d5ef718892be99b56781518a016f26fd1f04af10cce6518360475d0",
+      "actual": "f4fa76f07d5ef718892be99b56781518a016f26fd1f04af10cce6518360475d0",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/finalize.cjs",
+      "expected": "49a131a300a5c661d99ceaf5b12350ab7fd358c01c22ed974e9dbe4680f9da1a",
+      "actual": "49a131a300a5c661d99ceaf5b12350ab7fd358c01c22ed974e9dbe4680f9da1a",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/fixtures/AuthContext.tsx.txt",
+      "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/guard.reviewed.ts.txt",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/handoff-changes.json",
+      "expected": "cbf1cc9bc27235b9daa11bfcd75a7bc4696970823e3d700c3fb3c4e9ccab9e71",
+      "actual": "cbf1cc9bc27235b9daa11bfcd75a7bc4696970823e3d700c3fb3c4e9ccab9e71",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/harness-initial-quality-results.json",
+      "expected": "be97afb6f0d3a8606e6b2949d4283d6e2dfb05ebaf70dd4df2c59dc3f24f4cd3",
+      "actual": "be97afb6f0d3a8606e6b2949d4283d6e2dfb05ebaf70dd4df2c59dc3f24f4cd3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/harness-notes.json",
+      "expected": "9b96fa05f32135d6d4af2980525ce44586998fedc2b6ac0545deb73b151bd6e6",
+      "actual": "9b96fa05f32135d6d4af2980525ce44586998fedc2b6ac0545deb73b151bd6e6",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent-results.json",
+      "expected": "6301bbfc58713d5e79804add2f138a883362f65edfb38a6326ad58feb929f6c3",
+      "actual": "6301bbfc58713d5e79804add2f138a883362f65edfb38a6326ad58feb929f6c3",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent-runner.cjs",
+      "expected": "82d33214d079eee0d6978f58842c64e18ff95730c559a8f83187ba68e81d77c5",
+      "actual": "82d33214d079eee0d6978f58842c64e18ff95730c559a8f83187ba68e81d77c5",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent.cjs",
+      "expected": "5b810bcfaaf794fd64bc3410a5880a9491c32d0cc96abf21f3306671473c1103",
+      "actual": "5b810bcfaaf794fd64bc3410a5880a9491c32d0cc96abf21f3306671473c1103",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent.err",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/independent.out",
+      "expected": "ba84c1dfd31964828a22aefc2ccf9bcda9c0f77f672685379b0f9abdfe1ceea4",
+      "actual": "ba84c1dfd31964828a22aefc2ccf9bcda9c0f77f672685379b0f9abdfe1ceea4",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/prepare.cjs",
+      "expected": "492f82110ed6d6676b7f58f8f0e403fe89d0d195eb5b759b66e04da8c8b8fc7e",
+      "actual": "492f82110ed6d6676b7f58f8f0e403fe89d0d195eb5b759b66e04da8c8b8fc7e",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/quality-results.json",
+      "expected": "a7bc51a289e14d1a375e9fe82bd5f298f2487476949474eab8fc25e842d7030b",
+      "actual": "a7bc51a289e14d1a375e9fe82bd5f298f2487476949474eab8fc25e842d7030b",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/quality.cjs",
+      "expected": "f0099fb2a42fe09cdaf8fe0c1c47341e21f5f99f3ee2603bfbf7893c1aebb1cb",
+      "actual": "f0099fb2a42fe09cdaf8fe0c1c47341e21f5f99f3ee2603bfbf7893c1aebb1cb",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/replay.cjs",
+      "expected": "15b627053c4446b8c20d684629206ae86b61abed44465c5aa91dd056fbae0e6d",
+      "actual": "15b627053c4446b8c20d684629206ae86b61abed44465c5aa91dd056fbae0e6d",
+      "passed": true
+    },
+    {
+      "file": "docs/qa/qc-guard-2026-10-09/source-before.json",
+      "expected": "597859b4a23772895332d49e47a57e872055f16356002a31c2a2392cc61cad4b",
+      "actual": "597859b4a23772895332d49e47a57e872055f16356002a31c2a2392cc61cad4b",
+      "passed": true
+    }
+  ],
+  "historicalUniqueFiles": 115,
+  "counts": {
+    "loginProviderReplay": {
+      "passed": 85,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    },
+    "bootReplay": {
+      "passed": 64,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    },
+    "guardReplay": {
+      "passed": 105,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    },
+    "guardIntegration": {
+      "passed": 46,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    },
+    "bootIntegration": {
+      "passed": 41,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    },
+    "newQcIntegration": {
+      "passed": 48,
+      "failed": 0,
+      "errors": 0,
+      "unhandledRejections": 0
+    }
+  },
+  "totalPassed": 389,
+  "totalFailed": 0,
+  "includesOverlappingCoverage": true,
+  "runtimeMatches": [
+    {
+      "suite": "loginProviderReplay",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "loginProviderReplay",
+      "file": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "file": "hooks/useNavigateAuthenticated.ts",
+      "expected": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "actual": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "file": "app/index.tsx",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "suite": "guardReplay",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "guardReplay",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "guardReplay",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "file": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "hooks/useNavigateAuthenticated.ts",
+      "expected": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "actual": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "lib/haptics.ts",
+      "expected": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "actual": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "components/custom/SplashScreenView.tsx",
+      "expected": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "actual": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "file": "app/index.tsx",
+      "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "context/AuthContext.tsx",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "api/factory.ts",
+      "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "api/common.ts",
+      "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "lib/api-utils.ts",
+      "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "hooks/usePostRequest.ts",
+      "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "constants/Keys.ts",
+      "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "hooks/useProtectedRoute.ts",
+      "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "app/(onboarding)/login.tsx",
+      "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "api/hooks/auth.ts",
+      "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "components/common/Form.tsx",
+      "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "constants/Colors.ts",
+      "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "constants/Fonts.ts",
+      "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "file": "schema/onboarding/login.ts",
+      "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+      "passed": true
+    }
+  ],
+  "runtimeProviderMatches": [
+    {
+      "suite": "loginProviderReplay",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "bootReplay",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "guardReplay",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "guardIntegration",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "bootIntegration",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    },
+    {
+      "suite": "newQcIntegration",
+      "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "passed": true
+    }
+  ],
+  "productionRuntimeModules": [
+    "api/common.ts",
+    "api/factory.ts",
+    "api/hooks/auth.ts",
+    "app/(onboarding)/login.tsx",
+    "app/index.tsx",
+    "components/common/Form.tsx",
+    "components/custom/SplashScreenView.tsx",
+    "constants/Colors.ts",
+    "constants/Fonts.ts",
+    "constants/Keys.ts",
+    "context/AuthContext.tsx",
+    "hooks/useNavigateAuthenticated.ts",
+    "hooks/usePostRequest.ts",
+    "hooks/useProtectedRoute.ts",
+    "lib/api-utils.ts",
+    "lib/haptics.ts",
+    "schema/onboarding/login.ts"
+  ],
+  "baseline": {
+    "passed": 38,
+    "failed": 10,
+    "errors": 0,
+    "unhandledRejections": 0,
+    "matches": [
+      {
+        "file": "context/AuthContext.tsx",
+        "testedPath": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\qc-auth-refetch-2026-10-09\\AuthContext.before.tsx.txt",
+        "expected": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+        "actual": "f31182398af070ff77b84538653ec5e7ceff176965a6982a44de268f7620ae6c",
+        "passed": true
+      },
+      {
+        "file": "api/factory.ts",
+        "testedPath": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "passed": true
+      },
+      {
+        "file": "api/common.ts",
+        "testedPath": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "passed": true
+      },
+      {
+        "file": "lib/api-utils.ts",
+        "testedPath": "lib/api-utils.ts",
+        "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "passed": true
+      },
+      {
+        "file": "hooks/usePostRequest.ts",
+        "testedPath": "hooks/usePostRequest.ts",
+        "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "passed": true
+      },
+      {
+        "file": "constants/Keys.ts",
+        "testedPath": "constants/Keys.ts",
+        "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+        "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+        "passed": true
+      },
+      {
+        "file": "hooks/useProtectedRoute.ts",
+        "testedPath": "hooks/useProtectedRoute.ts",
+        "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "passed": true
+      },
+      {
+        "file": "app/(onboarding)/login.tsx",
+        "testedPath": "app/(onboarding)/login.tsx",
+        "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/auth.ts",
+        "testedPath": "api/hooks/auth.ts",
+        "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "passed": true
+      },
+      {
+        "file": "components/common/Form.tsx",
+        "testedPath": "components/common/Form.tsx",
+        "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "passed": true
+      },
+      {
+        "file": "constants/Colors.ts",
+        "testedPath": "constants/Colors.ts",
+        "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "passed": true
+      },
+      {
+        "file": "constants/Fonts.ts",
+        "testedPath": "constants/Fonts.ts",
+        "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+        "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+        "passed": true
+      },
+      {
+        "file": "schema/onboarding/login.ts",
+        "testedPath": "schema/onboarding/login.ts",
+        "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+        "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+        "passed": true
+      }
+    ],
+    "countedInCurrentTotal": false
+  },
+  "focusedTypecheck": {
+    "developerEvidenceReviewed": true,
+    "rerunByQC": false,
+    "diagnosticCount": 0,
+    "scope": "AuthProvider/login hook+screen/boot/guard roots with imported dependency/declaration closure; not full-project TypeScript",
+    "roots": [
+      "context/AuthContext.tsx",
+      "api/hooks/auth.ts",
+      "app/(onboarding)/login.tsx",
+      "app/index.tsx",
+      "hooks/useProtectedRoute.ts"
+    ],
+    "currentSourceMatches": [
+      {
+        "file": "types/api.ts",
+        "expected": "6769014d94f0d7ade582b008d626f9d25ab105585237efa8572b04c0b82f3f88",
+        "actual": "6769014d94f0d7ade582b008d626f9d25ab105585237efa8572b04c0b82f3f88",
+        "passed": true
+      },
+      {
+        "file": "constants/Keys.ts",
+        "expected": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+        "actual": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+        "passed": true
+      },
+      {
+        "file": "constants/Others.ts",
+        "expected": "13375fbdd752b8c17b38062540a2ea18a7b3bb25657cbd69ee182a50b075d1cd",
+        "actual": "13375fbdd752b8c17b38062540a2ea18a7b3bb25657cbd69ee182a50b075d1cd",
+        "passed": true
+      },
+      {
+        "file": "lib/storage.ts",
+        "expected": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+        "actual": "4a35ad5cfbdbfee83296b8ad494b27b124391cc2af7e309cdca19c04882d273d",
+        "passed": true
+      },
+      {
+        "file": "api/axios.ts",
+        "expected": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+        "actual": "f482bd9b764996aa22982c0a8d5804d60a3343369af9e33cee23240f503facfb",
+        "passed": true
+      },
+      {
+        "file": "types/api/misc.ts",
+        "expected": "7f4e0e3557f5005a8bbf772f0c9b980db34cfa2d92090d013995c08d575078d6",
+        "actual": "7f4e0e3557f5005a8bbf772f0c9b980db34cfa2d92090d013995c08d575078d6",
+        "passed": true
+      },
+      {
+        "file": "lib/api-utils.ts",
+        "expected": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "actual": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+        "passed": true
+      },
+      {
+        "file": "api/common.ts",
+        "expected": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "actual": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+        "passed": true
+      },
+      {
+        "file": "hooks/usePostRequest.ts",
+        "expected": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "actual": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+        "passed": true
+      },
+      {
+        "file": "api/factory.ts",
+        "expected": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "actual": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+        "passed": true
+      },
+      {
+        "file": "types/api/auth.ts",
+        "expected": "9bc8dac68909d6d1d9d9b31cc4fb6826bfd6f99ffcba6fcf18ff2b36d50efaee",
+        "actual": "9bc8dac68909d6d1d9d9b31cc4fb6826bfd6f99ffcba6fcf18ff2b36d50efaee",
+        "passed": true
+      },
+      {
+        "file": "context/AuthContext.tsx",
+        "expected": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+        "actual": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+        "passed": true
+      },
+      {
+        "file": "schema/onboarding/login.ts",
+        "expected": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+        "actual": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/auth.ts",
+        "expected": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "actual": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+        "passed": true
+      },
+      {
+        "file": "assets/images/examples/index.ts",
+        "expected": "0568732238a70238b1dfa612246c0f120a1de02e36a805e0c1bad34daaf827aa",
+        "actual": "0568732238a70238b1dfa612246c0f120a1de02e36a805e0c1bad34daaf827aa",
+        "passed": true
+      },
+      {
+        "file": "assets/images/icons/catalog/index.ts",
+        "expected": "fb26a3a4607618208b388dd95cd492b47a346ec3b8f4a1e264441bb45e8b5954",
+        "actual": "fb26a3a4607618208b388dd95cd492b47a346ec3b8f4a1e264441bb45e8b5954",
+        "passed": true
+      },
+      {
+        "file": "assets/images/icons/inventory/index.ts",
+        "expected": "a62e85b089637e6e7b6a30336c233d06fdab83f8370a0feef0c2849f4ae32dbf",
+        "actual": "a62e85b089637e6e7b6a30336c233d06fdab83f8370a0feef0c2849f4ae32dbf",
+        "passed": true
+      },
+      {
+        "file": "assets/images/icons/report/index.ts",
+        "expected": "dacbf0b4770ed7104fe0b0e301b9ad18771eb46b3d259a19ed3450ac40e1ef80",
+        "actual": "dacbf0b4770ed7104fe0b0e301b9ad18771eb46b3d259a19ed3450ac40e1ef80",
+        "passed": true
+      },
+      {
+        "file": "assets/images/icons/report/accounting/index.ts",
+        "expected": "207c248bf827c0b33fa6c45d0134d1162b8e756fa9cf230f990f8c696d2283cf",
+        "actual": "207c248bf827c0b33fa6c45d0134d1162b8e756fa9cf230f990f8c696d2283cf",
+        "passed": true
+      },
+      {
+        "file": "assets/images/icons/index.ts",
+        "expected": "7e289136261f3b00177e9a29f1d6c10d2e4235aa53a1e9207c6f4395f556416c",
+        "actual": "7e289136261f3b00177e9a29f1d6c10d2e4235aa53a1e9207c6f4395f556416c",
+        "passed": true
+      },
+      {
+        "file": "assets/images/illustrations/index.ts",
+        "expected": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+        "actual": "22935f80fb6a58878cfb28d25140e5bc200c2cca11f82d1c7ec77cbc1efb7ed4",
+        "passed": true
+      },
+      {
+        "file": "assets/images/index.ts",
+        "expected": "73d8f41fb276585b27326babe694e96fdae4a8087c45d58d2d93b353be8180c0",
+        "actual": "73d8f41fb276585b27326babe694e96fdae4a8087c45d58d2d93b353be8180c0",
+        "passed": true
+      },
+      {
+        "file": "components/icons/createIcon.tsx",
+        "expected": "bd454462e49dc3033314f34aabb295b6c804a28f409778d356c146f569d5f43b",
+        "actual": "bd454462e49dc3033314f34aabb295b6c804a28f409778d356c146f569d5f43b",
+        "passed": true
+      },
+      {
+        "file": "components/icons/add.tsx",
+        "expected": "031d2ef49655cef59eec90acf606b3b45f0b47c51f52de75e0caddeda0236dac",
+        "actual": "031d2ef49655cef59eec90acf606b3b45f0b47c51f52de75e0caddeda0236dac",
+        "passed": true
+      },
+      {
+        "file": "components/icons/ai.tsx",
+        "expected": "d6b21a5dc83c486ae5262d1dadd3e92c5b55e7ba3b76983cb28d7aee3314b430",
+        "actual": "d6b21a5dc83c486ae5262d1dadd3e92c5b55e7ba3b76983cb28d7aee3314b430",
+        "passed": true
+      },
+      {
+        "file": "components/icons/arrow-circle-right.tsx",
+        "expected": "1b79da943e59815f9562854ee00822eadcf3dac2649268273c6156b487eb6804",
+        "actual": "1b79da943e59815f9562854ee00822eadcf3dac2649268273c6156b487eb6804",
+        "passed": true
+      },
+      {
+        "file": "components/icons/arrow-up.tsx",
+        "expected": "f6216c5492383e58bb99f1ee3b07627e1de9090fcf27dd990a7be7eefaa3c377",
+        "actual": "f6216c5492383e58bb99f1ee3b07627e1de9090fcf27dd990a7be7eefaa3c377",
+        "passed": true
+      },
+      {
+        "file": "components/icons/backspace.tsx",
+        "expected": "3ff28ba5f63bd40c3362eddf210c6d7f85a449b1bd064dde6be6de220b0b4389",
+        "actual": "3ff28ba5f63bd40c3362eddf210c6d7f85a449b1bd064dde6be6de220b0b4389",
+        "passed": true
+      },
+      {
+        "file": "components/icons/calculator.tsx",
+        "expected": "126f1f4e1309bd70087e4fc7bf04ad46eb093e3f368d5b934545470e390a7859",
+        "actual": "126f1f4e1309bd70087e4fc7bf04ad46eb093e3f368d5b934545470e390a7859",
+        "passed": true
+      },
+      {
+        "file": "components/icons/calendar.tsx",
+        "expected": "4a662338753001969da8af7696f03b8d3560e5369b7d3ed65349d5d7985baf3f",
+        "actual": "4a662338753001969da8af7696f03b8d3560e5369b7d3ed65349d5d7985baf3f",
+        "passed": true
+      },
+      {
+        "file": "components/icons/camera.tsx",
+        "expected": "316198ebbd885bf5d592a0f0e24dbad9f67879fe31276e8dc86d2c4963e734f7",
+        "actual": "316198ebbd885bf5d592a0f0e24dbad9f67879fe31276e8dc86d2c4963e734f7",
+        "passed": true
+      },
+      {
+        "file": "components/icons/card.tsx",
+        "expected": "45791056056dd8834a00c446ccffe476d90d4696074a0c0a858e4d5d9d5a5aa2",
+        "actual": "45791056056dd8834a00c446ccffe476d90d4696074a0c0a858e4d5d9d5a5aa2",
+        "passed": true
+      },
+      {
+        "file": "components/icons/chart.tsx",
+        "expected": "f49b41d2955afcc0ae1560ed8c43778bb95616129d3511d33f014b530a16037d",
+        "actual": "f49b41d2955afcc0ae1560ed8c43778bb95616129d3511d33f014b530a16037d",
+        "passed": true
+      },
+      {
+        "file": "components/icons/check-circle.tsx",
+        "expected": "c0c3b76d2e81be146dff373518cec7426d0c00e795c8e8a96bc853fb69f80623",
+        "actual": "c0c3b76d2e81be146dff373518cec7426d0c00e795c8e8a96bc853fb69f80623",
+        "passed": true
+      },
+      {
+        "file": "components/icons/discount.tsx",
+        "expected": "21753737172a7613ccf6a76ed59a56aad521a56f05713a3d491a76010336b257",
+        "actual": "21753737172a7613ccf6a76ed59a56aad521a56f05713a3d491a76010336b257",
+        "passed": true
+      },
+      {
+        "file": "components/icons/down-trend.tsx",
+        "expected": "cd5b284d322ade7996399e34469e798eecd087db3703ae3bcec3027ce3bec0dc",
+        "actual": "cd5b284d322ade7996399e34469e798eecd087db3703ae3bcec3027ce3bec0dc",
+        "passed": true
+      },
+      {
+        "file": "components/icons/download.tsx",
+        "expected": "fc81b1296866c93959013bc3a716c4e76e8fd84bd9ab233da7b25a9488213567",
+        "actual": "fc81b1296866c93959013bc3a716c4e76e8fd84bd9ab233da7b25a9488213567",
+        "passed": true
+      },
+      {
+        "file": "components/icons/filter.tsx",
+        "expected": "364baba070b5b581822bec207e37563ab26da9bddc690d5c89358be1061e4279",
+        "actual": "364baba070b5b581822bec207e37563ab26da9bddc690d5c89358be1061e4279",
+        "passed": true
+      },
+      {
+        "file": "components/icons/info.tsx",
+        "expected": "a945b2e2bb9c77a05998d0b321c23f889ff8a7d5b860aa92a3c0c04d3111d1d1",
+        "actual": "a945b2e2bb9c77a05998d0b321c23f889ff8a7d5b860aa92a3c0c04d3111d1d1",
+        "passed": true
+      },
+      {
+        "file": "components/icons/inventory.tsx",
+        "expected": "a424597d1c2797701e5d5a0ca22f4abe8bf09da43dd5872b7e3962be3c7bd75e",
+        "actual": "a424597d1c2797701e5d5a0ca22f4abe8bf09da43dd5872b7e3962be3c7bd75e",
+        "passed": true
+      },
+      {
+        "file": "components/icons/journal-code.tsx",
+        "expected": "daafc055f639564f520abbb1eb2d30e5532dffd3fe26cd85de3f2e408ee3df59",
+        "actual": "daafc055f639564f520abbb1eb2d30e5532dffd3fe26cd85de3f2e408ee3df59",
+        "passed": true
+      },
+      {
+        "file": "components/icons/list.tsx",
+        "expected": "4f14980045a9e467d92bacce356091c8d83daff8eee012bec4034ee575094756",
+        "actual": "4f14980045a9e467d92bacce356091c8d83daff8eee012bec4034ee575094756",
+        "passed": true
+      },
+      {
+        "file": "components/icons/manager.tsx",
+        "expected": "070ef68138b1d5f970dc00a068c39719ede069dee2a004dfdf3181d5943f446e",
+        "actual": "070ef68138b1d5f970dc00a068c39719ede069dee2a004dfdf3181d5943f446e",
+        "passed": true
+      },
+      {
+        "file": "components/icons/menu.tsx",
+        "expected": "5407961aa28f3a95084d38cc3426b3673c7deca54b39290a70114cfc0553d7e1",
+        "actual": "5407961aa28f3a95084d38cc3426b3673c7deca54b39290a70114cfc0553d7e1",
+        "passed": true
+      },
+      {
+        "file": "components/icons/profit.tsx",
+        "expected": "5a97e5b299460848fb241c50fe551584734551c466342686fc5a6c629f78ae86",
+        "actual": "5a97e5b299460848fb241c50fe551584734551c466342686fc5a6c629f78ae86",
+        "passed": true
+      },
+      {
+        "file": "components/icons/receipt.tsx",
+        "expected": "a49b5ac38f47b39ca02a79238228a379d2472de699df084c32ad0759b10944b0",
+        "actual": "a49b5ac38f47b39ca02a79238228a379d2472de699df084c32ad0759b10944b0",
+        "passed": true
+      },
+      {
+        "file": "components/icons/report.tsx",
+        "expected": "b17659169db8004aee576841f9a2434d587031ce28ab2d845edd19869bb053fb",
+        "actual": "b17659169db8004aee576841f9a2434d587031ce28ab2d845edd19869bb053fb",
+        "passed": true
+      },
+      {
+        "file": "components/icons/search.tsx",
+        "expected": "e141252da7687fca49774af836c92820966a0ef0d2ecccc620a250d7be247a41",
+        "actual": "e141252da7687fca49774af836c92820966a0ef0d2ecccc620a250d7be247a41",
+        "passed": true
+      },
+      {
+        "file": "components/icons/store.tsx",
+        "expected": "04b7c12bee15bdc2d3e5596ac3a44c28c3a60f3a2b0ba287a3a7dabfd14d9f79",
+        "actual": "04b7c12bee15bdc2d3e5596ac3a44c28c3a60f3a2b0ba287a3a7dabfd14d9f79",
+        "passed": true
+      },
+      {
+        "file": "components/icons/table.tsx",
+        "expected": "53df755415cf3321bf5383091578c11504040ff78b97a9be3213d7116190efa3",
+        "actual": "53df755415cf3321bf5383091578c11504040ff78b97a9be3213d7116190efa3",
+        "passed": true
+      },
+      {
+        "file": "components/icons/wallet.tsx",
+        "expected": "c97ab0830f25e688c4886d9a71f74d057e520e2cc8a26b7760d83641dab190b3",
+        "actual": "c97ab0830f25e688c4886d9a71f74d057e520e2cc8a26b7760d83641dab190b3",
+        "passed": true
+      },
+      {
+        "file": "components/icons/index.ts",
+        "expected": "e49cb21f2e590db3616832f63c6431fb5647c18b4e88b4f91b278ddea39d7540",
+        "actual": "e49cb21f2e590db3616832f63c6431fb5647c18b4e88b4f91b278ddea39d7540",
+        "passed": true
+      },
+      {
+        "file": "constants/Colors.ts",
+        "expected": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "actual": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+        "passed": true
+      },
+      {
+        "file": "constants/Fonts.ts",
+        "expected": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+        "actual": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+        "passed": true
+      },
+      {
+        "file": "lib/utils/dates.ts",
+        "expected": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+        "actual": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+        "passed": true
+      },
+      {
+        "file": "lib/utils/colors.ts",
+        "expected": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+        "actual": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+        "passed": true
+      },
+      {
+        "file": "lib/utils/styles.ts",
+        "expected": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+        "actual": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+        "passed": true
+      },
+      {
+        "file": "lib/haptics.ts",
+        "expected": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+        "actual": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+        "passed": true
+      },
+      {
+        "file": "lib/utils/index.ts",
+        "expected": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+        "actual": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+        "passed": true
+      },
+      {
+        "file": "types/index.ts",
+        "expected": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+        "actual": "7bf0e229fd5ff4c1a5b406578652a844c2f8a5dbd02712665780855f136f5c63",
+        "passed": true
+      },
+      {
+        "file": "components/ui/checkbox/index.tsx",
+        "expected": "d8ba61add05f23fe4e7013e2c3d9ef26f35b231a878b68335a35d957ba376d88",
+        "actual": "d8ba61add05f23fe4e7013e2c3d9ef26f35b231a878b68335a35d957ba376d88",
+        "passed": true
+      },
+      {
+        "file": "components/ui/input/index.tsx",
+        "expected": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+        "actual": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+        "passed": true
+      },
+      {
+        "file": "components/ui/radio/index.tsx",
+        "expected": "8ce38c0c32d330772b138d6531178f70daf9858bbaea07687e739ad02d181842",
+        "actual": "8ce38c0c32d330772b138d6531178f70daf9858bbaea07687e739ad02d181842",
+        "passed": true
+      },
+      {
+        "file": "components/common/BouncyPressable.tsx",
+        "expected": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+        "actual": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+        "passed": true
+      },
+      {
+        "file": "components/common/Text.tsx",
+        "expected": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+        "actual": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+        "passed": true
+      },
+      {
+        "file": "components/ui/actionsheet/index.tsx",
+        "expected": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+        "actual": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+        "passed": true
+      },
+      {
+        "file": "hooks/useSearch.ts",
+        "expected": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10",
+        "actual": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10",
+        "passed": true
+      },
+      {
+        "file": "components/common/SortActionSheet.tsx",
+        "expected": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+        "actual": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+        "passed": true
+      },
+      {
+        "file": "components/common/SearchBar.tsx",
+        "expected": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+        "actual": "67c376faac424964a725776ec1c2b398a09c476d675111970154d58c542a17c0",
+        "passed": true
+      },
+      {
+        "file": "components/common/SingleSelect.tsx",
+        "expected": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+        "actual": "c10d47b804517e209e3d39d8ff0363520cff89f5263bb836a7d22cf47219559f",
+        "passed": true
+      },
+      {
+        "file": "components/common/Form.tsx",
+        "expected": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "actual": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+        "passed": true
+      },
+      {
+        "file": "components/common/Wrapper.tsx",
+        "expected": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+        "actual": "e7917179ca0df4fe312e50bcec99f2921231072b17d5b42d4eae358a4844d8a4",
+        "passed": true
+      },
+      {
+        "file": "components/feature/auth/shared.tsx",
+        "expected": "23aa4fab3b228b5792178e55c809de2941e2ec9a414d422c1eabe83f8709f961",
+        "actual": "23aa4fab3b228b5792178e55c809de2941e2ec9a414d422c1eabe83f8709f961",
+        "passed": true
+      },
+      {
+        "file": "components/ui/button/index.tsx",
+        "expected": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+        "actual": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+        "passed": true
+      },
+      {
+        "file": "components/ui/modal/index.tsx",
+        "expected": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+        "actual": "9d46e58217096b0610c3e895526897105d59ca7df268c992748b0697b813898e",
+        "passed": true
+      },
+      {
+        "file": "app/(onboarding)/login.tsx",
+        "expected": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "actual": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+        "passed": true
+      },
+      {
+        "file": "api/hooks/misc.ts",
+        "expected": "c20582b3ffe52a616d713aa7864ac9f92c7f2ea1003fd8b7d85685bc095e47fa",
+        "actual": "c20582b3ffe52a616d713aa7864ac9f92c7f2ea1003fd8b7d85685bc095e47fa",
+        "passed": true
+      },
+      {
+        "file": "components/custom/SplashScreenView.tsx",
+        "expected": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+        "actual": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+        "passed": true
+      },
+      {
+        "file": "store/appModeStore.ts",
+        "expected": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+        "actual": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+        "passed": true
+      },
+      {
+        "file": "store/useActiveStore.ts",
+        "expected": "077de82d5842eac02c7d6201e45383f90481b76120b195a6c892edbf569896ca",
+        "actual": "077de82d5842eac02c7d6201e45383f90481b76120b195a6c892edbf569896ca",
+        "passed": true
+      },
+      {
+        "file": "hooks/useNavigateAuthenticated.ts",
+        "expected": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+        "actual": "3be76264509297fc9adbe58910a6d87cd40dce2b151048bc6e1f43ae39d8b93e",
+        "passed": true
+      },
+      {
+        "file": "app/index.tsx",
+        "expected": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+        "actual": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+        "passed": true
+      },
+      {
+        "file": "hooks/useProtectedRoute.ts",
+        "expected": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "actual": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+        "passed": true
+      }
+    ],
+    "dependencyFingerprintsMatched": 83
+  }
+}

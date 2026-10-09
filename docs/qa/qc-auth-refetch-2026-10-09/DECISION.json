@@ -1,0 +1,154 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-005",
+  "signal": "QC-AUTH-20261009-PASS-RECHECK",
+  "status": "PASS_RECHECK",
+  "completedAt": "2026-10-08T21:19:30.141Z",
+  "scope": "Provider correction and closure of QC Login findings on the current provider/unchanged login hook/current guard/boot hashes.",
+  "approvedSourceHashes": {
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646"
+  },
+  "exercisedContractHashes": {
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2"
+  },
+  "findings": [
+    {
+      "id": "QC-LOGIN-001",
+      "severity": "P2",
+      "status": "CLOSED_BY_RECHECK",
+      "reviewedProviderHash": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "evidence": [
+        "final-results.json: original three failed checks now PASS",
+        "independent-results.json: new button/FormMessage/hook error and complete retry cases PASS"
+      ]
+    },
+    {
+      "id": "QC-LOGIN-002",
+      "severity": "P3",
+      "status": "CLOSED_BY_RECHECK",
+      "reviewedProviderHash": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+      "evidence": [
+        "ESLint provider0error/0warning",
+        "Biome/diff exit0",
+        "No suppression/timer workaround; stable bootstrap/reload/StrictMode cases PASS"
+      ]
+    }
+  ],
+  "newOpenFindings": [],
+  "supersedesFindingsFrom": {
+    "signal": "QC-LOGIN-20261009-CHANGES-REQUESTED",
+    "decision": "../qc-login-2026-10-09/DECISION.json",
+    "findings": [
+      "QC-LOGIN-001",
+      "QC-LOGIN-002"
+    ],
+    "originalHistoricalDecisionEdited": false
+  },
+  "assertions": {
+    "suites": {
+      "loginProviderReplay": {
+        "passed": 85,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      },
+      "bootReplay": {
+        "passed": 64,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      },
+      "guardReplay": {
+        "passed": 105,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      },
+      "guardIntegration": {
+        "passed": 46,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      },
+      "bootIntegration": {
+        "passed": 41,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      },
+      "newQcIntegration": {
+        "passed": 48,
+        "failed": 0,
+        "errors": 0,
+        "unhandledRejections": 0
+      }
+    },
+    "totalPassed": 389,
+    "totalFailed": 0,
+    "includesOverlappingCoverage": true,
+    "baseline": {
+      "passed": 38,
+      "failed": 10,
+      "countedInCurrentTotal": false
+    }
+  },
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "unchangedOutsideDeclaredDelta": true,
+    "noSuppression": true
+  },
+  "handoffFingerprintsMatched": 51,
+  "trackedDiskStable": 61,
+  "historicalEvidence": {
+    "matchedEntries": 153,
+    "uniqueFiles": 115,
+    "unchanged": true
+  },
+  "productionRuntimeModules": 17,
+  "focusedTypecheck": {
+    "developerEvidenceReviewed": true,
+    "rerunByQC": false,
+    "diagnosticCount": 0,
+    "roots": [
+      "context/AuthContext.tsx",
+      "api/hooks/auth.ts",
+      "app/(onboarding)/login.tsx",
+      "app/index.tsx",
+      "hooks/useProtectedRoute.ts"
+    ],
+    "dependencyFingerprintsMatched": 83,
+    "fullProjectCheck": false
+  },
+  "sourceApplicationEditedByQC": false,
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "separateOpenFindings": [
+    "QC-INCOME-001 P2",
+    "QC-INCOME-002 P2",
+    "QC-INCOME-003 P3"
+  ],
+  "limitations": [
+    "Memory transport/storage and host/route/RAF adapters; no actual backend/SecureStore/native frames/browser/HP/full root navigator/Figma parity certification.",
+    "Query fixtures retry:false and staleTime/gcTime:Infinity differ from production root retry:2 and staleTime:5min.",
+    "Failed user validation can retain the stored token under existing contract; no rollback/atomic auth or cross-instance login-logout guarantee.",
+    "Bootstrap cleanup ignores inactive read results but does not cancel storage IO or auth/query transactions already started.",
+    "Developer focused type evidence matches all83 source fingerprints; not rerun by QC and not global TypeScript.",
+    "Previous Guard/Boot decisions remain historical; these supplements verify the current pair under the stated fixtures."
+  ],
+  "nextAction": "QA/PM can use this per-hash recheck and the two closed findings for integration; device/network/root checks and Git publication remain PM gates.",
+  "evidence": [
+    "REPORT.md",
+    "independent-baseline-results.json",
+    "independent-results.json",
+    "final-results.json",
+    "quality-results.json",
+    "final-verification.json",
+    "artifact-manifest.json"
+  ]
+}

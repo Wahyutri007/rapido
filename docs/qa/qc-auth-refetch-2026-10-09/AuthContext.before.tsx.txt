@@ -42,37 +42,32 @@ export default function AuthProvider(props: React.PropsWithChildren) {
 	const [isLoading, setIsLoading] = React.useState<boolean>(true);
 
 	const userQuery = useUserQuery(undefined, { enabled: !!token });
-	const { refetch } = userQuery;
 
 	const authenticated = !!token && !!userQuery.data;
 
 	const queryClient = useQueryClient();
 
-	const loadToken = React.useCallback(
-		(isActive: () => boolean = () => true): Promise<boolean> =>
-			SecureStore.getItemAsync(Keys.AUTH_TOKEN)
-				.then(async (storedToken) => {
-					if (!isActive()) return false;
-					if (!storedToken) {
-						setToken(null);
-						return false;
-					}
-					setToken(storedToken);
-					const res = await refetch();
-					return !!res.data;
-				})
-				.catch(() => false)
-				.finally(() => {
-					if (isActive()) {
-						setIsLoading(false);
-						setIsLoaded(true);
-					}
-				}),
-		[refetch],
-	);
+	async function loadToken(): Promise<boolean> {
+		setIsLoading(true);
+		try {
+			const storedToken = await SecureStore.getItemAsync(Keys.AUTH_TOKEN);
+			if (!storedToken) {
+				setToken(null);
+				return false;
+			}
+			setToken(storedToken);
+			const res = await userQuery.refetch();
+			return !!res.data;
+		} catch (error) {
+			// console.error("Failed to load token:", error);
+			return false;
+		} finally {
+			setIsLoading(false);
+			setIsLoaded(true);
+		}
+	}
 
 	async function reloadAuth(): Promise<boolean> {
-		setIsLoading(true);
 		return await loadToken();
 	}
 
@@ -81,7 +76,7 @@ export default function AuthProvider(props: React.PropsWithChildren) {
 		if (token) {
 			await SecureStore.setItemAsync(Keys.AUTH_TOKEN, token);
 			setToken(token);
-			await userQuery.refetch({ throwOnError: true });
+			await userQuery.refetch();
 		} else {
 			setToken(null);
 			await SecureStore.deleteItemAsync(Keys.AUTH_TOKEN);
@@ -139,12 +134,8 @@ export default function AuthProvider(props: React.PropsWithChildren) {
 
 	// Load token from store
 	React.useEffect(() => {
-		let active = true;
-		void loadToken(() => active);
-		return () => {
-			active = false;
-		};
-	}, [loadToken]);
+		loadToken();
+	}, []);
 
 	return (
 		<AuthContext.Provider

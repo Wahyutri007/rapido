@@ -1,0 +1,131 @@
+{
+  "approvedSources": [
+    "api/hooks/auth.ts",
+    "context/AuthContext.tsx",
+    "app/index.tsx",
+    "hooks/useProtectedRoute.ts"
+  ],
+  "artifactCount": 36,
+  "contracts": [
+    {
+      "file": "api/factory.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "api/common.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Keys.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "schema/onboarding/login.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "api/factory.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "api/common.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Keys.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "schema/onboarding/login.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "api/factory.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "api/common.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "lib/api-utils.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "hooks/usePostRequest.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Keys.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "app/(onboarding)/login.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "components/common/Form.tsx",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Colors.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "constants/Fonts.ts",
+      "baseMatches": true
+    },
+    {
+      "file": "schema/onboarding/login.ts",
+      "baseMatches": true
+    }
+  ]
+}

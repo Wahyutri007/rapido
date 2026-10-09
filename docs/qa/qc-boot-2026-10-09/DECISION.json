@@ -1,0 +1,73 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-002",
+  "signal": "QC-BOOT-20261009-PASS-DELTA",
+  "status": "PASS_DELTA",
+  "completedAt": "2026-10-08T20:34:25.011Z",
+  "publicationApproval": false,
+  "publicationOwner": "PM",
+  "scope": "Delta logika boot app/index.tsx: kesiapan health/auth, minimum splash, tujuan terbaru, lifetime dan callback outro",
+  "approvedSourceHashes": {
+    "app/index.tsx": "c06de0d4822c97e4eaa18733ef0632fc707ff2fb5bb244ee28160b43adfe7b5c"
+  },
+  "assertions": {
+    "replay": {
+      "passed": 64,
+      "failed": 0,
+      "errors": 0
+    },
+    "independent": {
+      "passed": 41,
+      "failed": 0,
+      "errors": 0
+    },
+    "totalPassed": 105,
+    "totalFailed": 0,
+    "includesOverlappingCoverage": true
+  },
+  "findings": [],
+  "quality": {
+    "eslintErrors": 0,
+    "eslintWarnings": 0,
+    "biomeExit": 0,
+    "diffExit": 0,
+    "returnedJsxMatchExceptIntentionalKey": true
+  },
+  "developerHandoffFingerprintsMatched": 14,
+  "trackedFilesStable": 26,
+  "productionIndependentModules": 8,
+  "focusedTypecheck": {
+    "developerEvidenceReviewed": true,
+    "rerunByQC": false,
+    "diagnosticCount": 0,
+    "scope": "Boot root app/index.tsx plus imported dependency closure; not a full-project check",
+    "fingerprintMatches": true
+  },
+  "sourceApplicationEditedByQC": false,
+  "limitations": [
+    "Frame/worklet/haptic native dan visual Android/browser tidak disertifikasi; runtime Reanimated dan host memakai adapter.",
+    "SecureStore, query/transport, router/segmen index, binding mode/toko dan timer memakai fixture; tidak HTTP/API/persistensi nyata.",
+    "Guard produksi hanya pada index, bukan semua route privat.",
+    "Onboarding dibaca ulang saat boot render; subscription kosong tidak memantau native storage realtime.",
+    "StrictMode dipakai pada Boot/Splash, bukan sertifikasi seluruh AuthProvider/query lifecycle StrictMode.",
+    "TypeScript terfokus developer 0 diagnostic direview dan fingerprint cocok; tidak direrun QC/global.",
+    "Figma callable tidak tersedia pada sesi QC ini, tanpa parity claim."
+  ],
+  "separateGates": [
+    "Penerimaan QC-INCOME-001/002/003 masih OPEN; kandidat42 bukan source aplikasi yang lulus.",
+    "Login SD5-003 READY_FOR_QA memerlukan review sendiri.",
+    "SuccessModal SD3-007 masih diperbaiki dan memerlukan recheck UI sendiri.",
+    "Routing/cache warnings, Payroll, ledger-ID dan scope sesi lain tetap keputusan terpisah."
+  ],
+  "nextAction": "QA/PM dapat memakai keputusan delta satu hash ini; verifikasi browser/Android dan gate integrasi/publikasi tetap scope PM. Perubahan source/hash memerlukan recheck yang relevan.",
+  "evidence": [
+    "REPORT.md",
+    "final-results.json",
+    "independent-results.json",
+    "quality-results.json",
+    "source-before.json",
+    "harness-notes.json",
+    "final-verification.json",
+    "artifact-manifest.json"
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "owner": "QC",
+  "ticket": "SD5-004",
+  "tested": "CURRENT_GUARD_WITH_PINNED_HANDOFF_PROVIDER",
+  "sourceHashes": {
+    "context/AuthContext.tsx": "60337fb439c306e4b30344b39a0e5f8534636a9de9989c973b4bcb606a05e646",
+    "api/factory.ts": "c68d9955510b56512aaae9b4d0ff5bf3167e234298483c8c203dd2455d83d915",
+    "api/common.ts": "d62e5a90ee7d19f9a6014bd4ee62f687be65f68bda35daec3d48f1e7034edc3a",
+    "lib/api-utils.ts": "964285b3e7cb320d58b9524d357062aa0a8d160f87edfa9a75a80c9f4bbf091a",
+    "hooks/usePostRequest.ts": "5415decef0328ddea87ae7915c40db1b9fc1a684ac915ac10c070842d9670dbe",
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "hooks/useProtectedRoute.ts": "ffe42686c7f18ec481583d9670b96614553d4079b011555c00bde6062f0643e2",
+    "app/(onboarding)/login.tsx": "f660e93c2ce254f877928a8d04975a56a87bc5cc686420b599cab87d3d676549",
+    "api/hooks/auth.ts": "33424d421de5d6a7ba7bdfe6adf8eca5ab0d31a39ab42f159797882cd5c9beca",
+    "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "schema/onboarding/login.ts": "b93415dd90ebd776b7ffcdff3e0f2a18500e413e1057071f5960c66e03212f9b"
+  },
+  "checks": [
+    {
+      "name": "anonymous private route: login frame queued",
+      "passed": true
+    },
+    {
+      "name": "production Login/Form/Common/Axios: double press sends one POST",
+      "passed": true
+    },
+    {
+      "name": "production request: login path and payload preserved",
+      "passed": true
+    },
+    {
+      "name": "provider handoff: one memory token write",
+      "passed": true
+    },
+    {
+      "name": "provider handoff: user fetch waits for token storage",
+      "passed": true
+    },
+    {
+      "name": "production Query/Common: user GET after storage commit",
+      "passed": true
+    },
+    {
+      "name": "production provider/Query: current user authenticated",
+      "passed": true
+    },
+    {
+      "name": "login succeeds on private page: obsolete anonymous frame canceled",
+      "passed": true
+    },
+    {
+      "name": "late anonymous callback after authentication: no login redirect",
+      "passed": true
+    },
+    {
+      "name": "authenticated onboarding: one home frame queued",
+      "passed": true
+    },
+    {
+      "name": "explicit cashier route change: pending home frame canceled",
+      "passed": true
+    },
+    {
+      "name": "late home callback: explicit cashier route is not overwritten",
+      "passed": true
+    },
+    {
+      "name": "route change: authenticated user retained",
+      "passed": true
+    },
+    {
+      "name": "actual provider sign-out: anonymous state",
+      "passed": true
+    },
+    {
+      "name": "actual provider sign-out: memory token removed",
+      "passed": true
+    },
+    {
+      "name": "actual provider sign-out: user query data removed",
+      "passed": true
+    },
+    {
+      "name": "sign-out on public login: home frame canceled",
+      "passed": true
+    },
+    {
+      "name": "late home callback after sign-out: no protected redirect",
+      "passed": true
+    },
+    {
+      "name": "actual provider reload: loading is active",
+      "passed": true
+    },
+    {
+      "name": "reload/loading transition: obsolete home frame canceled",
+      "passed": true
+    },
+    {
+      "name": "actual Query reload: exactly two user GETs total",
+      "passed": true
+    },
+    {
+      "name": "late home callback while loading: no navigation",
+      "passed": true
+    },
+    {
+      "name": "actual provider reload: successful user validation",
+      "passed": true
+    },
+    {
+      "name": "actual provider reload: loading completes",
+      "passed": true
+    },
+    {
+      "name": "reload completion: one current home frame queued",
+      "passed": true
+    },
+    {
+      "name": "retired frame after reload completion: remains inert",
+      "passed": true
+    },
+    {
+      "name": "current frame after reload: one home redirect",
+      "passed": true
+    },
+    {
+      "name": "anonymous private -> public maintenance: frame canceled",
+      "passed": true
+    },
+    {
+      "name": "late private callback on public maintenance: no login redirect",
+      "passed": true
+    },
+    {
+      "name": "public route transition: no user API request",
+      "passed": true
+    },
+    {
+      "name": "guard subtree unmount: frame canceled",
+      "passed": true
+    },
+    {
+      "name": "callback delivered after subtree unmount: no navigation",
+      "passed": true
+    },
+    {
+      "name": "guard remount: one new current login frame",
+      "passed": true
+    },
+    {
+      "name": "guard remount: new frame identity",
+      "passed": true
+    },
+    {
+      "name": "remount: old instance cannot redirect",
+      "passed": true
+    },
+    {
+      "name": "remount: current instance redirects once",
+      "passed": true
+    },
+    {
+      "name": "root disposed after current delivery: callback remains inert",
+      "passed": true
+    },
+    {
+      "name": "StrictMode guard remount: setup-cleanup-setup produces two frame IDs",
+      "passed": true
+    },
+    {
+      "name": "StrictMode guard remount: one active frame after cleanup",
+      "passed": true
+    },
+    {
+      "name": "StrictMode guard remount: one retired frame",
+      "passed": true
+    },
+    {
+      "name": "StrictMode retired callbacks: no navigation",
+      "passed": true
+    },
+    {
+      "name": "StrictMode current frame: one login redirect",
+      "passed": true
+    },
+    {
+      "name": "root unmount with pending authenticated frame: canceled",
+      "passed": true
+    },
+    {
+      "name": "detached callback delivered after root unmount: no navigation",
+      "passed": true
+    },
+    {
+      "name": "final: no runtime/React/act errors",
+      "passed": true
+    },
+    {
+      "name": "final: no unhandled rejection",
+      "passed": true
+    }
+  ],
+  "observations": [],
+  "runtimeErrors": [],
+  "unhandledRejections": [],
+  "passed": 46,
+  "failed": 0
+}
