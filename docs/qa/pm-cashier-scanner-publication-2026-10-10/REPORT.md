@@ -1,0 +1,11 @@
+# Scanner Kasir — kandidat main, 10 Oktober 2026
+
+QC_ACCEPTED_SCOPED_UI_AND_MAIN_COHORT. PM independently reviewed the existing QC source (list9480e0ce/detail2e265177) against published main e68b752. Eight Scanner files, compact Header opt-in, geometric Wrapper delta and one child registration only. Existing Header default/figma body, parent registrations/back callbacks and Wrapper keyboard/refresh logic preserved by inverse AST. No shared production source/HEAD/index or active peer changes.
+
+38 actual RNWeb checks PASS: actual thin routes/layout/header, three exact example IDs, trim/case/empty search, pending debounce Reset, five invalid parameters, history/cold-link recovery,320/844/240px system areas, default/figma Header compatibility and Wrapper flags/non-scrollable actions.18 contracts PASS. Eleven roots,1172 TypeScript closure files,0diagnostics; ESLint0errors/0warnings, Biome/diffPASS with one inherited unused React import warning in the parent layout.
+
+Fresh candidate Cash regression47PASS and Tagihan regression30PASS. Each build used one worker, private cache/output and actual source/assets/fonts. Runtime/console/unserved requests0; compilation inputs and output bytes guarded. Previous frozen publications remain historical and were not resealed.
+
+Before comparison exposed unsafe side/bottom controls using published Wrapper (30PASS/8FAIL after URL representation correction). The first runner incorrectly expected route objects although route() returns strings: six harness failures corrected without production edits. First final replay37PASS/1FAIL did not scroll a landscape target clear of the simulated system area; final reachability probe explicitly scrolls within the actual scroll range and settles two frames,38PASS on unchanged source. Initial evidence is retained. These limitations are described to distinguish test adapters from application repairs.
+
+Scanner records/statuses are design examples; device discovery/pairing/physical scanning/backend remain unavailable and explicitly labelled. Current Figma identity connected but Starter context quota blocked full frame29:21652; archived metadata guides existing implementation. No100%visual/fullExpoRouter/native/hardware certificate. MainMenu main merge remains held until Stock/Shift and remaining destination prerequisites are reviewed/published.

@@ -2,9 +2,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import { Image } from "expo-image";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
 import { View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BouncyPressable from "@/components/common/BouncyPressable";
 import Text from "@/components/common/Text";
 import { Constants } from "@/constants";
@@ -18,80 +16,8 @@ type HeaderProps = {
 	right?: React.ReactNode;
 	className?: string;
 	titleClassName?: string;
-	appearance?: "default" | "figma" | "cashier";
+	appearance?: "default" | "figma";
 };
-
-function CashierPageHeader({
-	title,
-	back,
-	right,
-	className,
-	titleClassName,
-	onBackPress,
-}: HeaderProps & { onBackPress: () => void }) {
-	const insets = useSafeAreaInsets();
-	const [rightWidth, setRightWidth] = useState(40);
-	const titleInset =
-		back || right ? Math.max(40, right ? rightWidth : 0) + 8 : 0;
-
-	return (
-		<View
-			testID="cashier-page-header"
-			className="w-full bg-white"
-			style={[
-				figmaStockTheme,
-				{
-					paddingTop: insets.top,
-					paddingLeft: insets.left,
-					paddingRight: insets.right,
-				},
-			]}
-		>
-			<StatusBar style="dark" />
-			<View
-				testID="cashier-header-toolbar"
-				className={cn("justify-center px-4 py-2", className)}
-				style={{ minHeight: 48 }}
-			>
-				{back && (
-					<BouncyPressable
-						className="absolute left-4 size-10 items-center justify-center rounded-full"
-						accessibilityRole="button"
-						accessibilityLabel="Kembali"
-						onPress={onBackPress}
-						ripple="borderless"
-						hapticType="light"
-					>
-						<Image
-							source={require("@/assets/images/figma/back-office/back.svg")}
-							style={{ width: 24, height: 24 }}
-						/>
-					</BouncyPressable>
-				)}
-				<Text
-					testID="cashier-header-title"
-					accessibilityRole="header"
-					w="semibold"
-					numberOfLines={2}
-					className={cn("text-center", titleClassName)}
-					style={{ lineHeight: 21, marginHorizontal: titleInset }}
-				>
-					{title}
-				</Text>
-				{right && (
-					<View
-						testID="cashier-header-actions"
-						className="absolute right-4 items-center justify-center"
-						style={{ maxWidth: "35%" }}
-						onLayout={(event) => setRightWidth(event.nativeEvent.layout.width)}
-					>
-						{right}
-					</View>
-				)}
-			</View>
-		</View>
-	);
-}
 
 export default function Header(props: HeaderProps) {
 	const {
@@ -113,10 +39,6 @@ export default function Header(props: HeaderProps) {
 		if (router.canGoBack()) {
 			router.back();
 		}
-	}
-
-	if (appearance === "cashier") {
-		return <CashierPageHeader {...props} onBackPress={handleBackPress} />;
 	}
 
 	return (

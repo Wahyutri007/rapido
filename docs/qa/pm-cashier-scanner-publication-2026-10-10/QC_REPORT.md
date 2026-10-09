@@ -1,0 +1,17 @@
+QC Kasir — Tempat dan Scanner
+
+Dua bug Tempat diperbaiki: input pencarian yang belum selesai debounce tidak lagi terbawa ke outlet baru atau muncul kembali setelah Reset. SearchBar sekarang memakai key outlet + generasi reset lokal. Penggantian outlet, pilihan outlet yang sama, dan Reset memakai reset yang sama. Shared SearchBar, timer150ms, store, data contoh, filter, ID, route, dan styling tidak berubah.
+
+**35 pemeriksaan browser PASS/0FAIL; 11 kontrak source/reference PASS; TypeScript 4 root + 4 ambient/1.036 file tanpa diagnostik; ESLint0/0; Biome/whitespace lulus.** Scanner mendapat review independen tanpa perubahan produksi. Perbaikan Tempat siap untuk QA berikutnya; receipt ini bukan persetujuan seluruh Kasir.
+
+Browser menggunakan komponen, SearchBar/SingleSelect/Card/Wrapper/Button, font, helper, dan store lokal produksi pada RNWeb. Router/params/insets merupakan fixture eksplisit; browser clock mengunci batas debounce secara deterministik. Tidak ada request API/hardware. Input Metro, termasuk dependency node_modules yang benar-benar dikompilasi, diikat hash sebelum dan sesudah replay.
+
+Pemeriksaan Scanner mencakup dua kelompok/tiga nama sesuai metadata, pencarian kapital/spasi, reset/hasil kosong, tiga ID detail, parameter kosong/array/asing/spasi, callback kembali, dan viewport320/280/844 dengan inset samping/bawah. Pemeriksaan Tempat mencakup pilihan outlet eksplisit,18record/count, filter area+status, pencarian, tiga ID kepemilikan detail, outlet nonaktif, retensi pilihan setelah params tab dihapus, dua debounce race, detail beda outlet/area/ID, virtualized last row dan CTA fallback pada320/844. Runtime/console/request tak terlayani0.
+
+Baseline penuh setelah normalisasi route string:33PASS/1FAIL pada bug outlet. Probe khusus kemudian membuktikan kedua bug (outlet dan Reset):1PASS/2FAIL. Replay akhir35PASS/0FAIL. Percobaan awal24PASS/10FAIL dipertahankan; sembilan kegagalan berasal dari fixture yang mengasumsikan `route()` mengembalikan objek padahal source mengembalikan string URL. Itu bukan bug produksi. Perbaikan fixture hanya menormalisasi string menjadi pathname/params untuk pemeriksaan.
+
+Source produksi yang berubah hanya `components/feature/cashier/location/CashierLocationScreen.tsx`: sebelum `94202572cdbaadd5c4ff4eae3780c1c5afe1781ca8b6d5187f1efbf9eff5159f`, sesudah `afaacf110ff58f4e992d696bd36ad78826aceb3debfb8283fd68787d67fc95d1`. Kontrak inverse delta memastikan seluruh source selain generation/key/reset identik. Dua source Scanner tetap `9480e0ceb26c8ee0b179cdd6f0ba2e66751498a8a6a97b3497cf4e1ee4265317` dan `2e265177e6ae190cf287a15180bbe2efebaf58ddab0d2673bfb9726c68d1e266`.
+
+[Hasil browser](browser-final/results.json), [kontrak](contracts.json), [quality](quality.json), [perbandingan](perbandingan.html), [manifest](manifest.json), dan [verifikasi](verification.json). Build/cache/browser privat diD; packet lama tidak ditulis ulang. Tidak ada perubahan Git/index/runtime/HP/backend/data/config/package/shared primitives. Lease Tempat dilepas untuk QA/QC/PM; Scanner QC_ACCEPTED_SCOPED_UI untuk candidate yang diperiksa.
+
+Referensi29:23446/29:21652 hanya metadata; retry official Figma context29:23446 masih Starter limit. Full context, screenshot, artwork, native/keyboard/fontScale, Header/fullRouter dan physical scanner tidak disertifikasi. Tidak ada klaim visual100%. Perubahan dependency setelah sealing membutuhkan candidate review baru.

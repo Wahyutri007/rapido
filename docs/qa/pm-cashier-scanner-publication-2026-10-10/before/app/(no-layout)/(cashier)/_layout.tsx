@@ -17,7 +17,6 @@ export default function CashierNoLayout() {
 			<JSStack.Screen name="report" options={{ headerShown: false }} />
 			<JSStack.Screen name="catalog" options={{ headerShown: false }} />
 			<JSStack.Screen name="cart" options={{ headerShown: false }} />
-			<JSStack.Screen name="scanner" options={{ headerShown: false }} />
 		</JSStack>
 	);
 }

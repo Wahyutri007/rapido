@@ -4,13 +4,11 @@ import {
 	Platform,
 	RefreshControl,
 	ScrollView,
-	useWindowDimensions,
 	View,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { BottomActionInset } from "@/components/common/BottomActionBar";
 import { Colors } from "@/constants/Colors";
 import { haptic } from "@/lib/haptics";
-import { bottomTabClearance } from "@/lib/ui/bottom-navigation";
 import { cn } from "@/lib/utils";
 
 export default function Wrapper(
@@ -56,12 +54,6 @@ export default function Wrapper(
 
 	const paddingTop = pt ?? py;
 	const paddingBottom = pb ?? py;
-	const insets = useSafeAreaInsets();
-	const { fontScale } = useWindowDimensions();
-	const bottomClearance = Math.max(
-		hasBottomBar ? bottomTabClearance(insets.bottom, fontScale) : 0,
-		hasActionButton ? 128 + insets.bottom : insets.bottom,
-	);
 
 	const [isInternalRefreshing, setIsInternalRefreshing] = React.useState(false);
 	const isRefreshing =
@@ -104,7 +96,6 @@ export default function Wrapper(
 		<KeyboardAvoidingView
 			behavior={keyboardBehavior}
 			className="flex-1 bg-background"
-			style={{ paddingLeft: insets.left, paddingRight: insets.right }}
 			enabled={avoidKeyboard}
 			keyboardVerticalOffset={
 				keyboardVerticalOffset ?? (Platform.OS === "ios" ? 24 : 0)
@@ -120,8 +111,17 @@ export default function Wrapper(
 				{paddingTop ? <View style={{ height: paddingTop }} /> : null}
 
 				{children}
-				{bottomClearance > 0 && (
-					<View pointerEvents="none" style={{ height: bottomClearance }} />
+				{hasBottomBar && (
+					<>
+						<View className="h-20" />
+						<BottomActionInset />
+					</>
+				)}
+				{hasActionButton && (
+					<>
+						<View className="h-32" />
+						<BottomActionInset />
+					</>
 				)}
 
 				{paddingBottom ? <View style={{ height: paddingBottom }} /> : null}

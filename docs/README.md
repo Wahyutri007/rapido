@@ -668,3 +668,8 @@ Halaman cart/input-money mempertahankan alur pembayaran yang ada dan memperbaiki
 ### Tagihan — pratinjau Figma, publikasi 10 Oktober 2026
 
 Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13 adalah angka pada desain; layar tetap menjelaskan Pratinjau Figma, bukan transaksi toko. Pencarian/meja/Reset dan popup Tambah/Bayar bekerja pada contoh; tidak memanggil pembayaran/API. Header berada pada layout index dan kembali ke Beranda. [Receipt PM](qa/pm-cashier-bills-publication-2026-10-10/REPORT.md) mencatat kandidat dan batas pemeriksaan.
+
+
+### Scanner Kasir — publikasi kandidat 10 Oktober2026
+
+`/(no-layout)/(cashier)/scanner` membuka daftar contoh perangkat; `/scanner/detail?id=...` memvalidasi ID tepat. Pencarian/Reset, header/back dan fallback tersedia, dengan label Pratinjau. Discovery/pairing/pembacaan hardware belum tersedia. Parent mendaftarkan child headerShown:false. [Receipt dan batas QA PM](qa/pm-cashier-scanner-publication-2026-10-10/REPORT.md).

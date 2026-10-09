@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Accepted intake source hash components/feature/cashier/scanner/CashierScannerScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash components/feature/cashier/scanner/CashierScannerDetailScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash app/(no-layout)/(cashier)/scanner/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash app/(no-layout)/(cashier)/scanner/detail.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash app/(no-layout)/(cashier)/scanner/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash lib/cashier/scanner.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash types/ui/cashier/scanner.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash constants/data/cashier-scanner-preview.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Accepted intake source hash app/(no-layout)/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Inverse AST preserves published Header behavior outside reviewed delta",
+      "status": "PASS"
+    },
+    {
+      "name": "Inverse AST preserves published Wrapper behavior outside reviewed delta",
+      "status": "PASS"
+    },
+    {
+      "name": "Inverse AST preserves published CashierNoLayout behavior outside reviewed delta",
+      "status": "PASS"
+    },
+    {
+      "name": "Wrapper clearance is a single maximum and Header opt-in is isolated",
+      "status": "PASS"
+    },
+    {
+      "name": "Only the Scanner child registration changes parent callbacks",
+      "status": "PASS"
+    },
+    {
+      "name": "All new file route destinations exist in candidate",
+      "status": "PASS"
+    },
+    {
+      "name": "No scanner hardware, install, save or success operation introduced",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,603 @@
+{
+  "status": "PASS",
+  "baseline": false,
+  "passed": 38,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual index layout renders exactly one compact header, two groups and three honest preview rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Index row routes to exact ID 29:21659",
+      "status": "PASS"
+    },
+    {
+      "name": "Index row routes to exact ID 29:21666",
+      "status": "PASS"
+    },
+    {
+      "name": "Index row routes to exact ID 29:21671",
+      "status": "PASS"
+    },
+    {
+      "name": "Search trims and ignores case without losing record identity",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset cancels pending input after an already committed search",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty search remains recoverable through Reset",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual detail layout and exact preview identity 29:21659",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual detail layout and exact preview identity 29:21666",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual detail layout and exact preview identity 29:21671",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid detail rejects implicit first record {}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid detail rejects implicit first record {\"id\":\"\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid detail rejects implicit first record {\"id\":\"missing\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid detail rejects implicit first record {\"id\":[\"29:21659\"]}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid detail rejects implicit first record {\"id\":\" 29:21659 \"}",
+      "status": "PASS"
+    },
+    {
+      "name": "scanner header preserves history",
+      "status": "PASS"
+    },
+    {
+      "name": "scanner header preserves cold-link fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "scanner-detail header preserves history",
+      "status": "PASS"
+    },
+    {
+      "name": "scanner-detail header preserves cold-link fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "320x568 search/last row remain inside system side and bottom areas",
+      "status": "PASS",
+      "details": {
+        "search": {
+          "box": {
+            "x": 70,
+            "y": 89,
+            "width": 210,
+            "height": 46
+          },
+          "clip": {
+            "l": 24,
+            "t": 88,
+            "r": 296,
+            "b": 136
+          },
+          "visibleHeight": 46,
+          "reveal": null
+        },
+        "last": {
+          "box": {
+            "x": 24,
+            "y": 313,
+            "width": 272,
+            "height": 44
+          },
+          "clip": {
+            "l": 24,
+            "t": 268,
+            "r": 296,
+            "b": 357
+          },
+          "visibleHeight": 44,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "320x568 compact header consumes top inset once and back remains reachable",
+      "status": "PASS",
+      "details": {
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 72
+        },
+        "toolbar": {
+          "x": 8,
+          "y": 24,
+          "width": 304,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "320x568 invalid detail recovery CTA can scroll clear of system areas",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 24,
+          "y": 216,
+          "width": 272,
+          "height": 40
+        },
+        "clip": {
+          "l": 8,
+          "t": 72,
+          "r": 312,
+          "b": 568
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "844x390 search/last row remain inside system side and bottom areas",
+      "status": "PASS",
+      "details": {
+        "search": {
+          "box": {
+            "x": 96,
+            "y": 89,
+            "width": 692,
+            "height": 46
+          },
+          "clip": {
+            "l": 50,
+            "t": 88,
+            "r": 804,
+            "b": 136
+          },
+          "visibleHeight": 46,
+          "reveal": null
+        },
+        "last": {
+          "box": {
+            "x": 50,
+            "y": 298,
+            "width": 754,
+            "height": 44
+          },
+          "clip": {
+            "l": 50,
+            "t": 253,
+            "r": 804,
+            "b": 342
+          },
+          "visibleHeight": 44,
+          "reveal": {
+            "before": 0,
+            "after": 15,
+            "requested": 15
+          }
+        }
+      }
+    },
+    {
+      "name": "844x390 compact header consumes top inset once and back remains reachable",
+      "status": "PASS",
+      "details": {
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 72
+        },
+        "toolbar": {
+          "x": 34,
+          "y": 24,
+          "width": 786,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "844x390 invalid detail recovery CTA can scroll clear of system areas",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 196,
+          "width": 754,
+          "height": 40
+        },
+        "clip": {
+          "l": 34,
+          "t": 72,
+          "r": 820,
+          "b": 390
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "240x320 search/last row remain inside system side and bottom areas",
+      "status": "PASS",
+      "details": {
+        "search": {
+          "box": {
+            "x": 55,
+            "y": 99,
+            "width": 160,
+            "height": 46
+          },
+          "clip": {
+            "l": 24,
+            "t": 98,
+            "r": 216,
+            "b": 146
+          },
+          "visibleHeight": 46,
+          "reveal": null
+        },
+        "last": {
+          "box": {
+            "x": 24,
+            "y": 179,
+            "width": 192,
+            "height": 44
+          },
+          "clip": {
+            "l": 24,
+            "t": 134,
+            "r": 216,
+            "b": 223
+          },
+          "visibleHeight": 44,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "240x320 compact header consumes top inset once and back remains reachable",
+      "status": "PASS",
+      "details": {
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 240,
+          "height": 82
+        },
+        "toolbar": {
+          "x": 8,
+          "y": 24,
+          "width": 224,
+          "height": 58
+        }
+      }
+    },
+    {
+      "name": "240x320 invalid detail recovery CTA can scroll clear of system areas",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 24,
+          "y": 200,
+          "width": 192,
+          "height": 40
+        },
+        "clip": {
+          "l": 8,
+          "t": 82,
+          "r": 232,
+          "b": 320
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "default Header baseline dimensions/text/color preserved at 390px",
+      "status": "PASS",
+      "details": {
+        "height": 64
+      }
+    },
+    {
+      "name": "default Header baseline dimensions/text/color preserved at 320px",
+      "status": "PASS",
+      "details": {
+        "height": 64
+      }
+    },
+    {
+      "name": "figma Header baseline dimensions/text/color preserved at 390px",
+      "status": "PASS",
+      "details": {
+        "height": 72
+      }
+    },
+    {
+      "name": "figma Header baseline dimensions/text/color preserved at 320px",
+      "status": "PASS",
+      "details": {
+        "height": 72
+      }
+    },
+    {
+      "name": "Wrapper reaches final action safely, flags {}",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 270,
+          "width": 754,
+          "height": 40
+        },
+        "clip": {
+          "l": 34,
+          "t": 0,
+          "r": 820,
+          "b": 390
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "Wrapper reaches final action safely, flags {\"hasBottomBar\":true}",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 190,
+          "width": 754,
+          "height": 40
+        },
+        "clip": {
+          "l": 34,
+          "t": 0,
+          "r": 820,
+          "b": 390
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "Wrapper reaches final action safely, flags {\"hasActionButton\":true}",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 142,
+          "width": 754,
+          "height": 40
+        },
+        "clip": {
+          "l": 34,
+          "t": 0,
+          "r": 820,
+          "b": 390
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "Wrapper reaches final action safely, flags {\"hasBottomBar\":true,\"hasActionButton\":true}",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 142,
+          "width": 754,
+          "height": 40
+        },
+        "clip": {
+          "l": 34,
+          "t": 0,
+          "r": 820,
+          "b": 390
+        },
+        "visibleHeight": 40,
+        "reveal": null
+      }
+    },
+    {
+      "name": "Non-scrollable Wrapper preserves its child content and actions",
+      "status": "PASS"
+    },
+    {
+      "name": "All compiled inputs, fonts/assets and protected configurations remain stable",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "viewport": {
+        "w": 320,
+        "h": 568,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "search": {
+        "box": {
+          "x": 70,
+          "y": 89,
+          "width": 210,
+          "height": 46
+        },
+        "clip": {
+          "l": 24,
+          "t": 88,
+          "r": 296,
+          "b": 136
+        },
+        "visibleHeight": 46,
+        "reveal": null
+      },
+      "last": {
+        "box": {
+          "x": 24,
+          "y": 313,
+          "width": 272,
+          "height": 44
+        },
+        "clip": {
+          "l": 24,
+          "t": 268,
+          "r": 296,
+          "b": 357
+        },
+        "visibleHeight": 44,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 844,
+        "h": 390,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 34,
+          "right": 24
+        }
+      },
+      "search": {
+        "box": {
+          "x": 96,
+          "y": 89,
+          "width": 692,
+          "height": 46
+        },
+        "clip": {
+          "l": 50,
+          "t": 88,
+          "r": 804,
+          "b": 136
+        },
+        "visibleHeight": 46,
+        "reveal": null
+      },
+      "last": {
+        "box": {
+          "x": 50,
+          "y": 298,
+          "width": 754,
+          "height": 44
+        },
+        "clip": {
+          "l": 50,
+          "t": 253,
+          "r": 804,
+          "b": 342
+        },
+        "visibleHeight": 44,
+        "reveal": {
+          "before": 0,
+          "after": 15,
+          "requested": 15
+        }
+      }
+    },
+    {
+      "viewport": {
+        "w": 240,
+        "h": 320,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "search": {
+        "box": {
+          "x": 55,
+          "y": 99,
+          "width": 160,
+          "height": 46
+        },
+        "clip": {
+          "l": 24,
+          "t": 98,
+          "r": 216,
+          "b": 146
+        },
+        "visibleHeight": 46,
+        "reveal": null
+      },
+      "last": {
+        "box": {
+          "x": 24,
+          "y": 179,
+          "width": 192,
+          "height": 44
+        },
+        "clip": {
+          "l": 24,
+          "t": 134,
+          "r": 216,
+          "b": 223
+        },
+        "visibleHeight": 44,
+        "reveal": null
+      }
+    }
+  ],
+  "assetHashes": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf": "16f92298587bab2b469bc13c0dfc6d5d171bca10bad0c9053ad16bc023bf717d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\AntDesign.ttf": "08a9d5b513cf947e22ede81e9a843bd8d7763a63444cd21484bfde7662cc6543",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\EvilIcons.ttf": "a5caeb4d395c5e32f1d5a30acb382aebc664f1badfd149319907f2215e4e3e26",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Fontisto.ttf": "94dab9f1d5b13ea0769d124a2da0d02433f3b99d6dea5a07c0446a77158100c0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Regular.ttf": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Solid.ttf": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Brands.ttf": "06f4d00923ea24697df5df0b92984175991d8bd25776a02d531bb401e393ec42",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf": "64f9fb623681f112261e9a2f97826782439f3925dea8f44a57d1e4db95ba6cfd",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf": "31f099c13f6e4ba05f1b471bf170cb5493249474222917372de3ca5cf29e6a1a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf": "bc844b5b02d3f3adabb514de4e0c0208252d3123413bd03f6287fa446acee859",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Foundation.ttf": "7e1dd03dd4ce90b658052554cd7459df16716717389a552fa4c6d56a5f8933e6",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Ionicons.ttf": "fa2ab7d2557819b2bfe5009e46844efa7170cf177be7735d43aa2ac1295f1d54",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf": "61e8aba5a4e981fe22cf7c8e8bcdbea00476e75c62c37f01bf7ee33361d68428",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialIcons.ttf": "ef149f08bdd2ff09a4e2c8573476b7b0f3fbb15b623954ade59899e7175bedda",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Octicons.ttf": "9bc4d9f5e994e774bdc3ef9a9a87da749af5f50b861473ef7d1cc3d6f8229267",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\SimpleLineIcons.ttf": "3f501ddb05c70829bbb51cfe9ca9fff57f39e060457c257b3ccf25df767f0870",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Zocial.ttf": "dd8ee403bbcbf5e58b77dca4ac03ebafa13a284a3d87d8ea9ca490435a86fa48",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+  },
+  "bundleHash": "2ba40bc1522907ba70e9703e31096924f9630db94c5270eeba0fa25789e909c3",
+  "styleHash": "b43a877e7f0b0a09bdfb832d5939a467b58d4ec12571c84b608e86dad0f7fe08",
+  "limits": "Actual isolated production Scanner routes/layout/Header/Wrapper/primitives/fonts on RNWeb. Router recording, selected stack registration, safe-area and browser clock are explicit adapters. Full native/Expo bootstrap/router, physical scanner/API and full Figma fidelity excluded."
+}
