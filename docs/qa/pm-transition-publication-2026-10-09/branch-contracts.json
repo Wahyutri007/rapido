@@ -1,0 +1,37 @@
+[
+  {
+    "file": "components/custom/LayoutTransitionSplash.tsx",
+    "sha256": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "components/custom/SplashScreenView.tsx",
+    "sha256": "5c4a7da78e4a38b1577b45709581d5f055805b8960817e1ff166a2c53f9b4103",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "store/appModeStore.ts",
+    "sha256": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "constants/Keys.ts",
+    "sha256": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "app/(onboarding)/onboarding.tsx",
+    "sha256": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "store/appModeStore.ts",
+    "sha256": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "checkoutMatchesAfterEolNormalization": true
+  },
+  {
+    "file": "components/custom/LayoutTransitionSplash.tsx",
+    "sha256": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "checkoutMatchesAfterEolNormalization": true
+  }
+]

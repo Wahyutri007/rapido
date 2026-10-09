@@ -1,0 +1,259 @@
+{
+  "baseline": false,
+  "baselineRef": null,
+  "sources": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/onboarding.tsx": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759"
+  },
+  "checks": [
+    {
+      "name": "loading disables both CTAs",
+      "passed": true
+    },
+    {
+      "name": "loading handlers neither navigate nor persist completion",
+      "passed": true
+    },
+    {
+      "name": "loading skeleton follows viewport width",
+      "passed": true
+    },
+    {
+      "name": "loaded query exposes three pages",
+      "passed": true
+    },
+    {
+      "name": "query resolution preserves the animation object",
+      "passed": true
+    },
+    {
+      "name": "positive container width updates layout and zero is ignored",
+      "passed": true
+    },
+    {
+      "name": "Lanjutkan scrolls one page",
+      "passed": true
+    },
+    {
+      "name": "intermediate continue does not navigate",
+      "passed": true
+    },
+    {
+      "name": "last page presents Mulai",
+      "passed": true
+    },
+    {
+      "name": "Mulai records onboarding and opens login",
+      "passed": true
+    },
+    {
+      "name": "negative overscroll clamps to first page",
+      "passed": true
+    },
+    {
+      "name": "Gabung on an earlier page jumps to last without navigation",
+      "passed": true
+    },
+    {
+      "name": "Gabung on last page records completion and opens register",
+      "passed": true
+    },
+    {
+      "name": "positive overscroll clamps to final page",
+      "passed": true
+    },
+    {
+      "name": "scroll uses the latest container width",
+      "passed": true
+    },
+    {
+      "name": "rerenders allocate no discarded Animated values",
+      "passed": true
+    },
+    {
+      "name": "paginator retains the same scroll animation across all actions",
+      "passed": true
+    },
+    {
+      "name": "remount receives a fresh animation value",
+      "passed": true
+    },
+    {
+      "name": "single-page onboarding can finish immediately",
+      "passed": true
+    },
+    {
+      "name": "empty non-loading data preserves existing login fallback",
+      "passed": true
+    },
+    {
+      "name": "idle layout has no transition overlay",
+      "passed": true
+    },
+    {
+      "name": "same-mode guard creates neither overlay nor timer",
+      "passed": true
+    },
+    {
+      "name": "cashier: opening transition shows an unready overlay",
+      "passed": true
+    },
+    {
+      "name": "cashier: in-progress guard retains one navigation timer",
+      "passed": true
+    },
+    {
+      "name": "cashier: destination waits for the 300ms entrance",
+      "passed": true
+    },
+    {
+      "name": "cashier: store selects correct destination and label",
+      "passed": true
+    },
+    {
+      "name": "cashier: overlay remains unready during hold",
+      "passed": true
+    },
+    {
+      "name": "cashier: completed store transition starts outro",
+      "passed": true
+    },
+    {
+      "name": "cashier: unrelated rerender keeps outro callback stable",
+      "passed": true
+    },
+    {
+      "name": "cashier: current outro completion removes overlay",
+      "passed": true
+    },
+    {
+      "name": "operator: opening transition shows an unready overlay",
+      "passed": true
+    },
+    {
+      "name": "operator: in-progress guard retains one navigation timer",
+      "passed": true
+    },
+    {
+      "name": "operator: destination waits for the 300ms entrance",
+      "passed": true
+    },
+    {
+      "name": "operator: store selects correct destination and label",
+      "passed": true
+    },
+    {
+      "name": "operator: overlay remains unready during hold",
+      "passed": true
+    },
+    {
+      "name": "operator: completed store transition starts outro",
+      "passed": true
+    },
+    {
+      "name": "operator: unrelated rerender keeps outro callback stable",
+      "passed": true
+    },
+    {
+      "name": "operator: current outro completion removes overlay",
+      "passed": true
+    },
+    {
+      "name": "absence: opening transition shows an unready overlay",
+      "passed": true
+    },
+    {
+      "name": "absence: in-progress guard retains one navigation timer",
+      "passed": true
+    },
+    {
+      "name": "absence: destination waits for the 300ms entrance",
+      "passed": true
+    },
+    {
+      "name": "absence: store selects correct destination and label",
+      "passed": true
+    },
+    {
+      "name": "absence: overlay remains unready during hold",
+      "passed": true
+    },
+    {
+      "name": "absence: completed store transition starts outro",
+      "passed": true
+    },
+    {
+      "name": "absence: unrelated rerender keeps outro callback stable",
+      "passed": true
+    },
+    {
+      "name": "absence: current outro completion removes overlay",
+      "passed": true
+    },
+    {
+      "name": "back-office: opening transition shows an unready overlay",
+      "passed": true
+    },
+    {
+      "name": "back-office: in-progress guard retains one navigation timer",
+      "passed": true
+    },
+    {
+      "name": "back-office: destination waits for the 300ms entrance",
+      "passed": true
+    },
+    {
+      "name": "back-office: store selects correct destination and label",
+      "passed": true
+    },
+    {
+      "name": "back-office: overlay remains unready during hold",
+      "passed": true
+    },
+    {
+      "name": "back-office: completed store transition starts outro",
+      "passed": true
+    },
+    {
+      "name": "back-office: unrelated rerender keeps outro callback stable",
+      "passed": true
+    },
+    {
+      "name": "back-office: current outro completion removes overlay",
+      "passed": true
+    },
+    {
+      "name": "restarting during outro mounts a fresh animation instance",
+      "passed": true
+    },
+    {
+      "name": "late prior outro cannot hide an active transition",
+      "passed": true
+    },
+    {
+      "name": "premature current callback cannot hide an active transition",
+      "passed": true
+    },
+    {
+      "name": "late prior outro cannot hide the next completed transition",
+      "passed": true
+    },
+    {
+      "name": "only current completed transition may close overlay",
+      "passed": true
+    },
+    {
+      "name": "all mode transition timers are drained",
+      "passed": true
+    },
+    {
+      "name": "no runtime errors or act warnings",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": 61,
+  "failed": 0
+}

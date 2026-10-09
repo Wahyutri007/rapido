@@ -1,0 +1,25 @@
+{
+  "before": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/onboarding.tsx": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "docs/qa/senior-5-2026-10-09/lifecycle.cjs": "604e4308d4d249370485749e8b24bf4d3d204ff4a69339acd1e37a7c2c1fca93",
+    "docs/qa/senior-5-2026-10-09/typecheck-focused.cjs": "81bb36a0d1cb45b71a2dee1548740c402da7c34b531282e218def516cabcbd76",
+    "docs/qa/senior-5-2026-10-09/lifecycle-results.json": "afb67e5f172f01abb8f68879518bd8e10125266073ecb68ace2f030663975254",
+    "docs/qa/senior-5-2026-10-09/baseline-results.json": "ed0b8af55e64d087eab13f5b99f1067252e47abf5d2e1c17ea470daea1f9a4ac",
+    "docs/qa/senior-5-2026-10-09/typecheck-results.json": "cde6eebfd9f18083c2ceb9ae7bd0523cd7d70329be2100cf57b0b2fff9a52210"
+  },
+  "after": {
+    "constants/Keys.ts": "03302de4ed0ee6e3bfa5d30d84d95ad003a62b56beca50ffe24718611deca967",
+    "app/(onboarding)/onboarding.tsx": "9994c474d290e1c6ad5e6e380030c1e77183dd7106f352a826f3c23c300df779",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "components/custom/LayoutTransitionSplash.tsx": "ab6a8a6dc4c4a87afe34b39e3dbf55feee481956f7bddaac7ea5629e3d80e759",
+    "docs/qa/senior-5-2026-10-09/lifecycle.cjs": "604e4308d4d249370485749e8b24bf4d3d204ff4a69339acd1e37a7c2c1fca93",
+    "docs/qa/senior-5-2026-10-09/typecheck-focused.cjs": "81bb36a0d1cb45b71a2dee1548740c402da7c34b531282e218def516cabcbd76",
+    "docs/qa/senior-5-2026-10-09/lifecycle-results.json": "afb67e5f172f01abb8f68879518bd8e10125266073ecb68ace2f030663975254",
+    "docs/qa/senior-5-2026-10-09/baseline-results.json": "ed0b8af55e64d087eab13f5b99f1067252e47abf5d2e1c17ea470daea1f9a4ac",
+    "docs/qa/senior-5-2026-10-09/typecheck-results.json": "cde6eebfd9f18083c2ceb9ae7bd0523cd7d70329be2100cf57b0b2fff9a52210"
+  },
+  "stable": true
+}

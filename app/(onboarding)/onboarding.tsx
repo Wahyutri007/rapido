@@ -27,7 +27,7 @@ export default function OnboardingScreen() {
 	const [currentIndex, setCurrentIndex] = React.useState(0);
 	const { width: windowWidth } = useWindowDimensions();
 	const [pageWidth, setPageWidth] = React.useState(windowWidth);
-	const scrollX = React.useRef(new Animated.Value(0)).current;
+	const [scrollX] = React.useState(() => new Animated.Value(0));
 
 	const flatListRef = React.useRef<FlatList<OnboardingItemProps>>(null);
 
