@@ -15,19 +15,11 @@ type HeaderProps = {
 	back?: boolean | (() => void);
 	right?: React.ReactNode;
 	className?: string;
-	titleClassName?: string;
 	appearance?: "default" | "figma";
 };
 
 export default function Header(props: HeaderProps) {
-	const {
-		title,
-		back,
-		right,
-		className,
-		titleClassName,
-		appearance = "default",
-	} = props;
+	const { title, back, right, className, appearance = "default" } = props;
 	const isFigma = appearance === "figma";
 
 	function handleBackPress() {
@@ -91,11 +83,7 @@ export default function Header(props: HeaderProps) {
 					</BouncyPressable>
 				)}
 
-				<Text
-					w="semibold"
-					className={titleClassName}
-					style={isFigma ? { lineHeight: 21 } : undefined}
-				>
+				<Text w="semibold" style={isFigma ? { lineHeight: 21 } : undefined}>
 					{title}
 				</Text>
 

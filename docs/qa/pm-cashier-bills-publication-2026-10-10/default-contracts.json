@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Default Button canonical tokens unchanged after removing four bill-size additions",
+    "Default/figma Header canonical tokens unchanged after removing optional titleClassName plumbing",
+    "No compact header48 or active Codex3 button styling copied",
+    "Billing index remains design preview and never navigates a Figma node as a business ID"
+  ]
+}

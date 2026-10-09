@@ -664,3 +664,7 @@ Pengguna meminta push ke branch `integration/qc-pm-2026-10-09` kemudian `main`. 
 ### Uang Diterima — publikasi 10 Oktober 2026
 
 Halaman cart/input-money mempertahankan alur pembayaran yang ada dan memperbaiki inset tepi, nominal panjang serta pembungkusan pilihan uang pada layar sempit. Source dan hasil pemeriksaan kandidat main tersedia di [receipt PM](qa/pm-cashier-cash-input-layout-publication-2026-10-10/REPORT.md). Pengujian RNWeb tidak menyatakan pembayaran operasional atau native HP telah tervalidasi.
+
+### Tagihan — pratinjau Figma, publikasi 10 Oktober 2026
+
+Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13 adalah angka pada desain; layar tetap menjelaskan Pratinjau Figma, bukan transaksi toko. Pencarian/meja/Reset dan popup Tambah/Bayar bekerja pada contoh; tidak memanggil pembayaran/API. Header berada pada layout index dan kembali ke Beranda. [Receipt PM](qa/pm-cashier-bills-publication-2026-10-10/REPORT.md) mencatat kandidat dan batas pemeriksaan.

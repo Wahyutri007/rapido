@@ -10,7 +10,12 @@ import {
 } from "@gluestack-ui/utils/nativewind-utils";
 import { cssInterop } from "nativewind";
 import React from "react";
-import { ActivityIndicator, Pressable, Text, View } from "react-native";
+import {
+	ActivityIndicator,
+	Pressable,
+	Text,
+	View,
+} from "react-native";
 import Animated, {
 	useAnimatedStyle,
 	useSharedValue,
@@ -59,8 +64,7 @@ type ButtonVariantOptions = {
 		| "iconSm"
 		| "iconMd"
 		| "iconLg"
-		| "iconXs"
-		| "bill";
+		| "iconXs";
 	hasIcon: "left" | "right" | "both";
 };
 
@@ -102,7 +106,6 @@ const buttonStyle = tva({
 			md: "px-5 h-10",
 			lg: "px-6 h-11",
 			xl: "px-7 h-12",
-			bill: "px-6 h-[34px]",
 			iconXs: "h-6 w-6 items-center justify-center px-0",
 			iconSm: "h-8 w-8 items-center justify-center px-0",
 			iconMd: "h-10 w-10 items-center justify-center px-0",
@@ -197,7 +200,6 @@ const buttonTextStyle = tva({
 			md: "text-sm",
 			lg: "text-base",
 			xl: "text-base",
-			bill: "text-sm leading-[18px]",
 			iconLg: "",
 			iconMd: "",
 			iconSm: "",
@@ -275,7 +277,6 @@ const buttonIconStyle = tva({
 			md: "h-[18px] w-[18px]",
 			lg: "h-[18px] w-[18px]",
 			xl: "h-5 w-5",
-			bill: "h-4 w-4",
 			iconXs: "h-3 w-3",
 			iconSm: "h-4 w-4",
 			iconMd: "h-5 w-5",

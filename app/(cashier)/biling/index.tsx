@@ -1,6 +1,1 @@
-import Text from "@/components/common/Text";
-import React from "react";
-
-export default function BillingScreen() {
-  return <Text>Bill</Text>;
-}
+export { default } from "@/components/feature/cashier/bills/BillsFigmaPreview";
