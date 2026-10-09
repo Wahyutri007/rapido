@@ -22,8 +22,6 @@ type SearchBarProps = {
 	debounceDelay?: number;
 	placeholder?: string;
 	appearance?: "default" | "figma";
-	/** Allow the editable field to shrink within a narrow search container. */
-	viewportSafe?: boolean;
 
 	// Sort props (rebranded from filter)
 	withSort?: boolean;
@@ -48,7 +46,6 @@ export default function SearchBar(
 		debounceDelay = DEFAULT_DEBOUNCE_DELAY_IN_MS,
 		placeholder = "Cari...",
 		appearance = "default",
-		viewportSafe = false,
 		style,
 
 		withSort = false,
@@ -144,7 +141,6 @@ export default function SearchBar(
 					onChangeText={setInputValue}
 					className={cn(
 						"flex-1 shrink",
-						viewportSafe && "min-w-0",
 						appearance === "figma" ? "px-0 text-xs leading-4" : "text-sm",
 					)}
 					style={{ flexShrink: 1 }}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "passed": 6,
+  "checks": [
+    {
+      "name": "All16 primary/filter/data/helper/layout/header/primitive guards unchanged throughout readonlyQA",
+      "status": "PASS"
+    },
+    {
+      "name": "Full source inverse exactly one viewportSafe prop; all behavior/copy/data/handlers unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Mandatory actual primary/thinroute/header layout/Before/shared inputs compiled exact and stable",
+      "status": "PASS"
+    },
+    {
+      "name": "21fresh actualbrowser groups incl twoBefore negatives/fiveOS48ports/fourstatuses/category/search/CSSinput/physicalBack",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal390/320 whole searchInput/box/icon geometry unchanged while before280240 overflow resolves",
+      "status": "PASS"
+    },
+    {
+      "name": "Two-root TS/lint/Biome/diff clean;4originalcontext+PNGpairs/8assets and peerreceipt byte-identical",
+      "status": "PASS"
+    }
+  ],
+  "sources": {
+    "components/feature/cashier/stock/CashierStockScreen.tsx": "90b06bd1e1f029b8ab0fd3c990898a7d4a9511acdd19f19a66da807e469cf30e",
+    "app/(no-layout)/(cashier)/stock.tsx": "098f11324a9a0bc6aecb366ab8a9d91a31e802c865647936b4fbb852f82fe3b2",
+    "app/(no-layout)/(cashier)/_layout.tsx": "a473d83844ebabfdc327102f5ec40ccf9b4d9621dc8204171bcd0341ea9fe092",
+    "components/feature/cashier/stock/StockFilterSheet.tsx": "aec3506b55fdcf1366b89dfa02f2374f23439b9dc2d0c9f620ff270bc66a7139",
+    "components/feature/cashier/stock/StockGroupCard.tsx": "5b9a469bb24cefa7b60e05f83fa690965aaca597228e04ff1f7516c6a6cb88e6",
+    "constants/data/cashier-stock-preview.ts": "066f3470cf1d32c5beb9a09a10c894540f0e6215a28106f7d82bf2384c311d95",
+    "lib/cashier/stock.ts": "ff0077eb976aeea7791cd6fe5673ce51a3c1392aa2112e86c37916266930b931",
+    "lib/cashier/stock-theme.ts": "2d8d9dedacc1a271423ef1fdafcf04d206973cd460a74e29ff95379eac7e6adb",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/SearchBar.tsx": "f268b544f48ea1a00ccd0db9a4edb6f1974e4dcbf51a1e67cfcd058abce6b702",
+    "components/ui/button/index.tsx": "39e34772ccfb33bfe683fbbfc40e89bdf6ae01596fe8067dd1c794b6b22cbc52",
+    "components/ui/actionsheet/index.tsx": "8d3e62b814eb090ce188893f6a53f31c9d781c1d7bb3558cc3650fd458c192f9",
+    "types/ui/cashier/stock.ts": "ea7900eb9cdfc755efc2fd75eee6c2faca63b862d8682ffd336525b9495b1551"
+  },
+  "limits": "Read-only released one-prop search correction in actual Stock body/thinroute/Header/filter/data/primitives/SVG/fonts. OS48 and sideinsets via private fixture, no nativekeyboard/fontScale/fullRouter/API/backend/stockthreshold/publication/Figma100. CSS28 input only; alllarge controls/native targets not certified."
+}

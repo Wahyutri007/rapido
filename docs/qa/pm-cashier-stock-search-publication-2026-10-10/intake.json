@@ -1,0 +1,40 @@
+{
+  "base": "1c5d52f7153c5d103ea4426ee383fb0074b731f6",
+  "inputs": {
+    "components/feature/cashier/stock/CashierStockScreen.tsx": "90b06bd1e1f029b8ab0fd3c990898a7d4a9511acdd19f19a66da807e469cf30e",
+    "components/common/SearchBar.tsx": "f268b544f48ea1a00ccd0db9a4edb6f1974e4dcbf51a1e67cfcd058abce6b702"
+  },
+  "guards": {
+    "app/(no-layout)/(cashier)/stock.tsx": "098f11324a9a0bc6aecb366ab8a9d91a31e802c865647936b4fbb852f82fe3b2",
+    "components/feature/cashier/stock/StockGroupCard.tsx": "5b9a469bb24cefa7b60e05f83fa690965aaca597228e04ff1f7516c6a6cb88e6",
+    "components/feature/cashier/stock/StockFilterSheet.tsx": "aec3506b55fdcf1366b89dfa02f2374f23439b9dc2d0c9f620ff270bc66a7139",
+    "lib/cashier/stock.ts": "ff0077eb976aeea7791cd6fe5673ce51a3c1392aa2112e86c37916266930b931",
+    "lib/cashier/stock-theme.ts": "2d8d9dedacc1a271423ef1fdafcf04d206973cd460a74e29ff95379eac7e6adb",
+    "types/ui/cashier/stock.ts": "ea7900eb9cdfc755efc2fd75eee6c2faca63b862d8682ffd336525b9495b1551",
+    "constants/data/cashier-stock-preview.ts": "066f3470cf1d32c5beb9a09a10c894540f0e6215a28106f7d82bf2384c311d95",
+    "assets/images/cashier/stock/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "assets/images/cashier/stock/check.svg": "038ee7c5253b78bae88a47401310992c0b4da3648efede4dd2af30c4c7430ad1",
+    "assets/images/cashier/stock/close.svg": "f66c5602592fc917de6b75e350a4942d4b7a7d13115b4696083678892c8af585",
+    "assets/images/cashier/stock/divider-wide.svg": "42043dc287c9c6829f0116fb10667d33e5ee5b7f354b24964b241f737d580d51",
+    "assets/images/cashier/stock/divider.svg": "af5653c3de0af27202a670025952dad90830f6556b25c1090d5f69b76217b9ce",
+    "assets/images/cashier/stock/filter.svg": "a74f31c270ce14ce6e97c1c8ae239a3dcdb666021d56ac18f6ff900141adfef2",
+    "assets/images/cashier/stock/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "app/(no-layout)/(cashier)/_layout.tsx": "44091c9a2a6cec409f131231776b483252274a9f75fe5143b60d921eaffb6910",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/ui/input/index.tsx": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+    "hooks/useSearch.ts": "ec6247a0c8459335f1329ca327775d323e434063194257b232eaa10b592b1f10",
+    "assets/images/figma/back-office/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed"
+  },
+  "beforeHashes": {
+    "components/feature/cashier/stock/CashierStockScreen.tsx": "a6c44b35ddc2af5c0454b36a68789d49736095be90ea1d78fdbe84f80265829b",
+    "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f"
+  },
+  "screen": "components/feature/cashier/stock/CashierStockScreen.tsx",
+  "search": "components/common/SearchBar.tsx",
+  "scope": "Two released sources only: optional SearchBar viewportSafe default false and Stock-only opt-in. Existing geometry/data/filter/route/Header/other consumers guarded; no native/fullFigma/backend certificate."
+}

@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Candidate exact components/feature/cashier/stock/CashierStockScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate exact components/common/SearchBar.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged app/(no-layout)/(cashier)/stock.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/feature/cashier/stock/StockGroupCard.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/feature/cashier/stock/StockFilterSheet.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged lib/cashier/stock.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged lib/cashier/stock-theme.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged types/ui/cashier/stock.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged constants/data/cashier-stock-preview.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/back.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/check.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/close.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/divider-wide.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/divider.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/filter.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/cashier/stock/search.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged app/(no-layout)/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/ui/actionsheet/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/ui/input/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/ui/button/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/common/Card.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged components/common/SortActionSheet.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged hooks/useSearch.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing dependency/data/route/asset unchanged assets/images/figma/back-office/search.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact before components/feature/cashier/stock/CashierStockScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact before components/common/SearchBar.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Stock full inverse source/AST after removing one viewportSafe prop",
+      "status": "PASS"
+    },
+    {
+      "name": "SearchBar full inverse AST with only optional prop/default false/conditional min-width",
+      "status": "PASS"
+    },
+    {
+      "name": "Default-false flag is consumed locally and not forwarded as native Input prop",
+      "status": "PASS"
+    },
+    {
+      "name": "Saved original four full Figma context and screenshot pairs unchanged",
+      "status": "PASS"
+    }
+  ]
+}

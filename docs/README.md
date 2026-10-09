@@ -703,3 +703,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Konfirmasi Tunai Kasir — publikasi pratinjau, 10 Oktober 2026
 
 `/(no-layout)/(cashier)/cart/input-money-confirm` memvalidasi parameter nominal lokal dengan parser existing. Nominal tidak valid mengarah ke edit uang atau pesanan; nominal valid menampilkan uang diterima/kembalian. Transaksi Selesai membuka penjelasan bahwa pembayaran/pesanan belum dicatat, tanpa sukses palsu atau perubahan saldo. Header berada di layout; InputMoney tetap memakai header Figma existing. [Receipt QA/PM](qa/pm-cashier-cash-confirm-publication-2026-10-10/REPORT.md).
+
+
+### Pencarian Stok Kasir — perbaikan layar sempit, 10 Oktober 2026
+
+Halaman Stok mengaktifkan `SearchBar viewportSafe` agar input tetap di dalam kotak pencarian pada280/240px. Prop baru defaultfalse menjaga pemakai lain; data contoh, filter, status, reset dan navigasi tetap. [Receipt QA/PM terbaru](qa/pm-cashier-stock-search-publication-2026-10-10/REPORT.md) menambahkan uji sebelum/sesudah terhadap publikasi Stok sebelumnya tanpa mengubah receipt lama.

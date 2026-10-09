@@ -1,0 +1,4621 @@
+{
+  "status": "PASS_SCOPED_STOCK_SEARCH_WITH_HEADER",
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual Header thinroute21records/current honest stock notice",
+      "status": "PASS"
+    },
+    {
+      "name": "Same-bundle Before input overflows at280 currentoptin fixes it",
+      "status": "PASS"
+    },
+    {
+      "name": "Same-bundle Before input overflows at240 currentoptin fixes it",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal390 SearchBox/input/icon/filter geometry preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal320 SearchBox/input/icon/filter geometry preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Search containment/18SVG/font12/gap12/full48Filter/header/OS48 390x844",
+      "status": "PASS"
+    },
+    {
+      "name": "First physicalFilter all4status/firstlastcategories/full48ResetApply Close OS48 390x844",
+      "status": "PASS"
+    },
+    {
+      "name": "Search containment/18SVG/font12/gap12/full48Filter/header/OS48 320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "First physicalFilter all4status/firstlastcategories/full48ResetApply Close OS48 320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "Search containment/18SVG/font12/gap12/full48Filter/header/OS48 240x320",
+      "status": "PASS"
+    },
+    {
+      "name": "First physicalFilter all4status/firstlastcategories/full48ResetApply Close OS48 240x320",
+      "status": "PASS"
+    },
+    {
+      "name": "Search containment/18SVG/font12/gap12/full48Filter/header/OS48 844x240",
+      "status": "PASS"
+    },
+    {
+      "name": "First physicalFilter all4status/firstlastcategories/full48ResetApply Close OS48 844x240",
+      "status": "PASS"
+    },
+    {
+      "name": "Search containment/18SVG/font12/gap12/full48Filter/header/OS48 320x240",
+      "status": "PASS"
+    },
+    {
+      "name": "First physicalFilter all4status/firstlastcategories/full48ResetApply Close OS48 320x240",
+      "status": "PASS"
+    },
+    {
+      "name": "Case-trim name/variant/category search and empty reset retain actual21data",
+      "status": "PASS"
+    },
+    {
+      "name": "Draft cancellation/reopen and all four statuses preserve exact reference counts",
+      "status": "PASS"
+    },
+    {
+      "name": "Category multi-select/resetdraft/empty/10.6kg unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS28 editableinput remains inside safe SearchBox 320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS28 editableinput remains inside safe SearchBox 240x320",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Header physical Back and source/assets/bundle stable without API/storage/network",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "state": "before280",
+      "old": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 184,
+          "height": 48,
+          "top": 72,
+          "right": 200,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 160,
+          "height": 46,
+          "top": 73,
+          "right": 222,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "now": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 184,
+          "height": 48,
+          "top": 72,
+          "right": 200,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 122,
+          "height": 46,
+          "top": 73,
+          "right": 184,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    },
+    {
+      "state": "before240",
+      "old": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 144,
+          "height": 48,
+          "top": 72,
+          "right": 160,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 160,
+          "height": 46,
+          "top": 73,
+          "right": 222,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "now": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 144,
+          "height": 48,
+          "top": 72,
+          "right": 160,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 82,
+          "height": 46,
+          "top": 73,
+          "right": 144,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    },
+    {
+      "state": "normal390",
+      "old": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 294,
+          "height": 48,
+          "top": 72,
+          "right": 310,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 232,
+          "height": 46,
+          "top": 73,
+          "right": 294,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "now": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 294,
+          "height": 48,
+          "top": 72,
+          "right": 310,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 232,
+          "height": 46,
+          "top": 73,
+          "right": 294,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    },
+    {
+      "state": "normal320",
+      "old": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 224,
+          "height": 48,
+          "top": 72,
+          "right": 240,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 162,
+          "height": 46,
+          "top": 73,
+          "right": 224,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "now": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 224,
+          "height": 48,
+          "top": 72,
+          "right": 240,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 162,
+          "height": 46,
+          "top": 73,
+          "right": 224,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    },
+    {
+      "state": "body390x844",
+      "search": {
+        "box": {
+          "x": 16,
+          "y": 72,
+          "width": 294,
+          "height": 48,
+          "top": 72,
+          "right": 310,
+          "bottom": 120,
+          "left": 16
+        },
+        "input": {
+          "x": 62,
+          "y": 73,
+          "width": 232,
+          "height": 46,
+          "top": 73,
+          "right": 294,
+          "bottom": 119,
+          "left": 62
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 32,
+            "y": 87,
+            "width": 18,
+            "height": 18,
+            "top": 87,
+            "right": 50,
+            "bottom": 105,
+            "left": 32
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "filter": {
+        "box": {
+          "x": 326,
+          "y": 72,
+          "width": 48,
+          "height": 48,
+          "top": 72,
+          "right": 374,
+          "bottom": 120,
+          "left": 326
+        },
+        "top": 48,
+        "bottom": 844,
+        "left": 0,
+        "right": 390,
+        "hit": true
+      }
+    },
+    {
+      "state": "sheet390x844",
+      "controls": [
+        {
+          "label": "Semua",
+          "box": {
+            "box": {
+              "x": 22,
+              "y": 358,
+              "width": 78,
+              "height": 30,
+              "top": 358,
+              "right": 100,
+              "bottom": 388,
+              "left": 22
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 22,
+              "y": 358,
+              "width": 78,
+              "height": 30,
+              "top": 358,
+              "right": 100,
+              "bottom": 388,
+              "left": 22
+            },
+            "glyphs": [
+              {
+                "x": 38.640625,
+                "y": 364,
+                "width": 8.90625,
+                "height": 17,
+                "top": 364,
+                "right": 47.546875,
+                "bottom": 381,
+                "left": 38.640625
+              },
+              {
+                "x": 47.53125,
+                "y": 364,
+                "width": 7.90625,
+                "height": 17,
+                "top": 364,
+                "right": 55.4375,
+                "bottom": 381,
+                "left": 47.53125
+              },
+              {
+                "x": 55.421875,
+                "y": 364,
+                "width": 12.171875,
+                "height": 17,
+                "top": 364,
+                "right": 67.59375,
+                "bottom": 381,
+                "left": 55.421875
+              },
+              {
+                "x": 67.578125,
+                "y": 364,
+                "width": 8.125,
+                "height": 17,
+                "top": 364,
+                "right": 75.703125,
+                "bottom": 381,
+                "left": 67.578125
+              },
+              {
+                "x": 75.6875,
+                "y": 364,
+                "width": 7.65625,
+                "height": 17,
+                "top": 364,
+                "right": 83.34375,
+                "bottom": 381,
+                "left": 75.6875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tersedia",
+          "box": {
+            "box": {
+              "x": 116,
+              "y": 358,
+              "width": 90,
+              "height": 30,
+              "top": 358,
+              "right": 206,
+              "bottom": 388,
+              "left": 116
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 116,
+              "y": 358,
+              "width": 90,
+              "height": 30,
+              "top": 358,
+              "right": 206,
+              "bottom": 388,
+              "left": 116
+            },
+            "glyphs": [
+              {
+                "x": 133.640625,
+                "y": 364,
+                "width": 7.46875,
+                "height": 17,
+                "top": 364,
+                "right": 141.109375,
+                "bottom": 381,
+                "left": 133.640625
+              },
+              {
+                "x": 141.09375,
+                "y": 364,
+                "width": 7.90625,
+                "height": 17,
+                "top": 364,
+                "right": 149,
+                "bottom": 381,
+                "left": 141.09375
+              },
+              {
+                "x": 148.984375,
+                "y": 364,
+                "width": 5.0625,
+                "height": 17,
+                "top": 364,
+                "right": 154.046875,
+                "bottom": 381,
+                "left": 148.984375
+              },
+              {
+                "x": 154.03125,
+                "y": 364,
+                "width": 7.171875,
+                "height": 17,
+                "top": 364,
+                "right": 161.203125,
+                "bottom": 381,
+                "left": 154.03125
+              },
+              {
+                "x": 161.1875,
+                "y": 364,
+                "width": 7.90625,
+                "height": 17,
+                "top": 364,
+                "right": 169.09375,
+                "bottom": 381,
+                "left": 161.1875
+              },
+              {
+                "x": 169.078125,
+                "y": 364,
+                "width": 8.34375,
+                "height": 17,
+                "top": 364,
+                "right": 177.421875,
+                "bottom": 381,
+                "left": 169.078125
+              },
+              {
+                "x": 177.40625,
+                "y": 364,
+                "width": 3.28125,
+                "height": 17,
+                "top": 364,
+                "right": 180.6875,
+                "bottom": 381,
+                "left": 177.40625
+              },
+              {
+                "x": 180.671875,
+                "y": 364,
+                "width": 7.671875,
+                "height": 17,
+                "top": 364,
+                "right": 188.34375,
+                "bottom": 381,
+                "left": 180.671875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Menipis",
+          "box": {
+            "box": {
+              "x": 222,
+              "y": 358,
+              "width": 85,
+              "height": 30,
+              "top": 358,
+              "right": 307,
+              "bottom": 388,
+              "left": 222
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 222,
+              "y": 358,
+              "width": 85,
+              "height": 30,
+              "top": 358,
+              "right": 307,
+              "bottom": 388,
+              "left": 222
+            },
+            "glyphs": [
+              {
+                "x": 239.265625,
+                "y": 364,
+                "width": 12.453125,
+                "height": 17,
+                "top": 364,
+                "right": 251.71875,
+                "bottom": 381,
+                "left": 239.265625
+              },
+              {
+                "x": 251.703125,
+                "y": 364,
+                "width": 7.90625,
+                "height": 17,
+                "top": 364,
+                "right": 259.609375,
+                "bottom": 381,
+                "left": 251.703125
+              },
+              {
+                "x": 259.59375,
+                "y": 364,
+                "width": 8.109375,
+                "height": 17,
+                "top": 364,
+                "right": 267.703125,
+                "bottom": 381,
+                "left": 259.59375
+              },
+              {
+                "x": 267.6875,
+                "y": 364,
+                "width": 3.28125,
+                "height": 17,
+                "top": 364,
+                "right": 270.96875,
+                "bottom": 381,
+                "left": 267.6875
+              },
+              {
+                "x": 270.953125,
+                "y": 364,
+                "width": 8.34375,
+                "height": 17,
+                "top": 364,
+                "right": 279.296875,
+                "bottom": 381,
+                "left": 270.953125
+              },
+              {
+                "x": 279.28125,
+                "y": 364,
+                "width": 3.296875,
+                "height": 17,
+                "top": 364,
+                "right": 282.578125,
+                "bottom": 381,
+                "left": 279.28125
+              },
+              {
+                "x": 282.5625,
+                "y": 364,
+                "width": 7.171875,
+                "height": 17,
+                "top": 364,
+                "right": 289.734375,
+                "bottom": 381,
+                "left": 282.5625
+              }
+            ]
+          }
+        },
+        {
+          "label": "Habis",
+          "box": {
+            "box": {
+              "x": 22,
+              "y": 404,
+              "width": 71,
+              "height": 30,
+              "top": 404,
+              "right": 93,
+              "bottom": 434,
+              "left": 22
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 22,
+              "y": 404,
+              "width": 71,
+              "height": 30,
+              "top": 404,
+              "right": 93,
+              "bottom": 434,
+              "left": 22
+            },
+            "glyphs": [
+              {
+                "x": 39.203125,
+                "y": 410,
+                "width": 10.171875,
+                "height": 17,
+                "top": 410,
+                "right": 49.375,
+                "bottom": 427,
+                "left": 39.203125
+              },
+              {
+                "x": 49.359375,
+                "y": 410,
+                "width": 7.671875,
+                "height": 17,
+                "top": 410,
+                "right": 57.03125,
+                "bottom": 427,
+                "left": 49.359375
+              },
+              {
+                "x": 57.015625,
+                "y": 410,
+                "width": 8.328125,
+                "height": 17,
+                "top": 410,
+                "right": 65.34375,
+                "bottom": 427,
+                "left": 57.015625
+              },
+              {
+                "x": 65.34375,
+                "y": 410,
+                "width": 3.28125,
+                "height": 17,
+                "top": 410,
+                "right": 68.625,
+                "bottom": 427,
+                "left": 65.34375
+              },
+              {
+                "x": 68.609375,
+                "y": 410,
+                "width": 7.171875,
+                "height": 17,
+                "top": 410,
+                "right": 75.78125,
+                "bottom": 427,
+                "left": 68.609375
+              }
+            ]
+          }
+        },
+        {
+          "category": 0,
+          "box": {
+            "box": {
+              "x": 16,
+              "y": 488,
+              "width": 358,
+              "height": 53,
+              "top": 488,
+              "right": 374,
+              "bottom": 541,
+              "left": 16
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 16,
+              "y": 488,
+              "width": 358,
+              "height": 53,
+              "top": 488,
+              "right": 374,
+              "bottom": 541,
+              "left": 16
+            },
+            "glyphs": [
+              {
+                "x": 58,
+                "y": 505.5,
+                "width": 9.078125,
+                "height": 17,
+                "top": 505.5,
+                "right": 67.078125,
+                "bottom": 522.5,
+                "left": 58
+              },
+              {
+                "x": 67.0625,
+                "y": 505.5,
+                "width": 7.65625,
+                "height": 17,
+                "top": 505.5,
+                "right": 74.71875,
+                "bottom": 522.5,
+                "left": 67.0625
+              },
+              {
+                "x": 74.703125,
+                "y": 505.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 505.5,
+                "right": 78,
+                "bottom": 522.5,
+                "left": 74.703125
+              },
+              {
+                "x": 77.984375,
+                "y": 505.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 505.5,
+                "right": 86.09375,
+                "bottom": 522.5,
+                "left": 77.984375
+              }
+            ]
+          }
+        },
+        {
+          "category": 3,
+          "box": {
+            "box": {
+              "x": 16,
+              "y": 671,
+              "width": 358,
+              "height": 53,
+              "top": 671,
+              "right": 374,
+              "bottom": 724,
+              "left": 16
+            },
+            "top": 297,
+            "bottom": 748,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 16,
+              "y": 671,
+              "width": 358,
+              "height": 53,
+              "top": 671,
+              "right": 374,
+              "bottom": 724,
+              "left": 16
+            },
+            "glyphs": [
+              {
+                "x": 58,
+                "y": 688.5,
+                "width": 8.875,
+                "height": 17,
+                "top": 688.5,
+                "right": 66.875,
+                "bottom": 705.5,
+                "left": 58
+              },
+              {
+                "x": 66.859375,
+                "y": 688.5,
+                "width": 3.359375,
+                "height": 17,
+                "top": 688.5,
+                "right": 70.21875,
+                "bottom": 705.5,
+                "left": 66.859375
+              },
+              {
+                "x": 70.203125,
+                "y": 688.5,
+                "width": 4.703125,
+                "height": 17,
+                "top": 688.5,
+                "right": 74.90625,
+                "bottom": 705.5,
+                "left": 70.203125
+              },
+              {
+                "x": 74.890625,
+                "y": 688.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 688.5,
+                "right": 78.1875,
+                "bottom": 705.5,
+                "left": 74.890625
+              },
+              {
+                "x": 78.171875,
+                "y": 688.5,
+                "width": 8.4375,
+                "height": 17,
+                "top": 688.5,
+                "right": 86.609375,
+                "bottom": 705.5,
+                "left": 78.171875
+              },
+              {
+                "x": 86.59375,
+                "y": 688.5,
+                "width": 7.671875,
+                "height": 17,
+                "top": 688.5,
+                "right": 94.265625,
+                "bottom": 705.5,
+                "left": 86.59375
+              },
+              {
+                "x": 94.25,
+                "y": 688.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 688.5,
+                "right": 102.359375,
+                "bottom": 705.5,
+                "left": 94.25
+              }
+            ]
+          }
+        },
+        {
+          "label": "Reset",
+          "box": {
+            "box": {
+              "x": 16,
+              "y": 764,
+              "width": 172,
+              "height": 48,
+              "top": 764,
+              "right": 188,
+              "bottom": 812,
+              "left": 16
+            },
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 16,
+              "y": 764,
+              "width": 172,
+              "height": 48,
+              "top": 764,
+              "right": 188,
+              "bottom": 812,
+              "left": 16
+            },
+            "glyphs": [
+              {
+                "x": 80.828125,
+                "y": 777.390625,
+                "width": 10.078125,
+                "height": 20,
+                "top": 777.390625,
+                "right": 90.90625,
+                "bottom": 797.390625,
+                "left": 80.828125
+              },
+              {
+                "x": 90.890625,
+                "y": 777.390625,
+                "width": 9.140625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 100.03125,
+                "bottom": 797.390625,
+                "left": 90.890625
+              },
+              {
+                "x": 100.015625,
+                "y": 777.390625,
+                "width": 8.40625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 108.421875,
+                "bottom": 797.390625,
+                "left": 100.015625
+              },
+              {
+                "x": 108.421875,
+                "y": 777.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 777.390625,
+                "right": 117.546875,
+                "bottom": 797.390625,
+                "left": 108.421875
+              },
+              {
+                "x": 117.546875,
+                "y": 777.390625,
+                "width": 5.625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 123.171875,
+                "bottom": 797.390625,
+                "left": 117.546875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Terapkan",
+          "box": {
+            "box": {
+              "x": 202,
+              "y": 764,
+              "width": 172,
+              "height": 48,
+              "top": 764,
+              "right": 374,
+              "bottom": 812,
+              "left": 202
+            },
+            "top": 0,
+            "bottom": 844,
+            "left": 0,
+            "right": 390,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 202,
+              "y": 764,
+              "width": 172,
+              "height": 48,
+              "top": 764,
+              "right": 374,
+              "bottom": 812,
+              "left": 202
+            },
+            "glyphs": [
+              {
+                "x": 253.359375,
+                "y": 777.390625,
+                "width": 8.640625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 262,
+                "bottom": 797.390625,
+                "left": 253.359375
+              },
+              {
+                "x": 262,
+                "y": 777.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 777.390625,
+                "right": 271.125,
+                "bottom": 797.390625,
+                "left": 262
+              },
+              {
+                "x": 271.125,
+                "y": 777.390625,
+                "width": 5.828125,
+                "height": 20,
+                "top": 777.390625,
+                "right": 276.953125,
+                "bottom": 797.390625,
+                "left": 271.125
+              },
+              {
+                "x": 276.953125,
+                "y": 777.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 285.84375,
+                "bottom": 797.390625,
+                "left": 276.953125
+              },
+              {
+                "x": 285.84375,
+                "y": 777.390625,
+                "width": 9.65625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 295.5,
+                "bottom": 797.390625,
+                "left": 285.84375
+              },
+              {
+                "x": 295.5,
+                "y": 777.390625,
+                "width": 8.8125,
+                "height": 20,
+                "top": 777.390625,
+                "right": 304.3125,
+                "bottom": 797.390625,
+                "left": 295.5
+              },
+              {
+                "x": 304.3125,
+                "y": 777.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 777.390625,
+                "right": 313.203125,
+                "bottom": 797.390625,
+                "left": 304.3125
+              },
+              {
+                "x": 313.203125,
+                "y": 777.390625,
+                "width": 9.4375,
+                "height": 20,
+                "top": 777.390625,
+                "right": 322.640625,
+                "bottom": 797.390625,
+                "left": 313.203125
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "body320x568",
+      "search": {
+        "box": {
+          "x": 24,
+          "y": 96,
+          "width": 208,
+          "height": 48,
+          "top": 96,
+          "right": 232,
+          "bottom": 144,
+          "left": 24
+        },
+        "input": {
+          "x": 70,
+          "y": 97,
+          "width": 146,
+          "height": 46,
+          "top": 97,
+          "right": 216,
+          "bottom": 143,
+          "left": 70
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 40,
+            "y": 111,
+            "width": 18,
+            "height": 18,
+            "top": 111,
+            "right": 58,
+            "bottom": 129,
+            "left": 40
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "filter": {
+        "box": {
+          "x": 248,
+          "y": 96,
+          "width": 48,
+          "height": 48,
+          "top": 96,
+          "right": 296,
+          "bottom": 144,
+          "left": 248
+        },
+        "top": 72,
+        "bottom": 520,
+        "left": 8,
+        "right": 312,
+        "hit": true
+      }
+    },
+    {
+      "state": "sheet320x568",
+      "controls": [
+        {
+          "label": "Semua",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 108,
+              "bottom": 187,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 108,
+              "bottom": 187,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 46.640625,
+                "y": 163,
+                "width": 8.90625,
+                "height": 17,
+                "top": 163,
+                "right": 55.546875,
+                "bottom": 180,
+                "left": 46.640625
+              },
+              {
+                "x": 55.53125,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 63.4375,
+                "bottom": 180,
+                "left": 55.53125
+              },
+              {
+                "x": 63.421875,
+                "y": 163,
+                "width": 12.171875,
+                "height": 17,
+                "top": 163,
+                "right": 75.59375,
+                "bottom": 180,
+                "left": 63.421875
+              },
+              {
+                "x": 75.578125,
+                "y": 163,
+                "width": 8.125,
+                "height": 17,
+                "top": 163,
+                "right": 83.703125,
+                "bottom": 180,
+                "left": 75.578125
+              },
+              {
+                "x": 83.6875,
+                "y": 163,
+                "width": 7.65625,
+                "height": 17,
+                "top": 163,
+                "right": 91.34375,
+                "bottom": 180,
+                "left": 83.6875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tersedia",
+          "box": {
+            "box": {
+              "x": 124,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 214,
+              "bottom": 187,
+              "left": 124
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 124,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 214,
+              "bottom": 187,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 141.640625,
+                "y": 163,
+                "width": 7.46875,
+                "height": 17,
+                "top": 163,
+                "right": 149.109375,
+                "bottom": 180,
+                "left": 141.640625
+              },
+              {
+                "x": 149.09375,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 157,
+                "bottom": 180,
+                "left": 149.09375
+              },
+              {
+                "x": 156.984375,
+                "y": 163,
+                "width": 5.0625,
+                "height": 17,
+                "top": 163,
+                "right": 162.046875,
+                "bottom": 180,
+                "left": 156.984375
+              },
+              {
+                "x": 162.03125,
+                "y": 163,
+                "width": 7.171875,
+                "height": 17,
+                "top": 163,
+                "right": 169.203125,
+                "bottom": 180,
+                "left": 162.03125
+              },
+              {
+                "x": 169.1875,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 177.09375,
+                "bottom": 180,
+                "left": 169.1875
+              },
+              {
+                "x": 177.078125,
+                "y": 163,
+                "width": 8.34375,
+                "height": 17,
+                "top": 163,
+                "right": 185.421875,
+                "bottom": 180,
+                "left": 177.078125
+              },
+              {
+                "x": 185.40625,
+                "y": 163,
+                "width": 3.28125,
+                "height": 17,
+                "top": 163,
+                "right": 188.6875,
+                "bottom": 180,
+                "left": 185.40625
+              },
+              {
+                "x": 188.671875,
+                "y": 163,
+                "width": 7.671875,
+                "height": 17,
+                "top": 163,
+                "right": 196.34375,
+                "bottom": 180,
+                "left": 188.671875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Menipis",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 203,
+              "width": 85,
+              "height": 30,
+              "top": 203,
+              "right": 115,
+              "bottom": 233,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 203,
+              "width": 85,
+              "height": 30,
+              "top": 203,
+              "right": 115,
+              "bottom": 233,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 47.265625,
+                "y": 209,
+                "width": 12.453125,
+                "height": 17,
+                "top": 209,
+                "right": 59.71875,
+                "bottom": 226,
+                "left": 47.265625
+              },
+              {
+                "x": 59.703125,
+                "y": 209,
+                "width": 7.90625,
+                "height": 17,
+                "top": 209,
+                "right": 67.609375,
+                "bottom": 226,
+                "left": 59.703125
+              },
+              {
+                "x": 67.59375,
+                "y": 209,
+                "width": 8.109375,
+                "height": 17,
+                "top": 209,
+                "right": 75.703125,
+                "bottom": 226,
+                "left": 67.59375
+              },
+              {
+                "x": 75.6875,
+                "y": 209,
+                "width": 3.28125,
+                "height": 17,
+                "top": 209,
+                "right": 78.96875,
+                "bottom": 226,
+                "left": 75.6875
+              },
+              {
+                "x": 78.953125,
+                "y": 209,
+                "width": 8.34375,
+                "height": 17,
+                "top": 209,
+                "right": 87.296875,
+                "bottom": 226,
+                "left": 78.953125
+              },
+              {
+                "x": 87.28125,
+                "y": 209,
+                "width": 3.296875,
+                "height": 17,
+                "top": 209,
+                "right": 90.578125,
+                "bottom": 226,
+                "left": 87.28125
+              },
+              {
+                "x": 90.5625,
+                "y": 209,
+                "width": 7.171875,
+                "height": 17,
+                "top": 209,
+                "right": 97.734375,
+                "bottom": 226,
+                "left": 90.5625
+              }
+            ]
+          }
+        },
+        {
+          "label": "Habis",
+          "box": {
+            "box": {
+              "x": 131,
+              "y": 203,
+              "width": 71,
+              "height": 30,
+              "top": 203,
+              "right": 202,
+              "bottom": 233,
+              "left": 131
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 131,
+              "y": 203,
+              "width": 71,
+              "height": 30,
+              "top": 203,
+              "right": 202,
+              "bottom": 233,
+              "left": 131
+            },
+            "glyphs": [
+              {
+                "x": 148.203125,
+                "y": 209,
+                "width": 10.171875,
+                "height": 17,
+                "top": 209,
+                "right": 158.375,
+                "bottom": 226,
+                "left": 148.203125
+              },
+              {
+                "x": 158.359375,
+                "y": 209,
+                "width": 7.671875,
+                "height": 17,
+                "top": 209,
+                "right": 166.03125,
+                "bottom": 226,
+                "left": 158.359375
+              },
+              {
+                "x": 166.015625,
+                "y": 209,
+                "width": 8.328125,
+                "height": 17,
+                "top": 209,
+                "right": 174.34375,
+                "bottom": 226,
+                "left": 166.015625
+              },
+              {
+                "x": 174.34375,
+                "y": 209,
+                "width": 3.28125,
+                "height": 17,
+                "top": 209,
+                "right": 177.625,
+                "bottom": 226,
+                "left": 174.34375
+              },
+              {
+                "x": 177.609375,
+                "y": 209,
+                "width": 7.171875,
+                "height": 17,
+                "top": 209,
+                "right": 184.78125,
+                "bottom": 226,
+                "left": 177.609375
+              }
+            ]
+          }
+        },
+        {
+          "category": 0,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 287,
+              "width": 272,
+              "height": 53,
+              "top": 287,
+              "right": 296,
+              "bottom": 340,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 287,
+              "width": 272,
+              "height": 53,
+              "top": 287,
+              "right": 296,
+              "bottom": 340,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 304.5,
+                "width": 9.078125,
+                "height": 17,
+                "top": 304.5,
+                "right": 75.078125,
+                "bottom": 321.5,
+                "left": 66
+              },
+              {
+                "x": 75.0625,
+                "y": 304.5,
+                "width": 7.65625,
+                "height": 17,
+                "top": 304.5,
+                "right": 82.71875,
+                "bottom": 321.5,
+                "left": 75.0625
+              },
+              {
+                "x": 82.703125,
+                "y": 304.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 304.5,
+                "right": 86,
+                "bottom": 321.5,
+                "left": 82.703125
+              },
+              {
+                "x": 85.984375,
+                "y": 304.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 304.5,
+                "right": 94.09375,
+                "bottom": 321.5,
+                "left": 85.984375
+              }
+            ]
+          }
+        },
+        {
+          "category": 3,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 347,
+              "width": 272,
+              "height": 53,
+              "top": 347,
+              "right": 296,
+              "bottom": 400,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 424,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 347,
+              "width": 272,
+              "height": 53,
+              "top": 347,
+              "right": 296,
+              "bottom": 400,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 364.5,
+                "width": 8.875,
+                "height": 17,
+                "top": 364.5,
+                "right": 74.875,
+                "bottom": 381.5,
+                "left": 66
+              },
+              {
+                "x": 74.859375,
+                "y": 364.5,
+                "width": 3.359375,
+                "height": 17,
+                "top": 364.5,
+                "right": 78.21875,
+                "bottom": 381.5,
+                "left": 74.859375
+              },
+              {
+                "x": 78.203125,
+                "y": 364.5,
+                "width": 4.703125,
+                "height": 17,
+                "top": 364.5,
+                "right": 82.90625,
+                "bottom": 381.5,
+                "left": 78.203125
+              },
+              {
+                "x": 82.890625,
+                "y": 364.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 364.5,
+                "right": 86.1875,
+                "bottom": 381.5,
+                "left": 82.890625
+              },
+              {
+                "x": 86.171875,
+                "y": 364.5,
+                "width": 8.4375,
+                "height": 17,
+                "top": 364.5,
+                "right": 94.609375,
+                "bottom": 381.5,
+                "left": 86.171875
+              },
+              {
+                "x": 94.59375,
+                "y": 364.5,
+                "width": 7.671875,
+                "height": 17,
+                "top": 364.5,
+                "right": 102.265625,
+                "bottom": 381.5,
+                "left": 94.59375
+              },
+              {
+                "x": 102.25,
+                "y": 364.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 364.5,
+                "right": 110.359375,
+                "bottom": 381.5,
+                "left": 102.25
+              }
+            ]
+          }
+        },
+        {
+          "label": "Reset",
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 440,
+              "width": 129,
+              "height": 48,
+              "top": 440,
+              "right": 153,
+              "bottom": 488,
+              "left": 24
+            },
+            "top": 24,
+            "bottom": 520,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 440,
+              "width": 129,
+              "height": 48,
+              "top": 440,
+              "right": 153,
+              "bottom": 488,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 67.328125,
+                "y": 453.390625,
+                "width": 10.078125,
+                "height": 20,
+                "top": 453.390625,
+                "right": 77.40625,
+                "bottom": 473.390625,
+                "left": 67.328125
+              },
+              {
+                "x": 77.390625,
+                "y": 453.390625,
+                "width": 9.140625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 86.53125,
+                "bottom": 473.390625,
+                "left": 77.390625
+              },
+              {
+                "x": 86.515625,
+                "y": 453.390625,
+                "width": 8.40625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 94.921875,
+                "bottom": 473.390625,
+                "left": 86.515625
+              },
+              {
+                "x": 94.921875,
+                "y": 453.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 453.390625,
+                "right": 104.046875,
+                "bottom": 473.390625,
+                "left": 94.921875
+              },
+              {
+                "x": 104.046875,
+                "y": 453.390625,
+                "width": 5.625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 109.671875,
+                "bottom": 473.390625,
+                "left": 104.046875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Terapkan",
+          "box": {
+            "box": {
+              "x": 167,
+              "y": 440,
+              "width": 129,
+              "height": 48,
+              "top": 440,
+              "right": 296,
+              "bottom": 488,
+              "left": 167
+            },
+            "top": 24,
+            "bottom": 520,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 167,
+              "y": 440,
+              "width": 129,
+              "height": 48,
+              "top": 440,
+              "right": 296,
+              "bottom": 488,
+              "left": 167
+            },
+            "glyphs": [
+              {
+                "x": 196.859375,
+                "y": 453.390625,
+                "width": 8.640625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 205.5,
+                "bottom": 473.390625,
+                "left": 196.859375
+              },
+              {
+                "x": 205.5,
+                "y": 453.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 453.390625,
+                "right": 214.625,
+                "bottom": 473.390625,
+                "left": 205.5
+              },
+              {
+                "x": 214.625,
+                "y": 453.390625,
+                "width": 5.828125,
+                "height": 20,
+                "top": 453.390625,
+                "right": 220.453125,
+                "bottom": 473.390625,
+                "left": 214.625
+              },
+              {
+                "x": 220.453125,
+                "y": 453.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 229.34375,
+                "bottom": 473.390625,
+                "left": 220.453125
+              },
+              {
+                "x": 229.34375,
+                "y": 453.390625,
+                "width": 9.65625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 239,
+                "bottom": 473.390625,
+                "left": 229.34375
+              },
+              {
+                "x": 239,
+                "y": 453.390625,
+                "width": 8.8125,
+                "height": 20,
+                "top": 453.390625,
+                "right": 247.8125,
+                "bottom": 473.390625,
+                "left": 239
+              },
+              {
+                "x": 247.8125,
+                "y": 453.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 453.390625,
+                "right": 256.703125,
+                "bottom": 473.390625,
+                "left": 247.8125
+              },
+              {
+                "x": 256.703125,
+                "y": 453.390625,
+                "width": 9.4375,
+                "height": 20,
+                "top": 453.390625,
+                "right": 266.140625,
+                "bottom": 473.390625,
+                "left": 256.703125
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "body240x320",
+      "search": {
+        "box": {
+          "x": 24,
+          "y": 106,
+          "width": 128,
+          "height": 48,
+          "top": 106,
+          "right": 152,
+          "bottom": 154,
+          "left": 24
+        },
+        "input": {
+          "x": 70,
+          "y": 107,
+          "width": 66,
+          "height": 46,
+          "top": 107,
+          "right": 136,
+          "bottom": 153,
+          "left": 70
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 40,
+            "y": 121,
+            "width": 18,
+            "height": 18,
+            "top": 121,
+            "right": 58,
+            "bottom": 139,
+            "left": 40
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "filter": {
+        "box": {
+          "x": 168,
+          "y": 106,
+          "width": 48,
+          "height": 48,
+          "top": 106,
+          "right": 216,
+          "bottom": 154,
+          "left": 168
+        },
+        "top": 82,
+        "bottom": 272,
+        "left": 8,
+        "right": 232,
+        "hit": true
+      }
+    },
+    {
+      "state": "sheet240x320",
+      "controls": [
+        {
+          "label": "Semua",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 178,
+              "width": 78,
+              "height": 30,
+              "top": 178,
+              "right": 108,
+              "bottom": 208,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 178,
+              "width": 78,
+              "height": 30,
+              "top": 178,
+              "right": 108,
+              "bottom": 208,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 46.640625,
+                "y": 184,
+                "width": 8.90625,
+                "height": 17,
+                "top": 184,
+                "right": 55.546875,
+                "bottom": 201,
+                "left": 46.640625
+              },
+              {
+                "x": 55.53125,
+                "y": 184,
+                "width": 7.90625,
+                "height": 17,
+                "top": 184,
+                "right": 63.4375,
+                "bottom": 201,
+                "left": 55.53125
+              },
+              {
+                "x": 63.421875,
+                "y": 184,
+                "width": 12.171875,
+                "height": 17,
+                "top": 184,
+                "right": 75.59375,
+                "bottom": 201,
+                "left": 63.421875
+              },
+              {
+                "x": 75.578125,
+                "y": 184,
+                "width": 8.125,
+                "height": 17,
+                "top": 184,
+                "right": 83.703125,
+                "bottom": 201,
+                "left": 75.578125
+              },
+              {
+                "x": 83.6875,
+                "y": 184,
+                "width": 7.65625,
+                "height": 17,
+                "top": 184,
+                "right": 91.34375,
+                "bottom": 201,
+                "left": 83.6875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tersedia",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 224,
+              "width": 90,
+              "height": 30,
+              "top": 224,
+              "right": 120,
+              "bottom": 254,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 224,
+              "width": 90,
+              "height": 30,
+              "top": 224,
+              "right": 120,
+              "bottom": 254,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 47.640625,
+                "y": 230,
+                "width": 7.46875,
+                "height": 17,
+                "top": 230,
+                "right": 55.109375,
+                "bottom": 247,
+                "left": 47.640625
+              },
+              {
+                "x": 55.09375,
+                "y": 230,
+                "width": 7.90625,
+                "height": 17,
+                "top": 230,
+                "right": 63,
+                "bottom": 247,
+                "left": 55.09375
+              },
+              {
+                "x": 62.984375,
+                "y": 230,
+                "width": 5.0625,
+                "height": 17,
+                "top": 230,
+                "right": 68.046875,
+                "bottom": 247,
+                "left": 62.984375
+              },
+              {
+                "x": 68.03125,
+                "y": 230,
+                "width": 7.171875,
+                "height": 17,
+                "top": 230,
+                "right": 75.203125,
+                "bottom": 247,
+                "left": 68.03125
+              },
+              {
+                "x": 75.1875,
+                "y": 230,
+                "width": 7.90625,
+                "height": 17,
+                "top": 230,
+                "right": 83.09375,
+                "bottom": 247,
+                "left": 75.1875
+              },
+              {
+                "x": 83.078125,
+                "y": 230,
+                "width": 8.34375,
+                "height": 17,
+                "top": 230,
+                "right": 91.421875,
+                "bottom": 247,
+                "left": 83.078125
+              },
+              {
+                "x": 91.40625,
+                "y": 230,
+                "width": 3.28125,
+                "height": 17,
+                "top": 230,
+                "right": 94.6875,
+                "bottom": 247,
+                "left": 91.40625
+              },
+              {
+                "x": 94.671875,
+                "y": 230,
+                "width": 7.671875,
+                "height": 17,
+                "top": 230,
+                "right": 102.34375,
+                "bottom": 247,
+                "left": 94.671875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Menipis",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 242,
+              "width": 85,
+              "height": 30,
+              "top": 242,
+              "right": 115,
+              "bottom": 272,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 242,
+              "width": 85,
+              "height": 30,
+              "top": 242,
+              "right": 115,
+              "bottom": 272,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 47.265625,
+                "y": 248,
+                "width": 12.453125,
+                "height": 17,
+                "top": 248,
+                "right": 59.71875,
+                "bottom": 265,
+                "left": 47.265625
+              },
+              {
+                "x": 59.703125,
+                "y": 248,
+                "width": 7.90625,
+                "height": 17,
+                "top": 248,
+                "right": 67.609375,
+                "bottom": 265,
+                "left": 59.703125
+              },
+              {
+                "x": 67.59375,
+                "y": 248,
+                "width": 8.109375,
+                "height": 17,
+                "top": 248,
+                "right": 75.703125,
+                "bottom": 265,
+                "left": 67.59375
+              },
+              {
+                "x": 75.6875,
+                "y": 248,
+                "width": 3.28125,
+                "height": 17,
+                "top": 248,
+                "right": 78.96875,
+                "bottom": 265,
+                "left": 75.6875
+              },
+              {
+                "x": 78.953125,
+                "y": 248,
+                "width": 8.34375,
+                "height": 17,
+                "top": 248,
+                "right": 87.296875,
+                "bottom": 265,
+                "left": 78.953125
+              },
+              {
+                "x": 87.28125,
+                "y": 248,
+                "width": 3.296875,
+                "height": 17,
+                "top": 248,
+                "right": 90.578125,
+                "bottom": 265,
+                "left": 87.28125
+              },
+              {
+                "x": 90.5625,
+                "y": 248,
+                "width": 7.171875,
+                "height": 17,
+                "top": 248,
+                "right": 97.734375,
+                "bottom": 265,
+                "left": 90.5625
+              }
+            ]
+          }
+        },
+        {
+          "label": "Habis",
+          "box": {
+            "box": {
+              "x": 131,
+              "y": 242,
+              "width": 71,
+              "height": 30,
+              "top": 242,
+              "right": 202,
+              "bottom": 272,
+              "left": 131
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 131,
+              "y": 242,
+              "width": 71,
+              "height": 30,
+              "top": 242,
+              "right": 202,
+              "bottom": 272,
+              "left": 131
+            },
+            "glyphs": [
+              {
+                "x": 148.203125,
+                "y": 248,
+                "width": 10.171875,
+                "height": 17,
+                "top": 248,
+                "right": 158.375,
+                "bottom": 265,
+                "left": 148.203125
+              },
+              {
+                "x": 158.359375,
+                "y": 248,
+                "width": 7.671875,
+                "height": 17,
+                "top": 248,
+                "right": 166.03125,
+                "bottom": 265,
+                "left": 158.359375
+              },
+              {
+                "x": 166.015625,
+                "y": 248,
+                "width": 8.328125,
+                "height": 17,
+                "top": 248,
+                "right": 174.34375,
+                "bottom": 265,
+                "left": 166.015625
+              },
+              {
+                "x": 174.34375,
+                "y": 248,
+                "width": 3.28125,
+                "height": 17,
+                "top": 248,
+                "right": 177.625,
+                "bottom": 265,
+                "left": 174.34375
+              },
+              {
+                "x": 177.609375,
+                "y": 248,
+                "width": 7.171875,
+                "height": 17,
+                "top": 248,
+                "right": 184.78125,
+                "bottom": 265,
+                "left": 177.609375
+              }
+            ]
+          }
+        },
+        {
+          "category": 0,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 157,
+              "width": 192,
+              "height": 53,
+              "top": 157,
+              "right": 216,
+              "bottom": 210,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 157,
+              "width": 192,
+              "height": 53,
+              "top": 157,
+              "right": 216,
+              "bottom": 210,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 174.5,
+                "width": 9.078125,
+                "height": 17,
+                "top": 174.5,
+                "right": 75.078125,
+                "bottom": 191.5,
+                "left": 66
+              },
+              {
+                "x": 75.0625,
+                "y": 174.5,
+                "width": 7.65625,
+                "height": 17,
+                "top": 174.5,
+                "right": 82.71875,
+                "bottom": 191.5,
+                "left": 75.0625
+              },
+              {
+                "x": 82.703125,
+                "y": 174.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 174.5,
+                "right": 86,
+                "bottom": 191.5,
+                "left": 82.703125
+              },
+              {
+                "x": 85.984375,
+                "y": 174.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 174.5,
+                "right": 94.09375,
+                "bottom": 191.5,
+                "left": 85.984375
+              }
+            ]
+          }
+        },
+        {
+          "category": 3,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 157,
+              "width": 192,
+              "height": 53,
+              "top": 157,
+              "right": 216,
+              "bottom": 210,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 157,
+              "width": 192,
+              "height": 53,
+              "top": 157,
+              "right": 216,
+              "bottom": 210,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 174.5,
+                "width": 8.875,
+                "height": 17,
+                "top": 174.5,
+                "right": 74.875,
+                "bottom": 191.5,
+                "left": 66
+              },
+              {
+                "x": 74.859375,
+                "y": 174.5,
+                "width": 3.359375,
+                "height": 17,
+                "top": 174.5,
+                "right": 78.21875,
+                "bottom": 191.5,
+                "left": 74.859375
+              },
+              {
+                "x": 78.203125,
+                "y": 174.5,
+                "width": 4.703125,
+                "height": 17,
+                "top": 174.5,
+                "right": 82.90625,
+                "bottom": 191.5,
+                "left": 78.203125
+              },
+              {
+                "x": 82.890625,
+                "y": 174.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 174.5,
+                "right": 86.1875,
+                "bottom": 191.5,
+                "left": 82.890625
+              },
+              {
+                "x": 86.171875,
+                "y": 174.5,
+                "width": 8.4375,
+                "height": 17,
+                "top": 174.5,
+                "right": 94.609375,
+                "bottom": 191.5,
+                "left": 86.171875
+              },
+              {
+                "x": 94.59375,
+                "y": 174.5,
+                "width": 7.671875,
+                "height": 17,
+                "top": 174.5,
+                "right": 102.265625,
+                "bottom": 191.5,
+                "left": 94.59375
+              },
+              {
+                "x": 102.25,
+                "y": 174.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 174.5,
+                "right": 110.359375,
+                "bottom": 191.5,
+                "left": 102.25
+              }
+            ]
+          }
+        },
+        {
+          "label": "Reset",
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 220,
+              "width": 192,
+              "height": 48,
+              "top": 220,
+              "right": 216,
+              "bottom": 268,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 220,
+              "width": 192,
+              "height": 48,
+              "top": 220,
+              "right": 216,
+              "bottom": 268,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 98.828125,
+                "y": 233.390625,
+                "width": 10.078125,
+                "height": 20,
+                "top": 233.390625,
+                "right": 108.90625,
+                "bottom": 253.390625,
+                "left": 98.828125
+              },
+              {
+                "x": 108.890625,
+                "y": 233.390625,
+                "width": 9.140625,
+                "height": 20,
+                "top": 233.390625,
+                "right": 118.03125,
+                "bottom": 253.390625,
+                "left": 108.890625
+              },
+              {
+                "x": 118.015625,
+                "y": 233.390625,
+                "width": 8.40625,
+                "height": 20,
+                "top": 233.390625,
+                "right": 126.421875,
+                "bottom": 253.390625,
+                "left": 118.015625
+              },
+              {
+                "x": 126.421875,
+                "y": 233.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 233.390625,
+                "right": 135.546875,
+                "bottom": 253.390625,
+                "left": 126.421875
+              },
+              {
+                "x": 135.546875,
+                "y": 233.390625,
+                "width": 5.625,
+                "height": 20,
+                "top": 233.390625,
+                "right": 141.171875,
+                "bottom": 253.390625,
+                "left": 135.546875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Terapkan",
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 192,
+              "width": 192,
+              "height": 48,
+              "top": 192,
+              "right": 216,
+              "bottom": 240,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 272,
+            "left": 8,
+            "right": 232,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 192,
+              "width": 192,
+              "height": 48,
+              "top": 192,
+              "right": 216,
+              "bottom": 240,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 85.359375,
+                "y": 205.390625,
+                "width": 8.640625,
+                "height": 20,
+                "top": 205.390625,
+                "right": 94,
+                "bottom": 225.390625,
+                "left": 85.359375
+              },
+              {
+                "x": 94,
+                "y": 205.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 205.390625,
+                "right": 103.125,
+                "bottom": 225.390625,
+                "left": 94
+              },
+              {
+                "x": 103.125,
+                "y": 205.390625,
+                "width": 5.828125,
+                "height": 20,
+                "top": 205.390625,
+                "right": 108.953125,
+                "bottom": 225.390625,
+                "left": 103.125
+              },
+              {
+                "x": 108.953125,
+                "y": 205.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 205.390625,
+                "right": 117.84375,
+                "bottom": 225.390625,
+                "left": 108.953125
+              },
+              {
+                "x": 117.84375,
+                "y": 205.390625,
+                "width": 9.65625,
+                "height": 20,
+                "top": 205.390625,
+                "right": 127.5,
+                "bottom": 225.390625,
+                "left": 117.84375
+              },
+              {
+                "x": 127.5,
+                "y": 205.390625,
+                "width": 8.8125,
+                "height": 20,
+                "top": 205.390625,
+                "right": 136.3125,
+                "bottom": 225.390625,
+                "left": 127.5
+              },
+              {
+                "x": 136.3125,
+                "y": 205.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 205.390625,
+                "right": 145.203125,
+                "bottom": 225.390625,
+                "left": 136.3125
+              },
+              {
+                "x": 145.203125,
+                "y": 205.390625,
+                "width": 9.4375,
+                "height": 20,
+                "top": 205.390625,
+                "right": 154.640625,
+                "bottom": 225.390625,
+                "left": 145.203125
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "body844x240",
+      "search": {
+        "box": {
+          "x": 64,
+          "y": 96,
+          "width": 676,
+          "height": 48,
+          "top": 96,
+          "right": 740,
+          "bottom": 144,
+          "left": 64
+        },
+        "input": {
+          "x": 110,
+          "y": 97,
+          "width": 614,
+          "height": 46,
+          "top": 97,
+          "right": 724,
+          "bottom": 143,
+          "left": 110
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 80,
+            "y": 111,
+            "width": 18,
+            "height": 18,
+            "top": 111,
+            "right": 98,
+            "bottom": 129,
+            "left": 80
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "filter": {
+        "box": {
+          "x": 756,
+          "y": 96,
+          "width": 48,
+          "height": 48,
+          "top": 96,
+          "right": 804,
+          "bottom": 144,
+          "left": 756
+        },
+        "top": 72,
+        "bottom": 192,
+        "left": 48,
+        "right": 820,
+        "hit": true
+      }
+    },
+    {
+      "state": "sheet844x240",
+      "controls": [
+        {
+          "label": "Semua",
+          "box": {
+            "box": {
+              "x": 70,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 148,
+              "bottom": 187,
+              "left": 70
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 70,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 148,
+              "bottom": 187,
+              "left": 70
+            },
+            "glyphs": [
+              {
+                "x": 86.640625,
+                "y": 163,
+                "width": 8.90625,
+                "height": 17,
+                "top": 163,
+                "right": 95.546875,
+                "bottom": 180,
+                "left": 86.640625
+              },
+              {
+                "x": 95.53125,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 103.4375,
+                "bottom": 180,
+                "left": 95.53125
+              },
+              {
+                "x": 103.421875,
+                "y": 163,
+                "width": 12.171875,
+                "height": 17,
+                "top": 163,
+                "right": 115.59375,
+                "bottom": 180,
+                "left": 103.421875
+              },
+              {
+                "x": 115.578125,
+                "y": 163,
+                "width": 8.125,
+                "height": 17,
+                "top": 163,
+                "right": 123.703125,
+                "bottom": 180,
+                "left": 115.578125
+              },
+              {
+                "x": 123.6875,
+                "y": 163,
+                "width": 7.65625,
+                "height": 17,
+                "top": 163,
+                "right": 131.34375,
+                "bottom": 180,
+                "left": 123.6875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tersedia",
+          "box": {
+            "box": {
+              "x": 164,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 254,
+              "bottom": 187,
+              "left": 164
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 164,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 254,
+              "bottom": 187,
+              "left": 164
+            },
+            "glyphs": [
+              {
+                "x": 181.640625,
+                "y": 163,
+                "width": 7.46875,
+                "height": 17,
+                "top": 163,
+                "right": 189.109375,
+                "bottom": 180,
+                "left": 181.640625
+              },
+              {
+                "x": 189.09375,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 197,
+                "bottom": 180,
+                "left": 189.09375
+              },
+              {
+                "x": 196.984375,
+                "y": 163,
+                "width": 5.0625,
+                "height": 17,
+                "top": 163,
+                "right": 202.046875,
+                "bottom": 180,
+                "left": 196.984375
+              },
+              {
+                "x": 202.03125,
+                "y": 163,
+                "width": 7.171875,
+                "height": 17,
+                "top": 163,
+                "right": 209.203125,
+                "bottom": 180,
+                "left": 202.03125
+              },
+              {
+                "x": 209.1875,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 217.09375,
+                "bottom": 180,
+                "left": 209.1875
+              },
+              {
+                "x": 217.078125,
+                "y": 163,
+                "width": 8.34375,
+                "height": 17,
+                "top": 163,
+                "right": 225.421875,
+                "bottom": 180,
+                "left": 217.078125
+              },
+              {
+                "x": 225.40625,
+                "y": 163,
+                "width": 3.28125,
+                "height": 17,
+                "top": 163,
+                "right": 228.6875,
+                "bottom": 180,
+                "left": 225.40625
+              },
+              {
+                "x": 228.671875,
+                "y": 163,
+                "width": 7.671875,
+                "height": 17,
+                "top": 163,
+                "right": 236.34375,
+                "bottom": 180,
+                "left": 228.671875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Menipis",
+          "box": {
+            "box": {
+              "x": 270,
+              "y": 157,
+              "width": 85,
+              "height": 30,
+              "top": 157,
+              "right": 355,
+              "bottom": 187,
+              "left": 270
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 270,
+              "y": 157,
+              "width": 85,
+              "height": 30,
+              "top": 157,
+              "right": 355,
+              "bottom": 187,
+              "left": 270
+            },
+            "glyphs": [
+              {
+                "x": 287.265625,
+                "y": 163,
+                "width": 12.453125,
+                "height": 17,
+                "top": 163,
+                "right": 299.71875,
+                "bottom": 180,
+                "left": 287.265625
+              },
+              {
+                "x": 299.703125,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 307.609375,
+                "bottom": 180,
+                "left": 299.703125
+              },
+              {
+                "x": 307.59375,
+                "y": 163,
+                "width": 8.109375,
+                "height": 17,
+                "top": 163,
+                "right": 315.703125,
+                "bottom": 180,
+                "left": 307.59375
+              },
+              {
+                "x": 315.6875,
+                "y": 163,
+                "width": 3.28125,
+                "height": 17,
+                "top": 163,
+                "right": 318.96875,
+                "bottom": 180,
+                "left": 315.6875
+              },
+              {
+                "x": 318.953125,
+                "y": 163,
+                "width": 8.34375,
+                "height": 17,
+                "top": 163,
+                "right": 327.296875,
+                "bottom": 180,
+                "left": 318.953125
+              },
+              {
+                "x": 327.28125,
+                "y": 163,
+                "width": 3.296875,
+                "height": 17,
+                "top": 163,
+                "right": 330.578125,
+                "bottom": 180,
+                "left": 327.28125
+              },
+              {
+                "x": 330.5625,
+                "y": 163,
+                "width": 7.171875,
+                "height": 17,
+                "top": 163,
+                "right": 337.734375,
+                "bottom": 180,
+                "left": 330.5625
+              }
+            ]
+          }
+        },
+        {
+          "label": "Habis",
+          "box": {
+            "box": {
+              "x": 371,
+              "y": 157,
+              "width": 71,
+              "height": 30,
+              "top": 157,
+              "right": 442,
+              "bottom": 187,
+              "left": 371
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 371,
+              "y": 157,
+              "width": 71,
+              "height": 30,
+              "top": 157,
+              "right": 442,
+              "bottom": 187,
+              "left": 371
+            },
+            "glyphs": [
+              {
+                "x": 388.203125,
+                "y": 163,
+                "width": 10.171875,
+                "height": 17,
+                "top": 163,
+                "right": 398.375,
+                "bottom": 180,
+                "left": 388.203125
+              },
+              {
+                "x": 398.359375,
+                "y": 163,
+                "width": 7.671875,
+                "height": 17,
+                "top": 163,
+                "right": 406.03125,
+                "bottom": 180,
+                "left": 398.359375
+              },
+              {
+                "x": 406.015625,
+                "y": 163,
+                "width": 8.328125,
+                "height": 17,
+                "top": 163,
+                "right": 414.34375,
+                "bottom": 180,
+                "left": 406.015625
+              },
+              {
+                "x": 414.34375,
+                "y": 163,
+                "width": 3.28125,
+                "height": 17,
+                "top": 163,
+                "right": 417.625,
+                "bottom": 180,
+                "left": 414.34375
+              },
+              {
+                "x": 417.609375,
+                "y": 163,
+                "width": 7.171875,
+                "height": 17,
+                "top": 163,
+                "right": 424.78125,
+                "bottom": 180,
+                "left": 417.609375
+              }
+            ]
+          }
+        },
+        {
+          "category": 0,
+          "box": {
+            "box": {
+              "x": 64,
+              "y": 117,
+              "width": 740,
+              "height": 53,
+              "top": 117,
+              "right": 804,
+              "bottom": 170,
+              "left": 64
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 64,
+              "y": 117,
+              "width": 740,
+              "height": 53,
+              "top": 117,
+              "right": 804,
+              "bottom": 170,
+              "left": 64
+            },
+            "glyphs": [
+              {
+                "x": 106,
+                "y": 134.5,
+                "width": 9.078125,
+                "height": 17,
+                "top": 134.5,
+                "right": 115.078125,
+                "bottom": 151.5,
+                "left": 106
+              },
+              {
+                "x": 115.0625,
+                "y": 134.5,
+                "width": 7.65625,
+                "height": 17,
+                "top": 134.5,
+                "right": 122.71875,
+                "bottom": 151.5,
+                "left": 115.0625
+              },
+              {
+                "x": 122.703125,
+                "y": 134.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 134.5,
+                "right": 126,
+                "bottom": 151.5,
+                "left": 122.703125
+              },
+              {
+                "x": 125.984375,
+                "y": 134.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 134.5,
+                "right": 134.09375,
+                "bottom": 151.5,
+                "left": 125.984375
+              }
+            ]
+          }
+        },
+        {
+          "category": 3,
+          "box": {
+            "box": {
+              "x": 64,
+              "y": 117,
+              "width": 740,
+              "height": 53,
+              "top": 117,
+              "right": 804,
+              "bottom": 170,
+              "left": 64
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 64,
+              "y": 117,
+              "width": 740,
+              "height": 53,
+              "top": 117,
+              "right": 804,
+              "bottom": 170,
+              "left": 64
+            },
+            "glyphs": [
+              {
+                "x": 106,
+                "y": 134.5,
+                "width": 8.875,
+                "height": 17,
+                "top": 134.5,
+                "right": 114.875,
+                "bottom": 151.5,
+                "left": 106
+              },
+              {
+                "x": 114.859375,
+                "y": 134.5,
+                "width": 3.359375,
+                "height": 17,
+                "top": 134.5,
+                "right": 118.21875,
+                "bottom": 151.5,
+                "left": 114.859375
+              },
+              {
+                "x": 118.203125,
+                "y": 134.5,
+                "width": 4.703125,
+                "height": 17,
+                "top": 134.5,
+                "right": 122.90625,
+                "bottom": 151.5,
+                "left": 118.203125
+              },
+              {
+                "x": 122.890625,
+                "y": 134.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 134.5,
+                "right": 126.1875,
+                "bottom": 151.5,
+                "left": 122.890625
+              },
+              {
+                "x": 126.171875,
+                "y": 134.5,
+                "width": 8.4375,
+                "height": 17,
+                "top": 134.5,
+                "right": 134.609375,
+                "bottom": 151.5,
+                "left": 126.171875
+              },
+              {
+                "x": 134.59375,
+                "y": 134.5,
+                "width": 7.671875,
+                "height": 17,
+                "top": 134.5,
+                "right": 142.265625,
+                "bottom": 151.5,
+                "left": 134.59375
+              },
+              {
+                "x": 142.25,
+                "y": 134.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 134.5,
+                "right": 150.359375,
+                "bottom": 151.5,
+                "left": 142.25
+              }
+            ]
+          }
+        },
+        {
+          "label": "Reset",
+          "box": {
+            "box": {
+              "x": 64,
+              "y": 120,
+              "width": 363,
+              "height": 48,
+              "top": 120,
+              "right": 427,
+              "bottom": 168,
+              "left": 64
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 64,
+              "y": 120,
+              "width": 363,
+              "height": 48,
+              "top": 120,
+              "right": 427,
+              "bottom": 168,
+              "left": 64
+            },
+            "glyphs": [
+              {
+                "x": 224.328125,
+                "y": 133.390625,
+                "width": 10.078125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 234.40625,
+                "bottom": 153.390625,
+                "left": 224.328125
+              },
+              {
+                "x": 234.390625,
+                "y": 133.390625,
+                "width": 9.140625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 243.53125,
+                "bottom": 153.390625,
+                "left": 234.390625
+              },
+              {
+                "x": 243.515625,
+                "y": 133.390625,
+                "width": 8.40625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 251.921875,
+                "bottom": 153.390625,
+                "left": 243.515625
+              },
+              {
+                "x": 251.921875,
+                "y": 133.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 261.046875,
+                "bottom": 153.390625,
+                "left": 251.921875
+              },
+              {
+                "x": 261.046875,
+                "y": 133.390625,
+                "width": 5.625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 266.671875,
+                "bottom": 153.390625,
+                "left": 261.046875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Terapkan",
+          "box": {
+            "box": {
+              "x": 441,
+              "y": 120,
+              "width": 363,
+              "height": 48,
+              "top": 120,
+              "right": 804,
+              "bottom": 168,
+              "left": 441
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 48,
+            "right": 820,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 441,
+              "y": 120,
+              "width": 363,
+              "height": 48,
+              "top": 120,
+              "right": 804,
+              "bottom": 168,
+              "left": 441
+            },
+            "glyphs": [
+              {
+                "x": 587.859375,
+                "y": 133.390625,
+                "width": 8.640625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 596.5,
+                "bottom": 153.390625,
+                "left": 587.859375
+              },
+              {
+                "x": 596.5,
+                "y": 133.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 605.625,
+                "bottom": 153.390625,
+                "left": 596.5
+              },
+              {
+                "x": 605.625,
+                "y": 133.390625,
+                "width": 5.828125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 611.453125,
+                "bottom": 153.390625,
+                "left": 605.625
+              },
+              {
+                "x": 611.453125,
+                "y": 133.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 620.34375,
+                "bottom": 153.390625,
+                "left": 611.453125
+              },
+              {
+                "x": 620.34375,
+                "y": 133.390625,
+                "width": 9.65625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 630,
+                "bottom": 153.390625,
+                "left": 620.34375
+              },
+              {
+                "x": 630,
+                "y": 133.390625,
+                "width": 8.8125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 638.8125,
+                "bottom": 153.390625,
+                "left": 630
+              },
+              {
+                "x": 638.8125,
+                "y": 133.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 647.703125,
+                "bottom": 153.390625,
+                "left": 638.8125
+              },
+              {
+                "x": 647.703125,
+                "y": 133.390625,
+                "width": 9.4375,
+                "height": 20,
+                "top": 133.390625,
+                "right": 657.140625,
+                "bottom": 153.390625,
+                "left": 647.703125
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "body320x240",
+      "search": {
+        "box": {
+          "x": 24,
+          "y": 96,
+          "width": 208,
+          "height": 48,
+          "top": 96,
+          "right": 232,
+          "bottom": 144,
+          "left": 24
+        },
+        "input": {
+          "x": 70,
+          "y": 97,
+          "width": 146,
+          "height": 46,
+          "top": 97,
+          "right": 216,
+          "bottom": 143,
+          "left": 70
+        },
+        "fontSize": "12px",
+        "icon": {
+          "box": {
+            "x": 40,
+            "y": 111,
+            "width": 18,
+            "height": 18,
+            "top": 111,
+            "right": 58,
+            "bottom": 129,
+            "left": 40
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      },
+      "filter": {
+        "box": {
+          "x": 248,
+          "y": 96,
+          "width": 48,
+          "height": 48,
+          "top": 96,
+          "right": 296,
+          "bottom": 144,
+          "left": 248
+        },
+        "top": 72,
+        "bottom": 192,
+        "left": 8,
+        "right": 312,
+        "hit": true
+      }
+    },
+    {
+      "state": "sheet320x240",
+      "controls": [
+        {
+          "label": "Semua",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 108,
+              "bottom": 187,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 157,
+              "width": 78,
+              "height": 30,
+              "top": 157,
+              "right": 108,
+              "bottom": 187,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 46.640625,
+                "y": 163,
+                "width": 8.90625,
+                "height": 17,
+                "top": 163,
+                "right": 55.546875,
+                "bottom": 180,
+                "left": 46.640625
+              },
+              {
+                "x": 55.53125,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 63.4375,
+                "bottom": 180,
+                "left": 55.53125
+              },
+              {
+                "x": 63.421875,
+                "y": 163,
+                "width": 12.171875,
+                "height": 17,
+                "top": 163,
+                "right": 75.59375,
+                "bottom": 180,
+                "left": 63.421875
+              },
+              {
+                "x": 75.578125,
+                "y": 163,
+                "width": 8.125,
+                "height": 17,
+                "top": 163,
+                "right": 83.703125,
+                "bottom": 180,
+                "left": 75.578125
+              },
+              {
+                "x": 83.6875,
+                "y": 163,
+                "width": 7.65625,
+                "height": 17,
+                "top": 163,
+                "right": 91.34375,
+                "bottom": 180,
+                "left": 83.6875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tersedia",
+          "box": {
+            "box": {
+              "x": 124,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 214,
+              "bottom": 187,
+              "left": 124
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 124,
+              "y": 157,
+              "width": 90,
+              "height": 30,
+              "top": 157,
+              "right": 214,
+              "bottom": 187,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 141.640625,
+                "y": 163,
+                "width": 7.46875,
+                "height": 17,
+                "top": 163,
+                "right": 149.109375,
+                "bottom": 180,
+                "left": 141.640625
+              },
+              {
+                "x": 149.09375,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 157,
+                "bottom": 180,
+                "left": 149.09375
+              },
+              {
+                "x": 156.984375,
+                "y": 163,
+                "width": 5.0625,
+                "height": 17,
+                "top": 163,
+                "right": 162.046875,
+                "bottom": 180,
+                "left": 156.984375
+              },
+              {
+                "x": 162.03125,
+                "y": 163,
+                "width": 7.171875,
+                "height": 17,
+                "top": 163,
+                "right": 169.203125,
+                "bottom": 180,
+                "left": 162.03125
+              },
+              {
+                "x": 169.1875,
+                "y": 163,
+                "width": 7.90625,
+                "height": 17,
+                "top": 163,
+                "right": 177.09375,
+                "bottom": 180,
+                "left": 169.1875
+              },
+              {
+                "x": 177.078125,
+                "y": 163,
+                "width": 8.34375,
+                "height": 17,
+                "top": 163,
+                "right": 185.421875,
+                "bottom": 180,
+                "left": 177.078125
+              },
+              {
+                "x": 185.40625,
+                "y": 163,
+                "width": 3.28125,
+                "height": 17,
+                "top": 163,
+                "right": 188.6875,
+                "bottom": 180,
+                "left": 185.40625
+              },
+              {
+                "x": 188.671875,
+                "y": 163,
+                "width": 7.671875,
+                "height": 17,
+                "top": 163,
+                "right": 196.34375,
+                "bottom": 180,
+                "left": 188.671875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Menipis",
+          "box": {
+            "box": {
+              "x": 30,
+              "y": 129,
+              "width": 85,
+              "height": 30,
+              "top": 129,
+              "right": 115,
+              "bottom": 159,
+              "left": 30
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 30,
+              "y": 129,
+              "width": 85,
+              "height": 30,
+              "top": 129,
+              "right": 115,
+              "bottom": 159,
+              "left": 30
+            },
+            "glyphs": [
+              {
+                "x": 47.265625,
+                "y": 135,
+                "width": 12.453125,
+                "height": 17,
+                "top": 135,
+                "right": 59.71875,
+                "bottom": 152,
+                "left": 47.265625
+              },
+              {
+                "x": 59.703125,
+                "y": 135,
+                "width": 7.90625,
+                "height": 17,
+                "top": 135,
+                "right": 67.609375,
+                "bottom": 152,
+                "left": 59.703125
+              },
+              {
+                "x": 67.59375,
+                "y": 135,
+                "width": 8.109375,
+                "height": 17,
+                "top": 135,
+                "right": 75.703125,
+                "bottom": 152,
+                "left": 67.59375
+              },
+              {
+                "x": 75.6875,
+                "y": 135,
+                "width": 3.28125,
+                "height": 17,
+                "top": 135,
+                "right": 78.96875,
+                "bottom": 152,
+                "left": 75.6875
+              },
+              {
+                "x": 78.953125,
+                "y": 135,
+                "width": 8.34375,
+                "height": 17,
+                "top": 135,
+                "right": 87.296875,
+                "bottom": 152,
+                "left": 78.953125
+              },
+              {
+                "x": 87.28125,
+                "y": 135,
+                "width": 3.296875,
+                "height": 17,
+                "top": 135,
+                "right": 90.578125,
+                "bottom": 152,
+                "left": 87.28125
+              },
+              {
+                "x": 90.5625,
+                "y": 135,
+                "width": 7.171875,
+                "height": 17,
+                "top": 135,
+                "right": 97.734375,
+                "bottom": 152,
+                "left": 90.5625
+              }
+            ]
+          }
+        },
+        {
+          "label": "Habis",
+          "box": {
+            "box": {
+              "x": 131,
+              "y": 129,
+              "width": 71,
+              "height": 30,
+              "top": 129,
+              "right": 202,
+              "bottom": 159,
+              "left": 131
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 131,
+              "y": 129,
+              "width": 71,
+              "height": 30,
+              "top": 129,
+              "right": 202,
+              "bottom": 159,
+              "left": 131
+            },
+            "glyphs": [
+              {
+                "x": 148.203125,
+                "y": 135,
+                "width": 10.171875,
+                "height": 17,
+                "top": 135,
+                "right": 158.375,
+                "bottom": 152,
+                "left": 148.203125
+              },
+              {
+                "x": 158.359375,
+                "y": 135,
+                "width": 7.671875,
+                "height": 17,
+                "top": 135,
+                "right": 166.03125,
+                "bottom": 152,
+                "left": 158.359375
+              },
+              {
+                "x": 166.015625,
+                "y": 135,
+                "width": 8.328125,
+                "height": 17,
+                "top": 135,
+                "right": 174.34375,
+                "bottom": 152,
+                "left": 166.015625
+              },
+              {
+                "x": 174.34375,
+                "y": 135,
+                "width": 3.28125,
+                "height": 17,
+                "top": 135,
+                "right": 177.625,
+                "bottom": 152,
+                "left": 174.34375
+              },
+              {
+                "x": 177.609375,
+                "y": 135,
+                "width": 7.171875,
+                "height": 17,
+                "top": 135,
+                "right": 184.78125,
+                "bottom": 152,
+                "left": 177.609375
+              }
+            ]
+          }
+        },
+        {
+          "category": 0,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 117,
+              "width": 272,
+              "height": 53,
+              "top": 117,
+              "right": 296,
+              "bottom": 170,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 117,
+              "width": 272,
+              "height": 53,
+              "top": 117,
+              "right": 296,
+              "bottom": 170,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 134.5,
+                "width": 9.078125,
+                "height": 17,
+                "top": 134.5,
+                "right": 75.078125,
+                "bottom": 151.5,
+                "left": 66
+              },
+              {
+                "x": 75.0625,
+                "y": 134.5,
+                "width": 7.65625,
+                "height": 17,
+                "top": 134.5,
+                "right": 82.71875,
+                "bottom": 151.5,
+                "left": 75.0625
+              },
+              {
+                "x": 82.703125,
+                "y": 134.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 134.5,
+                "right": 86,
+                "bottom": 151.5,
+                "left": 82.703125
+              },
+              {
+                "x": 85.984375,
+                "y": 134.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 134.5,
+                "right": 94.09375,
+                "bottom": 151.5,
+                "left": 85.984375
+              }
+            ]
+          }
+        },
+        {
+          "category": 3,
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 117,
+              "width": 272,
+              "height": 53,
+              "top": 117,
+              "right": 296,
+              "bottom": 170,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 117,
+              "width": 272,
+              "height": 53,
+              "top": 117,
+              "right": 296,
+              "bottom": 170,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 66,
+                "y": 134.5,
+                "width": 8.875,
+                "height": 17,
+                "top": 134.5,
+                "right": 74.875,
+                "bottom": 151.5,
+                "left": 66
+              },
+              {
+                "x": 74.859375,
+                "y": 134.5,
+                "width": 3.359375,
+                "height": 17,
+                "top": 134.5,
+                "right": 78.21875,
+                "bottom": 151.5,
+                "left": 74.859375
+              },
+              {
+                "x": 78.203125,
+                "y": 134.5,
+                "width": 4.703125,
+                "height": 17,
+                "top": 134.5,
+                "right": 82.90625,
+                "bottom": 151.5,
+                "left": 78.203125
+              },
+              {
+                "x": 82.890625,
+                "y": 134.5,
+                "width": 3.296875,
+                "height": 17,
+                "top": 134.5,
+                "right": 86.1875,
+                "bottom": 151.5,
+                "left": 82.890625
+              },
+              {
+                "x": 86.171875,
+                "y": 134.5,
+                "width": 8.4375,
+                "height": 17,
+                "top": 134.5,
+                "right": 94.609375,
+                "bottom": 151.5,
+                "left": 86.171875
+              },
+              {
+                "x": 94.59375,
+                "y": 134.5,
+                "width": 7.671875,
+                "height": 17,
+                "top": 134.5,
+                "right": 102.265625,
+                "bottom": 151.5,
+                "left": 94.59375
+              },
+              {
+                "x": 102.25,
+                "y": 134.5,
+                "width": 8.109375,
+                "height": 17,
+                "top": 134.5,
+                "right": 110.359375,
+                "bottom": 151.5,
+                "left": 102.25
+              }
+            ]
+          }
+        },
+        {
+          "label": "Reset",
+          "box": {
+            "box": {
+              "x": 24,
+              "y": 120,
+              "width": 129,
+              "height": 48,
+              "top": 120,
+              "right": 153,
+              "bottom": 168,
+              "left": 24
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 24,
+              "y": 120,
+              "width": 129,
+              "height": 48,
+              "top": 120,
+              "right": 153,
+              "bottom": 168,
+              "left": 24
+            },
+            "glyphs": [
+              {
+                "x": 67.328125,
+                "y": 133.390625,
+                "width": 10.078125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 77.40625,
+                "bottom": 153.390625,
+                "left": 67.328125
+              },
+              {
+                "x": 77.390625,
+                "y": 133.390625,
+                "width": 9.140625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 86.53125,
+                "bottom": 153.390625,
+                "left": 77.390625
+              },
+              {
+                "x": 86.515625,
+                "y": 133.390625,
+                "width": 8.40625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 94.921875,
+                "bottom": 153.390625,
+                "left": 86.515625
+              },
+              {
+                "x": 94.921875,
+                "y": 133.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 104.046875,
+                "bottom": 153.390625,
+                "left": 94.921875
+              },
+              {
+                "x": 104.046875,
+                "y": 133.390625,
+                "width": 5.625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 109.671875,
+                "bottom": 153.390625,
+                "left": 104.046875
+              }
+            ]
+          }
+        },
+        {
+          "label": "Terapkan",
+          "box": {
+            "box": {
+              "x": 167,
+              "y": 120,
+              "width": 129,
+              "height": 48,
+              "top": 120,
+              "right": 296,
+              "bottom": 168,
+              "left": 167
+            },
+            "top": 96,
+            "bottom": 192,
+            "left": 8,
+            "right": 312,
+            "hit": true
+          },
+          "glyph": {
+            "box": {
+              "x": 167,
+              "y": 120,
+              "width": 129,
+              "height": 48,
+              "top": 120,
+              "right": 296,
+              "bottom": 168,
+              "left": 167
+            },
+            "glyphs": [
+              {
+                "x": 196.859375,
+                "y": 133.390625,
+                "width": 8.640625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 205.5,
+                "bottom": 153.390625,
+                "left": 196.859375
+              },
+              {
+                "x": 205.5,
+                "y": 133.390625,
+                "width": 9.125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 214.625,
+                "bottom": 153.390625,
+                "left": 205.5
+              },
+              {
+                "x": 214.625,
+                "y": 133.390625,
+                "width": 5.828125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 220.453125,
+                "bottom": 153.390625,
+                "left": 214.625
+              },
+              {
+                "x": 220.453125,
+                "y": 133.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 229.34375,
+                "bottom": 153.390625,
+                "left": 220.453125
+              },
+              {
+                "x": 229.34375,
+                "y": 133.390625,
+                "width": 9.65625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 239,
+                "bottom": 153.390625,
+                "left": 229.34375
+              },
+              {
+                "x": 239,
+                "y": 133.390625,
+                "width": 8.8125,
+                "height": 20,
+                "top": 133.390625,
+                "right": 247.8125,
+                "bottom": 153.390625,
+                "left": 239
+              },
+              {
+                "x": 247.8125,
+                "y": 133.390625,
+                "width": 8.890625,
+                "height": 20,
+                "top": 133.390625,
+                "right": 256.703125,
+                "bottom": 153.390625,
+                "left": 247.8125
+              },
+              {
+                "x": 256.703125,
+                "y": 133.390625,
+                "width": 9.4375,
+                "height": 20,
+                "top": 133.390625,
+                "right": 266.140625,
+                "bottom": 153.390625,
+                "left": 256.703125
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "largeInput320x568",
+      "search": {
+        "box": {
+          "x": 24,
+          "y": 144,
+          "width": 208,
+          "height": 48,
+          "top": 144,
+          "right": 232,
+          "bottom": 192,
+          "left": 24
+        },
+        "input": {
+          "x": 70,
+          "y": 145,
+          "width": 146,
+          "height": 46,
+          "top": 145,
+          "right": 216,
+          "bottom": 191,
+          "left": 70
+        },
+        "fontSize": "28px",
+        "icon": {
+          "box": {
+            "x": 40,
+            "y": 159,
+            "width": 18,
+            "height": 18,
+            "top": 159,
+            "right": 58,
+            "bottom": 177,
+            "left": 40
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    },
+    {
+      "state": "largeInput240x320",
+      "search": {
+        "box": {
+          "x": 24,
+          "y": 144,
+          "width": 128,
+          "height": 48,
+          "top": 144,
+          "right": 152,
+          "bottom": 192,
+          "left": 24
+        },
+        "input": {
+          "x": 70,
+          "y": 145,
+          "width": 66,
+          "height": 46,
+          "top": 145,
+          "right": 136,
+          "bottom": 191,
+          "left": 70
+        },
+        "fontSize": "28px",
+        "icon": {
+          "box": {
+            "x": 40,
+            "y": 159,
+            "width": 18,
+            "height": 18,
+            "top": 159,
+            "right": 58,
+            "bottom": 177,
+            "left": 40
+          },
+          "src": "/assets/assets/images/figma/back-office/search.svg",
+          "loaded": true
+        },
+        "gap": 12
+      }
+    }
+  ],
+  "bundleHash": "bd874c53b9b863e13f226c4bb1aa901d3b048fd0df74b3318b41923f69712052",
+  "styleHash": "a6c3d00a4f27593bca83bd143d26d615e608e4b3fc05e3da55ae617b94a51630",
+  "limits": "Read-only released one-prop search correction in actual Stock body/thinroute/Header/filter/data/primitives/SVG/fonts. OS48 and sideinsets via private fixture, no nativekeyboard/fontScale/fullRouter/API/backend/stockthreshold/publication/Figma100. CSS28 input only; alllarge controls/native targets not certified."
+}

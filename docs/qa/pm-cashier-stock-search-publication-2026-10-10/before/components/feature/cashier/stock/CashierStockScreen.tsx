@@ -34,7 +34,6 @@ export default function CashierStockScreen() {
 					<View className="min-w-0 flex-1">
 						<SearchBar
 							appearance="figma"
-							viewportSafe
 							search={search}
 							setSearch={setSearch}
 							debounce={false}
