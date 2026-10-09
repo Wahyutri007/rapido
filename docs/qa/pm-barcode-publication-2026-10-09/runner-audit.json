@@ -1,0 +1,26 @@
+[
+  {
+    "suite": "print",
+    "expected": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768",
+    "actual": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768",
+    "match": true
+  },
+  {
+    "suite": "picker",
+    "expected": "7cca8b0bdaf586352cf92bb338d4d0c31c8253b850280cda65076a27473fe24d",
+    "actual": "6955b31bd0d5d9df29bd034e0b8403e61517734740d23718f722d417d7c77768",
+    "match": false
+  },
+  {
+    "suite": "incrementer",
+    "expected": "c39f62d1ccf9c5b799f46ede71affcf5b9ee369a056a1c72880225705e474b74",
+    "actual": "c39f62d1ccf9c5b799f46ede71affcf5b9ee369a056a1c72880225705e474b74",
+    "match": true
+  },
+  {
+    "suite": "integration",
+    "expected": "edecbf3aff270e862af6b6d8ee31834065f29ae32761d4b792a373fab57e86c1",
+    "actual": "edecbf3aff270e862af6b6d8ee31834065f29ae32761d4b792a373fab57e86c1",
+    "match": true
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "suite": "print",
+  "checks": [
+    "initial quantity follows defaultCopies",
+    "unrelated rerender preserves quantity draft",
+    "new defaultCopies resets open dialog",
+    "rapid double press schedules one print",
+    "print action disabled during printing",
+    "print confirmation waits for simulated job",
+    "one confirmation carries selected copies",
+    "success prevents repeat printing",
+    "success press schedules no duplicate job",
+    "success closes once after delay",
+    "reopening resets quantity",
+    "reopening clears success and loading",
+    "closing pending print cancels its timer",
+    "old job cannot confirm or close reopened modal",
+    "old success timer cannot close reopened modal",
+    "new barcode starts fresh quantity and cancels old job",
+    "default change cancels pending job",
+    "format change cancels pending job",
+    "unmount clears all timers",
+    "unmounted component causes no further callback",
+    "no React runtime errors or act warnings"
+  ],
+  "count": 21,
+  "errors": [],
+  "scope": "Actual component lifecycle using React 19 test renderer; native/UI primitives are host stubs. No printer, API, browser or native device integration."
+}

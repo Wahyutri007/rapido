@@ -1,0 +1,14 @@
+{
+  "before": {
+    "components/feature/barcode/PrintBarcodeModal.tsx": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+    "components/feature/barcode/ProductPickerSheet.tsx": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+    "components/custom/Incrementer.tsx": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+  },
+  "after": {
+    "components/feature/barcode/PrintBarcodeModal.tsx": "d5efaed378024b85e8c7968139387a2222926fac76e931b066da4475b25688e1",
+    "components/feature/barcode/ProductPickerSheet.tsx": "c5a62e448843f663fe075fda6cc404bda7624a21ee863c6c8f566d5707279c37",
+    "components/custom/Incrementer.tsx": "50675e7d7e72abab5efbe16a129f79e45767a860bd19e354c97e2ef7b5f227a2"
+  },
+  "stable": true,
+  "harnessSha256": "edecbf3aff270e862af6b6d8ee31834065f29ae32761d4b792a373fab57e86c1"
+}

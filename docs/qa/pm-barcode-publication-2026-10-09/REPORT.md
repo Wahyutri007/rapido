@@ -1,0 +1,13 @@
+﻿# PM publication review: Barcode lifecycle
+
+9 October 2026. Module branch fix/barcode-lifecycle based on integration/expo-sdk57 fa860c9. Approved for module publication, not main integration or complete Barcode functionality.
+
+The exact three source hashes in QC-BARCODE-20261009-PASS-DELTA are included: PrintBarcodeModal, ProductPickerSheet and Incrementer. Changes scope modal/session state, cancel pending timers when closing/changing target, prevent duplicate simulated jobs, preserve/reset picker drafts correctly and support controlled quantities with disabled controls. Public callers and dependency versions are unchanged.
+
+PM replay passed105 assertions:21 Print,20 picker,37 Incrementer,18 combined Print/Incrementer and9 real React Hook Form checks. Runtime/act error arrays were empty. Scoped ESLint of the three files passed with zero warnings. Original QC files were fingerprinted before replay and remained unchanged. Source hashes were checked again before copy. Button, Text, SearchBar, Actionsheet, BarcodePreview, Colors/utils and the Barcode/Cashier caller paths compared against the integration base have no source delta. This is a bounded dependency comparison, not a global typecheck.
+
+The historical picker snapshot names an older shared runner hash than the final Print snapshot. The current runner matches that final Print QC hash, was reviewed in full, and its20 picker check names match the historical picker output. PM used this current runner and records both fingerprints in runner-audit.json; the old evidence was not rewritten. Initial preparation stopped on this mismatch before running tests. The copied RHF runner initially failed to resolve two relative helper imports outside its original directory; only the copy was adjusted to resolve both helpers from the application root, then all9 checks passed. These were test setup failures, not product failures or successful test runs.
+
+Existing isolated test dependencies were reused. Native UI, Button/preview rendering, printer connections and physical printing were not exercised; printing remains the existing timer simulation. Product fixtures remain existing data. Legacy UI token cleanup, actual device/accessibility, full screen/router behavior and the coordinated integration typecheck/lint remain separate gates. No installation, server restart, device operation or production API write occurred.
+
+QC evidence and replay helpers/results are included for review. The original workspace/index and unrelated source changes are preserved. This branch does not merge other newly published modules or authorize main.
