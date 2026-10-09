@@ -1,18 +1,20 @@
 import Feather from "@expo/vector-icons/Feather";
 import { router } from "expo-router";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
 	KeyboardAvoidingView,
 	Platform,
 	Pressable,
 	ScrollView,
-	TextInput,
 	View,
 } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
-import SuccessModal from "@/components/common/SuccessModal";
 import SearchBar from "@/components/common/SearchBar";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import {
 	AccountActionSheet,
@@ -22,7 +24,6 @@ import {
 } from "@/components/feature/accounting/accounts";
 import { Button, ButtonText } from "@/components/ui/button";
 import { Colors } from "@/constants/Colors";
-import { FONT_NAMES } from "@/constants/Fonts";
 import { useAccountingStore } from "@/store/accountingStore";
 import type { Account } from "@/types/ui/accounting/account";
 
@@ -121,12 +122,11 @@ export default function AccountingAccountsIndexScreen() {
 				<SearchBar
 					search={searchQuery}
 					setSearch={setSearchQuery}
-					placeholder="Cari biaya tambahan..."
+					placeholder="Cari akun..."
 					withFilter
 					onFilterPress={() => setIsFilterSheetOpen(true)}
 					filterActive={Boolean(selectedClassification)}
 					variant="light"
-					
 				/>
 
 				{/* List of Accounts */}
@@ -166,10 +166,11 @@ export default function AccountingAccountsIndexScreen() {
 					totalCredit={totals.totalCredit}
 					difference={totals.difference}
 				/>
+				<BottomActionInset />
 			</ScrollView>
 
 			{/* Sticky Bottom Simpan Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					onPress={handleSaveBalances}
 					size="xl"
@@ -179,13 +180,14 @@ export default function AccountingAccountsIndexScreen() {
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Action Sheet */}
 			<AccountActionSheet
 				account={selectedAccount}
 				isOpen={isActionSheetOpen}
 				onClose={handleCloseActionMenu}
+				onFillBalance={handleEditAccount}
 				onResetBalance={handleResetBalance}
 				onViewDetail={handleViewDetail}
 				onEditAccount={handleEditAccount}

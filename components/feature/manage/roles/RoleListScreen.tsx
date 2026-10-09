@@ -2,7 +2,6 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { FlatList, Pressable, RefreshControl, View } from "react-native";
 import { useRolesQuery } from "@/api/hooks/roles";
-import { useAlertModal } from "@/components/common/AlertModal";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import {
 	LoadingPlaceholder,
@@ -12,7 +11,7 @@ import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import CatalogItemCard from "@/components/custom/CatalogItemCard";
-import ItemActionSheet from "@/components/custom/ItemActionSheet";
+import ManageListActions from "@/components/feature/manage/ManageListActions";
 import { EFeather } from "@/components/icons";
 import useRefreshControl from "@/hooks/useRefreshControl";
 import { roleAccessLabels, roleName } from "@/lib/manage/roles";
@@ -25,9 +24,12 @@ export default function RoleListScreen() {
 	const query = useRolesQuery();
 	const refresh = useRefreshControl(query.refetch);
 	const [search, setSearch] = useState("");
-	const [selected, setSelected] = useState<RoleData | null>(null);
-	const [actionsOpen, setActionsOpen] = useState(false);
-	const deleteDialog = useAlertModal();
+	const [selection, setSelection] = useState<{
+		item: RoleData;
+		version: number;
+	} | null>(null);
+	const current = query.data?.find((item) => item.id === selection?.item.id);
+	const selected = current ?? selection?.item ?? null;
 	const needle = search.trim().toLocaleLowerCase("id");
 	const items = (query.data ?? []).filter((role) =>
 		`${roleName(role)} ${roleAccessLabels(role.permissions).join(" ")}`
@@ -99,8 +101,10 @@ export default function RoleListScreen() {
 											hitSlop={8}
 											onPress={(event) => {
 												event.stopPropagation();
-												setSelected(item);
-												setActionsOpen(true);
+												setSelection((previous) => ({
+													item,
+													version: (previous?.version ?? 0) + 1,
+												}));
 											}}
 										>
 											<EFeather
@@ -130,16 +134,19 @@ export default function RoleListScreen() {
 			>
 				Tambah Role
 			</BottomActionButton>
-			<ItemActionSheet
-				isOpen={actionsOpen}
-				onClose={() => setActionsOpen(false)}
-				title={selected ? roleName(selected) : "Role"}
-				entityName="Role"
-				onViewDetail={() => navigate("detail")}
-				onEdit={() => navigate("modify")}
-				onDelete={deleteDialog.open}
-			/>
-			<RoleDeleteDialog role={selected} openState={deleteDialog.openState} />
+			{selection && selected && (
+				<ManageListActions
+					key={selection.version}
+					title={roleName(selected)}
+					entityName="Role"
+					available={!!current && !query.isLoading && !query.isError}
+					onViewDetail={() => navigate("detail")}
+					onEdit={() => navigate("modify")}
+					renderDelete={(openState) => (
+						<RoleDeleteDialog role={selected} openState={openState} />
+					)}
+				/>
+			)}
 		</>
 	);
 }

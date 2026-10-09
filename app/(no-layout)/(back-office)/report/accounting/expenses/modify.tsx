@@ -13,7 +13,9 @@ import {
 	View,
 } from "react-native";
 import { useAlertModal } from "@/components/common/AlertModal";
-import SuccessModal from "@/components/common/SuccessModal";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
 import {
 	Form,
@@ -25,6 +27,7 @@ import {
 	FormMessage,
 	FormSelect,
 } from "@/components/common/Form";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import { Button, ButtonText } from "@/components/ui/button";
 import { Colors } from "@/constants/Colors";
@@ -204,10 +207,7 @@ export default function ExpenseModifyScreen() {
 									<FormItem>
 										<FormLabel>Kode Akun</FormLabel>
 										<FormControl>
-											<FormInput
-												placeholder="110001"
-												className="bg-zinc-50"
-											/>
+											<FormInput placeholder="110001" className="bg-zinc-50" />
 										</FormControl>
 										<FormMessage />
 									</FormItem>
@@ -374,10 +374,11 @@ export default function ExpenseModifyScreen() {
 						</View>
 					</Form>
 				</Card>
+				<BottomActionInset />
 			</ScrollView>
 
 			{/* Sticky Bottom "Simpan" Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
@@ -387,15 +388,13 @@ export default function ExpenseModifyScreen() {
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Success Alert Modal */}
 			<SuccessModal
 				openState={finishModal.openState}
 				onClose={handleFinishModalClose}
-				title={
-					isEdit ? "Pengeluaran Diperbarui!" : "Pengeluaran Ditambahkan!"
-				}
+				title={isEdit ? "Pengeluaran Diperbarui!" : "Pengeluaran Ditambahkan!"}
 				description={
 					isEdit
 						? "Data pengeluaran berhasil diperbarui."

@@ -1,31 +1,24 @@
 import Header from "@/components/common/Header";
 import { JSStack, ScaleBackTransition } from "@/components/custom/JSStack";
-import React from "react";
 
 export default function NoLayoutLayout() {
-  return (
-    <JSStack screenOptions={{ ...ScaleBackTransition }}>
-      <JSStack.Screen
-        name="menu/search"
-        options={{ header: () => <Header back title="Cari" /> }}
-      />
-      <JSStack.Screen name="menu" options={{ headerShown: false }} />
-      <JSStack.Screen name="home" options={{ headerShown: false }} />
-      <JSStack.Screen name="catalog/menu" options={{ headerShown: false }} />
-      <JSStack.Screen name="catalog" options={{ headerShown: false }} />
-      <JSStack.Screen name="offer" options={{ headerShown: false }} />
-      <JSStack.Screen name="inventory" options={{ headerShown: false }} />
-      <JSStack.Screen name="manage" options={{ headerShown: false }} />
-      <JSStack.Screen name="order" options={{ headerShown: false }} />
-      <JSStack.Screen name="order-detail" options={{ headerShown: false }} />
-      <JSStack.Screen name="maintenance" options={{ headerShown: false }} />
-      <JSStack.Screen
-        name="terms-and-condition"
-        options={{ header: () => <Header back title="Syarat & Ketentuan" /> }}
-      />
+	return (
+		<JSStack screenOptions={{ ...ScaleBackTransition }}>
+			<JSStack.Screen name="home" options={{ headerShown: false }} />
+			<JSStack.Screen name="catalog" options={{ headerShown: false }} />
+			<JSStack.Screen name="offer" options={{ headerShown: false }} />
+			<JSStack.Screen name="inventory" options={{ headerShown: false }} />
+			<JSStack.Screen name="manage" options={{ headerShown: false }} />
+			<JSStack.Screen name="order" options={{ headerShown: false }} />
+			<JSStack.Screen name="order-detail" options={{ headerShown: false }} />
+			<JSStack.Screen name="maintenance" options={{ headerShown: false }} />
+			<JSStack.Screen
+				name="terms-and-condition"
+				options={{ header: () => <Header back title="Syarat & Ketentuan" /> }}
+			/>
 
-      <JSStack.Screen name="(cashier)" options={{ headerShown: false }} />
-      <JSStack.Screen name="(back-office)" options={{ headerShown: false }} />
-    </JSStack>
-  );
+			<JSStack.Screen name="(cashier)" options={{ headerShown: false }} />
+			<JSStack.Screen name="(back-office)" options={{ headerShown: false }} />
+		</JSStack>
+	);
 }

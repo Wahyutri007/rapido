@@ -90,6 +90,15 @@ function MemberTextField({
 }
 
 export default function MemberModifyScreen({ id }: { id?: string }) {
+	return (
+		<MemberModifyForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+		/>
+	);
+}
+
+function MemberModifyForm({ id }: { id?: string }) {
 	const query = useCustomerQuery(id);
 	const create = useCustomerRequest();
 	const update = useCustomerUpdateRequest(undefined, id);
@@ -98,10 +107,17 @@ export default function MemberModifyScreen({ id }: { id?: string }) {
 	const [errorMessage, setErrorMessage] = useState("");
 	const [saved, setSaved] = useState(false);
 	const hydrated = useRef<string | undefined>(undefined);
+	const mounted = useRef(true);
 	const form = useForm<CustomerSchema>({
 		resolver: zodResolver(customerSchema),
 		defaultValues: MEMBER_DEFAULTS,
 	});
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
 	useEffect(() => {
 		if (id && query.data && hydrated.current !== id) {
 			form.reset(memberFormValues(query.data));
@@ -119,6 +135,7 @@ export default function MemberModifyScreen({ id }: { id?: string }) {
 		const [, problem] = id
 			? await update.call(payload)
 			: await create.call(payload);
+		if (!mounted.current) return;
 		if (problem) {
 			handleFormError(problem, form);
 			setErrorMessage(
@@ -229,7 +246,7 @@ export default function MemberModifyScreen({ id }: { id?: string }) {
 				)}
 			</Wrapper>
 			<BottomActionButton
-				onPress={form.handleSubmit(submit)}
+				onPress={() => form.handleSubmit(submit)()}
 				isLoading={submitting}
 				isDisabled={loading || failed || submitting || saved}
 			>

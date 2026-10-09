@@ -121,11 +121,13 @@ export default function StockOperationList({
 								<View className="flex-1 gap-3 border-r border-border-muted pr-3">
 									<InventoryMetadata
 										icon="grid"
+										tone="muted"
 										label="Dari Toko"
 										value={record.fromStore}
 									/>
 									<InventoryMetadata
 										icon="arrow-right"
+										tone="muted"
 										label="Ke Toko"
 										value={record.toStore ?? "-"}
 									/>
@@ -133,11 +135,13 @@ export default function StockOperationList({
 								<View className="flex-1 gap-3">
 									<InventoryMetadata
 										icon="user"
+										tone="muted"
 										label="Dibuat Oleh"
 										value={record.createdBy}
 									/>
 									<InventoryMetadata
 										icon="box"
+										tone="muted"
 										label="Jumlah Transfer"
 										value={String(record.lines.length)}
 									/>

@@ -50,12 +50,20 @@ export default function CashEntryForm({
 		: INCOME_FUNDING_SOURCES;
 	const stores = isExpense ? EXPENSE_STORES : INCOME_STORES;
 	const save = isExpense ? saveManagedExpense : saveManagedIncome;
-	const [savedId, setSavedId] = React.useState(id);
+	const savedId = React.useRef(id);
+	const mounted = React.useRef(true);
+	const pending = React.useRef(false);
 	const [success, setSuccess] = React.useState(false);
 	const form = useForm<CashEntryValues>({
 		resolver: zodResolver(isExpense ? manageExpenseSchema : manageIncomeSchema),
 		defaultValues: initialValues,
 	});
+	React.useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
 	const accountName = useWatch({ control: form.control, name: "accountName" });
 	const amount = useWatch({ control: form.control, name: "amount" });
 	const selectedStore = useWatch({ control: form.control, name: "store" });
@@ -74,8 +82,9 @@ export default function CashEntryForm({
 		);
 	}, [accountName, accounts, form]);
 	const submit = (values: CashEntryValues) => {
+		if (!mounted.current) return;
 		form.clearErrors("root");
-		const result = save(values, savedId);
+		const result = save(values, savedId.current);
 		if ("error" in result) {
 			if (result.error === "duplicate")
 				form.setError("referenceNumber", {
@@ -93,9 +102,18 @@ export default function CashEntryForm({
 				});
 			return;
 		}
-		setSavedId(result.id);
+		savedId.current = result.id;
 		setSuccess(true);
 	};
+	async function handleSubmit() {
+		if (!mounted.current || pending.current) return;
+		pending.current = true;
+		try {
+			await form.handleSubmit(submit)();
+		} finally {
+			pending.current = false;
+		}
+	}
 	return (
 		<>
 			<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>
@@ -272,7 +290,7 @@ export default function CashEntryForm({
 					</Form>
 				</Card>
 			</Wrapper>
-			<BottomActionButton onPress={form.handleSubmit(submit)}>
+			<BottomActionButton onPress={handleSubmit}>
 				Simpan {noun}
 			</BottomActionButton>
 			<SuccessModal

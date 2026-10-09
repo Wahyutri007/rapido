@@ -1,15 +1,12 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router, useLocalSearchParams } from "expo-router";
-import React, { useEffect, useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
-import {
-	KeyboardAvoidingView,
-	Platform,
-	ScrollView,
-	View,
-} from "react-native";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
+import { KeyboardAvoidingView, Platform, ScrollView, View } from "react-native";
 import { useAlertModal } from "@/components/common/AlertModal";
-import SuccessModal from "@/components/common/SuccessModal";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
 import {
 	Form,
@@ -21,7 +18,9 @@ import {
 	FormMessage,
 	FormSelect,
 } from "@/components/common/Form";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
+import Wrapper from "@/components/common/Wrapper";
 import { Button, ButtonText } from "@/components/ui/button";
 import {
 	ACCOUNT_CLASSIFICATIONS,
@@ -33,31 +32,81 @@ import { useAccountingStore } from "@/store/accountingStore";
 import type { Account } from "@/types/ui/accounting/account";
 
 export default function AccountModifyScreen() {
-	const params = useLocalSearchParams<{ id?: string }>();
-	const isEdit = Boolean(params.id);
-
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const id = Array.isArray(params.id) ? params.id[0] : params.id;
 	const accounts = useAccountingStore((state) => state.accounts);
+	const account = accounts.find((item) => item.id === id);
+
+	if (id !== undefined && !account) {
+		return (
+			<Wrapper contentContainerStyle={{ padding: 16, gap: 16 }}>
+				<Card className="gap-4">
+					<Text w="semibold">Akun tidak ditemukan</Text>
+					<Text size="normal" className="text-muted">
+						Buka kembali akun dari daftar untuk melanjutkan.
+					</Text>
+					<Button
+						size="xl"
+						onPress={() => router.replace("/report/accounting/accounts")}
+					>
+						<ButtonText>Kembali ke daftar</ButtonText>
+					</Button>
+				</Card>
+			</Wrapper>
+		);
+	}
+
+	return (
+		<AccountForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+			initialAccount={account}
+		/>
+	);
+}
+
+function AccountForm({
+	id,
+	initialAccount,
+}: {
+	id?: string;
+	initialAccount?: Account;
+}) {
+	const isEdit = id !== undefined;
 	const addAccount = useAccountingStore((state) => state.addAccount);
 	const updateAccount = useAccountingStore((state) => state.updateAccount);
 
 	const finishModal = useAlertModal();
-	const [existingAccount, setExistingAccount] = useState<Account | null>(null);
+	const active = useRef(false);
+	const saved = useRef(false);
+	const didNavigate = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
+
+	useEffect(() => {
+		active.current = true;
+		return () => {
+			active.current = false;
+		};
+	}, []);
 
 	const form = useForm<AccountSchema>({
 		resolver: zodResolver(accountSchema),
 		defaultValues: {
-			classification: "Harta",
-			subClassification: "Harta Lancar",
-			code: "11001",
-			name: "",
-			currency: "IDR",
-			debit: 0,
-			credit: 0,
-			description: "",
+			classification: initialAccount?.classification ?? "Harta",
+			subClassification: initialAccount?.subClassification ?? "Harta Lancar",
+			code: initialAccount?.code ?? "11001",
+			name: initialAccount?.name ?? "",
+			currency: initialAccount?.currency ?? "IDR",
+			debit: initialAccount?.debit ?? 0,
+			credit: initialAccount?.credit ?? 0,
+			description: initialAccount?.description ?? "",
 		},
 	});
 
-	const watchedClassification = form.watch("classification");
+	const watchedClassification = useWatch({
+		control: form.control,
+		name: "classification",
+	});
 
 	// Available subclassifications based on chosen classification
 	const subClassificationOptions = useMemo(() => {
@@ -78,31 +127,19 @@ export default function AccountModifyScreen() {
 		}
 	}, [subClassificationOptions, form]);
 
-	// Prepopulate if editing
-	useEffect(() => {
-		if (params.id) {
-			const found = accounts.find((acc) => acc.id === params.id);
-			if (found) {
-				setExistingAccount(found);
-				form.reset({
-					classification: found.classification,
-					subClassification: found.subClassification,
-					code: found.code,
-					name: found.name,
-					currency: found.currency,
-					debit: found.debit,
-					credit: found.credit,
-					description: found.description || "",
-				});
-			} else {
-				router.back();
-			}
-		}
-	}, [params.id, accounts, form]);
-
 	const onSubmit = (data: AccountSchema) => {
-		if (isEdit && params.id) {
-			updateAccount(params.id, data);
+		if (!active.current || saved.current) return;
+		if (
+			id !== undefined &&
+			!useAccountingStore
+				.getState()
+				.accounts.some((account) => account.id === id)
+		)
+			return;
+		saved.current = true;
+		setIsSaved(true);
+		if (id !== undefined) {
+			updateAccount(id, data);
 		} else {
 			addAccount(data);
 		}
@@ -110,6 +147,8 @@ export default function AccountModifyScreen() {
 	};
 
 	const handleFinishClose = () => {
+		if (!active.current || !saved.current || didNavigate.current) return;
+		didNavigate.current = true;
 		finishModal.close();
 		router.back();
 	};
@@ -231,10 +270,7 @@ export default function AccountModifyScreen() {
 									<FormItem>
 										<FormLabel>Debit</FormLabel>
 										<FormControl>
-											<FormInput
-												type="number"
-												placeholder="0"
-											/>
+											<FormInput type="number" placeholder="0" />
 										</FormControl>
 										<FormMessage />
 									</FormItem>
@@ -249,10 +285,7 @@ export default function AccountModifyScreen() {
 									<FormItem>
 										<FormLabel>Kredit</FormLabel>
 										<FormControl>
-											<FormInput
-												type="number"
-												placeholder="0"
-											/>
+											<FormInput type="number" placeholder="0" />
 										</FormControl>
 										<FormMessage />
 									</FormItem>
@@ -261,12 +294,14 @@ export default function AccountModifyScreen() {
 						</View>
 					</Form>
 				</Card>
+				<BottomActionInset />
 			</ScrollView>
 
 			{/* Sticky Bottom Simpan Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
-					onPress={form.handleSubmit(onSubmit)}
+					onPress={() => form.handleSubmit(onSubmit)()}
+					disabled={isSaved}
 					size="xl"
 					className="h-12 w-full rounded-2xl bg-primary-500"
 				>
@@ -274,7 +309,7 @@ export default function AccountModifyScreen() {
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 		</KeyboardAvoidingView>
 	);
 }

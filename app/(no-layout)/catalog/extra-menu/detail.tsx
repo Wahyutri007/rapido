@@ -86,7 +86,7 @@ export default function ExtraMenuDetailScreen() {
 				m.extra_menu_ids?.includes(extraMenuId) ||
 				data?.menu_ids?.includes(m.id),
 		);
-	}, [data?.menus, data?.menu_ids, menusQuery.data, extraMenuId]);
+	}, [data, menusQuery.data, extraMenuId]);
 
 	return (
 		<>

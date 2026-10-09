@@ -1,5 +1,4 @@
 import Entypo from "@expo/vector-icons/Entypo";
-import Feather from "@expo/vector-icons/Feather";
 import React, { useState } from "react";
 import { Pressable, TextInput, View } from "react-native";
 import Card from "@/components/common/Card";
@@ -7,7 +6,6 @@ import Text from "@/components/common/Text";
 import { WalletIcon } from "@/components/icons";
 import { Colors } from "@/constants/Colors";
 import { FONT_NAMES } from "@/constants/Fonts";
-import { cn } from "@/lib/utils";
 import type { Account } from "@/types/ui/accounting/account";
 
 type AccountBalanceCardProps = {
@@ -21,32 +19,56 @@ export default function AccountBalanceCard({
 	onMenuPress,
 	onBalanceChange,
 }: AccountBalanceCardProps) {
-	const [debitText, setDebitText] = useState(
-		account.debit > 0 ? account.debit.toString() : "",
-	);
-	const [creditText, setCreditText] = useState(
-		account.credit > 0 ? account.credit.toString() : "",
-	);
+	const [balance, setBalance] = useState({
+		id: account.id,
+		debit: account.debit,
+		credit: account.credit,
+		debitText: account.debit > 0 ? account.debit.toString() : "",
+		creditText: account.credit > 0 ? account.credit.toString() : "",
+	});
 
-	// Sync when account external state changes (e.g. on reset)
-	React.useEffect(() => {
-		setDebitText(account.debit > 0 ? account.debit.toString() : "");
-	}, [account.debit]);
-
-	React.useEffect(() => {
-		setCreditText(account.credit > 0 ? account.credit.toString() : "");
-	}, [account.credit]);
+	// Reconcile external balances before committing the inputs. An echoed edit
+	// keeps its text draft; a reset or account switch adopts the external value.
+	if (
+		balance.id !== account.id ||
+		!Object.is(balance.debit, account.debit) ||
+		!Object.is(balance.credit, account.credit)
+	) {
+		const sameAccount = balance.id === account.id;
+		setBalance({
+			id: account.id,
+			debit: account.debit,
+			credit: account.credit,
+			debitText:
+				sameAccount &&
+				(Object.is(balance.debit, account.debit) ||
+					Number(balance.debitText) === account.debit)
+					? balance.debitText
+					: account.debit > 0
+						? account.debit.toString()
+						: "",
+			creditText:
+				sameAccount &&
+				(Object.is(balance.credit, account.credit) ||
+					Number(balance.creditText) === account.credit)
+					? balance.creditText
+					: account.credit > 0
+						? account.credit.toString()
+						: "",
+		});
+	}
+	const { debitText, creditText } = balance;
 
 	const handleDebitChange = (text: string) => {
 		const clean = text.replace(/[^0-9]/g, "");
-		setDebitText(clean);
+		setBalance((current) => ({ ...current, debitText: clean }));
 		const num = clean ? parseInt(clean, 10) : 0;
 		onBalanceChange(account.id, num, account.credit);
 	};
 
 	const handleCreditChange = (text: string) => {
 		const clean = text.replace(/[^0-9]/g, "");
-		setCreditText(clean);
+		setBalance((current) => ({ ...current, creditText: clean }));
 		const num = clean ? parseInt(clean, 10) : 0;
 		onBalanceChange(account.id, account.debit, num);
 	};

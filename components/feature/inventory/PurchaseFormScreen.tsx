@@ -22,13 +22,13 @@ import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import { Colors } from "@/constants/Colors";
 import {
-	INVENTORY_ITEMS,
 	INVENTORY_STORES,
 	STOCK_KIND_OPTIONS,
 } from "@/constants/data/inventory";
-import { getInventoryItem } from "@/lib/inventory";
+import { getInventoryItem, getInventoryItems } from "@/lib/inventory";
 import { formatRp, route } from "@/lib/utils";
 import { type PurchaseSchema, purchaseSchema } from "@/schema/inventory";
+import { useInventoryMaterialStore } from "@/store/inventoryMaterialStore";
 import { useInventoryStore } from "@/store/inventoryStore";
 import { useInventorySupplierStore } from "@/store/inventorySupplierStore";
 import InventoryQuantityInput from "./InventoryQuantityInput";
@@ -36,9 +36,9 @@ import { InventoryIcon, InventorySectionHeading } from "./InventoryUi";
 
 export default function PurchaseFormScreen() {
 	const params = useLocalSearchParams<{ itemName?: string; kind?: string }>();
-	const initialItem = INVENTORY_ITEMS.find(
-		(item) => item.name === params.itemName,
-	);
+	const materials = useInventoryMaterialStore((state) => state.materials);
+	const items = getInventoryItems(materials);
+	const initialItem = items.find((item) => item.name === params.itemName);
 	const addPurchase = useInventoryStore((state) => state.addPurchase);
 	const suppliers = useInventorySupplierStore((state) => state.suppliers);
 	const [savedId, setSavedId] = React.useState<string>();
@@ -66,11 +66,21 @@ export default function PurchaseFormScreen() {
 	});
 	const kind = useWatch({ control: form.control, name: "kind" });
 	const lines = useWatch({ control: form.control, name: "lines" });
-	const availableItems = INVENTORY_ITEMS.filter(
+	const availableItems = items.filter(
 		(item) =>
 			item.kind === kind && !lines.some((line) => line.itemId === item.id),
 	);
 	function save(data: PurchaseSchema) {
+		if (
+			data.lines.some(
+				(line) => !getInventoryItems().some((item) => item.id === line.itemId),
+			)
+		) {
+			form.setError("lines", {
+				message: "Item tidak tersedia. Hapus item tersebut dan pilih kembali.",
+			});
+			return;
+		}
 		const supplier = useInventorySupplierStore
 			.getState()
 			.suppliers.find((item) => item.name === data.supplier && item.active);
@@ -230,7 +240,23 @@ export default function PurchaseFormScreen() {
 							)}
 						/>
 						{fields.map((field, index) => {
-							const item = getInventoryItem(field.itemId);
+							const item = items.find((item) => item.id === field.itemId);
+							if (!item)
+								return (
+									<View key={field.id} className="gap-2">
+										<Text size="small" className="text-destructive">
+											Item tidak tersedia
+										</Text>
+										<Pressable
+											accessibilityRole="button"
+											onPress={() => remove(index)}
+										>
+											<Text size="small" className="text-primary">
+												Hapus item yang tidak tersedia
+											</Text>
+										</Pressable>
+									</View>
+								);
 							return (
 								<View
 									key={field.id}

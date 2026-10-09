@@ -99,6 +99,16 @@ function WorkerTextField({
 }
 
 export default function WorkerModifyScreen({ id }: { id?: string }) {
+	return (
+		<WorkerModifyForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+		/>
+	);
+}
+
+function WorkerModifyForm({ id }: { id?: string }) {
+	const isEditing = id !== undefined;
 	const worker = useWorkerQuery(id);
 	const roles = useRolesQuery();
 	const stores = useStoresQuery();
@@ -108,10 +118,20 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 	const error = useAlertModal();
 	const [errorMessage, setErrorMessage] = useState("");
 	const hydrated = useRef<string | undefined>(undefined);
+	const mounted = useRef(true);
+	const pending = useRef(false);
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
 	const form = useForm<WorkerSchema>({
-		resolver: zodResolver(workerSchema(!!id)),
+		resolver: zodResolver(workerSchema(isEditing)),
 		defaultValues: WORKER_DEFAULTS,
 	});
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
 	useEffect(() => {
 		if (id && worker.data && hydrated.current !== id) {
 			form.reset(workerFormValues(worker.data));
@@ -119,17 +139,20 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 		}
 	}, [id, worker.data, form]);
 	const loading =
-		roles.isLoading || stores.isLoading || (!!id && worker.isLoading);
+		roles.isLoading || stores.isLoading || (isEditing && worker.isLoading);
 	const failed =
 		roles.isError ||
 		stores.isError ||
-		(!!id && (worker.isError || (!loading && !worker.data)));
+		(isEditing && (worker.isError || (!loading && !worker.data)));
 	const noRoles = !loading && !failed && !roles.data?.length;
 	const noStores = !loading && !failed && !stores.data?.length;
 	const submitting =
 		form.formState.isSubmitting || create.isLoading || update.isLoading;
 	async function submit(values: WorkerSchema) {
 		if (
+			!mounted.current ||
+			pending.current ||
+			saved.current ||
 			loading ||
 			failed ||
 			noRoles ||
@@ -138,11 +161,14 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 			update.isLoading
 		)
 			return;
+		pending.current = true;
 		try {
-			const payload = await workerFormData(values, !!id);
-			const [, problem] = id
+			const payload = await workerFormData(values, isEditing);
+			if (!mounted.current) return;
+			const [, problem] = isEditing
 				? await update.call(payload)
 				: await create.call(payload);
+			if (!mounted.current) return;
 			if (problem) {
 				handleFormError(problem, form);
 				setErrorMessage(
@@ -153,12 +179,17 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 				error.open();
 				return;
 			}
+			saved.current = true;
+			setIsSaved(true);
 			success.open();
 		} catch {
+			if (!mounted.current) return;
 			setErrorMessage(
 				"Gambar tidak dapat dibaca. Pilih gambar kembali dan coba simpan.",
 			);
 			error.open();
+		} finally {
+			pending.current = false;
 		}
 	}
 	return (
@@ -362,7 +393,7 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 				)}
 			</Wrapper>
 			<BottomActionButton
-				onPress={form.handleSubmit(submit)}
+				onPress={() => form.handleSubmit(submit)()}
 				isLoading={submitting}
 				isDisabled={
 					loading ||
@@ -370,6 +401,7 @@ export default function WorkerModifyScreen({ id }: { id?: string }) {
 					noRoles ||
 					noStores ||
 					submitting ||
+					isSaved ||
 					success.openState[0]
 				}
 			>

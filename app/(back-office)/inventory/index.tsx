@@ -34,11 +34,13 @@ const GROUPS: NavListGroup[] = [
 		items: [
 			{
 				title: "Bahan Baku",
+				href: route("/inventory/materials"),
 				image: INVENTORY_IMAGES.material,
 				imageScale: 1.2,
 			},
 			{
 				title: "Komposisi Produk",
+				href: route("/inventory/compositions"),
 				image: INVENTORY_IMAGES.composition,
 				imageScale: 1.16,
 			},
@@ -61,6 +63,7 @@ const GROUPS: NavListGroup[] = [
 			},
 			{
 				title: "Pembayaran Tagihan",
+				href: route("/inventory/bill-payments"),
 				image: INVENTORY_IMAGES.payment,
 				imageScale: 1.14,
 			},
@@ -71,11 +74,13 @@ const GROUPS: NavListGroup[] = [
 		items: [
 			{
 				title: "Riwayat Mutasi Stok",
+				href: route("/inventory/stock-movement"),
 				image: INVENTORY_IMAGES.movement,
 				imageScale: 1.1,
 			},
 			{
 				title: "Stok Akhir",
+				href: route("/inventory/closing-stock"),
 				image: INVENTORY_IMAGES.closing,
 				imageScale: 1.11,
 			},

@@ -3,9 +3,10 @@ import { router, useLocalSearchParams } from "expo-router";
 import React, { useMemo } from "react";
 import { Pressable, View } from "react-native";
 import { useAlertModal } from "@/components/common/AlertModal";
-import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
 import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import BottomActionBar from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
+import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
 import Text from "@/components/common/Text";
 import DetailRow from "@/components/custom/DetailRow";
 import { cn, formatRp } from "@/lib/utils";
@@ -196,7 +197,7 @@ export default function ClosingJournalDetailScreen() {
 			</AnimatedWrapper>
 
 			{/* Sticky Bottom Edit & Hapus Buttons */}
-			<View className="absolute bottom-0 left-0 right-0 flex-row items-center gap-3 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar className="flex-row items-center gap-3">
 				<Pressable
 					onPress={handleEdit}
 					className="h-12 flex-1 items-center justify-center rounded-full border border-primary-500 bg-white active:bg-primary-50"
@@ -214,7 +215,7 @@ export default function ClosingJournalDetailScreen() {
 						Hapus
 					</Text>
 				</Pressable>
-			</View>
+			</BottomActionBar>
 
 			{/* Delete Confirmation Alert Modal */}
 			<DeleteConfirmModal

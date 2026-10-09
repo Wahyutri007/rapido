@@ -10,6 +10,10 @@ export default function InventoryFlowLayout() {
 			/>
 			<JSStack.Screen name="purchase-order" options={{ headerShown: false }} />
 			<JSStack.Screen name="suppliers" options={{ headerShown: false }} />
+			<JSStack.Screen name="materials" options={{ headerShown: false }} />
+			<JSStack.Screen name="compositions" options={{ headerShown: false }} />
+			<JSStack.Screen name="bill-payments" options={{ headerShown: false }} />
+			<JSStack.Screen name="stock-movement" options={{ headerShown: false }} />
 		</JSStack>
 	);
 }

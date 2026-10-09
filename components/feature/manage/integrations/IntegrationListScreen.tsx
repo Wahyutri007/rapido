@@ -1,0 +1,147 @@
+import { router } from "expo-router";
+import { useState } from "react";
+import { FlatList, Pressable, View } from "react-native";
+import BottomActionButton from "@/components/common/BottomActionButton";
+import { SearchNotFound } from "@/components/common/DataPlaceholder";
+import SearchBar from "@/components/common/SearchBar";
+import Text from "@/components/common/Text";
+import Wrapper from "@/components/common/Wrapper";
+import CatalogItemCard from "@/components/custom/CatalogItemCard";
+import ManageListActions from "@/components/feature/manage/ManageListActions";
+import { EFeather } from "@/components/icons";
+import { route } from "@/lib/utils";
+import { useManageIntegrationStore } from "@/store/manageIntegrationStore";
+import type { IntegrationDraft } from "@/types/ui/manage/integration";
+import IntegrationDeleteDialog from "./IntegrationDeleteDialog";
+
+export default function IntegrationListScreen() {
+	const items = useManageIntegrationStore((state) => state.items);
+	const [search, setSearch] = useState("");
+	const [selection, setSelection] = useState<{
+		item: IntegrationDraft;
+		version: number;
+	} | null>(null);
+	const current = items.find((item) => item.id === selection?.item.id);
+	const selected = current ?? selection?.item;
+	const needle = search.trim().toLocaleLowerCase("id");
+	const results = items.filter((item) =>
+		`${item.name} ${item.endpoint} ${item.notes}`
+			.toLocaleLowerCase("id")
+			.includes(needle),
+	);
+	return (
+		<>
+			<Wrapper isNotScrollable hasActionButton py={16}>
+				<View className="flex-1 gap-4 px-4">
+					<Text size="small" className="text-muted">
+						Draf tersedia selama aplikasi terbuka. Integrasi belum aktif dan
+						tidak mengirim data.
+					</Text>
+					<SearchBar
+						search={search}
+						setSearch={setSearch}
+						variant="light"
+						placeholder="Cari nama, URL, atau catatan..."
+					/>
+					<Text size="normal" w="medium">
+						{items.length} draf integrasi
+					</Text>
+					<FlatList
+						data={results}
+						keyExtractor={(item) => item.id}
+						contentContainerStyle={{ gap: 12, paddingBottom: 100 }}
+						showsVerticalScrollIndicator={false}
+						renderItem={({ item }) => (
+							<CatalogItemCard
+								density="compact"
+								leading={
+									<EFeather name="link" size={20} className="text-primary" />
+								}
+								title={
+									<Text size="normal" w="medium" numberOfLines={1}>
+										{item.name}
+									</Text>
+								}
+								subtitle={
+									<Text size="small" className="text-muted" numberOfLines={1}>
+										{item.endpoint}
+									</Text>
+								}
+								badge={
+									<Text size="small" className="text-muted">
+										Draf
+									</Text>
+								}
+								onPress={() => {
+									if (
+										useManageIntegrationStore
+											.getState()
+											.items.some((entry) => entry.id === item.id)
+									)
+										router.push(
+											route("/manage/integrations/detail", { id: item.id }),
+										);
+								}}
+								right={
+									<Pressable
+										accessibilityRole="button"
+										accessibilityLabel={`Tindakan ${item.name}`}
+										hitSlop={8}
+										onPress={(event) => {
+											event.stopPropagation();
+											setSelection((previous) => ({
+												item,
+												version: (previous?.version ?? 0) + 1,
+											}));
+										}}
+									>
+										<EFeather
+											name="more-vertical"
+											size={20}
+											className="text-muted"
+										/>
+									</Pressable>
+								}
+							/>
+						)}
+						ListEmptyComponent={
+							<SearchNotFound
+								text={
+									needle
+										? "Draf integrasi tidak ditemukan"
+										: "Belum ada draf integrasi. Tambahkan draf pertama Anda."
+								}
+							/>
+						}
+					/>
+				</View>
+			</Wrapper>
+			<BottomActionButton
+				onPress={() => router.push(route("/manage/integrations/modify"))}
+			>
+				Tambah Draf Integrasi
+			</BottomActionButton>
+			{selection && selected && (
+				<ManageListActions
+					key={selection.version}
+					title={selected.name}
+					entityName="Draf Integrasi"
+					available={!!current}
+					onViewDetail={() =>
+						router.push(
+							route("/manage/integrations/detail", { id: selected.id }),
+						)
+					}
+					onEdit={() =>
+						router.push(
+							route("/manage/integrations/modify", { id: selected.id }),
+						)
+					}
+					renderDelete={(openState) => (
+						<IntegrationDeleteDialog item={selected} openState={openState} />
+					)}
+				/>
+			)}
+		</>
+	);
+}

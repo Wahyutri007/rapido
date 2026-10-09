@@ -2,8 +2,9 @@ import { router } from "expo-router";
 import { useMemo, useState } from "react";
 import { View } from "react-native";
 import { useAlertModal } from "@/components/common/AlertModal";
-import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
 import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import BottomActionBar from "@/components/common/BottomActionBar";
+import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
 import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
 import {
@@ -104,7 +105,6 @@ export default function AdjustingJournalIndexScreen() {
 					onFilterPress={() => setIsFilterSheetOpen(true)}
 					filterActive={Boolean(selectedFilter)}
 					variant="light"
-					
 				/>
 
 				{/* Journal Cards */}
@@ -129,7 +129,7 @@ export default function AdjustingJournalIndexScreen() {
 			</AnimatedWrapper>
 
 			{/* Sticky Bottom "Buat Jurnal Penyesuaian" Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
@@ -141,7 +141,7 @@ export default function AdjustingJournalIndexScreen() {
 						Buat Jurnal Penyesuaian
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Action Sheet */}
 			<JournalActionSheet

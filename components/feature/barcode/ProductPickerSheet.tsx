@@ -107,24 +107,28 @@ type ProductPickerSheetProps = {
 	products?: ProductItem[];
 };
 
-export default function ProductPickerSheet({
-	isOpen,
+export default function ProductPickerSheet(props: ProductPickerSheetProps) {
+	return (
+		<Actionsheet isOpen={props.isOpen} onClose={props.onClose}>
+			<ActionsheetBackdrop />
+			<ProductPickerContent
+				key={JSON.stringify([props.isOpen, props.selectedProductId])}
+				{...props}
+			/>
+		</Actionsheet>
+	);
+}
+
+function ProductPickerContent({
 	onClose,
 	selectedProductId,
 	onSelect,
 	products = MOCK_PRODUCTS,
 }: ProductPickerSheetProps) {
 	const [search, setSearch] = React.useState("");
-	const [tempSelectedId, setTempSelectedId] = React.useState<string | undefined>(
-		selectedProductId,
-	);
-
-	React.useEffect(() => {
-		if (isOpen) {
-			setTempSelectedId(selectedProductId);
-			setSearch("");
-		}
-	}, [isOpen, selectedProductId]);
+	const [tempSelectedId, setTempSelectedId] = React.useState<
+		string | undefined
+	>(selectedProductId);
 
 	const filtered = React.useMemo(() => {
 		if (!search.trim()) return products;
@@ -142,99 +146,103 @@ export default function ProductPickerSheet({
 	};
 
 	return (
-		<Actionsheet isOpen={isOpen} onClose={onClose}>
-			<ActionsheetBackdrop />
-			<ActionsheetContent className="max-h-[85%] bg-white px-0 pb-6 rounded-t-3xl">
-				<ActionsheetDragIndicatorWrapper>
-					<ActionsheetDragIndicator />
-				</ActionsheetDragIndicatorWrapper>
+		<ActionsheetContent className="max-h-[85%] bg-white px-0 pb-6 rounded-t-3xl">
+			<ActionsheetDragIndicatorWrapper>
+				<ActionsheetDragIndicator />
+			</ActionsheetDragIndicatorWrapper>
 
-				{/* Header */}
-				<View className="flex-row items-center justify-between border-b border-gray-100 px-5 py-3 w-full">
-					<Pressable onPress={onClose} hitSlop={10}>
-						<Text size="normal" className="text-primary" w="medium">
-							Batal
-						</Text>
-					</Pressable>
-					<Text size="body" w="bold" className="text-foreground">
-						Pilih Produk
+			{/* Header */}
+			<View className="flex-row items-center justify-between border-b border-gray-100 px-5 py-3 w-full">
+				<Pressable onPress={onClose} hitSlop={10}>
+					<Text size="normal" className="text-primary" w="medium">
+						Batal
 					</Text>
-					<Pressable onPress={handleDone} hitSlop={10}>
-						<Text size="normal" className="text-primary" w="semibold">
-							Selesai
-						</Text>
-					</Pressable>
-				</View>
+				</Pressable>
+				<Text size="body" w="bold" className="text-foreground">
+					Pilih Produk
+				</Text>
+				<Pressable onPress={handleDone} hitSlop={10}>
+					<Text size="normal" className="text-primary" w="semibold">
+						Selesai
+					</Text>
+				</Pressable>
+			</View>
 
-				{/* Search Bar */}
-				<View className="px-5 pt-4 pb-2 w-full">
-					<SearchBar
-						search={search}
-						setSearch={setSearch}
-						placeholder="Cari..."
-						variant="light"
-						className="bg-zinc-50 border border-gray-200"
-					/>
-				</View>
+			{/* Search Bar */}
+			<View className="px-5 pt-4 pb-2 w-full">
+				<SearchBar
+					search={search}
+					setSearch={setSearch}
+					placeholder="Cari..."
+					variant="light"
+					className="bg-zinc-50 border border-gray-200"
+				/>
+			</View>
 
-				{/* Product List */}
-				<ScrollView className="w-full px-5 pt-2" showsVerticalScrollIndicator={false}>
-					<View className="gap-2.5 pb-6">
-						{filtered.map((product) => {
-							const isSelected = tempSelectedId === product.id;
-							return (
-								<Pressable
-									key={product.id}
-									onPress={() => setTempSelectedId(product.id)}
+			{/* Product List */}
+			<ScrollView
+				className="w-full px-5 pt-2"
+				showsVerticalScrollIndicator={false}
+			>
+				<View className="gap-2.5 pb-6">
+					{filtered.map((product) => {
+						const isSelected = tempSelectedId === product.id;
+						return (
+							<Pressable
+								key={product.id}
+								onPress={() => setTempSelectedId(product.id)}
+								className={cn(
+									"flex-row items-center gap-3 rounded-2xl border p-3.5 transition-all",
+									isSelected
+										? "border-primary bg-primary-50/20"
+										: "border-gray-200 bg-white",
+								)}
+							>
+								{/* Radio Icon */}
+								<View
 									className={cn(
-										"flex-row items-center gap-3 rounded-2xl border p-3.5 transition-all",
+										"size-6 items-center justify-center rounded-full border",
 										isSelected
-											? "border-primary bg-primary-50/20"
-											: "border-gray-200 bg-white",
+											? "border-primary bg-primary"
+											: "border-gray-300 bg-white",
 									)}
 								>
-									{/* Radio Icon */}
-									<View
-										className={cn(
-											"size-6 items-center justify-center rounded-full border",
-											isSelected
-												? "border-primary bg-primary"
-												: "border-gray-300 bg-white",
-										)}
-									>
-										{isSelected && (
-											<Feather name="check" size={14} color="#ffffff" />
-										)}
-									</View>
+									{isSelected && (
+										<Feather name="check" size={14} color="#ffffff" />
+									)}
+								</View>
 
-									{/* Thumbnail */}
-									<View className="size-11 overflow-hidden rounded-xl bg-gray-100 items-center justify-center">
-										{product.image ? (
-											<Image
-												source={{ uri: product.image }}
-												className="size-full"
-												resizeMode="cover"
-											/>
-										) : (
-											<Ionicons name="fast-food-outline" size={20} color={Colors.zinc[400]} />
-										)}
-									</View>
+								{/* Thumbnail */}
+								<View className="size-11 overflow-hidden rounded-xl bg-gray-100 items-center justify-center">
+									{product.image ? (
+										<Image
+											source={{ uri: product.image }}
+											className="size-full"
+											resizeMode="cover"
+										/>
+									) : (
+										<Ionicons
+											name="fast-food-outline"
+											size={20}
+											color={Colors.zinc[400]}
+										/>
+									)}
+								</View>
 
-									{/* Info */}
-									<View className="flex-1 justify-center">
-										<Text w="semibold" size="normal" className="text-foreground">
-											{product.name}
-										</Text>
-										<Text size="small" className="text-muted">
-											{product.category} · Stok: {product.stock}
-										</Text>
-									</View>
-								</Pressable>
-							);
-						})}
-					</View>
-				</ScrollView>
-			</ActionsheetContent>
-		</Actionsheet>
+								{/* Info */}
+								<View className="flex-1 justify-center">
+									<Text w="semibold" size="normal" className="text-foreground">
+										{product.name}
+									</Text>
+									<Text size="small" className="text-muted">
+										{product.category} · Stok: {product.stock}
+									</Text>
+								</View>
+							</Pressable>
+						);
+					})}
+				</View>
+			</ScrollView>
+		</ActionsheetContent>
 	);
 }

@@ -16,6 +16,10 @@ import WorkerDeleteDialog from "./WorkerDeleteDialog";
 import WorkerQueryError from "./WorkerQueryError";
 
 export default function WorkerDetailScreen({ id }: { id?: string }) {
+	return <WorkerDetailContent key={id ?? ""} id={id} />;
+}
+
+function WorkerDetailContent({ id }: { id?: string }) {
 	const query = useWorkerQuery(id);
 	const deletion = useAlertModal();
 	const worker = query.data;

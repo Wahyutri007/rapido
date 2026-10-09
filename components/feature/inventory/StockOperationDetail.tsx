@@ -41,6 +41,7 @@ export default function StockOperationDetail({
 		<Wrapper contentContainerStyle={{ padding: 16, gap: 16 }}>
 			{!isTransfer && (
 				<InventoryMetrics
+					valueTone="item"
 					items={[
 						{
 							label: "Total Stok Awal",
@@ -181,7 +182,7 @@ export default function StockOperationDetail({
 										{
 											label: "Rusak",
 											value: line.quantity,
-											color: "text-destructive",
+											color: "!text-destructive",
 										},
 									].map((metric, index) => (
 										<View
@@ -213,7 +214,7 @@ export default function StockOperationDetail({
 										<Text size="small" className="text-success">
 											Bagus {Number(goodPercent.toFixed(1))}%
 										</Text>
-										<Text size="small" className="text-destructive">
+										<Text size="small" className="!text-destructive">
 											Rusak {Number((100 - goodPercent).toFixed(1))}%
 										</Text>
 									</View>

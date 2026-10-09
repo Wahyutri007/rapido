@@ -15,7 +15,7 @@ import SuccessModal, { useAlertModal } from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import { Colors } from "@/constants/Colors";
-import { cn } from "@/lib/utils";
+import { cn, formatRp } from "@/lib/utils";
 
 type RoundingMethod = "up" | "down" | "nearest";
 type ApplyToOption = "all" | "cash_only";
@@ -43,9 +43,9 @@ const METHOD_OPTIONS: {
 ];
 
 const MULTIPLE_OPTIONS = [
-	{ label: "Ratusan (Rp100)", value: "100" },
-	{ label: "Ribuan (Rp1.000)", value: "1000" },
-	{ label: "Puluhan (Rp10)", value: "10" },
+	{ label: "Ratusan (Rp100)", value: "2" },
+	{ label: "Ribuan (Rp1.000)", value: "3" },
+	{ label: "Puluhan (Rp10)", value: "1" },
 ];
 
 export default function RoundingSettingScreen() {
@@ -54,29 +54,42 @@ export default function RoundingSettingScreen() {
 	const successModal = useAlertModal();
 	const errorModal = useAlertModal();
 
-	const [enabled, setEnabled] = React.useState(true);
+	// Server values remain live until a field is edited in this screen session.
+	const [draft, setDraft] = React.useState<{
+		enabled?: boolean;
+		method?: RoundingMethod;
+		decimalPlaces?: string;
+	}>({});
 	const [applyTo, setApplyTo] = React.useState<ApplyToOption>("all");
-	const [method, setMethod] = React.useState<RoundingMethod>("nearest");
-	const [multiple, setMultiple] = React.useState("100");
-
-	// Sync initial data from backend if present
-	React.useEffect(() => {
-		if (roundingData) {
-			setEnabled(roundingData.enabled);
-			if (roundingData.method) {
-				setMethod(roundingData.method);
-			}
-			if (roundingData.decimal_places !== undefined) {
-				setMultiple(String(roundingData.decimal_places));
-			}
-		}
-	}, [roundingData]);
+	const enabled = draft.enabled ?? roundingData?.enabled ?? true;
+	const method = draft.method ?? roundingData?.method ?? "nearest";
+	// The API stores the exponent; the displayed multiple is 10 ** decimal_places.
+	const decimalPlaces =
+		draft.decimalPlaces ?? String(roundingData?.decimal_places ?? 2);
+	const exponent = Number(decimalPlaces);
+	const isValidExponent =
+		Number.isInteger(exponent) && exponent >= 0 && exponent <= 10;
+	const multipleOptions =
+		isValidExponent &&
+		!MULTIPLE_OPTIONS.some((item) => item.value === decimalPlaces)
+			? [
+					{
+						label: `Kelipatan (${formatRp(10 ** exponent)})`,
+						value: decimalPlaces,
+					},
+					...MULTIPLE_OPTIONS,
+				]
+			: MULTIPLE_OPTIONS;
 
 	const handleSave = async () => {
+		if (!isValidExponent) {
+			errorModal.open();
+			return;
+		}
 		const [, error] = await roundingMutation.call({
 			enabled,
 			method,
-			decimal_places: Number(multiple) || 0,
+			decimal_places: exponent,
 		});
 		if (error) {
 			errorModal.open();
@@ -95,13 +108,15 @@ export default function RoundingSettingScreen() {
 							<Text w="semibold" size="normal" className="text-foreground">
 								Aktifkan Pembulatan
 							</Text>
-							<Text size="small" className="mt-0.5 text-muted leading-relaxed">
+							<Text size="small" className="mt-1 text-muted leading-relaxed">
 								Total pembayaran akan dibulatkan sesuai aturan bisnis.
 							</Text>
 						</View>
 						<Switch
 							value={enabled}
-							onValueChange={setEnabled}
+							onValueChange={(value) =>
+								setDraft((previous) => ({ ...previous, enabled: value }))
+							}
 							trackColor={{ false: "#e4e4e7", true: Colors.primary }}
 							thumbColor="#ffffff"
 						/>
@@ -109,7 +124,7 @@ export default function RoundingSettingScreen() {
 
 					<Pressable
 						onPress={() => router.push("/manage/pos-settings/rounding-detail")}
-						className="mt-2.5 self-start"
+						className="mt-3 self-start"
 					>
 						<Text size="small" w="semibold" className="text-primary underline">
 							Baca Selengkapnya
@@ -122,20 +137,20 @@ export default function RoundingSettingScreen() {
 					<>
 						{/* Terapkan Ke */}
 						<View className="gap-2">
-							<View className="flex-row items-center gap-1.5">
+							<View className="flex-row items-center gap-2">
 								<Text size="normal" w="medium" className="text-muted">
 									Terapkan Ke
 								</Text>
 								<Feather name="info" size={14} color={Colors.zinc[400]} />
 							</View>
 
-							<View className="flex-row rounded-xl bg-zinc-100 p-1">
+							<View className="flex-row overflow-hidden rounded-xl border border-border-muted bg-white shadow-main">
 								<Pressable
 									onPress={() => setApplyTo("all")}
 									className={cn(
-										"flex-1 items-center justify-center rounded-lg py-2.5",
+										"flex-1 items-center justify-center py-3",
 										applyTo === "all"
-											? "bg-primary shadow-sm"
+											? "rounded-lg bg-primary"
 											: "bg-transparent",
 									)}
 								>
@@ -151,9 +166,9 @@ export default function RoundingSettingScreen() {
 								<Pressable
 									onPress={() => setApplyTo("cash_only")}
 									className={cn(
-										"flex-1 items-center justify-center rounded-lg py-2.5",
+										"flex-1 items-center justify-center py-3",
 										applyTo === "cash_only"
-											? "bg-primary shadow-sm"
+											? "rounded-lg bg-primary"
 											: "bg-transparent",
 									)}
 								>
@@ -176,27 +191,32 @@ export default function RoundingSettingScreen() {
 								Metode Pembulatan
 							</Text>
 
-							<Card className="gap-2 p-2.5">
+							<Card className="gap-2">
 								{METHOD_OPTIONS.map((opt) => {
 									const isSelected = method === opt.id;
 									return (
 										<BouncyPressable
 											key={opt.id}
-											onPress={() => setMethod(opt.id)}
+											onPress={() =>
+												setDraft((previous) => ({
+													...previous,
+													method: opt.id,
+												}))
+											}
 											activeScale={0.98}
 											className={cn(
-												"flex-row items-start gap-3 rounded-xl border p-3.5",
+												"flex-row items-start gap-3 rounded-lg border p-4",
 												isSelected
 													? "border-primary bg-primary/5"
-													: "border-zinc-200 bg-white",
+													: "border-border bg-white",
 											)}
 										>
 											<View
 												className={cn(
-													"mt-0.5 size-5 items-center justify-center rounded-full border",
+													"mt-1 size-5 items-center justify-center rounded-full border",
 													isSelected
 														? "border-primary bg-primary"
-														: "border-zinc-300 bg-white",
+														: "border-border bg-white",
 												)}
 											>
 												{isSelected && (
@@ -216,7 +236,7 @@ export default function RoundingSettingScreen() {
 												</Text>
 												<Text
 													size="small"
-													className="mt-0.5 text-muted leading-relaxed"
+													className="mt-1 text-muted leading-relaxed"
 												>
 													{opt.description}
 												</Text>
@@ -233,11 +253,16 @@ export default function RoundingSettingScreen() {
 								Kelipatan Pembulatan
 							</Text>
 
-							<Card className="p-3">
+							<Card>
 								<SingleSelect
-									items={MULTIPLE_OPTIONS}
-									value={multiple}
-									onValueChange={setMultiple}
+									items={multipleOptions}
+									value={decimalPlaces}
+									onValueChange={(value) =>
+										setDraft((previous) => ({
+											...previous,
+											decimalPlaces: value,
+										}))
+									}
 									placeholder="Pilih Kelipatan Pembulatan"
 									label="Kelipatan Pembulatan"
 									variant="rounded"

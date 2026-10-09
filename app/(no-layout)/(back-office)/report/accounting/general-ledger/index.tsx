@@ -17,6 +17,8 @@ import type {
 	LedgerCategory,
 } from "@/types/ui/accounting/ledger";
 
+const ACCOUNT_PREVIEW_LIMIT = 5;
+
 export default function GeneralLedgerIndexScreen() {
 	const accounts = useAccountingStore((state) => state.ledgerAccounts);
 	const summary = useAccountingStore((state) => state.ledgerSummary);
@@ -57,6 +59,10 @@ export default function GeneralLedgerIndexScreen() {
 		return list;
 	}, [accounts, selectedCategory, searchQuery, selectedSort]);
 
+	const visibleAccounts = showAllAccounts
+		? filteredAccounts
+		: filteredAccounts.slice(0, ACCOUNT_PREVIEW_LIMIT);
+
 	const handleAccountPress = (account: LedgerAccount) => {
 		router.push(`/report/accounting/general-ledger/detail?id=${account.id}`);
 	};
@@ -89,27 +95,29 @@ export default function GeneralLedgerIndexScreen() {
 			{/* Ringkasan Akun Utama */}
 			<View className="gap-2.5">
 				<View className="flex-row items-center justify-between px-1">
-					<Text w="semibold">
-						Ringkasan Akun Utama
-					</Text>
-					<Pressable
-						onPress={() => setShowAllAccounts((prev) => !prev)}
-						hitSlop={8}
-					>
-						<Text size="small" w="semibold" className="text-primary">
-							{showAllAccounts ? "Tampilkan Sedikit" : "Lihat Semua"}
-						</Text>
-					</Pressable>
+					<Text w="semibold">Ringkasan Akun Utama</Text>
+					{filteredAccounts.length > ACCOUNT_PREVIEW_LIMIT && (
+						<Pressable
+							onPress={() => setShowAllAccounts((prev) => !prev)}
+							hitSlop={8}
+							accessibilityRole="button"
+							accessibilityState={{ expanded: showAllAccounts }}
+						>
+							<Text size="small" w="semibold" className="text-primary">
+								{showAllAccounts ? "Tampilkan Sedikit" : "Lihat Semua"}
+							</Text>
+						</Pressable>
+					)}
 				</View>
 
 				{/* Accounts List Container */}
 				<Card className="py-1">
-					{filteredAccounts.map((account, index) => (
+					{visibleAccounts.map((account, index) => (
 						<LedgerAccountCard
 							key={account.id}
 							account={account}
 							onPress={handleAccountPress}
-							isLast={index === filteredAccounts.length - 1}
+							isLast={index === visibleAccounts.length - 1}
 						/>
 					))}
 

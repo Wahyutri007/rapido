@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useRoleDeleteRequest } from "@/api/hooks/roles";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
 import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
@@ -6,27 +7,65 @@ import { roleName } from "@/lib/manage/roles";
 import type { State } from "@/types";
 import type { RoleData } from "@/types/api/role";
 
-export default function RoleDeleteDialog({
-	role,
-	openState,
-	onDeleted,
-}: {
+type RoleDeleteDialogProps = {
 	role: RoleData | null;
 	openState: State<boolean>;
 	onDeleted?: () => void;
-}) {
+};
+
+export default function RoleDeleteDialog(props: RoleDeleteDialogProps) {
+	return <RoleDeleteContent key={props.role?.id ?? ""} {...props} />;
+}
+
+function RoleDeleteContent({
+	role,
+	openState,
+	onDeleted,
+}: RoleDeleteDialogProps) {
 	const request = useRoleDeleteRequest(undefined, role?.id);
 	const success = useAlertModal();
 	const error = useAlertModal();
+	const mounted = useRef(false);
+	const pending = useRef(false);
+	const deleted = useRef(false);
+	const acknowledged = useRef(false);
+	const isOpen = openState[0];
+	const visible = useRef(isOpen);
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
+	useEffect(() => {
+		visible.current = isOpen;
+	}, [isOpen]);
 	async function remove() {
-		if (!role || request.isLoading) return;
-		const [, failed] = await request.call();
-		if (failed) {
-			error.open();
+		if (
+			!mounted.current ||
+			!visible.current ||
+			pending.current ||
+			deleted.current ||
+			!role?.id ||
+			request.isLoading
+		)
 			return;
+		pending.current = true;
+		try {
+			const [, failed] = await request.call();
+			if (!mounted.current) return;
+			if (failed) {
+				error.open();
+				return;
+			}
+			deleted.current = true;
+			openState[1](false);
+			success.open();
+		} catch {
+			if (mounted.current) error.open();
+		} finally {
+			pending.current = false;
 		}
-		openState[1](false);
-		success.open();
 	}
 	return (
 		<>
@@ -42,6 +81,9 @@ export default function RoleDeleteDialog({
 				title="Role berhasil dihapus"
 				description="Role sudah dihapus dari daftar hak akses."
 				onClose={() => {
+					if (!mounted.current || !deleted.current || acknowledged.current)
+						return;
+					acknowledged.current = true;
 					success.close();
 					onDeleted?.();
 				}}

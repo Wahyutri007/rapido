@@ -3,6 +3,9 @@ import { useLocalSearchParams } from "expo-router";
 import { useMemo, useRef, useState } from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
 import Text from "@/components/common/Text";
 import {
@@ -74,10 +77,7 @@ export default function BuktiPembayaranScreen() {
 						</View>
 
 						<Text className="text-xs text-zinc-400">Nama Merchant</Text>
-						<Text
-							w="semibold"
-							className="text-center text-sm mt-0.5 px-4"
-						>
+						<Text w="semibold" className="text-center text-sm mt-0.5 px-4">
 							{receipt.merchantName}
 						</Text>
 						<View className="flex-row items-center mt-1">
@@ -220,10 +220,11 @@ export default function BuktiPembayaranScreen() {
 						</View>
 					</View>
 				</Card>
+				<BottomActionInset />
 			</ScrollView>
 
 			{/* Sticky Bottom "Aksi" Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					variant="outline"
@@ -234,7 +235,7 @@ export default function BuktiPembayaranScreen() {
 						Aksi
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Action Sheet */}
 			<Actionsheet

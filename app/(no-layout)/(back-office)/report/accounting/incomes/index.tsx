@@ -2,6 +2,9 @@ import { router } from "expo-router";
 import { useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
 import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
@@ -155,7 +158,6 @@ export default function AccountingIncomesIndexScreen() {
 					onFilterPress={() => setIsFilterSheetOpen(true)}
 					filterActive={Boolean(selectedFundingSource)}
 					variant="light"
-					
 				/>
 
 				{/* Grouped Date Cards */}
@@ -178,10 +180,11 @@ export default function AccountingIncomesIndexScreen() {
 						</View>
 					)}
 				</View>
+				<BottomActionInset />
 			</ScrollView>
 
 			{/* Sticky Bottom "Tambah Penerimaan" Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
@@ -191,7 +194,7 @@ export default function AccountingIncomesIndexScreen() {
 						Tambah Penerimaan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Action Sheet for KM items */}
 			<IncomeActionSheet

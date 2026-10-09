@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import Header from "@/components/common/Header";
 import { JSStack, ScaleBackTransition } from "@/components/custom/JSStack";
 
@@ -18,6 +19,23 @@ export default function AccountingLayout() {
 			/>
 			<JSStack.Screen name="general-ledger" options={{ headerShown: false }} />
 			<JSStack.Screen name="closing-journal" options={{ headerShown: false }} />
+			<JSStack.Screen
+				name="trial-balance"
+				options={{
+					header: () => (
+						<Header
+							title="Neraca Saldo"
+							back={() => {
+								if (router.canGoBack()) router.back();
+								else
+									router.replace(
+										"/(no-layout)/(back-office)/report/accounting",
+									);
+							}}
+						/>
+					),
+				}}
+			/>
 			<JSStack.Screen
 				name="balance-sheet"
 				options={{ header: () => <Header back title="Laporan" /> }}

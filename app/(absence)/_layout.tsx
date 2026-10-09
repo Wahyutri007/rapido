@@ -5,6 +5,7 @@ export default function AbsenceLayout() {
 	return (
 		<JSStack screenOptions={{ ...ScaleBackTransition }}>
 			<JSStack.Screen name="home" options={{ headerShown: false }} />
+			<JSStack.Screen name="history" options={{ headerShown: false }} />
 			<JSStack.Screen
 				name="record"
 				options={({ route }: any) => ({

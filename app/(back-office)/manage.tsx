@@ -1,7 +1,5 @@
 import React from "react";
-import { View } from "react-native";
 import SearchBar from "@/components/common/SearchBar";
-import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import {
 	NavList,
@@ -70,19 +68,7 @@ const GROUPS: NavListGroup[] = [
 	{
 		title: "Hubungkan",
 		items: [
-			{
-				id: "external",
-				title: "Integrasi Eksternal",
-				icon: <ManageMenuIcon name="external" />,
-				iconTone: "muted",
-				rightIconOverride: (
-					<View className="rounded-lg bg-primary-50 px-3 py-1">
-						<Text className="text-primary" size="small" w="semibold">
-							Coming Soon
-						</Text>
-					</View>
-				),
-			},
+			menuItem("Integrasi Eksternal", "/manage/integrations", "external"),
 		],
 	},
 	{

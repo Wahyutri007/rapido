@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useWorkerDeleteRequest } from "@/api/hooks/workers";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
 import DeleteConfirmModal from "@/components/common/DeleteConfirmModal";
@@ -5,27 +6,65 @@ import SuccessModal from "@/components/common/SuccessModal";
 import type { State } from "@/types";
 import type { WorkerData } from "@/types/api/worker";
 
-export default function WorkerDeleteDialog({
-	worker,
-	openState,
-	onDeleted,
-}: {
+type WorkerDeleteDialogProps = {
 	worker: WorkerData | null;
 	openState: State<boolean>;
 	onDeleted?: () => void;
-}) {
+};
+
+export default function WorkerDeleteDialog(props: WorkerDeleteDialogProps) {
+	return <WorkerDeleteContent key={props.worker?.id ?? ""} {...props} />;
+}
+
+function WorkerDeleteContent({
+	worker,
+	openState,
+	onDeleted,
+}: WorkerDeleteDialogProps) {
 	const request = useWorkerDeleteRequest(undefined, worker?.id);
 	const success = useAlertModal();
 	const error = useAlertModal();
+	const mounted = useRef(false);
+	const pending = useRef(false);
+	const deleted = useRef(false);
+	const acknowledged = useRef(false);
+	const isOpen = openState[0];
+	const visible = useRef(isOpen);
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
+	useEffect(() => {
+		visible.current = isOpen;
+	}, [isOpen]);
 	async function remove() {
-		if (!worker || request.isLoading) return;
-		const [, problem] = await request.call();
-		if (problem) {
-			error.open();
+		if (
+			!mounted.current ||
+			!visible.current ||
+			pending.current ||
+			deleted.current ||
+			!worker?.id ||
+			request.isLoading
+		)
 			return;
+		pending.current = true;
+		try {
+			const [, problem] = await request.call();
+			if (!mounted.current) return;
+			if (problem) {
+				error.open();
+				return;
+			}
+			deleted.current = true;
+			openState[1](false);
+			success.open();
+		} catch {
+			if (mounted.current) error.open();
+		} finally {
+			pending.current = false;
 		}
-		openState[1](false);
-		success.open();
 	}
 	return (
 		<>
@@ -41,6 +80,9 @@ export default function WorkerDeleteDialog({
 				title="Karyawan berhasil dihapus"
 				description="Akun karyawan sudah dihapus."
 				onClose={() => {
+					if (!mounted.current || !deleted.current || acknowledged.current)
+						return;
+					acknowledged.current = true;
 					success.close();
 					onDeleted?.();
 				}}

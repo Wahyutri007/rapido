@@ -2,6 +2,7 @@ import Feather from "@expo/vector-icons/Feather";
 import { router } from "expo-router";
 import React from "react";
 import { Image, Pressable, Switch, View } from "react-native";
+import { useCategoriesQuery } from "@/api/hooks/categories";
 import { useMenusQuery } from "@/api/hooks/menus";
 import {
 	useStockSettingMutation,
@@ -23,103 +24,87 @@ import {
 	ActionsheetDragIndicatorWrapper,
 	ActionsheetScrollView,
 } from "@/components/ui/actionsheet";
+import { Button, ButtonText } from "@/components/ui/button";
 import { Colors } from "@/constants/Colors";
 import { cn } from "@/lib/utils";
 
-type DummyProduct = {
+type StockOption = {
 	id: string;
 	name: string;
-	category: string;
-	stock: number;
 	image?: string;
 };
 
-const DEFAULT_PRODUCTS: DummyProduct[] = [
-	{
-		id: "prod-1",
-		name: "Bakmie",
-		category: "Makanan",
-		stock: 48,
-	},
-	{
-		id: "prod-2",
-		name: "Salad Yumme",
-		category: "Makanan",
-		stock: 32,
-	},
-	{
-		id: "prod-3",
-		name: "Mie Goreng Dumai",
-		category: "Makanan",
-		stock: 24,
-	},
-	{
-		id: "prod-4",
-		name: "Nasi Goreng Seafood",
-		category: "Makanan",
-		stock: 40,
-	},
-	{
-		id: "prod-5",
-		name: "Es Teh Manis",
-		category: "Minuman",
-		stock: 65,
-	},
-	{
-		id: "prod-6",
-		name: "Kopi Susu Gula Aren",
-		category: "Minuman",
-		stock: 50,
-	},
-];
+type StockSelection = {
+	contentType: "item" | "category";
+	ids: string[];
+};
 
 export default function StockLimitScreen() {
-	const { data: stockData } = useStockSettingQuery();
+	const stockQuery = useStockSettingQuery();
+	const { data: stockData } = stockQuery;
 	const stockMutation = useStockSettingMutation();
-	const { data: menusData } = useMenusQuery();
 	const successModal = useAlertModal();
 	const errorModal = useAlertModal();
 
-	const [enabled, setEnabled] = React.useState(true);
-	const [excludedProductIds, setExcludedProductIds] = React.useState<string[]>(
-		[],
-	);
+	// Refetches update untouched fields without replacing local changes.
+	const [draft, setDraft] = React.useState<{
+		enabled?: boolean;
+		selection?: StockSelection;
+	}>({});
+	const enabled = draft.enabled ?? stockData?.enabled ?? true;
+	const serverContentType =
+		stockData?.content_type ??
+		(stockData?.details?.length &&
+		stockData.details.every((detail) => detail.stockable_type === "category")
+			? "category"
+			: "item");
+	const contentType = draft.selection?.contentType ?? serverContentType;
+	const excludedIds =
+		draft.selection?.ids ??
+		(stockData?.type === "all"
+			? []
+			: (stockData?.details?.map((detail) => detail.stockable_id) ?? []));
+	const selectionKind = contentType === "category" ? "kategori" : "produk";
+	const isSettingsUnavailable =
+		stockQuery.isPending || (stockQuery.isError && !stockData);
 	const [isPickerOpen, setIsPickerOpen] = React.useState(false);
-	const [draftExcluded, setDraftExcluded] = React.useState<string[]>([]);
+	const [pickerSelection, setPickerSelection] = React.useState<StockSelection>({
+		contentType: "item",
+		ids: [],
+	});
 	const [searchQuery, setSearchQuery] = React.useState("");
+	// An open picker keeps the kind and IDs from its opening snapshot together.
+	const pickerType = isPickerOpen ? pickerSelection.contentType : contentType;
+	const menusQuery = useMenusQuery(undefined, {
+		enabled: pickerType === "item",
+	});
+	const categoriesQuery = useCategoriesQuery(undefined, {
+		enabled: pickerType === "category",
+	});
+	const pickerQuery = pickerType === "category" ? categoriesQuery : menusQuery;
+	const pickerKind = pickerType === "category" ? "kategori" : "produk";
 
-	// Sync initial data from backend if present
-	React.useEffect(() => {
-		if (stockData) {
-			setEnabled(stockData.enabled);
-			if (stockData.details) {
-				setExcludedProductIds(stockData.details.map((d) => d.stockable_id));
-			}
-		}
-	}, [stockData]);
+	const options = React.useMemo<StockOption[]>(
+		() =>
+			pickerType === "category"
+				? (categoriesQuery.data ?? []).map(({ id, name }) => ({ id, name }))
+				: (menusQuery.data ?? []).map(({ id, name, image }) => ({
+						id,
+						name,
+						image,
+					})),
+		[pickerType, categoriesQuery.data, menusQuery.data],
+	);
 
-	// Prepare product list
-	const productList = React.useMemo<DummyProduct[]>(() => {
-		if (menusData && menusData.length > 0) {
-			return menusData.map((m) => ({
-				id: m.id,
-				name: m.name,
-				category: "Produk",
-				stock: 20,
-				image: m.image,
-			}));
-		}
-		return DEFAULT_PRODUCTS;
-	}, [menusData]);
-
-	const filteredProducts = React.useMemo(() => {
-		if (!searchQuery.trim()) return productList;
+	const filteredOptions = React.useMemo(() => {
+		if (!searchQuery.trim()) return options;
 		const q = searchQuery.toLowerCase();
-		return productList.filter((p) => p.name.toLowerCase().includes(q));
-	}, [productList, searchQuery]);
+		return options.filter((option) => option.name.toLowerCase().includes(q));
+	}, [options, searchQuery]);
 
 	const handleOpenPicker = () => {
-		setDraftExcluded([...excludedProductIds]);
+		if (isSettingsUnavailable) return;
+		setPickerSelection({ contentType, ids: [...excludedIds] });
 		setSearchQuery("");
 		setIsPickerOpen(true);
 	};
@@ -130,22 +115,32 @@ export default function StockLimitScreen() {
 	};
 
 	const handleSavePicker = () => {
-		setExcludedProductIds(draftExcluded);
+		setDraft((previous) => ({
+			...previous,
+			selection: {
+				contentType: pickerSelection.contentType,
+				ids: [...pickerSelection.ids],
+			},
+		}));
 		setIsPickerOpen(false);
 	};
 
 	const toggleDraftProduct = (id: string) => {
-		setDraftExcluded((prev) =>
-			prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
-		);
+		setPickerSelection((previous) => ({
+			...previous,
+			ids: previous.ids.includes(id)
+				? previous.ids.filter((item) => item !== id)
+				: [...previous.ids, id],
+		}));
 	};
 
 	const handleSave = async () => {
+		if (isSettingsUnavailable || stockMutation.isLoading) return;
 		const [, error] = await stockMutation.call({
 			enabled,
-			type: excludedProductIds.length > 0 ? "hybrid" : "all",
-			content_type: "item",
-			stockable_ids: excludedProductIds,
+			type: excludedIds.length > 0 ? "hybrid" : "all",
+			content_type: contentType,
+			stockable_ids: excludedIds,
 		});
 		if (error) {
 			errorModal.open();
@@ -157,6 +152,21 @@ export default function StockLimitScreen() {
 	return (
 		<>
 			<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>
+				{stockQuery.isPending && (
+					<Text size="small" className="text-muted">
+						Memuat pengaturan batas stok...
+					</Text>
+				)}
+				{stockQuery.isError && !stockData && (
+					<View className="gap-3">
+						<Text size="small" className="text-destructive">
+							Pengaturan batas stok belum dapat dimuat.
+						</Text>
+						<Button variant="outline" onPress={() => stockQuery.refetch()}>
+							<ButtonText>Muat Ulang</ButtonText>
+						</Button>
+					</View>
+				)}
 				{/* Switch Card */}
 				<Card>
 					<View className="flex-row items-center justify-between">
@@ -164,20 +174,22 @@ export default function StockLimitScreen() {
 							<Text w="semibold" size="normal" className="text-foreground">
 								Aktifkan Batas Stock
 							</Text>
-							<Text size="small" className="mt-0.5 text-muted leading-relaxed">
+							<Text size="small" className="mt-1 text-muted leading-relaxed">
 								Batasi penjualan produk sesuai jumlah stock yang tersedia.
 							</Text>
 						</View>
 						<Switch
 							value={enabled}
-							onValueChange={setEnabled}
+							onValueChange={(value) =>
+								setDraft((previous) => ({ ...previous, enabled: value }))
+							}
 							trackColor={{ false: "#e4e4e7", true: Colors.primary }}
 							thumbColor="#ffffff"
 						/>
 					</View>
 
 					{/* Cara Kerja Banner */}
-					<View className="mt-3.5 rounded-xl border border-primary-200/60 bg-primary-50 p-3.5">
+					<View className="mt-4 rounded-xl border border-primary-200/60 bg-primary-50 p-4">
 						<View className="flex-row items-center gap-2">
 							<Feather name="info" size={16} color={Colors.primary} />
 							<Text w="semibold" size="normal" className="text-primary">
@@ -214,8 +226,8 @@ export default function StockLimitScreen() {
 					<Text size="normal" w="medium" className="text-muted">
 						Penerapan
 					</Text>
-					<Card className="p-2">
-						<View className="flex-row items-center justify-between border-b border-border-muted p-3">
+					<Card>
+						<View className="flex-row items-center justify-between border-b border-border-muted py-3">
 							<View className="flex-row items-center gap-3">
 								<View className="size-10 items-center justify-center rounded-xl bg-primary-50">
 									<Feather name="box" size={18} color={Colors.primary} />
@@ -224,7 +236,7 @@ export default function StockLimitScreen() {
 									Terapkan ke
 								</Text>
 							</View>
-							<View className="flex-row items-center gap-1.5">
+							<View className="flex-row items-center gap-2">
 								<Text size="normal" className="text-muted">
 									Semua Produk
 								</Text>
@@ -238,8 +250,9 @@ export default function StockLimitScreen() {
 
 						<BouncyPressable
 							onPress={handleOpenPicker}
+							disabled={isSettingsUnavailable}
 							activeScale={0.98}
-							className="flex-row items-center justify-between p-3"
+							className="flex-row items-center justify-between py-3"
 						>
 							<View className="flex-row items-center gap-3 flex-1 mr-2">
 								<View className="size-10 items-center justify-center rounded-xl bg-primary-50">
@@ -247,12 +260,14 @@ export default function StockLimitScreen() {
 								</View>
 								<View className="flex-1">
 									<Text w="medium" size="normal" className="text-foreground">
-										Kecuali Produk (Opsional)
+										{contentType === "category"
+											? "Kecuali Kategori (Opsional)"
+											: "Kecuali Produk (Opsional)"}
 									</Text>
-									<Text size="small" className="mt-0.5 text-muted">
-										{excludedProductIds.length > 0
-											? `${excludedProductIds.length} produk dikecualikan`
-											: "Pilih produk yang dikecualikan"}
+									<Text size="small" className="mt-1 text-muted">
+										{excludedIds.length > 0
+											? `${excludedIds.length} ${selectionKind} dikecualikan`
+											: `Pilih ${selectionKind} yang dikecualikan`}
 									</Text>
 								</View>
 							</View>
@@ -270,7 +285,7 @@ export default function StockLimitScreen() {
 					<ActionsheetBackdrop />
 					<ActionsheetContent className="px-4 pb-6 pt-2">
 						<ActionsheetDragIndicatorWrapper className="mb-2">
-							<ActionsheetDragIndicator className="h-1 w-10 rounded-full bg-zinc-300" />
+							<ActionsheetDragIndicator className="h-1 w-10 rounded-full bg-border" />
 						</ActionsheetDragIndicatorWrapper>
 
 						<View className="w-full flex-row items-center justify-between pb-3">
@@ -280,7 +295,7 @@ export default function StockLimitScreen() {
 								</Text>
 							</Pressable>
 							<Text size="body" w="bold">
-								Pilih Produk
+								{pickerType === "category" ? "Pilih Kategori" : "Pilih Produk"}
 							</Text>
 							<Pressable onPress={handleSavePicker} hitSlop={8}>
 								<Text size="body" w="semibold" className="text-primary">
@@ -289,13 +304,13 @@ export default function StockLimitScreen() {
 							</Pressable>
 						</View>
 
-						<View className="mb-3 h-px w-full bg-zinc-100" />
+						<View className="mb-3 h-px w-full bg-border-muted" />
 
 						<SearchBar
 							search={searchQuery}
 							setSearch={setSearchQuery}
 							placeholder="Cari..."
-							className="mb-3 bg-white"
+							className="mb-3"
 							debounce={false}
 						/>
 
@@ -304,17 +319,46 @@ export default function StockLimitScreen() {
 							showsVerticalScrollIndicator={false}
 							keyboardShouldPersistTaps="handled"
 						>
-							{filteredProducts.map((product) => {
-								const isChecked = draftExcluded.includes(product.id);
+							{pickerQuery.isPending && (
+								<Text size="normal" className="py-4 text-center text-muted">
+									Memuat {pickerKind}...
+								</Text>
+							)}
+							{pickerQuery.isError && (
+								<View className="gap-3 py-4">
+									<Text size="normal" className="text-center text-destructive">
+										Daftar {pickerKind} belum dapat dimuat.
+									</Text>
+									<Button
+										variant="outline"
+										onPress={() => pickerQuery.refetch()}
+									>
+										<ButtonText>Muat Ulang</ButtonText>
+									</Button>
+								</View>
+							)}
+							{!pickerQuery.isPending &&
+								!pickerQuery.isError &&
+								filteredOptions.length === 0 && (
+									<Text size="normal" className="py-4 text-center text-muted">
+										{searchQuery.trim()
+											? pickerType === "category"
+												? "Kategori tidak ditemukan."
+												: "Produk tidak ditemukan."
+											: `Belum ada ${pickerKind}.`}
+									</Text>
+								)}
+							{filteredOptions.map((product) => {
+								const isChecked = pickerSelection.ids.includes(product.id);
 								return (
 									<Pressable
 										key={product.id}
 										onPress={() => toggleDraftProduct(product.id)}
 										className={cn(
-											"mb-2.5 flex-row items-center gap-3 rounded-2xl border p-3.5",
+											"mb-3 flex-row items-center gap-3 rounded-2xl border p-4",
 											isChecked
 												? "border-primary bg-primary/5"
-												: "border-zinc-200 bg-white",
+												: "border-border bg-white",
 										)}
 									>
 										<View
@@ -322,7 +366,7 @@ export default function StockLimitScreen() {
 												"h-5 w-5 items-center justify-center rounded-md border",
 												isChecked
 													? "border-primary bg-primary"
-													: "border-zinc-300 bg-white",
+													: "border-border bg-white",
 											)}
 										>
 											{isChecked && (
@@ -330,7 +374,7 @@ export default function StockLimitScreen() {
 											)}
 										</View>
 
-										<View className="size-11 items-center justify-center overflow-hidden rounded-xl bg-zinc-100">
+										<View className="size-11 items-center justify-center overflow-hidden rounded-xl bg-background">
 											{product.image ? (
 												<Image
 													source={{ uri: product.image }}
@@ -353,8 +397,8 @@ export default function StockLimitScreen() {
 											>
 												{product.name}
 											</Text>
-											<Text size="small" className="mt-0.5 text-muted">
-												{product.category} • Stok: {product.stock}
+											<Text size="small" className="mt-1 text-muted">
+												{pickerType === "category" ? "Kategori" : "Produk"}
 											</Text>
 										</View>
 									</Pressable>
@@ -368,6 +412,7 @@ export default function StockLimitScreen() {
 			{/* Bottom Action Button */}
 			<BottomActionButton
 				onPress={handleSave}
+				isDisabled={isSettingsUnavailable}
 				isLoading={stockMutation.isLoading}
 			>
 				Simpan

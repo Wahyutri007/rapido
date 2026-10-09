@@ -6,8 +6,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Platform, Pressable, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
-import SuccessModal from "@/components/common/SuccessModal";
 import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import BottomActionBar from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
 import {
 	Form,
@@ -17,6 +17,7 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/common/Form";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import {
 	Actionsheet,
@@ -696,7 +697,7 @@ export default function ClosingJournalModifyScreen() {
 			</AnimatedWrapper>
 
 			{/* Sticky Bottom Save Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
@@ -706,7 +707,7 @@ export default function ClosingJournalModifyScreen() {
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Periode Picker Actionsheet */}
 			<Actionsheet

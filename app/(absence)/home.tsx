@@ -18,7 +18,7 @@ import { Button, ButtonText } from "@/components/ui/button";
 import { Constants } from "@/constants";
 import { Colors } from "@/constants/Colors";
 import { useAuth } from "@/context/AuthContext";
-import { cn } from "@/lib/utils";
+import { cn, route } from "@/lib/utils";
 import { useAbsenceStore } from "@/store/useAbsenceStore";
 
 const FAVORITE_MENUS = [
@@ -137,7 +137,9 @@ export default function AbsenceHomeScreen() {
 	};
 
 	const handleMenuPress = (label: string, isLocked: boolean) => {
-		if (isLocked) {
+		if (label === "Riwayat" && !isLocked) {
+			router.push(route("/(absence)/history"));
+		} else if (isLocked) {
 			Alert.alert(
 				"Fitur Terkunci",
 				`Fitur ${label} belum diaktifkan oleh pengelola toko.`,

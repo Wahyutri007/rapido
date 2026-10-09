@@ -103,7 +103,12 @@ export const useAccountingStore = create<AccountingState>((set, get) => ({
 	},
 
 	addAccount: (accountData) => {
-		const newId = Date.now().toString();
+		const baseId = Date.now().toString();
+		let newId = baseId;
+		let suffix = 1;
+		while (get().accounts.some((account) => account.id === newId)) {
+			newId = `${baseId}-${suffix++}`;
+		}
 		const newAccount: Account = {
 			...accountData,
 			id: newId,
@@ -292,7 +297,17 @@ export const useAccountingStore = create<AccountingState>((set, get) => ({
 	},
 
 	addLedgerEntry: (entryData) => {
-		const newId = `le-${Date.now()}`;
+		const baseId = `le-${Date.now()}`;
+		const existingIds = new Set(
+			Object.values(get().ledgerEntries).flatMap((entries) =>
+				entries.map((entry) => entry.id),
+			),
+		);
+		let newId = baseId;
+		let suffix = 1;
+		while (existingIds.has(newId)) {
+			newId = `${baseId}-${suffix++}`;
+		}
 		const newEntry: LedgerEntry = {
 			...entryData,
 			id: newId,

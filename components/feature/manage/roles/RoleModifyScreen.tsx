@@ -31,6 +31,13 @@ import RolePermissionEditor from "./RolePermissionEditor";
 import RoleQueryError from "./RoleQueryError";
 
 export default function RoleModifyScreen({ id }: { id?: string }) {
+	return (
+		<RoleModifyForm key={id === undefined ? "create" : `edit:${id}`} id={id} />
+	);
+}
+
+function RoleModifyForm({ id }: { id?: string }) {
+	const isEditing = id !== undefined;
 	const role = useRoleQuery(id);
 	const permissions = useRolePermissionsQuery();
 	const create = useRoleRequest();
@@ -39,10 +46,20 @@ export default function RoleModifyScreen({ id }: { id?: string }) {
 	const error = useAlertModal();
 	const [errorMessage, setErrorMessage] = useState("");
 	const hydratedId = useRef<string | undefined>(undefined);
+	const mounted = useRef(true);
+	const pending = useRef(false);
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
 	const form = useForm<RoleSchema>({
 		resolver: zodResolver(roleSchema),
 		defaultValues: { name: "", permissions: [] },
 	});
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
 	useEffect(() => {
 		if (id && role.data && hydratedId.current !== id) {
 			form.reset({
@@ -52,45 +69,63 @@ export default function RoleModifyScreen({ id }: { id?: string }) {
 			hydratedId.current = id;
 		}
 	}, [id, role.data, form]);
-	const loading = permissions.isLoading || (!!id && role.isLoading);
+	const loading = permissions.isLoading || (isEditing && role.isLoading);
 	const failed =
-		permissions.isError || (!!id && (role.isError || (!loading && !role.data)));
+		permissions.isError ||
+		(isEditing && (role.isError || (!loading && !role.data)));
 	const submitting =
 		create.isLoading || update.isLoading || form.formState.isSubmitting;
 
 	async function submit(values: RoleSchema) {
-		if (loading || failed || create.isLoading || update.isLoading) return;
-		const [, problem] = id
-			? await update.call(values)
-			: await create.call(values);
-		if (problem) {
-			// Laravel can return permissions.0; show those errors beside the permission field.
-			if (problem.status === 422 && problem.errors) {
-				const messages = Object.entries(
-					problem.errors as Record<string, string[]>,
-				)
-					.filter(([key]) => key.startsWith("permissions."))
-					.flatMap(([, values]) => values);
-				handleFormError(
-					{
-						...problem,
-						errors: {
-							...problem.errors,
-							...(messages.length ? { permissions: messages } : {}),
-						},
-					},
-					form,
-				);
-			}
-			setErrorMessage(
-				problem.status === 422
-					? "Mohon periksa nama dan hak akses yang dipilih."
-					: "Role belum disimpan. Silakan periksa koneksi dan coba kembali.",
-			);
-			error.open();
+		if (
+			!mounted.current ||
+			pending.current ||
+			saved.current ||
+			loading ||
+			failed ||
+			create.isLoading ||
+			update.isLoading
+		)
 			return;
+		pending.current = true;
+		try {
+			const [, problem] = isEditing
+				? await update.call(values)
+				: await create.call(values);
+			if (!mounted.current) return;
+			if (problem) {
+				// Laravel can return permissions.0; show those errors beside the permission field.
+				if (problem.status === 422 && problem.errors) {
+					const messages = Object.entries(
+						problem.errors as Record<string, string[]>,
+					)
+						.filter(([key]) => key.startsWith("permissions."))
+						.flatMap(([, values]) => values);
+					handleFormError(
+						{
+							...problem,
+							errors: {
+								...problem.errors,
+								...(messages.length ? { permissions: messages } : {}),
+							},
+						},
+						form,
+					);
+				}
+				setErrorMessage(
+					problem.status === 422
+						? "Mohon periksa nama dan hak akses yang dipilih."
+						: "Role belum disimpan. Silakan periksa koneksi dan coba kembali.",
+				);
+				error.open();
+				return;
+			}
+			saved.current = true;
+			setIsSaved(true);
+			success.open();
+		} finally {
+			pending.current = false;
 		}
-		success.open();
 	}
 	return (
 		<>
@@ -157,8 +192,10 @@ export default function RoleModifyScreen({ id }: { id?: string }) {
 				)}
 			</Wrapper>
 			<BottomActionButton
-				onPress={form.handleSubmit(submit)}
-				isDisabled={loading || failed || submitting || success.openState[0]}
+				onPress={() => form.handleSubmit(submit)()}
+				isDisabled={
+					loading || failed || submitting || isSaved || success.openState[0]
+				}
 				isLoading={submitting}
 			>
 				Simpan

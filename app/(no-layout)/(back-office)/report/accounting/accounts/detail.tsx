@@ -11,13 +11,14 @@ import { formatRp } from "@/lib/utils";
 import { useAccountingStore } from "@/store/accountingStore";
 
 export default function AccountDetailScreen() {
-	const params = useLocalSearchParams<{ id?: string }>();
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const accountId = Array.isArray(params.id) ? params.id[0] : params.id;
 	const accounts = useAccountingStore((state) => state.accounts);
 	const getTotals = useAccountingStore((state) => state.getTotals);
 
 	const account = useMemo(() => {
-		return accounts.find((acc) => acc.id === params.id) || accounts[0];
-	}, [accounts, params.id]);
+		return accountId ? accounts.find((acc) => acc.id === accountId) : undefined;
+	}, [accounts, accountId]);
 
 	const totals = getTotals();
 	const isBalanced = totals.difference === 0;

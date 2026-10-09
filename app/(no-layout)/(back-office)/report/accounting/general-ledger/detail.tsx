@@ -13,39 +13,44 @@ import {
 	LedgerTypeActionSheet,
 } from "@/components/feature/accounting/general-ledger";
 import { Colors } from "@/constants/Colors";
+import { ledgerEntryMatchesPeriod } from "@/lib/accounting/ledger-filter";
 import { useAccountingStore } from "@/store/accountingStore";
 import type { LedgerEntry } from "@/types/ui/accounting/ledger";
 
 export default function GeneralLedgerDetailScreen() {
-	const params = useLocalSearchParams<{ id?: string }>();
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const accountId = Array.isArray(params.id) ? params.id[0] : params.id;
 
 	const accounts = useAccountingStore((state) => state.ledgerAccounts);
-	const getAccountLedgerEntries = useAccountingStore(
-		(state) => state.getAccountLedgerEntries,
-	);
+	const ledgerEntries = useAccountingStore((state) => state.ledgerEntries);
 
-	// Find the current account, fallback to first account (Kas)
+	// A missing account must not display another account's financial data.
 	const account = useMemo(() => {
-		if (params?.id) {
-			const found = accounts.find((a) => a.id === params.id);
-			if (found) return found;
-		}
-		return accounts[0];
-	}, [accounts, params?.id]);
+		return accountId ? accounts.find((a) => a.id === accountId) : undefined;
+	}, [accounts, accountId]);
 
 	const rawEntries: LedgerEntry[] = useMemo(() => {
 		if (!account) return [];
-		return getAccountLedgerEntries(account.id);
-	}, [account, getAccountLedgerEntries]);
+		return ledgerEntries[account.id] ?? [];
+	}, [account, ledgerEntries]);
 
 	// Filter states
 	const [searchQuery, setSearchQuery] = useState("");
-	const [selectedPeriod, setSelectedPeriod] = useState("all");
+	const [periodFilter, setPeriodFilter] = useState(() => ({
+		period: "all",
+		referenceDate: new Date(),
+	}));
+	const { period: selectedPeriod, referenceDate } = periodFilter;
 	const [selectedType, setSelectedType] = useState("all");
 
 	// Action sheets
 	const [isPeriodSheetOpen, setIsPeriodSheetOpen] = useState(false);
 	const [isTypeSheetOpen, setIsTypeSheetOpen] = useState(false);
+
+	function handleSelectPeriod(period: string) {
+		// Resolve "current" at selection time, including reselecting after midnight.
+		setPeriodFilter({ period, referenceDate: new Date() });
+	}
 
 	// Filtered journal entries
 	const filteredEntries = useMemo(() => {
@@ -58,10 +63,15 @@ export default function GeneralLedgerDetailScreen() {
 				entry.description.toLowerCase().includes(query);
 
 			const matchesType = selectedType === "all" || entry.type === selectedType;
+			const matchesPeriod = ledgerEntryMatchesPeriod(
+				entry.date,
+				selectedPeriod,
+				referenceDate,
+			);
 
-			return matchesSearch && matchesType;
+			return matchesSearch && matchesType && matchesPeriod;
 		});
-	}, [rawEntries, searchQuery, selectedType]);
+	}, [rawEntries, searchQuery, selectedType, selectedPeriod, referenceDate]);
 
 	// Calculate totals for the summary card
 	const { totalDebit, totalCredit } = useMemo(() => {
@@ -75,10 +85,10 @@ export default function GeneralLedgerDetailScreen() {
 			}
 		});
 		return {
-			totalDebit: debit || account.totalDebit,
-			totalCredit: credit || account.totalCredit,
+			totalDebit: debit,
+			totalCredit: credit,
 		};
-	}, [filteredEntries, account]);
+	}, [filteredEntries]);
 
 	if (!account) {
 		return (
@@ -197,7 +207,7 @@ export default function GeneralLedgerDetailScreen() {
 				isOpen={isPeriodSheetOpen}
 				onClose={() => setIsPeriodSheetOpen(false)}
 				selectedPeriod={selectedPeriod}
-				onSelectPeriod={setSelectedPeriod}
+				onSelectPeriod={handleSelectPeriod}
 			/>
 
 			{/* Transaction Type Action Sheet */}

@@ -2,7 +2,6 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { FlatList, Pressable, RefreshControl, View } from "react-native";
 import { useWorkersQuery } from "@/api/hooks/workers";
-import { useAlertModal } from "@/components/common/AlertModal";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import {
 	LoadingPlaceholder,
@@ -12,7 +11,7 @@ import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import CatalogItemCard from "@/components/custom/CatalogItemCard";
-import ItemActionSheet from "@/components/custom/ItemActionSheet";
+import ManageListActions from "@/components/feature/manage/ManageListActions";
 import { EFeather } from "@/components/icons";
 import useRefreshControl from "@/hooks/useRefreshControl";
 import { workerRoleName } from "@/lib/manage/workers";
@@ -26,9 +25,12 @@ export default function WorkerListScreen() {
 	const query = useWorkersQuery();
 	const refresh = useRefreshControl(query.refetch);
 	const [search, setSearch] = useState("");
-	const [selected, setSelected] = useState<WorkerData | null>(null);
-	const [actionsOpen, setActionsOpen] = useState(false);
-	const deletion = useAlertModal();
+	const [selection, setSelection] = useState<{
+		item: WorkerData;
+		version: number;
+	} | null>(null);
+	const current = query.data?.find((item) => item.id === selection?.item.id);
+	const selected = current ?? selection?.item ?? null;
 	const needle = search.trim().toLocaleLowerCase("id");
 	const items = (query.data ?? []).filter((worker) =>
 		`${worker.name} ${worker.email} ${worker.phone} ${workerRoleName(worker)} ${worker.assigned_store?.name ?? ""}`
@@ -107,8 +109,10 @@ export default function WorkerListScreen() {
 											hitSlop={8}
 											onPress={(event) => {
 												event.stopPropagation();
-												setSelected(item);
-												setActionsOpen(true);
+												setSelection((previous) => ({
+													item,
+													version: (previous?.version ?? 0) + 1,
+												}));
 											}}
 										>
 											<EFeather
@@ -144,16 +148,19 @@ export default function WorkerListScreen() {
 			>
 				Tambah Karyawan
 			</BottomActionButton>
-			<ItemActionSheet
-				isOpen={actionsOpen}
-				onClose={() => setActionsOpen(false)}
-				title={selected?.name ?? "Karyawan"}
-				entityName="Karyawan"
-				onViewDetail={() => navigate("detail")}
-				onEdit={() => navigate("modify")}
-				onDelete={deletion.open}
-			/>
-			<WorkerDeleteDialog worker={selected} openState={deletion.openState} />
+			{selection && selected && (
+				<ManageListActions
+					key={selection.version}
+					title={selected.name}
+					entityName="Karyawan"
+					available={!!current && !query.isLoading && !query.isError}
+					onViewDetail={() => navigate("detail")}
+					onEdit={() => navigate("modify")}
+					renderDelete={(openState) => (
+						<WorkerDeleteDialog worker={selected} openState={openState} />
+					)}
+				/>
+			)}
 		</>
 	);
 }

@@ -5,6 +5,7 @@ import {
 	DEFAULT_TRANSFERS,
 } from "@/constants/data/inventory";
 import type { PurchaseRecord, StockRecord } from "@/types/ui/inventory";
+import { useInventoryBillPaymentStore } from "./inventoryBillPaymentStore";
 
 type InventoryState = {
 	stockRecords: StockRecord[];
@@ -12,7 +13,7 @@ type InventoryState = {
 	purchaseSequence: number;
 	addStockRecord: (record: Omit<StockRecord, "id" | "reference">) => string;
 	addPurchase: (record: Omit<PurchaseRecord, "id" | "reference">) => string;
-	deletePurchase: (id: string) => void;
+	deletePurchase: (id: string) => { id: string } | { error: string };
 	linkSupplier: (id: string, name: string) => void;
 };
 
@@ -43,10 +44,22 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 		}));
 		return id;
 	},
-	deletePurchase: (id) =>
+	deletePurchase: (id) => {
+		if (!get().purchases.some((purchase) => purchase.id === id))
+			return { error: "Pesanan pembelian tidak ditemukan" };
+		if (
+			useInventoryBillPaymentStore
+				.getState()
+				.payments.some((payment) =>
+					payment.lines.some((line) => line.purchaseId === id),
+				)
+		)
+			return { error: "Pesanan masih digunakan pada pembayaran tagihan" };
 		set((state) => ({
 			purchases: state.purchases.filter((record) => record.id !== id),
-		})),
+		}));
+		return { id };
+	},
 	linkSupplier: (id, name) =>
 		set((state) => ({
 			purchases: state.purchases.map((record) =>

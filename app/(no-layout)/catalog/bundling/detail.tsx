@@ -104,7 +104,7 @@ export default function BundlingDetailScreen() {
 			}));
 		}
 		return MOCK_BUNDLING_DATA[0].stores ?? [];
-	}, [data?.stores, storesQuery.data]);
+	}, [data, storesQuery.data]);
 
 	// Resolve prices list
 	const priceList = React.useMemo(() => {
@@ -125,7 +125,7 @@ export default function BundlingDetailScreen() {
 			{ order_type_id: "2", order_type_name: "Dine In", sell_price: 44000, icon: "coffee" as const },
 			{ order_type_id: "3", order_type_name: "Online Food", sell_price: 54000, icon: "truck" as const },
 		];
-	}, [data?.prices, data?.sell_price]);
+	}, [data]);
 
 	// Resolve menu names for item details
 	const resolvedItems = React.useMemo(() => {

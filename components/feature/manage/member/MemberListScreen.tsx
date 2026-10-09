@@ -2,7 +2,6 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { FlatList, Pressable, RefreshControl, View } from "react-native";
 import { useCustomersQuery } from "@/api/hooks/customers";
-import { useAlertModal } from "@/components/common/AlertModal";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import {
 	LoadingPlaceholder,
@@ -12,7 +11,7 @@ import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import CatalogItemCard from "@/components/custom/CatalogItemCard";
-import ItemActionSheet from "@/components/custom/ItemActionSheet";
+import ManageListActions from "@/components/feature/manage/ManageListActions";
 import { EFeather } from "@/components/icons";
 import useRefreshControl from "@/hooks/useRefreshControl";
 import { route } from "@/lib/utils";
@@ -25,9 +24,12 @@ export default function MemberListScreen() {
 	const query = useCustomersQuery();
 	const refresh = useRefreshControl(query.refetch);
 	const [search, setSearch] = useState("");
-	const [selected, setSelected] = useState<CustomerData | null>(null);
-	const [actionsOpen, setActionsOpen] = useState(false);
-	const deletion = useAlertModal();
+	const [selection, setSelection] = useState<{
+		item: CustomerData;
+		version: number;
+	} | null>(null);
+	const current = query.data?.find((item) => item.id === selection?.item.id);
+	const selected = current ?? selection?.item ?? null;
 	const needle = search.trim().toLocaleLowerCase("id");
 	const members = (query.data ?? []).filter((member) =>
 		`${member.name} ${member.phone} ${member.email ?? ""}`
@@ -102,8 +104,10 @@ export default function MemberListScreen() {
 											hitSlop={8}
 											onPress={(event) => {
 												event.stopPropagation();
-												setSelected(item);
-												setActionsOpen(true);
+												setSelection((previous) => ({
+													item,
+													version: (previous?.version ?? 0) + 1,
+												}));
 											}}
 										>
 											<EFeather
@@ -139,16 +143,19 @@ export default function MemberListScreen() {
 			>
 				Tambah Member
 			</BottomActionButton>
-			<ItemActionSheet
-				isOpen={actionsOpen}
-				onClose={() => setActionsOpen(false)}
-				title={selected?.name ?? "Member"}
-				entityName="Member"
-				onViewDetail={() => navigate("detail")}
-				onEdit={() => navigate("modify")}
-				onDelete={deletion.open}
-			/>
-			<MemberDeleteDialog member={selected} openState={deletion.openState} />
+			{selection && selected && (
+				<ManageListActions
+					key={selection.version}
+					title={selected.name}
+					entityName="Member"
+					available={!!current && !query.isLoading && !query.isError}
+					onViewDetail={() => navigate("detail")}
+					onEdit={() => navigate("modify")}
+					renderDelete={(openState) => (
+						<MemberDeleteDialog member={selected} openState={openState} />
+					)}
+				/>
+			)}
 		</>
 	);
 }

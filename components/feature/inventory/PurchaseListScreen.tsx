@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { router } from "expo-router";
 import React from "react";
 import { FlatList, Pressable, View } from "react-native";
+import AlertModal from "@/components/common/AlertModal";
 import BottomActionButton from "@/components/common/BottomActionButton";
 import Card from "@/components/common/Card";
 import { SearchNotFound } from "@/components/common/DataPlaceholder";
@@ -31,6 +32,8 @@ export default function PurchaseListScreen() {
 	const [showFilters, setShowFilters] = React.useState(false);
 	const [selected, setSelected] = React.useState<PurchaseRecord>();
 	const [deleting, setDeleting] = React.useState<PurchaseRecord>();
+	const deleteErrorState = React.useState(false);
+	const [deleteError, setDeleteError] = React.useState("");
 	const filtered = records.filter(
 		(record) =>
 			(status === "all" || record.status === status) &&
@@ -119,11 +122,13 @@ export default function PurchaseListScreen() {
 											<View className="flex-1 gap-3 border-r border-border-muted pr-3">
 												<InventoryMetadata
 													icon="grid"
+													tone="muted"
 													label="Nama Supplier"
 													value={item.supplier}
 												/>
 												<InventoryMetadata
 													icon="calendar"
+													tone="muted"
 													label="Tanggal Transaksi"
 													value={dayjs(item.createdAt).format("DD MMM YYYY")}
 												/>
@@ -131,11 +136,13 @@ export default function PurchaseListScreen() {
 											<View className="flex-1 gap-3">
 												<InventoryMetadata
 													icon="user"
+													tone="muted"
 													label="Diterima Oleh"
 													value={item.receivedBy}
 												/>
 												<InventoryMetadata
 													icon="dollar-sign"
+													tone="muted"
 													label="Total Transaksi"
 													value={formatRp(item.amount)}
 												/>
@@ -183,9 +190,23 @@ export default function PurchaseListScreen() {
 				itemName={deleting?.reference}
 				onClose={() => setDeleting(undefined)}
 				onConfirm={() => {
-					if (deleting) deleteRecord(deleting.id);
+					if (deleting) {
+						const result = deleteRecord(deleting.id);
+						if ("error" in result) {
+							setDeleteError(result.error);
+							deleteErrorState[1](true);
+						}
+					}
 					setDeleting(undefined);
 				}}
+			/>
+			<AlertModal
+				openState={deleteErrorState}
+				title="Pembelian belum dapat dihapus"
+				message={deleteError}
+				hideCancelButton
+				confirmText="Mengerti"
+				onConfirm={() => deleteErrorState[1](false)}
 			/>
 		</>
 	);

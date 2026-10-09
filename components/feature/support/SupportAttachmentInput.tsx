@@ -1,5 +1,5 @@
 import * as DocumentPicker from "expo-document-picker";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pressable, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
 import Text from "@/components/common/Text";
@@ -21,9 +21,22 @@ export default function SupportAttachmentInput({
 	const [isPicking, setIsPicking] = useState(false);
 	const [error, setError] = useState("");
 	const errorModal = useAlertModal();
+	const mounted = useRef(true);
+	const pending = useRef(false);
+	const requestVersion = useRef(0);
+
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+			requestVersion.current += 1;
+		};
+	}, []);
 
 	async function pickAttachment() {
-		if (isPicking) return;
+		if (!mounted.current || pending.current) return;
+		pending.current = true;
+		const request = ++requestVersion.current;
 		setIsPicking(true);
 		try {
 			const result = await DocumentPicker.getDocumentAsync({
@@ -31,6 +44,7 @@ export default function SupportAttachmentInput({
 				multiple: false,
 				copyToCacheDirectory: true,
 			});
+			if (!mounted.current || request !== requestVersion.current) return;
 			if (result.canceled) return;
 			const asset = result.assets[0];
 			if (!asset || asset.size === undefined) {
@@ -53,11 +67,19 @@ export default function SupportAttachmentInput({
 			}
 			onChange(parsed.data);
 		} catch {
+			if (!mounted.current || request !== requestVersion.current) return;
 			setError("Lampiran tidak dapat dibuka. Silakan coba lagi.");
 			errorModal.open();
 		} finally {
-			setIsPicking(false);
+			pending.current = false;
+			if (mounted.current) setIsPicking(false);
 		}
+	}
+
+	function removeAttachment() {
+		if (!mounted.current) return;
+		requestVersion.current += 1;
+		onChange(null);
 	}
 
 	return (
@@ -87,7 +109,7 @@ export default function SupportAttachmentInput({
 						<Pressable
 							accessibilityRole="button"
 							accessibilityLabel="Hapus lampiran"
-							onPress={() => onChange(null)}
+							onPress={removeAttachment}
 							hitSlop={8}
 						>
 							<EFeather name="x" size={16} className="text-muted" />

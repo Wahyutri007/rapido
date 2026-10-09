@@ -1,13 +1,15 @@
 import Feather from "@expo/vector-icons/Feather";
 import * as DateTimePicker from "@react-native-community/datetimepicker";
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Platform, Pressable, TextInput, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
-import SuccessModal from "@/components/common/SuccessModal";
 import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import BottomActionBar from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
+import JournalFormNotFound from "@/components/feature/accounting/general-journal/JournalFormNotFound";
 import {
 	Actionsheet,
 	ActionsheetBackdrop,
@@ -23,9 +25,14 @@ import {
 	type AdjustmentTypePreset,
 } from "@/constants/data/accounting/adjusting-journal";
 import { FONT_NAMES } from "@/constants/Fonts";
+import { journalPickerDate } from "@/lib/accounting/journal-date";
+import { journalValidationError } from "@/lib/accounting/journal-validation";
 import { cn, formatRp, parseNumber } from "@/lib/utils";
 import { useAccountingStore } from "@/store/accountingStore";
-import type { JournalLine } from "@/types/ui/accounting/journal";
+import type {
+	AdjustingJournal,
+	JournalLine,
+} from "@/types/ui/accounting/journal";
 
 const MONTH_NAMES = [
 	"Januari",
@@ -50,12 +57,41 @@ function formatDateDisplay(date: Date): string {
 }
 
 export default function AdjustingJournalModifyScreen() {
-	const params = useLocalSearchParams<{ id?: string }>();
-	const isEdit = Boolean(params.id);
-
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const id = Array.isArray(params.id) ? params.id[0] : params.id;
 	const adjustingJournals = useAccountingStore(
 		(state) => state.adjustingJournals,
 	);
+	const existing = adjustingJournals.find((journal) => journal.id === id);
+	if (id !== undefined && !existing) {
+		return (
+			<JournalFormNotFound
+				entity="Jurnal Penyesuaian"
+				onBack={() =>
+					router.replace(
+						"/(no-layout)/(back-office)/report/accounting/adjusting-journal",
+					)
+				}
+			/>
+		);
+	}
+	return (
+		<AdjustingJournalForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+			initialJournal={existing}
+		/>
+	);
+}
+
+function AdjustingJournalForm({
+	id,
+	initialJournal,
+}: {
+	id?: string;
+	initialJournal?: AdjustingJournal;
+}) {
+	const isEdit = id !== undefined;
 	const addAdjustingJournal = useAccountingStore(
 		(state) => state.addAdjustingJournal,
 	);
@@ -66,62 +102,55 @@ export default function AdjustingJournalModifyScreen() {
 	const finishModal = useAlertModal();
 	const errorModal = useAlertModal();
 	const [errorMessage, setErrorMessage] = useState("");
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
 
 	// Form State
-	const [date, setDate] = useState("08 Oct 2025");
-	const [selectedDateObj, setSelectedDateObj] = useState(new Date(2025, 9, 8));
+	const [date, setDate] = useState(initialJournal?.date ?? "08 Oct 2025");
+	const [selectedDateObj, setSelectedDateObj] = useState(
+		() =>
+			journalPickerDate(initialJournal?.date ?? "08 Oct 2025") ??
+			new Date(2025, 9, 8),
+	);
 	const [showDatePicker, setShowDatePicker] = useState(false);
-	const [referenceNumber, setReferenceNumber] = useState("AJP-0626-005");
-	const [adjustmentType, setAdjustmentType] = useState("Penyusutan Aset");
+	const [referenceNumber, setReferenceNumber] = useState(
+		initialJournal?.referenceNumber ?? "AJP-0626-005",
+	);
+	const [adjustmentType, setAdjustmentType] = useState(
+		initialJournal?.adjustmentType ?? "Penyusutan Aset",
+	);
 	const [description, setDescription] = useState(
-		"Penyusutan peralatan kantor juni 2026",
+		initialJournal?.description ?? "Penyusutan peralatan kantor juni 2026",
 	);
 
 	// Journal Lines State (default 2 lines matching default adjustment type)
-	const [lines, setLines] = useState<JournalLine[]>([
-		{
-			id: "line-1",
-			accountId: "6101-00-014",
-			accountCode: "6101-00-014",
-			accountName: "Beban Penyusutan Peralatan",
-			debit: 1000000,
-			credit: 0,
-		},
-		{
-			id: "line-2",
-			accountId: "1209-00-002",
-			accountCode: "1209-00-002",
-			accountName: "Akumulasi Penyusutan Peralatan",
-			debit: 0,
-			credit: 1000000,
-		},
-	]);
+	const [lines, setLines] = useState<JournalLine[]>(
+		() =>
+			initialJournal?.lines.map((line) => ({ ...line })) ?? [
+				{
+					id: "line-1",
+					accountId: "6101-00-014",
+					accountCode: "6101-00-014",
+					accountName: "Beban Penyusutan Peralatan",
+					debit: 1000000,
+					credit: 0,
+				},
+				{
+					id: "line-2",
+					accountId: "1209-00-002",
+					accountCode: "1209-00-002",
+					accountName: "Akumulasi Penyusutan Peralatan",
+					debit: 0,
+					credit: 1000000,
+				},
+			],
+	);
 
 	// Picker States
 	const [isAccountPickerOpen, setIsAccountPickerOpen] = useState(false);
 	const [pickingLineIndex, setPickingLineIndex] = useState<number | null>(null);
 	const [isAdjustmentTypePickerOpen, setIsAdjustmentTypePickerOpen] =
 		useState(false);
-
-	// Pre-fill if edit mode
-	useEffect(() => {
-		if (params.id) {
-			const existing = adjustingJournals.find((j) => j.id === params.id);
-			if (existing) {
-				setDate(existing.date);
-				setReferenceNumber(existing.referenceNumber);
-				setAdjustmentType(existing.adjustmentType || "Penyusutan Aset");
-				setDescription(existing.description);
-				setLines(
-					existing.lines.map((l) => ({
-						...l,
-					})),
-				);
-			} else {
-				router.back();
-			}
-		}
-	}, [params.id, adjustingJournals]);
 
 	// Calculations
 	const totalDebit = useMemo(
@@ -135,7 +164,18 @@ export default function AdjustingJournalModifyScreen() {
 	);
 
 	const difference = Math.abs(totalDebit - totalCredit);
-	const isBalanced = totalDebit > 0 && totalDebit === totalCredit;
+	const isBalanced =
+		lines.every(
+			(line) =>
+				Number.isFinite(line.debit) &&
+				Number.isFinite(line.credit) &&
+				line.debit >= 0 &&
+				line.credit >= 0,
+		) &&
+		Number.isFinite(totalDebit) &&
+		Number.isFinite(totalCredit) &&
+		totalDebit > 0 &&
+		totalDebit === totalCredit;
 
 	// Date Picker Handler
 	const handleDateChange = (
@@ -273,47 +313,27 @@ export default function AdjustingJournalModifyScreen() {
 
 	// Form Submission
 	const handleSave = () => {
-		if (!date.trim()) {
-			setErrorMessage("Tanggal jurnal wajib diisi.");
+		if (saved.current) return;
+		if (
+			id !== undefined &&
+			!useAccountingStore
+				.getState()
+				.adjustingJournals.some((journal) => journal.id === id)
+		)
+			return;
+		const validationError = journalValidationError(
+			{ date, referenceNumber, adjustmentType, description, lines },
+			"adjusting",
+		);
+		if (validationError) {
+			setErrorMessage(validationError);
 			errorModal.open();
 			return;
 		}
 
-		if (!referenceNumber.trim()) {
-			setErrorMessage("No. Referensi wajib diisi.");
-			errorModal.open();
-			return;
-		}
-
-		if (!adjustmentType.trim()) {
-			setErrorMessage("Jenis Penyesuaian wajib dipilih.");
-			errorModal.open();
-			return;
-		}
-
-		if (!description.trim()) {
-			setErrorMessage("Deskripsi jurnal wajib diisi.");
-			errorModal.open();
-			return;
-		}
-
-		const hasEmptyAccount = lines.some((l) => !l.accountCode || !l.accountName);
-		if (hasEmptyAccount) {
-			setErrorMessage("Semua baris jurnal harus memiliki akun yang dipilih.");
-			errorModal.open();
-			return;
-		}
-
-		if (!isBalanced) {
-			setErrorMessage(
-				"Total debit dan kredit harus seimbang dan bernilai lebih dari 0.",
-			);
-			errorModal.open();
-			return;
-		}
-
-		if (isEdit && params.id) {
-			updateAdjustingJournal(params.id, {
+		saved.current = true;
+		if (id !== undefined) {
+			updateAdjustingJournal(id, {
 				date,
 				referenceNumber,
 				adjustmentType,
@@ -334,6 +354,7 @@ export default function AdjustingJournalModifyScreen() {
 			});
 		}
 
+		setIsSaved(true);
 		finishModal.open();
 	};
 
@@ -651,17 +672,18 @@ export default function AdjustingJournalModifyScreen() {
 			</AnimatedWrapper>
 
 			{/* Sticky Bottom Save Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
 					onPress={handleSave}
+					isDisabled={isSaved}
 				>
 					<ButtonText className="text-base font-semibold text-white">
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Account Picker Actionsheet */}
 			<Actionsheet

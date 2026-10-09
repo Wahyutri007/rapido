@@ -1,13 +1,17 @@
 import Feather from "@expo/vector-icons/Feather";
 import * as DateTimePicker from "@react-native-community/datetimepicker";
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Platform, Pressable, ScrollView, TextInput, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
-import SuccessModal from "@/components/common/SuccessModal";
 import AnimatedWrapper from "@/components/common/AnimatedWrapper";
+import BottomActionBar, {
+	BottomActionInset,
+} from "@/components/common/BottomActionBar";
 import Card from "@/components/common/Card";
+import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
+import JournalFormNotFound from "@/components/feature/accounting/general-journal/JournalFormNotFound";
 import {
 	Actionsheet,
 	ActionsheetBackdrop,
@@ -19,9 +23,14 @@ import { Button, ButtonText } from "@/components/ui/button";
 import { Colors } from "@/constants/Colors";
 import { JOURNAL_ACCOUNT_OPTIONS } from "@/constants/data/accounting/general-journal";
 import { FONT_NAMES } from "@/constants/Fonts";
+import { journalPickerDate } from "@/lib/accounting/journal-date";
+import { journalValidationError } from "@/lib/accounting/journal-validation";
 import { cn, formatRp, parseNumber } from "@/lib/utils";
 import { useAccountingStore } from "@/store/accountingStore";
-import type { JournalLine } from "@/types/ui/accounting/journal";
+import type {
+	GeneralJournal,
+	JournalLine,
+} from "@/types/ui/accounting/journal";
 
 const MONTH_NAMES = [
 	"Januari",
@@ -46,68 +55,89 @@ function formatDateDisplay(date: Date): string {
 }
 
 export default function GeneralJournalModifyScreen() {
-	const params = useLocalSearchParams<{ id?: string }>();
-	const isEdit = Boolean(params.id);
-
+	const params = useLocalSearchParams<{ id?: string | string[] }>();
+	const id = Array.isArray(params.id) ? params.id[0] : params.id;
 	const journals = useAccountingStore((state) => state.journals);
+	const existing = journals.find((journal) => journal.id === id);
+	if (id !== undefined && !existing) {
+		return (
+			<JournalFormNotFound
+				entity="Jurnal Umum"
+				onBack={() =>
+					router.replace(
+						"/(no-layout)/(back-office)/report/accounting/general-journal",
+					)
+				}
+			/>
+		);
+	}
+	return (
+		<GeneralJournalForm
+			key={id === undefined ? "create" : `edit:${id}`}
+			id={id}
+			initialJournal={existing}
+		/>
+	);
+}
+
+function GeneralJournalForm({
+	id,
+	initialJournal,
+}: {
+	id?: string;
+	initialJournal?: GeneralJournal;
+}) {
+	const isEdit = id !== undefined;
 	const addJournal = useAccountingStore((state) => state.addJournal);
 	const updateJournal = useAccountingStore((state) => state.updateJournal);
 
 	const finishModal = useAlertModal();
 	const errorModal = useAlertModal();
 	const [errorMessage, setErrorMessage] = useState("");
+	const saved = useRef(false);
+	const [isSaved, setIsSaved] = useState(false);
 
 	// Form State
-	const [date, setDate] = useState("08 Oct 2025");
-	const [selectedDateObj, setSelectedDateObj] = useState(new Date(2025, 9, 8));
+	const [date, setDate] = useState(initialJournal?.date ?? "08 Oct 2025");
+	const [selectedDateObj, setSelectedDateObj] = useState(
+		() =>
+			journalPickerDate(initialJournal?.date ?? "08 Oct 2025") ??
+			new Date(2025, 9, 8),
+	);
 	const [showDatePicker, setShowDatePicker] = useState(false);
-	const [referenceNumber, setReferenceNumber] = useState("11001");
+	const [referenceNumber, setReferenceNumber] = useState(
+		initialJournal?.referenceNumber ?? "11001",
+	);
 	const [description, setDescription] = useState(
-		"Penyesuaian beban operasional",
+		initialJournal?.description ?? "Penyesuaian beban operasional",
 	);
 
 	// Journal Lines State (default 2 lines)
-	const [lines, setLines] = useState<JournalLine[]>([
-		{
-			id: "line-1",
-			accountId: "10001",
-			accountCode: "10001",
-			accountName: "Kas Kecil",
-			debit: 1000000,
-			credit: 0,
-		},
-		{
-			id: "line-2",
-			accountId: "40001",
-			accountCode: "40001",
-			accountName: "Pendapatan usaha",
-			debit: 0,
-			credit: 1000000,
-		},
-	]);
+	const [lines, setLines] = useState<JournalLine[]>(
+		() =>
+			initialJournal?.lines.map((line) => ({ ...line })) ?? [
+				{
+					id: "line-1",
+					accountId: "10001",
+					accountCode: "10001",
+					accountName: "Kas Kecil",
+					debit: 1000000,
+					credit: 0,
+				},
+				{
+					id: "line-2",
+					accountId: "40001",
+					accountCode: "40001",
+					accountName: "Pendapatan usaha",
+					debit: 0,
+					credit: 1000000,
+				},
+			],
+	);
 
 	// Account Picker ActionSheet State
 	const [isAccountPickerOpen, setIsAccountPickerOpen] = useState(false);
 	const [pickingLineIndex, setPickingLineIndex] = useState<number | null>(null);
-
-	// Pre-fill if edit mode
-	useEffect(() => {
-		if (params.id) {
-			const existing = journals.find((j) => j.id === params.id);
-			if (existing) {
-				setDate(existing.date);
-				setReferenceNumber(existing.referenceNumber);
-				setDescription(existing.description);
-				setLines(
-					existing.lines.map((l) => ({
-						...l,
-					})),
-				);
-			} else {
-				router.back();
-			}
-		}
-	}, [params.id, journals]);
 
 	// Calculations
 	const totalDebit = useMemo(
@@ -121,7 +151,18 @@ export default function GeneralJournalModifyScreen() {
 	);
 
 	const difference = Math.abs(totalDebit - totalCredit);
-	const isBalanced = totalDebit > 0 && totalDebit === totalCredit;
+	const isBalanced =
+		lines.every(
+			(line) =>
+				Number.isFinite(line.debit) &&
+				Number.isFinite(line.credit) &&
+				line.debit >= 0 &&
+				line.credit >= 0,
+		) &&
+		Number.isFinite(totalDebit) &&
+		Number.isFinite(totalCredit) &&
+		totalDebit > 0 &&
+		totalDebit === totalCredit;
 
 	// Date Picker Handler
 	const handleDateChange = (
@@ -221,41 +262,27 @@ export default function GeneralJournalModifyScreen() {
 
 	// Form Submission
 	const handleSave = () => {
-		if (!date.trim()) {
-			setErrorMessage("Tanggal jurnal wajib diisi.");
+		if (saved.current) return;
+		if (
+			id !== undefined &&
+			!useAccountingStore
+				.getState()
+				.journals.some((journal) => journal.id === id)
+		)
+			return;
+		const validationError = journalValidationError(
+			{ date, referenceNumber, description, lines },
+			"general",
+		);
+		if (validationError) {
+			setErrorMessage(validationError);
 			errorModal.open();
 			return;
 		}
 
-		if (!referenceNumber.trim()) {
-			setErrorMessage("No. Referensi wajib diisi.");
-			errorModal.open();
-			return;
-		}
-
-		if (!description.trim()) {
-			setErrorMessage("Deskripsi jurnal wajib diisi.");
-			errorModal.open();
-			return;
-		}
-
-		const hasEmptyAccount = lines.some((l) => !l.accountCode || !l.accountName);
-		if (hasEmptyAccount) {
-			setErrorMessage("Semua baris jurnal harus memiliki akun yang dipilih.");
-			errorModal.open();
-			return;
-		}
-
-		if (!isBalanced) {
-			setErrorMessage(
-				"Total debit dan kredit harus seimbang dan bernilai lebih dari 0.",
-			);
-			errorModal.open();
-			return;
-		}
-
-		if (isEdit && params.id) {
-			updateJournal(params.id, {
+		saved.current = true;
+		if (id !== undefined) {
+			updateJournal(id, {
 				date,
 				referenceNumber,
 				description,
@@ -274,6 +301,7 @@ export default function GeneralJournalModifyScreen() {
 			});
 		}
 
+		setIsSaved(true);
 		finishModal.open();
 	};
 
@@ -572,17 +600,18 @@ export default function GeneralJournalModifyScreen() {
 			</AnimatedWrapper>
 
 			{/* Sticky Bottom "Simpan" Button */}
-			<View className="absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white p-4">
+			<BottomActionBar>
 				<Button
 					size="xl"
 					className="h-12 rounded-full bg-primary-500"
 					onPress={handleSave}
+					isDisabled={isSaved}
 				>
 					<ButtonText className="text-base font-semibold text-white">
 						Simpan
 					</ButtonText>
 				</Button>
-			</View>
+			</BottomActionBar>
 
 			{/* Account Selection Actionsheet */}
 			<Actionsheet
@@ -624,6 +653,7 @@ export default function GeneralJournalModifyScreen() {
 								/>
 							</Pressable>
 						))}
+						<BottomActionInset />
 					</ScrollView>
 				</ActionsheetContent>
 			</Actionsheet>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ScrollView, View } from "react-native";
 import { ICONS } from "@/assets/images/icons";
 import SearchBar from "@/components/common/SearchBar";
@@ -48,6 +48,11 @@ const TRANSACTION_MANAGEMENT_ITEMS: NavListProps[] = [
 ];
 
 const FINANCIAL_REPORT_ITEMS: NavListProps[] = [
+	{
+		title: "Neraca Saldo",
+		href: route("/report/accounting/trial-balance"),
+		image: ICONS.accounting.akun,
+	},
 	{
 		title: "Laporan Laba rugi",
 		href: route("/report/accounting/profit-loss"),

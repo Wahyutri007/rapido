@@ -1,5 +1,7 @@
+import { router } from "expo-router";
 import Header from "@/components/common/Header";
 import { JSStack, ScaleBackTransition } from "@/components/custom/JSStack";
+import { route } from "@/lib/utils";
 
 export default function InventoryLayout() {
 	return (
@@ -11,6 +13,22 @@ export default function InventoryLayout() {
 			<JSStack.Screen
 				name="summary"
 				options={{ header: () => <Header back title="Ringkasan Inventory" /> }}
+			/>
+			<JSStack.Screen
+				name="closing-stock"
+				options={{
+					header: ({ navigation }) => (
+						<Header
+							appearance="figma"
+							title="Stok Akhir"
+							back={() => {
+								// Parent tabs can go back even when this Inventory stack has no history.
+								if (navigation.getState().index > 0) navigation.goBack();
+								else router.replace(route("/inventory"));
+							}}
+						/>
+					),
+				}}
 			/>
 		</JSStack>
 	);

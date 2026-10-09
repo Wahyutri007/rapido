@@ -16,6 +16,10 @@ import MemberIcon from "./MemberIcon";
 import MemberQueryError from "./MemberQueryError";
 
 export default function MemberDetailScreen({ id }: { id?: string }) {
+	return <MemberDetailContent key={id ?? ""} id={id} />;
+}
+
+function MemberDetailContent({ id }: { id?: string }) {
 	const query = useCustomerQuery(id);
 	const deletion = useAlertModal();
 	const member = query.data;

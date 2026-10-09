@@ -8,6 +8,7 @@ export default function PosSettingsLayout() {
 
 	return (
 		<JSStack screenOptions={{ ...ScaleBackTransition }}>
+			<JSStack.Screen name="digital-orders" options={{ headerShown: false }} />
 			<JSStack.Screen
 				name="index"
 				options={{ header: () => <Header back title="Pengaturan POS" /> }}

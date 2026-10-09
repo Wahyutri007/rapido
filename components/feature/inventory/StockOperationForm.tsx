@@ -20,16 +20,16 @@ import SuccessModal from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import {
-	INVENTORY_ITEMS,
 	INVENTORY_STORES,
 	STOCK_KIND_OPTIONS,
 } from "@/constants/data/inventory";
-import { getInventoryItem } from "@/lib/inventory";
+import { getInventoryItem, getInventoryItems } from "@/lib/inventory";
 import { route } from "@/lib/utils";
 import {
 	type StockOperationSchema,
 	stockOperationSchema,
 } from "@/schema/inventory";
+import { useInventoryMaterialStore } from "@/store/inventoryMaterialStore";
 import { useInventoryStore } from "@/store/inventoryStore";
 import type { StockOperation } from "@/types/ui/inventory";
 import InventoryQuantityInput from "./InventoryQuantityInput";
@@ -41,6 +41,8 @@ export default function StockOperationForm({
 	operation: StockOperation;
 }) {
 	const addRecord = useInventoryStore((state) => state.addStockRecord);
+	const materials = useInventoryMaterialStore((state) => state.materials);
+	const items = getInventoryItems(materials);
 	const [savedId, setSavedId] = React.useState<string>();
 	const form = useForm<StockOperationSchema>({
 		resolver: zodResolver(stockOperationSchema),
@@ -62,12 +64,28 @@ export default function StockOperationForm({
 	const fromStore = useWatch({ control: form.control, name: "fromStore" });
 	const isTransfer = operation === "transfer";
 	const title = isTransfer ? "Transfer Stok" : "Penyesuaian";
-	const availableItems = INVENTORY_ITEMS.filter(
+	const availableItems = items.filter(
 		(item) =>
 			item.kind === kind && !lines.some((line) => line.itemId === item.id),
 	);
 
 	function save(data: StockOperationSchema) {
+		for (const [index, line] of data.lines.entries()) {
+			const item = getInventoryItems().find((item) => item.id === line.itemId);
+			if (!item) {
+				form.setError("lines", {
+					message:
+						"Item tidak tersedia. Hapus item tersebut dan pilih kembali.",
+				});
+				return;
+			}
+			if (line.quantity > item.stock) {
+				form.setError(`lines.${index}.quantity`, {
+					message: "Jumlah melebihi stok tersedia",
+				});
+				return;
+			}
+		}
 		const id = addRecord({
 			operation,
 			kind: data.kind,
@@ -180,7 +198,23 @@ export default function StockOperationForm({
 							)}
 						/>
 						{fields.map((field, index) => {
-							const item = getInventoryItem(field.itemId);
+							const item = items.find((item) => item.id === field.itemId);
+							if (!item)
+								return (
+									<View key={field.id} className="gap-2">
+										<Text size="small" className="text-destructive">
+											Item tidak tersedia
+										</Text>
+										<Pressable
+											accessibilityRole="button"
+											onPress={() => remove(index)}
+										>
+											<Text size="small" className="text-primary">
+												Hapus item yang tidak tersedia
+											</Text>
+										</Pressable>
+									</View>
+								);
 							return (
 								<View
 									key={field.id}

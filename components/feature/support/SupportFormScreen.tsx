@@ -1,4 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { ScrollView, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
@@ -63,8 +64,13 @@ const REQUEST_CHECKLIST = [
 ];
 
 export default function SupportFormScreen({ mode }: { mode: SupportFormMode }) {
+	return <SupportFormEditor key={mode} mode={mode} />;
+}
+
+function SupportFormEditor({ mode }: { mode: SupportFormMode }) {
 	const isFeedback = mode === "feedback";
 	const unavailableModal = useAlertModal();
+	const mounted = useRef(true);
 	const form = useForm<SupportFormValues>({
 		resolver: zodResolver(supportFormSchema),
 		defaultValues: {
@@ -76,11 +82,18 @@ export default function SupportFormScreen({ mode }: { mode: SupportFormMode }) {
 		},
 	});
 
+	useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
+
 	// The legacy feature-request API accepts contact details and a description,
 	// but has no contract for this form's title/attachment or for feedback.
 	// Preserve the form until the matching submission contract is available.
 	function onSubmit(_values: SupportFormValues) {
-		unavailableModal.open();
+		if (mounted.current) unavailableModal.open();
 	}
 
 	return (
@@ -300,7 +313,7 @@ export default function SupportFormScreen({ mode }: { mode: SupportFormMode }) {
 					</View>
 				)}
 			</Wrapper>
-			<BottomActionButton onPress={form.handleSubmit(onSubmit)}>
+			<BottomActionButton onPress={() => form.handleSubmit(onSubmit)()}>
 				{isFeedback ? "Kirim" : "Ajukan"}
 			</BottomActionButton>
 			<AlertModal

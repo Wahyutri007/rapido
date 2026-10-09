@@ -84,19 +84,19 @@ export default function MenuDetailScreen() {
 		if (!data?.category_id) return "-";
 		const cat = categoriesQuery.data?.find((c) => c.id === data.category_id);
 		return cat?.name ?? "Makanan";
-	}, [categoriesQuery.data, data?.category_id]);
+	}, [categoriesQuery.data, data]);
 
 	const brandName = React.useMemo(() => {
 		if (!data?.brand_id) return "-";
 		const brand = brandsQuery.data?.find((b) => b.id === data.brand_id);
 		return brand?.name ?? "Pizza Hut";
-	}, [brandsQuery.data, data?.brand_id]);
+	}, [brandsQuery.data, data]);
 
 	const unitName = React.useMemo(() => {
 		if (!data?.unit_id) return "-";
 		const unit = unitsQuery.data?.find((u) => u.id === data.unit_id);
 		return unit?.name ?? "pcs";
-	}, [unitsQuery.data, data?.unit_id]);
+	}, [unitsQuery.data, data]);
 
 	const selectedOrderTypes = React.useMemo(() => {
 		if (!data?.order_type_ids || data.order_type_ids.length === 0) {
@@ -107,7 +107,7 @@ export default function MenuDetailScreen() {
 			.filter((ot) => data.order_type_ids.includes(ot.id))
 			.map((ot) => ot.name);
 		return matching.length > 0 ? matching : ["Dine In", "Take Away"];
-	}, [orderTypesQuery.data, data?.order_type_ids]);
+	}, [orderTypesQuery.data, data]);
 
 	const selectedExtras = React.useMemo(() => {
 		if (!data?.extra_menu_ids || data.extra_menu_ids.length === 0) {
@@ -118,7 +118,7 @@ export default function MenuDetailScreen() {
 			.filter((em) => data.extra_menu_ids.includes(em.id))
 			.map((em) => em.name);
 		return matching.length > 0 ? matching : ["Topping"];
-	}, [extraMenusQuery.data, data?.extra_menu_ids]);
+	}, [extraMenusQuery.data, data]);
 
 	// Format price display
 	const priceDisplay = React.useMemo(() => {

@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { useLocalSearchParams } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { View } from "react-native";
 import Card from "@/components/common/Card";
 import { SearchNotFound } from "@/components/common/DataPlaceholder";
@@ -7,11 +7,19 @@ import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import { CardListItem, CardListSeparator } from "@/components/custom/CardList";
 import DetailRow from "@/components/custom/DetailRow";
-import { formatRp } from "@/lib/utils";
+import { Button, ButtonText } from "@/components/ui/button";
+import {
+	purchaseOutstanding,
+	purchasePaymentStatus,
+} from "@/lib/inventory/bill-payment";
+import { formatRp, route } from "@/lib/utils";
+import { useInventoryBillPaymentStore } from "@/store/inventoryBillPaymentStore";
 import { useInventoryStore } from "@/store/inventoryStore";
 import PurchaseStatusBadge from "./PurchaseStatusBadge";
+import { formatBillPaymentMoney } from "./bill-payment/BillPaymentSummary";
 
 export default function PurchaseDetailScreen() {
+	const payments = useInventoryBillPaymentStore((state) => state.payments);
 	const { id } = useLocalSearchParams<{ id: string }>();
 	const record = useInventoryStore((state) =>
 		state.purchases.find((record) => record.id === id),
@@ -89,6 +97,37 @@ export default function PurchaseDetailScreen() {
 					</View>
 				</Card>
 			</View>
+			<Card className="gap-3">
+				<Text size="normal" w="semibold">
+					Pembayaran Tagihan
+				</Text>
+				<DetailRow
+					icon="credit-card"
+					label="Status Pembayaran"
+					value={purchasePaymentStatus(record, payments)}
+				/>
+				<DetailRow
+					icon="dollar-sign"
+					label="Sisa Tagihan"
+					value={formatBillPaymentMoney(purchaseOutstanding(record, payments))}
+					isLast
+				/>
+				{purchaseOutstanding(record, payments) > 0 && (
+					<Button
+						size="xl"
+						variant="outline"
+						onPress={() =>
+							router.push(
+								route("/inventory/bill-payments/modify", {
+									purchaseId: record.id,
+								}),
+							)
+						}
+					>
+						<ButtonText>Bayar Tagihan</ButtonText>
+					</Button>
+				)}
+			</Card>
 		</Wrapper>
 	);
 }

@@ -10,6 +10,12 @@ import { cn } from "@/lib/utils";
 import type { StockKind } from "@/types/ui/inventory";
 
 type IconName = React.ComponentProps<typeof EFeather>["name"];
+const metricValueClasses = {
+	primary: "!text-primary",
+	success: "!text-success",
+	warning: "!text-warning",
+	destructive: "!text-destructive",
+};
 const InventoryVectorIcon = cssInterop(EFeather, {
 	className: { target: "style", nativeStyleToProp: { color: "color" } },
 });
@@ -20,7 +26,7 @@ export function InventoryIcon({
 	size = 16,
 }: {
 	name: IconName;
-	tone?: "primary" | "success" | "warning" | "destructive";
+	tone?: "primary" | "success" | "warning" | "destructive" | "muted";
 	size?: number;
 }) {
 	return (
@@ -32,6 +38,7 @@ export function InventoryIcon({
 				"text-success": tone === "success",
 				"text-warning": tone === "warning",
 				"text-destructive": tone === "destructive",
+				"text-muted": tone === "muted",
 			})}
 		/>
 	);
@@ -160,8 +167,10 @@ export function StockKindBadge({ kind }: { kind: StockKind }) {
 export function InventoryMetrics({
 	items,
 	variant = "default",
+	valueTone = "default",
 }: {
 	variant?: "default" | "supplier";
+	valueTone?: "default" | "item";
 	items: {
 		label: string;
 		value: string | number;
@@ -204,13 +213,29 @@ export function InventoryMetrics({
 						</View>
 						<View className={cn("gap-1", items.length === 3 && "items-center")}>
 							{variant === "supplier" && (
-								<Text size="body" w="semibold">
+								<Text
+									size="body"
+									w="semibold"
+									className={
+										valueTone === "item" && item.tone
+											? metricValueClasses[item.tone]
+											: undefined
+									}
+								>
 									{item.value}
 								</Text>
 							)}
 							<Text size="small">{item.label}</Text>
 							{variant !== "supplier" && (
-								<Text size="body" w="semibold">
+								<Text
+									size="body"
+									w="semibold"
+									className={
+										valueTone === "item" && item.tone
+											? metricValueClasses[item.tone]
+											: undefined
+									}
+								>
 									{item.value}
 								</Text>
 							)}
@@ -231,14 +256,16 @@ export function InventoryMetadata({
 	icon,
 	label,
 	value,
+	tone,
 }: {
 	icon: IconName;
 	label: string;
 	value: string;
+	tone?: "primary" | "muted";
 }) {
 	return (
 		<View className="flex-row items-start gap-2">
-			<InventoryIcon name={icon} />
+			<InventoryIcon name={icon} tone={tone} />
 			<View className="flex-1 gap-1">
 				<Text size="small" className="text-muted">
 					{label}

@@ -2,6 +2,7 @@ import { Feather, FontAwesome } from "@expo/vector-icons";
 import type React from "react";
 import { forwardRef, useCallback, useImperativeHandle, useState } from "react";
 import { Pressable, View } from "react-native";
+import BottomActionBar from "@/components/common/BottomActionBar";
 import Text from "@/components/common/Text";
 import { DownloadIcon } from "@/components/icons";
 import {
@@ -241,14 +242,13 @@ export const ReportActionButton = forwardRef<
 			{standalone ? (
 				buttonElement
 			) : (
-				<View
-					className={cn(
-						"absolute bottom-0 left-0 right-0 border-t border-border-muted bg-white px-4 pb-6 pt-2.5",
-						containerClassName,
-					)}
+				<BottomActionBar
+					bottomPadding={24}
+					topPadding={8}
+					className={containerClassName}
 				>
 					{buttonElement}
-				</View>
+				</BottomActionBar>
 			)}
 
 			<ReportActionsheet

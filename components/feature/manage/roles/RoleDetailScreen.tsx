@@ -22,6 +22,10 @@ import RoleQueryError from "./RoleQueryError";
 import RoleWorkers from "./RoleWorkers";
 
 export default function RoleDetailScreen({ id }: { id?: string }) {
+	return <RoleDetailContent key={id ?? ""} id={id} />;
+}
+
+function RoleDetailContent({ id }: { id?: string }) {
 	const query = useRoleQuery(id);
 	const permissions = useRolePermissionsQuery();
 	const [search, setSearch] = useState("");
