@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Jakarta",
+  "origin": "http://127.0.0.1:8088",
+  "kind": "Real application/SSR/Expo Router/production providers; real backend read requests, no API fixtures, no submitted credentials.",
+  "checks": [
+    {
+      "name": "real login route HTTP 200",
+      "passed": true
+    },
+    {
+      "name": "login renders without red error overlay",
+      "passed": true
+    },
+    {
+      "name": "application stays light with dark OS preference",
+      "passed": true
+    },
+    {
+      "name": "login input accepts typing",
+      "passed": true
+    },
+    {
+      "name": "login visible on desktop web",
+      "passed": true
+    },
+    {
+      "name": "cold unauthenticated boot reaches onboarding",
+      "passed": true
+    },
+    {
+      "name": "onboarding action enabled",
+      "passed": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "browserResponses": [],
+  "url": "http://127.0.0.1:8088/onboarding",
+  "body": "Selamat datang di Rápido!\nAplikasi Point of Sale yang membantu kamu menjalankan bisnis dengan lebih mudah!\nPelaksanaan Flow Bisnis Cepat\nFitur yang tersedia sudah berdasarkan hasil kurasi agar tepat dan cepat!\n Knowledge menguntungkan!\nDapatkan data history untuk memudahkan bisnismu dalam mengambil keputusan\nLanjutkan\nGabung Sekarang\n\nDev"
+}

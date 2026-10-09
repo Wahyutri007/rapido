@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-09",
+  "device": "vivo 1918",
+  "serial": "35b9a8aa",
+  "android": "11",
+  "expoGo": "57.0.9",
+  "kind": "Observed post-restart production application; stored UIAutomator snapshot read back, app labels only.",
+  "bundle": "Android Bundled 18295ms node_modules\\expo-router\\entry.js (5187 modules)",
+  "generatedDarkModeObservedAfterBundle": "class dark",
+  "generatedFlagObservation": "Earlier read of generated android.js after successful native bundle; shared generated cache can be reset by other Metro sessions and is not a persistent artifact.",
+  "screen": "Persediaan",
+  "visibleAppLabels": [
+    "Persediaan",
+    "Ringkasan Inventory",
+    "Transfer Stok",
+    "Penyesuaian Stok",
+    "Bahan Baku",
+    "Komposisi Produk",
+    "Pembelian Barang",
+    "Pemasok",
+    "Pembayaran Tagihan",
+    "Riwayat",
+    "Beranda",
+    "Laporan",
+    "Katalog",
+    "Inventory",
+    "Kelola"
+  ],
+  "themeErrorInNewMetroLog": false,
+  "limitations": "Startup/render verification; does not exercise Inventory operations or all native routes."
+}
