@@ -1,0 +1,169 @@
+{
+  "focus": "Kasir",
+  "updatedAtUtc": "2026-10-09T09:56:37.512Z",
+  "coordinator": "Projek Manager",
+  "deliveryMethod": "Workspace handoffs and SESSION_COORDINATION; no external messages sent.",
+  "tasks": [
+    {
+      "id": "PM-CASHIER-PRICE-001",
+      "owner": "Projek Manager",
+      "status": "PUBLISHED_SCOPED",
+      "commit": "42fb6217ad53047a444f698b25d0f01ce845807f",
+      "scope": "Harga item dan subtotal saja; branch modul dan main sudah cocok."
+    },
+    {
+      "id": "QC-CASHIER-CATALOG-001",
+      "owner": "Senior7",
+      "status": "CHANGES_REQUESTED",
+      "severity": "P2",
+      "developerTask": "SD7-CASHIER-CATALOG-INPUT-002",
+      "problem": "Pergantian kategori sebelum debounce menghapus draft pencarian dan membatalkan query.",
+      "acceptance": "Draft tetap saat kategori berubah; query AND kategori, reset/deep link/unmount teruji; audit caller sebelum menyentuh hook shared.",
+      "evidence": "docs/qa/qc-cashier-modules-2026-10-09/REPORT.md",
+      "publication": "HOLD"
+    },
+    {
+      "id": "QC-CASHIER-SEARCH-RESET-002",
+      "owner": "Codex2",
+      "status": "CHANGES_REQUESTED",
+      "severity": "P2",
+      "scope": [
+        "Transaksi",
+        "Riwayat Shift"
+      ],
+      "problem": "Reset sebelum debounce SearchBar tidak membersihkan draft/timer, sehingga query lama kembali.",
+      "acceptance": "Reset sebelum/sesudah debounce, status saat mengetik, unmount, pagination dan scope akun/toko; tidak ada pending writer; supplement parent layout terbaru tanpa menghapus route peer.",
+      "evidence": "docs/qa/qc-cashier-followup-2026-10-09/REPORT.md",
+      "publication": "HOLD"
+    },
+    {
+      "id": "SD4-008",
+      "owner": "Codex4",
+      "status": "QC_UI_ACCEPTED_NATIVE_QA_INTEGRATION_PENDING",
+      "scope": "Stok Kasir UI empat state dari Figma, data contoh berlabel Pratinjau.",
+      "evidence": "docs/qa/codex-4-2026-10-09/cashier-stock/HANDOFF.md",
+      "gate": "PM accepted hash-bound QC UI and documented design adaptations; actual HP/router/auth/back/keyboard/safe-area QA and isolated integration still pending.",
+      "pmQcReceipt": "docs/qa/pm-cashier-reference-2026-10-09/STOCK_QC_INTAKE.json"
+    },
+    {
+      "id": "CASHIER-BILLS-002-RESET",
+      "developerOwner": "Senior8",
+      "qaOwner": "/root/cashier_pricing_qa",
+      "status": "READY_FOR_QC_SCOPED",
+      "scope": "Reset search pada caller BillsScreen; shared SearchBar tidak berubah.",
+      "evidence": "docs/qa/senior-8-2026-10-09/cashier-bills-resume/HANDOFF.md",
+      "qaOutput": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09",
+      "independentQA": {
+        "passed": 20,
+        "failed": 0,
+        "rendererErrors": 0,
+        "handoffFingerprintsMatched": 37
+      },
+      "executionProfile": "Existing Luna Medium; one focused lifecycle batch, no bundle/full-project checks.",
+      "gate": "Reset QA adapter accepted; QC/native and module integration pending. Two full Figma references now available for a separate Senior8 visual batch; no full Bills visual/payment approval."
+    },
+    {
+      "id": "PM-CASHIER-BACKEND-CONTRACT-001",
+      "owner": "Backend owner pending claim",
+      "status": "CHANGES_REQUIRED_FROM_SOURCE_AUDIT",
+      "execution": "DEFERRED_NO_BACKEND_EDIT_OR_RUNTIME",
+      "findings": [
+        "Payment controller calls TransactionService::createPayment, absent from inspected service",
+        "Payment request rules remain placeholder and route lacks store middleware expected by its consumers",
+        "Transaction migration store_shift_id differs from model/service shift_id",
+        "Transaction migration lacks payment_status used by model/service",
+        "Payment migration payment_amount/paid_amount differs from model/service amount",
+        "Explicit payload/response, money precision and rounding contract still required"
+      ],
+      "acceptance": "Backend owner resolves source contracts and supplies schema-aligned request/response, store authorization, validation and integration evidence before checkout success wiring.",
+      "evidence": "docs/qa/pm-cashier-contract-2026-10-09/contract.json",
+      "limitation": "Source inspection only; API and database were not executed.",
+      "publication": "Checkout/payment HOLD"
+    },
+    {
+      "id": "PM-CASHIER-CART-READ-ONLY-001",
+      "owner": "Pending claim",
+      "status": "QUEUED_AFTER_CONTRACT_CONFIRMATION",
+      "scope": "GET /api/stores/cart DTO mapping, auth/store/open-shift scope and server quote display.",
+      "gate": "Confirm actual response/currency contract and coordinate source ownership before implementation; no transaction/payment mutation or fixture IDs sent."
+    },
+    {
+      "id": "SD5-014",
+      "developerOwner": "Senior5",
+      "qaOwner": "/root/cashier_pricing_qa",
+      "status": "READY_FOR_QC_SCOPED",
+      "scope": "Cash input and opt-in controlled Keypad",
+      "independentQA": {
+        "behaviorPassed": 24,
+        "callerFingerprintsMatched": 3,
+        "totalChecks": 27,
+        "failed": 0
+      },
+      "qaReceipt": "docs/qa/pm-cashier-intake-2026-10-09/CASH_INPUT_QA_INTAKE.json",
+      "gate": "QC receipt/native/PIN-refund navigator/Figma cash frame/integration still pending; downstream mock confirmation is not payment approval."
+    },
+    {
+      "id": "PM-CASHIER-BILLS-FIGMA-003",
+      "owner": "QC visual implementation session",
+      "status": "MAIN_VISUAL_OVERLAY_IN_PROGRESS",
+      "scope": "Main list JSX in BillsScreen and main-list layout header; local card/theme/SVGs. Nested variant remains separate.",
+      "handoff": "docs/qa/pm-cashier-reference-2026-10-09/BILLS_VISUAL_HANDOFF.json",
+      "gate": "Fresh QC-session claim recorded in SESSION_COORDINATION. Preserve Senior8 search/reset and detail logic; changed visual source needs new independent QA/QC. Reference handoff is historical and does not imply Senior8 acknowledged it.",
+      "historicalDeveloperOwner": "Senior8",
+      "evidence": "docs/qa/qc-cashier-bills-visual-2026-10-09"
+    },
+    {
+      "id": "SD3-016",
+      "owner": "Codex3",
+      "status": "READY_FOR_EXTERNAL_QA_QC",
+      "scope": "Penawaran UI and one cart OfferTrigger navigation callback",
+      "evidence": "docs/qa/codex-3/cashier-offers-2026-10-09/HANDOFF.md",
+      "gate": "Internal QA/browser evidence available; external reviewer receipts/native/Figma Promo references pending; pricing snapshot commit stays historical."
+    },
+    {
+      "id": "QC-CASHIER-NAVBAR-VISUAL-001",
+      "owner": "Projek Manager",
+      "status": "PUBLISHED_SCOPED",
+      "scope": "Cashier-only BottomTab appearance, five original SVGs, catalog footer inset, explicit development-tool opt-in",
+      "gate": "QA seventeen scoped groups and independent QC ten groups accepted; native/Figma pixel/full cashier/checkout/payment remain separate gates.",
+      "developerOwner": "QC visual implementation session",
+      "qaOwner": "/root/cashier_pricing_qa",
+      "qcOwner": "/root/cashier_navbar_qc",
+      "commit": "50d8196189d1c7bb945c385f961c5837f0b9c250",
+      "moduleBranch": "fix/cashier-navigation-layout",
+      "publicationReceipt": "docs/qa/pm-cashier-navbar-publication-2026-10-09/PUBLICATION_RECEIPT.json"
+    },
+    {
+      "id": "SD5-015",
+      "owner": "Senior5",
+      "status": "IN_PROGRESS",
+      "scope": "Cash input visual overlay, opt-in cash Keypad, input-money header only, local helpers and exact SVG",
+      "reference": "docs/figma/cashier/sd5-20261009/cash-input",
+      "gate": "Full context 29:25047 available. Overlay applied after QA014 lease release; current visual hashes require new QA/QC. Historical SD5-014 twenty-four behavior plus three caller fingerprint checks do not approve SD5-015."
+    },
+    {
+      "id": "SD4-009",
+      "owner": "Codex4",
+      "status": "READY_FOR_QA_BEHAVIOR",
+      "scope": "OrderTypeAction, local selection helper and only cart OrderTypeTrigger/import delta",
+      "evidence": "docs/qa/codex-4-2026-10-09/cashier-order-type/HANDOFF.md",
+      "gate": "Developer fifty-one checks and four AST/style proofs; independent QA/QC/native and Figma popup mapping pending. Preserve peer pricing and OfferTrigger callback."
+    },
+    {
+      "id": "SD3-017",
+      "owner": "Codex3",
+      "status": "IN_PROGRESS",
+      "scope": "Report tabs, transaction preview search/grouping and truthful unavailable customer data",
+      "evidence": "docs/qa/codex-3/cashier-reports-2026-10-09",
+      "gate": "Bounded behavior/preview work; full report reference, external QA/QC/native/backend pending."
+    }
+  ],
+  "progressPolicy": "Do not infer completion percentage from checks, layers or handoffs. Pricing and navigation are two scoped published improvements; pending modules remain held.",
+  "reference": {
+    "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+    "pageId": "0:1",
+    "cashierSection": "29:18658",
+    "review": "docs/qa/pm-cashier-reference-2026-10-09/REFERENCE_REVIEW.json"
+  },
+  "latestPublishedMain": "50d8196189d1c7bb945c385f961c5837f0b9c250"
+}

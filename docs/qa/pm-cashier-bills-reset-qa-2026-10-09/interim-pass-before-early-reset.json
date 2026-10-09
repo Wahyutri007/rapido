@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "passed": 17,
+  "failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "source fixture initial rows",
+      "passed": true,
+      "actual": [
+        "4",
+        "5"
+      ],
+      "expected": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "draft appears before debounce, rows unchanged",
+      "passed": true,
+      "actual": "[\"no-match-before-150\",[\"4\",\"5\"]]",
+      "expected": "[\"no-match-before-150\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "one ms before deadline remains unapplied",
+      "passed": true,
+      "actual": [
+        "4",
+        "5"
+      ],
+      "expected": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "at 150ms query applies",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "reset after settled query restores field and scope",
+      "passed": true,
+      "actual": "[\"\",\"all\",[\"4\",\"5\"]]",
+      "expected": "[\"\",\"all\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "post-reset empty debounce cannot restore stale query",
+      "passed": true,
+      "actual": "[\"\",[\"4\",\"5\"]]",
+      "expected": "[\"\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "repeated reset clears both draft and status",
+      "passed": true,
+      "actual": "[\"\",\"all\",[\"4\",\"5\"]]",
+      "expected": "[\"\",\"all\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "typing after repeated reset is still pending",
+      "passed": true,
+      "actual": "[\"no-match-after-reset\",[\"4\",\"5\"]]",
+      "expected": "[\"no-match-after-reset\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "latest unique query applies after repeated reset",
+      "passed": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "second reset keeps restored list",
+      "passed": true,
+      "actual": [
+        "4",
+        "5"
+      ],
+      "expected": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "name": "status update preserves draft and applies current status",
+      "passed": true,
+      "actual": "[\"5\",\"processing\"]",
+      "expected": "[\"5\",\"processing\"]"
+    },
+    {
+      "name": "status and just-settled query combine",
+      "passed": true,
+      "actual": [
+        "5"
+      ],
+      "expected": [
+        "5"
+      ]
+    },
+    {
+      "name": "reset during active status/search restores all defaults",
+      "passed": true,
+      "actual": "[\"\",\"all\",[\"4\",\"5\"]]",
+      "expected": "[\"\",\"all\",[\"4\",\"5\"]]"
+    },
+    {
+      "name": "input has pending debounce before unmount",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "unmount cancels pending debounce",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "unmount deadline leaves no delayed mutation",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "detail route preserves stable record ID",
+      "passed": true,
+      "actual": [
+        [
+          "push",
+          {
+            "pathname": "/(cashier)/biling/detail",
+            "params": {
+              "id": "4"
+            }
+          }
+        ]
+      ],
+      "expected": [
+        [
+          "push",
+          {
+            "pathname": "/(cashier)/biling/detail",
+            "params": {
+              "id": "4"
+            }
+          }
+        ]
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "file": "components/feature/cashier/bills/BillsScreen.tsx",
+      "sha256": "2b597fe63843e8187d6c8b5d767aaa264ae01f71ecdb2f75a43969394e5f95fa"
+    },
+    {
+      "file": "components/common/SearchBar.tsx",
+      "sha256": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f"
+    },
+    {
+      "file": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "file": "constants/data/transaction/transaction.ts",
+      "sha256": "db10e63e3066491a34f0122a0d7b531d51c8297c938faa3a49239f5ca4a24d4e"
+    },
+    {
+      "file": "constants/data/cart.ts",
+      "sha256": "2e747f3d214dcddcf13ff04d5991f6bb94d9341f22872069a062d35321fe672f"
+    },
+    {
+      "file": "constants/data/menu.ts",
+      "sha256": "64ada92db5299f71efa241c36007abaa867fbbc839869be61b2f3ebc6a3adf19"
+    },
+    {
+      "file": "constants/data/variant.ts",
+      "sha256": "d0bde49ee7db71db0361d276daa56bdc959860a6b23a6e02b72ac63e7a3a7ce1"
+    },
+    {
+      "file": "constants/data/manage/payment-method.ts",
+      "sha256": "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d"
+    },
+    {
+      "file": "lib/cashier/bills.ts",
+      "sha256": "54838d4a97338bc65c7886d6a65681d394b6c5447141a5140761dcfff9415457"
+    }
+  ],
+  "boundary": "Actual BillsScreen, actual SearchBar effects, existing bills helper/fixtures, virtual clock and presentation/router adapters. No keyboard, native UI, browser, API or Figma certification."
+}

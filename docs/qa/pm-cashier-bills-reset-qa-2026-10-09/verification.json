@@ -1,0 +1,21 @@
+﻿{
+  "id":"SD8-CASHIER-BILLS-002-RESET-INDEPENDENT-QA",
+  "status":"PASS_SCOPED",
+  "scope":"BillsScreen caller reset lifecycle only; shared SearchBar read-only",
+  "handoffVerifier":{"command":"node docs/qa/senior-8-2026-10-09/cashier-bills-resume/verify.cjs","checked":37,"mismatches":0},
+  "independentReplay":{"runner":"docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-lifecycle.cjs","passed":20,"failed":0,"rendererErrors":0,"sourceFixture":"actual TRANSACTION_ITEMS fixture","searchBar":"actual shared SearchBar with React effects","clock":"virtual; exact timer deadlines advanced","interactionAdapter":"React renderer with native/presentation/router stubs"},
+  "coverage":["draft before 150ms","reset at t-1ms","old deadline after reset","query after 150ms","reset after settled query","repeated reset","typing after reset","status filter with pending draft","status and query combined","default restoration","unmount timer cleanup","detail route stable record ID"],
+  "sourceHashes":{
+    "components/feature/cashier/bills/BillsScreen.tsx":"2b597fe63843e8187d6c8b5d767aaa264ae01f71ecdb2f75a43969394e5f95fa",
+    "components/common/SearchBar.tsx":"0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+    "lib/cashier/bills.ts":"54838d4a97338bc65c7886d6a65681d394b6c5447141a5140761dcfff9415457",
+    "constants/data/transaction/transaction.ts":"db10e63e3066491a34f0122a0d7b531d51c8297c938faa3a49239f5ca4a24d4e",
+    "app/(cashier)/biling/index.tsx":"40abd7ec4391d2afd86fa6da505fe125309db54048f1e6c5513e5c27799a72fc",
+    "app/(cashier)/biling/detail.tsx":"743f9f0c75f65c338a346d93212f5e7a3ce212478fc54b21c60cbec03a54289f",
+    "app/(cashier)/biling/_layout.tsx":"a8894a88b7f9f289076476081d29fd2ea7a89bd251422e15f3632f66b0ee0061",
+    "docs/qa/senior-8-2026-10-09/cashier-bills-resume/HANDOFF.md":"a47e47980cc66dcdc44c5f42e8a4a04a09e2cd6d52012b5ec807ca1110f27fad"
+  },
+  "unaccountedInterims":["interim-selector-results.json","interim-duplicate-invoice-expectation.json","interim-pass-before-early-reset.json"],
+  "unchangedArtifacts":"Developer runner, reset-results.json, regression-results.json, verification.json and all app sources were left unchanged; historical 42 regression checks were not rerun or added.",
+  "limits":["Keyboard/focus after keyed remount awaits actual device QA.","No browser, HP/native UI, Figma visual, payment/backend/API, global TypeScript, bundle, or publication approval is claimed."]
+}

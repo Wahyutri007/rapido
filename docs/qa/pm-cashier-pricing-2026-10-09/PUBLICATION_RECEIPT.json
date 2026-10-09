@@ -1,0 +1,51 @@
+{
+  "task": "PM-CASHIER-PRICE-001",
+  "status": "PUBLISHED_SCOPED",
+  "recordedAtUtc": "2026-10-09T08:45:01Z",
+  "repository": "https://github.com/Wahyutri007/rapido",
+  "moduleBranch": "fix/cashier-cart-pricing",
+  "previousMainCommit": "178cda6bf7e2702c7c23ce99573d654ac0661921",
+  "publishedCommit": "42fb6217ad53047a444f698b25d0f01ce845807f",
+  "verifiedRemoteHeads": {
+    "fix/cashier-cart-pricing": "42fb6217ad53047a444f698b25d0f01ce845807f",
+    "main": "42fb6217ad53047a444f698b25d0f01ce845807f"
+  },
+  "sequence": [
+    "Build reviewed candidate in isolated worktree from published main",
+    "Verify frozen source and candidate compatibility",
+    "Commit exactly three production sources and nineteen review artifacts",
+    "Push module branch",
+    "Verify branch head and unchanged main base",
+    "Push module branch to main using non-force fast-forward",
+    "Verify both remote heads"
+  ],
+  "isolatedWorktree": "D:/Rapido-QC-temp/pm-cashier-pricing-2026-10-09",
+  "committedFiles": { "production": 3, "reviewArtifacts": 19, "total": 22 },
+  "committedProductionSha256": {
+    "lib/cashier-cart-pricing.ts": "9fef6562bbb467b33e1a9eebab08a79001e3f48a714059a64434690112b8a585",
+    "components/feature/cart/CartItem.tsx": "8b6339038414b7fb32f5b4cd97285ca40c2b1898682cf0250c4f518712bf6f79",
+    "app/(no-layout)/(cashier)/cart/index.tsx": "d8b959d26ef0919e3357bdb3d99950adf58293e98d2a69fda52a4f9b79c9f0a1"
+  },
+  "prePushCommitValidation": { "matchingProductionGitBlobs": 3, "validJsonEvidenceFiles": 11 },
+  "gates": {
+    "developer": { "passed": 51, "failed": 0 },
+    "independentQA": { "passed": 16, "failed": 0, "actualSourceFixtureSubtotal": 143000 },
+    "externalQC": { "passed": 44, "failed": 0, "signal": "QC-CASHIER-PRICE-20261009-PASS-SCOPED" },
+    "candidateCompatibility": { "passed": true, "report": "publication-check/REPORT.md" },
+    "counting": "Counts describe separate review suites and are not summed as unique coverage."
+  },
+  "sharedWorkspace": {
+    "headObservedAfterPublication": "acba0d92460c1af3149abc3775f09888a2943cab",
+    "stagedPathsObserved": [],
+    "gitMutationPerformed": false,
+    "note": "Shared checkout is intentionally not synchronized while peer sessions edit it. Publication used the isolated worktree."
+  },
+  "limitations": [
+    "Pricing approval does not approve checkout or payment success",
+    "Figma parity, native behavior, live backend and persistence remain separate gates",
+    "Fractional-currency precision and server quote policy remain unresolved",
+    "Global lint backlog was not re-run or closed",
+    "Peer cashier modules are not included in this commit"
+  ],
+  "receiptPlacement": "Local post-push receipt; this file is not part of commit 42fb621. Published review evidence is PUBLICATION_REVIEW.json at that commit."
+}

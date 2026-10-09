@@ -1,0 +1,53 @@
+{
+  "id": "PM-SD4-008-STOCK-QC-INTAKE",
+  "date": "2026-10-09",
+  "developerOwner": "Codex4",
+  "decision": "ACCEPT_HASH_BOUND_QC_SCOPED_UI_WITH_DOCUMENTED_ADAPTATIONS",
+  "qcSignal": "QC-CASHIER-STOCK-UI-20261009-PASS-SCOPED",
+  "qcDecision": "docs/qa/qc-cashier-stock-ui-2026-10-09/cashier-stock/DECISION.json",
+  "qcReport": "docs/qa/qc-cashier-stock-ui-2026-10-09/cashier-stock/REPORT.md",
+  "rootReceiptValidation": {
+    "command": "node docs/qa/qc-cashier-stock-ui-2026-10-09/cashier-stock/verify-review.cjs",
+    "status": "PASS",
+    "qcArtifacts": 91,
+    "sourceInputs": 40,
+    "ownDrift": [],
+    "sourceDrift": [],
+    "developerManifestDrift": false,
+    "bundleDrift": false
+  },
+  "testedEvidence": {
+    "qcIndependentBrowserChecks": { "passed": 22, "failed": 0 },
+    "qcDeveloperReplay": { "passed": 22, "failed": 0 },
+    "captureSupplement": { "passed": 5, "failed": 0, "functionalCoverage": false },
+    "counting": "Separate suites; not 44 unique scenarios. PM consumed frozen evidence without rerunning browser/build suites."
+  },
+  "bundleSha256": "d247b934212904edafbd21a7217a4126f209463f748add58fe27143f6d2d8152",
+  "filterSheetSha256": "a65cc5ea14ffee82defa7bc6a0d15ddb4cbe41a9385605fa3d2f37d6d6d1737c",
+  "pmVisualInspection": {
+    "pairs": [
+      ["figma-current/all.png", "all-tall-390.png"],
+      ["figma-current/empty.png", "empty-390.png"],
+      ["figma-current/low.png", "low-390.png"],
+      ["figma-current/filter.png", "filter-reference-state-390.png"]
+    ],
+    "baseFolder": "docs/qa/qc-cashier-stock-ui-2026-10-09/cashier-stock",
+    "result": "Grouping, item order, quantities/units, empty Titipan header, status colors and filter selections follow the supplied reference. Documented changes remain visible."
+  },
+  "acceptedAdaptations": [
+    "Pratinjau label and concise sample-data notice accurately disclose unavailable live stock",
+    "Filter-active indication and accessibilityHint improve state visibility without inventing stock policy",
+    "Semantic project typography/radii and four-unit spacing grid follow AGENTS_UI",
+    "619px design sheet mapped to 620px grid and adjusted to available viewport/safe area",
+    "Stable full item name from Semua reference reused across filter states"
+  ],
+  "acceptanceLimit": "Acceptance is for the reviewed preview UI, not exact pixel equality, live outlet inventory or every cashier screen.",
+  "publication": "HOLD_FOR_NATIVE_ROUTE_QA_AND_MODULE_INTEGRATION",
+  "remainingGates": [
+    "Actual device navigation/auth/mode/direct-link/back/keyboard/focus/safe-area QA",
+    "Isolated candidate dependency compatibility and current source fingerprints",
+    "Preserve peer stock/shift/scanner route registrations and document exact module delta"
+  ],
+  "backend": "Deferred; no backend/runtime action was performed in this intake.",
+  "gitMutation": false
+}

@@ -1,0 +1,110 @@
+﻿{
+    "id":  "PM-SD8-CASHIER-BILLS-002-QA-INTAKE",
+    "recordedAtUtc":  "2026-10-09T08:51:35Z",
+    "decision":  "ACCEPT_QA_HANDOFF_READY_FOR_QC_SCOPED",
+    "developerOwner":  "Senior8",
+    "qaReviewer":  "/root/cashier_pricing_qa",
+    "qaReport":  "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/REPORT.md",
+    "independentChecks":  {
+                              "passed":  20,
+                              "failed":  0,
+                              "rendererErrors":  0
+                          },
+    "receiptSourceRecheck":  {
+                                 "checked":  13,
+                                 "mismatches":  0,
+                                 "files":  [
+                                               {
+                                                   "file":  "app/(cashier)/biling/_layout.tsx",
+                                                   "expected":  "a8894a88b7f9f289076476081d29fd2ea7a89bd251422e15f3632f66b0ee0061",
+                                                   "actual":  "a8894a88b7f9f289076476081d29fd2ea7a89bd251422e15f3632f66b0ee0061",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "app/(cashier)/biling/detail.tsx",
+                                                   "expected":  "743f9f0c75f65c338a346d93212f5e7a3ce212478fc54b21c60cbec03a54289f",
+                                                   "actual":  "743f9f0c75f65c338a346d93212f5e7a3ce212478fc54b21c60cbec03a54289f",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "app/(cashier)/biling/index.tsx",
+                                                   "expected":  "40abd7ec4391d2afd86fa6da505fe125309db54048f1e6c5513e5c27799a72fc",
+                                                   "actual":  "40abd7ec4391d2afd86fa6da505fe125309db54048f1e6c5513e5c27799a72fc",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "components/common/SearchBar.tsx",
+                                                   "expected":  "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+                                                   "actual":  "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "components/feature/cashier/bills/BillsScreen.tsx",
+                                                   "expected":  "2b597fe63843e8187d6c8b5d767aaa264ae01f71ecdb2f75a43969394e5f95fa",
+                                                   "actual":  "2b597fe63843e8187d6c8b5d767aaa264ae01f71ecdb2f75a43969394e5f95fa",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/Colors.ts",
+                                                   "expected":  "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+                                                   "actual":  "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/data/cart.ts",
+                                                   "expected":  "2e747f3d214dcddcf13ff04d5991f6bb94d9341f22872069a062d35321fe672f",
+                                                   "actual":  "2e747f3d214dcddcf13ff04d5991f6bb94d9341f22872069a062d35321fe672f",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/data/manage/payment-method.ts",
+                                                   "expected":  "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d",
+                                                   "actual":  "bb5e2e8f13ad8f131dc8043a2d513d8978768ddae02da4407414240a90fdaa1d",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/data/menu.ts",
+                                                   "expected":  "64ada92db5299f71efa241c36007abaa867fbbc839869be61b2f3ebc6a3adf19",
+                                                   "actual":  "64ada92db5299f71efa241c36007abaa867fbbc839869be61b2f3ebc6a3adf19",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/data/transaction/transaction.ts",
+                                                   "expected":  "db10e63e3066491a34f0122a0d7b531d51c8297c938faa3a49239f5ca4a24d4e",
+                                                   "actual":  "db10e63e3066491a34f0122a0d7b531d51c8297c938faa3a49239f5ca4a24d4e",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "constants/data/variant.ts",
+                                                   "expected":  "d0bde49ee7db71db0361d276daa56bdc959860a6b23a6e02b72ac63e7a3a7ce1",
+                                                   "actual":  "d0bde49ee7db71db0361d276daa56bdc959860a6b23a6e02b72ac63e7a3a7ce1",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "docs/qa/senior-8-2026-10-09/cashier-bills-resume/HANDOFF.md",
+                                                   "expected":  "a47e47980cc66dcdc44c5f42e8a4a04a09e2cd6d52012b5ec807ca1110f27fad",
+                                                   "actual":  "a47e47980cc66dcdc44c5f42e8a4a04a09e2cd6d52012b5ec807ca1110f27fad",
+                                                   "matched":  true
+                                               },
+                                               {
+                                                   "file":  "lib/cashier/bills.ts",
+                                                   "expected":  "54838d4a97338bc65c7886d6a65681d394b6c5447141a5140761dcfff9415457",
+                                                   "actual":  "54838d4a97338bc65c7886d6a65681d394b6c5447141a5140761dcfff9415457",
+                                                   "matched":  true
+                                               }
+                                           ]
+                             },
+    "developerHandoffVerifier":  {
+                                     "checked":  37,
+                                     "mismatches":  0,
+                                     "basis":  "QA reported read-only verification before and after replay"
+                                 },
+    "qcStatus":  "PENDING_RECEIPT",
+    "publication":  "HOLD_FOR_QC_AND_MODULE_INTEGRATION_REVIEW",
+    "limits":  [
+                   "Caller search-reset adapter scope only",
+                   "Keyboard/focus after remount still requires actual device QA",
+                   "No Figma parity, payment, live backend or full Tagihan module approval",
+                   "Historical developer42 regression checks were not added to independent20"
+               ]
+}

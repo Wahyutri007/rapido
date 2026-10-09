@@ -1,0 +1,41 @@
+﻿{
+  "ticket": "SD5-014",
+  "result": "PASS_SCOPED",
+  "checkedAt": "2026-10-09",
+  "developerPacketVerifier": {
+    "artifacts": 26,
+    "ownedSources": 3,
+    "failures": 0,
+    "dependencyDrift": 0,
+    "meaning": "Integrity check only"
+  },
+  "independentReplay": {
+    "behavioralChecks": {"count": 24, "passed": 24, "failed": 0},
+    "callerFingerprintIntegrityChecks": {"count": 3, "passed": 3, "failed": 0, "meaning": "Unchanged source bytes only; not rendered PIN/refund flow tests"},
+    "totalChecks": {"count": 27, "passed": 27, "failed": 0},
+    "runtimeErrors": 0,
+    "actionRejections": 0,
+    "runner": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/independent.cjs",
+    "actualComponents": ["input-money screen", "Keypad", "RHF", "Zod resolver", "cash schema", "money helper"],
+    "adapters": ["React Native host views", "icons", "expo-router navigation", "focus"],
+    "legacyKeypadRenderedCases": 1
+  },
+  "ownedSourceHashes": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "dde9381b7e6be9cc4ec0198ae8997b0f0bdb9a0a5c35db63fa9456a3e85ec492",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0",
+    "components/common/Keypad.tsx": "7caeae9015b269cd48ee3d9db360a4543913db7e55689d5b82433d57db0bd415"
+  },
+  "unchangedCallerHashes": {
+    "app/(onboarding)/choose-store/pin.tsx": "1f9da1aa275426c0e4b1db06e49f9c03fccec8b288fe205c829eb30599f2532a",
+    "app/(no-layout)/manage/pin.tsx": "125f120968796b6fe3529e3a93de4e9515648c6b9cc3792e502847b0fe18b2cd",
+    "app/(no-layout)/order-detail/refund.tsx": "393fb9e69484f3fa702480dd53cd8f99f57eb9ba4b9c2494c5f2e3284357a8fe"
+  },
+  "qualityRerun": false,
+  "developer144CasesRerun": false,
+  "limits": [
+    "Payment/receipt/server quote/backend not tested",
+    "Native keyboard/haptics and actual navigator/focus remain pending",
+    "No HP/browser/Figma visual parity or full application certification",
+    "Visual AGENTS_UI conformance is separate review"
+  ]
+}

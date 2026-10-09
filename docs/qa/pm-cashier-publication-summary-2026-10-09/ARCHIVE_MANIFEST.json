@@ -1,0 +1,209 @@
+{
+  "id": "PM-CASHIER-DOCUMENTATION-ARCHIVE-20261009",
+  "decision": "APPROVED_FOR_DOCUMENTATION_PUBLICATION",
+  "preparedAtUtc": "2026-10-09T09:59:31.621Z",
+  "repository": "https://github.com/Wahyutri007/rapido",
+  "moduleBranch": "docs/cashier-review-handoffs",
+  "baseCommit": "50d8196189d1c7bb945c385f961c5837f0b9c250",
+  "scope": "Documentation only: PM receipts/taskboard/reference/source-only backend audit and independent historical QA packets.",
+  "archivedFiles": [
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/REPORT.md",
+      "sha256": "edeaab7ee22c0c0b60de21e422ca29aa396978fdade3e1bc7f4508ea0865b7e3",
+      "byteLength": 3053
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/harness.cjs",
+      "sha256": "f7bc4c9639176dfcf57629120457baeb233800f768ca9896d54b8f881adbf7db",
+      "byteLength": 4908
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-lifecycle.cjs",
+      "sha256": "35b500bc69b6fa4631778923096d484428f511fe737faf1db14598ac825112bd",
+      "byteLength": 5554
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-lifecycle.stdout.txt",
+      "sha256": "0ba52ab7a9a5031c2b7207b17554a47650fe8b6ef98d2cc6b912cdcc99ca85b6",
+      "byteLength": 110
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-results.json",
+      "sha256": "d2de71e65163734df04b7e52f24156f52bd519d8fc481925af3c9f9b0bea5010",
+      "byteLength": 5497
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-duplicate-invoice-expectation.json",
+      "sha256": "6872778f71cc4a406a21f1463939e579166c30dace7fe979c2f1c8b1613905ea",
+      "byteLength": 4917
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-pass-before-early-reset.json",
+      "sha256": "b4732e3856433bed6e43ba2ce79a4f88f3045323e27533e74647cdeca6d3af4a",
+      "byteLength": 4913
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-selector-results.json",
+      "sha256": "dd0cf914516a9e18e4eeabf7040f461f4abdf742e1938781affa010562015cfc",
+      "byteLength": 5049
+    },
+    {
+      "file": "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/verification.json",
+      "sha256": "77250975ef5ac4acc62b82887661f31ae8439dbb2aa2a56eb0291380585d2378",
+      "byteLength": 2451
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/REPORT.md",
+      "sha256": "b3d49db5acb31b7028212d7395c87cd70dc255da905245457dac89ab03e34cfe",
+      "byteLength": 3122
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/adapter.cjs",
+      "sha256": "5119122cb9bc12623403cba039615fdc127a1808cfc05266968f86a33e56f65a",
+      "byteLength": 8507
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/independent-results.json",
+      "sha256": "a297bc86bf7b47c4e04231e8881e3df6e62ebb0d53dd98b35e2a73d24fe624c7",
+      "byteLength": 3250
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/independent.cjs",
+      "sha256": "23e7849d20d22b5544810561989082b6b8eb7f685f6090be262626a32f8d6646",
+      "byteLength": 8037
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/independent.stdout.txt",
+      "sha256": "0776134caa9b5978b47e0e70a5133d0aab7cc51d8123370d1d6f4c90284c8209",
+      "byteLength": 190
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/packet-verifier.stdout.json",
+      "sha256": "c20aa47207345704769b099b377ad6685e93a7295cdad01056b90b619ea74335",
+      "byteLength": 518
+    },
+    {
+      "file": "docs/qa/pm-cashier-cash-input-qa-2026-10-09/verification.json",
+      "sha256": "1878f8987ca3f93865dfb51e5ab4f15b9113d83445614bbabcae41860ab4a358",
+      "byteLength": 1990
+    },
+    {
+      "file": "docs/qa/pm-cashier-contract-2026-10-09/HANDOFF.md",
+      "sha256": "dcff53ce08327608f47645d2482fbbbba5f0d4b019824e67f6a3f28a6788de28",
+      "byteLength": 1839
+    },
+    {
+      "file": "docs/qa/pm-cashier-contract-2026-10-09/contract.json",
+      "sha256": "a8b9e644cdce00a49ae2b6e7493e8a053121b908b18176107403d11a5100ca96",
+      "byteLength": 6742
+    },
+    {
+      "file": "docs/qa/pm-cashier-intake-2026-10-09/BILLS_RESET_QA_INTAKE.json",
+      "sha256": "9909ad65b86d2b04c0fe59a7fd7a96afc9f28d2cbab2bb3d4d57a5aedc8eea46",
+      "byteLength": 8456
+    },
+    {
+      "file": "docs/qa/pm-cashier-intake-2026-10-09/CASH_INPUT_QA_INTAKE.json",
+      "sha256": "e63d337f078e403a37695419c9adc683bc7f6a068775844c8f8c8d5946c47320",
+      "byteLength": 4672
+    },
+    {
+      "file": "docs/qa/pm-cashier-intake-2026-10-09/STATUS.md",
+      "sha256": "d9a2ab1cff91eca5451f7091cb736866aecdc1009a324f71462e27d2ad5a7d2c",
+      "byteLength": 16176
+    },
+    {
+      "file": "docs/qa/pm-cashier-intake-2026-10-09/TASKBOARD.json",
+      "sha256": "bda73fbf1a083b1eed9500f2fcaaec4ad3330a853d63a23c8c19f6628d8d32b0",
+      "byteLength": 8996
+    },
+    {
+      "file": "docs/qa/pm-cashier-navbar-publication-2026-10-09/PUBLICATION_RECEIPT.json",
+      "sha256": "040e64df2ff68222e97b48728960a0c4970cc2a1920655c9726df4fa94808d42",
+      "byteLength": 4130
+    },
+    {
+      "file": "docs/qa/pm-cashier-pricing-2026-10-09/PUBLICATION_RECEIPT.json",
+      "sha256": "638bd02cad6e0dec925004bab090d2ed295cb11fa448e78e7f2bc7c489e8b50c",
+      "byteLength": 2805
+    },
+    {
+      "file": "docs/qa/pm-cashier-reference-2026-10-09/BILLS_VISUAL_HANDOFF.json",
+      "sha256": "dc9229eff28ed40654042ea0d69dd656d101bf6884064e29fac840a97dba451b",
+      "byteLength": 2965
+    },
+    {
+      "file": "docs/qa/pm-cashier-reference-2026-10-09/REFERENCE_REVIEW.json",
+      "sha256": "4a51273a3d8d7d39b5c959d3324b77c9a8cfd08f7f5e53c53b5b79115cf29afc",
+      "byteLength": 20751
+    },
+    {
+      "file": "docs/qa/pm-cashier-reference-2026-10-09/STOCK_QC_INTAKE.json",
+      "sha256": "5117fbd6cfed32c2fb7dd22512c1acb5629c28efd0613264a11455999a17aeda",
+      "byteLength": 2859
+    }
+  ],
+  "jsonValidation": {
+    "parsedFiles": 17,
+    "files": [
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-results.json",
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-duplicate-invoice-expectation.json",
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-pass-before-early-reset.json",
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/interim-selector-results.json",
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/verification.json",
+      "docs/qa/pm-cashier-cash-input-qa-2026-10-09/independent-results.json",
+      "docs/qa/pm-cashier-cash-input-qa-2026-10-09/packet-verifier.stdout.json",
+      "docs/qa/pm-cashier-cash-input-qa-2026-10-09/verification.json",
+      "docs/qa/pm-cashier-contract-2026-10-09/contract.json",
+      "docs/qa/pm-cashier-intake-2026-10-09/BILLS_RESET_QA_INTAKE.json",
+      "docs/qa/pm-cashier-intake-2026-10-09/CASH_INPUT_QA_INTAKE.json",
+      "docs/qa/pm-cashier-intake-2026-10-09/TASKBOARD.json",
+      "docs/qa/pm-cashier-navbar-publication-2026-10-09/PUBLICATION_RECEIPT.json",
+      "docs/qa/pm-cashier-pricing-2026-10-09/PUBLICATION_RECEIPT.json",
+      "docs/qa/pm-cashier-reference-2026-10-09/BILLS_VISUAL_HANDOFF.json",
+      "docs/qa/pm-cashier-reference-2026-10-09/REFERENCE_REVIEW.json",
+      "docs/qa/pm-cashier-reference-2026-10-09/STOCK_QC_INTAKE.json"
+    ]
+  },
+  "currentPublishedCode": [
+    {
+      "module": "Cashier item prices and subtotal",
+      "branch": "fix/cashier-cart-pricing",
+      "commit": "42fb6217ad53047a444f698b25d0f01ce845807f"
+    },
+    {
+      "module": "Cashier navigation/footer/development-tool guard",
+      "branch": "fix/cashier-navigation-layout",
+      "commit": "50d8196189d1c7bb945c385f961c5837f0b9c250"
+    }
+  ],
+  "notes": [
+    "Archived QA evidence is bound to historical hashes; newer Cash Input and Bills visual overlays need their own independent review.",
+    "Workspace reference/handoff paths outside this archive may be local-only. The archive does not assert all referenced source, screenshots or peer evidence is published.",
+    "Backend findings are a source audit, not a live API or database result.",
+    "No production source, dependency/configuration, shared coordination/context, environment, generated application output or unreviewed peer source is included.",
+    "Taskboard records publication gates; its task count and test counts are not a completion percentage."
+  ],
+  "authorization": "Standing PM instructions and latest explicit user request to push completed work to module branch then main.",
+  "reviewedAtUtc": "2026-10-09T10:02:00.264Z",
+  "archiveFormatting": {
+    "bytePolicy": "Preserve historical bytes and fingerprints, including BOM/UTF-16 outputs, CRLF and existing ending blank lines. No global Git configuration change.",
+    "frozenEndingBlankLineFindings": [
+      "docs/qa/pm-cashier-bills-reset-qa-2026-10-09/independent-lifecycle.cjs:72: new blank line at EOF.",
+      "docs/qa/pm-cashier-cash-input-qa-2026-10-09/REPORT.md:34: new blank line at EOF.",
+      "docs/qa/pm-cashier-cash-input-qa-2026-10-09/adapter.cjs:111: new blank line at EOF.",
+      "docs/qa/pm-cashier-contract-2026-10-09/contract.json:62: new blank line at EOF."
+    ],
+    "newSummaryDocumentationWhitespaceErrors": 0,
+    "nonInheritedWhitespaceErrors": 0,
+    "archiveCheck": "git -c core.whitespace=cr-at-eol,-blank-at-eof diff --cached --check",
+    "archiveCheckExitCode": 0
+  },
+  "validation": {
+    "documentationPaths": 30,
+    "archivedHashesMatched": 27,
+    "parsedJsonFilesIncludingManifest": 18,
+    "productionSourceChanges": 0,
+    "literalCredentialPatternFindings": 0
+  }
+}

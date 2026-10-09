@@ -1,0 +1,62 @@
+﻿{
+  "audit_date": "2026-10-09",
+  "scope": "read-only source contract discovery; no HTTP calls, runtime, database, mutation, or Git operations",
+  "backend_root": "C:/Users/Wahyu/Downloads/rapido-backend-dev/rapido-backend-dev",
+  "backend_agents_md": "not present at repository root",
+  "verified_runtime": false,
+  "currency": {
+    "stored_catalog_precision": "Menu sell_price and order-type menu price are DECIMAL(10,2); extra-menu price is DECIMAL(10,2). Tax rate is DECIMAL(5,2). Transaction and payment amounts are DOUBLE.",
+    "calculation": "CartPricingService applies percentage taxes configured per order type and computes optional store rounding. It returns both total and rounded_total; Cart exposes price_after_tax and rounded_total_price separately.",
+    "limits": "No single integer-only/minor-unit wire contract found. TransactionService persists price_after_tax (not rounded_total_price), payment snapshot uses price_after_tax; client must not impose 10% tax or guess rounding. Database/model field mismatches below block relying on checkout success."
+  },
+  "auth_scope": {
+    "cart_and_transaction_routes": "auth + infer-owner + infer-store; owner must provide query store_id, worker uses assigned store. Cart and transaction routes additionally require opened-store.",
+    "payment_route": "POST /api/transactions/{transaction_id}/payment is declared under auth + infer-owner only; it lacks infer-store and opened-store although its request/controller read request attribute store."
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/stores/cart",
+      "status": "declared; source contract only, not smoke-tested",
+      "response": "response data is CartResource with groups, order_type, details, orderable/menu or bundling, extras, discount/promo/payment_method/voucher/extra_cost and appended total_price, price_after_tax, price_before_tax, tax_amount, discounted_price, rounding_amount, rounded_total_price.",
+      "source": ["routes/api/stores.php:10-25", "routes/api/stores.php:25-34", "app/Domain/Order/Controllers/CartController.php:18-36", "app/Domain/Order/Resources/CartResource.php:12-22", "app/Domain/Order/Resources/CartGroupResource.php:10-18", "app/Domain/Order/Resources/CartDetailResource.php:12-31"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/stores/cart/details/{cart_detail_id?}",
+      "status": "declared cart mutation; payload validation source is CartDetailRequest",
+      "payload": "order_type_id required when creating; orderable_id required and must be menu_entry or bundling in this store; quantity integer >= 1; optional extra_menu_details[] with id and quantity >= 1; optional notes, responsible_user_id, discount_id, custom_discount_amount.",
+      "source": ["routes/api/stores.php:31-33", "app/Domain/Order/Requests/CartDetailRequest.php:19-90", "app/Domain/Order/Controllers/CartDetailController.php:17-99"]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/stores/cart/modify",
+      "status": "declared cart mutation; payload fields validated in ModifyCartRequest",
+      "payload": "payment_method_id, customer_name, table_id, promo_id, custom_discount_amount, discount_id, voucher_id, extra_cost_id, customer_id, notes, responsible_user_id.",
+      "source": ["routes/api/stores.php:25-29", "app/Domain/Order/Requests/ModifyCartRequest.php:18-35"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/stores/transactions",
+      "status": "declared but checkout success is unverified and source contains blocking schema/model mismatches",
+      "payload": "No request rules are defined. After-validation checks current store latest shift, nonempty cart, and managed stock. No authoritative client request DTO exists.",
+      "response": "Controller returns transaction model in response data; service generates UUID transaction id and transaction_number. Do not use fixture IDs.",
+      "source": ["routes/api/stores.php:36-39", "app/Domain/Order/Requests/TransactionRequest.php:16-31", "app/Domain/Order/Requests/TransactionRequest.php:33-73", "app/Domain/Order/Controllers/TransactionController.php:32-49", "app/Domain/Order/Services/TransactionService.php:125-153", "app/Domain/Order/Models/Transaction.php:10-29"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/transactions/{transaction_id}/payment",
+      "status": "declared but not implementable safely from current source",
+      "payload": "PaymentRequest rules are commented placeholder; transaction lookup expects request store attribute but route does not infer store. Controller calls TransactionService::createPayment, but no such method exists in the service.",
+      "source": ["routes/api/domains/orders.php:9-16", "app/Domain/Order/Requests/PaymentRequest.php:8-25", "app/Domain/Order/Controllers/TransactionController.php:53-61", "app/Domain/Order/Services/TransactionService.php (no createPayment method found; file has 167 lines)"]
+    }
+  ],
+  "blocking_source_mismatches": [
+    "transactions migration requires store_shift_id and has no payment_status column; Transaction model/service use shift_id and payment_status. Controller transaction list filters shift_id while migration defines store_shift_id. Sources: database/migrations/2026_03_17_042605_create_transactions_table.php:15-31; app/Domain/Order/Models/Transaction.php:12-29; app/Domain/Order/Services/TransactionService.php:135-151; app/Domain/Order/Controllers/TransactionController.php:20-25.",
+    "payments migration defines payment_amount and paid_amount; Payment model fillable and TransactionService writes amount. The createPayment service method called by payment controller is absent. Sources: database/migrations/2026_03_17_042741_create_payments_table.php:14-22; app/Domain/Order/Models/Payment.php:12-27; app/Domain/Order/Controllers/TransactionController.php:53-58; app/Domain/Order/Services/TransactionService.php:153-162.",
+    "Payment endpoint omits infer-store/opened-store middleware while PaymentRequest/controller require store attribute. Source: routes/api/domains/orders.php:9-16; app/Http/Middleware/InferStore.php:17-38; app/Domain/Order/Requests/PaymentRequest.php:17-21."
+  ],
+  "expense_contract": "No cashier expense route found in routes/api; this is route-source absence only, not proof the whole backend lacks a separate integration.",
+  "recommended_frontend_slice": "Implement only the read-only cart query/DTO adapter first, scoped to active store and open shift. Render server-returned totals and configured tax/rounding fields. Do not wire checkout/payment completion or report success until backend owner reconciles the route middleware, request validation, service method, and migration/model mismatches and supplies a payload contract."
+}
+

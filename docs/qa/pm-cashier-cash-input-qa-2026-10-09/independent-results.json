@@ -1,0 +1,120 @@
+{
+  "ticket": "SD5-014",
+  "status": "PASS",
+  "cases": 27,
+  "passed": 27,
+  "failed": 0,
+  "runtimeErrors": [],
+  "actionRejections": [],
+  "checks": [
+    {
+      "name": "prefill/backspace/append/C remain synchronized with RHF",
+      "passed": true
+    },
+    {
+      "name": "clear disables action and cannot reuse prefill",
+      "passed": true
+    },
+    {
+      "name": "exact amount permits only one route on double submit",
+      "passed": true
+    },
+    {
+      "name": "missing total fails closed instead of fallback zero",
+      "passed": true
+    },
+    {
+      "name": "explicit zero total is distinct from absent total",
+      "passed": true
+    },
+    {
+      "name": "negative total stays invalid and never routes",
+      "passed": true
+    },
+    {
+      "name": "fractional total stays invalid and never routes",
+      "passed": true
+    },
+    {
+      "name": "multiple total stays invalid and never routes",
+      "passed": true
+    },
+    {
+      "name": "unsafe total stays invalid and never routes",
+      "passed": true
+    },
+    {
+      "name": "maximum safe amount and total roundtrip exactly",
+      "passed": true
+    },
+    {
+      "name": "unsafe received amount fails closed",
+      "passed": true
+    },
+    {
+      "name": "rapid keypad input cannot exceed cap",
+      "passed": true
+    },
+    {
+      "name": "irrelevant local and global params preserve local draft/total",
+      "passed": true
+    },
+    {
+      "name": "relevant params reset pair and stale callback is rejected",
+      "passed": true
+    },
+    {
+      "name": "blur blocks submit/keypad writes and refocus retains draft",
+      "passed": true
+    },
+    {
+      "name": "unmounted submit callback cannot navigate",
+      "passed": true
+    },
+    {
+      "name": "clear during async validation prevents stale submit",
+      "passed": true
+    },
+    {
+      "name": "route rejection releases lock and permits retry",
+      "passed": true
+    },
+    {
+      "name": "safe integer boundary parser",
+      "passed": true
+    },
+    {
+      "name": "route parser rejects duplicates and accepts singleton array",
+      "passed": true
+    },
+    {
+      "name": "money parser rejects coercion, separators and non-digits",
+      "passed": true
+    },
+    {
+      "name": "RHF resolver schema enforces positive exact-or-higher received amount",
+      "passed": true
+    },
+    {
+      "name": "resolver refuses missing or invalid total, accepts explicit zero with positive received",
+      "passed": true
+    },
+    {
+      "name": "default legacy Keypad sequence remains nullable/uncontrolled",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN/refund caller unchanged: app/(onboarding)/choose-store/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN/refund caller unchanged: app/(no-layout)/manage/pin.tsx",
+      "passed": true
+    },
+    {
+      "name": "legacy PIN/refund caller unchanged: app/(no-layout)/order-detail/refund.tsx",
+      "passed": true
+    }
+  ],
+  "scope": "Actual input screen, RHF, Zod/resolver, Keypad, and cash input schema; native hosts, icons, router and focus are adapters. Three legacy PIN/refund callers are read-only fingerprint checked; default Keypad mode is rendered separately."
+}

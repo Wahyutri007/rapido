@@ -1,0 +1,45 @@
+{
+  "id": "PM-CASHIER-BILLS-FIGMA-003",
+  "date": "2026-10-09",
+  "owner": "Senior8",
+  "status": "REFERENCE_READY_OWNER_VISUAL_IMPLEMENTATION_REQUESTED",
+  "delivery": "Workspace handoff; not a claim that the owner has acknowledged or begun this new visual batch.",
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "cashierSection": "29:18658",
+  "referenceFolder": "docs/figma/cashier/qc-20261009/tagihan",
+  "frames": [
+    {
+      "nodeId": "29:26627",
+      "variant": "Main Tagihan list",
+      "screenshot": "list-reference.png",
+      "context": "list-context.txt",
+      "visibleStructure": "Unpaid-count notification and selector; customer/table and time header; order/paid quantities, date and total; Tambah and Bayar row actions; Tagihan tab active."
+    },
+    {
+      "nodeId": "29:48148",
+      "variant": "Nested Tagihan list",
+      "screenshot": "nested-reference.png",
+      "context": "nested-context.txt",
+      "visibleStructure": "Grey card variant with Tambah action and Kembali Katalog footer; screenshot has no Bayar action."
+    }
+  ],
+  "sourceAudit": {
+    "source": "components/feature/cashier/bills/BillsScreen.tsx",
+    "currentStructure": "Invoice-led CatalogItemCard rows plus search/status/reset header; existing read-only detail navigation.",
+    "finding": "Current layout has not implemented the card tiers and action/footer variants shown in the supplied full references.",
+    "classification": "Visual implementation gap from source/reference comparison; not an executed native/browser defect or failure of the passing search-reset QA."
+  },
+  "requestedBatch": [
+    "Map each frame to its existing route/state before combining any variants",
+    "Implement card hierarchy/spacing/semantic typography and local SVG slots via project primitives",
+    "Preserve search reset-key cleanup, stable record IDs, existing read-only detail route and peer ownership",
+    "Derive counts/dates/totals from available source; do not hardcode design sample values or invent paid-item/relative-time facts",
+    "Expose unavailable actions/data honestly until valid callback and payment contracts exist; grey alone does not imply disabled",
+    "Use local exported assets, no temporary URLs or whole-frame screenshots as application UI",
+    "Provide new scoped source/hash/visual/lifecycle evidence for QA then QC before PM publication"
+  ],
+  "protectedPriorEvidence": "SD8-CASHIER-BILLS-002 reset QA remains a scoped historical pass for its frozen source; changed BillsScreen needs new regression evidence.",
+  "sharedScope": "Do not edit BottomTab/Home/Stock/catalog/pricing/shared SearchBar while their owners work; coordinate any exact shared delta.",
+  "executionProfile": { "effort": "Medium", "batch": "One card/list variant, then caller lifecycle and visual checks", "tips": "Read AGENTS_UI and full frame context; preserve layout-owned header and real data boundaries." },
+  "publication": "HOLD_UNTIL_IMPLEMENTED_AND_QA_QC_RECEIPTS"
+}

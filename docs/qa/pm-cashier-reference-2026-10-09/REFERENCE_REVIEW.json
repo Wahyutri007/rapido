@@ -1,0 +1,249 @@
+﻿{
+    "id":  "PM-CASHIER-REFERENCE-20261009-LINK-CONFIRMATION",
+    "recordedAtUtc":  "2026-10-09T09:15:05Z",
+    "userUrl":  "https://www.figma.com/design/gbdKqL2EcYNenWiQXG4SRW/Untitled?node-id=0-1\u0026p=f\u0026t=axCqxlfVDRttz1sB-0",
+    "identity":  {
+                     "fileKey":  "gbdKqL2EcYNenWiQXG4SRW",
+                     "pageId":  "0:1",
+                     "cashierSectionId":  "29:18658",
+                     "matchesPreviousUserReference":  true
+                 },
+    "decision":  "SAME_FILE_AND_PAGE_CONTINUE_CASHIER",
+    "currentReaderEvidence":  "docs/qa/qc-cashier-figma-link-confirm-2026-10-09/REFERENCE.md",
+    "currentReaderMetadataTimeUtc":  "2026-10-09T09:09:00.348Z",
+    "rootAccess":  {
+                       "directWebOpen":  "UNAVAILABLE",
+                       "figmaMcpCallableInRoot":  false,
+                       "reviewMethod":  "Official peer-exported contexts/screenshots/receipts, locally hash-verified",
+                       "chromeControlTaken":  false
+                   },
+    "framesWithFullReference":  [
+                                    "29:27153",
+                                    "29:27290",
+                                    "29:27343",
+                                    "29:27391",
+                                    "29:26627",
+                                    "29:48148"
+                                ],
+    "inspectedScreenshots":  [
+                                 "Stock all, empty, low and filter: both QC application capture and official Figma capture",
+                                 "Tagihan list and nested: official Figma captures"
+                             ],
+    "referenceVerification":  {
+                                  "checked":  25,
+                                  "mismatches":  0,
+                                  "files":  [
+                                                {
+                                                    "kind":  "tagihan-codeContext",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/list-context.txt",
+                                                    "expected":  "081e735b5a62d8ba22c1bbef4bae4f07bb82815fb9960cee72b9093e2ad83774",
+                                                    "actual":  "081e735b5a62d8ba22c1bbef4bae4f07bb82815fb9960cee72b9093e2ad83774",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-instructions",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/list-instructions.txt",
+                                                    "expected":  "96223f15a098e11cadae5c315c35b93f5e6c25dc79a4cb50e240e8772947a65a",
+                                                    "actual":  "96223f15a098e11cadae5c315c35b93f5e6c25dc79a4cb50e240e8772947a65a",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-screenshot",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/list-reference.png",
+                                                    "expected":  "b46d2e7181f2b13b004e065e20e07884952ca0176972bd6e1283712fe0fe1b29",
+                                                    "actual":  "b46d2e7181f2b13b004e065e20e07884952ca0176972bd6e1283712fe0fe1b29",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-codeContext",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/nested-context.txt",
+                                                    "expected":  "ce6cf05fb65365bf9f61834ec1dced33e9d5e112c0436ed92cc21499594cc9d2",
+                                                    "actual":  "ce6cf05fb65365bf9f61834ec1dced33e9d5e112c0436ed92cc21499594cc9d2",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-instructions",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/nested-instructions.txt",
+                                                    "expected":  "204960ea82c5c4b7e2ea246b685a20e456b51ab7447685867d4ee71923e75f93",
+                                                    "actual":  "204960ea82c5c4b7e2ea246b685a20e456b51ab7447685867d4ee71923e75f93",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-screenshot",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/nested-reference.png",
+                                                    "expected":  "d975f924e2fa68492c1a693cd402cdb673d6307d73882033a05a85b827fb30a4",
+                                                    "actual":  "d975f924e2fa68492c1a693cd402cdb673d6307d73882033a05a85b827fb30a4",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgReceiptBill.svg",
+                                                    "expected":  "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3",
+                                                    "actual":  "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgCarbonCatalog.svg",
+                                                    "expected":  "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+                                                    "actual":  "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgIconamoonHome.svg",
+                                                    "expected":  "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+                                                    "actual":  "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgIconBell.svg",
+                                                    "expected":  "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf",
+                                                    "actual":  "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgIconChevronDown.svg",
+                                                    "expected":  "dfe7c757ed34125183eac1d6d6227899e64f301ea5ca2261ed9650b6991ce4ea",
+                                                    "actual":  "dfe7c757ed34125183eac1d6d6227899e64f301ea5ca2261ed9650b6991ce4ea",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgIconChevronLeft.svg",
+                                                    "expected":  "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+                                                    "actual":  "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgChart1.svg",
+                                                    "expected":  "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+                                                    "actual":  "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:26627",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/list/imgMaterialSymbolsTableBarOutlineRounded.svg",
+                                                    "expected":  "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+                                                    "actual":  "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/nested/imgIconBell.svg",
+                                                    "expected":  "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf",
+                                                    "actual":  "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/nested/imgIconChevronDown.svg",
+                                                    "expected":  "cc3c26225bfc674422287d1d105bec679b6bb72ff5b329e7f8117935334889f0",
+                                                    "actual":  "cc3c26225bfc674422287d1d105bec679b6bb72ff5b329e7f8117935334889f0",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "tagihan-asset",
+                                                    "nodeId":  "29:48148",
+                                                    "file":  "docs/figma/cashier/qc-20261009/tagihan/assets/nested/imgIconChevronLeft.svg",
+                                                    "expected":  "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+                                                    "actual":  "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-context",
+                                                    "nodeId":  "29:27153",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/all-context.txt",
+                                                    "expected":  "3afa0c0880b4b3e326fe72e0c46fd8bebce54c71e40c0f4a934fa711368198fc",
+                                                    "actual":  "3afa0c0880b4b3e326fe72e0c46fd8bebce54c71e40c0f4a934fa711368198fc",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-screenshot",
+                                                    "nodeId":  "29:27153",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/all-reference.png",
+                                                    "expected":  "fc8d4ea03ba01613140d793ceb00e3c02a25b48ecd5410da099f578665eed442",
+                                                    "actual":  "fc8d4ea03ba01613140d793ceb00e3c02a25b48ecd5410da099f578665eed442",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-context",
+                                                    "nodeId":  "29:27290",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/empty-context.txt",
+                                                    "expected":  "237b4a3f2405ad3e4e268fe82983666699cac608b432c7478176a25daab21998",
+                                                    "actual":  "237b4a3f2405ad3e4e268fe82983666699cac608b432c7478176a25daab21998",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-screenshot",
+                                                    "nodeId":  "29:27290",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/empty-reference.png",
+                                                    "expected":  "dbeb11bbb91b83b20f667c1bff0c6dabb87531307c2d4e0066b1a50e1e396089",
+                                                    "actual":  "dbeb11bbb91b83b20f667c1bff0c6dabb87531307c2d4e0066b1a50e1e396089",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-context",
+                                                    "nodeId":  "29:27343",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/low-context.txt",
+                                                    "expected":  "5f76bac0a61b40dd059d3ef6f88b23bf8948045eadb52e5eb7b6f6043d2af3e9",
+                                                    "actual":  "5f76bac0a61b40dd059d3ef6f88b23bf8948045eadb52e5eb7b6f6043d2af3e9",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-screenshot",
+                                                    "nodeId":  "29:27343",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/low-reference.png",
+                                                    "expected":  "cb9f6261fd156d944af15ecff56a0a8ece8706e099b0f0b932611e8761e7e212",
+                                                    "actual":  "cb9f6261fd156d944af15ecff56a0a8ece8706e099b0f0b932611e8761e7e212",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-context",
+                                                    "nodeId":  "29:27391",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/filter-context.txt",
+                                                    "expected":  "3f24c6a66669542c746573317ca20a919ca7640f407c7395a0ec8855a8830a3d",
+                                                    "actual":  "3f24c6a66669542c746573317ca20a919ca7640f407c7395a0ec8855a8830a3d",
+                                                    "matched":  true
+                                                },
+                                                {
+                                                    "kind":  "stock-screenshot",
+                                                    "nodeId":  "29:27391",
+                                                    "file":  "docs/figma/cashier/sd4-20261009/stock/filter-reference.png",
+                                                    "expected":  "b8eec02f0873953b1ca01f3a22b6c3ae7ee655be20a317ac145e144f16a92e93",
+                                                    "actual":  "b8eec02f0873953b1ca01f3a22b6c3ae7ee655be20a317ac145e144f16a92e93",
+                                                    "matched":  true
+                                                }
+                                            ]
+                              },
+    "limits":  [
+                   "Page link is not proof that application screens match Figma",
+                   "159 top-level layers are not a module/screen count",
+                   "No full cashier/checkout/payment/native approval",
+                   "Temporary asset URLs were not wired into application source"
+               ],
+    "nextScope":  [
+                      "PM review Stock QC and documented adaptations",
+                      "Senior8 Tagihan visual card/state mapping from two available full references",
+                      "Independent QA SD5-014 cash input and legacy keypad consumers"
+                  ]
+}
