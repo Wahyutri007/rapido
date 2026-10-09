@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "contract": "Home source outside Card import and favorite section is AST-identical to published main; remaining differences are formatter-only",
+  "sourceSHA256": "a06c554c4277c67efa41487e3626c67125994fa29cc8438ee24f0d07ba5f5e4c",
+  "fragmentSHA256": "d8d5a24342421a7ea566f9fe2c5c8ca4c5d82e12c975b895ec28b9a7631afb6a"
+}

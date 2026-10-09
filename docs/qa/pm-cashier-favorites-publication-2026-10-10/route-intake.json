@@ -1,0 +1,46 @@
+{
+  "status": "HOLD_MAIN_MISSING_ROUTES",
+  "destinations": [
+    {
+      "file": "app/(no-layout)/manage/member/index.tsx",
+      "inCandidate": true,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/manage/printer/index.tsx",
+      "inCandidate": true,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/manage/pos-settings/index.tsx",
+      "inCandidate": true,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/transaction.tsx",
+      "inCandidate": true,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/stock.tsx",
+      "inCandidate": false,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/shift/index.tsx",
+      "inCandidate": false,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/scanner/index.tsx",
+      "inCandidate": false,
+      "inShared": true
+    },
+    {
+      "file": "app/(no-layout)/(cashier)/cash-drawer.tsx",
+      "inCandidate": false,
+      "inShared": false
+    }
+  ],
+  "scope": "Static destination existence; no full router certificate. Source route callbacks retained from QC intake."
+}

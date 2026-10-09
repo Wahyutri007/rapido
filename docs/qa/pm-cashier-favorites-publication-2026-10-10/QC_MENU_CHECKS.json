@@ -1,0 +1,2120 @@
+{
+  "receiptSHA256": "dcce9cb824cac2683509514c793453f8d2a786d0ba3cccff326efd0ed2cc4928",
+  "historicalBrowserSHA256": "50dc8a7ed9eea623ffb997d6b8c8008843d9a202fd02d6d585d07d6d4d11fd57",
+  "checks": [
+    {
+      "name": "Menu Favorit390: four columns/two rows and archived metadata dimensions",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 358,
+          "height": 168,
+          "right": 374,
+          "bottom": 224
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 334,
+          "height": 144,
+          "right": 362,
+          "bottom": 212
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 71.5,
+            "height": 64,
+            "right": 99.5,
+            "bottom": 132,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 79.5,
+              "height": 16,
+              "right": 103.5,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 115.5,
+            "y": 68,
+            "width": 71.5,
+            "height": 64,
+            "right": 187,
+            "bottom": 132,
+            "text": {
+              "x": 111.5,
+              "y": 116,
+              "width": 79.5,
+              "height": 16,
+              "right": 191,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 203,
+            "y": 68,
+            "width": 71.5,
+            "height": 64,
+            "right": 274.5,
+            "bottom": 132,
+            "text": {
+              "x": 199,
+              "y": 116,
+              "width": 79.5,
+              "height": 16,
+              "right": 278.5,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 290.5,
+            "y": 68,
+            "width": 71.5,
+            "height": 64,
+            "right": 362,
+            "bottom": 132,
+            "text": {
+              "x": 286.5,
+              "y": 116,
+              "width": 79.5,
+              "height": 16,
+              "right": 366,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 148,
+            "width": 71.5,
+            "height": 64,
+            "right": 99.5,
+            "bottom": 212,
+            "text": {
+              "x": 24,
+              "y": 196,
+              "width": 79.5,
+              "height": 16,
+              "right": 103.5,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 115.5,
+            "y": 148,
+            "width": 71.5,
+            "height": 64,
+            "right": 187,
+            "bottom": 212,
+            "text": {
+              "x": 111.5,
+              "y": 196,
+              "width": 79.5,
+              "height": 16,
+              "right": 191,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 203,
+            "y": 148,
+            "width": 71.5,
+            "height": 64,
+            "right": 274.5,
+            "bottom": 212,
+            "text": {
+              "x": 199,
+              "y": 196,
+              "width": 79.5,
+              "height": 16,
+              "right": 278.5,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 290.5,
+            "y": 148,
+            "width": 71.5,
+            "height": 64,
+            "right": 362,
+            "bottom": 212,
+            "text": {
+              "x": 286.5,
+              "y": 196,
+              "width": 79.5,
+              "height": 16,
+              "right": 366,
+              "bottom": 212
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 43.75,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 83.75,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 141.25,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 161.25,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 218.75,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 258.75,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 306.25,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 346.25,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 43.75,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 83.75,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 131.25,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 171.25,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 218.75,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 258.75,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 306.25,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 346.25,
+            "bottom": 188,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Menu Favorit: all eight original labels and routes preserved",
+      "status": "PASS",
+      "detail": [
+        "/transaction",
+        "/(no-layout)/manage/member",
+        "/stock",
+        "/shift",
+        "/(no-layout)/manage/printer",
+        "/scanner",
+        "/cash-drawer",
+        "/(no-layout)/manage/pos-settings"
+      ]
+    },
+    {
+      "name": "Menu Favorit: seven images40px plus original Member20px within40px tile",
+      "status": "PASS",
+      "detail": [
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+          "x": 43.75,
+          "y": 68,
+          "width": 40,
+          "height": 40,
+          "right": 83.75,
+          "bottom": 108,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+          "x": 141.25,
+          "y": 78,
+          "width": 20,
+          "height": 20,
+          "right": 161.25,
+          "bottom": 98,
+          "natural": [
+            20,
+            20
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+          "x": 218.75,
+          "y": 68,
+          "width": 40,
+          "height": 40,
+          "right": 258.75,
+          "bottom": 108,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+          "x": 306.25,
+          "y": 68,
+          "width": 40,
+          "height": 40,
+          "right": 346.25,
+          "bottom": 108,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+          "x": 43.75,
+          "y": 148,
+          "width": 40,
+          "height": 40,
+          "right": 83.75,
+          "bottom": 188,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+          "x": 131.25,
+          "y": 148,
+          "width": 40,
+          "height": 40,
+          "right": 171.25,
+          "bottom": 188,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+          "x": 218.75,
+          "y": 148,
+          "width": 40,
+          "height": 40,
+          "right": 258.75,
+          "bottom": 188,
+          "natural": [
+            870,
+            870
+          ],
+          "loaded": true
+        },
+        {
+          "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+          "x": 306.25,
+          "y": 148,
+          "width": 40,
+          "height": 40,
+          "right": 346.25,
+          "bottom": 188,
+          "natural": [
+            1024,
+            1024
+          ],
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "Favorites 320x568 cardauto: four columns and visible safe labels",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 288,
+          "height": 200,
+          "right": 304,
+          "bottom": 256
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 264,
+          "height": 176,
+          "right": 292,
+          "bottom": 244
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 54,
+            "height": 80,
+            "right": 82,
+            "bottom": 148,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 62,
+              "height": 16,
+              "right": 86,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 98,
+            "y": 68,
+            "width": 54,
+            "height": 80,
+            "right": 152,
+            "bottom": 148,
+            "text": {
+              "x": 94,
+              "y": 116,
+              "width": 62,
+              "height": 16,
+              "right": 156,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 168,
+            "y": 68,
+            "width": 54,
+            "height": 80,
+            "right": 222,
+            "bottom": 148,
+            "text": {
+              "x": 164,
+              "y": 116,
+              "width": 62,
+              "height": 16,
+              "right": 226,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 238,
+            "y": 68,
+            "width": 54,
+            "height": 80,
+            "right": 292,
+            "bottom": 148,
+            "text": {
+              "x": 234,
+              "y": 116,
+              "width": 62,
+              "height": 32,
+              "right": 296,
+              "bottom": 148
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 164,
+            "width": 54,
+            "height": 80,
+            "right": 82,
+            "bottom": 244,
+            "text": {
+              "x": 24,
+              "y": 212,
+              "width": 62,
+              "height": 16,
+              "right": 86,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 98,
+            "y": 164,
+            "width": 54,
+            "height": 80,
+            "right": 152,
+            "bottom": 244,
+            "text": {
+              "x": 94,
+              "y": 212,
+              "width": 62,
+              "height": 16,
+              "right": 156,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 168,
+            "y": 164,
+            "width": 54,
+            "height": 80,
+            "right": 222,
+            "bottom": 244,
+            "text": {
+              "x": 164,
+              "y": 212,
+              "width": 62,
+              "height": 16,
+              "right": 226,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 238,
+            "y": 164,
+            "width": 54,
+            "height": 80,
+            "right": 292,
+            "bottom": 244,
+            "text": {
+              "x": 234,
+              "y": 212,
+              "width": 62,
+              "height": 32,
+              "right": 296,
+              "bottom": 244
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 35,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 75,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 115,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 135,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 175,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 215,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 245,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 285,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 35,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 75,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 105,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 145,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 175,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 215,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 245,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 285,
+            "bottom": 204,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Favorites 360x640 cardauto: four columns and visible safe labels",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 328,
+          "height": 168,
+          "right": 344,
+          "bottom": 224
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 304,
+          "height": 144,
+          "right": 332,
+          "bottom": 212
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 64,
+            "height": 64,
+            "right": 92,
+            "bottom": 132,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 72,
+              "height": 16,
+              "right": 96,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 108,
+            "y": 68,
+            "width": 64,
+            "height": 64,
+            "right": 172,
+            "bottom": 132,
+            "text": {
+              "x": 104,
+              "y": 116,
+              "width": 72,
+              "height": 16,
+              "right": 176,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 188,
+            "y": 68,
+            "width": 64,
+            "height": 64,
+            "right": 252,
+            "bottom": 132,
+            "text": {
+              "x": 184,
+              "y": 116,
+              "width": 72,
+              "height": 16,
+              "right": 256,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 268,
+            "y": 68,
+            "width": 64,
+            "height": 64,
+            "right": 332,
+            "bottom": 132,
+            "text": {
+              "x": 264,
+              "y": 116,
+              "width": 72,
+              "height": 16,
+              "right": 336,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 148,
+            "width": 64,
+            "height": 64,
+            "right": 92,
+            "bottom": 212,
+            "text": {
+              "x": 24,
+              "y": 196,
+              "width": 72,
+              "height": 16,
+              "right": 96,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 108,
+            "y": 148,
+            "width": 64,
+            "height": 64,
+            "right": 172,
+            "bottom": 212,
+            "text": {
+              "x": 104,
+              "y": 196,
+              "width": 72,
+              "height": 16,
+              "right": 176,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 188,
+            "y": 148,
+            "width": 64,
+            "height": 64,
+            "right": 252,
+            "bottom": 212,
+            "text": {
+              "x": 184,
+              "y": 196,
+              "width": 72,
+              "height": 16,
+              "right": 256,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 268,
+            "y": 148,
+            "width": 64,
+            "height": 64,
+            "right": 332,
+            "bottom": 212,
+            "text": {
+              "x": 264,
+              "y": 196,
+              "width": 72,
+              "height": 16,
+              "right": 336,
+              "bottom": 212
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 40,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 80,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 130,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 150,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 200,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 240,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 280,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 320,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 40,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 80,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 120,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 160,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 200,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 240,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 280,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 320,
+            "bottom": 188,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Favorites 280x568 cardauto: four columns and visible safe labels",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 248,
+          "height": 200,
+          "right": 264,
+          "bottom": 256
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 224,
+          "height": 176,
+          "right": 252,
+          "bottom": 244
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 44,
+            "height": 80,
+            "right": 72,
+            "bottom": 148,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 52,
+              "height": 16,
+              "right": 76,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 88,
+            "y": 68,
+            "width": 44,
+            "height": 80,
+            "right": 132,
+            "bottom": 148,
+            "text": {
+              "x": 84,
+              "y": 116,
+              "width": 52,
+              "height": 16,
+              "right": 136,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 148,
+            "y": 68,
+            "width": 44,
+            "height": 80,
+            "right": 192,
+            "bottom": 148,
+            "text": {
+              "x": 144,
+              "y": 116,
+              "width": 52,
+              "height": 16,
+              "right": 196,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 208,
+            "y": 68,
+            "width": 44,
+            "height": 80,
+            "right": 252,
+            "bottom": 148,
+            "text": {
+              "x": 204,
+              "y": 116,
+              "width": 52,
+              "height": 32,
+              "right": 256,
+              "bottom": 148
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 164,
+            "width": 44,
+            "height": 80,
+            "right": 72,
+            "bottom": 244,
+            "text": {
+              "x": 24,
+              "y": 212,
+              "width": 52,
+              "height": 16,
+              "right": 76,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 88,
+            "y": 164,
+            "width": 44,
+            "height": 80,
+            "right": 132,
+            "bottom": 244,
+            "text": {
+              "x": 84,
+              "y": 212,
+              "width": 52,
+              "height": 16,
+              "right": 136,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 148,
+            "y": 164,
+            "width": 44,
+            "height": 80,
+            "right": 192,
+            "bottom": 244,
+            "text": {
+              "x": 144,
+              "y": 212,
+              "width": 52,
+              "height": 32,
+              "right": 196,
+              "bottom": 244
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 208,
+            "y": 164,
+            "width": 44,
+            "height": 80,
+            "right": 252,
+            "bottom": 244,
+            "text": {
+              "x": 204,
+              "y": 212,
+              "width": 52,
+              "height": 32,
+              "right": 256,
+              "bottom": 244
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 30,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 70,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 100,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 120,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 150,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 190,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 210,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 250,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 30,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 70,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 90,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 130,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 150,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 190,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 210,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 250,
+            "bottom": 204,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Favorites 844x390 cardauto: four columns and visible safe labels",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 50,
+          "y": 56,
+          "width": 754,
+          "height": 168,
+          "right": 804,
+          "bottom": 224
+        },
+        "grid": {
+          "x": 62,
+          "y": 68,
+          "width": 730,
+          "height": 144,
+          "right": 792,
+          "bottom": 212
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 62,
+            "y": 68,
+            "width": 170.5,
+            "height": 64,
+            "right": 232.5,
+            "bottom": 132,
+            "text": {
+              "x": 58,
+              "y": 116,
+              "width": 178.5,
+              "height": 16,
+              "right": 236.5,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 248.5,
+            "y": 68,
+            "width": 170.5,
+            "height": 64,
+            "right": 419,
+            "bottom": 132,
+            "text": {
+              "x": 244.5,
+              "y": 116,
+              "width": 178.5,
+              "height": 16,
+              "right": 423,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 435,
+            "y": 68,
+            "width": 170.5,
+            "height": 64,
+            "right": 605.5,
+            "bottom": 132,
+            "text": {
+              "x": 431,
+              "y": 116,
+              "width": 178.5,
+              "height": 16,
+              "right": 609.5,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 621.5,
+            "y": 68,
+            "width": 170.5,
+            "height": 64,
+            "right": 792,
+            "bottom": 132,
+            "text": {
+              "x": 617.5,
+              "y": 116,
+              "width": 178.5,
+              "height": 16,
+              "right": 796,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 62,
+            "y": 148,
+            "width": 170.5,
+            "height": 64,
+            "right": 232.5,
+            "bottom": 212,
+            "text": {
+              "x": 58,
+              "y": 196,
+              "width": 178.5,
+              "height": 16,
+              "right": 236.5,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 248.5,
+            "y": 148,
+            "width": 170.5,
+            "height": 64,
+            "right": 419,
+            "bottom": 212,
+            "text": {
+              "x": 244.5,
+              "y": 196,
+              "width": 178.5,
+              "height": 16,
+              "right": 423,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 435,
+            "y": 148,
+            "width": 170.5,
+            "height": 64,
+            "right": 605.5,
+            "bottom": 212,
+            "text": {
+              "x": 431,
+              "y": 196,
+              "width": 178.5,
+              "height": 16,
+              "right": 609.5,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 621.5,
+            "y": 148,
+            "width": 170.5,
+            "height": 64,
+            "right": 792,
+            "bottom": 212,
+            "text": {
+              "x": 617.5,
+              "y": 196,
+              "width": 178.5,
+              "height": 16,
+              "right": 796,
+              "bottom": 212
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 127.25,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 167.25,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 323.75,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 343.75,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 500.25,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 540.25,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 686.75,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 726.75,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 127.25,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 167.25,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 313.75,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 353.75,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 500.25,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 540.25,
+            "bottom": 188,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 686.75,
+            "y": 148,
+            "width": 40,
+            "height": 40,
+            "right": 726.75,
+            "bottom": 188,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Favorites 390x844 card280: four columns and visible safe labels",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 280,
+          "height": 200,
+          "right": 296,
+          "bottom": 256
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 256,
+          "height": 176,
+          "right": 284,
+          "bottom": 244
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 52,
+            "height": 80,
+            "right": 80,
+            "bottom": 148,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 60,
+              "height": 16,
+              "right": 84,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 96,
+            "y": 68,
+            "width": 52,
+            "height": 80,
+            "right": 148,
+            "bottom": 148,
+            "text": {
+              "x": 92,
+              "y": 116,
+              "width": 60,
+              "height": 16,
+              "right": 152,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 164,
+            "y": 68,
+            "width": 52,
+            "height": 80,
+            "right": 216,
+            "bottom": 148,
+            "text": {
+              "x": 160,
+              "y": 116,
+              "width": 60,
+              "height": 16,
+              "right": 220,
+              "bottom": 132
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 232,
+            "y": 68,
+            "width": 52,
+            "height": 80,
+            "right": 284,
+            "bottom": 148,
+            "text": {
+              "x": 228,
+              "y": 116,
+              "width": 60,
+              "height": 32,
+              "right": 288,
+              "bottom": 148
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 164,
+            "width": 52,
+            "height": 80,
+            "right": 80,
+            "bottom": 244,
+            "text": {
+              "x": 24,
+              "y": 212,
+              "width": 60,
+              "height": 16,
+              "right": 84,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 96,
+            "y": 164,
+            "width": 52,
+            "height": 80,
+            "right": 148,
+            "bottom": 244,
+            "text": {
+              "x": 92,
+              "y": 212,
+              "width": 60,
+              "height": 16,
+              "right": 152,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 164,
+            "y": 164,
+            "width": 52,
+            "height": 80,
+            "right": 216,
+            "bottom": 244,
+            "text": {
+              "x": 160,
+              "y": 212,
+              "width": 60,
+              "height": 16,
+              "right": 220,
+              "bottom": 228
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 232,
+            "y": 164,
+            "width": 52,
+            "height": 80,
+            "right": 284,
+            "bottom": 244,
+            "text": {
+              "x": 228,
+              "y": 212,
+              "width": 60,
+              "height": 32,
+              "right": 288,
+              "bottom": 244
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 34,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 74,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 112,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 132,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 170,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 210,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 238,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 278,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 34,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 74,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 102,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 142,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 170,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 210,
+            "bottom": 204,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 238,
+            "y": 164,
+            "width": 40,
+            "height": 40,
+            "right": 278,
+            "bottom": 204,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    },
+    {
+      "name": "Favorites 2x text: retains four columns and rows grow without overlapping",
+      "status": "PASS",
+      "detail": {
+        "card": {
+          "x": 16,
+          "y": 56,
+          "width": 288,
+          "height": 328,
+          "right": 304,
+          "bottom": 384
+        },
+        "grid": {
+          "x": 28,
+          "y": 68,
+          "width": 264,
+          "height": 304,
+          "right": 292,
+          "bottom": 372
+        },
+        "items": [
+          {
+            "name": "Transaksi",
+            "x": 28,
+            "y": 68,
+            "width": 54,
+            "height": 144,
+            "right": 82,
+            "bottom": 212,
+            "text": {
+              "x": 24,
+              "y": 116,
+              "width": 62,
+              "height": 64,
+              "right": 86,
+              "bottom": 180
+            },
+            "overflow": false
+          },
+          {
+            "name": "Member",
+            "x": 98,
+            "y": 68,
+            "width": 54,
+            "height": 144,
+            "right": 152,
+            "bottom": 212,
+            "text": {
+              "x": 94,
+              "y": 116,
+              "width": 62,
+              "height": 64,
+              "right": 156,
+              "bottom": 180
+            },
+            "overflow": false
+          },
+          {
+            "name": "Stok",
+            "x": 168,
+            "y": 68,
+            "width": 54,
+            "height": 144,
+            "right": 222,
+            "bottom": 212,
+            "text": {
+              "x": 164,
+              "y": 116,
+              "width": 62,
+              "height": 32,
+              "right": 226,
+              "bottom": 148
+            },
+            "overflow": false
+          },
+          {
+            "name": "Riwayat Shift",
+            "x": 238,
+            "y": 68,
+            "width": 54,
+            "height": 144,
+            "right": 292,
+            "bottom": 212,
+            "text": {
+              "x": 234,
+              "y": 116,
+              "width": 62,
+              "height": 96,
+              "right": 296,
+              "bottom": 212
+            },
+            "overflow": false
+          },
+          {
+            "name": "Printer",
+            "x": 28,
+            "y": 228,
+            "width": 54,
+            "height": 144,
+            "right": 82,
+            "bottom": 372,
+            "text": {
+              "x": 24,
+              "y": 276,
+              "width": 62,
+              "height": 64,
+              "right": 86,
+              "bottom": 340
+            },
+            "overflow": false
+          },
+          {
+            "name": "Scanner",
+            "x": 98,
+            "y": 228,
+            "width": 54,
+            "height": 144,
+            "right": 152,
+            "bottom": 372,
+            "text": {
+              "x": 94,
+              "y": 276,
+              "width": 62,
+              "height": 64,
+              "right": 156,
+              "bottom": 340
+            },
+            "overflow": false
+          },
+          {
+            "name": "Laci Kasir",
+            "x": 168,
+            "y": 228,
+            "width": 54,
+            "height": 144,
+            "right": 222,
+            "bottom": 372,
+            "text": {
+              "x": 164,
+              "y": 276,
+              "width": 62,
+              "height": 64,
+              "right": 226,
+              "bottom": 340
+            },
+            "overflow": false
+          },
+          {
+            "name": "Pengaturan",
+            "x": 238,
+            "y": 228,
+            "width": 54,
+            "height": 144,
+            "right": 292,
+            "bottom": 372,
+            "text": {
+              "x": 234,
+              "y": 276,
+              "width": 62,
+              "height": 96,
+              "right": 296,
+              "bottom": 372
+            },
+            "overflow": false
+          }
+        ],
+        "images": [
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/transaction.png",
+            "x": 35,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 75,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/manage/member.svg",
+            "x": 115,
+            "y": 78,
+            "width": 20,
+            "height": 20,
+            "right": 135,
+            "bottom": 98,
+            "natural": [
+              20,
+              20
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/stock.png",
+            "x": 175,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 215,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/shift.png",
+            "x": 245,
+            "y": 68,
+            "width": 40,
+            "height": 40,
+            "right": 285,
+            "bottom": 108,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/printer.png",
+            "x": 35,
+            "y": 228,
+            "width": 40,
+            "height": 40,
+            "right": 75,
+            "bottom": 268,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/scanner.png",
+            "x": 105,
+            "y": 228,
+            "width": 40,
+            "height": 40,
+            "right": 145,
+            "bottom": 268,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/cash_drawer.png",
+            "x": 175,
+            "y": 228,
+            "width": 40,
+            "height": 40,
+            "right": 215,
+            "bottom": 268,
+            "natural": [
+              870,
+              870
+            ],
+            "loaded": true
+          },
+          {
+            "src": "http://qc-cashier-remaining.fixture.local/assets/assets/images/icons/settings.png",
+            "x": 245,
+            "y": 228,
+            "width": 40,
+            "height": 40,
+            "right": 285,
+            "bottom": 268,
+            "natural": [
+              1024,
+              1024
+            ],
+            "loaded": true
+          }
+        ],
+        "documentOverflow": false
+      }
+    }
+  ],
+  "scope": "Independent nine MainMenu checks only; Profile failure belongs separate module"
+}

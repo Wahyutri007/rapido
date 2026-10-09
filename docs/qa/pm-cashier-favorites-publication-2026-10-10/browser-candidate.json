@@ -1,0 +1,1536 @@
+{
+  "recordedAtUtc": "2026-10-09T18:11:43.655Z",
+  "pass": 40,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "390 fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "390 equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "390 all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "390 labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 334,
+        "height": 144
+      }
+    },
+    {
+      "name": "390 no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390 Figma Menu Wrapper width358 and height168",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 48,
+        "width": 358,
+        "height": 168
+      }
+    },
+    {
+      "name": "390 Figma71.5 column and64 row with80 row offset",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 140,
+          "width": 71.5,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "Preserved original illustrations load",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "name": "Member original SVG remains20 inside40 tile",
+      "pass": true
+    },
+    {
+      "name": "360 fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 108,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 188,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 268,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 108,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 188,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 268,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "360 equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 108,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 188,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 268,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 108,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 188,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 268,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "360 all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 108,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 188,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 268,
+          "y": 60,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 108,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 188,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 268,
+          "y": 140,
+          "width": 64,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "360 labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 304,
+        "height": 144
+      }
+    },
+    {
+      "name": "360 no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "320 fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 98,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 168,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 238,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 98,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 168,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 238,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "320 equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 98,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 168,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 238,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 98,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 168,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 238,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "320 all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 98,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 168,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 238,
+          "y": 60,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 98,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 168,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 238,
+          "y": 156,
+          "width": 54,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "320 labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 264,
+        "height": 176
+      }
+    },
+    {
+      "name": "320 no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "280 fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 224,
+        "height": 176
+      }
+    },
+    {
+      "name": "280 no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "844 fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 229,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 430,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 631,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 229,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 430,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 631,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "844 equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 229,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 430,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 631,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 229,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 430,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 631,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "844 all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Member",
+          "x": 229,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Stok",
+          "x": 430,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 631,
+          "y": 60,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Scanner",
+          "x": 229,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 430,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        },
+        {
+          "label": "Pengaturan",
+          "x": 631,
+          "y": 140,
+          "width": 185,
+          "height": 64
+        }
+      ]
+    },
+    {
+      "name": "844 labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 788,
+        "height": 144
+      }
+    },
+    {
+      "name": "844 no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "280 container in390 viewport fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 container in390 viewport equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 container in390 viewport all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Member",
+          "x": 88,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Stok",
+          "x": 148,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 208,
+          "y": 60,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Scanner",
+          "x": 88,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 148,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        },
+        {
+          "label": "Pengaturan",
+          "x": 208,
+          "y": 156,
+          "width": 44,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "name": "280 container in390 viewport labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 224,
+        "height": 176
+      }
+    },
+    {
+      "name": "280 container in390 viewport no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "2x label-size adapter fixed two rows of four",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        }
+      ]
+    },
+    {
+      "name": "2x label-size adapter equal columns and16px gaps",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        }
+      ]
+    },
+    {
+      "name": "2x label-size adapter all eight targets inside viewport",
+      "pass": true,
+      "detail": [
+        {
+          "label": "Transaksi",
+          "x": 28,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Member",
+          "x": 115.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Stok",
+          "x": 203,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Riwayat Shift",
+          "x": 290.5,
+          "y": 60,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Printer",
+          "x": 28,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Scanner",
+          "x": 115.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Laci Kasir",
+          "x": 203,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        },
+        {
+          "label": "Pengaturan",
+          "x": 290.5,
+          "y": 188,
+          "width": 71.5,
+          "height": 112
+        }
+      ]
+    },
+    {
+      "name": "2x label-size adapter labels do not clip or overflow horizontally",
+      "pass": true,
+      "detail": {
+        "x": 28,
+        "y": 60,
+        "width": 334,
+        "height": 240
+      }
+    },
+    {
+      "name": "2x label-size adapter no document horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "All eight navigation callbacks unchanged",
+      "pass": true,
+      "detail": [
+        "/transaction",
+        "/(no-layout)/manage/member",
+        "/stock",
+        "/shift",
+        "/(no-layout)/manage/printer",
+        "/scanner",
+        "/cash-drawer",
+        "/(no-layout)/manage/pos-settings"
+      ]
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "captures": [
+    {
+      "file": "browser-candidate-390.png",
+      "sha256": "4cd070e6600f0d183c050948a2d1b8380d33f31ff86c35e8432e15bec62a0cfd"
+    },
+    {
+      "file": "browser-candidate-360.png",
+      "sha256": "ed9626b0032118006db7ddfd1c070b2714689c4b91e8587efd82c1c41319dda7"
+    },
+    {
+      "file": "browser-candidate-320.png",
+      "sha256": "a77540ad6ee93d6fb7ff4a1805043fde0e7f9c324b20f24038603fc9917642a8"
+    },
+    {
+      "file": "browser-candidate-280.png",
+      "sha256": "a475e77ac628898087d3ae4b223260ed69935c80417f2fcf8a2baae664fb82b6"
+    },
+    {
+      "file": "browser-candidate-844.png",
+      "sha256": "63769a9ee2a1deec7d5d4240c1a806d70255467883b77a409d134d9487903bca"
+    },
+    {
+      "file": "browser-candidate-narrow.png",
+      "sha256": "08683f3cab1e6c56bc4ee1ca3385735745d0ec8638c2f6cd847e07d86abb6ffd"
+    },
+    {
+      "file": "browser-candidate-large-labels.png",
+      "sha256": "b909009b2506c9415ef65467be22751fe84110ab314f55c94563ab9009437607"
+    }
+  ],
+  "build": "D:\\Rapido-QC-temp\\pm-favorites-publication-fixed-2026-10-10\\build.json",
+  "scope": "Actual MainMenu/Card/fonts/illustrations and exact favorite section extracted from candidate Home; isolated RNWeb/router adapter, no native/fullHome/fullrouter/100% artwork claim."
+}

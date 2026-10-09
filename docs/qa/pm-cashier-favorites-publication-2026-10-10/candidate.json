@@ -1,0 +1,10 @@
+{
+  "base": "a0c059d9f37fc330f70d2df1bb8349aaaca42fb7",
+  "branch": "fix/cashier-favorites-layout-2026-10-10",
+  "status": "HOLD_MAIN_MISSING_ROUTES",
+  "owned": {
+    "components/feature/cashier-home/MainMenu.tsx": "02f3c5b5fc095729f12b50d93b8b71e76d10387f3cc14675b2dd0562bec0baad",
+    "app/(cashier)/home/index.tsx": "a06c554c4277c67efa41487e3626c67125994fa29cc8438ee24f0d07ba5f5e4c"
+  },
+  "scope": "Draft branch only: four-column favorites and bounded Home Card integration; missing route prerequisites prevent main approval; all other Dashboard source AST-preserved"
+}

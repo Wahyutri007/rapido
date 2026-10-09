@@ -664,3 +664,7 @@ Pengguna meminta push ke branch `integration/qc-pm-2026-10-09` kemudian `main`. 
 ### Uang Diterima — publikasi 10 Oktober 2026
 
 Halaman cart/input-money mempertahankan alur pembayaran yang ada dan memperbaiki inset tepi, nominal panjang serta pembungkusan pilihan uang pada layar sempit. Source dan hasil pemeriksaan kandidat main tersedia di [receipt PM](qa/pm-cashier-cash-input-layout-publication-2026-10-10/REPORT.md). Pengujian RNWeb tidak menyatakan pembayaran operasional atau native HP telah tervalidasi.
+
+### Menu Favorit — publikasi 10 Oktober 2026
+
+Beranda Kasir menampilkan dua baris masing-masing empat menu: Transaksi, Member, Stok, Riwayat Shift; Printer, Scanner, Laci Kasir, Pengaturan. Member/Printer/Pengaturan membuka modul manage yang tersedia. Bagian favorit memakai Card compact; bagian dashboard lainnya dipertahankan dari main. [Receipt PM](qa/pm-cashier-favorites-publication-2026-10-10/REPORT.md) mencatat validasi kandidat dan batas acuan offline.

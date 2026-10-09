@@ -1,0 +1,6 @@
+{
+  "exit": 1,
+  "stdout": "Checked 0 files in 4ms. No fixes applied.\n",
+  "stderr": "check ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n  × No files were processed in the specified paths.\n  \n  i Check your biome.json or biome.jsonc to ensure the paths are not ignored by the configuration.\n  \n  i These paths were provided but ignored:\n  \n  - .expo/pm-home-baseline-publication.tsx\n  \n\n",
+  "scope": "Published Home baseline lint/format diagnostics; do not attribute existing mock-array key and unused React to the new menu layout"
+}
