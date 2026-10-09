@@ -182,10 +182,6 @@ export default function BottomTab(
 						paddingBottom: bottomPadding,
 						paddingTop: isFigma ? 16 : 24,
 					},
-					isCashier && {
-						paddingLeft: 16 + insets.left,
-						paddingRight: 16 + insets.right,
-					},
 					isCashier && { boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.1)" },
 					appearance === "figma" && figmaStockShadows.tab,
 					appearance === "figma" && { columnGap: width < 360 ? 8 : 14 },

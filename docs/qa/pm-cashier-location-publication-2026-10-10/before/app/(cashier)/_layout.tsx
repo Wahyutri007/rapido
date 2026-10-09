@@ -43,7 +43,7 @@ export default function CashierLayout() {
 			<Tabs.Screen
 				name="location/index"
 				options={{
-					header: () => <Header appearance="cashier" title="Tempat Kasir" />,
+					headerShown: false,
 					tabBarLabel: "Tempat",
 					tabBarIcon: (props) => <Table {...props} />,
 				}}

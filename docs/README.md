@@ -688,3 +688,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Stok Kasir — publikasi pratinjau10 Oktober2026
 
 `/(no-layout)/(cashier)/stock` menampilkan21contoh stok dari Figma, pencarian, status/kategori, draft/Cancel/Reset/Apply dan pemulihan hasilkosong. Header/back berada pada parent, popup memakai acuan29:27391 dan aset asli; toolbar48 menyebabkan pergeseran24px terhadap header72acuan lama. Ini bukan saldo stok toko/API. [Receipt QA/PM](qa/pm-cashier-stock-publication-2026-10-10/REPORT.md) dan [perbandingan](qa/pm-cashier-stock-publication-2026-10-10/compare.html).
+
+
+### Tempat Kasir — publikasi pratinjau,10 Oktober2026
+
+`/(cashier)/location` mengganti placeholder dengan pilihan outlet contoh eksplisit, daftar tempat/filter/search/reset dan retensi pilihan saat params tab dibersihkan. `/(no-layout)/(cashier)/location/detail?outletId=...&areaId=...&placeId=...` memeriksa kepemilikan ketiga ID; invalid dapat kembali ke daftar. Header di layout, navigasi tab tetap sama dan Cashier side-insets diperhitungkan. Status aktif adalah konfigurasi lokal, bukan meja kosong/terisi/reservasi atau data toko aktif/API. [Receipt QA/PM](qa/pm-cashier-location-publication-2026-10-10/REPORT.md).

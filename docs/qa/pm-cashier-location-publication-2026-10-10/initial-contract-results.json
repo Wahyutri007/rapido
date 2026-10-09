@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Candidate hash app/(cashier)/location/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash app/(no-layout)/(cashier)/location/detail.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash app/(no-layout)/(cashier)/location/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/location/CashierLocationScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/location/CashierLocationDetailScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/location/LocationCommon.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash lib/cashier/location.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash types/ui/cashier/location.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash app/(no-layout)/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash app/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published Place prerequisite unchanged store/placeStore.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published Place prerequisite unchanged constants/data/manage/place.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published Place prerequisite unchanged types/ui/manage/place.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published Place prerequisite unchanged lib/manage/place.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published Place prerequisite unchanged schema/manage/place.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent inverse AST preserves every published registration and callback",
+      "status": "PASS"
+    },
+    {
+      "name": "Tabs entire inverse AST changes only Location header",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual published dataset yields 18 ordered records and effective outlet status",
+      "status": "PASS"
+    },
+    {
+      "name": "Area/status/search enforce AND with trimmed case-insensitive name, area, kind",
+      "status": "PASS"
+    },
+    {
+      "name": "Strict detail lookup rejects mixed ownership and all non-string IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Feature provides explicit preview/occupancy limitations and no API mutations",
+      "status": "PASS"
+    }
+  ]
+}

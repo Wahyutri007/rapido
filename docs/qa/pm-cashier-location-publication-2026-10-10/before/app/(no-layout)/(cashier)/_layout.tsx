@@ -54,7 +54,6 @@ export default function CashierNoLayout() {
 					),
 				}}
 			/>
-			<JSStack.Screen name="location" options={{ headerShown: false }} />
 			<JSStack.Screen name="scanner" options={{ headerShown: false }} />
 		</JSStack>
 	);

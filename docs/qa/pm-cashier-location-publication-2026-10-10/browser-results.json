@@ -1,0 +1,685 @@
+{
+  "status": "PASS",
+  "baseline": false,
+  "passed": 41,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual tab header and explicit outlet choice replace main placeholder",
+      "status": "PASS"
+    },
+    {
+      "name": "Published local store provides eighteen records with honest counts",
+      "status": "PASS"
+    },
+    {
+      "name": "Area and status compose with AND",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset restores both selectors and all records",
+      "status": "PASS"
+    },
+    {
+      "name": "Search trims and ignores case; row carries all ownership IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Concrete outlet change resets search and filters; inactive outlet propagates status",
+      "status": "PASS"
+    },
+    {
+      "name": "Tab params clearing retains explicit session outlet",
+      "status": "PASS"
+    },
+    {
+      "name": "Pending search cannot leak into new outlet",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset cancels pending debounce while clearing existing area filter",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty filter is explicit and recoverable",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid list params never choose first outlet {\"outletId\":\"missing\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid list params never choose first outlet {\"outletId\":[\"place-demo-1\"]}",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual detail layout renders strict identity and explicit unavailable occupancy",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {\"outletId\":\"missing\",\"areaId\":\"place-demo-1-area-1\",\"placeId\":\"place-demo-1-area-1-place-5\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {\"outletId\":[\"place-demo-1\"],\"areaId\":\"place-demo-1-area-1\",\"placeId\":\"place-demo-1-area-1-place-5\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {\"outletId\":\"place-demo-1\",\"areaId\":\"place-demo-2-area-1\",\"placeId\":\"place-demo-1-area-1-place-5\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {\"outletId\":\"place-demo-1\",\"areaId\":\"place-demo-1-area-1\",\"placeId\":\"missing\"}",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid or cross-owned detail rejects fallback identity {\"outletId\":\"place-demo-1\",\"areaId\":\"place-demo-1-area-1\",\"placeId\":[\"place-demo-1-area-1-place-5\"]}",
+      "status": "PASS"
+    },
+    {
+      "name": "320px actual header and last virtualized row stay reachable",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 24,
+          "y": 212,
+          "width": 272,
+          "height": 116
+        },
+        "clip": {
+          "l": 24,
+          "t": 88,
+          "r": 296,
+          "b": 424
+        },
+        "visibleHeight": 116,
+        "reveal": null
+      }
+    },
+    {
+      "name": "320px actual five-tab footer respects side and bottom system areas",
+      "status": "PASS",
+      "details": [
+        {
+          "box": {
+            "x": 24,
+            "y": 472,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 456,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 80,
+            "y": 472,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 456,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 136,
+            "y": 472,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 456,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 192,
+            "y": 472,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 456,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 248,
+            "y": 472,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 456,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      ]
+    },
+    {
+      "name": "320px invalid detail recovery button and full label fit safe region",
+      "status": "PASS",
+      "details": {
+        "button": {
+          "box": {
+            "x": 40,
+            "y": 192,
+            "width": 240,
+            "height": 48
+          },
+          "clip": {
+            "l": 8,
+            "t": 72,
+            "r": 312,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        "label": {
+          "x": 129.953125,
+          "y": 204,
+          "width": 60.078125,
+          "height": 24
+        }
+      }
+    },
+    {
+      "name": "844px actual header and last virtualized row stay reachable",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 50,
+          "y": 88,
+          "width": 754,
+          "height": 116
+        },
+        "clip": {
+          "l": 50,
+          "t": 88,
+          "r": 804,
+          "b": 246
+        },
+        "visibleHeight": 116,
+        "reveal": null
+      }
+    },
+    {
+      "name": "844px actual five-tab footer respects side and bottom system areas",
+      "status": "PASS",
+      "details": [
+        {
+          "box": {
+            "x": 50,
+            "y": 294,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 278,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 226.5,
+            "y": 294,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 278,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 403,
+            "y": 294,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 278,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 579.5,
+            "y": 294,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 278,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 756,
+            "y": 294,
+            "width": 48,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 278,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      ]
+    },
+    {
+      "name": "844px invalid detail recovery button and full label fit safe region",
+      "status": "PASS",
+      "details": {
+        "button": {
+          "box": {
+            "x": 66,
+            "y": 176,
+            "width": 722,
+            "height": 48
+          },
+          "clip": {
+            "l": 34,
+            "t": 72,
+            "r": 820,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        "label": {
+          "x": 396.953125,
+          "y": 188,
+          "width": 60.078125,
+          "height": 24
+        }
+      }
+    },
+    {
+      "name": "240px actual header and last virtualized row stay reachable",
+      "status": "PASS",
+      "details": {
+        "box": {
+          "x": 24,
+          "y": 74,
+          "width": 192,
+          "height": 116
+        },
+        "clip": {
+          "l": 24,
+          "t": 88,
+          "r": 216,
+          "b": 176
+        },
+        "visibleHeight": 88,
+        "reveal": null
+      }
+    },
+    {
+      "name": "240px actual five-tab footer respects side and bottom system areas",
+      "status": "PASS",
+      "details": [
+        {
+          "box": {
+            "x": 24,
+            "y": 224,
+            "width": 38.40625,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 208,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 62.40625,
+            "y": 224,
+            "width": 38.390625,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 208,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 100.796875,
+            "y": 224,
+            "width": 38.40625,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 208,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 139.203125,
+            "y": 224,
+            "width": 38.390625,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 208,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        {
+          "box": {
+            "x": 177.59375,
+            "y": 224,
+            "width": 38.40625,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 208,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      ]
+    },
+    {
+      "name": "240px invalid detail recovery button and full label fit safe region",
+      "status": "PASS",
+      "details": {
+        "button": {
+          "box": {
+            "x": 40,
+            "y": 176,
+            "width": 160,
+            "height": 48
+          },
+          "clip": {
+            "l": 8,
+            "t": 82,
+            "r": 232,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        },
+        "label": {
+          "x": 89.953125,
+          "y": 188,
+          "width": 60.078125,
+          "height": 24
+        }
+      }
+    },
+    {
+      "name": "default footer baseline geometry/text/color unchanged at 390",
+      "status": "PASS"
+    },
+    {
+      "name": "default footer baseline geometry/text/color unchanged at 320",
+      "status": "PASS"
+    },
+    {
+      "name": "figma footer baseline geometry/text/color unchanged at 390",
+      "status": "PASS"
+    },
+    {
+      "name": "figma footer baseline geometry/text/color unchanged at 320",
+      "status": "PASS"
+    },
+    {
+      "name": "cashier footer baseline geometry/text/color unchanged at 390",
+      "status": "PASS"
+    },
+    {
+      "name": "cashier footer baseline geometry/text/color unchanged at 320",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact published footer reproduces side overlap while candidate clears it",
+      "status": "PASS",
+      "details": {
+        "old": {
+          "x": 16,
+          "y": 135,
+          "width": 48,
+          "height": 48
+        },
+        "current": {
+          "x": 50,
+          "y": 294,
+          "width": 48,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Actual tab callback remains Beranda",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual tab callback remains Laporan",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual tab callback remains Katalog",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual tab callback remains Tempat",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual tab callback remains Tagihan",
+      "status": "PASS"
+    },
+    {
+      "name": "All real compiled sources/fonts/assets/web config stable; zero runtime or external requests",
+      "status": "PASS",
+      "details": {
+        "uncompiledAndroidDerivedCacheDrift": []
+      }
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "viewport": {
+        "w": 320,
+        "h": 568,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "last": {
+        "box": {
+          "x": 24,
+          "y": 212,
+          "width": 272,
+          "height": 116
+        },
+        "clip": {
+          "l": 24,
+          "t": 88,
+          "r": 296,
+          "b": 424
+        },
+        "visibleHeight": 116,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 844,
+        "h": 390,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 34,
+          "right": 24
+        }
+      },
+      "last": {
+        "box": {
+          "x": 50,
+          "y": 88,
+          "width": 754,
+          "height": 116
+        },
+        "clip": {
+          "l": 50,
+          "t": 88,
+          "r": 804,
+          "b": 246
+        },
+        "visibleHeight": 116,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 240,
+        "h": 320,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "last": {
+        "box": {
+          "x": 24,
+          "y": 74,
+          "width": 192,
+          "height": 116
+        },
+        "clip": {
+          "l": 24,
+          "t": 88,
+          "r": 216,
+          "b": 176
+        },
+        "visibleHeight": 88,
+        "reveal": null
+      }
+    }
+  ],
+  "assetHashes": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\AntDesign.ttf": "08a9d5b513cf947e22ede81e9a843bd8d7763a63444cd21484bfde7662cc6543",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf": "16f92298587bab2b469bc13c0dfc6d5d171bca10bad0c9053ad16bc023bf717d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\EvilIcons.ttf": "a5caeb4d395c5e32f1d5a30acb382aebc664f1badfd149319907f2215e4e3e26",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Fontisto.ttf": "94dab9f1d5b13ea0769d124a2da0d02433f3b99d6dea5a07c0446a77158100c0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome.ttf": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Regular.ttf": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Solid.ttf": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome5_Brands.ttf": "06f4d00923ea24697df5df0b92984175991d8bd25776a02d531bb401e393ec42",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf": "64f9fb623681f112261e9a2f97826782439f3925dea8f44a57d1e4db95ba6cfd",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf": "31f099c13f6e4ba05f1b471bf170cb5493249474222917372de3ca5cf29e6a1a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf": "bc844b5b02d3f3adabb514de4e0c0208252d3123413bd03f6287fa446acee859",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Foundation.ttf": "7e1dd03dd4ce90b658052554cd7459df16716717389a552fa4c6d56a5f8933e6",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Ionicons.ttf": "fa2ab7d2557819b2bfe5009e46844efa7170cf177be7735d43aa2ac1295f1d54",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf": "61e8aba5a4e981fe22cf7c8e8bcdbea00476e75c62c37f01bf7ee33361d68428",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialIcons.ttf": "ef149f08bdd2ff09a4e2c8573476b7b0f3fbb15b623954ade59899e7175bedda",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Octicons.ttf": "9bc4d9f5e994e774bdc3ef9a9a87da749af5f50b861473ef7d1cc3d6f8229267",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\SimpleLineIcons.ttf": "3f501ddb05c70829bbb51cfe9ca9fff57f39e060457c257b3ccf25df767f0870",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Zocial.ttf": "dd8ee403bbcbf5e58b77dca4ac03ebafa13a284a3d87d8ea9ca490435a86fa48",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\home.svg": "01950a87d0c77d3786b4c466826f0d14e7ecf128aaf8c83103db826bcd6ff970",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\catalog.svg": "ead314ccb6d12bc7d1be5ecc3898a63b4d50aa5c5ae008f9735f0fabf71ebc68",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\inventory.svg": "eec32d9810b9bb365bceda431a47acb2c345fcefbee58b08b6c00ea54d10279e",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\manage.svg": "2874a27983252c24db92f55212ffb6f4c4326f8aa3ca074e6f0ecc9bf929dabd",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\navigation\\home.svg": "10406ccbd3f5e72afecee67af09cd5aae80f7daca3bd1c7d117f4e91e098117d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\navigation\\report.svg": "6e157504ad2367e8f70233da9d85d253c1f4b4c8320de5aaae25648991cb0c8b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\navigation\\catalog.svg": "914f567603f48552205297404854a1eb4980f44e4dd6a2226c606038f706434a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\navigation\\location.svg": "6086f8b793b4ef5096f0c2a2cfcd0a17d90bec35d6553e553423ba032800149a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\navigation\\bills.svg": "113ff418d52b79c06be213bb8ca4af47462b6fcc29f5d6929f3699780ba0b5b3",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9"
+  },
+  "bundleHash": "982cf3c2ec9f685bf832255a82a9af966c29cc616a5a56ceb887f7bb6c1560b6",
+  "styleHash": "63a2fbdc7e2b4c127d6ab3a3b287a14f582919402d3e0075271aaa14c9f9712a",
+  "limits": "Actual isolated production Location routes/Tab/Detail layouts/BottomTab/local PlaceStore/Header/Wrapper/primitives/fonts on RNWeb. Router recording, selected stack registration, safe-area and browser clock are explicit adapters. Full native/Expo bootstrap/router, physical scanner/API and full Figma fidelity excluded."
+}

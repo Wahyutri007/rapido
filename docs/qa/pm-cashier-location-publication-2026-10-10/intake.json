@@ -1,0 +1,45 @@
+{
+  "base": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4",
+  "inputs": {
+    "app/(cashier)/location/index.tsx": "0e6693a62a6643ba1de3ad6f033b2673b00bca6ddd36c49a78892313a3a3ddaa",
+    "app/(no-layout)/(cashier)/location/detail.tsx": "4d7f256968646ed8d62fdae444d94f9f7d809f65397c43ef00375a40f0156a44",
+    "app/(no-layout)/(cashier)/location/_layout.tsx": "50e2b54ee4f7670386085c759a83c2e4ae3596ae8aa2a76c86eaeb0be5724e4e",
+    "components/feature/cashier/location/CashierLocationScreen.tsx": "afaacf110ff58f4e992d696bd36ad78826aceb3debfb8283fd68787d67fc95d1",
+    "components/feature/cashier/location/CashierLocationDetailScreen.tsx": "b66db0e334da635fb542e4acb2266940c0c0c79af44e4aec595de4eefb42a765",
+    "components/feature/cashier/location/LocationCommon.tsx": "aee3459bc82f23695cce13e9d3edc30344003c6dbb7778b82d286e35340d839f",
+    "lib/cashier/location.ts": "c0b4866b2a030c4f7c5bc6cde234f8349c4309ad685b371f3082402851fa5d33",
+    "types/ui/cashier/location.ts": "cf628f1758d3fd556c2b91d266f6dd16442f9d46d32f095005b8ea2726c9485a",
+    "app/(no-layout)/(cashier)/_layout.tsx": "44091c9a2a6cec409f131231776b483252274a9f75fe5143b60d921eaffb6910",
+    "app/(cashier)/_layout.tsx": "29c8f80ca2f24ba3666890c6725aaa81235d127c895fc06540175f97d23e522d",
+    "components/custom/BottomTab.tsx": "9a80c4cf5dce15becfb90abb2fe506abdc62f0cf5066959d130cd84a3c2328b6"
+  },
+  "guards": {
+    "store/placeStore.ts": "4c753cff1a300b963e80459a465c5e3fec07022188033ef352c8d156b7493892",
+    "constants/data/manage/place.ts": "d4d6f424ca53144dc6ec4abb5ea72c779655323b4cbbee623627ac71b9552cb0",
+    "types/ui/manage/place.ts": "912fd74aa526cef6985b2d3fc38cd5f16ed8e7fed0ed235456bd5cd07502a0ce",
+    "lib/manage/place.ts": "247d14a534bd2497f3d6b75bf0f15f86fdd2519ae7ec27411bf2c8ee54f26f6b",
+    "schema/manage/place.ts": "0f13439054e5b53dd0c72bebb37816d1ae9123fb4ba1dc07d63b172645996814"
+  },
+  "parent": "app/(no-layout)/(cashier)/_layout.tsx",
+  "tabs": "app/(cashier)/_layout.tsx",
+  "sources": [
+    "app/(cashier)/location/index.tsx",
+    "app/(no-layout)/(cashier)/location/detail.tsx",
+    "app/(no-layout)/(cashier)/location/_layout.tsx",
+    "components/feature/cashier/location/CashierLocationScreen.tsx",
+    "components/feature/cashier/location/CashierLocationDetailScreen.tsx",
+    "components/feature/cashier/location/LocationCommon.tsx",
+    "lib/cashier/location.ts",
+    "types/ui/cashier/location.ts"
+  ],
+  "scope": "Fresh independent QA of QC debounce/reset repair and released Location preview. Published real local PlaceStore/data/schema/helper unchanged. Eight source plus child registration and only Location tab header; other tabs/back/callbacks preserved. Metadata-only Figma, no100/occupancy/backend/native/fullRouter claim.",
+  "repairs": {
+    "footer": "components/custom/BottomTab.tsx",
+    "detail": "components/feature/cashier/location/CashierLocationDetailScreen.tsx",
+    "before": {
+      "components/custom/BottomTab.tsx": "4b6d3bb7fc3c45edc8fcfe3d31a2389b93dc583a3da5f2dbf6da5657d5ef9783",
+      "components/feature/cashier/location/CashierLocationDetailScreen.tsx": "d70823bccc66234c476aed8978bf9e06b2d2f354a86f232bf0495e91d8fbca57"
+    },
+    "scope": "Two actual product failures repaired by delegated developer in private candidate only: recovery visible label Kembali with preserved full accessible name, Cashier-only tab side-inset padding. Shared default/figma rendering/callbacks and all Location handlers preserved."
+  }
+}

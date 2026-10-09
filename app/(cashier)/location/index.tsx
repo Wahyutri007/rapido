@@ -1,6 +1,1 @@
-import Text from "@/components/common/Text";
-import React from "react";
-
-export default function LocationScreen() {
-  return <Text>Tempat</Text>;
-}
+export { default } from "@/components/feature/cashier/location/CashierLocationScreen";
