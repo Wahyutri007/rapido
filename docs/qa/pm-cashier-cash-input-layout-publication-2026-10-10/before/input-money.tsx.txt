@@ -3,7 +3,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import { useIsFocused } from "expo-router/react-navigation";
 import React from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { ScrollView, useWindowDimensions, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import BouncyPressable from "@/components/common/BouncyPressable";
 import { Form, FormField, FormMessage } from "@/components/common/Form";
@@ -32,7 +32,6 @@ function CashInputForm({
 }) {
 	const focused = useIsFocused();
 	const insets = useSafeAreaInsets();
-	const { fontScale } = useWindowDimensions();
 	const active = React.useRef(false);
 	const submitting = React.useRef(false);
 	const form = useForm<CashInputSchema>({
@@ -48,11 +47,7 @@ function CashInputForm({
 	const amountFontSize =
 		amountWidth === null
 			? 32
-			: Math.min(
-					32,
-					(amountWidth - 4) /
-						((displayValue.length * 0.7 + 1.4) * Math.max(1, fontScale)),
-				);
+			: Math.min(32, (amountWidth - 4) / (displayValue.length * 0.7 + 1.4));
 	const amount = parseCashAmount(value);
 	const isValid =
 		focused &&
@@ -120,14 +115,8 @@ function CashInputForm({
 		<View className="flex-1 bg-background" style={cashInputTheme}>
 			<ScrollView contentContainerStyle={{ flexGrow: 1 }} bounces={false}>
 				<View
-					className="grow items-center"
-					style={{
-						paddingTop: 105,
-						paddingBottom: 24,
-						paddingLeft: 16 + insets.left,
-						paddingRight: 16 + insets.right,
-						minHeight: 177,
-					}}
+					className="flex-1 items-center px-4"
+					style={{ paddingTop: 105, paddingBottom: 24, minHeight: 177 }}
 				>
 					<View
 						className="w-full items-center gap-2"
@@ -168,25 +157,16 @@ function CashInputForm({
 						</Form>
 					</View>
 				</View>
-				<View
-					className="gap-3 bg-surface pb-3"
-					style={{ paddingLeft: insets.left, paddingRight: insets.right }}
-				>
+				<View className="gap-3 bg-surface pb-3">
 					<View
-						className="flex-row flex-wrap items-center justify-center px-4"
-						style={{ minHeight: 39, rowGap: 8 }}
+						className="flex-row items-center justify-center"
+						style={{ height: 39 }}
 					>
 						{getCashQuickAmounts(totalPrice).map((quickAmount) => (
 							<BouncyPressable
 								key={quickAmount}
-								className="min-w-0 items-center justify-center rounded-lg bg-white"
-								style={{
-									minHeight: 39,
-									maxWidth: "100%",
-									paddingHorizontal: 25,
-									paddingVertical: 8,
-								}}
-								hitSlop={{ top: 3, bottom: 3, left: 0, right: 0 }}
+								className="items-center justify-center rounded-lg bg-white"
+								style={{ height: 39, paddingHorizontal: 25 }}
 								onPress={() => setValue(String(quickAmount))}
 								disabled={!focused}
 								ripple
@@ -196,7 +176,7 @@ function CashInputForm({
 							>
 								<Text
 									size="small"
-									className="shrink text-center text-subtle"
+									className="text-subtle"
 									style={{ lineHeight: 14.4 }}
 								>
 									Rp {formatCashDigits(String(quickAmount))}

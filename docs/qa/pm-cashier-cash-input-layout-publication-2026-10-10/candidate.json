@@ -1,0 +1,15 @@
+{
+  "base": "f4acf2988afe177cebfe5781f713743ddc3cc91c",
+  "branch": "fix/cashier-cash-input-layout-2026-10-10",
+  "owned": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc"
+  },
+  "preserved": {
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+    "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+    "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+    "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+    "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f"
+  },
+  "scope": "Only QC-accepted Cash input layout; current shared header48 delta excluded. Existing auth/guards/API/payment/header defaults retained; candidate review not full release certification."
+}

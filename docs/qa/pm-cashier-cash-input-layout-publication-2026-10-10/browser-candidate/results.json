@@ -1,0 +1,2075 @@
+{
+  "historical": false,
+  "cohort": "after",
+  "currentDrift": [],
+  "scope": "Actual production RNWeb components, fonts and CSS; offline asset/network, router/focus/stack and explicit SafeAreaInsetsContext seed adapters. Before cohort renders the unchanged intake snapshot and does not approve later owner source. No native/device/full-router/payment certification.",
+  "referenceNode": "29:25047",
+  "checks": [
+    {
+      "name": "reference390: no horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "reference390: amount inside safe width",
+      "pass": true,
+      "details": {
+        "x": 157.28125,
+        "y": 177,
+        "right": 276.296875,
+        "bottom": 225,
+        "width": 119.015625,
+        "height": 48,
+        "fontSize": "32px",
+        "lineHeight": "48px",
+        "color": "rgb(57, 57, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "scroll": 119,
+        "client": 119
+      }
+    },
+    {
+      "name": "reference390: all keypad buttons inside safe width",
+      "pass": true,
+      "details": {
+        "keys": [
+          {
+            "x": 0,
+            "right": 130
+          },
+          {
+            "x": 130,
+            "right": 260
+          },
+          {
+            "x": 260,
+            "right": 390
+          },
+          {
+            "x": 0,
+            "right": 130
+          },
+          {
+            "x": 130,
+            "right": 260
+          },
+          {
+            "x": 260,
+            "right": 390
+          },
+          {
+            "x": 0,
+            "right": 130
+          },
+          {
+            "x": 130,
+            "right": 260
+          },
+          {
+            "x": 260,
+            "right": 390
+          },
+          {
+            "x": 0,
+            "right": 130
+          },
+          {
+            "x": 130,
+            "right": 260
+          },
+          {
+            "x": 260,
+            "right": 390
+          }
+        ],
+        "insets": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "reference390: quick amounts inside safe width",
+      "pass": true
+    },
+    {
+      "name": "reference390: Bayar above system bottom inset",
+      "pass": true
+    },
+    {
+      "name": "reference390: original backspace renders32x32",
+      "pass": true
+    },
+    {
+      "name": "Figma29:25047 amount y",
+      "pass": true,
+      "details": {
+        "actual": 177,
+        "expected": 177
+      }
+    },
+    {
+      "name": "Figma29:25047 quick y",
+      "pass": true,
+      "details": {
+        "actual": 420,
+        "expected": 420
+      }
+    },
+    {
+      "name": "Figma29:25047 quick height",
+      "pass": true,
+      "details": {
+        "actual": 39,
+        "expected": 39
+      }
+    },
+    {
+      "name": "Figma29:25047 key1 y",
+      "pass": true,
+      "details": {
+        "actual": 475.5,
+        "expected": 475.5
+      }
+    },
+    {
+      "name": "Figma29:25047 key1 width",
+      "pass": true,
+      "details": {
+        "actual": 130,
+        "expected": 130
+      }
+    },
+    {
+      "name": "Figma29:25047 key1 height",
+      "pass": true,
+      "details": {
+        "actual": 59,
+        "expected": 59
+      }
+    },
+    {
+      "name": "Figma29:25047 pay y",
+      "pass": true,
+      "details": {
+        "actual": 766,
+        "expected": 766
+      }
+    },
+    {
+      "name": "Figma29:25047 pay width",
+      "pass": true,
+      "details": {
+        "actual": 350,
+        "expected": 350
+      }
+    },
+    {
+      "name": "Figma29:25047 pay height",
+      "pass": true,
+      "details": {
+        "actual": 48,
+        "expected": 48
+      }
+    },
+    {
+      "name": "Figma29:25047 amount typography/color",
+      "pass": true
+    },
+    {
+      "name": "Figma29:25047 pay color",
+      "pass": true
+    },
+    {
+      "name": "reference390: last keypad row reachable above Bayar",
+      "pass": true
+    },
+    {
+      "name": "small320: no horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "small320: amount inside safe width",
+      "pass": true,
+      "details": {
+        "x": 114.78125,
+        "y": 177,
+        "right": 233.796875,
+        "bottom": 225,
+        "width": 119.015625,
+        "height": 48,
+        "fontSize": "32px",
+        "lineHeight": "48px",
+        "color": "rgb(57, 57, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "scroll": 119,
+        "client": 119
+      }
+    },
+    {
+      "name": "small320: all keypad buttons inside safe width",
+      "pass": true,
+      "details": {
+        "keys": [
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          }
+        ],
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "small320: quick amounts inside safe width",
+      "pass": true
+    },
+    {
+      "name": "small320: Bayar above system bottom inset",
+      "pass": true
+    },
+    {
+      "name": "small320: original backspace renders32x32",
+      "pass": true
+    },
+    {
+      "name": "small320: last keypad row reachable above Bayar",
+      "pass": true
+    },
+    {
+      "name": "landscape844: no horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "landscape844: amount inside safe width",
+      "pass": true,
+      "details": {
+        "x": 381.78125,
+        "y": 177,
+        "right": 500.796875,
+        "bottom": 225,
+        "width": 119.015625,
+        "height": 48,
+        "fontSize": "32px",
+        "lineHeight": "48px",
+        "color": "rgb(57, 57, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "scroll": 119,
+        "client": 119
+      }
+    },
+    {
+      "name": "landscape844: all keypad buttons inside safe width",
+      "pass": true,
+      "details": {
+        "keys": [
+          {
+            "x": 34,
+            "right": 291
+          },
+          {
+            "x": 291,
+            "right": 548
+          },
+          {
+            "x": 548,
+            "right": 805
+          },
+          {
+            "x": 34,
+            "right": 291
+          },
+          {
+            "x": 291,
+            "right": 548
+          },
+          {
+            "x": 548,
+            "right": 805
+          },
+          {
+            "x": 34,
+            "right": 291
+          },
+          {
+            "x": 291,
+            "right": 548
+          },
+          {
+            "x": 548,
+            "right": 805
+          },
+          {
+            "x": 34,
+            "right": 291
+          },
+          {
+            "x": 291,
+            "right": 548
+          },
+          {
+            "x": 548,
+            "right": 805
+          }
+        ],
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 34,
+          "right": 24
+        }
+      }
+    },
+    {
+      "name": "landscape844: quick amounts inside safe width",
+      "pass": true
+    },
+    {
+      "name": "landscape844: Bayar above system bottom inset",
+      "pass": true
+    },
+    {
+      "name": "landscape844: original backspace renders32x32",
+      "pass": true
+    },
+    {
+      "name": "landscape844: last keypad row reachable above Bayar",
+      "pass": true
+    },
+    {
+      "name": "narrow280: no horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "narrow280: amount inside safe width",
+      "pass": true,
+      "details": {
+        "x": 94.78125,
+        "y": 177,
+        "right": 213.796875,
+        "bottom": 225,
+        "width": 119.015625,
+        "height": 48,
+        "fontSize": "32px",
+        "lineHeight": "48px",
+        "color": "rgb(57, 57, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "scroll": 119,
+        "client": 119
+      }
+    },
+    {
+      "name": "narrow280: all keypad buttons inside safe width",
+      "pass": true,
+      "details": {
+        "keys": [
+          {
+            "x": 8,
+            "right": 91
+          },
+          {
+            "x": 91,
+            "right": 174
+          },
+          {
+            "x": 174,
+            "right": 257
+          },
+          {
+            "x": 8,
+            "right": 91
+          },
+          {
+            "x": 91,
+            "right": 174
+          },
+          {
+            "x": 174,
+            "right": 257
+          },
+          {
+            "x": 8,
+            "right": 91
+          },
+          {
+            "x": 91,
+            "right": 174
+          },
+          {
+            "x": 174,
+            "right": 257
+          },
+          {
+            "x": 8,
+            "right": 91
+          },
+          {
+            "x": 91,
+            "right": 174
+          },
+          {
+            "x": 174,
+            "right": 257
+          }
+        ],
+        "insets": {
+          "top": 0,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      }
+    },
+    {
+      "name": "narrow280: quick amounts inside safe width",
+      "pass": true
+    },
+    {
+      "name": "narrow280: Bayar above system bottom inset",
+      "pass": true
+    },
+    {
+      "name": "narrow280: original backspace renders32x32",
+      "pass": true
+    },
+    {
+      "name": "narrow280: last keypad row reachable above Bayar",
+      "pass": true
+    },
+    {
+      "name": "long-total320: no horizontal document overflow",
+      "pass": true
+    },
+    {
+      "name": "long-total320: amount inside safe width",
+      "pass": true,
+      "details": {
+        "x": 80.140625,
+        "y": 177,
+        "right": 249.53125,
+        "bottom": 225,
+        "width": 169.390625,
+        "height": 48,
+        "fontSize": "16.7081px",
+        "lineHeight": "48px",
+        "color": "rgb(57, 57, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "scroll": 169,
+        "client": 169
+      }
+    },
+    {
+      "name": "long-total320: all keypad buttons inside safe width",
+      "pass": true,
+      "details": {
+        "keys": [
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          },
+          {
+            "x": 0,
+            "right": 101.65625
+          },
+          {
+            "x": 101.65625,
+            "right": 203.328125
+          },
+          {
+            "x": 203.328125,
+            "right": 305
+          }
+        ],
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "name": "long-total320: quick amounts inside safe width",
+      "pass": true
+    },
+    {
+      "name": "long-total320: Bayar above system bottom inset",
+      "pass": true
+    },
+    {
+      "name": "long-total320: original backspace renders32x32",
+      "pass": true
+    },
+    {
+      "name": "long-total320: last keypad row reachable above Bayar",
+      "pass": true
+    },
+    {
+      "name": "Bound source stable during browser",
+      "pass": true,
+      "details": {
+        "drift": []
+      }
+    }
+  ],
+  "pass": 47,
+  "fail": 0,
+  "measurements": [
+    {
+      "scenario": {
+        "name": "reference390",
+        "width": 390,
+        "height": 844,
+        "insets": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "total": "186000",
+        "value": "186000"
+      },
+      "geometry": {
+        "amount": {
+          "x": 157.28125,
+          "y": 177,
+          "right": 276.296875,
+          "bottom": 225,
+          "width": 119.015625,
+          "height": 48,
+          "fontSize": "32px",
+          "lineHeight": "48px",
+          "color": "rgb(57, 57, 57)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 119,
+          "client": 119
+        },
+        "quick": [
+          {
+            "x": 81.96875,
+            "y": 420,
+            "right": 193.515625,
+            "bottom": 459,
+            "width": 111.546875,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 112,
+            "client": 112
+          },
+          {
+            "x": 193.515625,
+            "y": 420,
+            "right": 308.03125,
+            "bottom": 459,
+            "width": 114.515625,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 115,
+            "client": 115
+          }
+        ],
+        "keys": [
+          {
+            "x": 0,
+            "y": 475.5,
+            "right": 130,
+            "bottom": 534.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 130,
+            "y": 475.5,
+            "right": 260,
+            "bottom": 534.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 260,
+            "y": 475.5,
+            "right": 390,
+            "bottom": 534.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 0,
+            "y": 543.5,
+            "right": 130,
+            "bottom": 602.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 130,
+            "y": 543.5,
+            "right": 260,
+            "bottom": 602.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 260,
+            "y": 543.5,
+            "right": 390,
+            "bottom": 602.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 0,
+            "y": 612,
+            "right": 130,
+            "bottom": 671,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 130,
+            "y": 612,
+            "right": 260,
+            "bottom": 671,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 260,
+            "y": 612,
+            "right": 390,
+            "bottom": 671,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 0,
+            "y": 680.5,
+            "right": 130,
+            "bottom": 739.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 130,
+            "y": 680.5,
+            "right": 260,
+            "bottom": 739.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          },
+          {
+            "x": 260,
+            "y": 680.5,
+            "right": 390,
+            "bottom": 739.5,
+            "width": 130,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 130,
+            "client": 130
+          }
+        ],
+        "key1": {
+          "x": 0,
+          "y": 475.5,
+          "right": 130,
+          "bottom": 534.5,
+          "width": 130,
+          "height": 59,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 253, 253)",
+          "scroll": 130,
+          "client": 130
+        },
+        "backspace": {
+          "x": 309,
+          "y": 694,
+          "right": 341,
+          "bottom": 726,
+          "width": 32,
+          "height": 32,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 32,
+          "client": 32
+        },
+        "pay": {
+          "x": 20,
+          "y": 766,
+          "right": 370,
+          "bottom": 814,
+          "width": 350,
+          "height": 48,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(46, 120, 249)",
+          "scroll": 350,
+          "client": 350
+        },
+        "overflow": false
+      }
+    },
+    {
+      "scenario": {
+        "name": "small320",
+        "width": 320,
+        "height": 568,
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 0,
+          "right": 0
+        },
+        "total": "186000",
+        "value": "186000"
+      },
+      "geometry": {
+        "amount": {
+          "x": 114.78125,
+          "y": 177,
+          "right": 233.796875,
+          "bottom": 225,
+          "width": 119.015625,
+          "height": 48,
+          "fontSize": "32px",
+          "lineHeight": "48px",
+          "color": "rgb(57, 57, 57)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 119,
+          "client": 119
+        },
+        "quick": [
+          {
+            "x": 39.46875,
+            "y": 249,
+            "right": 151.015625,
+            "bottom": 288,
+            "width": 111.546875,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 112,
+            "client": 112
+          },
+          {
+            "x": 151.015625,
+            "y": 249,
+            "right": 265.53125,
+            "bottom": 288,
+            "width": 114.515625,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 115,
+            "client": 115
+          }
+        ],
+        "keys": [
+          {
+            "x": 0,
+            "y": 304.5,
+            "right": 101.65625,
+            "bottom": 363.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 304.5,
+            "right": 203.328125,
+            "bottom": 363.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 304.5,
+            "right": 305,
+            "bottom": 363.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 372.5,
+            "right": 101.65625,
+            "bottom": 431.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 372.5,
+            "right": 203.328125,
+            "bottom": 431.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 372.5,
+            "right": 305,
+            "bottom": 431.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 441,
+            "right": 101.65625,
+            "bottom": 500,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 441,
+            "right": 203.328125,
+            "bottom": 500,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 441,
+            "right": 305,
+            "bottom": 500,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 509.5,
+            "right": 101.65625,
+            "bottom": 568.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 509.5,
+            "right": 203.328125,
+            "bottom": 568.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 509.5,
+            "right": 305,
+            "bottom": 568.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          }
+        ],
+        "key1": {
+          "x": 0,
+          "y": 304.5,
+          "right": 101.65625,
+          "bottom": 363.5,
+          "width": 101.65625,
+          "height": 59,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 253, 253)",
+          "scroll": 102,
+          "client": 102
+        },
+        "backspace": {
+          "x": 238.15625,
+          "y": 523,
+          "right": 270.15625,
+          "bottom": 555,
+          "width": 32,
+          "height": 32,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 32,
+          "client": 32
+        },
+        "pay": {
+          "x": 20,
+          "y": 466,
+          "right": 300,
+          "bottom": 514,
+          "width": 280,
+          "height": 48,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(46, 120, 249)",
+          "scroll": 280,
+          "client": 280
+        },
+        "overflow": false
+      }
+    },
+    {
+      "scenario": {
+        "name": "landscape844",
+        "width": 844,
+        "height": 390,
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 34,
+          "right": 24
+        },
+        "total": "186000",
+        "value": "186000"
+      },
+      "geometry": {
+        "amount": {
+          "x": 381.78125,
+          "y": 177,
+          "right": 500.796875,
+          "bottom": 225,
+          "width": 119.015625,
+          "height": 48,
+          "fontSize": "32px",
+          "lineHeight": "48px",
+          "color": "rgb(57, 57, 57)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 119,
+          "client": 119
+        },
+        "quick": [
+          {
+            "x": 306.46875,
+            "y": 249,
+            "right": 418.015625,
+            "bottom": 288,
+            "width": 111.546875,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 112,
+            "client": 112
+          },
+          {
+            "x": 418.015625,
+            "y": 249,
+            "right": 532.53125,
+            "bottom": 288,
+            "width": 114.515625,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 115,
+            "client": 115
+          }
+        ],
+        "keys": [
+          {
+            "x": 34,
+            "y": 304.5,
+            "right": 291,
+            "bottom": 363.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 291,
+            "y": 304.5,
+            "right": 548,
+            "bottom": 363.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 548,
+            "y": 304.5,
+            "right": 805,
+            "bottom": 363.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 34,
+            "y": 372.5,
+            "right": 291,
+            "bottom": 431.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 291,
+            "y": 372.5,
+            "right": 548,
+            "bottom": 431.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 548,
+            "y": 372.5,
+            "right": 805,
+            "bottom": 431.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 34,
+            "y": 441,
+            "right": 291,
+            "bottom": 500,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 291,
+            "y": 441,
+            "right": 548,
+            "bottom": 500,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 548,
+            "y": 441,
+            "right": 805,
+            "bottom": 500,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 34,
+            "y": 509.5,
+            "right": 291,
+            "bottom": 568.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 291,
+            "y": 509.5,
+            "right": 548,
+            "bottom": 568.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          },
+          {
+            "x": 548,
+            "y": 509.5,
+            "right": 805,
+            "bottom": 568.5,
+            "width": 257,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 257,
+            "client": 257
+          }
+        ],
+        "key1": {
+          "x": 34,
+          "y": 304.5,
+          "right": 291,
+          "bottom": 363.5,
+          "width": 257,
+          "height": 59,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 253, 253)",
+          "scroll": 257,
+          "client": 257
+        },
+        "backspace": {
+          "x": 660.5,
+          "y": 523,
+          "right": 692.5,
+          "bottom": 555,
+          "width": 32,
+          "height": 32,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 32,
+          "client": 32
+        },
+        "pay": {
+          "x": 54,
+          "y": 288,
+          "right": 800,
+          "bottom": 336,
+          "width": 746,
+          "height": 48,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(46, 120, 249)",
+          "scroll": 746,
+          "client": 746
+        },
+        "overflow": false
+      }
+    },
+    {
+      "scenario": {
+        "name": "narrow280",
+        "width": 280,
+        "height": 568,
+        "insets": {
+          "top": 0,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        },
+        "total": "186000",
+        "value": "186000"
+      },
+      "geometry": {
+        "amount": {
+          "x": 94.78125,
+          "y": 177,
+          "right": 213.796875,
+          "bottom": 225,
+          "width": 119.015625,
+          "height": 48,
+          "fontSize": "32px",
+          "lineHeight": "48px",
+          "color": "rgb(57, 57, 57)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 119,
+          "client": 119
+        },
+        "quick": [
+          {
+            "x": 76.71875,
+            "y": 249,
+            "right": 188.265625,
+            "bottom": 288,
+            "width": 111.546875,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 112,
+            "client": 112
+          },
+          {
+            "x": 75.234375,
+            "y": 296,
+            "right": 189.75,
+            "bottom": 335,
+            "width": 114.515625,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 115,
+            "client": 115
+          }
+        ],
+        "keys": [
+          {
+            "x": 8,
+            "y": 351.5,
+            "right": 91,
+            "bottom": 410.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 91,
+            "y": 351.5,
+            "right": 174,
+            "bottom": 410.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 174,
+            "y": 351.5,
+            "right": 257,
+            "bottom": 410.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 8,
+            "y": 419.5,
+            "right": 91,
+            "bottom": 478.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 91,
+            "y": 419.5,
+            "right": 174,
+            "bottom": 478.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 174,
+            "y": 419.5,
+            "right": 257,
+            "bottom": 478.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 8,
+            "y": 488,
+            "right": 91,
+            "bottom": 547,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 91,
+            "y": 488,
+            "right": 174,
+            "bottom": 547,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 174,
+            "y": 488,
+            "right": 257,
+            "bottom": 547,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 8,
+            "y": 556.5,
+            "right": 91,
+            "bottom": 615.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 91,
+            "y": 556.5,
+            "right": 174,
+            "bottom": 615.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          },
+          {
+            "x": 174,
+            "y": 556.5,
+            "right": 257,
+            "bottom": 615.5,
+            "width": 83,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 83,
+            "client": 83
+          }
+        ],
+        "key1": {
+          "x": 8,
+          "y": 351.5,
+          "right": 91,
+          "bottom": 410.5,
+          "width": 83,
+          "height": 59,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 253, 253)",
+          "scroll": 83,
+          "client": 83
+        },
+        "backspace": {
+          "x": 199.5,
+          "y": 570,
+          "right": 231.5,
+          "bottom": 602,
+          "width": 32,
+          "height": 32,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 32,
+          "client": 32
+        },
+        "pay": {
+          "x": 28,
+          "y": 442,
+          "right": 252,
+          "bottom": 490,
+          "width": 224,
+          "height": 48,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(46, 120, 249)",
+          "scroll": 224,
+          "client": 224
+        },
+        "overflow": false
+      }
+    },
+    {
+      "scenario": {
+        "name": "long-total320",
+        "width": 320,
+        "height": 568,
+        "insets": {
+          "top": 0,
+          "bottom": 24,
+          "left": 0,
+          "right": 0
+        },
+        "total": "9007199254740991",
+        "value": "9007199254740991"
+      },
+      "geometry": {
+        "amount": {
+          "x": 80.140625,
+          "y": 177,
+          "right": 249.53125,
+          "bottom": 225,
+          "width": 169.390625,
+          "height": 48,
+          "fontSize": "16.7081px",
+          "lineHeight": "48px",
+          "color": "rgb(57, 57, 57)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 169,
+          "client": 169
+        },
+        "quick": [
+          {
+            "x": 58.96875,
+            "y": 249,
+            "right": 246.015625,
+            "bottom": 288,
+            "width": 187.046875,
+            "height": 39,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "scroll": 187,
+            "client": 187
+          }
+        ],
+        "keys": [
+          {
+            "x": 0,
+            "y": 304.5,
+            "right": 101.65625,
+            "bottom": 363.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 304.5,
+            "right": 203.328125,
+            "bottom": 363.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 304.5,
+            "right": 305,
+            "bottom": 363.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 372.5,
+            "right": 101.65625,
+            "bottom": 431.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 372.5,
+            "right": 203.328125,
+            "bottom": 431.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 372.5,
+            "right": 305,
+            "bottom": 431.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 441,
+            "right": 101.65625,
+            "bottom": 500,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 441,
+            "right": 203.328125,
+            "bottom": 500,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 441,
+            "right": 305,
+            "bottom": 500,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 0,
+            "y": 509.5,
+            "right": 101.65625,
+            "bottom": 568.5,
+            "width": 101.65625,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 101.65625,
+            "y": 509.5,
+            "right": 203.328125,
+            "bottom": 568.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          },
+          {
+            "x": 203.328125,
+            "y": 509.5,
+            "right": 305,
+            "bottom": 568.5,
+            "width": 101.671875,
+            "height": 59,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 253, 253)",
+            "scroll": 102,
+            "client": 102
+          }
+        ],
+        "key1": {
+          "x": 0,
+          "y": 304.5,
+          "right": 101.65625,
+          "bottom": 363.5,
+          "width": 101.65625,
+          "height": 59,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 253, 253)",
+          "scroll": 102,
+          "client": 102
+        },
+        "backspace": {
+          "x": 238.15625,
+          "y": 523,
+          "right": 270.15625,
+          "bottom": 555,
+          "width": 32,
+          "height": 32,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "scroll": 32,
+          "client": 32
+        },
+        "pay": {
+          "x": 20,
+          "y": 466,
+          "right": 300,
+          "bottom": 514,
+          "width": 280,
+          "height": 48,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(46, 120, 249)",
+          "scroll": 280,
+          "client": 280
+        },
+        "overflow": false
+      }
+    }
+  ],
+  "screenshots": [
+    "reference390.png",
+    "small320.png",
+    "landscape844.png",
+    "narrow280.png",
+    "long-total320.png"
+  ],
+  "build": {
+    "ticket": "PM-CASH-INPUT-PUBLICATION",
+    "historical": false,
+    "sources": {
+      "app/(no-layout)/(cashier)/cart/input-money.tsx": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+      "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+      "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+      "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+      "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+      "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db"
+    },
+    "transformedSources": {
+      "docs/qa/pm-cashier-cash-input-layout-publication-2026-10-10/preview-fixture/entry.jsx": "0b84edd2f141b1a454e9ba16041a64d37b20d9ce61d46cf7be5ae84911d0ff6d",
+      "components/ui/gluestack-ui-provider/index.web.tsx": "dcca3d7a9c95ce5e83b3ee2ddddd7a59021c2ad7be87b3c2ac5ffdeaa290ea50",
+      "components/ui/gluestack-ui-provider/config.ts": "dfabccd2c15bec680d84756a86fac2fadef0b64479ee3d35ec903c0abd3ff87e",
+      "components/ui/gluestack-ui-provider/script.ts": "88491a29b8e68985338a9eb8ab69f934c0dc63ea24c44dbce944f391cd62d7b1",
+      "app/(no-layout)/(cashier)/cart/input-money.tsx": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+      "docs/qa/pm-cashier-cash-input-layout-publication-2026-10-10/preview-fixture/router.jsx": "08c154dec26ce7b1278b4a11bd9f417e209698ddf788ff694c067bb47060a6e4",
+      "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+      "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+      "components/common/Form.tsx": "8b48a231541a6c1ab31bc5dab845caf8b1218bbe4b96f8a6ae8f05a005d19318",
+      "components/icons/index.ts": "e49cb21f2e590db3616832f63c6431fb5647c18b4e88b4f91b278ddea39d7540",
+      "components/icons/add.tsx": "031d2ef49655cef59eec90acf606b3b45f0b47c51f52de75e0caddeda0236dac",
+      "components/icons/createIcon.tsx": "bd454462e49dc3033314f34aabb295b6c804a28f409778d356c146f569d5f43b",
+      "components/icons/ai.tsx": "d6b21a5dc83c486ae5262d1dadd3e92c5b55e7ba3b76983cb28d7aee3314b430",
+      "components/icons/arrow-circle-right.tsx": "1b79da943e59815f9562854ee00822eadcf3dac2649268273c6156b487eb6804",
+      "components/icons/arrow-up.tsx": "f6216c5492383e58bb99f1ee3b07627e1de9090fcf27dd990a7be7eefaa3c377",
+      "components/icons/backspace.tsx": "3ff28ba5f63bd40c3362eddf210c6d7f85a449b1bd064dde6be6de220b0b4389",
+      "components/icons/calculator.tsx": "126f1f4e1309bd70087e4fc7bf04ad46eb093e3f368d5b934545470e390a7859",
+      "components/icons/calendar.tsx": "4a662338753001969da8af7696f03b8d3560e5369b7d3ed65349d5d7985baf3f",
+      "components/icons/camera.tsx": "316198ebbd885bf5d592a0f0e24dbad9f67879fe31276e8dc86d2c4963e734f7",
+      "components/icons/card.tsx": "45791056056dd8834a00c446ccffe476d90d4696074a0c0a858e4d5d9d5a5aa2",
+      "components/icons/chart.tsx": "f49b41d2955afcc0ae1560ed8c43778bb95616129d3511d33f014b530a16037d",
+      "components/icons/check-circle.tsx": "c0c3b76d2e81be146dff373518cec7426d0c00e795c8e8a96bc853fb69f80623",
+      "components/icons/discount.tsx": "21753737172a7613ccf6a76ed59a56aad521a56f05713a3d491a76010336b257",
+      "components/icons/down-trend.tsx": "cd5b284d322ade7996399e34469e798eecd087db3703ae3bcec3027ce3bec0dc",
+      "components/icons/download.tsx": "fc81b1296866c93959013bc3a716c4e76e8fd84bd9ab233da7b25a9488213567",
+      "components/icons/filter.tsx": "364baba070b5b581822bec207e37563ab26da9bddc690d5c89358be1061e4279",
+      "components/icons/info.tsx": "a945b2e2bb9c77a05998d0b321c23f889ff8a7d5b860aa92a3c0c04d3111d1d1",
+      "components/icons/inventory.tsx": "a424597d1c2797701e5d5a0ca22f4abe8bf09da43dd5872b7e3962be3c7bd75e",
+      "components/icons/journal-code.tsx": "daafc055f639564f520abbb1eb2d30e5532dffd3fe26cd85de3f2e408ee3df59",
+      "components/icons/list.tsx": "4f14980045a9e467d92bacce356091c8d83daff8eee012bec4034ee575094756",
+      "components/icons/manager.tsx": "070ef68138b1d5f970dc00a068c39719ede069dee2a004dfdf3181d5943f446e",
+      "components/icons/menu.tsx": "5407961aa28f3a95084d38cc3426b3673c7deca54b39290a70114cfc0553d7e1",
+      "components/icons/profit.tsx": "5a97e5b299460848fb241c50fe551584734551c466342686fc5a6c629f78ae86",
+      "components/icons/receipt.tsx": "a49b5ac38f47b39ca02a79238228a379d2472de699df084c32ad0759b10944b0",
+      "components/icons/report.tsx": "b17659169db8004aee576841f9a2434d587031ce28ab2d845edd19869bb053fb",
+      "components/icons/search.tsx": "e141252da7687fca49774af836c92820966a0ef0d2ecccc620a250d7be247a41",
+      "components/icons/store.tsx": "04b7c12bee15bdc2d3e5596ac3a44c28c3a60f3a2b0ba287a3a7dabfd14d9f79",
+      "components/icons/table.tsx": "53df755415cf3321bf5383091578c11504040ff78b97a9be3213d7116190efa3",
+      "components/icons/wallet.tsx": "c97ab0830f25e688c4886d9a71f74d057e520e2cc8a26b7760d83641dab190b3",
+      "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+      "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+      "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+      "lib/utils/dates.ts": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+      "lib/utils/colors.ts": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+      "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+      "components/ui/checkbox/index.tsx": "d8ba61add05f23fe4e7013e2c3d9ef26f35b231a878b68335a35d957ba376d88",
+      "components/ui/input/index.tsx": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+      "components/ui/radio/index.tsx": "8ce38c0c32d330772b138d6531178f70daf9858bbaea07687e739ad02d181842",
+      "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+      "components/common/SearchBar.tsx": "0e44eed89a277f3604d4686642448fd71a7751e586b4ebbb34a4f3b361a1476f",
+      "components/common/SortActionSheet.tsx": "f41a34416b06f136b8b952824c09988d758fae917cafa8a45996f8c9c56182e4",
+      "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+      "components/ui/actionsheet/index.tsx": "54834ea934beef6100f71b752d7d9770a5da16cc1d1f89f9a9e2d51ce43cf491",
+      "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+      "assets/images/figma/back-office/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+      "assets/images/figma/back-office/chevron-down.svg": "bcb6b6d7cba1aa72b37f761b613f73dbd2249cfa2e34eaeaef06838976648e9f",
+      "components/common/Keypad.tsx": "720a143703d2b92c5601dc69f8b9a6bc9d3d17f4b93c6fd1236c2d71a39cedc2",
+      "lib/cashier/cash-input-theme.ts": "45acc259ecabdd5b664a20a221e0d90c028b112c2fdd40c54d1f5cdb2c70bc3f",
+      "assets/images/figma/cashier/cash-input/backspace.svg": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db",
+      "components/ui/button/index.tsx": "b4f765670f7f4a4b1dd2ab1249860cc3e296b7f165eee4bd9e2e1678c0c084b1",
+      "lib/cashier/cash-input.ts": "236496917c8f21b233f69d65f137688d72475da0fda3c309b3b058b8563537f1",
+      "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0",
+      "app/(no-layout)/(cashier)/cart/_layout.tsx": "0aa6417454f0213aa8bdf5c25686d09cff92476afde15089a0a0d4d2e3154508",
+      "components/common/Header.tsx": "f9bb58ae403daa91af041ce5c8b175678b80a8b427f0156879aeb19cefd589db",
+      "constants/index.ts": "3416d38047fd6fb376c114c1652c9a1fb26f93149232654d4760fc499344635c",
+      "assets/images/figma/back-office/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+      "docs/qa/pm-cashier-cash-input-layout-publication-2026-10-10/preview-fixture/stack.jsx": "99214d0f6f33284204ac860f0b20518f5f8fc14591a00e86876ba883a57407ff",
+      "assets/fonts/Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+      "assets/fonts/Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+      "assets/fonts/Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023"
+    },
+    "fixtureHashes": {
+      "entry.jsx": "0b84edd2f141b1a454e9ba16041a64d37b20d9ce61d46cf7be5ae84911d0ff6d",
+      "router.jsx": "08c154dec26ce7b1278b4a11bd9f417e209698ddf788ff694c067bb47060a6e4",
+      "stack.jsx": "99214d0f6f33284204ac860f0b20518f5f8fc14591a00e86876ba883a57407ff"
+    },
+    "bundleHash": "239bb611d9629baf565f8aa44fc56934a81f47cd6aa1765daf6f24a8f48ee1f7",
+    "styleHash": "d6b3aa82a724dab92d3c8720b149b8c1315e5347aceb15a4bd3852e5f3f9d3b9",
+    "before": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "node_modules/react-native-css-interop/.cache/android.js": "a85e261d8dba07c9cb2e4335d734c4eea432eedf263cb2e09ee3c81d17fe92e2"
+    },
+    "after": {
+      "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+      "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+      "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+      "node_modules/react-native-css-interop/.cache/android.js": "a85e261d8dba07c9cb2e4335d734c4eea432eedf263cb2e09ee3c81d17fe92e2"
+    },
+    "drift": [],
+    "assetCount": 26,
+    "bytes": 10162948,
+    "scope": "Actual production source/components/fonts/CSS on RN Web; historical mode resolves the intake screen snapshot explicitly. Router/focus/stack-header selection and safe-area seed are fixtures. One worker and private caches, no listener/shared runtime/config mutation. Full Expo bootstrap/router/native/payment excluded."
+  },
+  "errors": [],
+  "consoleErrors": [],
+  "blockedRequests": []
+}

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "Tagihan card delta only adds1px right margin",
+      "pass": true
+    },
+    {
+      "name": "Tagihan screen delta only changes navbar clearance/import/hook",
+      "pass": true
+    },
+    {
+      "name": "Cash focused state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash insets state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash active state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash submitting state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash form state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash value state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash displayValue state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash amountWidth state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash amount state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash isValid state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash setValue state/validation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash continue guard and navigation preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash focus/lifecycle and missing-total effects preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash local route parsing/remount preserved",
+      "pass": true
+    },
+    {
+      "name": "Cash original archived asset imgIcon",
+      "pass": true,
+      "details": {
+        "file": "assets/images/figma/cashier/cash-input/backspace.svg",
+        "sha256": "028bc901c4e2dbd60518c7d3e599f581899de2593a3b108c65b653f2f083d4db",
+        "url": "https://www.figma.com/api/mcp/asset/8a65a7e3-fe53-4a3c-97cd-b1b5e34172b6.svg"
+      }
+    },
+    {
+      "name": "Cash original archived asset imgIconChevronLeft",
+      "pass": true,
+      "details": {
+        "file": "assets/images/figma/back-office/back.svg",
+        "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+        "url": "https://www.figma.com/api/mcp/asset/f43a164a-9691-49bb-80a4-590b9a0bec68.svg"
+      }
+    },
+    {
+      "name": "Existing cash dependency preserved components/common/Keypad.tsx",
+      "pass": true
+    },
+    {
+      "name": "Existing cash dependency preserved app/(no-layout)/(cashier)/cart/_layout.tsx",
+      "pass": true
+    },
+    {
+      "name": "Existing cash dependency preserved lib/cashier/cash-input.ts",
+      "pass": true
+    },
+    {
+      "name": "Existing cash dependency preserved lib/cashier/cash-input-theme.ts",
+      "pass": true
+    },
+    {
+      "name": "Existing cash dependency preserved assets/images/figma/cashier/cash-input/backspace.svg",
+      "pass": true
+    }
+  ],
+  "pass": 23,
+  "fail": 0,
+  "sourceHashes": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+    "components/feature/cashier/bills/BillReferenceCard.tsx": "6a16337ed6b8ffd689d07f0a08d66e9f88346a40c459b5c969bc7703c4ba9977",
+    "components/feature/cashier/bills/BillsFigmaPreview.tsx": "9a61a448f9a66d8b2eecde4cd872bd65eed9270484b809ab9456f1ed13902bb5"
+  },
+  "cashBuildSource": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+  "scope": "Independent canonical TypeScript source comparison; checks bounded UI deltas, unchanged guarded cash behavior and original archived SVG bytes."
+}

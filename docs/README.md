@@ -660,3 +660,7 @@ SD5-011-INVENTORY-COLORS-READY-FOR-QA-QC-RECHECK: [koreksi warna Inventory](qa/s
 ### Publikasi QC / PM — 9 Oktober 2026
 
 Pengguna meminta push ke branch `integration/qc-pm-2026-10-09` kemudian `main`. Cakupan/batas/hasil pemeriksaan terkini berada pada [laporan integrasi](qa/pm-main-integration-2026-10-09/REPORT.md). Perubahan Kasir yang belum diserahkan tidak ikut; laporan historis bukan kelulusan source integrasi. Sembilan error lint pada tujuh source baseline tetap backlog, seluruh pencocokan Figma/native/backend belum selesai.
+
+### Uang Diterima — publikasi 10 Oktober 2026
+
+Halaman cart/input-money mempertahankan alur pembayaran yang ada dan memperbaiki inset tepi, nominal panjang serta pembungkusan pilihan uang pada layar sempit. Source dan hasil pemeriksaan kandidat main tersedia di [receipt PM](qa/pm-cashier-cash-input-layout-publication-2026-10-10/REPORT.md). Pengujian RNWeb tidak menyatakan pembayaran operasional atau native HP telah tervalidasi.
