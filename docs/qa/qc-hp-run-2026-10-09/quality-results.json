@@ -1,0 +1,95 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-08T20:01:24.033Z",
+  "status": "PASS",
+  "lint": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/eslint/bin/eslint.js",
+      "scripts/start-hp.cjs",
+      "--no-cache",
+      "--max-warnings",
+      "0",
+      "--format",
+      "json"
+    ],
+    "exitCode": 0
+  },
+  "biome": {
+    "executable": "D:\\laragon\\bin\\node.exe",
+    "args": [
+      "node_modules/@biomejs/biome/bin/biome",
+      "check",
+      "scripts/start-hp.cjs",
+      "package.json"
+    ],
+    "exitCode": 0
+  },
+  "diff": {
+    "executable": "git",
+    "args": [
+      "-c",
+      "core.autocrlf=false",
+      "diff",
+      "--check",
+      "--",
+      "scripts/start-hp.cjs",
+      "package.json",
+      "README.md",
+      "docs/RUN_DI_HP.md"
+    ],
+    "exitCode": 0
+  },
+  "eslintErrors": 0,
+  "eslintWarnings": 0,
+  "onlyScriptAddedToPackage": true,
+  "sourceUnchangedSinceTests": true,
+  "unchangedContracts": [
+    {
+      "file": "package-lock.json",
+      "before": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "after": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+      "passed": true
+    },
+    {
+      "file": "metro.config.js",
+      "before": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "after": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+      "passed": true
+    },
+    {
+      "file": "tailwind.config.js",
+      "before": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "after": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+      "passed": true
+    },
+    {
+      "file": "scripts/preserve-nativewind-cache.cjs",
+      "before": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "after": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "scripts/start-hp.cjs": "1bc1bf4ac7f1ce18c63f96057211b645daea679b3bf93f9c161ab4a5fa0d7a89",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "README.md": "4eb833139c8b36e827d76ee73b1267e11137922e531d42fb7c8d9cd520132556",
+    "docs/RUN_DI_HP.md": "ee68bbc964b6d6bc6e6f3823a70b0ed97f6c1c3087e57e8521413cec7db9f3fb"
+  },
+  "externalWorkspaceChanges": [
+    {
+      "file": "app/index.tsx",
+      "before": "e418f6ecea2877bdd1e15e1f643a3bae5035122167c349ba8eca2d4dad044d02",
+      "current": "8e25af3cbd371652b9b8308041b935964f2caae045c10640675802acbb9b45e8",
+      "changedDuringWork": true,
+      "ownedByThisChange": false
+    },
+    {
+      "file": "docs/README.md",
+      "before": "2b2cf9a4e1b932b68dee9ab5d1290519cacc37a81d996523e56f66d026247601",
+      "current": "7b7c66fb785696ea3ff611d89e9f44b7665e4ff6d6e445420d369cfabe3a4351",
+      "changedDuringWork": true,
+      "ownedByThisChange": false
+    }
+  ]
+}

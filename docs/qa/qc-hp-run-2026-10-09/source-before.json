@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-10-08T19:47:15.515Z",
+  "hashes": {
+    "package.json": "540274bef5f7dc3976e27af975fa37759de5d93553b7b5f4cc9a45913e15082f",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "README.md": "488a18bbc9130b20e56a9ade4c793004bdf5b06696a967ad5ee0dcc09e212ca7",
+    "metro.config.js": "dc362fab1b6d885b38d4cc7ef3d20dbfe34678ed2b731f8c4f32e3c755480160",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "scripts/preserve-nativewind-cache.cjs": "5bb311ea0ca8d118e825e82a09b8b61297615c9549195b02be2a9b889a8773ed",
+    "app/index.tsx": "e418f6ecea2877bdd1e15e1f643a3bae5035122167c349ba8eca2d4dad044d02",
+    "docs/README.md": "2b2cf9a4e1b932b68dee9ab5d1290519cacc37a81d996523e56f66d026247601"
+  }
+}

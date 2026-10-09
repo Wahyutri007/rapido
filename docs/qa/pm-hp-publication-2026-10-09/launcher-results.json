@@ -1,0 +1,616 @@
+{
+  "owner": "QC",
+  "createdAt": "2026-10-09T00:09:55.540Z",
+  "scope": "Production HP launcher in VM, actual filesystem/project version, controlled device/HTTP/process adapters; no real process kill/phone operations in this suite",
+  "sourceHashes": {
+    "scripts/start-hp.cjs": "1bc1bf4ac7f1ce18c63f96057211b645daea679b3bf93f9c161ab4a5fa0d7a89"
+  },
+  "passed": 49,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "warm server: opens expected Expo Go URI once",
+      "actual": [
+        [
+          "-s",
+          "QC-PHONE",
+          "shell",
+          "am",
+          "start",
+          "-W",
+          "-a",
+          "android.intent.action.VIEW",
+          "-d",
+          "exp://127.0.0.1:8088",
+          "-p",
+          "host.exp.exponent"
+        ]
+      ],
+      "expected": [
+        [
+          "-s",
+          "QC-PHONE",
+          "shell",
+          "am",
+          "start",
+          "-W",
+          "-a",
+          "android.intent.action.VIEW",
+          "-d",
+          "exp://127.0.0.1:8088",
+          "-p",
+          "host.exp.exponent"
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "name": "warm server: reverses Metro and backend for selected phone",
+      "actual": [
+        [
+          "-s",
+          "QC-PHONE",
+          "reverse",
+          "tcp:8088",
+          "tcp:8088"
+        ],
+        [
+          "-s",
+          "QC-PHONE",
+          "reverse",
+          "tcp:8001",
+          "tcp:8001"
+        ]
+      ],
+      "expected": [
+        [
+          "-s",
+          "QC-PHONE",
+          "reverse",
+          "tcp:8088",
+          "tcp:8088"
+        ],
+        [
+          "-s",
+          "QC-PHONE",
+          "reverse",
+          "tcp:8001",
+          "tcp:8001"
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "name": "warm server: never starts or kills existing process",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "warm server: HTTP probes are read only",
+      "actual": [
+        "GET"
+      ],
+      "expected": [
+        "GET"
+      ],
+      "passed": true
+    },
+    {
+      "name": "check flag: no launch, reverse, spawn or kill",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "multiple devices: explicit serial scopes all mutation commands",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "no phone: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "no phone: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "unauthorized: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "unauthorized: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "offline selected: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "offline selected: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "multiple unspecified: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "multiple unspecified: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "missing selected: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "missing selected: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "missing serial argument: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "missing serial argument: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "unknown flag: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "unknown flag: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "old Node: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "old Node: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "dependency missing: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "dependency missing: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "ADB missing: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "ADB missing: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "SDK mismatch: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "SDK mismatch: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "backend unavailable: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "backend unavailable: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "backend maintenance: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "backend maintenance: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "nonlocal backend: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "nonlocal backend: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "occupied non-Metro port: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "occupied non-Metro port: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "foreign Metro project: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "foreign Metro project: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "Metro SDK mismatch: actionable error before launch",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Metro SDK mismatch: leaves app/ports/processes untouched",
+      "actual": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "USB reverse error: reports failure and cannot launch",
+      "actual": [
+        true,
+        0,
+        0
+      ],
+      "expected": [
+        true,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "cold server: starts one Metro and opens phone",
+      "actual": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "name": "cold server: Expo Go/local IPv4/8088/one worker/offline flags",
+      "actual": [
+        "start",
+        "--go",
+        "--localhost",
+        "--port",
+        "8088",
+        "--max-workers",
+        "1",
+        "--offline"
+      ],
+      "expected": [
+        "start",
+        "--go",
+        "--localhost",
+        "--port",
+        "8088",
+        "--max-workers",
+        "1",
+        "--offline"
+      ],
+      "passed": true
+    },
+    {
+      "name": "cold server: child uses application directory and hidden window",
+      "actual": [
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev",
+        true
+      ],
+      "expected": [
+        "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev",
+        true
+      ],
+      "passed": true
+    },
+    {
+      "name": "cold server: backend env applies to owned child, parent unchanged",
+      "actual": [
+        "http://127.0.0.1:8001/api",
+        "http://127.0.0.1:8001/api",
+        0
+      ],
+      "expected": [
+        "http://127.0.0.1:8001/api",
+        "http://127.0.0.1:8001/api",
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "cold server: SIGINT listener removed after own child exits",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "spawn error: reports error and cannot open HP",
+      "actual": [
+        true,
+        0
+      ],
+      "expected": [
+        true,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "name": "spawn error: no foreign process is killed",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "help: no device/HTTP/process operations",
+      "actual": [
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    }
+  ]
+}
