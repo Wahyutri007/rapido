@@ -20,14 +20,12 @@ import {
 	type PressableProps,
 	ScrollView,
 	SectionList,
-	useWindowDimensions,
 	View,
 	type ViewStyle,
 	VirtualizedList,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Text from "@/components/common/Text";
 import { Colors } from "@/constants/Colors";
+import Text from "@/components/common/Text"
 
 const ItemWrapper = React.forwardRef<
 	React.ComponentRef<typeof Pressable>,
@@ -244,7 +242,6 @@ type IActionsheetProps = VariantProps<typeof actionsheetStyle> &
 type IActionsheetContentProps = VariantProps<typeof actionsheetContentStyle> &
 	React.ComponentPropsWithoutRef<typeof UIActionsheet.Content> & {
 		className?: string;
-		bottomInsetHandled?: boolean;
 	};
 
 type IActionsheetItemProps = VariantProps<typeof actionsheetItemStyle> &
@@ -317,12 +314,7 @@ const Actionsheet = React.forwardRef<
 const ActionsheetContent = React.forwardRef<
 	React.ComponentRef<typeof UIActionsheet.Content>,
 	IActionsheetContentProps
->(function ActionsheetContent(
-	{ className, children, style, bottomInsetHandled = false, ...props },
-	ref,
-) {
-	const insets = useSafeAreaInsets();
-	const { width } = useWindowDimensions();
+>(function ActionsheetContent({ className, ...props }, ref) {
 	return (
 		<UIActionsheet.Content
 			className={actionsheetContentStyle({
@@ -330,23 +322,7 @@ const ActionsheetContent = React.forwardRef<
 			})}
 			ref={ref}
 			{...props}
-			style={[
-				insets.left + insets.right > 0 && {
-					width: Math.max(0, width - insets.left - insets.right),
-					alignSelf: "flex-start",
-					marginLeft: insets.left,
-				},
-				style,
-			]}
-		>
-			{children}
-			{!bottomInsetHandled && insets.bottom > 0 && (
-				<View
-					pointerEvents="none"
-					style={{ height: insets.bottom, flexShrink: 0, alignSelf: "stretch" }}
-				/>
-			)}
-		</UIActionsheet.Content>
+		/>
 	);
 });
 

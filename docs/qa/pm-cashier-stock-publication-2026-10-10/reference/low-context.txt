@@ -1,0 +1,167 @@
+const imgIconChevronLeft = "https://www.figma.com/api/mcp/asset/d9805fe3-31bc-44b7-80ca-de8e982c3e1b.svg";
+const imgIconSearch = "https://www.figma.com/api/mcp/asset/eae1d3b3-2acf-4230-8cc1-b47ea23507e2.svg";
+const imgIcon = "https://www.figma.com/api/mcp/asset/4824f12a-4b28-481e-9834-cf3b65242946.svg";
+const imgDivider = "https://www.figma.com/api/mcp/asset/77c2b13e-fa60-4cff-89d1-b598b3876037.svg";
+const imgDivider1 = "https://www.figma.com/api/mcp/asset/d1e49e79-2285-46af-80ca-27314232f499.svg";
+
+export default function StokMenipis() {
+  return (
+    <div className="bg-[#f7f8fa] relative size-full" data-node-id="29:27343" data-name="Stok - Menipis">
+      <div className="absolute h-[19px] left-0 top-0 w-[390px]" data-node-id="29:27344" />
+      <div className="absolute bg-white border-[#f8f7f7] border-b border-solid content-stretch flex items-center justify-between left-[-0.25px] pb-[16px] pt-[32px] px-[16px] top-0 w-[390px]" data-node-id="29:27345" data-name="Heading Page">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0 size-[24px]" data-node-id="I29:27345;1:3041" data-name="Left Icon">
+          <a className="block cursor-pointer relative shrink-0 size-[24px]" data-node-id="I29:27345;1:3043" data-name="Icon/chevron-left">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconChevronLeft} />
+          </a>
+        </div>
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-px not-italic relative text-[#2c2c2c] text-[16px] text-center" data-node-id="I29:27345;1:3044">
+          Stok Produk
+        </p>
+        <div className="content-stretch flex gap-[8px] items-center justify-end relative shrink-0 size-[24px]" data-node-id="I29:27345;1:3045" data-name="Right Icon" />
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[16px] items-start left-[15.75px] top-[96px] w-[358px]" data-node-id="29:27346">
+        <div className="content-stretch flex gap-[16px] items-center relative rounded-[12px] shrink-0 w-full" data-node-id="29:27347" data-name="search-container">
+          <div className="bg-white border border-[#f5f5f5] border-solid content-stretch drop-shadow-[0px_2px_4px_rgba(0,0,0,0.06)] flex flex-[1_0_0] gap-[12px] items-center min-w-px px-[16px] py-[15px] relative rounded-[12px]" data-node-id="I29:27347;1:2983" data-name="input-field">
+            <div className="relative shrink-0 size-[18px]" data-node-id="I29:27347;1:2984" data-name="Icon/search">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconSearch} />
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[1.3] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="I29:27347;1:2985">
+              Cari...
+            </p>
+          </div>
+          <div className="bg-[rgba(46,120,249,0.1)] border border-[rgba(46,120,249,0.1)] border-solid content-stretch flex gap-[8px] h-[48px] items-center justify-center px-[16px] py-[12px] relative rounded-[8px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] shrink-0" data-node-id="I29:27347;1:2986" data-name="icon-button">
+            <div className="flex items-center justify-center relative shrink-0 size-[16px]" data-node-id="I29:27347;1:2987">
+              <div className="-rotate-90 flex-none">
+                <div className="relative size-[16px]" data-name="Icon">
+                  <div className="absolute inset-[-3.13%]">
+                    <img alt="" className="block max-w-none size-full" src={imgIcon} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="29:27348">
+          <div className="bg-white border border-[#f8f7f7] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[12px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] shrink-0 w-[357px]" data-node-id="29:27349">
+            <div className="[word-break:break-word] bg-[rgba(46,120,249,0.05)] content-stretch flex font-['Inter:Semi_Bold'] font-semibold items-center justify-between leading-[0] not-italic overflow-clip p-[16px] relative shrink-0 text-[#2e78f9] text-[14px] w-full whitespace-nowrap" data-node-id="29:27350">
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27351">
+                <p className="leading-[1.3]">Baju</p>
+              </div>
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27352">
+                <p className="leading-[1.3]">Stok</p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[12px] items-start p-[12px] relative shrink-0 w-full" data-node-id="29:27353" data-name="Product Stok Wrapp">
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="29:27354">
+                <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[243px]" data-node-id="29:27355">
+                  <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#2c2c2c] text-[12px] whitespace-nowrap" data-node-id="29:27356">
+                    <p className="leading-[1.3]">Baju Kemeja Lengan Panjang</p>
+                  </div>
+                  <div className="content-stretch flex items-start relative shrink-0" data-node-id="29:27357">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27358">
+                      <p className="leading-[1.3]">Size S</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27359">
+                  <p className="leading-[1.3]">2 Pcs</p>
+                </div>
+              </div>
+              <div className="h-0 relative shrink-0 w-full" data-node-id="29:27360" data-name="Divider">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgDivider} />
+                </div>
+              </div>
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="29:27361">
+                <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[243px]" data-node-id="29:27362">
+                  <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#2c2c2c] text-[0px] whitespace-nowrap" data-node-id="29:27363">
+                    <p className="leading-[1.3] text-[12px]">Baju Kemeja Lengan Panjang</p>
+                  </div>
+                  <div className="content-stretch flex items-start relative shrink-0" data-node-id="29:27364">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27365">
+                      <p className="leading-[1.3]">Size M</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27366">
+                  <p className="leading-[1.3]">8 Pcs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white border border-[#f8f7f7] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[12px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] shrink-0 w-full" data-node-id="29:27367">
+            <div className="[word-break:break-word] bg-[rgba(46,120,249,0.05)] content-stretch flex font-['Inter:Semi_Bold'] font-semibold items-center justify-between leading-[0] not-italic overflow-clip p-[16px] relative shrink-0 text-[#2e78f9] text-[14px] w-full whitespace-nowrap" data-node-id="29:27368">
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27369">
+                <p className="leading-[1.3]">Celana</p>
+              </div>
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27370">
+                <p className="leading-[1.3]">Stok</p>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[12px] items-start p-[12px] relative shrink-0 w-full" data-node-id="29:27371" data-name="Product Stock Wrapp">
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="29:27372">
+                <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[243px]" data-node-id="29:27373">
+                  <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] min-w-full not-italic relative shrink-0 text-[#2c2c2c] text-[12px] w-[min-content]" data-node-id="29:27374">
+                    <p className="leading-[1.3]">Celana Jeans</p>
+                  </div>
+                  <div className="content-stretch flex items-start relative shrink-0" data-node-id="29:27375">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27376">
+                      <p className="leading-[1.3]">Ukuran 24</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27377">
+                  <p className="leading-[1.3]">2 Pcs</p>
+                </div>
+              </div>
+              <div className="h-0 relative shrink-0 w-full" data-node-id="29:27378" data-name="Divider">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgDivider1} />
+                </div>
+              </div>
+              <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="29:27379">
+                <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[243px]" data-node-id="29:27380">
+                  <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] min-w-full not-italic relative shrink-0 text-[#2c2c2c] text-[12px] w-[min-content]" data-node-id="29:27381">
+                    <p className="leading-[1.3]">Celana Jeans</p>
+                  </div>
+                  <div className="content-stretch flex items-start relative shrink-0" data-node-id="29:27382">
+                    <div className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27383">
+                      <p className="leading-[1.3]">Ukuran 26</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-medium justify-end leading-[0] not-italic relative shrink-0 text-[#8f8f8f] text-[12px] whitespace-nowrap" data-node-id="29:27384">
+                  <p className="leading-[1.3]">9 Pcs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white border border-[#f8f7f7] border-solid content-stretch flex flex-col items-center justify-center overflow-clip relative rounded-[12px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06)] shrink-0 w-full" data-node-id="29:27385">
+            <div className="[word-break:break-word] bg-[rgba(46,120,249,0.05)] content-stretch flex font-['Inter:Semi_Bold'] font-semibold items-center justify-between leading-[0] not-italic overflow-clip p-[16px] relative shrink-0 text-[#2e78f9] text-[14px] w-full whitespace-nowrap" data-node-id="29:27386">
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27387">
+                <p className="leading-[1.3]">Titipan</p>
+              </div>
+              <div className="flex flex-col justify-end relative shrink-0" data-node-id="29:27388">
+                <p className="leading-[1.3]">Stok</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Neutrals/Neutrals 700: #8F8F8F, Neutrals/Neutrals 1000: #2C2C2C, Body/Large/Semi Bold: Font(family: "Inter", style: Semi Bold, size: 16, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: 0), Neutrals/Neutrals 100: #FFFFFF, Neutrals/Neutrals 150: #F8F7F7, Body/Small/Regular: Font(family: "Inter", style: Regular, size: 12, weight: 400, lineHeight: 1.2999999523162842, letterSpacing: 0), Neutrals/Neutrals 200: #F5F5F5, card taqur: Effect(type: DROP_SHADOW, color: #0000000F, offset: (0, 2), radius: 8, spread: 0), Accent/Blue/100: #2E78F9, Accent/Blue/10: #2E78F9, Body/Normal/Semi Bold: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: 0), Accent/Blue/5: #2E78F9, Body/Small/Medium: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: 0), Neutrals/Neutrals 300: #EEEEEE, Neutrals/White Background: #F7F8FA.
+
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

@@ -1,0 +1,139 @@
+const imgMaterialSymbolsCheckRounded = "https://www.figma.com/api/mcp/asset/1fd9b786-718c-40f1-9a3b-224274c6a423.svg";
+const imgMenuCloseMd = "https://www.figma.com/api/mcp/asset/efc86995-6009-4941-8d24-67322a8c7e3c.svg";
+
+type CheckBoxProps = {
+  className?: string;
+  active?: boolean;
+};
+
+function CheckBox({ className, active = true }: CheckBoxProps) {
+  const isNotActive = !active;
+  return (
+    <button className={className || `relative rounded-[4px] size-[16px] ${isNotActive ? "bg-white block border border-[#e7e7e7] border-solid" : "bg-[#2e78f9] content-stretch flex items-center justify-center p-[2px]"}`} id={isNotActive ? "node-29_18506" : "node-29_18503"}>
+      {active && (
+        <div className="relative shrink-0 size-[12px]" data-node-id="29:18504" data-name="material-symbols:check-rounded">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMaterialSymbolsCheckRounded} />
+        </div>
+      )}
+    </button>
+  );
+}
+
+export default function PopUpTipePesanan() {
+  return (
+    <div className="bg-white content-stretch flex flex-col gap-[24px] items-center overflow-clip px-[16px] relative rounded-tl-[20px] rounded-tr-[20px] shadow-[0px_-2px_9.1px_0px_rgba(0,0,0,0.06)] size-full" data-node-id="29:27391" data-name="Pop-Up Tipe Pesanan">
+      <div className="bg-white border-[#f5f5f5] border-b border-solid content-stretch flex items-center justify-between pb-[16px] pt-[32px] px-[16px] relative shrink-0 w-[390px]" data-node-id="29:27392" data-name="Heading Page">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0 size-[24px]" data-node-id="I29:27392;1:3041" data-name="Left Icon">
+          <button className="block cursor-pointer relative shrink-0 size-[24px]" data-node-id="I29:27392;1:3043" data-name="Icon/chevron-left">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMenuCloseMd} />
+          </button>
+        </div>
+        <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-px not-italic relative text-[#2c2c2c] text-[16px] text-center" data-node-id="I29:27392;1:3044">
+          Opsi Filter
+        </p>
+        <div className="content-stretch flex gap-[8px] items-center justify-end relative shrink-0 size-[24px]" data-node-id="I29:27392;1:3045" data-name="Right Icon">
+          <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2e78f9] text-[14px] text-center whitespace-nowrap" data-node-id="I29:27392;1:3046">
+            Reset
+          </p>
+        </div>
+        <button className="-translate-x-1/2 absolute bg-[#e7e7e7] block cursor-pointer h-[4px] left-1/2 rounded-[24px] top-[8px] w-[36px]" data-node-id="I29:27392;1:3054" data-name="Gestur" />
+      </div>
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[346px]" data-node-id="29:27393">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[16px] text-center whitespace-nowrap" data-node-id="29:27394">
+          Filter Berdasarkan Status
+        </p>
+        <div className="content-start flex flex-wrap gap-[16px] items-start relative shrink-0 w-full" data-node-id="29:27395">
+          <div className="bg-white border border-[#eee] border-solid content-stretch flex items-center justify-center overflow-clip px-[16px] py-[6px] relative rounded-[16px] shrink-0" data-node-id="29:27396">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-center whitespace-nowrap" data-node-id="29:27397">
+              Semua
+            </p>
+          </div>
+          <div className="bg-white border border-[#eee] border-solid content-stretch flex items-center justify-center overflow-clip px-[16px] py-[6px] relative rounded-[16px] shrink-0" data-node-id="29:27398">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-center whitespace-nowrap" data-node-id="29:27399">
+              Tersedia
+            </p>
+          </div>
+          <div className="bg-[#2e78f9] content-stretch flex items-center justify-center overflow-clip px-[16px] py-[6px] relative rounded-[16px] shrink-0" data-node-id="29:27400">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap" data-node-id="29:27401">
+              Menipis
+            </p>
+          </div>
+          <div className="bg-white border border-[#eee] border-solid content-stretch flex items-center justify-center overflow-clip px-[16px] py-[6px] relative rounded-[16px] shrink-0" data-node-id="29:27402">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-center whitespace-nowrap" data-node-id="29:27403">
+              Habis
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="29:27404">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-center whitespace-nowrap" data-node-id="29:27405">
+          Filter Berdasarkan Kategori
+        </p>
+        <div className="content-stretch cursor-pointer flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="29:27406">
+          <button className="bg-[rgba(46,120,249,0.1)] border border-[#2e78f9] border-solid content-stretch flex gap-[14px] h-[53px] items-center overflow-clip px-[12px] py-[7px] relative rounded-[8px] shrink-0 w-[358px]" data-node-id="29:27407" data-name="checkbox-item">
+            <CheckBox className="bg-[#2e78f9] content-stretch flex items-center justify-center p-[2px] relative rounded-[4px] shrink-0 size-[16px]" />
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start justify-center min-w-px relative" data-node-id="I29:27407;1:23133">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-left w-full" data-node-id="I29:27407;1:23134">
+                Baju
+              </p>
+            </div>
+          </button>
+          <button className="bg-[rgba(46,120,249,0.1)] border border-[#2e78f9] border-solid content-stretch flex gap-[14px] h-[53px] items-center overflow-clip px-[12px] py-[7px] relative rounded-[8px] shrink-0 w-[358px]" data-node-id="29:27408" data-name="checkbox-item">
+            <CheckBox className="bg-[#2e78f9] content-stretch flex items-center justify-center p-[2px] relative rounded-[4px] shrink-0 size-[16px]" />
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start justify-center min-w-px relative" data-node-id="I29:27408;1:23133">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-left w-full" data-node-id="I29:27408;1:23134">
+                Celana
+              </p>
+            </div>
+          </button>
+          <button className="bg-white border border-[#e7e7e7] border-solid content-stretch flex gap-[14px] h-[53px] items-center overflow-clip px-[12px] py-[7px] relative rounded-[8px] shrink-0 w-[358px]" data-node-id="29:27409" data-name="checkbox-item">
+            <CheckBox active={false} className="bg-white border border-[#e7e7e7] border-solid relative rounded-[4px] shrink-0 size-[16px]" />
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start justify-center min-w-px relative" data-node-id="I29:27409;1:23126">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-left w-full" data-node-id="I29:27409;1:23127">
+                Dalaman
+              </p>
+            </div>
+          </button>
+          <button className="bg-white border border-[#e7e7e7] border-solid content-stretch flex gap-[14px] h-[53px] items-center overflow-clip px-[12px] py-[7px] relative rounded-[8px] shrink-0 w-[358px]" data-node-id="29:27410" data-name="checkbox-item">
+            <CheckBox active={false} className="bg-white border border-[#e7e7e7] border-solid relative rounded-[4px] shrink-0 size-[16px]" />
+            <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start justify-center min-w-px relative" data-node-id="I29:27410;1:23126">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[#2c2c2c] text-[14px] text-left w-full" data-node-id="I29:27410;1:23127">
+                Titipan
+              </p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div className="bg-white border-[#f5f5f5] border-solid border-t content-stretch cursor-pointer flex gap-[14px] items-start pb-[32px] pt-[16px] px-[16px] relative shrink-0 w-[390px]" data-node-id="29:27411" data-name="buttom-navigation">
+        <a className="bg-white border border-[#e7e7e7] border-solid content-stretch flex flex-[1_0_0] h-[48px] items-center justify-center min-w-px overflow-clip px-[14px] relative rounded-[50px]" data-node-id="I29:27411;1:42922" data-name="Button Panjang">
+          <div className="content-stretch flex items-center justify-center px-[12px] relative shrink-0" data-node-id="I29:27411;1:42922;17:7032">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[#8f8f8f] text-[16px] text-left whitespace-nowrap" data-node-id="I29:27411;1:42922;17:7033">
+              Reset
+            </p>
+          </div>
+        </a>
+        <button className="bg-[#2e78f9] content-stretch flex flex-[1_0_0] h-[48px] items-center justify-center min-w-px overflow-clip px-[14px] relative rounded-[50px]" data-node-id="I29:27411;1:42923" data-name="Button Panjang">
+          <div className="content-stretch flex items-center justify-center px-[12px] relative shrink-0" data-node-id="I29:27411;1:42923;17:7032">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[16px] text-left text-white whitespace-nowrap" data-node-id="I29:27411;1:42923;17:7033">
+              Terapkan
+            </p>
+          </div>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Neutral/Primary: #172426, Neutrals/Neutrals 1000: #2C2C2C, Body/Large/Semi Bold: Font(family: "Inter", style: Semi Bold, size: 16, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: 0), Accent/Blue/100: #2E78F9, Body/Normal/Medium: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: 0), Neutrals/Neutrals 350: #E7E7E7, Neutrals/Neutrals 100: #FFFFFF, Neutrals/Neutrals 200: #F5F5F5, Neutrals/Neutrals 300: #EEEEEE, Body/Normal/Semi Bold: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: 0), Accent/Blue/10: #2E78F9, Neutrals/Neutrals 700: #8F8F8F, Large/Semi Bold: Font(family: "Inter", style: Semi Bold, size: 16, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: 0).
+
+Images and SVGs will be stored as constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

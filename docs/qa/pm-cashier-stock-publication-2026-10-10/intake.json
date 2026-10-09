@@ -1,0 +1,50 @@
+{
+  "base": "1d787a6500136d0ae335ec70fd9b4073091e29a1",
+  "inputs": {
+    "app/(no-layout)/(cashier)/stock.tsx": "098f11324a9a0bc6aecb366ab8a9d91a31e802c865647936b4fbb852f82fe3b2",
+    "components/feature/cashier/stock/CashierStockScreen.tsx": "a6c44b35ddc2af5c0454b36a68789d49736095be90ea1d78fdbe84f80265829b",
+    "components/feature/cashier/stock/StockGroupCard.tsx": "5b9a469bb24cefa7b60e05f83fa690965aaca597228e04ff1f7516c6a6cb88e6",
+    "components/feature/cashier/stock/StockFilterSheet.tsx": "aec3506b55fdcf1366b89dfa02f2374f23439b9dc2d0c9f620ff270bc66a7139",
+    "lib/cashier/stock.ts": "ff0077eb976aeea7791cd6fe5673ce51a3c1392aa2112e86c37916266930b931",
+    "lib/cashier/stock-theme.ts": "2d8d9dedacc1a271423ef1fdafcf04d206973cd460a74e29ff95379eac7e6adb",
+    "types/ui/cashier/stock.ts": "ea7900eb9cdfc755efc2fd75eee6c2faca63b862d8682ffd336525b9495b1551",
+    "constants/data/cashier-stock-preview.ts": "066f3470cf1d32c5beb9a09a10c894540f0e6215a28106f7d82bf2384c311d95",
+    "assets/images/cashier/stock/back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "assets/images/cashier/stock/check.svg": "038ee7c5253b78bae88a47401310992c0b4da3648efede4dd2af30c4c7430ad1",
+    "assets/images/cashier/stock/close.svg": "f66c5602592fc917de6b75e350a4942d4b7a7d13115b4696083678892c8af585",
+    "assets/images/cashier/stock/divider-wide.svg": "42043dc287c9c6829f0116fb10667d33e5ee5b7f354b24964b241f737d580d51",
+    "assets/images/cashier/stock/divider.svg": "af5653c3de0af27202a670025952dad90830f6556b25c1090d5f69b76217b9ce",
+    "assets/images/cashier/stock/filter.svg": "a74f31c270ce14ce6e97c1c8ae239a3dcdb666021d56ac18f6ff900141adfef2",
+    "assets/images/cashier/stock/search.svg": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+    "app/(no-layout)/(cashier)/_layout.tsx": "22d8534d1a6ca27b91533d2a07b6a1306b089a26989094b0f35171747d39d878",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219"
+  },
+  "known": {
+    "components/feature/cashier/stock/CashierStockScreen.tsx": "a6c44b35ddc2af5c0454b36a68789d49736095be90ea1d78fdbe84f80265829b",
+    "components/feature/cashier/stock/StockGroupCard.tsx": "5b9a469bb24cefa7b60e05f83fa690965aaca597228e04ff1f7516c6a6cb88e6",
+    "components/feature/cashier/stock/StockFilterSheet.tsx": "aec3506b55fdcf1366b89dfa02f2374f23439b9dc2d0c9f620ff270bc66a7139",
+    "constants/data/cashier-stock-preview.ts": "066f3470cf1d32c5beb9a09a10c894540f0e6215a28106f7d82bf2384c311d95"
+  },
+  "parent": "app/(no-layout)/(cashier)/_layout.tsx",
+  "sheet": "components/ui/actionsheet/index.tsx",
+  "sources": [
+    "app/(no-layout)/(cashier)/stock.tsx",
+    "components/feature/cashier/stock/CashierStockScreen.tsx",
+    "components/feature/cashier/stock/StockGroupCard.tsx",
+    "components/feature/cashier/stock/StockFilterSheet.tsx",
+    "lib/cashier/stock.ts",
+    "lib/cashier/stock-theme.ts",
+    "types/ui/cashier/stock.ts",
+    "constants/data/cashier-stock-preview.ts"
+  ],
+  "assets": [
+    "assets/images/cashier/stock/back.svg",
+    "assets/images/cashier/stock/check.svg",
+    "assets/images/cashier/stock/close.svg",
+    "assets/images/cashier/stock/divider-wide.svg",
+    "assets/images/cashier/stock/divider.svg",
+    "assets/images/cashier/stock/filter.svg",
+    "assets/images/cashier/stock/search.svg"
+  ],
+  "scope": "Fresh independent PM review of released Stock body/group/data plus independently accepted Filter. Only their routes/models/original SVGs, one parent Stock registration and bounded safe-area Actionsheet.Content prerequisite imported. No other shared sheet peer changes, main Cash/Printer/Header/Wrapper/Footer preserved. MainMenu not merged."
+}

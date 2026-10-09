@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "passed": 29,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Candidate hash app/(no-layout)/(cashier)/stock.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/stock/CashierStockScreen.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/stock/StockGroupCard.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/feature/cashier/stock/StockFilterSheet.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash lib/cashier/stock.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash lib/cashier/stock-theme.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash types/ui/cashier/stock.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash constants/data/cashier-stock-preview.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/back.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/check.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/close.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/divider-wide.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/divider.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/filter.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash assets/images/cashier/stock/search.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash app/(no-layout)/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate hash components/ui/actionsheet/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Stock parent inverse AST preserves all published callbacks/registrations",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared Actionsheet outside Content/imports preserved by AST",
+      "status": "PASS"
+    },
+    {
+      "name": "Content matches reviewed safe-area function and supports explicit inset ownership",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/back.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/search.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/filter.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/divider.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/divider-wide.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/check.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Original archived SVG assets/images/cashier/stock/close.svg",
+      "status": "PASS"
+    },
+    {
+      "name": "Four full Figma context/image references remain exact",
+      "status": "PASS"
+    },
+    {
+      "name": "No stock mutation/live balance claim added",
+      "status": "PASS"
+    }
+  ]
+}

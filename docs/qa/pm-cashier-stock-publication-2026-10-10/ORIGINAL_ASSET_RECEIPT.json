@@ -1,0 +1,193 @@
+{
+  "ticket": "SD5-017",
+  "passed": 17,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "29:27153 full context matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/all-context.txt",
+        "sha256": "3afa0c0880b4b3e326fe72e0c46fd8bebce54c71e40c0f4a934fa711368198fc"
+      }
+    },
+    {
+      "name": "29:27153 screenshot matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/all-reference.png",
+        "sha256": "fc8d4ea03ba01613140d793ceb00e3c02a25b48ecd5410da099f578665eed442"
+      }
+    },
+    {
+      "name": "29:27290 full context matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/empty-context.txt",
+        "sha256": "237b4a3f2405ad3e4e268fe82983666699cac608b432c7478176a25daab21998"
+      }
+    },
+    {
+      "name": "29:27290 screenshot matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/empty-reference.png",
+        "sha256": "dbeb11bbb91b83b20f667c1bff0c6dabb87531307c2d4e0066b1a50e1e396089"
+      }
+    },
+    {
+      "name": "29:27343 full context matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/low-context.txt",
+        "sha256": "5f76bac0a61b40dd059d3ef6f88b23bf8948045eadb52e5eb7b6f6043d2af3e9"
+      }
+    },
+    {
+      "name": "29:27343 screenshot matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/low-reference.png",
+        "sha256": "cb9f6261fd156d944af15ecff56a0a8ece8706e099b0f0b932611e8761e7e212"
+      }
+    },
+    {
+      "name": "29:27391 full context matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/filter-context.txt",
+        "sha256": "3f24c6a66669542c746573317ca20a919ca7640f407c7395a0ec8855a8830a3d"
+      }
+    },
+    {
+      "name": "29:27391 screenshot matches official receipt",
+      "pass": true,
+      "detail": {
+        "file": "docs/figma/cashier/sd4-20261009/stock/filter-reference.png",
+        "sha256": "b8eec02f0873953b1ca01f3a22b6c3ae7ee655be20a317ac145e144f16a92e93"
+      }
+    },
+    {
+      "name": "Original local Figma SVG back.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/back.svg",
+        "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+        "bytes": 325,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/f78664e8-14b5-457d-891d-241efab14f2e.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG search.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/search.svg",
+        "sha256": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+        "bytes": 486,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/4031a0b4-558a-4696-870f-ba707d8d77ac.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG filter.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/filter.svg",
+        "sha256": "a74f31c270ce14ce6e97c1c8ae239a3dcdb666021d56ac18f6ff900141adfef2",
+        "bytes": 806,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"17\" height=\"17\" viewBox=\"0 0 17 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/0dd9dbec-b992-4394-8e68-f5b35e43c8f3.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG divider.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/divider.svg",
+        "sha256": "af5653c3de0af27202a670025952dad90830f6556b25c1090d5f69b76217b9ce",
+        "bytes": 226,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"333\" height=\"1\" viewBox=\"0 0 333 1\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/fac4efc2-9e35-4197-9def-59d6fe68e8c9.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG divider-wide.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/divider-wide.svg",
+        "sha256": "42043dc287c9c6829f0116fb10667d33e5ee5b7f354b24964b241f737d580d51",
+        "bytes": 226,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"334\" height=\"1\" viewBox=\"0 0 334 1\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/6ddf7676-9bc9-4703-8c8e-cbc234fc14f8.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG check.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/check.svg",
+        "sha256": "038ee7c5253b78bae88a47401310992c0b4da3648efede4dd2af30c4c7430ad1",
+        "bytes": 715,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/1fd9b786-718c-40f1-9a3b-224274c6a423.svg"
+      }
+    },
+    {
+      "name": "Original local Figma SVG close.svg",
+      "pass": true,
+      "detail": {
+        "file": "assets/images/cashier/stock/close.svg",
+        "sha256": "f66c5602592fc917de6b75e350a4942d4b7a7d13115b4696083678892c8af585",
+        "bytes": 443,
+        "root": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+        "url": "https://www.figma.com/api/mcp/asset/efc86995-6009-4941-8d24-67322a8c7e3c.svg"
+      }
+    },
+    {
+      "name": "Shared production back.svg equals exact exported Stock asset",
+      "pass": true,
+      "detail": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87"
+    },
+    {
+      "name": "Shared production search.svg equals exact exported Stock asset",
+      "pass": true,
+      "detail": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed"
+    }
+  ],
+  "reference": {
+    "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+    "sectionId": "29:18658",
+    "source": "Figma MCP get_design_context",
+    "capturedAt": "2026-10-09T06:44:05.240Z",
+    "frames": [
+      {
+        "name": "all",
+        "nodeId": "29:27153",
+        "contextSha256": "3afa0c0880b4b3e326fe72e0c46fd8bebce54c71e40c0f4a934fa711368198fc",
+        "screenshotSha256": "fc8d4ea03ba01613140d793ceb00e3c02a25b48ecd5410da099f578665eed442"
+      },
+      {
+        "name": "empty",
+        "nodeId": "29:27290",
+        "contextSha256": "237b4a3f2405ad3e4e268fe82983666699cac608b432c7478176a25daab21998",
+        "screenshotSha256": "dbeb11bbb91b83b20f667c1bff0c6dabb87531307c2d4e0066b1a50e1e396089"
+      },
+      {
+        "name": "low",
+        "nodeId": "29:27343",
+        "contextSha256": "5f76bac0a61b40dd059d3ef6f88b23bf8948045eadb52e5eb7b6f6043d2af3e9",
+        "screenshotSha256": "cb9f6261fd156d944af15ecff56a0a8ece8706e099b0f0b932611e8761e7e212"
+      },
+      {
+        "name": "filter",
+        "nodeId": "29:27391",
+        "contextSha256": "3f24c6a66669542c746573317ca20a919ca7640f407c7395a0ec8855a8830a3d",
+        "screenshotSha256": "b8eec02f0873953b1ca01f3a22b6c3ae7ee655be20a317ac145e144f16a92e93"
+      }
+    ],
+    "fullReferenceForTheseFourNodes": true,
+    "fullCashierReference": false
+  },
+  "scope": "Eight official saved context/screenshot fingerprints, seven original SVG bytes/root dimensions/asset URLs, two shared asset equivalence checks. No fresh Figma access or all-screen asset/prototype certificate."
+}
