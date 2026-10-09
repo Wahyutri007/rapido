@@ -1,0 +1,31 @@
+{
+  "recordedAtUtc": "2026-10-09T18:28:52.487Z",
+  "mainCodeCommit": "09324cb202821b4b65b0560c7ffbed937e8e8def",
+  "accepted": [
+    {
+      "module": "Uang Diterima",
+      "branch": "fix/cashier-cash-input-layout-2026-10-10",
+      "commit": "a0c059d9f37fc330f70d2df1bb8349aaaca42fb7",
+      "checks": 47
+    },
+    {
+      "module": "Tagihan Figma preview",
+      "branch": "fix/cashier-bills-reference-2026-10-10",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def",
+      "checks": 30,
+      "cashRegressionChecks": 47
+    }
+  ],
+  "held": [
+    {
+      "module": "Menu Favorit",
+      "branch": "fix/cashier-favorites-layout-2026-10-10",
+      "commit": "ca69db8844e12f9e6310beb6d3a83de5960ec7de",
+      "uiChecks": 40,
+      "reason": "Stok/Shift/Scanner missing in main and Laci Kasir missing in workspace; route callbacks do not prove destination screens"
+    }
+  ],
+  "sharedHeadUnchanged": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sharedIndexUnchanged": true,
+  "fullNativeOrOperationalRelease": false
+}
