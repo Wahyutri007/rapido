@@ -1,0 +1,909 @@
+﻿{
+    "RecordedAtUTC":  "2026-10-09T23:26:55.1576922Z",
+    "SourcePath":  "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets",
+    "StoragePath":  "D:\\Rapido-QC-temp\\pm-publish-owned-assets-2026-10-10",
+    "FileCount":  179,
+    "Bytes":  33725204,
+    "FreeCBefore":  7794688,
+    "FreeCAfter":  42024960,
+    "PrivateHead":  "384aa9d3d327dcb311946f34c3ac53347a419f69",
+    "GitViewPreserved":  true,
+    "SharedProjectAndCommonGitUntouched":  true,
+    "Files":  [
+                  {
+                      "Relative":  "fonts\\Inter_24pt-Bold.ttf",
+                      "SHA256":  "6E56A080ABAD19A16D985801909378D26D0DA425265289D5D1EBF38BAA50CBA9",
+                      "Bytes":  344028
+                  },
+                  {
+                      "Relative":  "fonts\\Inter_24pt-Medium.ttf",
+                      "SHA256":  "FA6B009D7B921CCD070B8D039DA23B5663E1A87600A179C0512C347565998AC5",
+                      "Bytes":  342936
+                  },
+                  {
+                      "Relative":  "fonts\\Inter_24pt-Regular.ttf",
+                      "SHA256":  "D2A4911506EA4E124A47CA044E5E79F671DDF8F1A55F1AB9A56C58D088124B63",
+                      "Bytes":  342732
+                  },
+                  {
+                      "Relative":  "fonts\\Inter_24pt-SemiBold.ttf",
+                      "SHA256":  "10238D4C2F85914E3899177426840BDE80B078A612903066CF5C9AFD17DBF023",
+                      "Bytes":  343640
+                  },
+                  {
+                      "Relative":  "fonts\\SpaceMono-Regular.ttf",
+                      "SHA256":  "4C322514D265062AA3F7FBD81F5B79391CCB74268E6A20600061E0CE33234F41",
+                      "Bytes":  93252
+                  },
+                  {
+                      "Relative":  "fonts\\YsabeauInfant-ExtraBoldItalic.ttf",
+                      "SHA256":  "FAB43FAEC82CD859F72650AF3848EC612B712BB2D392F0D90513104E7EAEE984",
+                      "Bytes":  149204
+                  },
+                  {
+                      "Relative":  "images\\adaptive-icon.png",
+                      "SHA256":  "EBFBA1BDA9D1FE50FD2C85451805C8020AD1F34F065FDC0ECB02623A566FEB36",
+                      "Bytes":  13663
+                  },
+                  {
+                      "Relative":  "images\\favicon.png",
+                      "SHA256":  "24272CDAEFF82CC5FACDACCD982A6F05B60C4504704BBF94C19A6388659880BB",
+                      "Bytes":  1466
+                  },
+                  {
+                      "Relative":  "images\\home-store-active.jpg",
+                      "SHA256":  "7C807FBB80E294E3A401719C137E968BB5DE6F9F560C32243D0ECCCBD0680A61",
+                      "Bytes":  65200
+                  },
+                  {
+                      "Relative":  "images\\home-store-inactive.jpg",
+                      "SHA256":  "D79FDE8E71C6204F907E7D3AE04780837071048BD6DFCBBA381A99D548923807",
+                      "Bytes":  55323
+                  },
+                  {
+                      "Relative":  "images\\icon.png",
+                      "SHA256":  "0D6EE62EEDF21E59F30839D0493239E94AAC81505E835A9CA083687701E7C050",
+                      "Bytes":  17083
+                  },
+                  {
+                      "Relative":  "images\\index.ts",
+                      "SHA256":  "73D8F41FB276585B27326BABE694E96FDAE4A8087C45D58D2D93B353BE8180C0",
+                      "Bytes":  755
+                  },
+                  {
+                      "Relative":  "images\\login-portrait.jpg",
+                      "SHA256":  "E111D4F3DF1F917764FADE2CFF808178E9E6F17D6F7FE1EE7234D3C9340D5728",
+                      "Bytes":  122564
+                  },
+                  {
+                      "Relative":  "images\\logo-256-transparent.png",
+                      "SHA256":  "88E50FF19F62EFB4971C513E0C09D028C482D246AA35CAB0BE08657CD6E29F96",
+                      "Bytes":  3936
+                  },
+                  {
+                      "Relative":  "images\\onboarding-1.png",
+                      "SHA256":  "63E44E31757F9231DDF3B0F162E32CF35E9C491748BD9FBC1D7272E64289859F",
+                      "Bytes":  57581
+                  },
+                  {
+                      "Relative":  "images\\onboarding-2.png",
+                      "SHA256":  "E7FEB14C695C461A7D95E82C5742DEFA8755544EC9B9D23E54A25926F1AD5331",
+                      "Bytes":  96465
+                  },
+                  {
+                      "Relative":  "images\\onboarding-3.png",
+                      "SHA256":  "02DD08AF59E165B17DBCEF24E40867BBEF7052A5181F83BCE5097E783B3BE43F",
+                      "Bytes":  106182
+                  },
+                  {
+                      "Relative":  "images\\partial-react-logo.png",
+                      "SHA256":  "015A72AEB24C1166243EBC185355C9488CC892FBF3AA82F9AE66819A10F3451C",
+                      "Bytes":  5075
+                  },
+                  {
+                      "Relative":  "images\\react-logo.png",
+                      "SHA256":  "224B7636B15E672801579B5B418077CBC2CA42F0146389062364356B0ECB5C5C",
+                      "Bytes":  6341
+                  },
+                  {
+                      "Relative":  "images\\react-logo@2x.png",
+                      "SHA256":  "FA600BE9AD2F869C7A8DBAFFC78BB15AF741123E1319C948F0BE51753A153CDE",
+                      "Bytes":  14225
+                  },
+                  {
+                      "Relative":  "images\\react-logo@3x.png",
+                      "SHA256":  "CD84E02A5D542A3E71B7FA10A685C1B9FB51DB4AFF92ACA6C0DA6461CE17BE16",
+                      "Bytes":  21252
+                  },
+                  {
+                      "Relative":  "images\\splash-icon.png",
+                      "SHA256":  "F20E59D1F2E8A42CCA9E1413539F5A7C595C1C12E5A55B2A257F8D99A3BF2FD1",
+                      "Bytes":  15322
+                  },
+                  {
+                      "Relative":  "images\\splash.png",
+                      "SHA256":  "850BC627A61273F16CC8E06BE624743CC667EC63BC32C3B21006625B7C0F79E1",
+                      "Bytes":  28455
+                  },
+                  {
+                      "Relative":  "images\\step-1.png",
+                      "SHA256":  "49516C3F5D9F2E573D14E6821832CEE188214D3FD5244748F9CA0A0941085246",
+                      "Bytes":  857
+                  },
+                  {
+                      "Relative":  "images\\step-2.png",
+                      "SHA256":  "B045775EE50FA118DF639A0B5B8EBCDF3B319B4655E7A0A515293290D9B059CA",
+                      "Bytes":  1117
+                  },
+                  {
+                      "Relative":  "images\\step-3.png",
+                      "SHA256":  "DF38031151F94DA1FD13D37BB513E5D57F24518FB824939C4973E78AA799E2A5",
+                      "Bytes":  1173
+                  },
+                  {
+                      "Relative":  "images\\alerts\\category.jpg",
+                      "SHA256":  "46A1DC3BE76C25D0D423B4B8E1D20ACDAB2FCAC9173E24A4132AE30097BD518B",
+                      "Bytes":  92308
+                  },
+                  {
+                      "Relative":  "images\\alerts\\index.ts",
+                      "SHA256":  "E43F20D1220064B0E4042ED5943779E1AE68CFBB9C7F05612B9046177A6D1776",
+                      "Bytes":  122
+                  },
+                  {
+                      "Relative":  "images\\alerts\\order-type.jpg",
+                      "SHA256":  "4ABCCA4EC7DE6C694A65484FE419D1C0FA14B295379E1885F34C6E003B0F40B0",
+                      "Bytes":  92804
+                  },
+                  {
+                      "Relative":  "images\\cashier\\bills\\bell.svg",
+                      "SHA256":  "536CF384B84C63FF582859E527494A75CAD64C61AF1C441317D900D5E4F316BF",
+                      "Bytes":  759
+                  },
+                  {
+                      "Relative":  "images\\cashier\\bills\\chevron-down.svg",
+                      "SHA256":  "DFE7C757ED34125183EAC1D6D6227899E64F301EA5CA2261ED9650B6991CE4EA",
+                      "Bytes":  312
+                  },
+                  {
+                      "Relative":  "images\\cashier\\navigation\\bills.svg",
+                      "SHA256":  "113FF418D52B79C06BE213BB8CA4AF47462B6FCC29F5D6929F3699780BA0B5B3",
+                      "Bytes":  441
+                  },
+                  {
+                      "Relative":  "images\\cashier\\navigation\\catalog.svg",
+                      "SHA256":  "914F567603F48552205297404854A1EB4980F44E4DD6A2226C606038F706434A",
+                      "Bytes":  814
+                  },
+                  {
+                      "Relative":  "images\\cashier\\navigation\\home.svg",
+                      "SHA256":  "10406CCBD3F5E72AFECEE67AF09CD5AAE80F7DACA3BD1C7D117F4E91E098117D",
+                      "Bytes":  2195
+                  },
+                  {
+                      "Relative":  "images\\cashier\\navigation\\location.svg",
+                      "SHA256":  "6086F8B793B4EF5096F0C2A2CFCD0A17D90BEC35D6553E553423BA032800149A",
+                      "Bytes":  1439
+                  },
+                  {
+                      "Relative":  "images\\cashier\\navigation\\report.svg",
+                      "SHA256":  "6E157504AD2367E8F70233DA9D85D253C1F4B4C8320DE5AAAE25648991CB0C8B",
+                      "Bytes":  487
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\back.svg",
+                      "SHA256":  "485696D31D364AC3AA26A68403BAEFC7C7B8BDF97D1769829DF240B739B88A87",
+                      "Bytes":  325
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\check.svg",
+                      "SHA256":  "038EE7C5253B78BAE88A47401310992C0B4DA3648EFEDE4DD2AF30C4C7430AD1",
+                      "Bytes":  715
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\close.svg",
+                      "SHA256":  "F66C5602592FC917DE6B75E350A4942D4B7A7D13115B4696083678892C8AF585",
+                      "Bytes":  443
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\divider-wide.svg",
+                      "SHA256":  "42043DC287C9C6829F0116FB10667D33E5EE5B7F354B24964B241F737D580D51",
+                      "Bytes":  226
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\divider.svg",
+                      "SHA256":  "AF5653C3DE0AF27202A670025952DAD90830F6556B25C1090D5F69B76217B9CE",
+                      "Bytes":  226
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\filter.svg",
+                      "SHA256":  "A74F31C270CE14CE6E97C1C8AE239A3DCDB666021D56AC18F6FF900141ADFEF2",
+                      "Bytes":  806
+                  },
+                  {
+                      "Relative":  "images\\cashier\\stock\\search.svg",
+                      "SHA256":  "35247761B1BA8CB4422A089427A87EBC713B1B68E120417646FF27E044C980ED",
+                      "Bytes":  486
+                  },
+                  {
+                      "Relative":  "images\\examples\\avatar.png",
+                      "SHA256":  "46CC3AA4490DB78913B90128C9BC353992FBD325A7736F0F04883F05F19CF899",
+                      "Bytes":  104345
+                  },
+                  {
+                      "Relative":  "images\\examples\\index.ts",
+                      "SHA256":  "0568732238A70238B1DFA612246C0F120A1DE02E36A805E0C1BAD34DAAF827AA",
+                      "Bytes":  314
+                  },
+                  {
+                      "Relative":  "images\\examples\\menu-item-2.jpg",
+                      "SHA256":  "543F228B4BDD993A38A6F43F3A5F761DFC139FC4FFD313CB273A5ED643373A16",
+                      "Bytes":  19841
+                  },
+                  {
+                      "Relative":  "images\\examples\\menu-item-3.jpg",
+                      "SHA256":  "AF7846CC0851F95C04BAFEC83CB971549D757C20402E4C300965669A637C3380",
+                      "Bytes":  12504
+                  },
+                  {
+                      "Relative":  "images\\examples\\menu-item-4.jpg",
+                      "SHA256":  "9CA26FA9AD4859968A0BFC4A9A767573464C3E641A7F1BDC925C3B96CB51906C",
+                      "Bytes":  12615
+                  },
+                  {
+                      "Relative":  "images\\examples\\menu-item.png",
+                      "SHA256":  "B9F1287955132BEF90AB637FFC96D6AB8698BA06F0830F1FAE34F386BDFCDB11",
+                      "Bytes":  287057
+                  },
+                  {
+                      "Relative":  "images\\examples\\promo-1.png",
+                      "SHA256":  "4BCB262DA2024A29DD68B3CB835E80FEFFBBCC961DB5E939A15066491EE04D67",
+                      "Bytes":  200897
+                  },
+                  {
+                      "Relative":  "images\\examples\\promo-2.jpg",
+                      "SHA256":  "CA491B54267DDA53B72D36C0D16BB118D453C5DC4FBE67FB462D47865020A8AD",
+                      "Bytes":  11431
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\back.svg",
+                      "SHA256":  "485696D31D364AC3AA26A68403BAEFC7C7B8BDF97D1769829DF240B739B88A87",
+                      "Bytes":  325
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\catalog.svg",
+                      "SHA256":  "EAD314CCB6D12BC7D1BE5ECC3898A63B4D50AA5C5AE008F9735F0FABF71EBC68",
+                      "Bytes":  321
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\chevron-down.svg",
+                      "SHA256":  "BCB6B6D7CBA1AA72B37F761B613F73DBD2249CFA2E34EAEAEF06838976648E9F",
+                      "Bytes":  1013
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\divider.svg",
+                      "SHA256":  "CFC07E1E025349DCB250715322B81D72F0B7EDC5E504073F5C6EC62DC99D3AA3",
+                      "Bytes":  226
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\home.svg",
+                      "SHA256":  "01950A87D0C77D3786B4C466826F0D14E7ECF128AAF8C83103DB826BCD6FF970",
+                      "Bytes":  1001
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\inventory.svg",
+                      "SHA256":  "EEC32D9810B9BB365BCEDA431A47ACB2C345FCEFBEE58B08B6C00EA54D10279E",
+                      "Bytes":  756
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\manage.svg",
+                      "SHA256":  "2874A27983252C24DB92F55212FFB6F4C4326F8AA3CA074E6F0ECC9BF929DABD",
+                      "Bytes":  868
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\report.svg",
+                      "SHA256":  "6E157504AD2367E8F70233DA9D85D253C1F4B4C8320DE5AAAE25648991CB0C8B",
+                      "Bytes":  487
+                  },
+                  {
+                      "Relative":  "images\\figma\\back-office\\search.svg",
+                      "SHA256":  "35247761B1BA8CB4422A089427A87EBC713B1B68E120417646FF27E044C980ED",
+                      "Bytes":  486
+                  },
+                  {
+                      "Relative":  "images\\figma\\cashier\\cash-input\\backspace.svg",
+                      "SHA256":  "028BC901C4E2DBD60518C7D3E599F581899DE2593A3B108C65B653F2F083D4DB",
+                      "Bytes":  544
+                  },
+                  {
+                      "Relative":  "images\\icons\\cash_drawer.png",
+                      "SHA256":  "B654AEF03462405A20F6A6BA800B9976B792624473C3840ABA1BEFBB84302940",
+                      "Bytes":  746003
+                  },
+                  {
+                      "Relative":  "images\\icons\\expense.png",
+                      "SHA256":  "D206A703D1E6F36C495DF3097D8B5EBC9E477958CF5BF119F5B3EED9DA15A2AB",
+                      "Bytes":  1046785
+                  },
+                  {
+                      "Relative":  "images\\icons\\index.ts",
+                      "SHA256":  "7E289136261F3B00177E9A29F1D6C10D2E4235AA53A1E9207C6F4395F556416C",
+                      "Bytes":  693
+                  },
+                  {
+                      "Relative":  "images\\icons\\location.png",
+                      "SHA256":  "C67902C8E6CECC03B56277AE4716E1C5C290765DDD1AF7E3871F3421159E213B",
+                      "Bytes":  1951
+                  },
+                  {
+                      "Relative":  "images\\icons\\mail.png",
+                      "SHA256":  "96879491E6F2F9D1AB24366CCC5787F72F414C22473E92BC7A19ACBAF40F5D4C",
+                      "Bytes":  4245
+                  },
+                  {
+                      "Relative":  "images\\icons\\password.jpg",
+                      "SHA256":  "21797E67DCB8DA96EC7DD4B2E969807DD12D7820028B04507CA98220359487C0",
+                      "Bytes":  116662
+                  },
+                  {
+                      "Relative":  "images\\icons\\printer.png",
+                      "SHA256":  "7AFC49825C49146D6F33095D60EAB6950F6238F17F0A439BEC6BEB1053FA33E6",
+                      "Bytes":  721087
+                  },
+                  {
+                      "Relative":  "images\\icons\\receipt.png",
+                      "SHA256":  "7C01A0308DBCEFB612D15C6F10E0B163F466CEE1CD17B51053E9BBEC8DA2CBC7",
+                      "Bytes":  3268
+                  },
+                  {
+                      "Relative":  "images\\icons\\scanner.png",
+                      "SHA256":  "A8C360CEE0CDB74706F1A26482719DD1EC293BF294344479E96C4FD2375A8BCC",
+                      "Bytes":  738748
+                  },
+                  {
+                      "Relative":  "images\\icons\\settings.png",
+                      "SHA256":  "9169D96DA20A556FF28E0442BC603A7C4A0B968AA3A87C6B1FAE6F4533452840",
+                      "Bytes":  1045056
+                  },
+                  {
+                      "Relative":  "images\\icons\\shift.png",
+                      "SHA256":  "9A82BF4E519106FE7189FDCBB742B91A6F5AAB303414FDF59E980853A3AF2686",
+                      "Bytes":  711577
+                  },
+                  {
+                      "Relative":  "images\\icons\\stock.png",
+                      "SHA256":  "89E9398F501BDE94325CF95D28F393F2494007076098F0ADC1E38E25BAC961FC",
+                      "Bytes":  729532
+                  },
+                  {
+                      "Relative":  "images\\icons\\transaction.png",
+                      "SHA256":  "FFFAB731163749A03133B71F5ECC7DE35CB6CA19FA27DBFFFC4F15C78E285F7E",
+                      "Bytes":  723790
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\brand.png",
+                      "SHA256":  "5FAFC06FF7CDB8860D9C6D35CAEABFD2998F8CDD5B426F684FF649749949CE31",
+                      "Bytes":  7499
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\bundle.png",
+                      "SHA256":  "78593A9D781BDE5E81E855AC451E2BBD49DE9EF34966F08CA31D8A6544F47FC8",
+                      "Bytes":  9426
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\category.png",
+                      "SHA256":  "9F62C4B2E52D886204294F5B53D900A3E7879D749A61632A88D5D8C1850DF455",
+                      "Bytes":  6762
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\discount.png",
+                      "SHA256":  "95B0660F32B3C681BEAEB8EC145D9697CA72E2A2257576F55586F0A3BDCA0230",
+                      "Bytes":  7956
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\extra-cost.png",
+                      "SHA256":  "5B02F48C1FAA790D57B180CE1220C2C2F4C4C6373BAC37DF4348811ED0B1C98D",
+                      "Bytes":  7502
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\extras.png",
+                      "SHA256":  "857E3A1E40C5C1233EDD6FD46AA0E894F2EFB3DB54DE6F0CB507EBBBB1F33576",
+                      "Bytes":  6149
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\index.ts",
+                      "SHA256":  "FB26A3A4607618208B388DD95CD492B47A346EC3B8F4A1E264441BB45E8B5954",
+                      "Bytes":  497
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\order-type.png",
+                      "SHA256":  "EF58A3844ECB18E5C281FDF29897F7525157ABDAC7296984252363CA6C960FDF",
+                      "Bytes":  7618
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\payment-method.png",
+                      "SHA256":  "FD10D2E66553C96EDA7BD738E480E55208F517B2720A593084C54CF29A795AD1",
+                      "Bytes":  8323
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\product.png",
+                      "SHA256":  "938F7EFB3074D8A709CC0C8049F42EDB6E214C01C9B8D928B05C10F168B1B8C1",
+                      "Bytes":  6781
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\promo.png",
+                      "SHA256":  "FC4FB3F9136858FDC50AB06380788CAA92CEA584155A6154FA5EA079C4FC43B5",
+                      "Bytes":  8065
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\tax.png",
+                      "SHA256":  "3B1066356685C65E771885D51A660AE312B5386EBCFD8FA4D663A25D72ED039A",
+                      "Bytes":  7766
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\unit.png",
+                      "SHA256":  "E5710DEC9656CF7484299A48457925E0EC948BF2F788D99A4055F9DA01C318C1",
+                      "Bytes":  6790
+                  },
+                  {
+                      "Relative":  "images\\icons\\catalog\\voucher.png",
+                      "SHA256":  "6FA2AD5D1B6AA0CF07C572287B1323C95A9FEB9163FC0425C5C4FC827142FFEE",
+                      "Bytes":  7392
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\index.ts",
+                      "SHA256":  "A62E85B089637E6E7B6A30336C233D06FDAB83F8370A0FEEF0C2849F4AE32DBF",
+                      "Bytes":  260
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\purchase-order.jpg",
+                      "SHA256":  "96F123CEE3B3A12CE026188C1B24D3BBF260708928944D7A9BD8C050C9E4CADE",
+                      "Bytes":  29086
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\stock-adjustment.jpg",
+                      "SHA256":  "B1AF382571B9593193FF341DDBF6E3872EF855F4F62BE6327CFB45A5514A8C58",
+                      "Bytes":  30875
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\stock-transfer.jpg",
+                      "SHA256":  "E66F568E9D52F386A9286178FC12A7985C4971F0F77D9D61000CDCF04FDF3F1C",
+                      "Bytes":  32163
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\summary.jpg",
+                      "SHA256":  "88F9A20BB43C6C7DFF56910E9DD4738E4DCDE652ACD2FD064226874E9E1879F2",
+                      "Bytes":  32712
+                  },
+                  {
+                      "Relative":  "images\\icons\\inventory\\supplier.jpg",
+                      "SHA256":  "CBE4A40F00BFE60990491C086D6A042E2FDD06423FFE138C3B676CA4153EA757",
+                      "Bytes":  34502
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting.png",
+                      "SHA256":  "E2212C1992F3E8324357EF9747DCC2122C7D570B9CD25BD1846F10139D98C87D",
+                      "Bytes":  8348
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\ai.png",
+                      "SHA256":  "9293E7B33FFA16FC75D261D224027CD9C433F6CD837B49F3FC9A4308455E11A9",
+                      "Bytes":  8326
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\index.ts",
+                      "SHA256":  "DACBF0B4770ED7104FE0B0E301B9AD18771EB46B3D259A19ED3450AC40E1EF80",
+                      "Bytes":  348
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\kas.png",
+                      "SHA256":  "16B66D9F9BF783F762AC21D087D075C3AED7E302B3C2B7FF1A50CCEBD3D3F49C",
+                      "Bytes":  7546
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\operational.png",
+                      "SHA256":  "FA8A463FC7C5DE284A63AB4FAEFC4ECF769C6354175017150D07793D1F7C5D3B",
+                      "Bytes":  8520
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\product.png",
+                      "SHA256":  "97C8131B2AF14EEBCDA4BB91B1029CE512EEF255EE6F4778963EF11D804CAB2C",
+                      "Bytes":  7050
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\promotion.png",
+                      "SHA256":  "671F468FFB766D307265FEC4442F37C0CEB3C01902418F5D4F127D30347475F1",
+                      "Bytes":  8430
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\report.png",
+                      "SHA256":  "55F8ACFE06418DD9D4E889598C69FBDC741D7241C58F2ED91407D6AA3DE4C7C4",
+                      "Bytes":  7542
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\sales.png",
+                      "SHA256":  "D3C7D9BA97D4C806BB1AF3CA84E51FC36F501536D437329FDB131D1E02EA04F4",
+                      "Bytes":  7047
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\supplier.png",
+                      "SHA256":  "3599153ABE0CD7B77A5F98159947D9BA003D343B132DC43A74F8EA84BCF31522",
+                      "Bytes":  7716
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\adjusting.png",
+                      "SHA256":  "35934D9A79726B2CDD7F7634EC11BE8774CA8F13F316F48CF88F8DDFF7BC7497",
+                      "Bytes":  8087
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\akun.png",
+                      "SHA256":  "DEA09148254CF46DC3C275D47CA79461C333619091CF840276E6DE555E801100",
+                      "Bytes":  8582
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\capital.png",
+                      "SHA256":  "FC5DBCCF0DA38FFB3E04E2A897A528AAD01D77BC1D57956470139D6891502350",
+                      "Bytes":  7483
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\cash.png",
+                      "SHA256":  "F357A63D99F7E91B1513E8A7555A50C3C53A25F04D51C630ACFC39E7BFEE9660",
+                      "Bytes":  8463
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\closing.png",
+                      "SHA256":  "3A9C245276E63BBE1D4577FC754B5EEC035884D464B472B36DF1C8158BE61CDE",
+                      "Bytes":  7360
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\cost.png",
+                      "SHA256":  "0FEA9834C365CC53FB5A49F25B4F4B6F993FB9E2CFA0FDEEEC355CA35D26036F",
+                      "Bytes":  7747
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\financial.png",
+                      "SHA256":  "8FDC6501CABBECE581C8BAA0A3ECAD46698EF88A9B92FD609942DD3F56C1625F",
+                      "Bytes":  8122
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\general-journal.png",
+                      "SHA256":  "6132035AB0526AF559B937CE05680FCEA0BEDE0C577551AAD989B7D25E9F3D66",
+                      "Bytes":  6749
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\income.png",
+                      "SHA256":  "27AEC24DF988CD4C3254463C1FA86DA62ACE60371AE83E156BB153663D237488",
+                      "Bytes":  8208
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\index.ts",
+                      "SHA256":  "207C248BF827C0B33FA6C45D0134D1162B8E756FA9CF230F990F8C696D2283CF",
+                      "Bytes":  426
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\ledger.png",
+                      "SHA256":  "35EE2DC88E0AF3B6433FD2715F2EC148495E7516CB2E2ED16984D9E09807E89B",
+                      "Bytes":  7831
+                  },
+                  {
+                      "Relative":  "images\\icons\\report\\accounting\\profit.png",
+                      "SHA256":  "10DFEE525FB8C9491A73BD53E7330AB30473C5D0DB49471CB0B8B25581958A1B",
+                      "Bytes":  8246
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\action-success.png",
+                      "SHA256":  "2889E23D11FE6BD5E769D3B7EE8D1ECEFC131C51D67D195BA39A5882AA93FA5B",
+                      "Bytes":  321091
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\delete-confirmation.png",
+                      "SHA256":  "248C8B590F9EB46C2ECD28C0EC95413EC780F29D88F596CF83B62CECEF6014A1",
+                      "Bytes":  343818
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\discount.png",
+                      "SHA256":  "4BCB262DA2024A29DD68B3CB835E80FEFFBBCC961DB5E939A15066491EE04D67",
+                      "Bytes":  200897
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\export.jpg",
+                      "SHA256":  "79041556DA0AE13B6043C4B7C8ED5167745247AF4BEC45524AE021676476DE98",
+                      "Bytes":  15396
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\extra.jpg",
+                      "SHA256":  "9F641C4B48AEAEFEF183A9D7CB70CA18CF8AEC4F49EE6AC55931286339CCD2ED",
+                      "Bytes":  10248
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\home-header.png",
+                      "SHA256":  "3089F1A958F76936007B2518D90D278DFFB11E73C577D66804C3F609F693374B",
+                      "Bytes":  620404
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\index.ts",
+                      "SHA256":  "22935F80FB6A58878CFB28D25140E5BC200C2CCA11F82D1C7EC77CBC1EFB7ED4",
+                      "Bytes":  652
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\maintenance.png",
+                      "SHA256":  "6E14A81CA0E0D184C1E769127F392F554890F8D8B2A2C15F4FE5D29B875A9948",
+                      "Bytes":  326730
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\password.jpg",
+                      "SHA256":  "96DEDDD07289D436B7F4BDD6E810F529622F14BBBC656DE2D10F427007514164",
+                      "Bytes":  12986
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\payment.jpg",
+                      "SHA256":  "667A8CD1748B2B7964E3AC5C788DB8DC2F6122FD355C2D4147E4837B5C2627DB",
+                      "Bytes":  13956
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\pin.jpg",
+                      "SHA256":  "A7930C7DB4B5170A1F3779F9C0B26FA0F45D83B387D39358EC2FD0AB75EC99E0",
+                      "Bytes":  9781
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\printer.jpg",
+                      "SHA256":  "ECD0CEC5A29C3E5E76B0908BFE7207F3E0ADB69B0C235527BDE776D2A35C8B55",
+                      "Bytes":  8864
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\promo.jpg",
+                      "SHA256":  "6C569F7F32B0378D7ABAEEE56B1FD7B2013BC703A57A9C5A7E9E9CB93498489E",
+                      "Bytes":  10613
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\receipt.jpg",
+                      "SHA256":  "DC5F4F4407C1CB7C95010B469981B2298801A7063B90015E32AE45B13D1244E5",
+                      "Bytes":  3538
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\tables.jpg",
+                      "SHA256":  "0A26E5939C30227B7B9397A7033A4CA5642C82DD40325311ED4CEB77543D981B",
+                      "Bytes":  16605
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\tax.jpg",
+                      "SHA256":  "ACE4BCE559A8D474CBBA357126CBE54A9ED75C3596BFC90F336BEF45FCE002E7",
+                      "Bytes":  7591
+                  },
+                  {
+                      "Relative":  "images\\illustrations\\voucher.jpg",
+                      "SHA256":  "02A334D61DEEC458728B5CDC2055A4B542264EAE28B277F93A7EBE1D01F8098F",
+                      "Bytes":  3740
+                  },
+                  {
+                      "Relative":  "images\\inventory\\adjustment.png",
+                      "SHA256":  "7205AAFBF6CA1988DEB8F884A1593EE395AA56FCF01964832C62A10D7CAA6A7B",
+                      "Bytes":  1724111
+                  },
+                  {
+                      "Relative":  "images\\inventory\\ayam.png",
+                      "SHA256":  "092FCDF200FF114D1A5B65A8573A384EACF8E828AF6473FD98DA682661EA662E",
+                      "Bytes":  663510
+                  },
+                  {
+                      "Relative":  "images\\inventory\\closing.png",
+                      "SHA256":  "1F37B3D87606700BAD5A5466ACBB18C41D2D82F4216995EFCE58CDF52B560A55",
+                      "Bytes":  1739854
+                  },
+                  {
+                      "Relative":  "images\\inventory\\composition.png",
+                      "SHA256":  "850D41CD535FEFD2EFA302B9B704B3764B8A4066BF2D55DE70FB83BEDFCD9818",
+                      "Bytes":  1881862
+                  },
+                  {
+                      "Relative":  "images\\inventory\\fillet.png",
+                      "SHA256":  "47D163C739FAAA8845C43BF5CFBA49D99084E9CAC8BA9106367D51581FF0421A",
+                      "Bytes":  10430
+                  },
+                  {
+                      "Relative":  "images\\inventory\\gula.png",
+                      "SHA256":  "63C762C9F4984DD8E36A8FFF8C954141D37945ADC2859048FFCC49C3A8F0C856",
+                      "Bytes":  10088
+                  },
+                  {
+                      "Relative":  "images\\inventory\\index.ts",
+                      "SHA256":  "2F66E9B23EDC202609DBB27778D9BA90368FE9A470A839758FBD019153AFD3D9",
+                      "Bytes":  643
+                  },
+                  {
+                      "Relative":  "images\\inventory\\katsu.png",
+                      "SHA256":  "CBE00425A58689C4377A444F77851FC981454D1BC21F8455C7B4229B08988910",
+                      "Bytes":  50565
+                  },
+                  {
+                      "Relative":  "images\\inventory\\material.png",
+                      "SHA256":  "941BAFA1913F927A816EC82FC09B10665766B443FBD5EDC2A17660C4E735AC9C",
+                      "Bytes":  1974689
+                  },
+                  {
+                      "Relative":  "images\\inventory\\mie.png",
+                      "SHA256":  "53291B814D1A9C568199C9458FE77F07DEB3D82A0D0AA1588C6BFBF108C77233",
+                      "Bytes":  52816
+                  },
+                  {
+                      "Relative":  "images\\inventory\\minyak.png",
+                      "SHA256":  "8D71699073FA37E6F7B1DED90667A9954817E484432CD22519C0B0B4B0ADBEF1",
+                      "Bytes":  10087
+                  },
+                  {
+                      "Relative":  "images\\inventory\\movement.png",
+                      "SHA256":  "F2BA477EF211F6F080E06D59E294F44A87972E7D1950CDC0941A43A206CD5177",
+                      "Bytes":  1885669
+                  },
+                  {
+                      "Relative":  "images\\inventory\\payment.png",
+                      "SHA256":  "E02FAF709898101CFB5C3645D8100848863B53DB5FE7CB39B68EBB4021F78FEE",
+                      "Bytes":  1831490
+                  },
+                  {
+                      "Relative":  "images\\inventory\\purchase.png",
+                      "SHA256":  "18A660DD7683ED672D2C8687D04C5BD93321D7342414F5F77F28AD33D6E1DCDB",
+                      "Bytes":  1980807
+                  },
+                  {
+                      "Relative":  "images\\inventory\\summary.png",
+                      "SHA256":  "44EB1BB6AEF763FFDDF756ACC6C8302C3E28646CBD9DF67DA30E9A53BEF1F824",
+                      "Bytes":  1607439
+                  },
+                  {
+                      "Relative":  "images\\inventory\\supplier.png",
+                      "SHA256":  "CA33D391801DB78F08C7E3B3CD73C21C95408682C179254595B0CBB75129314F",
+                      "Bytes":  1758733
+                  },
+                  {
+                      "Relative":  "images\\inventory\\tepung.png",
+                      "SHA256":  "A6BEBAF69FB9F6BB7687A308B00D5BFA12195C50FEA5CCB89E39B9F5FB7136E5",
+                      "Bytes":  11118
+                  },
+                  {
+                      "Relative":  "images\\inventory\\transfer.png",
+                      "SHA256":  "75010A19A8F846274C210D152804CA4A6D7556C296262ABB59E231CAB29F586F",
+                      "Bytes":  1682346
+                  },
+                  {
+                      "Relative":  "images\\inventory\\closing-stock\\status.svg",
+                      "SHA256":  "43EC6F67B519C7FBB6CC3B1D863359FEBBFBCA9E1321FA9BC79B0E931AF2FF88",
+                      "Bytes":  688
+                  },
+                  {
+                      "Relative":  "images\\inventory\\closing-stock\\store.svg",
+                      "SHA256":  "6C3D9AE4527437E6A4ED8B1D8E51A3AE2936687619FA1CF58BACE78B7F5B2255",
+                      "Bytes":  425
+                  },
+                  {
+                      "Relative":  "images\\manage\\absence.svg",
+                      "SHA256":  "83DA80AC5EC8FE8A06A82680C34EF204CB61AF1B52766D53519704AF2F57017E",
+                      "Bytes":  1019
+                  },
+                  {
+                      "Relative":  "images\\manage\\account.svg",
+                      "SHA256":  "FC9A771826ADDB34131291C113B2DD48E86A9076CDCA071E20479ACAA122B380",
+                      "Bytes":  1284
+                  },
+                  {
+                      "Relative":  "images\\manage\\ai.svg",
+                      "SHA256":  "98EA18BD26398D0EB6CF92C0BF4124982EBFC7940AAA7E174B0E493A674BC7C7",
+                      "Bytes":  641
+                  },
+                  {
+                      "Relative":  "images\\manage\\chevron.svg",
+                      "SHA256":  "2A63C421C93789E99B49612DBC7152E4F0F1C7D289677AE51F57DD3259828445",
+                      "Bytes":  345
+                  },
+                  {
+                      "Relative":  "images\\manage\\expenses.svg",
+                      "SHA256":  "D927285B787436D935D74027C94F220F36C06E5B2210AF576FFCCF19A88567FF",
+                      "Bytes":  2778
+                  },
+                  {
+                      "Relative":  "images\\manage\\export.svg",
+                      "SHA256":  "0381D38012F1C33B26F064DD93587A2B58940483E82DC515AB3C9644A58D066B",
+                      "Bytes":  743
+                  },
+                  {
+                      "Relative":  "images\\manage\\external.svg",
+                      "SHA256":  "986B06D4EF220451794D939B5294395C7BD9D74A035D9E82BE460E5CF3A3DA0F",
+                      "Bytes":  341
+                  },
+                  {
+                      "Relative":  "images\\manage\\faq.svg",
+                      "SHA256":  "DCBAAF5CB1BDE5C89831D4864264ECF0F8C990855216E124D97E4155E927C136",
+                      "Bytes":  1749
+                  },
+                  {
+                      "Relative":  "images\\manage\\feature-request.svg",
+                      "SHA256":  "6687E01A3C342261448B9E828A4C486F8E057AA0E082600F1EBFD3D71A5B1789",
+                      "Bytes":  1822
+                  },
+                  {
+                      "Relative":  "images\\manage\\feedback.svg",
+                      "SHA256":  "02082DC05C2C50A93EFD251F9D2C46541445828FA4A3EFDA7F3229C874282007",
+                      "Bytes":  966
+                  },
+                  {
+                      "Relative":  "images\\manage\\generate-barcode.svg",
+                      "SHA256":  "B7B4BC5E1949331535CD515ABA6D8A015E1580BDAA5B4C2FA440F67F7819C607",
+                      "Bytes":  1126
+                  },
+                  {
+                      "Relative":  "images\\manage\\income.svg",
+                      "SHA256":  "35415EBCDAC67DA3D3D083AA117AF89AB3CD22552CA97E6F91F46C16C2F7BB65",
+                      "Bytes":  2853
+                  },
+                  {
+                      "Relative":  "images\\manage\\member.svg",
+                      "SHA256":  "16D1FC29F91F4A6AC470C1C5E556C35A6CC691AF709E88BE02D1157EF8E8C1B7",
+                      "Bytes":  2255
+                  },
+                  {
+                      "Relative":  "images\\manage\\payroll.svg",
+                      "SHA256":  "3686751BC2AFDB91932F65A4C16132CB2AB3A9606D70422B5DC88B4E250B04B0",
+                      "Bytes":  1216
+                  },
+                  {
+                      "Relative":  "images\\manage\\place.svg",
+                      "SHA256":  "1A793429B0802077053ED87000A20D8FCB348C719FB5E9DC0755AF511A52D59B",
+                      "Bytes":  902
+                  },
+                  {
+                      "Relative":  "images\\manage\\pos-settings.svg",
+                      "SHA256":  "3E40BB63BDE789300542D82E53F2087A85FDD716F26235786BC32261AF019539",
+                      "Bytes":  4401
+                  },
+                  {
+                      "Relative":  "images\\manage\\receipt.svg",
+                      "SHA256":  "0BF950FD49A9DE1202C72A3B4E2FF00CE8661376AC8D30EB077657422B46B797",
+                      "Bytes":  1616
+                  },
+                  {
+                      "Relative":  "images\\manage\\referral.svg",
+                      "SHA256":  "30FB6F3913ECC47A5980014C3FB1BC79B3C68E80F709D303B69E627D19F9CD6B",
+                      "Bytes":  3787
+                  },
+                  {
+                      "Relative":  "images\\manage\\roles.svg",
+                      "SHA256":  "A0FC837A254EE3FC23364D021B56A419EE662202615FB7419243127ACCE54BD3",
+                      "Bytes":  1719
+                  },
+                  {
+                      "Relative":  "images\\manage\\sales-target.svg",
+                      "SHA256":  "B5C2CAF3198C7608C364527907C155DB2B08A5E951E70EE059C6F1CDB4FE04D8",
+                      "Bytes":  2089
+                  },
+                  {
+                      "Relative":  "images\\manage\\store.svg",
+                      "SHA256":  "C3357A0494B581E14CD82C1B0E2B21D0B9F70F8FEC794D454DE684B2D564DE7D",
+                      "Bytes":  464
+                  },
+                  {
+                      "Relative":  "images\\manage\\workers.svg",
+                      "SHA256":  "F90C79E2971A5805FCCDEDA94EB1DCBA612B94DB7E1033C525E1760A2C2F7E15",
+                      "Bytes":  1047
+                  },
+                  {
+                      "Relative":  "images\\support\\feature-request.png",
+                      "SHA256":  "86FDDC06FDDA2634563E667BB179EF72DAF605F5E84EF49DA6E5898ED3463683",
+                      "Bytes":  1140931
+                  },
+                  {
+                      "Relative":  "images\\support\\feedback.png",
+                      "SHA256":  "4A784E2A6057D93A9B034548CE674129ED27CDC112E8FFD0DDC227ED8C190F09",
+                      "Bytes":  1639293
+                  },
+                  {
+                      "Relative":  "other\\index.ts",
+                      "SHA256":  "A9B54ACB89D0AC3B776AC56596C41094A4E2974B209685F6810DBB79BFF67DA4",
+                      "Bytes":  61
+                  },
+                  {
+                      "Relative":  "other\\TNC.md",
+                      "SHA256":  "99CB63885ED438A476B02B5ECACAAC10444097BB39FD0D8FF89211924F5030E7",
+                      "Bytes":  12
+                  }
+              ]
+}

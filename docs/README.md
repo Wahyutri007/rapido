@@ -698,3 +698,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Pengeluaran Kasir — publikasi pratinjau,10 Oktober2026
 
 `/(no-layout)/(cashier)/report/expense-input` mempertahankan lima field lokal, nama aksesibel, Deskripsi multiline dan Toko readonly belum tersedia. Simpan membuka penjelasan bahwa pengeluaran/saldo tidak berubah dan isian tidak disimpan; tutup/ESC menjaga draft, remount membersihkannya. Header berada di layout, compactKasir. Belum ada submit/validasi keuangan/API/ledger. [Receipt QA/PM](qa/pm-cashier-expense-publication-2026-10-10/REPORT.md).
+
+
+### Konfirmasi Tunai Kasir — publikasi pratinjau, 10 Oktober 2026
+
+`/(no-layout)/(cashier)/cart/input-money-confirm` memvalidasi parameter nominal lokal dengan parser existing. Nominal tidak valid mengarah ke edit uang atau pesanan; nominal valid menampilkan uang diterima/kembalian. Transaksi Selesai membuka penjelasan bahwa pembayaran/pesanan belum dicatat, tanpa sukses palsu atau perubahan saldo. Header berada di layout; InputMoney tetap memakai header Figma existing. [Receipt QA/PM](qa/pm-cashier-cash-confirm-publication-2026-10-10/REPORT.md).

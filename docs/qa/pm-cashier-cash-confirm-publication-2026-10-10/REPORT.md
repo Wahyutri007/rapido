@@ -1,0 +1,13 @@
+# Konfirmasi Tunai — kandidat main, 10 Oktober 2026
+
+QC_ACCEPTED_SCOPED_PREVIEW_AND_MAIN_COHORT. Three production paths: exact independently accepted Confirm5dc8e459 and ScreenSafeAreaf4ea012, plus only confirmation Header appearance=cashier. The previously published InputMoney202b8c4f and parser3b98ce42 are byte-identical. Existing InputMoney Figma72 header, other Cart registrations/callbacks, and published primitives are unchanged by full inverse AST and raw guards.
+
+44 fresh actual RNWeb groups PASS, 17 contracts PASS; four roots/1291 TS imported files, zero diagnostics/lint errors/lint warnings; Biome and whitespace PASS. Owner24 and independent44 are separate intake receipts, never added to the fresh44 as unique checks. Lightweight read-only source review found no concrete scoped bug; root compiled and exercised the actual published-main candidate.
+
+Seven valid cases and twenty malformed/underpaid cases cover digit-only/singleton arrays/leading zero/MAX-safe/zero-total rules and canonical recovery. Local route parameters take precedence over unrelated global parameters. Actual unchanged InputMoney emits numeric50000/40000; the fixture explicitly models transport to string route parameters, then exercises real Confirm/parser. This adapter is not full ExpoRouter integration.
+
+Finish opens an honest unavailable message, with no route replacement, payment/order/ledger/storage write, timer or false success. Metadata changes preserve same-amount messages; changed amounts, blur/refocus, ESC, repeat/remount and physical Header Back behave as tested.390/320/240/844x240/320x240 with OSbottom48/side48/24: rows, recovery, actions, complete description and Close remain physically reachable. LargeCSS24/MAX-safe case passes; native keyboard/fontScale are untested. Screenshots normal390/large320 and messages inspected.
+
+C capacity required moving only this private worktree's179 asset files byte-identically to D, retaining the original assets path as a junction. Shared application/common Git were not moved. Metro junction/cross-drive serializer failures are preserved as five QA build-error receipts. The corrected QA-only resolver uses original C assets only after matching each private D asset hash; both paths, assets and all compiled dependencies are bound. No production/config/package changes were made for this correction.
+
+Initial layout formatting failure and inverse-AST parentheses mismatch are preserved; final17 contracts/quality pass with exact formatted layout29e62aef. Full Figma context remains Starter-limited. No100%Figma/native/authenticated financial/backend/fullRouter certificate. This is a money-confirmation preview, not a completed sale.

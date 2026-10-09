@@ -1,0 +1,23 @@
+{
+  "base": "729803def28b743bea7a16be30e21d4934b98a8e",
+  "inputs": {
+    "app/(no-layout)/(cashier)/cart/input-money-confirm.tsx": "5dc8e459c8410ad0bc9bb2458b7eb570f21811f1ab962987a81881533ac4f821",
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": "29e62aefa5a0a3da56368c83052553f123d30347a71706e00a33e798d94c4caa",
+    "components/common/ScreenSafeArea.tsx": "f4ea012c5406e7797e07bc0eb0a2cc38de2518d7f0193d033cb65d79c761ff36"
+  },
+  "guards": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+    "schema/cashier/cash-input.ts": "3b98ce420014de04c181bb4036fbd93c60ba0869e20b4ab993607d7391d3cdc0",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/custom/DetailRow.tsx": "becdbbad964e1fdd8cf2d69e73f09896ec0cb26329d2ec36bc5f53aa8f8c1351",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac"
+  },
+  "file": "app/(no-layout)/(cashier)/cart/input-money-confirm.tsx",
+  "layout": "app/(no-layout)/(cashier)/cart/_layout.tsx",
+  "safe": "components/common/ScreenSafeArea.tsx",
+  "scope": "Exact independently accepted CashConfirm/ScreenSafeArea; only current Confirm header Cashier opt-in, InputMoney/parser/otherheaders/main primitives unchanged. Client-money preview only."
+}

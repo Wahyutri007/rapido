@@ -1,0 +1,11 @@
+# QC Independen Konfirmasi Tunai — 10 Oktober 2026
+
+QC_ACCEPTED_SCOPED_CASH_CONFIRM_PREVIEW. Source5dc8e459/current layout/actual InputMoney/parser/ScreenSafeArea sama tepat dengan receipt pembuat. Tidak ada source produksi yang diedit. Kompilasi privat baru dan own local-vs-global route/focus/JSStack/Insets adapters dipakai; evidence pembuat tidak diwarisi.
+
+44 browser PASS/0FAIL dan6 kontrak PASS. Tujuh nilai valid termasuk leadingzeros/singletonarray/equalamount/zerototal/MAXsafe menunjukkan uang/kembalian yang dihitung independen; dua puluh malformed/underpaid cases menampilkan recovery tanpa nilai kembalian/tombolfinish. String whitespace/decimal/comma/exponent/nonfinite/negative/unsafe/arrayambiguity dan native numericparams tidak dipaksa menjadi uang. Canonical Edit menghasilkan exact kembali-ke-Input atau Cart bila totalinvalid.
+
+Actual InputMoney dengan50000/40000 benar-benar mengirim router.replace payload angka50000/40000; own explicit stringtransport mengantar keactualConfirm yang menampilkan50000/10000. Ini adapter parameter, bukan fullExpoRouter certification. Globalparams1/1 yang berbeda tidak menimpa localparams. Sameamountmetadata menjaga dialog; amountchange/blur/remount meretire dialog lama, kontrolblurdisabled/refocusfresh; ESC/repeat/HeaderBack lulus.
+
+Finish klik fisik pertama membuka penjelasan layanan belum tersedia, tanpa createdorder/tagihan/payment/storage/routechange atau fake delayed success. Rows/duaaction/recovery serta fullmessage/closingtarget diperiksa390×844,320×568,240×320,844×240 dan320×240 dengan OS48/sides8/48/24. CSSbesar320/MAXnilai lulus; gambar memastikan angka membungkus di dalam Card dan seluruh digit terlihat. Tiga root+empat ambient/1297 TypeScript0diagnostic,lint0/0,Biome/diffPASS,runtime/request/drift0.
+
+Persetujuan hanya preview nilai client/UI/recovery/lifecycle yang disebutkan. Nominal bukan uang/tagihan terautentikasi. Payment/order/backend/financial policy/tax/authorization/persistence/native HP/keyboard/fontScale/full ExpoRouter/Figma100/publication belum disertifikasi. Figma confirmation reference penuh belum tersedia, cachedInput bukanconfirmationdesign. PM perlu current combined source/dependency candidate; receipt pembuat tetap utuh.

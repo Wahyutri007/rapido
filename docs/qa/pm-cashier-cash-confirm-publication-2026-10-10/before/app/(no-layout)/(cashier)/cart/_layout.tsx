@@ -34,9 +34,7 @@ export default function CartLayout() {
 			<JSStack.Screen
 				name="input-money-confirm"
 				options={{
-					header: () => (
-						<Header appearance="cashier" back title="Transaksi Tunai" />
-					),
+					header: () => <Header back title="Transaksi Tunai" />,
 				}}
 			/>
 		</JSStack>

@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "passed": 17,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Candidate exact app/(no-layout)/(cashier)/cart/input-money-confirm.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate exact app/(no-layout)/(cashier)/cart/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate exact components/common/ScreenSafeArea.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged app/(no-layout)/(cashier)/cart/input-money.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged schema/cashier/cash-input.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/AlertModal.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/custom/DetailRow.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/actionsheet/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/button/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Card.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Entire Cart layout inverse AST preserves InputMoney Figma header and all other routes/callbacks",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing local parser, positive paid-enough guard and canonical edit only",
+      "status": "PASS"
+    },
+    {
+      "name": "Amount/focus identity retires old preview state and disables background actions",
+      "status": "PASS"
+    },
+    {
+      "name": "Recovery, client preview and unsupported finish have no completed-order claim",
+      "status": "PASS"
+    },
+    {
+      "name": "Safe helper is only bottom/side insets; header owns top once",
+      "status": "PASS"
+    }
+  ]
+}

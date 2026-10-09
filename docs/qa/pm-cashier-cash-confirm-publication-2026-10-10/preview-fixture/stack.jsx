@@ -1,0 +1,1 @@
+import React from'react';import{useFixture}from'./router';export function JSStack({children}){const s=useFixture(),child=React.Children.toArray(children).find(c=>c.props.name===s.routeName);if(!child)throw Error('Missing actual Cart registration '+s.routeName);return child.props.options.header();}JSStack.Screen=()=>null;export const ScaleBackTransition={};
