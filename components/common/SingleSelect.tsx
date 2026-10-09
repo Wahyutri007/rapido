@@ -1,5 +1,6 @@
 import { Entypo, Feather } from "@expo/vector-icons";
 import { tva } from "@gluestack-ui/utils/nativewind-utils";
+import { Image } from "expo-image";
 import React from "react";
 import { Pressable, View } from "react-native";
 import BouncyPressable from "@/components/common/BouncyPressable";
@@ -53,6 +54,7 @@ export type SingleSelectProps<T = string> = {
 	showConfirmButton?: boolean;
 	confirmText?: string;
 	dismissOnSelect?: boolean;
+	appearance?: "default" | "figma";
 };
 
 export default function SingleSelect<T = string>({
@@ -72,19 +74,24 @@ export default function SingleSelect<T = string>({
 	showConfirmButton = false,
 	confirmText = "Selesai",
 	dismissOnSelect = true,
+	appearance = "default",
 }: SingleSelectProps<T>) {
 	const [isOpen, setIsOpen] = React.useState(false);
 	const [draftSelected, setDraftSelected] = React.useState<T | undefined>(
 		value,
 	);
+	const [previousValue, setPreviousValue] = React.useState(value);
 	const [search, setSearch] = React.useState("");
 	const dismissTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(
 		null,
 	);
 
-	React.useEffect(() => {
-		setDraftSelected(value);
-	}, [value]);
+	// Reconcile an external reset before rendering children; preserve local draft
+	// changes while the committed value stays the same.
+	if (!Object.is(previousValue, value)) {
+		setPreviousValue(() => value);
+		setDraftSelected(() => value);
+	}
 
 	React.useEffect(() => {
 		return () => {
@@ -110,7 +117,7 @@ export default function SingleSelect<T = string>({
 	};
 
 	const handleSelectOption = (item: SelectItemProps<T>) => {
-		if (item.disabled) return;
+		if (disabled || item.disabled) return;
 
 		haptic.selection();
 		setDraftSelected(item.value);
@@ -133,7 +140,14 @@ export default function SingleSelect<T = string>({
 		}
 	};
 
+	// A refetch may remove or disable a pending choice before confirmation.
+	const isSaveDisabled =
+		disabled ||
+		(draftSelected !== undefined &&
+			!items.some((item) => item.value === draftSelected && !item.disabled));
+
 	const handleSave = () => {
+		if (isSaveDisabled) return;
 		if (draftSelected !== undefined) {
 			onValueChange?.(draftSelected);
 		}
@@ -167,6 +181,8 @@ export default function SingleSelect<T = string>({
 				hapticType="light"
 				className={cn(
 					singleSelectTriggerStyle({ variant, size }),
+					appearance === "figma" &&
+						"h-12 border-border-muted bg-transparent px-[11px]",
 					disabled && "opacity-50",
 					className,
 				)}
@@ -177,7 +193,7 @@ export default function SingleSelect<T = string>({
 					) : null}
 
 					<Text
-						size="normal"
+						size={appearance === "figma" ? "small" : "normal"}
 						w={selectedItem ? "medium" : "regular"}
 						className={selectedItem ? "text-foreground" : "text-muted"}
 						numberOfLines={1}
@@ -186,7 +202,18 @@ export default function SingleSelect<T = string>({
 					</Text>
 				</View>
 
-				<Entypo name="chevron-small-down" size={20} color={Colors.zinc[500]} />
+				{appearance === "figma" ? (
+					<Image
+						source={require("@/assets/images/figma/back-office/chevron-down.svg")}
+						style={{ width: 16, height: 16 }}
+					/>
+				) : (
+					<Entypo
+						name="chevron-small-down"
+						size={20}
+						color={Colors.zinc[500]}
+					/>
+				)}
 			</BouncyPressable>
 
 			<Actionsheet isOpen={isOpen} onClose={handleClose}>
@@ -214,7 +241,13 @@ export default function SingleSelect<T = string>({
 						</Text>
 
 						{showConfirmButton ? (
-							<Pressable onPress={handleSave} hitSlop={8}>
+							<Pressable
+								onPress={handleSave}
+								disabled={isSaveDisabled}
+								accessibilityState={{ disabled: isSaveDisabled }}
+								className={isSaveDisabled ? "opacity-50" : undefined}
+								hitSlop={8}
+							>
 								<Text size="body" w="semibold" className="text-primary">
 									{confirmText}
 								</Text>
@@ -260,7 +293,7 @@ export default function SingleSelect<T = string>({
 									<BouncyPressable
 										key={String(item.value)}
 										onPress={() => handleSelectOption(item)}
-										disabled={item.disabled}
+										disabled={disabled || item.disabled}
 										activeScale={0.98}
 										hapticType="none"
 										className={cn(
@@ -268,7 +301,7 @@ export default function SingleSelect<T = string>({
 											isSelected
 												? "border-primary bg-primary/5"
 												: "border-zinc-200 bg-white",
-											item.disabled && "opacity-40",
+											(disabled || item.disabled) && "opacity-40",
 										)}
 									>
 										<View className="flex-1 flex-row items-center gap-3 mr-3">

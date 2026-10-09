@@ -1,15 +1,16 @@
 import React from "react";
 import { View } from "react-native";
+import { cn } from "@/lib/utils";
 import Text from "../common/Text";
 import { EEntypo } from "../icons";
 import { Button, ButtonGroup, ButtonIcon } from "../ui/button";
-import { cn } from "@/lib/utils";
 
 export type IncrementerProps = {
 	value?: number;
 	initialValue?: number;
 	min?: number;
 	max?: number;
+	disabled?: boolean;
 	onChange?: (value: number) => void;
 	variant?: "default" | "outline";
 	size?: "sm" | "md" | "lg" | "xl";
@@ -22,6 +23,7 @@ export default function Incrementer(props: IncrementerProps) {
 		initialValue = 0,
 		min = 0,
 		max,
+		disabled = false,
 		onChange,
 		variant = "default",
 		size = "sm",
@@ -29,16 +31,22 @@ export default function Incrementer(props: IncrementerProps) {
 	} = props;
 
 	const [value, setValue] = React.useState<number>(
-		initialValue < min ? min : initialValue,
+		controlledValue ?? (initialValue < min ? min : initialValue),
 	);
+	const [previousControlledValue, setPreviousControlledValue] =
+		React.useState(controlledValue);
 
-	React.useEffect(() => {
+	// Reconcile before children render; retain the last accepted value if the
+	// caller switches back to local state.
+	if (!Object.is(previousControlledValue, controlledValue)) {
+		setPreviousControlledValue(controlledValue);
 		if (controlledValue !== undefined) {
 			setValue(controlledValue);
 		}
-	}, [controlledValue]);
+	}
 
 	const handlePlus = () => {
+		if (disabled) return;
 		const nextValue =
 			max !== undefined ? (value < max ? value + 1 : value) : value + 1;
 		if (controlledValue === undefined) {
@@ -48,6 +56,7 @@ export default function Incrementer(props: IncrementerProps) {
 	};
 
 	const handleMinus = () => {
+		if (disabled) return;
 		const nextValue = value > min ? value - 1 : value;
 		if (controlledValue === undefined) {
 			setValue(nextValue);
@@ -77,9 +86,13 @@ export default function Incrementer(props: IncrementerProps) {
 				<ButtonGroup>
 					<Button
 						onPress={handleMinus}
+						isDisabled={disabled}
 						size={buttonSize}
 						variant="ghost"
-						className={cn("rounded-lg active:bg-zinc-100", isLarge ? "size-8" : "size-6")}
+						className={cn(
+							"rounded-lg active:bg-zinc-100",
+							isLarge ? "size-8" : "size-6",
+						)}
 					>
 						<ButtonIcon as={EEntypo} name="minus" />
 					</Button>
@@ -92,9 +105,13 @@ export default function Incrementer(props: IncrementerProps) {
 				<ButtonGroup>
 					<Button
 						onPress={handlePlus}
+						isDisabled={disabled}
 						size={buttonSize}
 						variant="ghost"
-						className={cn("rounded-lg active:bg-zinc-100", isLarge ? "size-8" : "size-6")}
+						className={cn(
+							"rounded-lg active:bg-zinc-100",
+							isLarge ? "size-8" : "size-6",
+						)}
 					>
 						<ButtonIcon as={EEntypo} name="plus" />
 					</Button>
@@ -117,6 +134,7 @@ export default function Incrementer(props: IncrementerProps) {
 			<ButtonGroup>
 				<Button
 					onPress={handleMinus}
+					isDisabled={disabled}
 					size={buttonSize}
 					variant="ghost"
 					className={isLarge ? "size-8" : undefined}
@@ -132,6 +150,7 @@ export default function Incrementer(props: IncrementerProps) {
 			<ButtonGroup>
 				<Button
 					onPress={handlePlus}
+					isDisabled={disabled}
 					size={buttonSize}
 					variant="ghost"
 					className={isLarge ? "size-8" : undefined}

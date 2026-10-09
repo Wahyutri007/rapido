@@ -1,10 +1,11 @@
 import Feather from "@expo/vector-icons/Feather";
 import type React from "react";
 import {
-	Dimensions,
 	Image,
 	type ImageSourcePropType,
 	Pressable,
+	ScrollView,
+	useWindowDimensions,
 	View,
 } from "react-native";
 import { ILLUSTRATIONS } from "@/assets/images/illustrations";
@@ -36,6 +37,7 @@ export type SuccessModalProps = {
 };
 
 export default function SuccessModal(props: SuccessModalProps) {
+	const { width, height } = useWindowDimensions();
 	const {
 		isOpen: propIsOpen,
 		openState,
@@ -76,7 +78,7 @@ export default function SuccessModal(props: SuccessModalProps) {
 			<ModalBackdrop />
 			<ModalContent
 				className="relative rounded-[28px] p-6 shadow-main"
-				style={{ width: Dimensions.get("screen").width - 32, maxWidth: 380 }}
+				style={{ width: width - 32, maxWidth: 380, maxHeight: height - 32 }}
 			>
 				{!hideCloseButton && (
 					<Pressable
@@ -88,35 +90,38 @@ export default function SuccessModal(props: SuccessModalProps) {
 					</Pressable>
 				)}
 
-				<ModalHeader className="flex-col items-center gap-3">
-					{image && (
-						<View className="w-full items-center justify-center overflow-hidden">
-							<Image
-								source={image}
-								className="h-44 w-full"
-								resizeMode="contain"
-							/>
-						</View>
-					)}
-					<Text
-						className="w-full text-center text-[19px] text-gray-900"
-						w="bold"
-					>
-						{title.trim()}
-					</Text>
-				</ModalHeader>
-
-				{resolvedDescription && (
-					<ModalBody className="mx-0 mb-2 mt-1">
-						{typeof resolvedDescription === "string" ? (
-							<Text className="text-center text-sm leading-relaxed text-muted">
-								{resolvedDescription}
-							</Text>
-						) : (
-							resolvedDescription
+				<ScrollView style={{ flexShrink: 1, minHeight: 0 }}>
+					<ModalHeader className="flex-col items-center gap-3">
+						{image && (
+							<View className="w-full items-center justify-center overflow-hidden">
+								<Image
+									source={image}
+									style={{ height: 176, width: "100%" }}
+									className="h-44 w-full"
+									resizeMode="contain"
+								/>
+							</View>
 						)}
-					</ModalBody>
-				)}
+						<Text
+							className="w-full text-center text-[19px] text-gray-900"
+							w="bold"
+						>
+							{title.trim()}
+						</Text>
+					</ModalHeader>
+
+					{resolvedDescription && (
+						<ModalBody className="mx-0 mb-2 mt-1">
+							{typeof resolvedDescription === "string" ? (
+								<Text className="text-center text-sm leading-relaxed text-muted">
+									{resolvedDescription}
+								</Text>
+							) : (
+								resolvedDescription
+							)}
+						</ModalBody>
+					)}
+				</ScrollView>
 
 				<ModalFooter className="mt-4 w-full p-0">
 					<ButtonGroup className="w-full">

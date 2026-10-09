@@ -1,8 +1,8 @@
 import type React from "react";
 import {
-	Dimensions,
 	Image,
 	type ImageSourcePropType,
+	useWindowDimensions,
 	View,
 } from "react-native";
 import Text from "@/components/common/Text";
@@ -22,7 +22,7 @@ import {
 	type ButtonVariantProps,
 } from "../ui/button";
 
-type AlertModal = {
+type AlertModalProps = {
 	openState: State<boolean>;
 	onClose?: () => void;
 	onConfirm?: () => void;
@@ -39,7 +39,10 @@ type AlertModal = {
 
 export { useAlertModal } from "@/hooks/useAlertModal";
 
-export default function AlertModal(props: React.PropsWithChildren<AlertModal>) {
+export default function AlertModal(
+	props: React.PropsWithChildren<AlertModalProps>,
+) {
+	const { width } = useWindowDimensions();
 	const {
 		openState,
 		image,
@@ -63,7 +66,7 @@ export default function AlertModal(props: React.PropsWithChildren<AlertModal>) {
 			<ModalBackdrop />
 			<ModalContent
 				className="rounded-[20px] p-5 shadow-main"
-				style={{ width: Dimensions.get("screen").width - 32 }}
+				style={{ width: width - 32 }}
 			>
 				<ModalHeader className="flex-col items-center gap-5">
 					{image && (
@@ -71,6 +74,7 @@ export default function AlertModal(props: React.PropsWithChildren<AlertModal>) {
 							<Image
 								source={image}
 								className="h-32 w-full"
+								style={{ height: 128, width: "100%" }}
 								resizeMode="cover"
 							/>
 						</View>

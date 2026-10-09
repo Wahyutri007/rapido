@@ -6,6 +6,7 @@ import {
 	ScrollView,
 	View,
 } from "react-native";
+import { BottomActionInset } from "@/components/common/BottomActionBar";
 import { Colors } from "@/constants/Colors";
 import { haptic } from "@/lib/haptics";
 import { cn } from "@/lib/utils";
@@ -110,8 +111,18 @@ export default function Wrapper(
 				{paddingTop ? <View style={{ height: paddingTop }} /> : null}
 
 				{children}
-				{hasBottomBar && <View className="h-20" />}
-				{hasActionButton && <View className="h-32" />}
+				{hasBottomBar && (
+					<>
+						<View className="h-20" />
+						<BottomActionInset />
+					</>
+				)}
+				{hasActionButton && (
+					<>
+						<View className="h-32" />
+						<BottomActionInset />
+					</>
+				)}
 
 				{paddingBottom ? <View style={{ height: paddingBottom }} /> : null}
 			</Slot>

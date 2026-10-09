@@ -1,132 +1,112 @@
-import {
-  bankInfoSchema,
-  BankInfoSchema,
-  PasswordInfoSchema,
-  passwordInfoSchema,
-  personalInfoSchema,
-  PersonalInfoSchema,
-} from "@/schema/registration";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useParamJson } from "./useParamJson";
 import { REGISTRATION_KEYS } from "@/constants/Keys";
+import {
+	type BankInfoSchema,
+	bankInfoSchema,
+	type PasswordInfoSchema,
+	type PersonalInfoSchema,
+	passwordInfoSchema,
+	personalInfoSchema,
+} from "@/schema/registration";
 import { useRegistrationStore } from "@/store/registration";
+import { useParamJson } from "./useParamJson";
+
+const personalFieldsSchema = personalInfoSchema.omit({ tnc: true });
 
 export function useRegistrationForm() {
-  const params = useLocalSearchParams();
+	const tncAccepted = useRegistrationStore((state) => state.tncAccepted);
+	const urlPersonalInfo = useParamJson<PersonalInfoSchema>(
+		REGISTRATION_KEYS.PARAMS.PERSONAL_INFO,
+	);
+	const urlBankInfo = useParamJson<BankInfoSchema>(
+		REGISTRATION_KEYS.PARAMS.BANK_INFO,
+	);
+	const urlPasswordInfo = useParamJson<PasswordInfoSchema>(
+		REGISTRATION_KEYS.PARAMS.PASSWORD_INFO,
+	);
 
-  const personalInfoForm = useForm({
-    resolver: zodResolver(personalInfoSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      password: "",
-      tnc: false,
-    },
-    mode: "onChange",
-  });
+	// Restore once; later seed changes must not replace an edited form.
+	const [initial] = React.useState(() => {
+		const store = useRegistrationStore.getState();
+		const personal = personalFieldsSchema.safeParse(
+			store.personalInfo ?? urlPersonalInfo,
+		);
+		const bank = bankInfoSchema.safeParse(store.bankInfo ?? urlBankInfo);
+		const password = passwordInfoSchema.safeParse(
+			store.passwordInfo ?? urlPasswordInfo,
+		);
+		return {
+			personal: {
+				...(personal.success
+					? personal.data
+					: { name: "", email: "", phone: "", password: "" }),
+				// Consent comes from the shared state, never from route parameters.
+				tnc: store.tncAccepted,
+			},
+			bank: bank.success
+				? bank.data
+				: { bankName: "", accountName: "", accountNumber: "" },
+			password: password.success
+				? password.data
+				: { password: "", confirmPassword: "" },
+			index: !personal.success || !store.tncAccepted ? 0 : bank.success ? 2 : 1,
+		};
+	});
 
-  const bankInfoForm = useForm({
-    resolver: zodResolver(bankInfoSchema),
-  });
+	const personalInfoForm = useForm<PersonalInfoSchema>({
+		resolver: zodResolver(personalInfoSchema),
+		defaultValues: initial.personal,
+		mode: "onChange",
+	});
+	const bankInfoForm = useForm<BankInfoSchema>({
+		resolver: zodResolver(bankInfoSchema),
+		defaultValues: initial.bank,
+	});
+	const passwordInfoForm = useForm<PasswordInfoSchema>({
+		resolver: zodResolver(passwordInfoSchema),
+		defaultValues: initial.password,
+	});
+	const [index, setIndex] = React.useState(initial.index);
+	const { getValues, setValue, subscribe } = personalInfoForm;
 
-  const passwordInfoForm = useForm({
-    resolver: zodResolver(passwordInfoSchema),
-  });
+	React.useEffect(() => {
+		if (getValues("tnc") === tncAccepted) return;
+		setValue("tnc", tncAccepted, {
+			shouldValidate: true,
+			shouldDirty: true,
+			shouldTouch: true,
+		});
+	}, [getValues, setValue, tncAccepted]);
 
-  const [index, setIndex] = React.useState(0);
+	React.useEffect(() => {
+		let active = true;
+		const unsubscribe = subscribe({
+			name: "tnc",
+			exact: true,
+			formState: { values: true },
+			callback: ({ values }) => {
+				if (!active) return;
+				const store = useRegistrationStore.getState();
+				if (
+					typeof values.tnc === "boolean" &&
+					values.tnc !== store.tncAccepted
+				) {
+					store.setTncAccepted(values.tnc);
+				}
+			},
+		});
+		return () => {
+			active = false;
+			unsubscribe();
+		};
+	}, [subscribe]);
 
-  const storePersonalInfo = useRegistrationStore((state) => state.personalInfo);
-  const storeBankInfo = useRegistrationStore((state) => state.bankInfo);
-  const storePasswordInfo = useRegistrationStore((state) => state.passwordInfo);
-
-  const setPersonalInfo = useRegistrationStore((state) => state.setPersonalInfo);
-  const setBankInfo = useRegistrationStore((state) => state.setBankInfo);
-  const setPasswordInfo = useRegistrationStore((state) => state.setPasswordInfo);
-
-  const urlPersonalInfo = useParamJson<PersonalInfoSchema>(
-    REGISTRATION_KEYS.PARAMS.PERSONAL_INFO,
-  );
-  const urlBankInfo = useParamJson<BankInfoSchema>(
-    REGISTRATION_KEYS.PARAMS.BANK_INFO,
-  );
-  const urlPasswordInfo = useParamJson<PasswordInfoSchema>(
-    REGISTRATION_KEYS.PARAMS.PASSWORD_INFO,
-  );
-
-  const activePersonalInfo = storePersonalInfo || urlPersonalInfo;
-  const activeBankInfo = storeBankInfo || urlBankInfo;
-  const activePasswordInfo = storePasswordInfo || urlPasswordInfo;
-
-  React.useEffect(() => {
-    if (activePersonalInfo) {
-      const parsedInfo = personalInfoSchema.safeParse(activePersonalInfo);
-
-      if (!parsedInfo.success) {
-        setIndex(0);
-        return;
-      }
-
-      personalInfoForm.setValue("name", activePersonalInfo.name);
-      personalInfoForm.setValue("email", activePersonalInfo.email);
-      personalInfoForm.setValue("phone", activePersonalInfo.phone);
-      personalInfoForm.setValue("password", activePersonalInfo.password);
-
-      setIndex(1);
-    }
-
-    if (activeBankInfo) {
-      const parsedInfo = bankInfoSchema.safeParse(activeBankInfo);
-
-      if (!parsedInfo.success) {
-        setIndex(1);
-        return;
-      }
-
-      bankInfoForm.setValue("bankName", activeBankInfo.bankName);
-      bankInfoForm.setValue("accountNumber", activeBankInfo.accountNumber);
-      bankInfoForm.setValue("accountName", activeBankInfo.accountName);
-    }
-
-    if (activePasswordInfo) {
-      const parsedInfo = passwordInfoSchema.safeParse(activePasswordInfo);
-
-      if (!parsedInfo.success) {
-        setIndex(2);
-        return;
-      }
-    }
-  }, []);
-
-  const setTncAccepted = useRegistrationStore((state) => state.setTncAccepted);
-  const tncAccepted = useRegistrationStore((state) => state.tncAccepted);
-
-  // Sync store to form
-  React.useEffect(() => {
-    if (tncAccepted) {
-      personalInfoForm.setValue("tnc", true, {
-        shouldValidate: true,
-        shouldDirty: true,
-        shouldTouch: true,
-      });
-    }
-  }, [tncAccepted]);
-
-  // Sync form to store
-  const tncValue = personalInfoForm.watch("tnc");
-  React.useEffect(() => {
-    if (!tncValue && tncAccepted) {
-      setTncAccepted(false);
-    }
-  }, [tncValue]);
-
-  return {
-    personalInfoForm,
-    bankInfoForm,
-    passwordInfoForm,
-    indexState: [index, setIndex] as const,
-  };
+	return {
+		personalInfoForm,
+		bankInfoForm,
+		passwordInfoForm,
+		indexState: [index, setIndex] as const,
+	};
 }

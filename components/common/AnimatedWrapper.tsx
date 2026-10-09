@@ -6,6 +6,7 @@ import {
 	View,
 } from "react-native";
 import Animated from "react-native-reanimated";
+import { BottomActionInset } from "@/components/common/BottomActionBar";
 import { Colors } from "@/constants/Colors";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { haptic } from "@/lib/haptics";
@@ -129,8 +130,18 @@ export default function AnimatedWrapper(props: AnimatedWrapperProps) {
 				{paddingTop ? <View style={{ height: paddingTop }} /> : null}
 
 				{children}
-				{hasBottomBar && <View className="h-20" />}
-				{hasActionButton && <View className="h-32" />}
+				{hasBottomBar && (
+					<>
+						<View className="h-20" />
+						<BottomActionInset />
+					</>
+				)}
+				{hasActionButton && (
+					<>
+						<View className="h-32" />
+						<BottomActionInset />
+					</>
+				)}
 
 				{paddingBottom ? <View style={{ height: paddingBottom }} /> : null}
 			</Animated.ScrollView>

@@ -1,4 +1,5 @@
 import Entypo from "@expo/vector-icons/Entypo";
+import { Image } from "expo-image";
 import { ArrowUpDown } from "lucide-react-native";
 import React from "react";
 import { View } from "react-native";
@@ -6,6 +7,7 @@ import BouncyPressable from "@/components/common/BouncyPressable";
 import SortActionSheet from "@/components/common/SortActionSheet";
 import { Colors } from "@/constants/Colors";
 import type { SortOption } from "@/hooks/useSearch";
+import { figmaStockShadows } from "@/lib/ui/figma-stock";
 import { cn } from "@/lib/utils";
 import { FilterIcon } from "../icons";
 import { Input, InputField } from "../ui/input";
@@ -19,6 +21,7 @@ type SearchBarProps = {
 	debounce?: boolean;
 	debounceDelay?: number;
 	placeholder?: string;
+	appearance?: "default" | "figma";
 
 	// Sort props (rebranded from filter)
 	withSort?: boolean;
@@ -42,6 +45,8 @@ export default function SearchBar(
 		debounce = true,
 		debounceDelay = DEFAULT_DEBOUNCE_DELAY_IN_MS,
 		placeholder = "Cari...",
+		appearance = "default",
+		style,
 
 		withSort = false,
 		sortBy,
@@ -103,21 +108,41 @@ export default function SearchBar(
 				size={size}
 				variant={variant}
 				className={cn(
-					"items-center rounded-xl shadow-main",
-					showAction ? "pl-3.5 pr-1" : "px-4",
+					"items-center rounded-xl",
+					appearance === "figma" ? "gap-3" : "shadow-main",
+					appearance === "figma"
+						? "px-[15px]"
+						: showAction
+							? "pl-3.5 pr-1"
+							: "px-4",
 					className,
 				)}
 				{...inputProps}
+				style={[appearance === "figma" && figmaStockShadows.control, style]}
 			>
 				<View className="shrink-0 items-center justify-center">
-					<Entypo name="magnifying-glass" size={20} color={Colors.zinc[400]} />
+					{appearance === "figma" ? (
+						<Image
+							source={require("@/assets/images/figma/back-office/search.svg")}
+							style={{ width: 18, height: 18 }}
+						/>
+					) : (
+						<Entypo
+							name="magnifying-glass"
+							size={20}
+							color={Colors.zinc[400]}
+						/>
+					)}
 				</View>
 
 				<InputField
 					placeholder={placeholder}
 					value={inputValue}
 					onChangeText={setInputValue}
-					className="flex-1 shrink text-sm"
+					className={cn(
+						"flex-1 shrink",
+						appearance === "figma" ? "px-0 text-xs leading-4" : "text-sm",
+					)}
 					style={{ flexShrink: 1 }}
 				/>
 

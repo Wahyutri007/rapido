@@ -52,12 +52,15 @@ export default function SortActionSheet({
 	title = "Opsi Urutan",
 }: SortActionSheetProps) {
 	const [draftValue, setDraftValue] = React.useState<SortOption>(value);
+	const [previousProps, setPreviousProps] = React.useState({ isOpen, value });
 
-	React.useEffect(() => {
+	// Reset only for a new open session or an externally changed sort value.
+	if (previousProps.isOpen !== isOpen || previousProps.value !== value) {
+		setPreviousProps({ isOpen, value });
 		if (isOpen) {
 			setDraftValue(value);
 		}
-	}, [isOpen, value]);
+	}
 
 	const handleSave = () => {
 		onChange(draftValue);

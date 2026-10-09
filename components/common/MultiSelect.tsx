@@ -69,6 +69,16 @@ export function MultiSelect({
 	const [isOpen, setIsOpen] = React.useState(false);
 	const [draftSelected, setDraftSelected] = React.useState<string[]>([]);
 	const [search, setSearch] = React.useState("");
+	const selectionKey = JSON.stringify(selectedValues);
+	const [previousSelectionKey, setPreviousSelectionKey] =
+		React.useState(selectionKey);
+
+	// External resets replace the draft before children render. Fresh arrays
+	// with the same values must not erase edits in the open sheet.
+	if (previousSelectionKey !== selectionKey) {
+		setPreviousSelectionKey(selectionKey);
+		setDraftSelected([...selectedValues]);
+	}
 
 	const handleOpen = () => {
 		setDraftSelected([...selectedValues]);
@@ -92,11 +102,9 @@ export function MultiSelect({
 	};
 
 	const handleToggleDraftItem = (value: string) => {
-		if (draftSelected.includes(value)) {
-			setDraftSelected((prev) => prev.filter((v) => v !== value));
-		} else {
-			setDraftSelected((prev) => [...prev, value]);
-		}
+		setDraftSelected((prev) =>
+			prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
+		);
 	};
 
 	const unit =
@@ -120,16 +128,13 @@ export function MultiSelect({
 		filteredItems.every((item) => draftSelected.includes(item.value));
 
 	const handleToggleAll = () => {
-		if (isAllSelected) {
+		setDraftSelected((prev) => {
 			const filteredSet = new Set(filteredItems.map((i) => i.value));
-			setDraftSelected((prev) => prev.filter((v) => !filteredSet.has(v)));
-		} else {
-			const newSelected = new Set([
-				...draftSelected,
-				...filteredItems.map((i) => i.value),
-			]);
-			setDraftSelected(Array.from(newSelected));
-		}
+			if (filteredItems.every((item) => prev.includes(item.value))) {
+				return prev.filter((v) => !filteredSet.has(v));
+			}
+			return Array.from(new Set([...prev, ...filteredSet]));
+		});
 	};
 
 	const selectedItemsLabel = React.useMemo(() => {

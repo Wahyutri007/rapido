@@ -646,12 +646,22 @@ export function CardListFilterSheet({
 	subtitle = "Filter Berdasarkan Laporan",
 }: CardListFilterSheetProps) {
 	const [tempSelected, setTempSelected] = React.useState<string[]>(selectedIds);
+	const selectedIdsKey = JSON.stringify(selectedIds);
+	const [previousProps, setPreviousProps] = React.useState({
+		isOpen,
+		selectedIdsKey,
+	});
 
-	React.useEffect(() => {
+	// A new array with the same IDs must not discard an in-progress draft.
+	if (
+		previousProps.isOpen !== isOpen ||
+		previousProps.selectedIdsKey !== selectedIdsKey
+	) {
+		setPreviousProps({ isOpen, selectedIdsKey });
 		if (isOpen) {
 			setTempSelected(selectedIds);
 		}
-	}, [isOpen, selectedIds]);
+	}
 
 	const options = React.useMemo<CardListFilterOption[]>(
 		() =>
@@ -758,11 +768,7 @@ export function CardListFilterSheet({
 						<ButtonText>Reset</ButtonText>
 					</Button>
 
-					<Button
-						onPress={handleApply}
-						size="lg"
-						className="flex-1"
-					>
+					<Button onPress={handleApply} size="lg" className="flex-1">
 						<ButtonText>Terapkan</ButtonText>
 					</Button>
 				</View>
@@ -792,7 +798,7 @@ export function useCardListFilter(
 
 	// Stable key based on all section IDs
 	const sectionIdsKey = React.useMemo(() => {
-		return flattenedSections.map((s) => s.id ?? s.title).join("::");
+		return JSON.stringify(flattenedSections.map((s) => s.id ?? s.title));
 	}, [flattenedSections]);
 
 	const allIds = React.useMemo(() => {
@@ -804,13 +810,13 @@ export function useCardListFilter(
 		return allIds;
 	});
 
-	const prevKeyRef = React.useRef(sectionIdsKey);
-	React.useEffect(() => {
-		if (prevKeyRef.current !== sectionIdsKey) {
-			prevKeyRef.current = sectionIdsKey;
-			setSelectedIds(allIds);
-		}
-	}, [sectionIdsKey, allIds]);
+	const [previousSectionIdsKey, setPreviousSectionIdsKey] =
+		React.useState(sectionIdsKey);
+	// Apply a new report identity before rendering its filtered sections.
+	if (previousSectionIdsKey !== sectionIdsKey) {
+		setPreviousSectionIdsKey(sectionIdsKey);
+		setSelectedIds(allIds);
+	}
 
 	const [isOpen, setIsOpen] = React.useState(false);
 

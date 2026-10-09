@@ -1,3 +1,4 @@
+import React from "react";
 import type { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 import { useAuth } from "@/context/AuthContext";
@@ -38,65 +39,95 @@ const loginLimitedSchema = z.object({
 
 export default function useLoginRequest(form: UseFormReturn<LoginSchema>) {
 	const auth = useAuth();
+	const mutation = useLoginMutation();
+	const mounted = React.useRef(true);
+	const submitting = React.useRef(false);
+	const [isLoading, setLoading] = React.useState(false);
 
-	return useLoginMutation({
-		onSuccess: async (data) => {
-			await auth.updateToken(data.token);
-		},
-		onError: (error) => {
-			if (error.status === 401) {
-				const errors = loginFailSchema.safeParse(error.errors);
+	React.useEffect(() => {
+		mounted.current = true;
+		return () => {
+			mounted.current = false;
+		};
+	}, []);
 
-				if (!errors.success) {
-					form.setError("email", {
-						message: "Email atau password salah",
-					});
-					return;
-				}
+	function handleError(error: unknown) {
+		const apiError = error as { status?: number; errors?: unknown } | undefined;
+		if (apiError?.status === 401) {
+			const errors = loginFailSchema.safeParse(apiError.errors);
 
-				const { data } = errors;
-
-				if (data.attempts > 2) {
-					const remainingAttempts = data.max_attempts - data.attempts;
-
-					if (remainingAttempts <= 0) {
-						form.setError("email", {
-							message: `Terlalu banyak percobaan masuk. Coba lagi nanti.`,
-						});
-						return;
-					}
-
-					form.setError("email", {
-						message: `Email atau password salah (${remainingAttempts} percobaan lagi)`,
-					});
-					return;
-				}
-
+			if (!errors.success) {
 				form.setError("email", {
 					message: "Email atau password salah",
 				});
-			} else if (error.status === 429) {
-				const errors = loginLimitedSchema.safeParse(error.errors);
+				return;
+			}
 
-				if (!errors.success) {
+			const { data } = errors;
+
+			if (data.attempts > 2) {
+				const remainingAttempts = data.max_attempts - data.attempts;
+
+				if (remainingAttempts <= 0) {
 					form.setError("email", {
-						message: "Terlalu banyak percobaan masuk. Coba lagi nanti.",
+						message: `Terlalu banyak percobaan masuk. Coba lagi nanti.`,
 					});
 					return;
 				}
 
-				const { data } = errors;
-
 				form.setError("email", {
-					message: `Terlalu banyak percobaan masuk. Coba lagi dalam ${data.seconds} detik.`,
+					message: `Email atau password salah (${remainingAttempts} percobaan lagi)`,
 				});
-			} else {
-				form.setError("email", {
-					message: "Terdapat kesalahan. Silakan coba lagi.",
-				});
+				return;
 			}
-		},
-	});
+
+			form.setError("email", {
+				message: "Email atau password salah",
+			});
+		} else if (apiError?.status === 429) {
+			const errors = loginLimitedSchema.safeParse(apiError.errors);
+
+			if (!errors.success) {
+				form.setError("email", {
+					message: "Terlalu banyak percobaan masuk. Coba lagi nanti.",
+				});
+				return;
+			}
+
+			const { data } = errors;
+
+			form.setError("email", {
+				message: `Terlalu banyak percobaan masuk. Coba lagi dalam ${data.seconds} detik.`,
+			});
+		} else {
+			form.setError("email", {
+				message: "Terdapat kesalahan. Silakan coba lagi.",
+			});
+		}
+	}
+
+	async function call(data: LoginSchema) {
+		// Lock before awaiting: loading from a render cannot block queued presses.
+		if (!mounted.current || submitting.current) return [null, null] as const;
+		submitting.current = true;
+		setLoading(true);
+		try {
+			const result = await mutation.call(data);
+			if (!mounted.current) return result;
+			const [response, error] = result;
+			if (error) handleError(error);
+			else if (response) await auth.updateToken(response.token);
+			return result;
+		} catch (error) {
+			if (mounted.current) handleError(error);
+			return [null, error] as const;
+		} finally {
+			submitting.current = false;
+			if (mounted.current) setLoading(false);
+		}
+	}
+
+	return { call, isLoading };
 }
 
 export function useLogoutRequest() {
