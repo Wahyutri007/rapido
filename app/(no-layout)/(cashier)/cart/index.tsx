@@ -1,6 +1,5 @@
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { router } from "expo-router";
 import React from "react";
 import { Pressable, View } from "react-native";
 import AlertModal, { useAlertModal } from "@/components/common/AlertModal";
@@ -16,10 +15,9 @@ import { CART } from "@/constants/data/cart";
 import { OFFER_ITEMS } from "@/constants/data/offer";
 import useCustomRouter from "@/hooks/useCustomRouter";
 import useSearchParamState from "@/hooks/useSearchParamState";
+import { getCartSubtotal } from "@/lib/cashier-cart-pricing";
 import { cn, formatRp, wait } from "@/lib/utils";
 import type { Cart } from "@/types/api/cart";
-
-const TAX = 0.1;
 
 function ExtraButtons(
 	props: React.PropsWithChildren & {
@@ -134,28 +132,13 @@ function CartDetails(props: { cart: Cart | null }) {
 }
 
 export default function CartScreen() {
-	const { pushWithParams, replaceWithParams } = useCustomRouter();
+	const { replaceWithParams } = useCustomRouter();
 
 	// * Get from api
-	const [cart, setCart] = React.useState(CART);
+	const [cart] = React.useState(CART);
+	const subtotal = getCartSubtotal(cart);
 
 	const orderAlert = useAlertModal();
-
-	// const subtotal = cart.reduce((acc, curr) => {
-	// 	const totalVariantPrice = curr.variants.reduce((acc, curr) => {
-	// 		return acc + curr.price;
-	// 	}, 0);
-
-	// 	return acc + (curr.menu.price + totalVariantPrice) * curr.amount;
-	// }, 0);
-
-	// const taxPrice = subtotal * TAX;
-	// const totalPrice = subtotal + taxPrice;
-
-	function handleAddMenu() {
-		// * Modify ui to add extra menu
-		router.push("/(cashier)/catalog" as any);
-	}
 
 	async function handlePayLater() {
 		// * Mock API request
@@ -163,15 +146,6 @@ export default function CartScreen() {
 		await wait(1000);
 		orderAlert.open();
 	}
-
-	// async function handleOrder() {
-	// 	router.push({
-	// 		pathname: "/add/cart/input-money",
-	// 		params: {
-	// 			totalPrice,
-	// 		},
-	// 	});
-	// }
 
 	function handleCloseAlert() {
 		orderAlert.close();
@@ -191,28 +165,27 @@ export default function CartScreen() {
 
 			<View className="grow bg-zinc-50">
 				<CartDetails cart={cart} />
-				<View className="mt-3 gap-3 bg-white px-5 py-2.5">
+				<View className="mt-3 gap-3 bg-white px-5 py-3">
 					<View className="flex-row items-center justify-between">
-						<Text className="text-xs">Subtotal</Text>
-						<Text className="text-xs">{formatRp(-1)}</Text>
-						{/* <Text className="text-xs">{formatRp(subtotal)}</Text> */}
+						<Text size="small">Subtotal</Text>
+						<Text size="small">
+							{subtotal === null ? "Tidak tersedia" : formatRp(subtotal)}
+						</Text>
 					</View>
 					<View className="flex-row items-center justify-between">
-						<Text className="text-xs">Pajak</Text>
-						<Text className="text-xs">{formatRp(-1)}</Text>
-						{/* <Text className="text-xs">{formatRp(taxPrice)}</Text> */}
+						<Text size="small">Pajak</Text>
+						<Text size="small">-</Text>
 					</View>
 					<View className="flex-row items-center justify-between">
-						<Text className="text-xs">Lainnya</Text>
-						<Text className="text-xs">Rp 0</Text>
+						<Text size="small">Lainnya</Text>
+						<Text size="small">-</Text>
 					</View>
 					<View className="flex-row items-center justify-between">
-						<Text className="text-xs text-gray-900" w="semibold">
+						<Text size="small" w="semibold">
 							Total
 						</Text>
-						<Text className="text-xs text-gray-900" w="semibold">
-							{formatRp(-1)}
-							{/* {formatRp(totalPrice)} */}
+						<Text size="small" w="semibold">
+							-
 						</Text>
 					</View>
 				</View>
@@ -225,14 +198,16 @@ export default function CartScreen() {
 				</View>
 				<View className="mt-auto bg-white p-5">
 					<View className="flex-row items-center justify-between">
-						<Text className="text-sm" w="medium">
+						<Text size="normal" w="medium">
 							Total
 						</Text>
-						<Text className="text-sm text-gray-900" w="semibold">
-							{formatRp(-1)}
-							{/* {formatRp(totalPrice)} */}
+						<Text size="normal" w="semibold">
+							-
 						</Text>
 					</View>
+					<Text size="small" className="mt-2 text-muted">
+						Total pembayaran belum tersedia.
+					</Text>
 					<View className="mt-5 flex-row items-center gap-4">
 						<ButtonGroup className="flex-1">
 							<Button size="xl" variant="outline" onPress={handlePayLater}>

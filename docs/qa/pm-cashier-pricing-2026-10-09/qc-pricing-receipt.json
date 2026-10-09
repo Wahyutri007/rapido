@@ -1,0 +1,287 @@
+{
+  "recordedAtUtc": "2026-10-09T06:37:40.218Z",
+  "inputSourceHashes": [
+    {
+      "path": "lib/cashier-cart-pricing.ts",
+      "sha256": "9fef6562bbb467b33e1a9eebab08a79001e3f48a714059a64434690112b8a585"
+    },
+    {
+      "path": "constants/data/cart.ts",
+      "sha256": "2e747f3d214dcddcf13ff04d5991f6bb94d9341f22872069a062d35321fe672f"
+    },
+    {
+      "path": "constants/data/menu.ts",
+      "sha256": "64ada92db5299f71efa241c36007abaa867fbbc839869be61b2f3ebc6a3adf19"
+    },
+    {
+      "path": "constants/data/variant.ts",
+      "sha256": "d0bde49ee7db71db0361d276daa56bdc959860a6b23a6e02b72ac63e7a3a7ce1"
+    },
+    {
+      "path": "components/feature/cart/CartItem.tsx",
+      "sha256": "8b6339038414b7fb32f5b4cd97285ca40c2b1898682cf0250c4f518712bf6f79"
+    },
+    {
+      "path": "components/common/Text.tsx",
+      "sha256": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab"
+    },
+    {
+      "path": "constants/Fonts.ts",
+      "sha256": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616"
+    },
+    {
+      "path": "lib/utils/index.ts",
+      "sha256": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196"
+    },
+    {
+      "path": "lib/cashier/catalog-filter.ts",
+      "sha256": "2b78847f0a1e31a050b159ea025df61f3961f9dd557651ccaad786af678de743"
+    },
+    {
+      "path": "constants/data/category.ts",
+      "sha256": "82d903ab4e236761b7aff122fe84e16e1ae2295f1f91bd6cb1c789bffe92b7b9"
+    },
+    {
+      "path": "components/feature/cashier/catalog/menu/MenuView.tsx",
+      "sha256": "0bfb367c0cf7b1c744ea6d35d2a8330aff3bf1c9dc5e6b0b43ed7e30da1968e0"
+    },
+    {
+      "path": "components/feature/cashier/catalog/menu/Filter.tsx",
+      "sha256": "26180c9eebaffd765996b1f291c890f3a1d99b7ef97cb0d12ae9f023b8c90193"
+    },
+    {
+      "path": "constants/Colors.ts",
+      "sha256": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820"
+    },
+    {
+      "path": "components/feature/cashier/catalog/menu/Search.tsx",
+      "sha256": "40472020c66449a955c93a5dc0310e648ab71fb0e5f92a77df3927d7b59520cc"
+    },
+    {
+      "path": "hooks/useSearchParamState.ts",
+      "sha256": "acf37f8a41acfa959cdc19cb4b9b68963d96f4c10df45d8c556f77f40f4dfbfd"
+    },
+    {
+      "path": "app/(no-layout)/(cashier)/cart/index.tsx",
+      "sha256": "d8b959d26ef0919e3357bdb3d99950adf58293e98d2a69fda52a4f9b79c9f0a1"
+    }
+  ],
+  "sourceDrift": [],
+  "rendererErrors": [],
+  "applicationChanges": [],
+  "method": "Actual TypeScript production functions/JSX/hook in React19 test renderer; native/presentation and Expo router transport adapters; deterministic virtual clock for actual 250ms hook; real Text/formatter/category/data sources. No native, browser layout, full Expo Router, API or Figma parity claim.",
+  "status": "QC_PRICING_SCOPED_PASS",
+  "handoffSourceHashesMatch": true,
+  "passed": 44,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "base price and quantity",
+      "status": "PASS"
+    },
+    {
+      "name": "zero discount snapshot with charged variants",
+      "status": "PASS"
+    },
+    {
+      "name": "discount snapshot differs from advertised percent",
+      "status": "PASS"
+    },
+    {
+      "name": "nullish discount fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "variant order does not change price",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: fraction",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: fraction",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: string",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: string",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid price: unsafe",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid variant: unsafe",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: zero",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: fraction",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "reject quantity: string",
+      "status": "PASS"
+    },
+    {
+      "name": "safe integer maximum is valid",
+      "status": "PASS"
+    },
+    {
+      "name": "variant addition overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "line multiplication overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "subtotal boundary with BigInt",
+      "status": "PASS"
+    },
+    {
+      "name": "subtotal overflow rejects whole cart",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid nested item never yields partial subtotal",
+      "status": "PASS"
+    },
+    {
+      "name": "empty groups yield zero, missing cart is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed shapes rejected by model boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "30 exact BigInt quantity, grouping and ordering cases",
+      "status": "PASS"
+    },
+    {
+      "name": "actual existing fixture line amounts and subtotal",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: normal item",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: zero discount",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: invalid price",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: fractional price",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: invalid quantity",
+      "status": "PASS"
+    },
+    {
+      "name": "production CartItem rendered text: variant-adjusted quantity",
+      "status": "PASS"
+    },
+    {
+      "name": "screen keeps subtotal separate from unavailable checkout total",
+      "status": "PASS"
+    }
+  ],
+  "renderedRows": [
+    {
+      "label": "normal item",
+      "text": "QC item 3 × Rp 12.000 Rp 36.000 Edit Baru"
+    },
+    {
+      "label": "zero discount",
+      "text": "Free item 2 × Rp 0 Rp 0 Edit Baru"
+    },
+    {
+      "label": "invalid price",
+      "text": "QC item Harga tidak tersedia Edit Baru"
+    },
+    {
+      "label": "fractional price",
+      "text": "QC item Harga tidak tersedia Edit Baru"
+    },
+    {
+      "label": "invalid quantity",
+      "text": "QC item Harga tidak tersedia Edit Baru"
+    },
+    {
+      "label": "variant-adjusted quantity",
+      "text": "QC item Added 3 × Rp 1.500 Rp 4.500 Edit Baru"
+    }
+  ],
+  "limits": [
+    "Whole-rupiah integers only; catalog schema accepts fractions",
+    "Cart still uses existing fixture, not backend",
+    "Pay later remains mock and pay now no-op",
+    "Display/browser/native/Figma closure not supplied by this renderer"
+  ]
+}

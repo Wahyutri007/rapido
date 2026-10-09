@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-10-09T06:21:37.536Z",
+  "sourcePath": "lib/cashier-cart-pricing.ts",
+  "sourceSha256": "9fef6562bbb467b33e1a9eebab08a79001e3f48a714059a64434690112b8a585",
+  "passed": 51,
+  "failed": 0,
+  "results": [
+    {
+      "name": "normal selling price and quantity",
+      "status": "PASS"
+    },
+    {
+      "name": "discount snapshot is authoritative, not recalculated from percentage",
+      "status": "PASS"
+    },
+    {
+      "name": "zero discount snapshot remains free",
+      "status": "PASS"
+    },
+    {
+      "name": "nullish snapshot uses known selling price",
+      "status": "PASS"
+    },
+    {
+      "name": "variants are per unit before multiplying quantity",
+      "status": "PASS"
+    },
+    {
+      "name": "zero-price variants remain valid",
+      "status": "PASS"
+    },
+    {
+      "name": "all detail groups contribute to subtotal",
+      "status": "PASS"
+    },
+    {
+      "name": "empty cart and empty detail groups subtotal zero",
+      "status": "PASS"
+    },
+    {
+      "name": "null or absent cart is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "null or absent item is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: negative Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: negative Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: negative Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: fractional",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: fractional",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: fractional",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: unsafe integer",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: unsafe integer",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: unsafe integer",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: missing",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: missing",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: null",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: null",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid selling price: numeric string",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid variant price: numeric string",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid discount snapshot does not fall back: numeric string",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: zero",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: negative",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: fractional",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: NaN",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: Infinity",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: unsafe",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: missing",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid quantity: numeric string",
+      "status": "PASS"
+    },
+    {
+      "name": "missing menu or variants does not imply a free item",
+      "status": "PASS"
+    },
+    {
+      "name": "missing cart group items is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "one invalid item invalidates the whole subtotal",
+      "status": "PASS"
+    },
+    {
+      "name": "safe money boundary is accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "variant addition overflow is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "quantity multiplication overflow is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "subtotal accumulation overflow is unavailable",
+      "status": "PASS"
+    },
+    {
+      "name": "helpers preserve source snapshots",
+      "status": "PASS"
+    }
+  ]
+}

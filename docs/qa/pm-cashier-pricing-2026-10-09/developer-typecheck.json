@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-10-09T06:22:31.460Z",
+  "rootFiles": [
+    "lib/cashier-cart-pricing.ts",
+    "components/feature/cart/CartItem.tsx",
+    "app/(no-layout)/(cashier)/cart/index.tsx"
+  ],
+  "importClosureFiles": 1030,
+  "diagnostics": []
+}

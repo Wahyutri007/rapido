@@ -1,0 +1,55 @@
+{
+  "task": "PM-CASHIER-PRICE-001",
+  "decision": "APPROVED_FOR_SCOPED_PUBLICATION",
+  "date": "2026-10-09",
+  "repository": "https://github.com/Wahyutri007/rapido",
+  "moduleBranch": "fix/cashier-cart-pricing",
+  "baseCommit": "178cda6bf7e2702c7c23ce99573d654ac0661921",
+  "productionScope": [
+    "lib/cashier-cart-pricing.ts",
+    "components/feature/cart/CartItem.tsx",
+    "app/(no-layout)/(cashier)/cart/index.tsx"
+  ],
+  "problem": "Item prices and subtotal were rendered as Rp -1; obsolete commented code referred to menu.price instead of sell_price.",
+  "result": "Catalog discounted-price snapshot plus per-unit variants times quantity; all detail groups contribute. Unsupported or unsafe values show unavailable. Unknown tax/fees/payable total stay unavailable.",
+  "reviews": {
+    "developerFinancialCases": {
+      "passed": 51,
+      "failed": 0
+    },
+    "independentQA": {
+      "passed": 16,
+      "failed": 0,
+      "report": "independent-qa/REPORT.md"
+    },
+    "independentQC": {
+      "passed": 44,
+      "failed": 0,
+      "scope": "Pricing model, actual CartItem text and source wiring; native/presentation adapters.",
+      "receipt": "qc-pricing-receipt.json"
+    },
+    "candidateCompatibility": {
+      "passed": true,
+      "report": "publication-check/REPORT.md",
+      "result": "publication-check/result.json",
+      "typeScriptRootFiles": 3,
+      "typeScriptClosureFiles": 1024,
+      "typeScriptDiagnostics": 0,
+      "eslintErrors": 0,
+      "eslintWarnings": 0
+    }
+  },
+  "publicationSequence": "Reviewed module branch first, then non-force main fast-forward; remote commit IDs verified after push in the PM receipt.",
+  "authorization": "Standing user request: publish modules passing QA/QC on their own branches before main; latest request continues that work.",
+  "previousDecision": "PM_REVIEW.json records the earlier HOLD_FOR_QC state; this decision follows the received QC pass and candidate compatibility check.",
+  "excluded": [
+    "Cashier catalog P2 changes requested",
+    "Home/Transactions/Stock/Places/Bills peer source",
+    "Full checkout/payment approval",
+    "Figma/native/backend/persistence certification",
+    "Dependency or runtime changes"
+  ],
+  "moneyPolicyLimit": "Whole Rupiah only; catalog schema itself allows fractions. An explicit fractional-currency contract is still required.",
+  "globalQualityLimit": "Focused checks pass; global lint backlog from the main integration remains a separate gate and was not re-run or declared closed.",
+  "activeWorkspace": "Publication runs in an isolated worktree; no checkout/reset/pull/stash/staging of the shared source workspace."
+}

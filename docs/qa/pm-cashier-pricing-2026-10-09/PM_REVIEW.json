@@ -1,0 +1,93 @@
+{
+  "task": "PM-CASHIER-PRICE-001",
+  "date": "2026-10-09",
+  "role": "Projek Manager",
+  "status": "READY_FOR_QC_SCOPED",
+  "publicationDecision": "HOLD_FOR_QC",
+  "sources": [
+    {
+      "path": "lib/cashier-cart-pricing.ts",
+      "sha256": "9fef6562bbb467b33e1a9eebab08a79001e3f48a714059a64434690112b8a585"
+    },
+    {
+      "path": "components/feature/cart/CartItem.tsx",
+      "sha256": "8b6339038414b7fb32f5b4cd97285ca40c2b1898682cf0250c4f518712bf6f79"
+    },
+    {
+      "path": "app/(no-layout)/(cashier)/cart/index.tsx",
+      "sha256": "d8b959d26ef0919e3357bdb3d99950adf58293e98d2a69fda52a4f9b79c9f0a1"
+    }
+  ],
+  "behavior": {
+    "calculation": "Catalog discount.price ?? sell_price, plus variants per unit, times quantity; sum all cart detail groups.",
+    "existingFixtureLineTotals": [
+      43000,
+      100000
+    ],
+    "existingFixtureSubtotal": 143000,
+    "invalidMoney": "Unavailable; never a partial subtotal or implicit free item.",
+    "taxFeesAndPayableTotal": "Unavailable; no inferred tax rate or payable amount."
+  },
+  "verification": {
+    "developerFinancialCases": {
+      "passed": 51,
+      "failed": 0
+    },
+    "independentFinancialCases": {
+      "passed": 16,
+      "failed": 0
+    },
+    "independentImmutability": "PASS",
+    "independentActualFixtureReplay": "PASS; existing cart/menu/variant modules loaded with only image assets stubbed.",
+    "eslint": {
+      "sourceFiles": 3,
+      "errors": 0,
+      "warnings": 0
+    },
+    "biome": "PASS for developer source and runners",
+    "focusedTypeScript": {
+      "rootFiles": 3,
+      "importClosureFiles": 1030,
+      "diagnostics": 0,
+      "skipLibCheck": true
+    },
+    "pmSourceIdentityCheck": {
+      "currentHashesBoundToQAReport": 9,
+      "mismatches": 0
+    },
+    "pmTrackedSourceDiffCheck": "PASS",
+    "evidenceCorrection": "QA replay initially hardcoded fixture; corrected actual source loader and dependency hashes accepted before handoff.",
+    "independentQAConfiguration": {
+      "model": "gpt-6-luna",
+      "effort": "medium"
+    }
+  },
+  "evidence": {
+    "developerHandoff": "HANDOFF.md",
+    "developerQuality": "developer-quality.json",
+    "fingerprints": "source-fingerprints.json",
+    "independentQA": "independent-qa/REPORT.md",
+    "independentReplay": "independent-qa/independent-cases.cjs"
+  },
+  "openGates": [
+    "QC source/display review of this frozen batch.",
+    "Actual browser/native display verification and current Figma frame comparison.",
+    "Backend order/checkout quote and mutation contract, payment persistence and receipts.",
+    "Explicit fractional-currency policy; current helper rejects fractional Rupiah."
+  ],
+  "existingCheckoutDefects": [
+    {
+      "path": "app/(no-layout)/(cashier)/cart/index.tsx",
+      "line": 143,
+      "issue": "Bayar Nanti still uses pre-existing delay and mock success alert."
+    },
+    {
+      "path": "app/(no-layout)/(cashier)/cart/index.tsx",
+      "line": 218,
+      "issue": "Bayar Sekarang remains a pre-existing empty callback."
+    }
+  ],
+  "scopeLimits": "This receipt certifies pricing helper and display wiring only. It does not approve full checkout, payment, backend, native or Figma parity.",
+  "gitMutationsByThisTask": false,
+  "nextReview": "QC may read this packet and replay into its own output namespace. PM publication decision follows QC receipt for current hashes."
+}

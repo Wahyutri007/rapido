@@ -1,0 +1,21 @@
+{
+	"scope": "PM-CASHIER-PRICE-001",
+	"algorithm": "SHA256",
+	"files": [
+		{
+			"path": "lib/cashier-cart-pricing.ts",
+			"before": null,
+			"after": "9fef6562bbb467b33e1a9eebab08a79001e3f48a714059a64434690112b8a585"
+		},
+		{
+			"path": "components/feature/cart/CartItem.tsx",
+			"before": "98d9b065a0442f2cab3eae65357173b20f569d6b662b55bf6fb5096d444ce3a9",
+			"after": "8b6339038414b7fb32f5b4cd97285ca40c2b1898682cf0250c4f518712bf6f79"
+		},
+		{
+			"path": "app/(no-layout)/(cashier)/cart/index.tsx",
+			"before": "f01d97adff7f856650835195aa566383393f508e1cedeb0ff5a6b8f3dd870d02",
+			"after": "d8b959d26ef0919e3357bdb3d99950adf58293e98d2a69fda52a4f9b79c9f0a1"
+		}
+	]
+}

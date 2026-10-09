@@ -1,0 +1,22 @@
+{
+	"scope": "PM-CASHIER-PRICE-001",
+	"role": "developer",
+	"status": "READY_FOR_INDEPENDENT_QA_THEN_QC_THEN_PM_DECISION",
+	"checks": {
+		"financialModel": { "passed": 51, "failed": 0, "heapCapMb": 256 },
+		"eslint": { "sourceFiles": 3, "errors": 0, "warnings": 0, "heapCapMb": 384 },
+		"biome": { "files": 5, "exitCode": 0, "fixesAppliedAtFinalCheck": 0 },
+		"focusedTypeScript": { "rootSourceFiles": 3, "importClosureFiles": 1030, "diagnostics": 0, "heapCapMb": 1024, "skipLibCheck": true },
+		"trackedSourceDiffCheck": { "exitCode": 0, "lineEndingNoticesOnly": true },
+		"sourceHashesStableAfterQuality": true
+	},
+	"unverified": [
+		"independent QA/QC approval",
+		"actual native/browser display",
+		"Figma parity",
+		"tax, extra fees, order discount and payable total contract",
+		"checkout mutation, receipt and backend persistence",
+		"fractional Rupiah money contract",
+		"full-project lint and TypeScript"
+	]
+}
