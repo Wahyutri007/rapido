@@ -1,0 +1,9 @@
+# Laci Kasir — integrasi kandidat main,10 Oktober2026
+
+QC_ACCEPTED_SCOPED_ROUTE_RECOVERY_AND_FOOTER. Exact independent QC drawer06e7332f, one surgical parent/header registration plus Expo router import, and bounded BottomActionButton delegation to published BottomActionBar. Published Scanner/Header/Wrapper prerequisite4480c4b retained. Button subtree/public props/events/classes/loading/disabled stay identical by AST; existing parent routes/callbacks remain unchanged. No shared production writes or active peer imports.
+
+26 actual RNWeb checksPASS,10contractsPASS;3roots/1080TypeScript closure,0diagnostics. ESLint0/0, Biome/diffPASS with1inherited unused React parent import warning. Published old-menu CashDrawer reaches new destination; held-draft favorite menu separately tests8callback targets as a frozen fixture, not deployed or approved as wholeMenu. Actual route/header/CTA/explanation/back tested390/320/240/844 and top24/bottom48/side48 insets. Negative footer confirms published x16 violated side34; candidate x50 and bottom16+inset fit. Default48pxbutton/footerheight unchanged; disabled/click forwarded. Runtime/console/unserved requests0, compiled inputs/assets stable.
+
+Initial private build failed because the archived Footer relative ../ui/button import resolved under the snapshot directory. Resolver now explicitly maps that one unchanged historical import to published Button. Production source never changed; initial error retained.
+
+This route closes a missing destination, and honestly explains drawer opening is unavailable. CTA opens existing Printer settings; no drawer operation/transport/API/toggle/fake success introduced. Current full Figma29:21572 unavailable due Starter limit; metadata/fallback UI review only. No operational drawer/native/fullExpoRouter/Figma100 certificate. Whole favorite main remains HOLD Stock/Shift and remaining candidate integration.

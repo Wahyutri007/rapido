@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Exact accepted candidate app/(no-layout)/(cashier)/cash-drawer.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact accepted candidate app/(no-layout)/(cashier)/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact accepted candidate components/common/BottomActionButton.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing parent routes and callbacks preserved by inverse AST",
+      "status": "PASS"
+    },
+    {
+      "name": "Parent import delta is only Expo router",
+      "status": "PASS"
+    },
+    {
+      "name": "Button subtree, events/loading/disabled/text/classes remain identical",
+      "status": "PASS"
+    },
+    {
+      "name": "Footer public props and destructured defaults unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Published shared BottomActionBar handles left/right/bottom insets",
+      "status": "PASS"
+    },
+    {
+      "name": "Printer/Home destination files and exact accepted draft-menu source exist",
+      "status": "PASS"
+    },
+    {
+      "name": "Unavailable body has only Printer navigation and no pretend hardware success",
+      "status": "PASS"
+    }
+  ]
+}

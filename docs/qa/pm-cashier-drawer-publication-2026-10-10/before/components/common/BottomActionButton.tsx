@@ -1,6 +1,8 @@
-import type React from "react";
-import BottomActionBar from "@/components/common/BottomActionBar";
+import React from "react";
+import { View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, ButtonText } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 type BottomActionButtonProps = React.PropsWithChildren<{
 	onPress?: () => void;
@@ -16,8 +18,16 @@ export default function BottomActionButton({
 	isLoading,
 	className,
 }: BottomActionButtonProps) {
+	const insets = useSafeAreaInsets();
+
 	return (
-		<BottomActionBar className={className} topPadding={12}>
+		<View
+			className={cn(
+				"absolute bottom-0 left-0 right-0 border-t border-gray-100 bg-white px-4 pt-3",
+				className,
+			)}
+			style={{ paddingBottom: Math.max(insets.bottom, 16) }}
+		>
 			<Button
 				size="xl"
 				className="h-12 w-full rounded-full bg-primary-500"
@@ -29,6 +39,6 @@ export default function BottomActionButton({
 					{children}
 				</ButtonText>
 			</Button>
-		</BottomActionBar>
+		</View>
 	);
 }

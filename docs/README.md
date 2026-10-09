@@ -673,3 +673,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Scanner Kasir — publikasi kandidat 10 Oktober2026
 
 `/(no-layout)/(cashier)/scanner` membuka daftar contoh perangkat; `/scanner/detail?id=...` memvalidasi ID tepat. Pencarian/Reset, header/back dan fallback tersedia, dengan label Pratinjau. Discovery/pairing/pembacaan hardware belum tersedia. Parent mendaftarkan child headerShown:false. [Receipt dan batas QA PM](qa/pm-cashier-scanner-publication-2026-10-10/REPORT.md).
+
+
+### Laci Kasir — publikasi rute pemulihan10 Oktober2026
+
+`/(no-layout)/(cashier)/cash-drawer` menampilkan batas koneksi laci yang belum tersedia. Header Laci Kasir berada pada parent, tombol kembali memakai riwayat atau Beranda, CTA membuka `/(no-layout)/manage/printer`. Pembukaan hardware belum diimplementasikan. [Receipt QA/PM](qa/pm-cashier-drawer-publication-2026-10-10/REPORT.md).

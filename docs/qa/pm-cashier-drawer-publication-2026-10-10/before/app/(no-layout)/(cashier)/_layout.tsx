@@ -1,4 +1,3 @@
-import { router } from "expo-router";
 import React from "react";
 import Header from "@/components/common/Header";
 import { JSStack, ScaleBackTransition } from "@/components/custom/JSStack";
@@ -18,21 +17,6 @@ export default function CashierNoLayout() {
 			<JSStack.Screen name="report" options={{ headerShown: false }} />
 			<JSStack.Screen name="catalog" options={{ headerShown: false }} />
 			<JSStack.Screen name="cart" options={{ headerShown: false }} />
-			<JSStack.Screen
-				name="cash-drawer"
-				options={{
-					header: () => (
-						<Header
-							appearance="cashier"
-							title="Laci Kasir"
-							back={() => {
-								if (router.canGoBack()) router.back();
-								else router.replace("/(cashier)/home");
-							}}
-						/>
-					),
-				}}
-			/>
 			<JSStack.Screen name="scanner" options={{ headerShown: false }} />
 		</JSStack>
 	);

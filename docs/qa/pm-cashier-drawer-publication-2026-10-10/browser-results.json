@@ -1,0 +1,470 @@
+{
+  "status": "PASS",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Actual published menu Cash Drawer callback reaches new destination",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Transaksi",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Member",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Stok",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Riwayat Shift",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Printer",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Scanner",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Laci Kasir",
+      "status": "PASS"
+    },
+    {
+      "name": "Held-draft actual menu callback Pengaturan",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual candidate route/layout renders exactly one compact header and honest limitation",
+      "status": "PASS"
+    },
+    {
+      "name": "Only Printer navigation is emitted by CTA",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual parent back uses history",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual parent back uses Home cold-link fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "390x844 header/back and footer CTA stay outside system areas",
+      "status": "PASS",
+      "details": {
+        "h": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 48
+        },
+        "c": {
+          "box": {
+            "x": 16,
+            "y": 780,
+            "width": 358,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 390,
+            "b": 844
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "390x844 complete explanation can scroll above fixed action",
+      "status": "PASS",
+      "details": {
+        "x": 32,
+        "y": 104,
+        "width": 326,
+        "height": 48
+      }
+    },
+    {
+      "name": "320x568 header/back and footer CTA stay outside system areas",
+      "status": "PASS",
+      "details": {
+        "h": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 72
+        },
+        "c": {
+          "box": {
+            "x": 24,
+            "y": 456,
+            "width": 272,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 320,
+            "b": 568
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "320x568 complete explanation can scroll above fixed action",
+      "status": "PASS",
+      "details": {
+        "x": 40,
+        "y": 128,
+        "width": 240,
+        "height": 48
+      }
+    },
+    {
+      "name": "240x320 header/back and footer CTA stay outside system areas",
+      "status": "PASS",
+      "details": {
+        "h": {
+          "x": 0,
+          "y": 0,
+          "width": 240,
+          "height": 72
+        },
+        "c": {
+          "box": {
+            "x": 24,
+            "y": 208,
+            "width": 192,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 240,
+            "b": 320
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "240x320 complete explanation can scroll above fixed action",
+      "status": "PASS",
+      "details": {
+        "x": 40,
+        "y": 116,
+        "width": 160,
+        "height": 80
+      }
+    },
+    {
+      "name": "844x390 header/back and footer CTA stay outside system areas",
+      "status": "PASS",
+      "details": {
+        "h": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 72
+        },
+        "c": {
+          "box": {
+            "x": 64,
+            "y": 278,
+            "width": 740,
+            "height": 48
+          },
+          "clip": {
+            "l": 0,
+            "t": 0,
+            "r": 844,
+            "b": 390
+          },
+          "visibleHeight": 48,
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "844x390 complete explanation can scroll above fixed action",
+      "status": "PASS",
+      "details": {
+        "x": 80,
+        "y": 128,
+        "width": 708,
+        "height": 16
+      }
+    },
+    {
+      "name": "Footer baseline48px button and default total spacing remain identical",
+      "status": "PASS"
+    },
+    {
+      "name": "Published old footer is a negative control for missing side insets; new footer is safe",
+      "status": "PASS",
+      "details": {
+        "old": {
+          "x": 16,
+          "y": 99,
+          "width": 812,
+          "height": 48
+        },
+        "current": {
+          "x": 50,
+          "y": 278,
+          "width": 754,
+          "height": 48
+        }
+      }
+    },
+    {
+      "name": "Reused footer forwards actual candidate click",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing disabled state remains forwarded and cannot emit a click",
+      "status": "PASS"
+    },
+    {
+      "name": "All source/assets and compiled inputs stable with zero runtime/console/external errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "s": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 48
+      },
+      "cta": {
+        "box": {
+          "x": 16,
+          "y": 780,
+          "width": 358,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 390,
+          "b": 844
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 320,
+        "h": 568,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 72
+      },
+      "cta": {
+        "box": {
+          "x": 24,
+          "y": 456,
+          "width": 272,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 320,
+          "b": 568
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 240,
+        "h": 320,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 8,
+          "right": 8
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 240,
+        "height": 72
+      },
+      "cta": {
+        "box": {
+          "x": 24,
+          "y": 208,
+          "width": 192,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 240,
+          "b": 320
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    },
+    {
+      "viewport": {
+        "w": 844,
+        "h": 390,
+        "s": {
+          "top": 24,
+          "bottom": 48,
+          "left": 48,
+          "right": 24
+        }
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 72
+      },
+      "cta": {
+        "box": {
+          "x": 64,
+          "y": 278,
+          "width": 740,
+          "height": 48
+        },
+        "clip": {
+          "l": 0,
+          "t": 0,
+          "r": 844,
+          "b": 390
+        },
+        "visibleHeight": 48,
+        "reveal": null
+      }
+    }
+  ],
+  "assetHashes": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Entypo.ttf": "16f92298587bab2b469bc13c0dfc6d5d171bca10bad0c9053ad16bc023bf717d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\brand.png": "5fafc06ff7cdb8860d9c6d35caeabfd2998f8cdd5b426f684ff649749949ce31",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\bundle.png": "78593a9d781bde5e81e855ac451e2bbd49de9ef34966f08ca31d8a6544f47fc8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\category.png": "9f62c4b2e52d886204294f5b53d900a3e7879d749a61632a88d5d8c1850df455",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\discount.png": "95b0660f32b3c681beaeb8ec145d9697ca72e2a2257576f55586f0a3bdca0230",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\extra-cost.png": "5b02f48c1faa790d57b180ce1220c2c2f4c4c6373bac37df4348811ed0b1c98d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\extras.png": "857e3a1e40c5c1233edd6fd46aa0e894f2efb3db54de6f0cb507ebbbb1f33576",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\order-type.png": "ef58a3844ecb18e5c281fdf29897f7525157abdac7296984252363ca6c960fdf",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\payment-method.png": "fd10d2e66553c96eda7bd738e480e55208f517b2720a593084c54cf29a795ad1",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\product.png": "938f7efb3074d8a709cc0c8049f42edb6e214c01c9b8d928b05c10f168b1b8c1",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\promo.png": "fc4fb3f9136858fdc50ab06380788caa92cea584155a6154fa5ea079c4fc43b5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\tax.png": "3b1066356685c65e771885d51a660ae312b5386ebcfd8fa4d663a25d72ed039a",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\unit.png": "e5710dec9656cf7484299a48457925e0ec948bf2f788d99a4055f9da01c318c1",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\catalog\\voucher.png": "6fa2ad5d1b6aa0cf07c572287b1323c95a9feb9163fc0425c5c4fc827142ffee",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\inventory\\summary.jpg": "88f9a20bb43c6c7dff56910e9dd4738e4dcde652acd2fd064226874e9e1879f2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\inventory\\stock-transfer.jpg": "e66f568e9d52f386a9286178fc12a7985c4971f0f77d9d61000cdcf04fdf3f1c",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\inventory\\stock-adjustment.jpg": "b1af382571b9593193ff341ddbf6e3872ef855f4f62be6327cfb45a5514a8c58",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\inventory\\purchase-order.jpg": "96f123cee3b3a12ce026188c1b24d3bbf260708928944d7a9bd8c050c9e4cade",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\inventory\\supplier.jpg": "cbe4a40f00bfe60990491c086d6a042e2fdd06423ffe138c3b676ca4153ea757",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting.png": "e2212c1992f3e8324357ef9747dcc2122c7d570b9cd25bd1846f10139d98c87d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\ai.png": "9293e7b33ffa16fc75d261d224027cd9c433f6cd837b49f3fc9a4308455e11a9",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\kas.png": "16b66d9f9bf783f762ac21d087d075c3aed7e302b3c2b7ff1a50ccebd3d3f49c",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\operational.png": "fa8a463fc7c5de284a63ab4faefc4ecf769c6354175017150d07793d1f7c5d3b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\product.png": "97c8131b2af14eebcda4bb91b1029ce512eef255ee6f4778963ef11d804cab2c",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\promotion.png": "671f468ffb766d307265fec4442f37c0ceb3c01902418f5d4f127d30347475f1",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\report.png": "55f8acfe06418dd9d4e889598c69fbdc741d7241c58f2ed91407d6aa3de4c7c4",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\sales.png": "d3c7d9ba97d4c806bb1af3ca84e51fc36f501536d437329fdb131d1e02ea04f4",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\supplier.png": "3599153abe0cd7b77a5f98159947d9ba003d343b132dc43a74f8ea84bcf31522",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\adjusting.png": "35934d9a79726b2cdd7f7634ec11be8774ca8f13f316f48cf88f8ddff7bc7497",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\akun.png": "dea09148254cf46dc3c275d47ca79461c333619091cf840276e6de555e801100",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\capital.png": "fc5dbccf0da38ffb3e04e2a897a528aad01d77bc1d57956470139d6891502350",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\cash.png": "f357a63d99f7e91b1513e8a7555a50c3c53a25f04d51c630acfc39e7bfee9660",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\closing.png": "3a9c245276e63bbe1d4577fc754b5eec035884d464b472b36df1c8158be61cde",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\cost.png": "0fea9834c365cc53fb5a49f25b4f4b6f993fb9e2cfa0fdeeec355ca35d26036f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\financial.png": "8fdc6501cabbece581c8baa0a3ecad46698ef88a9b92fd609942dd3f56c1625f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\general-journal.png": "6132035ab0526af559b937ce05680fcea0bede0c577551aad989b7d25e9f3d66",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\income.png": "27aec24df988cd4c3254463c1fa86da62ace60371ae83e156bb153663d237488",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\ledger.png": "35ee2dc88e0af3b6433fd2715f2ec148495e7516cb2e2ed16984d9e09807e89b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\report\\accounting\\profit.png": "10dfee525fb8c9491a73bd53e7330ab30473c5d0db49471cb0b8b25581958a1b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\mail.png": "96879491e6f2f9d1ab24366ccc5787f72f414c22473e92bc7a19acbaf40f5d4c",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\location.png": "c67902c8e6cecc03b56277ae4716e1c5c290765ddd1af7e3871f3421159e213b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\receipt.png": "7c01a0308dbcefb612d15c6f10e0b163f466cee1cd17b51053e9bbec8da2cbc7",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\password.jpg": "21797e67dcb8da96ec7dd4b2e969807dd12d7820028b04507ca98220359487c0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\cash_drawer.png": "b654aef03462405a20f6a6ba800b9976b792624473c3840aba1befbb84302940",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\expense.png": "d206a703d1e6f36c495df3097d8b5ebc9e477958cf5bf119f5b3eed9da15a2ab",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\printer.png": "7afc49825c49146d6f33095d60eab6950f6238f17f0a439bec6beb1053fa33e6",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\scanner.png": "a8c360cee0cdb74706f1a26482719dd1ec293bf294344479e96c4fd2375a8bcc",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\settings.png": "9169d96da20a556ff28e0442bc603a7c4a0b968aa3a87c6b1fae6f4533452840",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\shift.png": "9a82bf4e519106fe7189fdcbb742b91a6f5aab303414fdf59e980853a3af2686",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\stock.png": "89e9398f501bde94325cf95d28f393f2494007076098f0adc1e38e25bac961fc",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\icons\\transaction.png": "fffab731163749a03133b71f5ecc7de35cb6ca19fa27dbfffc4f15c78e285f7e",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\account.svg": "fc9a771826addb34131291c113b2dd48e86a9076cdca071e20479acaa122b380",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\store.svg": "c3357a0494b581e14cd82c1b0e2b21d0b9f70f8fec794d454de684b2d564de7d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\pos-settings.svg": "3e40bb63bde789300542d82e53f2087a85fdd716f26235786bc32261af019539",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\generate-barcode.svg": "b7b4bc5e1949331535cd515aba6d8a015e1580bdaa5b4c2fa440f67f7819c607",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\workers.svg": "f90c79e2971a5805fccdeda94eb1dcba612b94db7e1033c525e1760a2c2f7e15",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\member.svg": "16d1fc29f91f4a6ac470c1c5e556c35a6cc691af709e88be02d1157ef8e8c1b7",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\roles.svg": "a0fc837a254ee3fc23364d021b56a419ee662202615fb7419243127acce54bd3",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\absence.svg": "83da80ac5ec8fe8a06a82680c34ef204cb61af1b52766d53519704af2f57017e",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\sales-target.svg": "b5c2caf3198c7608c364527907c155db2b08a5e951e70ee059c6f1cdb4fe04d8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\expenses.svg": "d927285b787436d935d74027c94f220f36c06e5b2210af576ffccf19a88567ff",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\income.svg": "35415ebcdac67da3d3d083aa117af89ab3cd22552ca97e6f91f46c16c2f7bb65",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\payroll.svg": "3686751bc2afdb91932f65a4c16132cb2ab3a9606d70422b5dc88b4e250b04b0",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\place.svg": "1a793429b0802077053ed87000a20d8fcb348c719fb5e9dc0755af511a52d59b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\receipt.svg": "0bf950fd49a9de1202c72a3b4e2ff00ce8661376ac8d30eb077657422b46b797",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\external.svg": "986b06d4ef220451794d939b5294395c7bd9d74a035d9e82be460e5cf3a3da0f",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\ai.svg": "98ea18bd26398d0eb6cf92c0bf4124982ebfc7940aaa7e174b0e493a674bc7c7",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\export.svg": "0381d38012f1c33b26f064dd93587a2b58940483e82dc515ab3c9644a58d066b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\referral.svg": "30fb6f3913ecc47a5980014c3fb1bc79b3c68e80f709d303b69e627d19f9cd6b",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\faq.svg": "dcbaaf5cb1bde5c89831d4864264ecf0f8c990855216e124d97e4155e927c136",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\feature-request.svg": "6687e01a3c342261448b9e828a4c486f8e057aa0e082600f1ebfd3d71a5b1789",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\feedback.svg": "02082dc05c2c50a93efd251f9d2c46541445828fa4a3efda7f3229c874282007",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\manage\\chevron.svg": "2a63c421c93789e99b49612dbc7152e4f0f1c7d289677ae51f57dd3259828445",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Regular.ttf": "d2a4911506ea4e124a47ca044e5e79f671ddf8f1a55f1ab9a56c58d088124b63",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Medium.ttf": "fa6b009d7b921ccd070b8d039da23b5663e1a87600a179c0512c347565998ac5",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-SemiBold.ttf": "10238d4c2f85914e3899177426840bde80b078a612903066cf5c9afd17dbf023",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\fonts\\Inter_24pt-Bold.ttf": "6e56a080abad19a16d985801909378d26d0da425265289d5d1ebf38baa50cba9",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\node_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\Feather.ttf": "02b88ead91ade5710d7ca18edb43a6965a71d93732c06f290cc07a6dd249e987"
+  },
+  "bundleHash": "85c88330f20dd2fe147dae20edca0e50ca4e95ece3a79089c836f15908b361fc",
+  "styleHash": "b43a877e7f0b0a09bdfb832d5939a467b58d4ec12571c84b608e86dad0f7fe08",
+  "limits": "Actual candidate CashDrawer route/parent/Header/Wrapper/Footer and published menu on RNWeb. Accepted held-draft menu is an explicitly separate frozen fixture and not shipped. Router recording/stack-selection/insets are adapters. Hardware/API/native/fullRouter/fullFigma excluded."
+}

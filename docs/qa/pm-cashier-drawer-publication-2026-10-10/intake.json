@@ -1,0 +1,13 @@
+{
+  "base": "4480c4b4f112c32262a15cf82a79e13a5ea15883",
+  "inputs": {
+    "app/(no-layout)/(cashier)/cash-drawer.tsx": "06e7332f529e489d15062dabf186cfc16ae10be3da0a0687fa755341cc1a079f",
+    "app/(no-layout)/(cashier)/_layout.tsx": "0fac9619c7b2ef1131b1bb4a3eaed0129ff67f14ca30fc1ee9cedb531117fb66",
+    "components/common/BottomActionButton.tsx": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f"
+  },
+  "parent": "app/(no-layout)/(cashier)/_layout.tsx",
+  "drawer": "app/(no-layout)/(cashier)/cash-drawer.tsx",
+  "footer": "components/common/BottomActionButton.tsx",
+  "acceptedMenuSHA256": "02f3c5b5fc095729f12b50d93b8b71e76d10387f3cc14675b2dd0562bec0baad",
+  "scope": "Exact independently accepted unavailable CashDrawer route. One existing parent registration copied; old callbacks preserved. Bounded BottomActionButton delegates existing published BottomActionBar for side/bottom insets; Button child/props remain exact. Actual published and held-draft menu callback fixtures distinguished; draft is not shipped."
+}
