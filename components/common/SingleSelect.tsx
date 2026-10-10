@@ -2,7 +2,8 @@ import { Entypo, Feather } from "@expo/vector-icons";
 import { tva } from "@gluestack-ui/utils/nativewind-utils";
 import { Image } from "expo-image";
 import React from "react";
-import { Pressable, View } from "react-native";
+import { Pressable, useWindowDimensions, View } from "react-native";
+import { SafeAreaInsetsContext } from "react-native-safe-area-context";
 import BouncyPressable from "@/components/common/BouncyPressable";
 import SearchBar from "@/components/common/SearchBar";
 import Text from "@/components/common/Text";
@@ -55,7 +56,46 @@ export type SingleSelectProps<T = string> = {
 	confirmText?: string;
 	dismissOnSelect?: boolean;
 	appearance?: "default" | "figma";
+	/** Scroll the full sheet on short screens; existing consumers retain their layout. */
+	viewportSafe?: boolean;
 };
+
+function SingleSelectBody({
+	children,
+	compact,
+}: {
+	children: React.ReactNode;
+	compact: boolean;
+}) {
+	if (!compact) return children;
+	return (
+		<ActionsheetScrollView
+			className="min-h-0"
+			keyboardShouldPersistTaps="handled"
+		>
+			<View className="w-full">{children}</View>
+		</ActionsheetScrollView>
+	);
+}
+
+function SingleSelectItems({
+	children,
+	compact,
+}: {
+	children: React.ReactNode;
+	compact: boolean;
+}) {
+	if (compact) return <View className="w-full">{children}</View>;
+	return (
+		<ActionsheetScrollView
+			className="max-h-[60vh] w-full"
+			showsVerticalScrollIndicator={false}
+			keyboardShouldPersistTaps="handled"
+		>
+			{children}
+		</ActionsheetScrollView>
+	);
+}
 
 export default function SingleSelect<T = string>({
 	items,
@@ -75,7 +115,12 @@ export default function SingleSelect<T = string>({
 	confirmText = "Selesai",
 	dismissOnSelect = true,
 	appearance = "default",
+	viewportSafe = false,
 }: SingleSelectProps<T>) {
+	const { height } = useWindowDimensions();
+	const insets = React.useContext(SafeAreaInsetsContext);
+	const compact =
+		viewportSafe && height - (insets?.top ?? 0) - (insets?.bottom ?? 0) < 400;
 	const [isOpen, setIsOpen] = React.useState(false);
 	const [draftSelected, setDraftSelected] = React.useState<T | undefined>(
 		value,
@@ -218,157 +263,162 @@ export default function SingleSelect<T = string>({
 
 			<Actionsheet isOpen={isOpen} onClose={handleClose}>
 				<ActionsheetBackdrop />
-				<ActionsheetContent className="px-4 pb-6 pt-2">
-					<ActionsheetDragIndicatorWrapper className="mb-2">
-						<ActionsheetDragIndicator className="h-1 w-10 rounded-full bg-zinc-300" />
-					</ActionsheetDragIndicatorWrapper>
+				<ActionsheetContent
+					className="px-4 pb-6 pt-2"
+					style={
+						compact
+							? { maxHeight: Math.max(0, height - (insets?.top ?? 0) - 16) }
+							: undefined
+					}
+				>
+					<SingleSelectBody compact={compact}>
+						<ActionsheetDragIndicatorWrapper className="mb-2">
+							<ActionsheetDragIndicator className="h-1 w-10 rounded-full bg-zinc-300" />
+						</ActionsheetDragIndicatorWrapper>
 
-					{/* Modal Header */}
-					<View className="w-full flex-row items-center justify-between pb-3">
-						<Pressable onPress={handleClose} hitSlop={8}>
-							<Text size="body" w="medium" className="text-primary">
-								Batal
-							</Text>
-						</Pressable>
-
-						<Text
-							size="body"
-							w="bold"
-							numberOfLines={1}
-							className="max-w-[60%] text-center"
-						>
-							{label}
-						</Text>
-
-						{showConfirmButton ? (
-							<Pressable
-								onPress={handleSave}
-								disabled={isSaveDisabled}
-								accessibilityState={{ disabled: isSaveDisabled }}
-								className={isSaveDisabled ? "opacity-50" : undefined}
-								hitSlop={8}
-							>
-								<Text size="body" w="semibold" className="text-primary">
-									{confirmText}
+						{/* Modal Header */}
+						<View className="w-full flex-row items-center justify-between pb-3">
+							<Pressable onPress={handleClose} hitSlop={8}>
+								<Text size="body" w="medium" className="text-primary">
+									Batal
 								</Text>
 							</Pressable>
-						) : (
-							<View className="w-10" />
+
+							<Text
+								size="body"
+								w="bold"
+								numberOfLines={1}
+								className="max-w-[60%] text-center"
+							>
+								{label}
+							</Text>
+
+							{showConfirmButton ? (
+								<Pressable
+									onPress={handleSave}
+									disabled={isSaveDisabled}
+									accessibilityState={{ disabled: isSaveDisabled }}
+									className={isSaveDisabled ? "opacity-50" : undefined}
+									hitSlop={8}
+								>
+									<Text size="body" w="semibold" className="text-primary">
+										{confirmText}
+									</Text>
+								</Pressable>
+							) : (
+								<View className="w-10" />
+							)}
+						</View>
+
+						<View className="mb-3 h-px w-full bg-zinc-100" />
+
+						{/* Search Bar */}
+						{isSearchEnabled && (
+							<SearchBar
+								search={search}
+								setSearch={setSearch}
+								placeholder={
+									searchPlaceholder ?? `Cari ${label.toLowerCase()}...`
+								}
+								className="mb-3 bg-white"
+								debounce={false}
+							/>
 						)}
-					</View>
 
-					<View className="mb-3 h-px w-full bg-zinc-100" />
+						{/* Items List */}
+						<SingleSelectItems compact={compact}>
+							{filteredItems.length === 0 ? (
+								<View className="items-center justify-center py-8">
+									<Text size="normal" className="text-muted">
+										Tidak ada opsi ditemukan
+									</Text>
+								</View>
+							) : (
+								filteredItems.map((item) => {
+									const isSelected = draftSelected === item.value;
+									const iconNode = item.icon ?? renderItemIcon?.(item);
 
-					{/* Search Bar */}
-					{isSearchEnabled && (
-						<SearchBar
-							search={search}
-							setSearch={setSearch}
-							placeholder={
-								searchPlaceholder ?? `Cari ${label.toLowerCase()}...`
-							}
-							className="mb-3 bg-white"
-							debounce={false}
-						/>
-					)}
-
-					{/* Items List */}
-					<ActionsheetScrollView
-						className="max-h-[60vh] w-full"
-						showsVerticalScrollIndicator={false}
-						keyboardShouldPersistTaps="handled"
-					>
-						{filteredItems.length === 0 ? (
-							<View className="items-center justify-center py-8">
-								<Text size="normal" className="text-muted">
-									Tidak ada opsi ditemukan
-								</Text>
-							</View>
-						) : (
-							filteredItems.map((item) => {
-								const isSelected = draftSelected === item.value;
-								const iconNode = item.icon ?? renderItemIcon?.(item);
-
-								return (
-									<BouncyPressable
-										key={String(item.value)}
-										onPress={() => handleSelectOption(item)}
-										disabled={disabled || item.disabled}
-										activeScale={0.98}
-										hapticType="none"
-										className={cn(
-											"mb-2.5 w-full flex-row items-center justify-between rounded-2xl border p-3.5",
-											isSelected
-												? "border-primary bg-primary/5"
-												: "border-zinc-200 bg-white",
-											(disabled || item.disabled) && "opacity-40",
-										)}
-									>
-										<View className="flex-1 flex-row items-center gap-3 mr-3">
-											{iconNode ? (
-												<View
-													className={cn(
-														"size-10 items-center justify-center rounded-xl",
-														isSelected ? "bg-primary-100" : "bg-primary-50",
-													)}
-												>
-													{iconNode}
-												</View>
-											) : null}
-
-											<View className="flex-1 justify-center">
-												<View className="flex-row items-center gap-2">
-													<Text
-														size="normal"
-														w={isSelected ? "bold" : "medium"}
-														className={
-															isSelected ? "text-primary" : "text-foreground"
-														}
-													>
-														{item.label}
-													</Text>
-													{item.badge ? (
-														<View className="rounded-full bg-primary-100 px-2 py-0.5">
-															<Text
-																size="small"
-																w="medium"
-																className="text-primary"
-															>
-																{item.badge}
-															</Text>
-														</View>
-													) : null}
-												</View>
-
-												{item.description ? (
-													<Text
-														size="small"
-														className="mt-0.5 leading-tight text-muted"
-													>
-														{item.description}
-													</Text>
-												) : null}
-											</View>
-										</View>
-
-										{/* Selection Radio / Check Pill */}
-										<View
+									return (
+										<BouncyPressable
+											key={String(item.value)}
+											onPress={() => handleSelectOption(item)}
+											disabled={disabled || item.disabled}
+											activeScale={0.98}
+											hapticType="none"
 											className={cn(
-												"h-5 w-5 items-center justify-center rounded-full border",
+												"mb-2.5 w-full flex-row items-center justify-between rounded-2xl border p-3.5",
 												isSelected
-													? "border-primary bg-primary"
-													: "border-zinc-300 bg-white",
+													? "border-primary bg-primary/5"
+													: "border-zinc-200 bg-white",
+												(disabled || item.disabled) && "opacity-40",
 											)}
 										>
-											{isSelected && (
-												<Feather name="check" size={12} color="#ffffff" />
-											)}
-										</View>
-									</BouncyPressable>
-								);
-							})
-						)}
-					</ActionsheetScrollView>
+											<View className="flex-1 flex-row items-center gap-3 mr-3">
+												{iconNode ? (
+													<View
+														className={cn(
+															"size-10 items-center justify-center rounded-xl",
+															isSelected ? "bg-primary-100" : "bg-primary-50",
+														)}
+													>
+														{iconNode}
+													</View>
+												) : null}
+
+												<View className="flex-1 justify-center">
+													<View className="flex-row items-center gap-2">
+														<Text
+															size="normal"
+															w={isSelected ? "bold" : "medium"}
+															className={
+																isSelected ? "text-primary" : "text-foreground"
+															}
+														>
+															{item.label}
+														</Text>
+														{item.badge ? (
+															<View className="rounded-full bg-primary-100 px-2 py-0.5">
+																<Text
+																	size="small"
+																	w="medium"
+																	className="text-primary"
+																>
+																	{item.badge}
+																</Text>
+															</View>
+														) : null}
+													</View>
+
+													{item.description ? (
+														<Text
+															size="small"
+															className="mt-0.5 leading-tight text-muted"
+														>
+															{item.description}
+														</Text>
+													) : null}
+												</View>
+											</View>
+
+											{/* Selection Radio / Check Pill */}
+											<View
+												className={cn(
+													"h-5 w-5 items-center justify-center rounded-full border",
+													isSelected
+														? "border-primary bg-primary"
+														: "border-zinc-300 bg-white",
+												)}
+											>
+												{isSelected && (
+													<Feather name="check" size={12} color="#ffffff" />
+												)}
+											</View>
+										</BouncyPressable>
+									);
+								})
+							)}
+						</SingleSelectItems>
+					</SingleSelectBody>
 				</ActionsheetContent>
 			</Actionsheet>
 		</>

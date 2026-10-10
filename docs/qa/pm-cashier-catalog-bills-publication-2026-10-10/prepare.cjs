@@ -1,0 +1,12 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const packet=__dirname,old='D:/Rapido-QC-temp/pm-catalog-bills-compact-footer-2026-10-10',original=JSON.parse(fs.readFileSync(path.join(old,'intake.json'))),root=original.root;
+const sha=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex'),write=(f,s)=>{assert.ok(!fs.existsSync(f),'Preserve '+f);fs.writeFileSync(f,s);};
+assert.equal(sha(path.join(root,'components/feature/cashier/bills/CatalogBillsScreen.tsx')),'90b10b1989ba8f4e1f20f22fe7962e0a2d1a79c1a4069ee64380abba3981c63a');
+for(const[f,h]of Object.entries(original.guards))assert.equal(sha(path.join(root,f)),h,f);
+const intake={...original,ticket:'PM-CASHIER-CATALOG-BILLS-FINAL-CANDIDATE-20261010',sources:Object.fromEntries(original.owned.map(f=>[f,sha(path.join(root,f))])),notes:original.notes+' Final-only formatter change90b10;115quality format failure/build preserved; same-before fixture retained. No production semantics changed by formatter.'};
+write(path.join(packet,'intake.json'),JSON.stringify(intake,null,2));
+for(const name of ['build-browser.cjs','quality.cjs'])write(path.join(packet,name),fs.readFileSync(path.join(old,name)));
+let browser=fs.readFileSync(path.join(old,'browser.cjs'),'utf8');
+browser=browser.replace(/packet="[^"]+"/, 'packet='+JSON.stringify(packet)).replaceAll('D:/Rapido-QC-temp/pm-catalog-bills-compact-footer-build-2026-10-10','D:/Rapido-QC-temp/pm-catalog-bills-final-build-2026-10-10').replaceAll('D:/Rapido-QC-temp/pm-catalog-bills-compact-footer-browser-2026-10-10','D:/Rapido-QC-temp/pm-catalog-bills-final-browser-2026-10-10');
+assert.ok(browser.includes('packet='+JSON.stringify(packet)));write(path.join(packet,'browser.cjs'),browser);
+console.log(JSON.stringify({status:'FINAL_INTAKE_CREATED',source:intake.sources['components/feature/cashier/bills/CatalogBillsScreen.tsx']}));

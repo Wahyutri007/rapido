@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "message": "locator.click: Error: strict mode violation: getByText('Alpha', { exact: true }) resolved to 2 elements:\n    1) <div dir=\"auto\" class=\"css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-1iln25a text-foreground text-foreground text-sm\">Alpha</div> aka getByText('Alpha').first()\n    2) <div dir=\"auto\" class=\"css-146c3p1 text-foreground text-foreground text-sm\">Alpha</div> aka getByRole('dialog').getByText('Alpha')\n\nCall log:\n\u001b[2m  - waiting for getByText('Alpha', { exact: true })\u001b[22m\n",
+  "stack": "locator.click: Error: strict mode violation: getByText('Alpha', { exact: true }) resolved to 2 elements:\n    1) <div dir=\"auto\" class=\"css-146c3p1 r-dnmrzs r-1udh08x r-1udbk01 r-3s2u2q r-1iln25a text-foreground text-foreground text-sm\">Alpha</div> aka getByText('Alpha').first()\n    2) <div dir=\"auto\" class=\"css-146c3p1 text-foreground text-foreground text-sm\">Alpha</div> aka getByRole('dialog').getByText('Alpha')\n\nCall log:\n\u001b[2m  - waiting for getByText('Alpha', { exact: true })\u001b[22m\n\n    at selectTrigger (D:\\Rapido-QC-temp\\pm-catalog-bills-final-candidate-2026-10-10\\browser.cjs:173:77)\n    at D:\\Rapido-QC-temp\\pm-catalog-bills-final-candidate-2026-10-10\\browser.cjs:183:557",
+  "errors": []
+}

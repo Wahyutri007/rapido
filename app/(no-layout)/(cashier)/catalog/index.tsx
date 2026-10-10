@@ -66,6 +66,18 @@ export default function MenuScreen() {
 								+ Custom
 							</Text>
 						</Pressable>
+						<Pressable
+							accessibilityRole="button"
+							accessibilityLabel="Lihat contoh tagihan dari katalog"
+							hitSlop={tw(2)}
+							onPress={() =>
+								router.push("/(no-layout)/(cashier)/catalog/bills")
+							}
+						>
+							<Text size="small" w="medium" className="text-primary">
+								Tagihan
+							</Text>
+						</Pressable>
 
 						<View className="flex-row items-center gap-3">
 							<Pressable

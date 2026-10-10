@@ -718,3 +718,8 @@ Kartu contoh Tagihan menjaga ukuran normal103/87x34 dan dapat membungkus aksi/la
 ### Status publikasi Kasir —10 Oktober2026
 
 [Review branch/main dan gate terbaru](qa/pm-cashier-continuous-review-2026-10-10/REPORT.md) menyatukan receipt publikasi modul dan verifikasi blob commit. Semua pratinjau yang diterbitkan mempertahankan penjelasan batas backend/perangkat. Menu Favorit4×2 masih branch-only sampai Riwayat Shift serta integrasi tujuan lulus; receipt lama tetap historis.
+
+
+### Katalog → Tagihan — 10 Oktober 2026
+
+Route `/(no-layout)/(cashier)/catalog/bills` dapat dibuka melalui tombol contoh tagihan pada Katalog. Acuan arsip Figma29:48148 menggunakan header Tagihan, tiga kartu contoh dengan aksi Tambah, filter/pencarian, dan Kembali Katalog. Tambah menjelaskan pratinjau yang belum menyimpan pesanan; angka13 berasal dari desain, bukan jumlah invoice toko. Header berada di layout dan bisa kembali ke Katalog saat tanpa riwayat. Footer menyesuaikan padding pada layar sangat pendek agar aksi tetap terlihat. SingleSelect memperoleh opsi viewportSafe dengan defaultfalse. [Bukti QA dan batas cakupan](qa/pm-cashier-catalog-bills-publication-2026-10-10/REPORT.md):84browser/12contracts, TypeScript scoped bersih.

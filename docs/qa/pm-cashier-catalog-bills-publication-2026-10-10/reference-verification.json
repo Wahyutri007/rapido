@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "frame": {
+    "name": "nested",
+    "nodeId": "29:48148",
+    "source": "Figma official MCP get_design_context with included screenshot",
+    "codeContext": {
+      "file": "nested-context.txt",
+      "sha256": "ce6cf05fb65365bf9f61834ec1dced33e9d5e112c0436ed92cc21499594cc9d2"
+    },
+    "instructions": {
+      "file": "nested-instructions.txt",
+      "sha256": "204960ea82c5c4b7e2ea246b685a20e456b51ab7447685867d4ee71923e75f93"
+    },
+    "screenshot": {
+      "file": "nested-reference.png",
+      "sha256": "d975f924e2fa68492c1a693cd402cdb673d6307d73882033a05a85b827fb30a4",
+      "width": 390,
+      "height": 947
+    }
+  },
+  "bindings": [
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\nested-context.txt",
+      "sha256": "ce6cf05fb65365bf9f61834ec1dced33e9d5e112c0436ed92cc21499594cc9d2"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\nested-reference.png",
+      "sha256": "d975f924e2fa68492c1a693cd402cdb673d6307d73882033a05a85b827fb30a4"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\nested-instructions.txt",
+      "sha256": "204960ea82c5c4b7e2ea246b685a20e456b51ab7447685867d4ee71923e75f93"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\assets\\nested\\imgIconBell.svg",
+      "sha256": "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\bills\\bell.svg",
+      "sha256": "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\assets\\nested\\imgIconChevronDown.svg",
+      "sha256": "cc3c26225bfc674422287d1d105bec679b6bb72ff5b329e7f8117935334889f0"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\cashier\\bills\\catalog-chevron-down.svg",
+      "sha256": "cc3c26225bfc674422287d1d105bec679b6bb72ff5b329e7f8117935334889f0"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\figma\\cashier\\qc-20261009\\tagihan\\assets\\nested\\imgIconChevronLeft.svg",
+      "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87"
+    },
+    {
+      "file": "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\assets\\images\\figma\\back-office\\back.svg",
+      "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87"
+    }
+  ],
+  "scope": "Cached exact official fullcontext/PNG29:48148 and3originalSVG. Fresh official whoami wahyutri1102@gmail.com; live get_design_context Starter tool-call limited. No prototype/currentstyles100certificate."
+}
