@@ -1,0 +1,24 @@
+{
+  "recordedAtUtc": "2026-10-10T00:50:59.545Z",
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "nodeId": "29:18658",
+  "whoami": {
+    "handle": "wahyu tri",
+    "email": "wahyutri1102@gmail.com",
+    "plans": [
+      {
+        "name": "wahyu tri's team",
+        "seat": "View",
+        "tier": "starter",
+        "key": "team::1494977320469696171",
+        "role": "admin",
+        "user_can_access_figma_ai": true
+      }
+    ]
+  },
+  "contextError": true,
+  "contextMessage": [
+    "You've reached the Figma MCP tool call limit on the Starter plan. Upgrade your plan for more tool calls: https://www.figma.com/files/team/1494977320469696171/all-projects?upgrade=mcp_rate_limit_paywall"
+  ],
+  "scope": "Fresh official access rechecked for Rounding. Context Starter quota limited; partial existing metadata only, no full/current Figma certification."
+}

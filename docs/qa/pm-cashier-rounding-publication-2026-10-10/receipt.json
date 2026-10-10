@@ -1,0 +1,28 @@
+﻿{
+    "task":  "PM rounding route-only candidate integration",
+    "status":  "READY_FOR_ROOT_QA",
+    "source":  "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\app\\(no-layout)\\manage\\pos-settings\\rounding.tsx",
+    "sourceSha256":  "30927ee3620dfa2c9cf20b7998adda5db3febebc9127ab6060f91f39c5cfab10",
+    "releasedSourceSha256":  "30927ee3620dfa2c9cf20b7998adda5db3febebc9127ab6060f91f39c5cfab10",
+    "beforeSnapshot":  "D:\\Rapido-QC-temp\\pm-rounding-candidate-2026-10-10\\before\\RoundingSettingScreen.tsx",
+    "beforeSha256":  "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8",
+    "singleSelectPrerequisiteSha256":  "748acdfc32e58032ee0505afa0acaefb7fb6f808dc53eaf0b73e6d147ac79731",
+    "inverseScript":  "D:\\Rapido-QC-temp\\pm-rounding-candidate-2026-10-10\\rounding-inverse.cjs",
+    "inverseStatus":  "PASS",
+    "inverse":  "Full parsed TSX AST equals actual main baseline after normalizing only release viewport imports/hooks/variables, RoundingError helper and wrapper, SingleSelect viewportSafe opt-in, Wrapper hasActionButton compact value, saveButton variable and its responsive placements.",
+    "parseDiagnostics":  0,
+    "scopedChecks":  {
+                         "biome":  "PASS: one file, no fixes applied",
+                         "eslint":  "PASS: one file"
+                     },
+    "otherProductionPathsEdited":  [
+
+                                   ],
+    "browserQa":  "NOT_RUN_ROOT_OWNED",
+    "buildOrTypecheck":  "NOT_RUN_ROOT_OWNED",
+    "gitOrPush":  "NOT_RUN",
+    "limitations":  [
+                        "Root must run fresh candidate QA, including actual-main-header behavior.",
+                        "Scoped source checks do not certify runtime, backend, native, full-router, or Figma behavior."
+                    ]
+}

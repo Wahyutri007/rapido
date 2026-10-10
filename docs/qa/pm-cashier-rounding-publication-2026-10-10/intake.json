@@ -1,0 +1,39 @@
+{
+  "ticket": "PM-CASHIER-ROUNDING-MAIN-CANDIDATE-20261010",
+  "root": "C:/Users/Wahyu/Downloads/rapido-pm-cashier-publish-2026-10-10",
+  "shared": "C:/Users/Wahyu/Downloads/rapido-dev/rapido-dev",
+  "base": "57ace468ca43f1625a110a3c0275d1f74e129f9c",
+  "owned": {
+    "app/(no-layout)/manage/pos-settings/rounding.tsx": "30927ee3620dfa2c9cf20b7998adda5db3febebc9127ab6060f91f39c5cfab10"
+  },
+  "guards": {
+    "components/common/SingleSelect.tsx": "748acdfc32e58032ee0505afa0acaefb7fb6f808dc53eaf0b73e6d147ac79731",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f",
+    "app/(no-layout)/manage/pos-settings/rounding-detail.tsx": "a07b4ec00db257dcbff54dc36fe63297f09c217dfb91f9ac899d4e2be332e803",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/SearchBar.tsx": "f268b544f48ea1a00ccd0db9a4edb6f1974e4dcbf51a1e67cfcd058abce6b702",
+    "components/common/BottomActionButton.tsx": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/SuccessModal.tsx": "7508ea6ee63ec84e991b8075812c49d8a345d2cb256f43d2f45d9a0e325df7f8",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219",
+    "api/hooks/settings.ts": "04898bc213ca7df10ddbde059ef4b70d4984c5156166cba56e2a1962428ab4bf",
+    "store/appModeStore.ts": "269b71068b580f3cef8619e6bf7b391a53e43a190c4815d964e0f5a542f7a419",
+    "metro.config.js": "f9d846ce33d2b7e9e0694e637053326138c802c50cc9161aa47c4d9501a2f367",
+    "babel.config.js": "76c0801f896101e9cb6cd3c183c20d9fd5dda32cb4e24065bdfd29dc97950de9",
+    "tailwind.config.js": "d10d259566f78127328b12e859c020e1f4f7e304189575451f800b18a2a2673c",
+    "global.css": "f2f8507cf29bd5c2b3f472e0e2d1d25574880ea281a723f6df19121f2ee12f9f",
+    "package.json": "1154bad6034d0e7321433ac5af6b87a63efa5207d2dc1e0b076d457b942bedac",
+    "package-lock.json": "a05bbbd6b904c7f61ffcf894d6e34584bd0d6245b179f8d3abb3ed9e04258a44",
+    "components/common/BottomActionBar.tsx": "f007feeba984ada2733ee433ae9a438bdb5c10bf22e1389a1237d1e10feacdf1"
+  },
+  "fixture": "C:\\Users\\Wahyu\\Downloads\\rapido-pm-cashier-publish-2026-10-10\\.expo\\pm-rounding-main-2026-10-10\\preview-fixture",
+  "before": "D:\\Rapido-QC-temp\\pm-rounding-candidate-2026-10-10\\before\\RoundingSettingScreen.tsx",
+  "beforeHash": "79893f4bd22b9d85cd42287d12dfadc9f9dac7df3c978312b69071dd8e191ba8",
+  "qcReport": "D:\\RapidoQCCache\\cashier-rounding-footer-header-qc-2026-10-10\\REPORT.md",
+  "qcReportHash": "08b7c931ee105017dd6473828d9a40ff5f25858f2ae0774b4002792cc07d8ebe",
+  "notes": "Exact published main798 Before, not QC9a. Actual unchanged main POS layout/defaultHeader64; no CashierHeader mode import. Released309 only, prerequisiteSelect748 alreadymain. Fullactualmaingraph QA required, old35groups not inherited."
+}

@@ -1,7 +1,8 @@
 import Feather from "@expo/vector-icons/Feather";
 import { router } from "expo-router";
 import React from "react";
-import { Pressable, Switch, View } from "react-native";
+import { Pressable, Switch, useWindowDimensions, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
 	useRoundingSettingMutation,
 	useRoundingSettingQuery,
@@ -14,6 +15,13 @@ import SingleSelect from "@/components/common/SingleSelect";
 import SuccessModal, { useAlertModal } from "@/components/common/SuccessModal";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
+import {
+	Actionsheet,
+	ActionsheetBackdrop,
+	ActionsheetContent,
+	ActionsheetScrollView,
+} from "@/components/ui/actionsheet";
+import { Button, ButtonText } from "@/components/ui/button";
 import { Colors } from "@/constants/Colors";
 import { cn, formatRp } from "@/lib/utils";
 
@@ -48,7 +56,58 @@ const MULTIPLE_OPTIONS = [
 	{ label: "Puluhan (Rp10)", value: "1" },
 ];
 
+function RoundingError({
+	children,
+}: {
+	children: React.ReactElement<React.ComponentProps<typeof AlertModal>>;
+}) {
+	const { height } = useWindowDimensions();
+	const insets = useSafeAreaInsets();
+	if (height - insets.top - insets.bottom >= 400) return children;
+
+	const props = children.props;
+	const close = () => {
+		if (props.onClose) props.onClose();
+		else props.openState[1](false);
+	};
+
+	return (
+		<Actionsheet isOpen={props.openState[0]} onClose={close}>
+			<ActionsheetBackdrop />
+			<ActionsheetContent
+				className="p-4"
+				style={{ maxHeight: Math.max(0, height - insets.top - 16) }}
+			>
+				<ActionsheetScrollView
+					className="min-h-0"
+					keyboardShouldPersistTaps="handled"
+				>
+					<View className="gap-4">
+						<Text size="body" w="semibold" className="text-center">
+							{props.title}
+						</Text>
+						<Text size="body" className="text-center text-muted">
+							{props.message}
+						</Text>
+						<Button
+							size="xl"
+							action={props.confirmAction}
+							isDisabled={props.isLoading}
+							onPress={props.onConfirm ?? close}
+						>
+							<ButtonText size="sm">{props.confirmText}</ButtonText>
+						</Button>
+					</View>
+				</ActionsheetScrollView>
+			</ActionsheetContent>
+		</Actionsheet>
+	);
+}
+
 export default function RoundingSettingScreen() {
+	const { height } = useWindowDimensions();
+	const insets = useSafeAreaInsets();
+	const compact = height - insets.top - insets.bottom < 400;
 	const { data: roundingData } = useRoundingSettingQuery();
 	const roundingMutation = useRoundingSettingMutation();
 	const successModal = useAlertModal();
@@ -98,9 +157,21 @@ export default function RoundingSettingScreen() {
 		successModal.open();
 	};
 
+	const saveButton = (
+		<BottomActionButton
+			onPress={handleSave}
+			isLoading={roundingMutation.isLoading}
+		>
+			Simpan
+		</BottomActionButton>
+	);
+
 	return (
 		<>
-			<Wrapper hasActionButton contentContainerStyle={{ padding: 16, gap: 16 }}>
+			<Wrapper
+				hasActionButton={!compact}
+				contentContainerStyle={{ padding: 16, gap: 16 }}
+			>
 				{/* Switch Card */}
 				<Card>
 					<View className="flex-row items-center justify-between">
@@ -255,6 +326,7 @@ export default function RoundingSettingScreen() {
 
 							<Card>
 								<SingleSelect
+									viewportSafe
 									items={multipleOptions}
 									value={decimalPlaces}
 									onValueChange={(value) =>
@@ -271,24 +343,22 @@ export default function RoundingSettingScreen() {
 						</View>
 					</>
 				)}
+				{compact && React.cloneElement(saveButton, { className: "relative" })}
 			</Wrapper>
 
 			{/* Bottom Action Button */}
-			<BottomActionButton
-				onPress={handleSave}
-				isLoading={roundingMutation.isLoading}
-			>
-				Simpan
-			</BottomActionButton>
+			{!compact && saveButton}
 
-			<AlertModal
-				openState={errorModal.openState}
-				title="Gagal Menyimpan Pembulatan"
-				message="Pengaturan belum tersimpan. Periksa koneksi dan coba lagi."
-				hideCancelButton
-				confirmText="Mengerti"
-				onConfirm={errorModal.close}
-			/>
+			<RoundingError>
+				<AlertModal
+					openState={errorModal.openState}
+					title="Gagal Menyimpan Pembulatan"
+					message="Pengaturan belum tersimpan. Periksa koneksi dan coba lagi."
+					hideCancelButton
+					confirmText="Mengerti"
+					onConfirm={errorModal.close}
+				/>
+			</RoundingError>
 			{/* Success Modal */}
 			<SuccessModal
 				openState={successModal.openState}

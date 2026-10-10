@@ -723,3 +723,8 @@ Kartu contoh Tagihan menjaga ukuran normal103/87x34 dan dapat membungkus aksi/la
 ### Katalog → Tagihan — 10 Oktober 2026
 
 Route `/(no-layout)/(cashier)/catalog/bills` dapat dibuka melalui tombol contoh tagihan pada Katalog. Acuan arsip Figma29:48148 menggunakan header Tagihan, tiga kartu contoh dengan aksi Tambah, filter/pencarian, dan Kembali Katalog. Tambah menjelaskan pratinjau yang belum menyimpan pesanan; angka13 berasal dari desain, bukan jumlah invoice toko. Header berada di layout dan bisa kembali ke Katalog saat tanpa riwayat. Footer menyesuaikan padding pada layar sangat pendek agar aksi tetap terlihat. SingleSelect memperoleh opsi viewportSafe dengan defaultfalse. [Bukti QA dan batas cakupan](qa/pm-cashier-catalog-bills-publication-2026-10-10/REPORT.md):84browser/12contracts, TypeScript scoped bersih.
+
+
+### Pembulatan — layar pendek, 10 Oktober 2026
+
+Route `/manage/pos-settings/rounding` memakai aksi Simpan yang sama: fixed pada safeheight>=400 dan ikut gulir pada layar lebih pendek. Pemilih kelipatan mengaktifkan opsi viewportSafe yang sudah tersedia; pesan gagal dapat digulir saat ruang sempit. Aturan/payload pembulatan tetap seperti main sebelumnya. [QA kandidat main](qa/pm-cashier-rounding-publication-2026-10-10/REPORT.md):35browser/9contracts/1251TS0, hanya UI dan private rejection, bukan sertifikasi backend/Figma penuh.

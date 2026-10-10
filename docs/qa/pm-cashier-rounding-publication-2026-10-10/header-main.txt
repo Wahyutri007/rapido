@@ -1,0 +1,5 @@
+await reset(normal);await check('Actual published POSLayout detailroute and defaultHeader Back preserve history/nohistory behavior',async()=>{
+ const detail=page.getByText('Baca Selengkapnya',{exact:true});await reach(detail,normal,true);await detail.click();assert.deepEqual(await events(),[{name:'push',value:'/manage/pos-settings/rounding-detail'}]);await page.evaluate(()=>globalThis.reviewEvents.length=0);
+ const back=page.getByText('Pengaturan Pembulatan',{exact:true}).locator('xpath=..').locator('[tabindex="0"]');assert.equal(await back.count(),1);await back.click();assert.deepEqual(await events(),[{name:'back'}]);await page.evaluate(()=>{globalThis.reviewEvents.length=0;globalThis.qcCanGoBack=false;});await back.click();assert.deepEqual(await events(),[]);await page.evaluate(()=>globalThis.qcCanGoBack=true);
+ assert.equal(await page.getByTestId('cashier-page-header').count(),0);assert.equal(await page.getByText('Pengaturan Pembulatan',{exact:true}).count(),1);
+});
