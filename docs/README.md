@@ -728,3 +728,8 @@ Route `/(no-layout)/(cashier)/catalog/bills` dapat dibuka melalui tombol contoh 
 ### Pembulatan — layar pendek, 10 Oktober 2026
 
 Route `/manage/pos-settings/rounding` memakai aksi Simpan yang sama: fixed pada safeheight>=400 dan ikut gulir pada layar lebih pendek. Pemilih kelipatan mengaktifkan opsi viewportSafe yang sudah tersedia; pesan gagal dapat digulir saat ruang sempit. Aturan/payload pembulatan tetap seperti main sebelumnya. [QA kandidat main](qa/pm-cashier-rounding-publication-2026-10-10/REPORT.md):35browser/9contracts/1251TS0, hanya UI dan private rejection, bukan sertifikasi backend/Figma penuh.
+
+
+### Detail Batas Stok — keterbacaan tabel, 10 Oktober 2026
+
+Route `/manage/pos-settings/stock-limit-detail` memakai jarak antarbagian16 pada contentContainerStyle dan kolom hasil dengan min-width0, agar contoh panjang membungkus di layar sempit. Tujuh contoh/status informasional tetap; bukan status settings server. [QA kandidat main](qa/pm-cashier-stock-detail-publication-2026-10-10/REPORT.md):16browser/9contracts/1048TS0; header/router/native/backend/fullFigma100 sesuai batas laporan.

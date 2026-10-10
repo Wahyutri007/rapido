@@ -1,0 +1,51 @@
+{
+  "fileKey": "gbdKqL2EcYNenWiQXG4SRW",
+  "nodeId": "29:18658",
+  "recordedAtUtc": "2026-10-10T05:06:58.871Z",
+  "whoami": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"whoami\":{\"handle\":\"wahyu tri\",\"email\":\"wahyutri1102@gmail.com\",\"plans\":[{\"name\":\"wahyu tri's team\",\"seat\":\"View\",\"tier\":\"starter\",\"key\":\"team::1494977320469696171\",\"role\":\"admin\",\"user_can_access_figma_ai\":true}]},\"instructions\":\"For more details on rate limits and access, refer to https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/\"}"
+      }
+    ],
+    "structuredContent": {
+      "whoami": {
+        "handle": "wahyu tri",
+        "email": "wahyutri1102@gmail.com",
+        "plans": [
+          {
+            "name": "wahyu tri's team",
+            "seat": "View",
+            "tier": "starter",
+            "key": "team::1494977320469696171",
+            "role": "admin",
+            "user_can_access_figma_ai": true
+          }
+        ]
+      },
+      "instructions": "For more details on rate limits and access, refer to https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/"
+    }
+  },
+  "context": {
+    "content": [
+      {
+        "type": "text",
+        "text": "You've reached the Figma MCP tool call limit on the Starter plan. Upgrade your plan for more tool calls: https://www.figma.com/files/team/1494977320469696171/all-projects?upgrade=mcp_rate_limit_paywall"
+      },
+      {
+        "type": "resource_link",
+        "uri": "file://figma/docs/rate-limits-access.md",
+        "name": "rate-limits-access.md",
+        "mimeType": "text/plain",
+        "size": 3932,
+        "_meta": {
+          "size": 3932
+        }
+      }
+    ],
+    "isError": true
+  },
+  "contextError": true,
+  "offline": "docs/figma/mobile-kasikoo-user-export-20261010; original POS parent metadata partial; no exact StockDetail original style/fullFrame identified"
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "roots": [
+    "app/(no-layout)/manage/pos-settings/stock-limit-detail.tsx",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx"
+  ],
+  "checkedRoots": [
+    "app/(no-layout)/manage/pos-settings/stock-limit-detail.tsx"
+  ],
+  "baselineLayoutQuality": "Unchanged published layout inherited format warning retained; only owned StockDetail is lint/formatted, actual layout participates in TS closure.",
+  "ambient": [
+    "C:/Users/Wahyu/Downloads/rapido-pm-cashier-publish-2026-10-10/global.d.ts",
+    "C:/Users/Wahyu/Downloads/rapido-pm-cashier-publish-2026-10-10/nativewind-env.d.ts"
+  ],
+  "filesInClosure": 1048,
+  "diagnosticCount": 0,
+  "diagnostics": [],
+  "before": {
+    "app/(no-layout)/manage/pos-settings/stock-limit-detail.tsx": "78c4977b205062f03e811628f8236ca9e07aeb15e8f970bed87484f9b919b50f",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f"
+  },
+  "after": {
+    "app/(no-layout)/manage/pos-settings/stock-limit-detail.tsx": "78c4977b205062f03e811628f8236ca9e07aeb15e8f970bed87484f9b919b50f",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f"
+  },
+  "sourceHashes": {
+    "constants/Fonts.ts": "944062cce444172e888c141b72901d71e74c3b488795a5907928eb74ab8a9616",
+    "lib/utils/dates.ts": "657c14b1ea2bd23df526452d49a55e60814418f30f552c8a0ac39522609cce3b",
+    "lib/utils/colors.ts": "80ee67f0f37101660fefd62380f8a2e83852f4922e577f10fb32640f4ead3711",
+    "constants/Colors.ts": "8279d35a1d26ebb6242672e0b2248b2e1e6acdffd90e84f66790e48f161f3820",
+    "lib/utils/styles.ts": "c446a6f126b7921c4c57a807db961cb3451ab3b98d30b8ba755d121564289996",
+    "lib/haptics.ts": "960e51e1539cf4dce139d2011d4409a56cd824bd8a683b61ee56efbc53794eb3",
+    "lib/utils/index.ts": "2becd0d49c1aecb7cab5c82c30914104aa032c0f3b8c2ebe7ebccef5cf1db196",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "lib/ui/bottom-navigation.ts": "8f1c275244b798ad06f378927b279e7e46a0f4a797ff7dd3dcec08b72f36d885",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "app/(no-layout)/manage/pos-settings/stock-limit-detail.tsx": "78c4977b205062f03e811628f8236ca9e07aeb15e8f970bed87484f9b919b50f",
+    "components/common/BouncyPressable.tsx": "ff1e57c2c0db0a47ae4aa8716a2762b0d5873430205965902c151ca0b2ecc8e8",
+    "constants/index.ts": "3416d38047fd6fb376c114c1652c9a1fb26f93149232654d4760fc499344635c",
+    "lib/ui/figma-stock.ts": "30dd65d8104b99f19c18cfcdf829e8771285b46d94ba1afccc705c3d6d7c2e3d",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/custom/JSStack.tsx": "eb6a37304fd908caea5e4796191a55e653e0f07f2bcf40212dc245ffafe98808",
+    "app/(no-layout)/manage/pos-settings/_layout.tsx": "cbda1eea20f86639e2270ff443669894f96810d0f4e799a7ca338fa4f982985f"
+  },
+  "drift": [],
+  "eslint": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 0,
+    "messages": [],
+    "stderr": ""
+  },
+  "biome": {
+    "exit": 0,
+    "stdout": "Checked 1 file in 37ms. No fixes applied.\n",
+    "stderr": ""
+  },
+  "diff": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "scope": "Two main-based review roots plus actual imported/ambient TypeScript closure; not whole project."
+}

@@ -1,14 +1,19 @@
 import Feather from "@expo/vector-icons/Feather";
-import React from "react";
 import { View } from "react-native";
-import Card from "@/components/common/Card";
 import Text from "@/components/common/Text";
 import Wrapper from "@/components/common/Wrapper";
 import { Colors } from "@/constants/Colors";
 
 export default function StockLimitDetailScreen() {
 	return (
-		<Wrapper className="gap-4 px-4 pt-4 pb-8">
+		<Wrapper
+			contentContainerStyle={{
+				paddingHorizontal: 16,
+				paddingTop: 16,
+				paddingBottom: 32,
+				gap: 16,
+			}}
+		>
 			{/* Section: Pengaturan Saat Ini */}
 			<View className="gap-2">
 				<View className="flex-row items-center justify-between">
@@ -63,7 +68,11 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" w="semibold" className="w-[26%] text-muted">
 								Jumlah Jual
 							</Text>
-							<Text size="small" w="semibold" className="flex-1 text-muted">
+							<Text
+								size="small"
+								w="semibold"
+								className="min-w-0 flex-1 text-muted"
+							>
 								Hasil
 							</Text>
 						</View>
@@ -75,7 +84,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								5
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stok: 5)
 							</Text>
 						</View>
@@ -87,7 +96,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								2
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stok: 0)
 							</Text>
 						</View>
@@ -99,7 +108,11 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								1
 							</Text>
-							<Text size="small" w="medium" className="flex-1 text-red-600">
+							<Text
+								size="small"
+								w="medium"
+								className="min-w-0 flex-1 text-red-600"
+							>
 								Transaksi ditolak (Stock tidak mencukupi)
 							</Text>
 						</View>
@@ -124,7 +137,11 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" w="semibold" className="w-[26%] text-muted">
 								Jumlah Jual
 							</Text>
-							<Text size="small" w="semibold" className="flex-1 text-muted">
+							<Text
+								size="small"
+								w="semibold"
+								className="min-w-0 flex-1 text-muted"
+							>
 								Hasil
 							</Text>
 						</View>
@@ -136,7 +153,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								5
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stock: 5)
 							</Text>
 						</View>
@@ -148,7 +165,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								2
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stock: 0)
 							</Text>
 						</View>
@@ -160,7 +177,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								1
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stock: -1)
 							</Text>
 						</View>
@@ -172,7 +189,7 @@ export default function StockLimitDetailScreen() {
 							<Text size="small" className="w-[26%] text-foreground">
 								2
 							</Text>
-							<Text size="small" className="flex-1 text-foreground">
+							<Text size="small" className="min-w-0 flex-1 text-foreground">
 								Transaksi berhasil (Sisa stock: -5)
 							</Text>
 						</View>
@@ -187,9 +204,12 @@ export default function StockLimitDetailScreen() {
 							Catatan
 						</Text>
 					</View>
-					<Text size="small" className="mt-1.5 leading-relaxed text-foreground/80">
-						Pengaturan ini hanya memengaruhi produk yang tidak dikecualikan
-						pada bagian Penerapan.
+					<Text
+						size="small"
+						className="mt-1.5 leading-relaxed text-foreground/80"
+					>
+						Pengaturan ini hanya memengaruhi produk yang tidak dikecualikan pada
+						bagian Penerapan.
 					</Text>
 				</View>
 			</View>
