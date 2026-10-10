@@ -713,3 +713,8 @@ Halaman Stok mengaktifkan `SearchBar viewportSafe` agar input tetap di dalam kot
 ### Tombol Tagihan — perbaikan teks besar, 10 Oktober 2026
 
 Kartu contoh Tagihan menjaga ukuran normal103/87x34 dan dapat membungkus aksi/label pada layar sempit atau teks besar. Dua tombol menonaktifkan press-scale secara lokal agar target tidak meluber; komponen Button bersama dan header Figma72 tetap. Tambah/Bayar tetap membuka penjelasan pratinjau tanpa transaksi. [Receipt QA/PM terbaru](qa/pm-cashier-bill-large-publication-2026-10-10/REPORT.md).
+
+
+### Status publikasi Kasir —10 Oktober2026
+
+[Review branch/main dan gate terbaru](qa/pm-cashier-continuous-review-2026-10-10/REPORT.md) menyatukan receipt publikasi modul dan verifikasi blob commit. Semua pratinjau yang diterbitkan mempertahankan penjelasan batas backend/perangkat. Menu Favorit4×2 masih branch-only sampai Riwayat Shift serta integrasi tujuan lulus; receipt lama tetap historis.

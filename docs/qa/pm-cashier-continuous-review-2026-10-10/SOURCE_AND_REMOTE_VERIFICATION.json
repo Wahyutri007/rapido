@@ -1,0 +1,444 @@
+{
+  "recordedAtUtc": "2026-10-10T00:04:12.340Z",
+  "status": "ALL_REVIEWED_MODULE_BRANCHES_AND_MAIN_VERIFIED_FAVORITES_MAIN_HELD",
+  "mainCodeCommit": "e4cdde7c448a74d54d9d99760717793719a36c4c",
+  "remote": "https://github.com/Wahyutri007/rapido.git",
+  "verifiedModuleChanges": [
+    {
+      "module": "cash-input",
+      "branch": "fix/cashier-cash-input-layout-2026-10-10",
+      "commit": "a0c059d9f37fc330f70d2df1bb8349aaaca42fb7",
+      "productionPaths": 1,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 47,
+      "contractsPASS": null
+    },
+    {
+      "module": "bills-reference",
+      "branch": "fix/cashier-bills-reference-2026-10-10",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def",
+      "productionPaths": 12,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 30,
+      "contractsPASS": null
+    },
+    {
+      "module": "scanner",
+      "branch": "fix/cashier-scanner-integration-2026-10-10",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883",
+      "productionPaths": 11,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 38,
+      "contractsPASS": 18
+    },
+    {
+      "module": "drawer",
+      "branch": "fix/cashier-drawer-route-2026-10-10",
+      "commit": "414a9de17b3f073486f1704801a78a2cb5f10320",
+      "productionPaths": 3,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 26,
+      "contractsPASS": 10
+    },
+    {
+      "module": "printer",
+      "branch": "fix/cashier-printer-preview-2026-10-10",
+      "commit": "1d787a6500136d0ae335ec70fd9b4073091e29a1",
+      "productionPaths": 3,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 25,
+      "contractsPASS": 14
+    },
+    {
+      "module": "stock",
+      "branch": "fix/cashier-stock-preview-2026-10-10",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4",
+      "productionPaths": 17,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 28,
+      "contractsPASS": 29
+    },
+    {
+      "module": "location",
+      "branch": "fix/cashier-location-preview-2026-10-10",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69",
+      "productionPaths": 11,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 41,
+      "contractsPASS": 24
+    },
+    {
+      "module": "expense",
+      "branch": "fix/cashier-expense-preview-2026-10-10",
+      "commit": "729803def28b743bea7a16be30e21d4934b98a8e",
+      "productionPaths": 2,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 23,
+      "contractsPASS": 16
+    },
+    {
+      "module": "cash-confirm",
+      "branch": "fix/cashier-cash-confirm-preview-2026-10-10",
+      "commit": "1c5d52f7153c5d103ea4426ee383fb0074b731f6",
+      "productionPaths": 3,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 44,
+      "contractsPASS": 17
+    },
+    {
+      "module": "stock-search",
+      "branch": "fix/cashier-stock-search-width-2026-10-10",
+      "commit": "f15ee80ff8325f13e52d8e157b9df8a52ee1ab65",
+      "productionPaths": 2,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 41,
+      "contractsPASS": 32
+    },
+    {
+      "module": "bill-large",
+      "branch": "fix/cashier-bill-large-labels-2026-10-10",
+      "commit": "e4cdde7c448a74d54d9d99760717793719a36c4c",
+      "productionPaths": 1,
+      "branchVerified": true,
+      "ancestorOfMain": true,
+      "browserPASS": 26,
+      "contractsPASS": 22
+    }
+  ],
+  "sourceBlobChecks": 66,
+  "latestOwnedPaths": 60,
+  "latestOwnedSources": {
+    "app/(no-layout)/(cashier)/cart/input-money.tsx": {
+      "sha256": "202b8c4fc5a39482ecfe32ea3da53ac83462256ee43f3df6cd84f4b27b5bacbc",
+      "module": "cash-input",
+      "commit": "a0c059d9f37fc330f70d2df1bb8349aaaca42fb7"
+    },
+    "components/feature/cashier/bills/BillsFigmaPreview.tsx": {
+      "sha256": "9a61a448f9a66d8b2eecde4cd872bd65eed9270484b809ab9456f1ed13902bb5",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "components/feature/cashier/bills/BillReferenceCard.tsx": {
+      "sha256": "11cfb859cd97032064128acd1a3d465c479d75fe39a14dd4fe4f965cebdb010b",
+      "module": "bill-large",
+      "commit": "e4cdde7c448a74d54d9d99760717793719a36c4c"
+    },
+    "lib/cashier/bill-reference-preview.ts": {
+      "sha256": "6f74876bd03f51670f20d5b3d36177c3e460876bb9b11a997f32195616cc120e",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "lib/cashier/bill-theme.ts": {
+      "sha256": "5088a9850ffe1d4afc79b176ce1b36a77f43305bc46ad5d09e38fbe54396c3d3",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "lib/cashier/bill-presentation.ts": {
+      "sha256": "0a84aab55971f1b6e1b3903303b927f17e19ccdb8e40a019d12f9473a1988f79",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "app/(cashier)/biling/index.tsx": {
+      "sha256": "7c267adc0356db1c090c33c1157434e5087cad8f87391b5270e145ca74abfa8e",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "lib/ui/bottom-navigation.ts": {
+      "sha256": "8f1c275244b798ad06f378927b279e7e46a0f4a797ff7dd3dcec08b72f36d885",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "components/ui/button/index.tsx": {
+      "sha256": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "components/common/Header.tsx": {
+      "sha256": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "app/(cashier)/biling/_layout.tsx": {
+      "sha256": "d307a9cf241c48db23d01aafbca7875fe7624290524e375aef764f86c82bcb24",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "assets/images/cashier/bills/bell.svg": {
+      "sha256": "536cf384b84c63ff582859e527494a75cad64c61af1c441317d900d5e4f316bf",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "assets/images/cashier/bills/chevron-down.svg": {
+      "sha256": "dfe7c757ed34125183eac1d6d6227899e64f301ea5ca2261ed9650b6991ce4ea",
+      "module": "bills-reference",
+      "commit": "09324cb202821b4b65b0560c7ffbed937e8e8def"
+    },
+    "components/feature/cashier/scanner/CashierScannerScreen.tsx": {
+      "sha256": "9480e0ceb26c8ee0b179cdd6f0ba2e66751498a8a6a97b3497cf4e1ee4265317",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "components/feature/cashier/scanner/CashierScannerDetailScreen.tsx": {
+      "sha256": "2e265177e6ae190cf287a15180bbe2efebaf58ddab0d2673bfb9726c68d1e266",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "app/(no-layout)/(cashier)/scanner/index.tsx": {
+      "sha256": "a1357aacd3bb6795fd796ed7c4395379c835b404424d6f9db6a16638a27c6c31",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "app/(no-layout)/(cashier)/scanner/detail.tsx": {
+      "sha256": "fce5a164632a97f8294a09fcf570ab35b970d28707a69e9a47f241ccdc8e30e8",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "app/(no-layout)/(cashier)/scanner/_layout.tsx": {
+      "sha256": "c998203e790a96702318cfe203503f502a1a4e9aa5c06c4862d477e435ab6a24",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "lib/cashier/scanner.ts": {
+      "sha256": "cbaaabcbf71f97b2fdc23c4b3dc17aff69f3ded5b6cd9856ede8668f0d63a016",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "types/ui/cashier/scanner.ts": {
+      "sha256": "65fc5438df9096cfba497300398302ef568f6d60a732713e6c5947df52325566",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "constants/data/cashier-scanner-preview.ts": {
+      "sha256": "ac933e6ef99d4ef7acac078ca6476efac6d0402f09911890f10ce2e5d16906e9",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "components/common/Wrapper.tsx": {
+      "sha256": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+      "module": "scanner",
+      "commit": "4480c4b4f112c32262a15cf82a79e13a5ea15883"
+    },
+    "app/(no-layout)/(cashier)/_layout.tsx": {
+      "sha256": "44091c9a2a6cec409f131231776b483252274a9f75fe5143b60d921eaffb6910",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "app/(no-layout)/(cashier)/cash-drawer.tsx": {
+      "sha256": "06e7332f529e489d15062dabf186cfc16ae10be3da0a0687fa755341cc1a079f",
+      "module": "drawer",
+      "commit": "414a9de17b3f073486f1704801a78a2cb5f10320"
+    },
+    "components/common/BottomActionButton.tsx": {
+      "sha256": "e99ec6fb197e3710b7a1b0c4f981690befd749b1f8022d2a4e3c35c45d14284f",
+      "module": "drawer",
+      "commit": "414a9de17b3f073486f1704801a78a2cb5f10320"
+    },
+    "app/(no-layout)/manage/printer/index.tsx": {
+      "sha256": "d8e4f8482093708f33549b813985f464ec55141d06e01b25f07a22872e2f9887",
+      "module": "printer",
+      "commit": "1d787a6500136d0ae335ec70fd9b4073091e29a1"
+    },
+    "app/(no-layout)/manage/printer/modify.tsx": {
+      "sha256": "dc73441fe7aa9a8992bbd936a8ecd45c1e2d851afce7a73d5598a5455d9b37f0",
+      "module": "printer",
+      "commit": "1d787a6500136d0ae335ec70fd9b4073091e29a1"
+    },
+    "app/(no-layout)/manage/printer/_layout.tsx": {
+      "sha256": "f17ce5346e40cd8ab74d9fa5a154e60229434524924cb6d9bd47e406d5cb14b5",
+      "module": "printer",
+      "commit": "1d787a6500136d0ae335ec70fd9b4073091e29a1"
+    },
+    "app/(no-layout)/(cashier)/stock.tsx": {
+      "sha256": "098f11324a9a0bc6aecb366ab8a9d91a31e802c865647936b4fbb852f82fe3b2",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "components/feature/cashier/stock/CashierStockScreen.tsx": {
+      "sha256": "90b06bd1e1f029b8ab0fd3c990898a7d4a9511acdd19f19a66da807e469cf30e",
+      "module": "stock-search",
+      "commit": "f15ee80ff8325f13e52d8e157b9df8a52ee1ab65"
+    },
+    "components/feature/cashier/stock/StockGroupCard.tsx": {
+      "sha256": "5b9a469bb24cefa7b60e05f83fa690965aaca597228e04ff1f7516c6a6cb88e6",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "components/feature/cashier/stock/StockFilterSheet.tsx": {
+      "sha256": "aec3506b55fdcf1366b89dfa02f2374f23439b9dc2d0c9f620ff270bc66a7139",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "lib/cashier/stock.ts": {
+      "sha256": "ff0077eb976aeea7791cd6fe5673ce51a3c1392aa2112e86c37916266930b931",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "lib/cashier/stock-theme.ts": {
+      "sha256": "2d8d9dedacc1a271423ef1fdafcf04d206973cd460a74e29ff95379eac7e6adb",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "types/ui/cashier/stock.ts": {
+      "sha256": "ea7900eb9cdfc755efc2fd75eee6c2faca63b862d8682ffd336525b9495b1551",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "constants/data/cashier-stock-preview.ts": {
+      "sha256": "066f3470cf1d32c5beb9a09a10c894540f0e6215a28106f7d82bf2384c311d95",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/back.svg": {
+      "sha256": "485696d31d364ac3aa26a68403baefc7c7b8bdf97d1769829df240b739b88a87",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/check.svg": {
+      "sha256": "038ee7c5253b78bae88a47401310992c0b4da3648efede4dd2af30c4c7430ad1",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/close.svg": {
+      "sha256": "f66c5602592fc917de6b75e350a4942d4b7a7d13115b4696083678892c8af585",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/divider-wide.svg": {
+      "sha256": "42043dc287c9c6829f0116fb10667d33e5ee5b7f354b24964b241f737d580d51",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/divider.svg": {
+      "sha256": "af5653c3de0af27202a670025952dad90830f6556b25c1090d5f69b76217b9ce",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/filter.svg": {
+      "sha256": "a74f31c270ce14ce6e97c1c8ae239a3dcdb666021d56ac18f6ff900141adfef2",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "assets/images/cashier/stock/search.svg": {
+      "sha256": "35247761b1ba8cb4422a089427a87ebc713b1b68e120417646ff27e044c980ed",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "components/ui/actionsheet/index.tsx": {
+      "sha256": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219",
+      "module": "stock",
+      "commit": "9808dc9eb7d44a0fdad0403c3ab0af17716383f4"
+    },
+    "app/(cashier)/location/index.tsx": {
+      "sha256": "0e6693a62a6643ba1de3ad6f033b2673b00bca6ddd36c49a78892313a3a3ddaa",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "app/(no-layout)/(cashier)/location/detail.tsx": {
+      "sha256": "4d7f256968646ed8d62fdae444d94f9f7d809f65397c43ef00375a40f0156a44",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "app/(no-layout)/(cashier)/location/_layout.tsx": {
+      "sha256": "50e2b54ee4f7670386085c759a83c2e4ae3596ae8aa2a76c86eaeb0be5724e4e",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "components/feature/cashier/location/CashierLocationScreen.tsx": {
+      "sha256": "afaacf110ff58f4e992d696bd36ad78826aceb3debfb8283fd68787d67fc95d1",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "components/feature/cashier/location/CashierLocationDetailScreen.tsx": {
+      "sha256": "b66db0e334da635fb542e4acb2266940c0c0c79af44e4aec595de4eefb42a765",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "components/feature/cashier/location/LocationCommon.tsx": {
+      "sha256": "aee3459bc82f23695cce13e9d3edc30344003c6dbb7778b82d286e35340d839f",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "lib/cashier/location.ts": {
+      "sha256": "c0b4866b2a030c4f7c5bc6cde234f8349c4309ad685b371f3082402851fa5d33",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "types/ui/cashier/location.ts": {
+      "sha256": "cf628f1758d3fd556c2b91d266f6dd16442f9d46d32f095005b8ea2726c9485a",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "app/(cashier)/_layout.tsx": {
+      "sha256": "29c8f80ca2f24ba3666890c6725aaa81235d127c895fc06540175f97d23e522d",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "components/custom/BottomTab.tsx": {
+      "sha256": "9a80c4cf5dce15becfb90abb2fe506abdc62f0cf5066959d130cd84a3c2328b6",
+      "module": "location",
+      "commit": "384aa9d3d327dcb311946f34c3ac53347a419f69"
+    },
+    "app/(no-layout)/(cashier)/report/expense-input.tsx": {
+      "sha256": "23294a6886db34d381c5ae133a2c45ad136e881890acd077606c3ebde315857c",
+      "module": "expense",
+      "commit": "729803def28b743bea7a16be30e21d4934b98a8e"
+    },
+    "app/(no-layout)/(cashier)/report/_layout.tsx": {
+      "sha256": "c6ffc312db03937e822938a8ae3aabf8eebbf3df90bce270a8bfa1a385edb60f",
+      "module": "expense",
+      "commit": "729803def28b743bea7a16be30e21d4934b98a8e"
+    },
+    "app/(no-layout)/(cashier)/cart/input-money-confirm.tsx": {
+      "sha256": "5dc8e459c8410ad0bc9bb2458b7eb570f21811f1ab962987a81881533ac4f821",
+      "module": "cash-confirm",
+      "commit": "1c5d52f7153c5d103ea4426ee383fb0074b731f6"
+    },
+    "app/(no-layout)/(cashier)/cart/_layout.tsx": {
+      "sha256": "29e62aefa5a0a3da56368c83052553f123d30347a71706e00a33e798d94c4caa",
+      "module": "cash-confirm",
+      "commit": "1c5d52f7153c5d103ea4426ee383fb0074b731f6"
+    },
+    "components/common/ScreenSafeArea.tsx": {
+      "sha256": "f4ea012c5406e7797e07bc0eb0a2cc38de2518d7f0193d033cb65d79c761ff36",
+      "module": "cash-confirm",
+      "commit": "1c5d52f7153c5d103ea4426ee383fb0074b731f6"
+    },
+    "components/common/SearchBar.tsx": {
+      "sha256": "f268b544f48ea1a00ccd0db9a4edb6f1974e4dcbf51a1e67cfcd058abce6b702",
+      "module": "stock-search",
+      "commit": "f15ee80ff8325f13e52d8e157b9df8a52ee1ab65"
+    }
+  },
+  "receiptBindings": {
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-publication-2026-10-10\\cash-push-receipt.json": "08ec610523670897d543d8a31633f56ca6aabb3e9a219d49e6d701b4170baa79",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-publication-2026-10-10\\bills-push-receipt.json": "b7bc26b5cd5e19d0fd2ea9f049b8cf97f5d3fbd7dd1a6a47d1f71e78cec1a1a2",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\scanner-push-receipt.json": "f4ccc29afe891ca41bc953f9c811c6b9d94f66766ef87efd641e94527406184d",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\drawer-push-receipt.json": "95cb1997040dd9504ec711b00210985a36f8fc24321a8801366632d6c86f285e",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\printer-push-receipt.json": "9805d13a63fb628391f2dcce340b2f17455890796f77a4fb46844a441e8edfc9",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\stock-push-receipt.json": "79fb9c3bbba1328bc5bee4b346fb72024cd063845ba81adc61c7ceeead458d71",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\location-push-receipt.json": "a3696cb3b8fc92eff8c3c217a4a6688dc791804a9a94d93af7ef93b17da77b72",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\expense-push-receipt.json": "fd9d44a8d41209b0c9e21aa79238e3b55dd03133a27e90ef69e7cc2509dbe149",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\cash-confirm-push-receipt.json": "b033abc1bf2b72baeb89ebf8ea00f1509b451e4d8e8d8b9e0a16d9397ccd76b8",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\stock-search-push-receipt.json": "24c3f85d1c3044d3b12c87bdfbaac96bbe60584b85ed899629be214bbd96b3ae",
+    "C:\\Users\\Wahyu\\Downloads\\rapido-dev\\rapido-dev\\docs\\qa\\pm-cashier-continuous-2026-10-10\\bill-large-push-receipt.json": "33a98eaf9fc1364228404a0f78a8c9456cc71cec7b77c54f227d10d230186727"
+  },
+  "sharedHead": "acba0d92460c1af3149abc3775f09888a2943cab",
+  "sharedIndex": "",
+  "menu": {
+    "branch": "fix/cashier-favorites-layout-2026-10-10",
+    "commit": "ca69db8844e12f9e6310beb6d3a83de5960ec7de",
+    "status": "DRAFT_ONLY_MAIN_HELD",
+    "remainingGate": "Shift route/list/report/full reference and final favorites destination integration; Scanner/Drawer/Stock prerequisites now published."
+  },
+  "limits": "Scoped offline RNWeb previews and bounded source QA only. Browser counts are per fresh module cohort, never aggregated as unique checks. No full native/ExpoRouter/authenticated backend/payments/hardware/Figma100/global feature-progress percentage."
+}

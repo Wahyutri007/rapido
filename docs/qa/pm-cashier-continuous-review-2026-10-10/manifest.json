@@ -1,0 +1,24 @@
+{
+  "recordedAtUtc": "2026-10-10T00:04:12.563Z",
+  "base": "e4cdde7c448a74d54d9d99760717793719a36c4c",
+  "branch": "docs/cashier-continuous-review-2026-10-10",
+  "artifacts": {
+    "prepare-publication-rollup.cjs": "e82adaf59478ae45dc92d41b4d86697d8ec6fd9777015cc4664d2b92c9c031a8",
+    "receipts/bill-large-push-receipt.json": "33a98eaf9fc1364228404a0f78a8c9456cc71cec7b77c54f227d10d230186727",
+    "receipts/bills-reference-push-receipt.json": "b7bc26b5cd5e19d0fd2ea9f049b8cf97f5d3fbd7dd1a6a47d1f71e78cec1a1a2",
+    "receipts/cash-confirm-push-receipt.json": "b033abc1bf2b72baeb89ebf8ea00f1509b451e4d8e8d8b9e0a16d9397ccd76b8",
+    "receipts/cash-input-push-receipt.json": "08ec610523670897d543d8a31633f56ca6aabb3e9a219d49e6d701b4170baa79",
+    "receipts/drawer-push-receipt.json": "95cb1997040dd9504ec711b00210985a36f8fc24321a8801366632d6c86f285e",
+    "receipts/expense-push-receipt.json": "fd9d44a8d41209b0c9e21aa79238e3b55dd03133a27e90ef69e7cc2509dbe149",
+    "receipts/favorites-draft-push-receipt.json": "2417fe5a1c91239d946be2882915bf29dc42f3cbf2911d32b88f7d665ee728d6",
+    "receipts/location-push-receipt.json": "a3696cb3b8fc92eff8c3c217a4a6688dc791804a9a94d93af7ef93b17da77b72",
+    "receipts/printer-push-receipt.json": "9805d13a63fb628391f2dcce340b2f17455890796f77a4fb46844a441e8edfc9",
+    "receipts/scanner-push-receipt.json": "f4ccc29afe891ca41bc953f9c811c6b9d94f66766ef87efd641e94527406184d",
+    "receipts/stock-push-receipt.json": "79fb9c3bbba1328bc5bee4b346fb72024cd063845ba81adc61c7ceeead458d71",
+    "receipts/stock-search-push-receipt.json": "24c3f85d1c3044d3b12c87bdfbaac96bbe60584b85ed899629be214bbd96b3ae",
+    "REPORT.md": "ef10815486ef76f49bc547582ca898cf4f91a9bb036632cbfc24e0e2533a5f25",
+    "SOURCE_AND_REMOTE_VERIFICATION.json": "384c7c52fc66128d58b172c4a2e11b045c87605157a6d5e74f86b884ff17fa74",
+    "verify.cjs": "eed478a369f8e9698d10ba25ce99a96f12399b60ce648a40a25b4cea7032cccc"
+  },
+  "readmeSHA256": "e9124c43488d579a325e378612cb0e7697ba55141c00a9510746534e7b20f0ac"
+}
