@@ -708,3 +708,8 @@ Tab Tagihan menampilkan tiga contoh Arif/Julian/Amek dari frame29:26627. Badge13
 ### Pencarian Stok Kasir — perbaikan layar sempit, 10 Oktober 2026
 
 Halaman Stok mengaktifkan `SearchBar viewportSafe` agar input tetap di dalam kotak pencarian pada280/240px. Prop baru defaultfalse menjaga pemakai lain; data contoh, filter, status, reset dan navigasi tetap. [Receipt QA/PM terbaru](qa/pm-cashier-stock-search-publication-2026-10-10/REPORT.md) menambahkan uji sebelum/sesudah terhadap publikasi Stok sebelumnya tanpa mengubah receipt lama.
+
+
+### Tombol Tagihan — perbaikan teks besar, 10 Oktober 2026
+
+Kartu contoh Tagihan menjaga ukuran normal103/87x34 dan dapat membungkus aksi/label pada layar sempit atau teks besar. Dua tombol menonaktifkan press-scale secara lokal agar target tidak meluber; komponen Button bersama dan header Figma72 tetap. Tambah/Bayar tetap membuka penjelasan pratinjau tanpa transaksi. [Receipt QA/PM terbaru](qa/pm-cashier-bill-large-publication-2026-10-10/REPORT.md).

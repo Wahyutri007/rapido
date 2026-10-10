@@ -91,7 +91,7 @@ export default function BillReferenceCard({
 				</View>
 			</View>
 			<View
-				className="flex-row flex-wrap justify-end gap-3 p-3"
+				className="flex-row justify-end gap-3 p-3"
 				testID="bill-preview-actions"
 			>
 				<View
@@ -100,34 +100,22 @@ export default function BillReferenceCard({
 				/>
 				<Button
 					size="bill"
-					animationType="none"
 					variant="outline"
-					style={{
-						minWidth: 103,
-						maxWidth: "100%",
-						minHeight: 34,
-						height: "auto",
-					}}
+					style={{ minWidth: 103 }}
 					accessibilityLabel={`Tambah pesanan ${bill.customer} (pratinjau)`}
 					accessibilityHint="Menampilkan informasi batas pratinjau, tanpa mengubah transaksi."
 					onPress={() => onAction("add", bill)}
 				>
-					<ButtonText className="shrink text-center">Tambah</ButtonText>
+					<ButtonText>Tambah</ButtonText>
 				</Button>
 				<Button
 					size="bill"
-					animationType="none"
-					style={{
-						minWidth: 87,
-						maxWidth: "100%",
-						minHeight: 34,
-						height: "auto",
-					}}
+					style={{ minWidth: 87 }}
 					accessibilityLabel={`Bayar tagihan ${bill.customer} (pratinjau)`}
 					accessibilityHint="Menampilkan informasi batas pratinjau, tanpa melakukan pembayaran."
 					onPress={() => onAction("pay", bill)}
 				>
-					<ButtonText className="shrink text-center">Bayar</ButtonText>
+					<ButtonText>Bayar</ButtonText>
 				</Button>
 			</View>
 		</Card>

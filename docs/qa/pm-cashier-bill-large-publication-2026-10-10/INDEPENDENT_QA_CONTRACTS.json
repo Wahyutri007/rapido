@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "passed": 6,
+  "checks": [
+    {
+      "name": "All11 production/data/parent/Header/primitive guards unchanged during independent QA",
+      "status": "PASS"
+    },
+    {
+      "name": "Complete inverse exactly six local props; original business/copy/callbacks preserved, scale deliberately disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "Mandatory raw current/Before/Header/layout/primitives compiled at intake hashes; entire fixture/bundle stable",
+      "status": "PASS"
+    },
+    {
+      "name": "22browser groups/all3actualBefore large240side24 failures/current6targets+glyph+callbacks sevenports and twoCSSports",
+      "status": "PASS"
+    },
+    {
+      "name": "390/320 Card and all6normalbutton boxes unchanged0.7; mandatory240side24 clipping closed with full targets and glyph",
+      "status": "PASS"
+    },
+    {
+      "name": "Three-root1208TSclosure/no diagnostics/lint/Biome/diff and original reference/frozenpeer receipts unchanged",
+      "status": "PASS"
+    }
+  ],
+  "sources": {
+    "components/feature/cashier/bills/BillReferenceCard.tsx": "11cfb859cd97032064128acd1a3d465c479d75fe39a14dd4fe4f965cebdb010b",
+    "components/feature/cashier/bills/BillsFigmaPreview.tsx": "9a61a448f9a66d8b2eecde4cd872bd65eed9270484b809ab9456f1ed13902bb5",
+    "app/(cashier)/biling/index.tsx": "7c267adc0356db1c090c33c1157434e5087cad8f87391b5270e145ca74abfa8e",
+    "app/(cashier)/biling/_layout.tsx": "65552e1fd888fd982b94e384cec35be5b1925011a48d5b0fd8c6bbcd45dede63",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/ui/button/index.tsx": "39e34772ccfb33bfe683fbbfc40e89bdf6ae01596fe8067dd1c794b6b22cbc52",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "lib/cashier/bill-presentation.ts": "0a84aab55971f1b6e1b3903303b927f17e19ccdb8e40a019d12f9473a1988f79",
+    "lib/cashier/bill-reference-preview.ts": "6f74876bd03f51670f20d5b3d36177c3e460876bb9b11a997f32195616cc120e",
+    "lib/cashier/bill-theme.ts": "5088a9850ffe1d4afc79b176ce1b36a77f43305bc46ad5d09e38fbe54396c3d3"
+  },
+  "resolvedFinding": "QC-BILL-LARGE-LABEL-001",
+  "limits": "Read-only independent actual three Card+Button+Text/header/layout on RNWeb with offline exact data. Action record adapter only, no production payment/cart/API/parentpopup/filter/full Bills/router/native/44px target/Figma100 certificate. CSS28 stress probe distinct from native fontScale."
+}

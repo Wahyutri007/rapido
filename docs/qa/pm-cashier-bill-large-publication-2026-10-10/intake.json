@@ -1,0 +1,29 @@
+{
+  "base": "f15ee80ff8325f13e52d8e157b9df8a52ee1ab65",
+  "inputs": {
+    "components/feature/cashier/bills/BillReferenceCard.tsx": "11cfb859cd97032064128acd1a3d465c479d75fe39a14dd4fe4f965cebdb010b"
+  },
+  "guards": {
+    "components/feature/cashier/bills/BillsFigmaPreview.tsx": "9a61a448f9a66d8b2eecde4cd872bd65eed9270484b809ab9456f1ed13902bb5",
+    "app/(cashier)/biling/index.tsx": "7c267adc0356db1c090c33c1157434e5087cad8f87391b5270e145ca74abfa8e",
+    "app/(cashier)/biling/_layout.tsx": "d307a9cf241c48db23d01aafbca7875fe7624290524e375aef764f86c82bcb24",
+    "lib/cashier/bill-presentation.ts": "0a84aab55971f1b6e1b3903303b927f17e19ccdb8e40a019d12f9473a1988f79",
+    "lib/cashier/bill-reference-preview.ts": "6f74876bd03f51670f20d5b3d36177c3e460876bb9b11a997f32195616cc120e",
+    "lib/cashier/bill-theme.ts": "5088a9850ffe1d4afc79b176ce1b36a77f43305bc46ad5d09e38fbe54396c3d3",
+    "components/ui/button/index.tsx": "2efec4ca25b61e051f46c2795a08710eaeb2a1b6b502e5f7fb569e642077fb04",
+    "components/ui/input/index.tsx": "bfecd1dcc6d87a34c9c93311082189cb6c1dee6e6c276c32f59bf5ac85d42b0e",
+    "components/common/Header.tsx": "51a0e6cd59d23ff73a38927823f87af6127af64918095011c9ccbe431e8278a8",
+    "components/common/Text.tsx": "fe366999921a35fa4def80ed0a3bed97d5122a9f93a9ea428e390f518ca8dcab",
+    "components/common/Card.tsx": "69f4b5b8d2d235fa48d89d205832f480996eb3185615c1dc49c0ea68f825f8ac",
+    "components/common/Wrapper.tsx": "002fbebcf5cbef475a07dea5275a24b5fc685ab4d3ebe8e7aab54120d5371e5a",
+    "components/common/AlertModal.tsx": "76b6330071a9bbec718f3fed21945c09fe7dfa81146ee02e7e471a8ebf5fe39e",
+    "components/common/SearchBar.tsx": "f268b544f48ea1a00ccd0db9a4edb6f1974e4dcbf51a1e67cfcd058abce6b702",
+    "components/common/SingleSelect.tsx": "ab53b5359a4637e3a276e402478c06c4713ffa6687719c49130629f63a13194b",
+    "components/custom/BottomTab.tsx": "9a80c4cf5dce15becfb90abb2fe506abdc62f0cf5066959d130cd84a3c2328b6",
+    "lib/ui/bottom-navigation.ts": "8f1c275244b798ad06f378927b279e7e46a0f4a797ff7dd3dcec08b72f36d885",
+    "components/ui/actionsheet/index.tsx": "4838334b2c708d6054765bdb78eee86d259149410eeae73d45269c83dba5b219"
+  },
+  "file": "components/feature/cashier/bills/BillReferenceCard.tsx",
+  "beforeHash": "6a16337ed6b8ffd689d07f0a08d66e9f88346a40c459b5c969bc7703c4ba9977",
+  "scope": "One exact QA-released BillCard; restores flex-wrap relative to private main plus six tested button props. Main Figma72 Header, Button and entire parent remain byte-identical. Preview UI only."
+}

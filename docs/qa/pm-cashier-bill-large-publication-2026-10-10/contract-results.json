@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Exact reviewed source components/feature/cashier/bills/BillReferenceCard.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/feature/cashier/bills/BillsFigmaPreview.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged app/(cashier)/biling/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged app/(cashier)/biling/_layout.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged lib/cashier/bill-presentation.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged lib/cashier/bill-reference-preview.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged lib/cashier/bill-theme.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/button/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/input/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Header.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Text.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Card.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/Wrapper.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/AlertModal.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/SearchBar.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/common/SingleSelect.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/custom/BottomTab.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged lib/ui/bottom-navigation.ts",
+      "status": "PASS"
+    },
+    {
+      "name": "Published prerequisite unchanged components/ui/actionsheet/index.tsx",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact published Before6a1633 retained distinct from peerBefore7f6b",
+      "status": "PASS"
+    },
+    {
+      "name": "Full inverse AST proves six button props plus restored actionrow wrapping only",
+      "status": "PASS"
+    },
+    {
+      "name": "Main Figma72 Header and default sharedButton animation remain explicit",
+      "status": "PASS"
+    }
+  ]
+}

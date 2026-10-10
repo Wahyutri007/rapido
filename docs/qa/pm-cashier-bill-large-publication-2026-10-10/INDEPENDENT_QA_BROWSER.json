@@ -1,0 +1,5797 @@
+{
+  "status": "PASS_SCOPED_BILL_CARD_UI",
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Mandatory actual Header/current/Before source and original three records",
+      "status": "PASS"
+    },
+    {
+      "name": "Same-bundle Before7f6b largeCSS240side24 Add clipping reproduced and all6current labels fit",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal390 entire Card+six button geometry identical",
+      "status": "PASS"
+    },
+    {
+      "name": "Normal320 entire Card+six button geometry identical",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 390x844/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 390x844/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 320x568/8",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 320x568/8",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 240x320/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 240x320/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 200x568/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 200x568/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 280x568/24",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 280x568/24",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 844x240/48",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 844x240/48",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole6action targets/visible glyph/no clipping OS48 320x240/0",
+      "status": "PASS"
+    },
+    {
+      "name": "Six physical AddPay clicks retain exact IDs/numbers/no navigation 320x240/0",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS28/40 six fulltargets/glyph/physicalcallbacks 320x568/8",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS28/40 six fulltargets/glyph/physicalcallbacks 240x320/24",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual Billing Header physical Back keeps exact destination",
+      "status": "PASS"
+    },
+    {
+      "name": "Source/bundle/dependencies stable; no runtime/API/storage/network",
+      "status": "PASS"
+    }
+  ],
+  "holds": [],
+  "errors": [],
+  "blocked": [],
+  "geometry": [
+    {
+      "state": "beforeLarge240side24",
+      "rows": [
+        {
+          "id": "29:26637",
+          "card": {
+            "x": 40,
+            "y": 136,
+            "width": 159,
+            "height": 792
+          },
+          "buttons": [
+            {
+              "x": 32.140625,
+              "y": 836,
+              "width": 154.859375,
+              "height": 34
+            },
+            {
+              "x": 64.40625,
+              "y": 882,
+              "width": 122.59375,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26658",
+          "card": {
+            "x": 40,
+            "y": 944,
+            "width": 159,
+            "height": 664
+          },
+          "buttons": [
+            {
+              "x": 32.140625,
+              "y": 1516,
+              "width": 154.859375,
+              "height": 34
+            },
+            {
+              "x": 64.40625,
+              "y": 1562,
+              "width": 122.59375,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26677",
+          "card": {
+            "x": 40,
+            "y": 1624,
+            "width": 159,
+            "height": 624
+          },
+          "buttons": [
+            {
+              "x": 32.140625,
+              "y": 2156,
+              "width": 154.859375,
+              "height": 34
+            },
+            {
+              "x": 64.40625,
+              "y": 2202,
+              "width": 122.59375,
+              "height": 34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "currentLarge240side24",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "normal390",
+      "old": [
+        {
+          "id": "29:26637",
+          "card": {
+            "x": 16,
+            "y": 64,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 192,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 192,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26658",
+          "card": {
+            "x": 16,
+            "y": 254,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 382,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 382,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26677",
+          "card": {
+            "x": 16,
+            "y": 444,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 572,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 572,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        }
+      ],
+      "now": [
+        {
+          "id": "29:26637",
+          "card": {
+            "x": 16,
+            "y": 64,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 192,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 192,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26658",
+          "card": {
+            "x": 16,
+            "y": 254,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 382,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 382,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26677",
+          "card": {
+            "x": 16,
+            "y": 444,
+            "width": 357,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 159,
+              "y": 572,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 274,
+              "y": 572,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "normal320",
+      "old": [
+        {
+          "id": "29:26637",
+          "card": {
+            "x": 16,
+            "y": 64,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 192,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 192,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26658",
+          "card": {
+            "x": 16,
+            "y": 254,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 382,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 382,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26677",
+          "card": {
+            "x": 16,
+            "y": 444,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 572,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 572,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        }
+      ],
+      "now": [
+        {
+          "id": "29:26637",
+          "card": {
+            "x": 16,
+            "y": 64,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 192,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 192,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26658",
+          "card": {
+            "x": 16,
+            "y": 254,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 382,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 382,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        },
+        {
+          "id": "29:26677",
+          "card": {
+            "x": 16,
+            "y": 444,
+            "width": 287,
+            "height": 174
+          },
+          "buttons": [
+            {
+              "x": 89,
+              "y": 572,
+              "width": 103,
+              "height": 34
+            },
+            {
+              "x": 204,
+              "y": 572,
+              "width": 87,
+              "height": 34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "physical390x844/0",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 159,
+              "y": 192,
+              "width": 103,
+              "height": 34,
+              "top": 192,
+              "right": 262,
+              "bottom": 226,
+              "left": 159
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 159,
+              "y": 192,
+              "width": 103,
+              "height": 34,
+              "top": 192,
+              "right": 262,
+              "bottom": 226,
+              "left": 159
+            },
+            "glyphs": [
+              {
+                "x": 184.28125,
+                "y": 200,
+                "width": 7.6875,
+                "height": 17,
+                "top": 200,
+                "right": 191.96875,
+                "bottom": 217,
+                "left": 184.28125
+              },
+              {
+                "x": 191.953125,
+                "y": 200,
+                "width": 7.796875,
+                "height": 17,
+                "top": 200,
+                "right": 199.75,
+                "bottom": 217,
+                "left": 191.953125
+              },
+              {
+                "x": 199.734375,
+                "y": 200,
+                "width": 12.375,
+                "height": 17,
+                "top": 200,
+                "right": 212.109375,
+                "bottom": 217,
+                "left": 199.734375
+              },
+              {
+                "x": 212.09375,
+                "y": 200,
+                "width": 8.578125,
+                "height": 17,
+                "top": 200,
+                "right": 220.671875,
+                "bottom": 217,
+                "left": 212.09375
+              },
+              {
+                "x": 220.65625,
+                "y": 200,
+                "width": 7.796875,
+                "height": 17,
+                "top": 200,
+                "right": 228.453125,
+                "bottom": 217,
+                "left": 220.65625
+              },
+              {
+                "x": 228.4375,
+                "y": 200,
+                "width": 8.28125,
+                "height": 17,
+                "top": 200,
+                "right": 236.71875,
+                "bottom": 217,
+                "left": 228.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 274,
+              "y": 192,
+              "width": 87,
+              "height": 34,
+              "top": 192,
+              "right": 361,
+              "bottom": 226,
+              "left": 274
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 274,
+              "y": 192,
+              "width": 87,
+              "height": 34,
+              "top": 192,
+              "right": 361,
+              "bottom": 226,
+              "left": 274
+            },
+            "glyphs": [
+              {
+                "x": 298.84375,
+                "y": 200,
+                "width": 9.109375,
+                "height": 17,
+                "top": 200,
+                "right": 307.953125,
+                "bottom": 217,
+                "left": 298.84375
+              },
+              {
+                "x": 307.9375,
+                "y": 200,
+                "width": 7.515625,
+                "height": 17,
+                "top": 200,
+                "right": 315.453125,
+                "bottom": 217,
+                "left": 307.9375
+              },
+              {
+                "x": 315.4375,
+                "y": 200,
+                "width": 7.6875,
+                "height": 17,
+                "top": 200,
+                "right": 323.125,
+                "bottom": 217,
+                "left": 315.4375
+              },
+              {
+                "x": 323.125,
+                "y": 200,
+                "width": 7.78125,
+                "height": 17,
+                "top": 200,
+                "right": 330.90625,
+                "bottom": 217,
+                "left": 323.125
+              },
+              {
+                "x": 330.890625,
+                "y": 200,
+                "width": 5.25,
+                "height": 17,
+                "top": 200,
+                "right": 336.140625,
+                "bottom": 217,
+                "left": 330.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 159,
+              "y": 382,
+              "width": 103,
+              "height": 34,
+              "top": 382,
+              "right": 262,
+              "bottom": 416,
+              "left": 159
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 159,
+              "y": 382,
+              "width": 103,
+              "height": 34,
+              "top": 382,
+              "right": 262,
+              "bottom": 416,
+              "left": 159
+            },
+            "glyphs": [
+              {
+                "x": 184.28125,
+                "y": 390,
+                "width": 7.6875,
+                "height": 17,
+                "top": 390,
+                "right": 191.96875,
+                "bottom": 407,
+                "left": 184.28125
+              },
+              {
+                "x": 191.953125,
+                "y": 390,
+                "width": 7.796875,
+                "height": 17,
+                "top": 390,
+                "right": 199.75,
+                "bottom": 407,
+                "left": 191.953125
+              },
+              {
+                "x": 199.734375,
+                "y": 390,
+                "width": 12.375,
+                "height": 17,
+                "top": 390,
+                "right": 212.109375,
+                "bottom": 407,
+                "left": 199.734375
+              },
+              {
+                "x": 212.09375,
+                "y": 390,
+                "width": 8.578125,
+                "height": 17,
+                "top": 390,
+                "right": 220.671875,
+                "bottom": 407,
+                "left": 212.09375
+              },
+              {
+                "x": 220.65625,
+                "y": 390,
+                "width": 7.796875,
+                "height": 17,
+                "top": 390,
+                "right": 228.453125,
+                "bottom": 407,
+                "left": 220.65625
+              },
+              {
+                "x": 228.4375,
+                "y": 390,
+                "width": 8.28125,
+                "height": 17,
+                "top": 390,
+                "right": 236.71875,
+                "bottom": 407,
+                "left": 228.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 274,
+              "y": 382,
+              "width": 87,
+              "height": 34,
+              "top": 382,
+              "right": 361,
+              "bottom": 416,
+              "left": 274
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 274,
+              "y": 382,
+              "width": 87,
+              "height": 34,
+              "top": 382,
+              "right": 361,
+              "bottom": 416,
+              "left": 274
+            },
+            "glyphs": [
+              {
+                "x": 298.84375,
+                "y": 390,
+                "width": 9.109375,
+                "height": 17,
+                "top": 390,
+                "right": 307.953125,
+                "bottom": 407,
+                "left": 298.84375
+              },
+              {
+                "x": 307.9375,
+                "y": 390,
+                "width": 7.515625,
+                "height": 17,
+                "top": 390,
+                "right": 315.453125,
+                "bottom": 407,
+                "left": 307.9375
+              },
+              {
+                "x": 315.4375,
+                "y": 390,
+                "width": 7.6875,
+                "height": 17,
+                "top": 390,
+                "right": 323.125,
+                "bottom": 407,
+                "left": 315.4375
+              },
+              {
+                "x": 323.125,
+                "y": 390,
+                "width": 7.78125,
+                "height": 17,
+                "top": 390,
+                "right": 330.90625,
+                "bottom": 407,
+                "left": 323.125
+              },
+              {
+                "x": 330.890625,
+                "y": 390,
+                "width": 5.25,
+                "height": 17,
+                "top": 390,
+                "right": 336.140625,
+                "bottom": 407,
+                "left": 330.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 159,
+              "y": 572,
+              "width": 103,
+              "height": 34,
+              "top": 572,
+              "right": 262,
+              "bottom": 606,
+              "left": 159
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 159,
+              "y": 572,
+              "width": 103,
+              "height": 34,
+              "top": 572,
+              "right": 262,
+              "bottom": 606,
+              "left": 159
+            },
+            "glyphs": [
+              {
+                "x": 184.28125,
+                "y": 580,
+                "width": 7.6875,
+                "height": 17,
+                "top": 580,
+                "right": 191.96875,
+                "bottom": 597,
+                "left": 184.28125
+              },
+              {
+                "x": 191.953125,
+                "y": 580,
+                "width": 7.796875,
+                "height": 17,
+                "top": 580,
+                "right": 199.75,
+                "bottom": 597,
+                "left": 191.953125
+              },
+              {
+                "x": 199.734375,
+                "y": 580,
+                "width": 12.375,
+                "height": 17,
+                "top": 580,
+                "right": 212.109375,
+                "bottom": 597,
+                "left": 199.734375
+              },
+              {
+                "x": 212.09375,
+                "y": 580,
+                "width": 8.578125,
+                "height": 17,
+                "top": 580,
+                "right": 220.671875,
+                "bottom": 597,
+                "left": 212.09375
+              },
+              {
+                "x": 220.65625,
+                "y": 580,
+                "width": 7.796875,
+                "height": 17,
+                "top": 580,
+                "right": 228.453125,
+                "bottom": 597,
+                "left": 220.65625
+              },
+              {
+                "x": 228.4375,
+                "y": 580,
+                "width": 8.28125,
+                "height": 17,
+                "top": 580,
+                "right": 236.71875,
+                "bottom": 597,
+                "left": 228.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 274,
+              "y": 572,
+              "width": 87,
+              "height": 34,
+              "top": 572,
+              "right": 361,
+              "bottom": 606,
+              "left": 274
+            },
+            "hit": true,
+            "top": 48,
+            "bottom": 844
+          },
+          "text": {
+            "box": {
+              "x": 274,
+              "y": 572,
+              "width": 87,
+              "height": 34,
+              "top": 572,
+              "right": 361,
+              "bottom": 606,
+              "left": 274
+            },
+            "glyphs": [
+              {
+                "x": 298.84375,
+                "y": 580,
+                "width": 9.109375,
+                "height": 17,
+                "top": 580,
+                "right": 307.953125,
+                "bottom": 597,
+                "left": 298.84375
+              },
+              {
+                "x": 307.9375,
+                "y": 580,
+                "width": 7.515625,
+                "height": 17,
+                "top": 580,
+                "right": 315.453125,
+                "bottom": 597,
+                "left": 307.9375
+              },
+              {
+                "x": 315.4375,
+                "y": 580,
+                "width": 7.6875,
+                "height": 17,
+                "top": 580,
+                "right": 323.125,
+                "bottom": 597,
+                "left": 315.4375
+              },
+              {
+                "x": 323.125,
+                "y": 580,
+                "width": 7.78125,
+                "height": 17,
+                "top": 580,
+                "right": 330.90625,
+                "bottom": 597,
+                "left": 323.125
+              },
+              {
+                "x": 330.890625,
+                "y": 580,
+                "width": 5.25,
+                "height": 17,
+                "top": 580,
+                "right": 336.140625,
+                "bottom": 597,
+                "left": 330.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical320x568/8",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 81,
+              "y": 264,
+              "width": 103,
+              "height": 34,
+              "top": 264,
+              "right": 184,
+              "bottom": 298,
+              "left": 81
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 81,
+              "y": 264,
+              "width": 103,
+              "height": 34,
+              "top": 264,
+              "right": 184,
+              "bottom": 298,
+              "left": 81
+            },
+            "glyphs": [
+              {
+                "x": 106.28125,
+                "y": 272,
+                "width": 7.6875,
+                "height": 17,
+                "top": 272,
+                "right": 113.96875,
+                "bottom": 289,
+                "left": 106.28125
+              },
+              {
+                "x": 113.953125,
+                "y": 272,
+                "width": 7.796875,
+                "height": 17,
+                "top": 272,
+                "right": 121.75,
+                "bottom": 289,
+                "left": 113.953125
+              },
+              {
+                "x": 121.734375,
+                "y": 272,
+                "width": 12.375,
+                "height": 17,
+                "top": 272,
+                "right": 134.109375,
+                "bottom": 289,
+                "left": 121.734375
+              },
+              {
+                "x": 134.09375,
+                "y": 272,
+                "width": 8.578125,
+                "height": 17,
+                "top": 272,
+                "right": 142.671875,
+                "bottom": 289,
+                "left": 134.09375
+              },
+              {
+                "x": 142.65625,
+                "y": 272,
+                "width": 7.796875,
+                "height": 17,
+                "top": 272,
+                "right": 150.453125,
+                "bottom": 289,
+                "left": 142.65625
+              },
+              {
+                "x": 150.4375,
+                "y": 272,
+                "width": 8.28125,
+                "height": 17,
+                "top": 272,
+                "right": 158.71875,
+                "bottom": 289,
+                "left": 150.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 196,
+              "y": 264,
+              "width": 87,
+              "height": 34,
+              "top": 264,
+              "right": 283,
+              "bottom": 298,
+              "left": 196
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 196,
+              "y": 264,
+              "width": 87,
+              "height": 34,
+              "top": 264,
+              "right": 283,
+              "bottom": 298,
+              "left": 196
+            },
+            "glyphs": [
+              {
+                "x": 220.84375,
+                "y": 272,
+                "width": 9.109375,
+                "height": 17,
+                "top": 272,
+                "right": 229.953125,
+                "bottom": 289,
+                "left": 220.84375
+              },
+              {
+                "x": 229.9375,
+                "y": 272,
+                "width": 7.515625,
+                "height": 17,
+                "top": 272,
+                "right": 237.453125,
+                "bottom": 289,
+                "left": 229.9375
+              },
+              {
+                "x": 237.4375,
+                "y": 272,
+                "width": 7.6875,
+                "height": 17,
+                "top": 272,
+                "right": 245.125,
+                "bottom": 289,
+                "left": 237.4375
+              },
+              {
+                "x": 245.125,
+                "y": 272,
+                "width": 7.78125,
+                "height": 17,
+                "top": 272,
+                "right": 252.90625,
+                "bottom": 289,
+                "left": 245.125
+              },
+              {
+                "x": 252.890625,
+                "y": 272,
+                "width": 5.25,
+                "height": 17,
+                "top": 272,
+                "right": 258.140625,
+                "bottom": 289,
+                "left": 252.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 81,
+              "y": 478,
+              "width": 103,
+              "height": 34,
+              "top": 478,
+              "right": 184,
+              "bottom": 512,
+              "left": 81
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 81,
+              "y": 478,
+              "width": 103,
+              "height": 34,
+              "top": 478,
+              "right": 184,
+              "bottom": 512,
+              "left": 81
+            },
+            "glyphs": [
+              {
+                "x": 106.28125,
+                "y": 486,
+                "width": 7.6875,
+                "height": 17,
+                "top": 486,
+                "right": 113.96875,
+                "bottom": 503,
+                "left": 106.28125
+              },
+              {
+                "x": 113.953125,
+                "y": 486,
+                "width": 7.796875,
+                "height": 17,
+                "top": 486,
+                "right": 121.75,
+                "bottom": 503,
+                "left": 113.953125
+              },
+              {
+                "x": 121.734375,
+                "y": 486,
+                "width": 12.375,
+                "height": 17,
+                "top": 486,
+                "right": 134.109375,
+                "bottom": 503,
+                "left": 121.734375
+              },
+              {
+                "x": 134.09375,
+                "y": 486,
+                "width": 8.578125,
+                "height": 17,
+                "top": 486,
+                "right": 142.671875,
+                "bottom": 503,
+                "left": 134.09375
+              },
+              {
+                "x": 142.65625,
+                "y": 486,
+                "width": 7.796875,
+                "height": 17,
+                "top": 486,
+                "right": 150.453125,
+                "bottom": 503,
+                "left": 142.65625
+              },
+              {
+                "x": 150.4375,
+                "y": 486,
+                "width": 8.28125,
+                "height": 17,
+                "top": 486,
+                "right": 158.71875,
+                "bottom": 503,
+                "left": 150.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 196,
+              "y": 478,
+              "width": 87,
+              "height": 34,
+              "top": 478,
+              "right": 283,
+              "bottom": 512,
+              "left": 196
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 196,
+              "y": 478,
+              "width": 87,
+              "height": 34,
+              "top": 478,
+              "right": 283,
+              "bottom": 512,
+              "left": 196
+            },
+            "glyphs": [
+              {
+                "x": 220.84375,
+                "y": 486,
+                "width": 9.109375,
+                "height": 17,
+                "top": 486,
+                "right": 229.953125,
+                "bottom": 503,
+                "left": 220.84375
+              },
+              {
+                "x": 229.9375,
+                "y": 486,
+                "width": 7.515625,
+                "height": 17,
+                "top": 486,
+                "right": 237.453125,
+                "bottom": 503,
+                "left": 229.9375
+              },
+              {
+                "x": 237.4375,
+                "y": 486,
+                "width": 7.6875,
+                "height": 17,
+                "top": 486,
+                "right": 245.125,
+                "bottom": 503,
+                "left": 237.4375
+              },
+              {
+                "x": 245.125,
+                "y": 486,
+                "width": 7.78125,
+                "height": 17,
+                "top": 486,
+                "right": 252.90625,
+                "bottom": 503,
+                "left": 245.125
+              },
+              {
+                "x": 252.890625,
+                "y": 486,
+                "width": 5.25,
+                "height": 17,
+                "top": 486,
+                "right": 258.140625,
+                "bottom": 503,
+                "left": 252.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 81,
+              "y": 458,
+              "width": 103,
+              "height": 34,
+              "top": 458,
+              "right": 184,
+              "bottom": 492,
+              "left": 81
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 81,
+              "y": 458,
+              "width": 103,
+              "height": 34,
+              "top": 458,
+              "right": 184,
+              "bottom": 492,
+              "left": 81
+            },
+            "glyphs": [
+              {
+                "x": 106.28125,
+                "y": 466,
+                "width": 7.6875,
+                "height": 17,
+                "top": 466,
+                "right": 113.96875,
+                "bottom": 483,
+                "left": 106.28125
+              },
+              {
+                "x": 113.953125,
+                "y": 466,
+                "width": 7.796875,
+                "height": 17,
+                "top": 466,
+                "right": 121.75,
+                "bottom": 483,
+                "left": 113.953125
+              },
+              {
+                "x": 121.734375,
+                "y": 466,
+                "width": 12.375,
+                "height": 17,
+                "top": 466,
+                "right": 134.109375,
+                "bottom": 483,
+                "left": 121.734375
+              },
+              {
+                "x": 134.09375,
+                "y": 466,
+                "width": 8.578125,
+                "height": 17,
+                "top": 466,
+                "right": 142.671875,
+                "bottom": 483,
+                "left": 134.09375
+              },
+              {
+                "x": 142.65625,
+                "y": 466,
+                "width": 7.796875,
+                "height": 17,
+                "top": 466,
+                "right": 150.453125,
+                "bottom": 483,
+                "left": 142.65625
+              },
+              {
+                "x": 150.4375,
+                "y": 466,
+                "width": 8.28125,
+                "height": 17,
+                "top": 466,
+                "right": 158.71875,
+                "bottom": 483,
+                "left": 150.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 196,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 283,
+              "bottom": 492,
+              "left": 196
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 196,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 283,
+              "bottom": 492,
+              "left": 196
+            },
+            "glyphs": [
+              {
+                "x": 220.84375,
+                "y": 466,
+                "width": 9.109375,
+                "height": 17,
+                "top": 466,
+                "right": 229.953125,
+                "bottom": 483,
+                "left": 220.84375
+              },
+              {
+                "x": 229.9375,
+                "y": 466,
+                "width": 7.515625,
+                "height": 17,
+                "top": 466,
+                "right": 237.453125,
+                "bottom": 483,
+                "left": 229.9375
+              },
+              {
+                "x": 237.4375,
+                "y": 466,
+                "width": 7.6875,
+                "height": 17,
+                "top": 466,
+                "right": 245.125,
+                "bottom": 483,
+                "left": 237.4375
+              },
+              {
+                "x": 245.125,
+                "y": 466,
+                "width": 7.78125,
+                "height": 17,
+                "top": 466,
+                "right": 252.90625,
+                "bottom": 483,
+                "left": 245.125
+              },
+              {
+                "x": 252.890625,
+                "y": 466,
+                "width": 5.25,
+                "height": 17,
+                "top": 466,
+                "right": 258.140625,
+                "bottom": 483,
+                "left": 252.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical240x320/0",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 108,
+              "y": 155,
+              "width": 103,
+              "height": 34,
+              "top": 155,
+              "right": 211,
+              "bottom": 189,
+              "left": 108
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 108,
+              "y": 155,
+              "width": 103,
+              "height": 34,
+              "top": 155,
+              "right": 211,
+              "bottom": 189,
+              "left": 108
+            },
+            "glyphs": [
+              {
+                "x": 133.28125,
+                "y": 163,
+                "width": 7.6875,
+                "height": 17,
+                "top": 163,
+                "right": 140.96875,
+                "bottom": 180,
+                "left": 133.28125
+              },
+              {
+                "x": 140.953125,
+                "y": 163,
+                "width": 7.796875,
+                "height": 17,
+                "top": 163,
+                "right": 148.75,
+                "bottom": 180,
+                "left": 140.953125
+              },
+              {
+                "x": 148.734375,
+                "y": 163,
+                "width": 12.375,
+                "height": 17,
+                "top": 163,
+                "right": 161.109375,
+                "bottom": 180,
+                "left": 148.734375
+              },
+              {
+                "x": 161.09375,
+                "y": 163,
+                "width": 8.578125,
+                "height": 17,
+                "top": 163,
+                "right": 169.671875,
+                "bottom": 180,
+                "left": 161.09375
+              },
+              {
+                "x": 169.65625,
+                "y": 163,
+                "width": 7.796875,
+                "height": 17,
+                "top": 163,
+                "right": 177.453125,
+                "bottom": 180,
+                "left": 169.65625
+              },
+              {
+                "x": 177.4375,
+                "y": 163,
+                "width": 8.28125,
+                "height": 17,
+                "top": 163,
+                "right": 185.71875,
+                "bottom": 180,
+                "left": 177.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 201,
+              "width": 87,
+              "height": 34,
+              "top": 201,
+              "right": 211,
+              "bottom": 235,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 201,
+              "width": 87,
+              "height": 34,
+              "top": 201,
+              "right": 211,
+              "bottom": 235,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 148.84375,
+                "y": 209,
+                "width": 9.109375,
+                "height": 17,
+                "top": 209,
+                "right": 157.953125,
+                "bottom": 226,
+                "left": 148.84375
+              },
+              {
+                "x": 157.9375,
+                "y": 209,
+                "width": 7.515625,
+                "height": 17,
+                "top": 209,
+                "right": 165.453125,
+                "bottom": 226,
+                "left": 157.9375
+              },
+              {
+                "x": 165.4375,
+                "y": 209,
+                "width": 7.6875,
+                "height": 17,
+                "top": 209,
+                "right": 173.125,
+                "bottom": 226,
+                "left": 165.4375
+              },
+              {
+                "x": 173.125,
+                "y": 209,
+                "width": 7.78125,
+                "height": 17,
+                "top": 209,
+                "right": 180.90625,
+                "bottom": 226,
+                "left": 173.125
+              },
+              {
+                "x": 180.890625,
+                "y": 209,
+                "width": 5.25,
+                "height": 17,
+                "top": 209,
+                "right": 186.140625,
+                "bottom": 226,
+                "left": 180.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 108,
+              "y": 155,
+              "width": 103,
+              "height": 34,
+              "top": 155,
+              "right": 211,
+              "bottom": 189,
+              "left": 108
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 108,
+              "y": 155,
+              "width": 103,
+              "height": 34,
+              "top": 155,
+              "right": 211,
+              "bottom": 189,
+              "left": 108
+            },
+            "glyphs": [
+              {
+                "x": 133.28125,
+                "y": 163,
+                "width": 7.6875,
+                "height": 17,
+                "top": 163,
+                "right": 140.96875,
+                "bottom": 180,
+                "left": 133.28125
+              },
+              {
+                "x": 140.953125,
+                "y": 163,
+                "width": 7.796875,
+                "height": 17,
+                "top": 163,
+                "right": 148.75,
+                "bottom": 180,
+                "left": 140.953125
+              },
+              {
+                "x": 148.734375,
+                "y": 163,
+                "width": 12.375,
+                "height": 17,
+                "top": 163,
+                "right": 161.109375,
+                "bottom": 180,
+                "left": 148.734375
+              },
+              {
+                "x": 161.09375,
+                "y": 163,
+                "width": 8.578125,
+                "height": 17,
+                "top": 163,
+                "right": 169.671875,
+                "bottom": 180,
+                "left": 161.09375
+              },
+              {
+                "x": 169.65625,
+                "y": 163,
+                "width": 7.796875,
+                "height": 17,
+                "top": 163,
+                "right": 177.453125,
+                "bottom": 180,
+                "left": 169.65625
+              },
+              {
+                "x": 177.4375,
+                "y": 163,
+                "width": 8.28125,
+                "height": 17,
+                "top": 163,
+                "right": 185.71875,
+                "bottom": 180,
+                "left": 177.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 201,
+              "width": 87,
+              "height": 34,
+              "top": 201,
+              "right": 211,
+              "bottom": 235,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 201,
+              "width": 87,
+              "height": 34,
+              "top": 201,
+              "right": 211,
+              "bottom": 235,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 148.84375,
+                "y": 209,
+                "width": 9.109375,
+                "height": 17,
+                "top": 209,
+                "right": 157.953125,
+                "bottom": 226,
+                "left": 148.84375
+              },
+              {
+                "x": 157.9375,
+                "y": 209,
+                "width": 7.515625,
+                "height": 17,
+                "top": 209,
+                "right": 165.453125,
+                "bottom": 226,
+                "left": 157.9375
+              },
+              {
+                "x": 165.4375,
+                "y": 209,
+                "width": 7.6875,
+                "height": 17,
+                "top": 209,
+                "right": 173.125,
+                "bottom": 226,
+                "left": 165.4375
+              },
+              {
+                "x": 173.125,
+                "y": 209,
+                "width": 7.78125,
+                "height": 17,
+                "top": 209,
+                "right": 180.90625,
+                "bottom": 226,
+                "left": 173.125
+              },
+              {
+                "x": 180.890625,
+                "y": 209,
+                "width": 5.25,
+                "height": 17,
+                "top": 209,
+                "right": 186.140625,
+                "bottom": 226,
+                "left": 180.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 108,
+              "y": 164,
+              "width": 103,
+              "height": 34,
+              "top": 164,
+              "right": 211,
+              "bottom": 198,
+              "left": 108
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 108,
+              "y": 164,
+              "width": 103,
+              "height": 34,
+              "top": 164,
+              "right": 211,
+              "bottom": 198,
+              "left": 108
+            },
+            "glyphs": [
+              {
+                "x": 133.28125,
+                "y": 172,
+                "width": 7.6875,
+                "height": 17,
+                "top": 172,
+                "right": 140.96875,
+                "bottom": 189,
+                "left": 133.28125
+              },
+              {
+                "x": 140.953125,
+                "y": 172,
+                "width": 7.796875,
+                "height": 17,
+                "top": 172,
+                "right": 148.75,
+                "bottom": 189,
+                "left": 140.953125
+              },
+              {
+                "x": 148.734375,
+                "y": 172,
+                "width": 12.375,
+                "height": 17,
+                "top": 172,
+                "right": 161.109375,
+                "bottom": 189,
+                "left": 148.734375
+              },
+              {
+                "x": 161.09375,
+                "y": 172,
+                "width": 8.578125,
+                "height": 17,
+                "top": 172,
+                "right": 169.671875,
+                "bottom": 189,
+                "left": 161.09375
+              },
+              {
+                "x": 169.65625,
+                "y": 172,
+                "width": 7.796875,
+                "height": 17,
+                "top": 172,
+                "right": 177.453125,
+                "bottom": 189,
+                "left": 169.65625
+              },
+              {
+                "x": 177.4375,
+                "y": 172,
+                "width": 8.28125,
+                "height": 17,
+                "top": 172,
+                "right": 185.71875,
+                "bottom": 189,
+                "left": 177.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 210,
+              "width": 87,
+              "height": 34,
+              "top": 210,
+              "right": 211,
+              "bottom": 244,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 210,
+              "width": 87,
+              "height": 34,
+              "top": 210,
+              "right": 211,
+              "bottom": 244,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 148.84375,
+                "y": 218,
+                "width": 9.109375,
+                "height": 17,
+                "top": 218,
+                "right": 157.953125,
+                "bottom": 235,
+                "left": 148.84375
+              },
+              {
+                "x": 157.9375,
+                "y": 218,
+                "width": 7.515625,
+                "height": 17,
+                "top": 218,
+                "right": 165.453125,
+                "bottom": 235,
+                "left": 157.9375
+              },
+              {
+                "x": 165.4375,
+                "y": 218,
+                "width": 7.6875,
+                "height": 17,
+                "top": 218,
+                "right": 173.125,
+                "bottom": 235,
+                "left": 165.4375
+              },
+              {
+                "x": 173.125,
+                "y": 218,
+                "width": 7.78125,
+                "height": 17,
+                "top": 218,
+                "right": 180.90625,
+                "bottom": 235,
+                "left": 173.125
+              },
+              {
+                "x": 180.890625,
+                "y": 218,
+                "width": 5.25,
+                "height": 17,
+                "top": 218,
+                "right": 186.140625,
+                "bottom": 235,
+                "left": 180.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical200x568/0",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 68,
+              "y": 288,
+              "width": 103,
+              "height": 34,
+              "top": 288,
+              "right": 171,
+              "bottom": 322,
+              "left": 68
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 68,
+              "y": 288,
+              "width": 103,
+              "height": 34,
+              "top": 288,
+              "right": 171,
+              "bottom": 322,
+              "left": 68
+            },
+            "glyphs": [
+              {
+                "x": 93.28125,
+                "y": 296,
+                "width": 7.6875,
+                "height": 17,
+                "top": 296,
+                "right": 100.96875,
+                "bottom": 313,
+                "left": 93.28125
+              },
+              {
+                "x": 100.953125,
+                "y": 296,
+                "width": 7.796875,
+                "height": 17,
+                "top": 296,
+                "right": 108.75,
+                "bottom": 313,
+                "left": 100.953125
+              },
+              {
+                "x": 108.734375,
+                "y": 296,
+                "width": 12.375,
+                "height": 17,
+                "top": 296,
+                "right": 121.109375,
+                "bottom": 313,
+                "left": 108.734375
+              },
+              {
+                "x": 121.09375,
+                "y": 296,
+                "width": 8.578125,
+                "height": 17,
+                "top": 296,
+                "right": 129.671875,
+                "bottom": 313,
+                "left": 121.09375
+              },
+              {
+                "x": 129.65625,
+                "y": 296,
+                "width": 7.796875,
+                "height": 17,
+                "top": 296,
+                "right": 137.453125,
+                "bottom": 313,
+                "left": 129.65625
+              },
+              {
+                "x": 137.4375,
+                "y": 296,
+                "width": 8.28125,
+                "height": 17,
+                "top": 296,
+                "right": 145.71875,
+                "bottom": 313,
+                "left": 137.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 84,
+              "y": 334,
+              "width": 87,
+              "height": 34,
+              "top": 334,
+              "right": 171,
+              "bottom": 368,
+              "left": 84
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 84,
+              "y": 334,
+              "width": 87,
+              "height": 34,
+              "top": 334,
+              "right": 171,
+              "bottom": 368,
+              "left": 84
+            },
+            "glyphs": [
+              {
+                "x": 108.84375,
+                "y": 342,
+                "width": 9.109375,
+                "height": 17,
+                "top": 342,
+                "right": 117.953125,
+                "bottom": 359,
+                "left": 108.84375
+              },
+              {
+                "x": 117.9375,
+                "y": 342,
+                "width": 7.515625,
+                "height": 17,
+                "top": 342,
+                "right": 125.453125,
+                "bottom": 359,
+                "left": 117.9375
+              },
+              {
+                "x": 125.4375,
+                "y": 342,
+                "width": 7.6875,
+                "height": 17,
+                "top": 342,
+                "right": 133.125,
+                "bottom": 359,
+                "left": 125.4375
+              },
+              {
+                "x": 133.125,
+                "y": 342,
+                "width": 7.78125,
+                "height": 17,
+                "top": 342,
+                "right": 140.90625,
+                "bottom": 359,
+                "left": 133.125
+              },
+              {
+                "x": 140.890625,
+                "y": 342,
+                "width": 5.25,
+                "height": 17,
+                "top": 342,
+                "right": 146.140625,
+                "bottom": 359,
+                "left": 140.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 68,
+              "y": 279,
+              "width": 103,
+              "height": 34,
+              "top": 279,
+              "right": 171,
+              "bottom": 313,
+              "left": 68
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 68,
+              "y": 279,
+              "width": 103,
+              "height": 34,
+              "top": 279,
+              "right": 171,
+              "bottom": 313,
+              "left": 68
+            },
+            "glyphs": [
+              {
+                "x": 93.28125,
+                "y": 287,
+                "width": 7.6875,
+                "height": 17,
+                "top": 287,
+                "right": 100.96875,
+                "bottom": 304,
+                "left": 93.28125
+              },
+              {
+                "x": 100.953125,
+                "y": 287,
+                "width": 7.796875,
+                "height": 17,
+                "top": 287,
+                "right": 108.75,
+                "bottom": 304,
+                "left": 100.953125
+              },
+              {
+                "x": 108.734375,
+                "y": 287,
+                "width": 12.375,
+                "height": 17,
+                "top": 287,
+                "right": 121.109375,
+                "bottom": 304,
+                "left": 108.734375
+              },
+              {
+                "x": 121.09375,
+                "y": 287,
+                "width": 8.578125,
+                "height": 17,
+                "top": 287,
+                "right": 129.671875,
+                "bottom": 304,
+                "left": 121.09375
+              },
+              {
+                "x": 129.65625,
+                "y": 287,
+                "width": 7.796875,
+                "height": 17,
+                "top": 287,
+                "right": 137.453125,
+                "bottom": 304,
+                "left": 129.65625
+              },
+              {
+                "x": 137.4375,
+                "y": 287,
+                "width": 8.28125,
+                "height": 17,
+                "top": 287,
+                "right": 145.71875,
+                "bottom": 304,
+                "left": 137.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 84,
+              "y": 325,
+              "width": 87,
+              "height": 34,
+              "top": 325,
+              "right": 171,
+              "bottom": 359,
+              "left": 84
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 84,
+              "y": 325,
+              "width": 87,
+              "height": 34,
+              "top": 325,
+              "right": 171,
+              "bottom": 359,
+              "left": 84
+            },
+            "glyphs": [
+              {
+                "x": 108.84375,
+                "y": 333,
+                "width": 9.109375,
+                "height": 17,
+                "top": 333,
+                "right": 117.953125,
+                "bottom": 350,
+                "left": 108.84375
+              },
+              {
+                "x": 117.9375,
+                "y": 333,
+                "width": 7.515625,
+                "height": 17,
+                "top": 333,
+                "right": 125.453125,
+                "bottom": 350,
+                "left": 117.9375
+              },
+              {
+                "x": 125.4375,
+                "y": 333,
+                "width": 7.6875,
+                "height": 17,
+                "top": 333,
+                "right": 133.125,
+                "bottom": 350,
+                "left": 125.4375
+              },
+              {
+                "x": 133.125,
+                "y": 333,
+                "width": 7.78125,
+                "height": 17,
+                "top": 333,
+                "right": 140.90625,
+                "bottom": 350,
+                "left": 133.125
+              },
+              {
+                "x": 140.890625,
+                "y": 333,
+                "width": 5.25,
+                "height": 17,
+                "top": 333,
+                "right": 146.140625,
+                "bottom": 350,
+                "left": 140.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 68,
+              "y": 412,
+              "width": 103,
+              "height": 34,
+              "top": 412,
+              "right": 171,
+              "bottom": 446,
+              "left": 68
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 68,
+              "y": 412,
+              "width": 103,
+              "height": 34,
+              "top": 412,
+              "right": 171,
+              "bottom": 446,
+              "left": 68
+            },
+            "glyphs": [
+              {
+                "x": 93.28125,
+                "y": 420,
+                "width": 7.6875,
+                "height": 17,
+                "top": 420,
+                "right": 100.96875,
+                "bottom": 437,
+                "left": 93.28125
+              },
+              {
+                "x": 100.953125,
+                "y": 420,
+                "width": 7.796875,
+                "height": 17,
+                "top": 420,
+                "right": 108.75,
+                "bottom": 437,
+                "left": 100.953125
+              },
+              {
+                "x": 108.734375,
+                "y": 420,
+                "width": 12.375,
+                "height": 17,
+                "top": 420,
+                "right": 121.109375,
+                "bottom": 437,
+                "left": 108.734375
+              },
+              {
+                "x": 121.09375,
+                "y": 420,
+                "width": 8.578125,
+                "height": 17,
+                "top": 420,
+                "right": 129.671875,
+                "bottom": 437,
+                "left": 121.09375
+              },
+              {
+                "x": 129.65625,
+                "y": 420,
+                "width": 7.796875,
+                "height": 17,
+                "top": 420,
+                "right": 137.453125,
+                "bottom": 437,
+                "left": 129.65625
+              },
+              {
+                "x": 137.4375,
+                "y": 420,
+                "width": 8.28125,
+                "height": 17,
+                "top": 420,
+                "right": 145.71875,
+                "bottom": 437,
+                "left": 137.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 84,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 171,
+              "bottom": 492,
+              "left": 84
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 84,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 171,
+              "bottom": 492,
+              "left": 84
+            },
+            "glyphs": [
+              {
+                "x": 108.84375,
+                "y": 466,
+                "width": 9.109375,
+                "height": 17,
+                "top": 466,
+                "right": 117.953125,
+                "bottom": 483,
+                "left": 108.84375
+              },
+              {
+                "x": 117.9375,
+                "y": 466,
+                "width": 7.515625,
+                "height": 17,
+                "top": 466,
+                "right": 125.453125,
+                "bottom": 483,
+                "left": 117.9375
+              },
+              {
+                "x": 125.4375,
+                "y": 466,
+                "width": 7.6875,
+                "height": 17,
+                "top": 466,
+                "right": 133.125,
+                "bottom": 483,
+                "left": 125.4375
+              },
+              {
+                "x": 133.125,
+                "y": 466,
+                "width": 7.78125,
+                "height": 17,
+                "top": 466,
+                "right": 140.90625,
+                "bottom": 483,
+                "left": 133.125
+              },
+              {
+                "x": 140.890625,
+                "y": 466,
+                "width": 5.25,
+                "height": 17,
+                "top": 466,
+                "right": 146.140625,
+                "bottom": 483,
+                "left": 140.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical280x568/24",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 288,
+              "width": 103,
+              "height": 34,
+              "top": 288,
+              "right": 227,
+              "bottom": 322,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 288,
+              "width": 103,
+              "height": 34,
+              "top": 288,
+              "right": 227,
+              "bottom": 322,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 149.28125,
+                "y": 296,
+                "width": 7.6875,
+                "height": 17,
+                "top": 296,
+                "right": 156.96875,
+                "bottom": 313,
+                "left": 149.28125
+              },
+              {
+                "x": 156.953125,
+                "y": 296,
+                "width": 7.796875,
+                "height": 17,
+                "top": 296,
+                "right": 164.75,
+                "bottom": 313,
+                "left": 156.953125
+              },
+              {
+                "x": 164.734375,
+                "y": 296,
+                "width": 12.375,
+                "height": 17,
+                "top": 296,
+                "right": 177.109375,
+                "bottom": 313,
+                "left": 164.734375
+              },
+              {
+                "x": 177.09375,
+                "y": 296,
+                "width": 8.578125,
+                "height": 17,
+                "top": 296,
+                "right": 185.671875,
+                "bottom": 313,
+                "left": 177.09375
+              },
+              {
+                "x": 185.65625,
+                "y": 296,
+                "width": 7.796875,
+                "height": 17,
+                "top": 296,
+                "right": 193.453125,
+                "bottom": 313,
+                "left": 185.65625
+              },
+              {
+                "x": 193.4375,
+                "y": 296,
+                "width": 8.28125,
+                "height": 17,
+                "top": 296,
+                "right": 201.71875,
+                "bottom": 313,
+                "left": 193.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 140,
+              "y": 334,
+              "width": 87,
+              "height": 34,
+              "top": 334,
+              "right": 227,
+              "bottom": 368,
+              "left": 140
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 140,
+              "y": 334,
+              "width": 87,
+              "height": 34,
+              "top": 334,
+              "right": 227,
+              "bottom": 368,
+              "left": 140
+            },
+            "glyphs": [
+              {
+                "x": 164.84375,
+                "y": 342,
+                "width": 9.109375,
+                "height": 17,
+                "top": 342,
+                "right": 173.953125,
+                "bottom": 359,
+                "left": 164.84375
+              },
+              {
+                "x": 173.9375,
+                "y": 342,
+                "width": 7.515625,
+                "height": 17,
+                "top": 342,
+                "right": 181.453125,
+                "bottom": 359,
+                "left": 173.9375
+              },
+              {
+                "x": 181.4375,
+                "y": 342,
+                "width": 7.6875,
+                "height": 17,
+                "top": 342,
+                "right": 189.125,
+                "bottom": 359,
+                "left": 181.4375
+              },
+              {
+                "x": 189.125,
+                "y": 342,
+                "width": 7.78125,
+                "height": 17,
+                "top": 342,
+                "right": 196.90625,
+                "bottom": 359,
+                "left": 189.125
+              },
+              {
+                "x": 196.890625,
+                "y": 342,
+                "width": 5.25,
+                "height": 17,
+                "top": 342,
+                "right": 202.140625,
+                "bottom": 359,
+                "left": 196.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 279,
+              "width": 103,
+              "height": 34,
+              "top": 279,
+              "right": 227,
+              "bottom": 313,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 279,
+              "width": 103,
+              "height": 34,
+              "top": 279,
+              "right": 227,
+              "bottom": 313,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 149.28125,
+                "y": 287,
+                "width": 7.6875,
+                "height": 17,
+                "top": 287,
+                "right": 156.96875,
+                "bottom": 304,
+                "left": 149.28125
+              },
+              {
+                "x": 156.953125,
+                "y": 287,
+                "width": 7.796875,
+                "height": 17,
+                "top": 287,
+                "right": 164.75,
+                "bottom": 304,
+                "left": 156.953125
+              },
+              {
+                "x": 164.734375,
+                "y": 287,
+                "width": 12.375,
+                "height": 17,
+                "top": 287,
+                "right": 177.109375,
+                "bottom": 304,
+                "left": 164.734375
+              },
+              {
+                "x": 177.09375,
+                "y": 287,
+                "width": 8.578125,
+                "height": 17,
+                "top": 287,
+                "right": 185.671875,
+                "bottom": 304,
+                "left": 177.09375
+              },
+              {
+                "x": 185.65625,
+                "y": 287,
+                "width": 7.796875,
+                "height": 17,
+                "top": 287,
+                "right": 193.453125,
+                "bottom": 304,
+                "left": 185.65625
+              },
+              {
+                "x": 193.4375,
+                "y": 287,
+                "width": 8.28125,
+                "height": 17,
+                "top": 287,
+                "right": 201.71875,
+                "bottom": 304,
+                "left": 193.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 140,
+              "y": 325,
+              "width": 87,
+              "height": 34,
+              "top": 325,
+              "right": 227,
+              "bottom": 359,
+              "left": 140
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 140,
+              "y": 325,
+              "width": 87,
+              "height": 34,
+              "top": 325,
+              "right": 227,
+              "bottom": 359,
+              "left": 140
+            },
+            "glyphs": [
+              {
+                "x": 164.84375,
+                "y": 333,
+                "width": 9.109375,
+                "height": 17,
+                "top": 333,
+                "right": 173.953125,
+                "bottom": 350,
+                "left": 164.84375
+              },
+              {
+                "x": 173.9375,
+                "y": 333,
+                "width": 7.515625,
+                "height": 17,
+                "top": 333,
+                "right": 181.453125,
+                "bottom": 350,
+                "left": 173.9375
+              },
+              {
+                "x": 181.4375,
+                "y": 333,
+                "width": 7.6875,
+                "height": 17,
+                "top": 333,
+                "right": 189.125,
+                "bottom": 350,
+                "left": 181.4375
+              },
+              {
+                "x": 189.125,
+                "y": 333,
+                "width": 7.78125,
+                "height": 17,
+                "top": 333,
+                "right": 196.90625,
+                "bottom": 350,
+                "left": 189.125
+              },
+              {
+                "x": 196.890625,
+                "y": 333,
+                "width": 5.25,
+                "height": 17,
+                "top": 333,
+                "right": 202.140625,
+                "bottom": 350,
+                "left": 196.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 124,
+              "y": 412,
+              "width": 103,
+              "height": 34,
+              "top": 412,
+              "right": 227,
+              "bottom": 446,
+              "left": 124
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 124,
+              "y": 412,
+              "width": 103,
+              "height": 34,
+              "top": 412,
+              "right": 227,
+              "bottom": 446,
+              "left": 124
+            },
+            "glyphs": [
+              {
+                "x": 149.28125,
+                "y": 420,
+                "width": 7.6875,
+                "height": 17,
+                "top": 420,
+                "right": 156.96875,
+                "bottom": 437,
+                "left": 149.28125
+              },
+              {
+                "x": 156.953125,
+                "y": 420,
+                "width": 7.796875,
+                "height": 17,
+                "top": 420,
+                "right": 164.75,
+                "bottom": 437,
+                "left": 156.953125
+              },
+              {
+                "x": 164.734375,
+                "y": 420,
+                "width": 12.375,
+                "height": 17,
+                "top": 420,
+                "right": 177.109375,
+                "bottom": 437,
+                "left": 164.734375
+              },
+              {
+                "x": 177.09375,
+                "y": 420,
+                "width": 8.578125,
+                "height": 17,
+                "top": 420,
+                "right": 185.671875,
+                "bottom": 437,
+                "left": 177.09375
+              },
+              {
+                "x": 185.65625,
+                "y": 420,
+                "width": 7.796875,
+                "height": 17,
+                "top": 420,
+                "right": 193.453125,
+                "bottom": 437,
+                "left": 185.65625
+              },
+              {
+                "x": 193.4375,
+                "y": 420,
+                "width": 8.28125,
+                "height": 17,
+                "top": 420,
+                "right": 201.71875,
+                "bottom": 437,
+                "left": 193.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 140,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 227,
+              "bottom": 492,
+              "left": 140
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 140,
+              "y": 458,
+              "width": 87,
+              "height": 34,
+              "top": 458,
+              "right": 227,
+              "bottom": 492,
+              "left": 140
+            },
+            "glyphs": [
+              {
+                "x": 164.84375,
+                "y": 466,
+                "width": 9.109375,
+                "height": 17,
+                "top": 466,
+                "right": 173.953125,
+                "bottom": 483,
+                "left": 164.84375
+              },
+              {
+                "x": 173.9375,
+                "y": 466,
+                "width": 7.515625,
+                "height": 17,
+                "top": 466,
+                "right": 181.453125,
+                "bottom": 483,
+                "left": 173.9375
+              },
+              {
+                "x": 181.4375,
+                "y": 466,
+                "width": 7.6875,
+                "height": 17,
+                "top": 466,
+                "right": 189.125,
+                "bottom": 483,
+                "left": 181.4375
+              },
+              {
+                "x": 189.125,
+                "y": 466,
+                "width": 7.78125,
+                "height": 17,
+                "top": 466,
+                "right": 196.90625,
+                "bottom": 483,
+                "left": 189.125
+              },
+              {
+                "x": 196.890625,
+                "y": 466,
+                "width": 5.25,
+                "height": 17,
+                "top": 466,
+                "right": 202.140625,
+                "bottom": 483,
+                "left": 196.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical844x240/48",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 589,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 692,
+              "bottom": 149,
+              "left": 589
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 589,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 692,
+              "bottom": 149,
+              "left": 589
+            },
+            "glyphs": [
+              {
+                "x": 614.28125,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 621.96875,
+                "bottom": 140,
+                "left": 614.28125
+              },
+              {
+                "x": 621.953125,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 629.75,
+                "bottom": 140,
+                "left": 621.953125
+              },
+              {
+                "x": 629.734375,
+                "y": 123,
+                "width": 12.375,
+                "height": 17,
+                "top": 123,
+                "right": 642.109375,
+                "bottom": 140,
+                "left": 629.734375
+              },
+              {
+                "x": 642.09375,
+                "y": 123,
+                "width": 8.578125,
+                "height": 17,
+                "top": 123,
+                "right": 650.671875,
+                "bottom": 140,
+                "left": 642.09375
+              },
+              {
+                "x": 650.65625,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 658.453125,
+                "bottom": 140,
+                "left": 650.65625
+              },
+              {
+                "x": 658.4375,
+                "y": 123,
+                "width": 8.28125,
+                "height": 17,
+                "top": 123,
+                "right": 666.71875,
+                "bottom": 140,
+                "left": 658.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 704,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 791,
+              "bottom": 149,
+              "left": 704
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 704,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 791,
+              "bottom": 149,
+              "left": 704
+            },
+            "glyphs": [
+              {
+                "x": 728.84375,
+                "y": 123,
+                "width": 9.109375,
+                "height": 17,
+                "top": 123,
+                "right": 737.953125,
+                "bottom": 140,
+                "left": 728.84375
+              },
+              {
+                "x": 737.9375,
+                "y": 123,
+                "width": 7.515625,
+                "height": 17,
+                "top": 123,
+                "right": 745.453125,
+                "bottom": 140,
+                "left": 737.9375
+              },
+              {
+                "x": 745.4375,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 753.125,
+                "bottom": 140,
+                "left": 745.4375
+              },
+              {
+                "x": 753.125,
+                "y": 123,
+                "width": 7.78125,
+                "height": 17,
+                "top": 123,
+                "right": 760.90625,
+                "bottom": 140,
+                "left": 753.125
+              },
+              {
+                "x": 760.890625,
+                "y": 123,
+                "width": 5.25,
+                "height": 17,
+                "top": 123,
+                "right": 766.140625,
+                "bottom": 140,
+                "left": 760.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 589,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 692,
+              "bottom": 149,
+              "left": 589
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 589,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 692,
+              "bottom": 149,
+              "left": 589
+            },
+            "glyphs": [
+              {
+                "x": 614.28125,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 621.96875,
+                "bottom": 140,
+                "left": 614.28125
+              },
+              {
+                "x": 621.953125,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 629.75,
+                "bottom": 140,
+                "left": 621.953125
+              },
+              {
+                "x": 629.734375,
+                "y": 123,
+                "width": 12.375,
+                "height": 17,
+                "top": 123,
+                "right": 642.109375,
+                "bottom": 140,
+                "left": 629.734375
+              },
+              {
+                "x": 642.09375,
+                "y": 123,
+                "width": 8.578125,
+                "height": 17,
+                "top": 123,
+                "right": 650.671875,
+                "bottom": 140,
+                "left": 642.09375
+              },
+              {
+                "x": 650.65625,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 658.453125,
+                "bottom": 140,
+                "left": 650.65625
+              },
+              {
+                "x": 658.4375,
+                "y": 123,
+                "width": 8.28125,
+                "height": 17,
+                "top": 123,
+                "right": 666.71875,
+                "bottom": 140,
+                "left": 658.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 704,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 791,
+              "bottom": 149,
+              "left": 704
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 704,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 791,
+              "bottom": 149,
+              "left": 704
+            },
+            "glyphs": [
+              {
+                "x": 728.84375,
+                "y": 123,
+                "width": 9.109375,
+                "height": 17,
+                "top": 123,
+                "right": 737.953125,
+                "bottom": 140,
+                "left": 728.84375
+              },
+              {
+                "x": 737.9375,
+                "y": 123,
+                "width": 7.515625,
+                "height": 17,
+                "top": 123,
+                "right": 745.453125,
+                "bottom": 140,
+                "left": 737.9375
+              },
+              {
+                "x": 745.4375,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 753.125,
+                "bottom": 140,
+                "left": 745.4375
+              },
+              {
+                "x": 753.125,
+                "y": 123,
+                "width": 7.78125,
+                "height": 17,
+                "top": 123,
+                "right": 760.90625,
+                "bottom": 140,
+                "left": 753.125
+              },
+              {
+                "x": 760.890625,
+                "y": 123,
+                "width": 5.25,
+                "height": 17,
+                "top": 123,
+                "right": 766.140625,
+                "bottom": 140,
+                "left": 760.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 589,
+              "y": 130,
+              "width": 103,
+              "height": 34,
+              "top": 130,
+              "right": 692,
+              "bottom": 164,
+              "left": 589
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 589,
+              "y": 130,
+              "width": 103,
+              "height": 34,
+              "top": 130,
+              "right": 692,
+              "bottom": 164,
+              "left": 589
+            },
+            "glyphs": [
+              {
+                "x": 614.28125,
+                "y": 138,
+                "width": 7.6875,
+                "height": 17,
+                "top": 138,
+                "right": 621.96875,
+                "bottom": 155,
+                "left": 614.28125
+              },
+              {
+                "x": 621.953125,
+                "y": 138,
+                "width": 7.796875,
+                "height": 17,
+                "top": 138,
+                "right": 629.75,
+                "bottom": 155,
+                "left": 621.953125
+              },
+              {
+                "x": 629.734375,
+                "y": 138,
+                "width": 12.375,
+                "height": 17,
+                "top": 138,
+                "right": 642.109375,
+                "bottom": 155,
+                "left": 629.734375
+              },
+              {
+                "x": 642.09375,
+                "y": 138,
+                "width": 8.578125,
+                "height": 17,
+                "top": 138,
+                "right": 650.671875,
+                "bottom": 155,
+                "left": 642.09375
+              },
+              {
+                "x": 650.65625,
+                "y": 138,
+                "width": 7.796875,
+                "height": 17,
+                "top": 138,
+                "right": 658.453125,
+                "bottom": 155,
+                "left": 650.65625
+              },
+              {
+                "x": 658.4375,
+                "y": 138,
+                "width": 8.28125,
+                "height": 17,
+                "top": 138,
+                "right": 666.71875,
+                "bottom": 155,
+                "left": 658.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 704,
+              "y": 130,
+              "width": 87,
+              "height": 34,
+              "top": 130,
+              "right": 791,
+              "bottom": 164,
+              "left": 704
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 704,
+              "y": 130,
+              "width": 87,
+              "height": 34,
+              "top": 130,
+              "right": 791,
+              "bottom": 164,
+              "left": 704
+            },
+            "glyphs": [
+              {
+                "x": 728.84375,
+                "y": 138,
+                "width": 9.109375,
+                "height": 17,
+                "top": 138,
+                "right": 737.953125,
+                "bottom": 155,
+                "left": 728.84375
+              },
+              {
+                "x": 737.9375,
+                "y": 138,
+                "width": 7.515625,
+                "height": 17,
+                "top": 138,
+                "right": 745.453125,
+                "bottom": 155,
+                "left": 737.9375
+              },
+              {
+                "x": 745.4375,
+                "y": 138,
+                "width": 7.6875,
+                "height": 17,
+                "top": 138,
+                "right": 753.125,
+                "bottom": 155,
+                "left": 745.4375
+              },
+              {
+                "x": 753.125,
+                "y": 138,
+                "width": 7.78125,
+                "height": 17,
+                "top": 138,
+                "right": 760.90625,
+                "bottom": 155,
+                "left": 753.125
+              },
+              {
+                "x": 760.890625,
+                "y": 138,
+                "width": 5.25,
+                "height": 17,
+                "top": 138,
+                "right": 766.140625,
+                "bottom": 155,
+                "left": 760.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "physical320x240/0",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 89,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 192,
+              "bottom": 149,
+              "left": 89
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 89,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 192,
+              "bottom": 149,
+              "left": 89
+            },
+            "glyphs": [
+              {
+                "x": 114.28125,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 121.96875,
+                "bottom": 140,
+                "left": 114.28125
+              },
+              {
+                "x": 121.953125,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 129.75,
+                "bottom": 140,
+                "left": 121.953125
+              },
+              {
+                "x": 129.734375,
+                "y": 123,
+                "width": 12.375,
+                "height": 17,
+                "top": 123,
+                "right": 142.109375,
+                "bottom": 140,
+                "left": 129.734375
+              },
+              {
+                "x": 142.09375,
+                "y": 123,
+                "width": 8.578125,
+                "height": 17,
+                "top": 123,
+                "right": 150.671875,
+                "bottom": 140,
+                "left": 142.09375
+              },
+              {
+                "x": 150.65625,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 158.453125,
+                "bottom": 140,
+                "left": 150.65625
+              },
+              {
+                "x": 158.4375,
+                "y": 123,
+                "width": 8.28125,
+                "height": 17,
+                "top": 123,
+                "right": 166.71875,
+                "bottom": 140,
+                "left": 158.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 204,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 291,
+              "bottom": 149,
+              "left": 204
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 204,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 291,
+              "bottom": 149,
+              "left": 204
+            },
+            "glyphs": [
+              {
+                "x": 228.84375,
+                "y": 123,
+                "width": 9.109375,
+                "height": 17,
+                "top": 123,
+                "right": 237.953125,
+                "bottom": 140,
+                "left": 228.84375
+              },
+              {
+                "x": 237.9375,
+                "y": 123,
+                "width": 7.515625,
+                "height": 17,
+                "top": 123,
+                "right": 245.453125,
+                "bottom": 140,
+                "left": 237.9375
+              },
+              {
+                "x": 245.4375,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 253.125,
+                "bottom": 140,
+                "left": 245.4375
+              },
+              {
+                "x": 253.125,
+                "y": 123,
+                "width": 7.78125,
+                "height": 17,
+                "top": 123,
+                "right": 260.90625,
+                "bottom": 140,
+                "left": 253.125
+              },
+              {
+                "x": 260.890625,
+                "y": 123,
+                "width": 5.25,
+                "height": 17,
+                "top": 123,
+                "right": 266.140625,
+                "bottom": 140,
+                "left": 260.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 89,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 192,
+              "bottom": 149,
+              "left": 89
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 89,
+              "y": 115,
+              "width": 103,
+              "height": 34,
+              "top": 115,
+              "right": 192,
+              "bottom": 149,
+              "left": 89
+            },
+            "glyphs": [
+              {
+                "x": 114.28125,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 121.96875,
+                "bottom": 140,
+                "left": 114.28125
+              },
+              {
+                "x": 121.953125,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 129.75,
+                "bottom": 140,
+                "left": 121.953125
+              },
+              {
+                "x": 129.734375,
+                "y": 123,
+                "width": 12.375,
+                "height": 17,
+                "top": 123,
+                "right": 142.109375,
+                "bottom": 140,
+                "left": 129.734375
+              },
+              {
+                "x": 142.09375,
+                "y": 123,
+                "width": 8.578125,
+                "height": 17,
+                "top": 123,
+                "right": 150.671875,
+                "bottom": 140,
+                "left": 142.09375
+              },
+              {
+                "x": 150.65625,
+                "y": 123,
+                "width": 7.796875,
+                "height": 17,
+                "top": 123,
+                "right": 158.453125,
+                "bottom": 140,
+                "left": 150.65625
+              },
+              {
+                "x": 158.4375,
+                "y": 123,
+                "width": 8.28125,
+                "height": 17,
+                "top": 123,
+                "right": 166.71875,
+                "bottom": 140,
+                "left": 158.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 204,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 291,
+              "bottom": 149,
+              "left": 204
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 204,
+              "y": 115,
+              "width": 87,
+              "height": 34,
+              "top": 115,
+              "right": 291,
+              "bottom": 149,
+              "left": 204
+            },
+            "glyphs": [
+              {
+                "x": 228.84375,
+                "y": 123,
+                "width": 9.109375,
+                "height": 17,
+                "top": 123,
+                "right": 237.953125,
+                "bottom": 140,
+                "left": 228.84375
+              },
+              {
+                "x": 237.9375,
+                "y": 123,
+                "width": 7.515625,
+                "height": 17,
+                "top": 123,
+                "right": 245.453125,
+                "bottom": 140,
+                "left": 237.9375
+              },
+              {
+                "x": 245.4375,
+                "y": 123,
+                "width": 7.6875,
+                "height": 17,
+                "top": 123,
+                "right": 253.125,
+                "bottom": 140,
+                "left": 245.4375
+              },
+              {
+                "x": 253.125,
+                "y": 123,
+                "width": 7.78125,
+                "height": 17,
+                "top": 123,
+                "right": 260.90625,
+                "bottom": 140,
+                "left": 253.125
+              },
+              {
+                "x": 260.890625,
+                "y": 123,
+                "width": 5.25,
+                "height": 17,
+                "top": 123,
+                "right": 266.140625,
+                "bottom": 140,
+                "left": 260.890625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 89,
+              "y": 130,
+              "width": 103,
+              "height": 34,
+              "top": 130,
+              "right": 192,
+              "bottom": 164,
+              "left": 89
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 89,
+              "y": 130,
+              "width": 103,
+              "height": 34,
+              "top": 130,
+              "right": 192,
+              "bottom": 164,
+              "left": 89
+            },
+            "glyphs": [
+              {
+                "x": 114.28125,
+                "y": 138,
+                "width": 7.6875,
+                "height": 17,
+                "top": 138,
+                "right": 121.96875,
+                "bottom": 155,
+                "left": 114.28125
+              },
+              {
+                "x": 121.953125,
+                "y": 138,
+                "width": 7.796875,
+                "height": 17,
+                "top": 138,
+                "right": 129.75,
+                "bottom": 155,
+                "left": 121.953125
+              },
+              {
+                "x": 129.734375,
+                "y": 138,
+                "width": 12.375,
+                "height": 17,
+                "top": 138,
+                "right": 142.109375,
+                "bottom": 155,
+                "left": 129.734375
+              },
+              {
+                "x": 142.09375,
+                "y": 138,
+                "width": 8.578125,
+                "height": 17,
+                "top": 138,
+                "right": 150.671875,
+                "bottom": 155,
+                "left": 142.09375
+              },
+              {
+                "x": 150.65625,
+                "y": 138,
+                "width": 7.796875,
+                "height": 17,
+                "top": 138,
+                "right": 158.453125,
+                "bottom": 155,
+                "left": 150.65625
+              },
+              {
+                "x": 158.4375,
+                "y": 138,
+                "width": 8.28125,
+                "height": 17,
+                "top": 138,
+                "right": 166.71875,
+                "bottom": 155,
+                "left": 158.4375
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 204,
+              "y": 130,
+              "width": 87,
+              "height": 34,
+              "top": 130,
+              "right": 291,
+              "bottom": 164,
+              "left": 204
+            },
+            "hit": true,
+            "top": 72,
+            "bottom": 192
+          },
+          "text": {
+            "box": {
+              "x": 204,
+              "y": 130,
+              "width": 87,
+              "height": 34,
+              "top": 130,
+              "right": 291,
+              "bottom": 164,
+              "left": 204
+            },
+            "glyphs": [
+              {
+                "x": 228.84375,
+                "y": 138,
+                "width": 9.109375,
+                "height": 17,
+                "top": 138,
+                "right": 237.953125,
+                "bottom": 155,
+                "left": 228.84375
+              },
+              {
+                "x": 237.9375,
+                "y": 138,
+                "width": 7.515625,
+                "height": 17,
+                "top": 138,
+                "right": 245.453125,
+                "bottom": 155,
+                "left": 237.9375
+              },
+              {
+                "x": 245.4375,
+                "y": 138,
+                "width": 7.6875,
+                "height": 17,
+                "top": 138,
+                "right": 253.125,
+                "bottom": 155,
+                "left": 245.4375
+              },
+              {
+                "x": 253.125,
+                "y": 138,
+                "width": 7.78125,
+                "height": 17,
+                "top": 138,
+                "right": 260.90625,
+                "bottom": 155,
+                "left": 253.125
+              },
+              {
+                "x": 260.890625,
+                "y": 138,
+                "width": 5.25,
+                "height": 17,
+                "top": 138,
+                "right": 266.140625,
+                "bottom": 155,
+                "left": 260.890625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "large320x568/8",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 128.140625,
+              "y": 476,
+              "width": 154.859375,
+              "height": 42,
+              "top": 476,
+              "right": 283,
+              "bottom": 518,
+              "left": 128.140625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 128.140625,
+              "y": 476,
+              "width": 154.859375,
+              "height": 42,
+              "top": 476,
+              "right": 283,
+              "bottom": 518,
+              "left": 128.140625
+            },
+            "glyphs": [
+              {
+                "x": 153.140625,
+                "y": 480,
+                "width": 15.375,
+                "height": 34,
+                "top": 480,
+                "right": 168.515625,
+                "bottom": 514,
+                "left": 153.140625
+              },
+              {
+                "x": 168.5,
+                "y": 480,
+                "width": 15.578125,
+                "height": 34,
+                "top": 480,
+                "right": 184.078125,
+                "bottom": 514,
+                "left": 168.5
+              },
+              {
+                "x": 184.0625,
+                "y": 480,
+                "width": 24.734375,
+                "height": 34,
+                "top": 480,
+                "right": 208.796875,
+                "bottom": 514,
+                "left": 184.0625
+              },
+              {
+                "x": 208.78125,
+                "y": 480,
+                "width": 17.125,
+                "height": 34,
+                "top": 480,
+                "right": 225.90625,
+                "bottom": 514,
+                "left": 208.78125
+              },
+              {
+                "x": 225.890625,
+                "y": 480,
+                "width": 15.578125,
+                "height": 34,
+                "top": 480,
+                "right": 241.46875,
+                "bottom": 514,
+                "left": 225.890625
+              },
+              {
+                "x": 241.453125,
+                "y": 480,
+                "width": 16.546875,
+                "height": 34,
+                "top": 480,
+                "right": 258,
+                "bottom": 514,
+                "left": 241.453125
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 160.40625,
+              "y": 280,
+              "width": 122.59375,
+              "height": 40,
+              "top": 280,
+              "right": 283,
+              "bottom": 320,
+              "left": 160.40625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 160.40625,
+              "y": 280,
+              "width": 122.59375,
+              "height": 40,
+              "top": 280,
+              "right": 283,
+              "bottom": 320,
+              "left": 160.40625
+            },
+            "glyphs": [
+              {
+                "x": 184.40625,
+                "y": 283,
+                "width": 18.203125,
+                "height": 34,
+                "top": 283,
+                "right": 202.609375,
+                "bottom": 317,
+                "left": 184.40625
+              },
+              {
+                "x": 202.59375,
+                "y": 283,
+                "width": 15.015625,
+                "height": 34,
+                "top": 283,
+                "right": 217.609375,
+                "bottom": 317,
+                "left": 202.59375
+              },
+              {
+                "x": 217.59375,
+                "y": 283,
+                "width": 15.375,
+                "height": 34,
+                "top": 283,
+                "right": 232.96875,
+                "bottom": 317,
+                "left": 217.59375
+              },
+              {
+                "x": 232.96875,
+                "y": 283,
+                "width": 15.5625,
+                "height": 34,
+                "top": 283,
+                "right": 248.53125,
+                "bottom": 317,
+                "left": 232.96875
+              },
+              {
+                "x": 248.515625,
+                "y": 283,
+                "width": 10.484375,
+                "height": 34,
+                "top": 283,
+                "right": 259,
+                "bottom": 317,
+                "left": 248.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 128.140625,
+              "y": 279,
+              "width": 154.859375,
+              "height": 42,
+              "top": 279,
+              "right": 283,
+              "bottom": 321,
+              "left": 128.140625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 128.140625,
+              "y": 279,
+              "width": 154.859375,
+              "height": 42,
+              "top": 279,
+              "right": 283,
+              "bottom": 321,
+              "left": 128.140625
+            },
+            "glyphs": [
+              {
+                "x": 153.140625,
+                "y": 283,
+                "width": 15.375,
+                "height": 34,
+                "top": 283,
+                "right": 168.515625,
+                "bottom": 317,
+                "left": 153.140625
+              },
+              {
+                "x": 168.5,
+                "y": 283,
+                "width": 15.578125,
+                "height": 34,
+                "top": 283,
+                "right": 184.078125,
+                "bottom": 317,
+                "left": 168.5
+              },
+              {
+                "x": 184.0625,
+                "y": 283,
+                "width": 24.734375,
+                "height": 34,
+                "top": 283,
+                "right": 208.796875,
+                "bottom": 317,
+                "left": 184.0625
+              },
+              {
+                "x": 208.78125,
+                "y": 283,
+                "width": 17.125,
+                "height": 34,
+                "top": 283,
+                "right": 225.90625,
+                "bottom": 317,
+                "left": 208.78125
+              },
+              {
+                "x": 225.890625,
+                "y": 283,
+                "width": 15.578125,
+                "height": 34,
+                "top": 283,
+                "right": 241.46875,
+                "bottom": 317,
+                "left": 225.890625
+              },
+              {
+                "x": 241.453125,
+                "y": 283,
+                "width": 16.546875,
+                "height": 34,
+                "top": 283,
+                "right": 258,
+                "bottom": 317,
+                "left": 241.453125
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 160.40625,
+              "y": 333,
+              "width": 122.59375,
+              "height": 40,
+              "top": 333,
+              "right": 283,
+              "bottom": 373,
+              "left": 160.40625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 160.40625,
+              "y": 333,
+              "width": 122.59375,
+              "height": 40,
+              "top": 333,
+              "right": 283,
+              "bottom": 373,
+              "left": 160.40625
+            },
+            "glyphs": [
+              {
+                "x": 184.40625,
+                "y": 336,
+                "width": 18.203125,
+                "height": 34,
+                "top": 336,
+                "right": 202.609375,
+                "bottom": 370,
+                "left": 184.40625
+              },
+              {
+                "x": 202.59375,
+                "y": 336,
+                "width": 15.015625,
+                "height": 34,
+                "top": 336,
+                "right": 217.609375,
+                "bottom": 370,
+                "left": 202.59375
+              },
+              {
+                "x": 217.59375,
+                "y": 336,
+                "width": 15.375,
+                "height": 34,
+                "top": 336,
+                "right": 232.96875,
+                "bottom": 370,
+                "left": 217.59375
+              },
+              {
+                "x": 232.96875,
+                "y": 336,
+                "width": 15.5625,
+                "height": 34,
+                "top": 336,
+                "right": 248.53125,
+                "bottom": 370,
+                "left": 232.96875
+              },
+              {
+                "x": 248.515625,
+                "y": 336,
+                "width": 10.484375,
+                "height": 34,
+                "top": 336,
+                "right": 259,
+                "bottom": 370,
+                "left": 248.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 128.140625,
+              "y": 398,
+              "width": 154.859375,
+              "height": 42,
+              "top": 398,
+              "right": 283,
+              "bottom": 440,
+              "left": 128.140625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 128.140625,
+              "y": 398,
+              "width": 154.859375,
+              "height": 42,
+              "top": 398,
+              "right": 283,
+              "bottom": 440,
+              "left": 128.140625
+            },
+            "glyphs": [
+              {
+                "x": 153.140625,
+                "y": 402,
+                "width": 15.375,
+                "height": 34,
+                "top": 402,
+                "right": 168.515625,
+                "bottom": 436,
+                "left": 153.140625
+              },
+              {
+                "x": 168.5,
+                "y": 402,
+                "width": 15.578125,
+                "height": 34,
+                "top": 402,
+                "right": 184.078125,
+                "bottom": 436,
+                "left": 168.5
+              },
+              {
+                "x": 184.0625,
+                "y": 402,
+                "width": 24.734375,
+                "height": 34,
+                "top": 402,
+                "right": 208.796875,
+                "bottom": 436,
+                "left": 184.0625
+              },
+              {
+                "x": 208.78125,
+                "y": 402,
+                "width": 17.125,
+                "height": 34,
+                "top": 402,
+                "right": 225.90625,
+                "bottom": 436,
+                "left": 208.78125
+              },
+              {
+                "x": 225.890625,
+                "y": 402,
+                "width": 15.578125,
+                "height": 34,
+                "top": 402,
+                "right": 241.46875,
+                "bottom": 436,
+                "left": 225.890625
+              },
+              {
+                "x": 241.453125,
+                "y": 402,
+                "width": 16.546875,
+                "height": 34,
+                "top": 402,
+                "right": 258,
+                "bottom": 436,
+                "left": 241.453125
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 160.40625,
+              "y": 452,
+              "width": 122.59375,
+              "height": 40,
+              "top": 452,
+              "right": 283,
+              "bottom": 492,
+              "left": 160.40625
+            },
+            "hit": true,
+            "top": 80,
+            "bottom": 520
+          },
+          "text": {
+            "box": {
+              "x": 160.40625,
+              "y": 452,
+              "width": 122.59375,
+              "height": 40,
+              "top": 452,
+              "right": 283,
+              "bottom": 492,
+              "left": 160.40625
+            },
+            "glyphs": [
+              {
+                "x": 184.40625,
+                "y": 455,
+                "width": 18.203125,
+                "height": 34,
+                "top": 455,
+                "right": 202.609375,
+                "bottom": 489,
+                "left": 184.40625
+              },
+              {
+                "x": 202.59375,
+                "y": 455,
+                "width": 15.015625,
+                "height": 34,
+                "top": 455,
+                "right": 217.609375,
+                "bottom": 489,
+                "left": 202.59375
+              },
+              {
+                "x": 217.59375,
+                "y": 455,
+                "width": 15.375,
+                "height": 34,
+                "top": 455,
+                "right": 232.96875,
+                "bottom": 489,
+                "left": 217.59375
+              },
+              {
+                "x": 232.96875,
+                "y": 455,
+                "width": 15.5625,
+                "height": 34,
+                "top": 455,
+                "right": 248.53125,
+                "bottom": 489,
+                "left": 232.96875
+              },
+              {
+                "x": 248.515625,
+                "y": 455,
+                "width": 10.484375,
+                "height": 34,
+                "top": 455,
+                "right": 259,
+                "bottom": 489,
+                "left": 248.515625
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "state": "large240x320/24",
+      "rows": [
+        {
+          "id": "29:26637",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26637",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26658",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "add",
+          "g": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 52,
+              "y": 175,
+              "width": 135,
+              "height": 42,
+              "top": 175,
+              "right": 187,
+              "bottom": 217,
+              "left": 52
+            },
+            "glyphs": [
+              {
+                "x": 67.078125,
+                "y": 179,
+                "width": 15.375,
+                "height": 34,
+                "top": 179,
+                "right": 82.453125,
+                "bottom": 213,
+                "left": 67.078125
+              },
+              {
+                "x": 82.4375,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 98.015625,
+                "bottom": 213,
+                "left": 82.4375
+              },
+              {
+                "x": 98,
+                "y": 179,
+                "width": 24.734375,
+                "height": 34,
+                "top": 179,
+                "right": 122.734375,
+                "bottom": 213,
+                "left": 98
+              },
+              {
+                "x": 122.71875,
+                "y": 179,
+                "width": 17.125,
+                "height": 34,
+                "top": 179,
+                "right": 139.84375,
+                "bottom": 213,
+                "left": 122.71875
+              },
+              {
+                "x": 139.828125,
+                "y": 179,
+                "width": 15.578125,
+                "height": 34,
+                "top": 179,
+                "right": 155.40625,
+                "bottom": 213,
+                "left": 139.828125
+              },
+              {
+                "x": 155.390625,
+                "y": 179,
+                "width": 16.546875,
+                "height": 34,
+                "top": 179,
+                "right": 171.9375,
+                "bottom": 213,
+                "left": 155.390625
+              }
+            ]
+          }
+        },
+        {
+          "id": "29:26677",
+          "kind": "pay",
+          "g": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "hit": true,
+            "top": 120,
+            "bottom": 272
+          },
+          "text": {
+            "box": {
+              "x": 64.40625,
+              "y": 229,
+              "width": 122.59375,
+              "height": 40,
+              "top": 229,
+              "right": 187,
+              "bottom": 269,
+              "left": 64.40625
+            },
+            "glyphs": [
+              {
+                "x": 88.40625,
+                "y": 232,
+                "width": 18.203125,
+                "height": 34,
+                "top": 232,
+                "right": 106.609375,
+                "bottom": 266,
+                "left": 88.40625
+              },
+              {
+                "x": 106.59375,
+                "y": 232,
+                "width": 15.015625,
+                "height": 34,
+                "top": 232,
+                "right": 121.609375,
+                "bottom": 266,
+                "left": 106.59375
+              },
+              {
+                "x": 121.59375,
+                "y": 232,
+                "width": 15.375,
+                "height": 34,
+                "top": 232,
+                "right": 136.96875,
+                "bottom": 266,
+                "left": 121.59375
+              },
+              {
+                "x": 136.96875,
+                "y": 232,
+                "width": 15.5625,
+                "height": 34,
+                "top": 232,
+                "right": 152.53125,
+                "bottom": 266,
+                "left": 136.96875
+              },
+              {
+                "x": 152.515625,
+                "y": 232,
+                "width": 10.484375,
+                "height": 34,
+                "top": 232,
+                "right": 163,
+                "bottom": 266,
+                "left": 152.515625
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundleHash": "7b7e9ba85750e85c78186e0d186e360a8921ae89f32a567350a4636310186a4f",
+  "styleHash": "7725617ffc7b8d76b1d9dacc9e84d312769c2b43171740fab88975ee9f20ce7c",
+  "limits": "Read-only independent actual three Card+Button+Text/header/layout on RNWeb with offline exact data. Action record adapter only, no production payment/cart/API/parentpopup/filter/full Bills/router/native/44px target/Figma100 certificate. CSS28 stress probe distinct from native fontScale."
+}
